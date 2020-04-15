@@ -1,0 +1,86 @@
+<template>
+  <control v-bind="props" v-slot="flags">
+    <input
+      type="text"
+      class="form-control"
+      :aria-describedby="options.label"
+      v-model="model"
+      :class="{'is-invalid':flags.invalid && flags.touched}"
+      :placeholder="options.placeholder"
+    />
+  </control>
+</template>
+
+<script>
+import ControlField from "./ControlField.vue";
+import Control from "./Control.vue";
+import Lama from "../lama";
+
+let TextField = {
+  name: "TextField",
+  extends: ControlField,
+  props: {
+    value: {
+      type: String
+    }
+  },
+  computed: {},
+  methods: {},
+  components: { Control },
+  builder: {
+    props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            required: {
+              title: "Required",
+              type: "boolean"
+            },
+            placeholder: {
+              title: "Placeholder",
+              type: "string"
+            },
+            multilanguage: {
+              title: "Multi language",
+              type: "boolean"
+            },
+          }
+        },
+        options: {}
+      };
+    },
+    fromBuilder(field) {
+      return {
+        schema: {
+          title: field.label,
+          type: "string",
+          required: field.required
+        },
+        options: {
+          placeholder: field.placeholder,
+          multilanguage: field.multilanguage
+        }
+      };
+    },
+    toBuilder(def) {
+      return {
+        label: def.schema.title,
+        fieldType: "text",
+        required: def.schema.required,
+        placeholder: def.options.placeholder,
+        multilanguage: def.options.multilanguage
+      };
+    }
+  }
+};
+
+export default TextField;
+
+Lama.registerFieldComponent("text", TextField);
+Lama.registerDefaultSchemaFieldMapping("string", "text");
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+</style>
