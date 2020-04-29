@@ -1,7 +1,6 @@
 
 <script>
 import ObjectField from "./ObjectField.vue";
-import Lama from "../lama";
 
 let AddressField = {
   name: "AddressField",
@@ -245,7 +244,7 @@ let AddressField = {
 
 export default AddressField;
 
-Lama.registerFieldComponent("address", AddressField);
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

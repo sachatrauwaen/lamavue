@@ -2,7 +2,7 @@
 <script>
 
 import SelectField from "./SelectField.vue";
-import Lama from "../lama";
+import Lama from "../../lama";
 
 let CountryField = {
   name: "CountryField",
@@ -60,8 +60,6 @@ let CountryField = {
 };
 
 export default CountryField;
-
-Lama.registerFieldComponent("country", CountryField);
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

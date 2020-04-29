@@ -1,30 +1,28 @@
 <template>
   <control v-bind="props" v-slot="flags">
-    <input
-      type="number"
+    <textarea
       class="form-control"
       :aria-describedby="options.label"
-      v-model.number="model"
+      v-model="model"
+      :placeholder="options.placeholder"
+      :rows="options.rows"
+      :cols="options.cols"
       :class="{'is-invalid':flags.invalid && flags.touched}"
     />
   </control>
 </template>
 
 <script>
-import ControlField from "./ControlField.vue";
-import Lama from "../lama";
+import TextField from "./TextField.vue";
+import Control from "./Control.vue";
 
-let NumberField = {
-  name: "NumberField",
-  extends: ControlField,
-  props: {
-    value: {
-      type: Number
-    }
-  },
+let TextareaField = {
+  name: "TextareaField",
+  extends: TextField,
+  props: {},
   computed: {},
   methods: {},
-  components: {},
+  components: { Control },
   builder: {
     props() {
       return {
@@ -38,7 +36,7 @@ let NumberField = {
             placeholder: {
               title: "Field Placeholder",
               description: "Field placeholder.",
-              type: "number"
+              type: "string"
             }
           }
         },
@@ -48,12 +46,12 @@ let NumberField = {
     fromBuilder(field) {
       return {
         schema: {
-          type: "number",
           title: field.label,
-          required: field.required,
-          placeholder: field.placeholder
+          type: "string",
+          required: field.required
         },
         options: {
+          type: "textarea",
           placeholder: field.placeholder
         }
       };
@@ -61,7 +59,7 @@ let NumberField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "number",
+        fieldType: "textarea",
         required: def.schema.required,
         placeholder: def.options.placeholder
       };
@@ -69,10 +67,7 @@ let NumberField = {
   }
 };
 
-export default NumberField;
-
-Lama.registerFieldComponent("number", NumberField);
-Lama.registerDefaultSchemaFieldMapping("number", "number");
+export default TextareaField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

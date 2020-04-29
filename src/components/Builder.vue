@@ -7,21 +7,9 @@
       <div class="col-md-6">
         <lama-form v-bind="demoProps" v-model="demo"></lama-form>
         <hr />
-        {{schema}}
+        schema = {{value.schema}}
         <hr />
-        {{options}}
-      </div>
-    </div>
-    <hr />
-    <div class="row">
-      <div class="col-md-12">
-        <textarea v-model="schemaText" style="width:100%;height:300px;"></textarea>
-      </div>
-    </div>
-    <hr />
-    <div class="row">
-      <div class="col-md-12">
-        <textarea v-model="optionsText" style="width:100%;height:300px;"></textarea>
+        options = {{value.options}}
       </div>
     </div>
     <hr />
@@ -29,58 +17,42 @@
 </template>
 
 <script>
-import LamaForm from "./components/Form.vue";
-import Lama from "./lama";
-import builderUtils from "./builderUtils";
+import LamaForm from "./Form.vue";
+import Lama from "../lama";
+import builderUtils from "../builderUtils";
+
+import BuilderField from './BuilderField.vue';
+
+Lama.registerFieldComponent("builder", BuilderField);
 
 export default {
   name: "Builder",
+  props: {
+    value: {},
+    connector: {}
+  },
   data() {
     return {
-      demo: {},
-      schema: {
-        title: "What do you think of Alpaca?",
-        type: "object",
-        properties: {
-          name: {
-            type: "string",
-            title: "Name",
-            required: true
-          },
-          amount: {
-            type: "number",
-            title: "Amount",
-            required: true
-          },
-          ranking: {
-            type: "string",
-            title: "Ranking",
-            enum: ["excellent", "not too shabby", "alpaca built my hotrod"]
-          }
-        }
-      },
-      options: { fields: {} },
-      connector: Lama.getConnectorClass("default")
+      demo: {}
     };
   },
-  props: {},
   computed: {
     model: {
       get() {
         let fields = [];
-        for (const key in this.schema.properties) {
-          const sch = this.schema.properties[key];
-          const opt = this.options.fields[key] || {};
+        for (const key in this.value.schema.properties) {
+          const sch = this.value.schema.properties[key];
+          const opt = this.value.options.fields[key] || {};
           let field = {
             fieldName: key,
             label: sch.title,
             fieldType: type
           };
           let type = opt.type;
-          if (!opt.type) {            
+          if (!opt.type) {
             type = Lama.guessOptionsType(sch);
           }
-          if (type) {          
+          if (type) {
             let builderComponent = Lama.getFieldComponent(type);
             if (
               builderComponent &&
@@ -90,7 +62,7 @@ export default {
               field = builderComponent.builder.toBuilder({
                 schema: sch,
                 options: opt
-              });              
+              });
               field.fieldName = key;
             }
           }
@@ -116,40 +88,26 @@ export default {
             fields[field.fieldName] = {};
           }
         }
-        this.schema = {
-          title: "What do you think of Alpaca?",
-          type: "object",
-          properties: props
-        };
-        this.options = { fields: fields };
+        this.$emit("input", {
+          schema: {
+            title: "What do you think of Alpaca?",
+            type: "object",
+            properties: props
+          },
+          options: { fields: fields }
+        });
         //this.$emit("input", val);
       }
     },
     demoProps() {
       return {
-        schema: JSON.parse(JSON.stringify(this.schema)),
-        options: JSON.parse(JSON.stringify(this.options)),
+        schema: JSON.parse(JSON.stringify(this.value.schema)),
+        options: JSON.parse(JSON.stringify(this.value.options)),
         connector: this.connector
       };
     },
     props() {
       return builderUtils.getObjectProps();
-    },
-    schemaText: {
-      get() {
-        return JSON.stringify(this.schema, undefined, "  ");
-      },
-      set(val) {
-        this.schema = JSON.parse(val);
-      }
-    },
-    optionsText: {
-      get() {
-        return JSON.stringify(this.options, undefined, "  ");
-      },
-      set(val) {
-        this.options = JSON.parse(val);
-      }
     }
   },
   methods: {
@@ -180,7 +138,6 @@ export default {
   },
   components: { LamaForm }
 };
-
 </script>
 
 <style>

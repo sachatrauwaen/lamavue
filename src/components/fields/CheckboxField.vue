@@ -9,14 +9,13 @@
         :class="{'is-invalid':flags.invalid && flags.touched}"
         :placeholder="options.placeholder"
       />
-      <label class="form-check-label">{{options.rightLabel}}</label>
+      <label v-if="options.rightLabel" class="form-check-label">{{options.rightLabel}}</label>
     </div>
   </control>
 </template>
 
 <script>
 import ControlField from "./ControlField.vue";
-import Lama from "../lama";
 
 let CheckBoxField = {
   name: "CheckBoxField",
@@ -65,9 +64,6 @@ let CheckBoxField = {
 };
 
 export default CheckBoxField;
-
-Lama.registerFieldComponent("checkbox", CheckBoxField);
-Lama.registerDefaultSchemaFieldMapping("boolean", "checkbox");
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

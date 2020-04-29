@@ -1,29 +1,28 @@
 <template>
-  <control v-bind="props" v-slot="flags">
-    <textarea
-      class="form-control"
-      :aria-describedby="options.label"
-      v-model="model"
-      :placeholder="options.placeholder"
-      :rows="options.rows"
-      :cols="options.cols"
-      :class="{'is-invalid':flags.invalid && flags.touched}"
-    />
+  <control v-bind="props">
+    <ckeditor v-model="model" :config="editorConfig"></ckeditor>
   </control>
 </template>
 
 <script>
+//import Vue from 'vue';
 import TextField from "./TextField.vue";
 import Control from "./Control.vue";
-import Lama from "../lama";
+import CKEditor from 'ckeditor4-vue';
 
-let TextareaField = {
-  name: "TextareaField",
+
+let CKEditorField = {
+  name: "CKEditorField",
   extends: TextField,
   props: {},
+  data(){
+    return {
+      editorConfig:{}
+    };
+  },
   computed: {},
   methods: {},
-  components: { Control },
+  components: { Control, ckeditor: CKEditor.component },
   builder: {
     props() {
       return {
@@ -35,8 +34,7 @@ let TextareaField = {
               type: "boolean"
             },
             placeholder: {
-              title: "Field Placeholder",
-              description: "Field placeholder.",
+              title: "Placeholder",
               type: "string"
             }
           }
@@ -52,7 +50,7 @@ let TextareaField = {
           required: field.required
         },
         options: {
-          type: "textarea",
+          type: "ckeditor",
           placeholder: field.placeholder
         }
       };
@@ -60,7 +58,7 @@ let TextareaField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "textarea",
+        fieldType: "ckeditor",
         required: def.schema.required,
         placeholder: def.options.placeholder
       };
@@ -68,9 +66,7 @@ let TextareaField = {
   }
 };
 
-export default TextareaField;
-
-Lama.registerFieldComponent("textarea", TextareaField);
+export default CKEditorField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

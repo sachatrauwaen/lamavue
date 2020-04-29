@@ -1,6 +1,4 @@
-import Lama from "./lama";
-
-let defaultConnector = {
+export default {
     currentCulture: "fr-FR",
     connect() {
 
@@ -23,13 +21,28 @@ let defaultConnector = {
     loadDataSource: function (config, successCallback, errorCallback) {
         //return this._handleLoadDataSource(config, successCallback, errorCallback);
 
+        console.log("loadDataSource");
+        console.log(config);
+
         if (config && config.query && config.query) {
             if (config.query.type == "folders") {
-                successCallback([{ value: "1", label: "Files" }]);
+                successCallback([{ id: "1", name: "Files", url: "/Files" }]);
             }
 
             if (config.query.type == "files") {
-                successCallback([{ value: "https://agontuk.github.io/assets/images/berserk.jpg", label: "berserk.jpg" }]);
+                var files = [{ id: "1", url: "https://agontuk.github.io/assets/images/berserk.jpg", name: "berserk.jpg", folderId: "1" }];
+                successCallback(files.filter((f) => {
+                    if (config.query.folder)
+                        return f.folderId == config.query.folder;
+                    else
+                        return false;
+                }).map(f => {
+                    return {
+                        id: f.id,
+                        filename: f.name,
+                        url: f.url
+                    };
+                }));
             }
         }
         else {
@@ -38,8 +51,11 @@ let defaultConnector = {
 
 
     },
+    // eslint-disable-next-line no-unused-vars
+    upload(config, successCallback, errorCallback) {
+        successCallback({ id:"2", url: "https://agontuk.github.io/assets/images/berserk.jpg", filename: "berserk.jpg" });
+    }
 }
 
-export default defaultConnector;
 
-Lama.registerConnectorClass("default", defaultConnector);
+

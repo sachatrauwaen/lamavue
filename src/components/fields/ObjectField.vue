@@ -5,10 +5,10 @@
 </template>
 
 <script>
-import Container from "./Container.vue";
-import Fields from "./Fields.vue";
-import Lama from "../lama";
-import builderUtils from "../builderUtils";
+import Container from "../Container.vue";
+import Fields from "../Fields.vue";
+
+import builderUtils from "../../builderUtils";
 
 let ObjectField = {
   name: "ObjectField",
@@ -76,8 +76,7 @@ let ObjectField = {
 
 export default ObjectField;
 
-Lama.registerFieldComponent("object", ObjectField);
-Lama.registerDefaultSchemaFieldMapping("object", "object");
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

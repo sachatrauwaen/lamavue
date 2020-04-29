@@ -1,13 +1,14 @@
 <template>
   <div class="form-row">
     <div v-for="(value, key) in visibleFields" :key="key" class="col-12">
-      <field v-model="model[key]" v-bind="itemProps(key)" @input="propChange(key, $event)"></field>
+      <form-field v-model="model[key]" v-bind="itemProps(key)" @input="propChange(key, $event)"></form-field>
     </div>
   </div>
 </template>
 
 <script>
 import Lama from "../lama";
+import Field from "./Field.vue";
 
 let comp = {
   name: "Fields",
@@ -106,7 +107,7 @@ let comp = {
       return true;
     }
   },
-  components: {}
+  components: {formField: Field}
 };
 export default comp;
 </script>

@@ -1,38 +1,72 @@
 <template>
   <control v-bind="props" v-slot="flags">
-    <vue-ctk-date-time-picker
-      :only-date="true"
-      :auto-close="true"
-      :no-label="true"
-      :no-header="true"
-      :no-button-now="true"
-      format="YYYY-MM-DD"
-      formatted="ll"
+      <input       
+        ref="input"
+        type="file"
+        name="file"        
+        @change="setFile"
+        class="form-control-file"
+        style="margin-bottom:10px"
+      />
+      <input
+      type="text"
+      class="form-control"
+      :aria-describedby="options.label"
       v-model="model"
       :class="{'is-invalid':flags.invalid && flags.touched}"
-      :placeholder="options.placeholder"
+       style="margin-bottom:10px"
     />
+    
   </control>
 </template>
 
 <script>
 import ControlField from "./ControlField.vue";
 import Control from "./Control.vue";
-import Lama from "../lama";
-import VueCtkDateTimePicker from "vue-ctk-date-time-picker";
-import "vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css";
+import FileBrowser from "./FileBrowser.vue";
 
-let DateField = {
-  name: "DateField",
+let FileField = {
+  name: "FileField",
   extends: ControlField,
   props: {
     value: {
       type: String
     }
   },
-  computed: {},
-  methods: {},
-  components: { Control, VueCtkDateTimePicker },
+  data() {
+    return {
+      file: {}
+    };
+  },
+  computed: {
+   
+  },
+  methods: {
+    setFile(e) {
+      const file = e.target.files[0];
+      if (file.type.indexOf("image/") === -1) {
+        alert("Please select an image file");
+        return;
+      }
+      let config = {
+        query: {
+          folder: this.baseFolder
+        }
+      };
+      this.connector.upload(
+        config,
+        data => {
+            this.model = data.url;
+        },
+        () => {}
+      );
+
+    },
+    showFileChooser() {
+      this.$refs.input.click();
+    }    
+  },
+  components: { Control, FileBrowser },
   builder: {
     props() {
       return {
@@ -64,8 +98,7 @@ let DateField = {
           required: field.required
         },
         options: {
-          type: "date",
-          placeholder: field.placeholder,
+          type: "file",
           multilanguage: field.multilanguage
         }
       };
@@ -73,20 +106,18 @@ let DateField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "date",
+        fieldType: "file",
         required: def.schema.required,
-        placeholder: def.options.placeholder,
         multilanguage: def.options.multilanguage
       };
     }
   }
 };
 
-export default DateField;
-
-Lama.registerFieldComponent("date", DateField);
+export default FileField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style >
+
 </style>

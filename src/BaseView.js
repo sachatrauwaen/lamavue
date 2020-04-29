@@ -1,11 +1,5 @@
-import Lama from "./lama";
 
 export default {
-
-    
-}
-
-Lama.registerView({
     "id": "base",
     "title": "Abstract base view",
     "messages": {
@@ -1476,4 +1470,5 @@ Lama.registerView({
             }
         ]
     }
-});
+}
+

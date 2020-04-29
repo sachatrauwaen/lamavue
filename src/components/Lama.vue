@@ -1,16 +1,15 @@
 <template>
   <div>
-    <div ref="lama"></div>
-   
+    <div ref="lama"></div>   
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
-import Vue from "vue";
-import CKEditor from "ckeditor4-vue";
 
-Vue.use(CKEditor);
+//import Vue from "vue";
+//import CKEditor from "ckeditor4-vue";
+
+//Vue.use(CKEditor);
 
 export default {
   name: "Lama",

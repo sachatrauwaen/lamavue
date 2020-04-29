@@ -1,6 +1,6 @@
 <template>
   <div>
-        <div class="modal-mask"></div>
+    <div class="modal-mask"></div>
     <div class="editor">
       <div style="margin-bottom:10px">
         <vue-cropper
@@ -32,7 +32,6 @@
         <button type="button" class="btn btn-light" @click.prevent="cancel">Cancel</button>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -54,13 +53,14 @@ export default {
   },
   methods: {
     save() {
-      this.$emit("close", {
-        cropperData: this.$refs.cropper.getData(),
-        cropperUrl: this.$refs.cropper.getCroppedCanvas().toDataURL()
-      });
+      this.$emit(
+        "save",
+        this.$refs.cropper.getCroppedCanvas().toDataURL(),
+        this.$refs.cropper.getData()
+      );
     },
     cancel() {
-       this.$emit("close");
+      this.$emit("cancel");
     },
     rotate(deg) {
       this.$refs.cropper.rotate(deg);
@@ -105,7 +105,7 @@ export default {
 .editor {
   position: relative;
   background-color: #fff;
- z-index: 9999;
+  z-index: 9999;
   border: 5px solid #fff;
   border-radius: 5px;
 }

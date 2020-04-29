@@ -5,10 +5,9 @@
 </template>
 
 <script>
-import Container from "./Container.vue";
-import List from "./List.vue";
-import Lama from "../lama";
-import builderUtils from "../builderUtils";
+import Container from "../Container.vue";
+import List from "../List.vue";
+import builderUtils from "../../builderUtils";
 
 let ArrayField = {
   name: "ArrayField",
@@ -91,8 +90,7 @@ let ArrayField = {
 
 export default ArrayField;
 
-Lama.registerFieldComponent("array", ArrayField);
-Lama.registerDefaultSchemaFieldMapping("array", "array");
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

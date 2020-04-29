@@ -1,9 +1,13 @@
 <template>
   <control v-bind="props" v-slot="flags">
-    <input
-      type="text"
-      class="form-control"
-      :aria-describedby="options.label"
+    <vue-ctk-date-time-picker
+      :only-date="true"
+      :auto-close="true"
+      :no-label="true"
+      :no-header="true"
+      :no-button-now="true"
+      format="YYYY-MM-DD"
+      formatted="ll"
       v-model="model"
       :class="{'is-invalid':flags.invalid && flags.touched}"
       :placeholder="options.placeholder"
@@ -14,10 +18,11 @@
 <script>
 import ControlField from "./ControlField.vue";
 import Control from "./Control.vue";
-import Lama from "../lama";
+//import VueCtkDateTimePicker from "vue-ctk-date-time-picker";
+import "vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css";
 
-let TextField = {
-  name: "TextField",
+let DateField = {
+  name: "DateField",
   extends: ControlField,
   props: {
     value: {
@@ -26,7 +31,7 @@ let TextField = {
   },
   computed: {},
   methods: {},
-  components: { Control },
+  components: { Control, VueCtkDateTimePicker: () => import("vue-ctk-date-time-picker") },
   builder: {
     props() {
       return {
@@ -44,7 +49,7 @@ let TextField = {
             multilanguage: {
               title: "Multi language",
               type: "boolean"
-            },
+            }
           }
         },
         options: {}
@@ -58,6 +63,7 @@ let TextField = {
           required: field.required
         },
         options: {
+          type: "date",
           placeholder: field.placeholder,
           multilanguage: field.multilanguage
         }
@@ -66,7 +72,7 @@ let TextField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "text",
+        fieldType: "date",
         required: def.schema.required,
         placeholder: def.options.placeholder,
         multilanguage: def.options.multilanguage
@@ -75,10 +81,7 @@ let TextField = {
   }
 };
 
-export default TextField;
-
-Lama.registerFieldComponent("text", TextField);
-Lama.registerDefaultSchemaFieldMapping("string", "text");
+export default DateField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

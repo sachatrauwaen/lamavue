@@ -2,7 +2,7 @@
   <div>
     <ValidationObserver >
       <div>
-        <field v-model="model" v-bind="props"></field>
+        <form-field v-model="model" v-bind="props"></form-field>
       </div>
     </ValidationObserver>
     {{model}}
@@ -10,9 +10,16 @@
 </template>
 
 <script>
-import Vue from "vue";
 import Field from "./Field.vue";
-Vue.component("field", Field);
+import Lama from "../lama";
+import BaseView from '../BaseView';
+import Bootstap4View from '../Bootstap4View';
+import DefaultConnector from '../DefaultConnector';
+
+Lama.registerView(BaseView);
+Bootstap4View.register();
+Lama.registerConnectorClass("default", DefaultConnector);
+
 
 export default {
   name: "Form",
@@ -46,7 +53,7 @@ export default {
     }
   },
   methods: {},
-  components: {}
+  components: {formField: Field}
 };
 </script>
 

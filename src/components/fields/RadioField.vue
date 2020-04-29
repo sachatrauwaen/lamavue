@@ -1,17 +1,17 @@
 <template>
   <control v-bind="props">
-    <select class="form-control" v-model="model">
-      <option v-for="option in items" :key="option.value">{{option.label}}</option>
-    </select>
+    <div class="form-check" v-for="(val, index ) in schema.enum" :key="val">
+      <input class="form-check-input" type="radio" v-model="model" :value="val" />
+      <label class="form-check-label">{{label(index)}}</label>
+    </div>
   </control>
 </template>
 
 <script>
 import ControlField from "./ControlField.vue";
-import Lama from "../lama";
 
-let SelectField = {
-  name: "SelectField",
+let RadioField = {
+  name: "RadioField",
   extends: ControlField,
   props: {
     value: {
@@ -21,21 +21,19 @@ let SelectField = {
     options: {},
     connector: {}
   },
-  computed: {  
-    items(){
-      return this.schema.enum.map( (v, index) => {
-        return {
-          value: v,
-          label: this.label(index)
-        };
-      })
+  computed: {
+    model: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        this.$emit("input", val);
+      }
     }
   },
   methods: {
     label(index) {
-      return this.options.optionLabels && this.options.optionLabels[index]
-        ? this.options.optionLabels[index]
-        : this.schema.enum[index];
+      return this.schema.enum[index];
     }
   },
   components: {},
@@ -85,7 +83,7 @@ let SelectField = {
           enum: _enum
         },
         options: {
-          type: "select",
+          type: "radio",
           optionLabels: optionLabels
         }
       };
@@ -93,7 +91,7 @@ let SelectField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "select",
+        fieldType: "radio",
         options: def.schema.enum.map((a, i) => {
           return {
             value: a,
@@ -105,9 +103,7 @@ let SelectField = {
   }
 };
 
-export default SelectField;
-
-Lama.registerFieldComponent("select", SelectField);
+export default RadioField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -13,7 +13,9 @@
 import List from "./List.vue";
 import Fields from "./Fields.vue";
 import Container from "./Container.vue";
-let comp = {
+import Lama from "../lama";
+
+export default  {
   name: "BuilderField",
   props: {
     value: {},
@@ -25,7 +27,6 @@ let comp = {
   },
   computed: {
     field() {
-      // eslint-disable-next-line no-undef
       let field = Lama.createFieldInstance(
         "",
         this.data,
@@ -42,7 +43,6 @@ let comp = {
         return this.value;
       },
       set(val) {
-        //this.generate(val);
         this.$emit("input", val);
       }
     },
@@ -54,17 +54,13 @@ let comp = {
     },
 
     itemcomponent() {
-      //var field = this.fields[key];
       var schemaType = this.schema.type;
       var component = null;
       if (schemaType == "object") {
-        // eslint-disable-next-line no-undef
         component = Lama.getFieldComponent("object");
       } else if (schemaType == "array") {
-        // eslint-disable-next-line no-undef
         component = Lama.getFieldComponent("array");
       } else {
-        // eslint-disable-next-line no-undef
         component = Lama.getFieldComponent("control");
       }
       return component;
@@ -73,13 +69,10 @@ let comp = {
       var schemaType = this.schema.type;
       var component = null;
       if (schemaType == "object") {
-        // eslint-disable-next-line no-undef
         component = Fields;
       } else if (schemaType == "array") {
-        // eslint-disable-next-line no-undef
         component = List;
       } else {
-        // eslint-disable-next-line no-undef
         component = this.field.component;
       }
       return component;
@@ -110,8 +103,6 @@ let comp = {
     },
     builderProps() {
       if (!this.model.fieldType) return null;
-
-      // eslint-disable-next-line no-undef
       let builderComponent = Lama.getFieldComponent(this.model.fieldType);
       return builderComponent.builder.props();
     }
@@ -127,12 +118,6 @@ let comp = {
   },
   components: { Fields, Container }
 };
-export default comp;
-
-// eslint-disable-next-line no-undef
-Lama.registerFieldComponent("builder", comp);
-// eslint-disable-next-line no-undef
-//Lama.registerDefaultSchemaFieldMapping("string", "text");
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

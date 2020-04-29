@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import Lama from "../lama";
+
 export default {
   name: "ArrayItemContainer",
   props: {
@@ -41,7 +43,7 @@ export default {
   computed: {
     headerLabel() {
       if (!this.value) return "[empty item]";
-      // eslint-disable-next-line no-undef
+      
       if (!Lama.isObject(this.value)) return this.value;
 
       let keys = Object.keys(this.value);

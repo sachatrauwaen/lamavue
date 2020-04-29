@@ -1,29 +1,29 @@
 <template>
-  <control v-bind="props">
-    <ckeditor v-model="model" :config="editorConfig"></ckeditor>
+  <control v-bind="props" v-slot="flags">
+    <input
+      type="number"
+      class="form-control"
+      :aria-describedby="options.label"
+      v-model.number="model"
+      :class="{'is-invalid':flags.invalid && flags.touched}"
+    />
   </control>
 </template>
 
 <script>
-//import Vue from 'vue';
-import TextField from "./TextField.vue";
-import Control from "./Control.vue";
-import Lama from "../lama";
-import CKEditor from 'ckeditor4-vue';
+import ControlField from "./ControlField.vue";
 
-
-let CKEditorField = {
-  name: "CKEditorField",
-  extends: TextField,
-  props: {},
-  data(){
-    return {
-      editorConfig:{}
-    };
+let NumberField = {
+  name: "NumberField",
+  extends: ControlField,
+  props: {
+    value: {
+      type: Number
+    }
   },
   computed: {},
   methods: {},
-  components: { Control, ckeditor: CKEditor.component },
+  components: {},
   builder: {
     props() {
       return {
@@ -35,8 +35,9 @@ let CKEditorField = {
               type: "boolean"
             },
             placeholder: {
-              title: "Placeholder",
-              type: "string"
+              title: "Field Placeholder",
+              description: "Field placeholder.",
+              type: "number"
             }
           }
         },
@@ -46,12 +47,12 @@ let CKEditorField = {
     fromBuilder(field) {
       return {
         schema: {
+          type: "number",
           title: field.label,
-          type: "string",
-          required: field.required
+          required: field.required,
+          placeholder: field.placeholder
         },
         options: {
-          type: "ckeditor",
           placeholder: field.placeholder
         }
       };
@@ -59,7 +60,7 @@ let CKEditorField = {
     toBuilder(def) {
       return {
         label: def.schema.title,
-        fieldType: "ckeditor",
+        fieldType: "number",
         required: def.schema.required,
         placeholder: def.options.placeholder
       };
@@ -67,9 +68,7 @@ let CKEditorField = {
   }
 };
 
-export default CKEditorField;
-
-Lama.registerFieldComponent("ckeditor", CKEditorField);
+export default NumberField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

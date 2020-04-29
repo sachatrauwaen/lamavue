@@ -5,7 +5,7 @@
         <template v-slot:toolbar>
           <toolbar v-model="model" v-bind="toolbarProps(index)"  @show-body="showBody(index+1)"></toolbar>
         </template>
-        <field v-model="model[index]" v-bind="itemProps(item)" @input="itemChange(index, $event)"></field>
+        <form-field v-model="model[index]" v-bind="itemProps(item)" @input="itemChange(index, $event)"></form-field>
       </array-item-container>
     </div>
     <toolbar v-if="!model.length" v-model="model" v-bind="toolbarProps(-1)" @show-body="showBody(0)"></toolbar>
@@ -16,6 +16,7 @@
 import Toolbar from "./Toolbar.vue";
 import ArrayItemContainer from "./ArrayItemContainer.vue";
 import Lama from "../lama";
+import Field from "./Field.vue";
 
 export default {
   name: "List",
@@ -104,7 +105,7 @@ export default {
       this.showIndex=(index== this.showIndex ? -1 : index);
     }
   },
-  components: { Toolbar, ArrayItemContainer }
+  components: { Toolbar, ArrayItemContainer, formField: Field }
 };
 </script>
 

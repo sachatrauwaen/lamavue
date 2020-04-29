@@ -1,15 +1,8 @@
 import Vue from 'vue'
-import App from './Builder.vue'
-import './lama'
-//import Container from './components/Container.vue'
+//import './lama'
+import App from './App.vue'
 
-import './components/AddressField.vue'
 
-import './BaseView'
-import Bootstap4View from './Bootstap4View'
-import  './DefaultConnector'
-
-Bootstap4View.register();
 
 Vue.config.productionTip = false
 
@@ -19,7 +12,7 @@ new Vue({
 }).$mount('#app')
 
 
-// eslint-disable-next-line no-undef
+/*
 $("#lama").lama({
   "schema": {
     "title": "What do you think of Alpaca?",
@@ -121,4 +114,4 @@ $("#lama").lama({
     }
   }
 });
-
+*/
