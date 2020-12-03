@@ -4,7 +4,12 @@ import Lama from "./lama";
 
 Vue.config.productionTip = false
 
+export default {
+  App,
+  Lama
+}
 
+/*
 // eslint-disable-next-line no-undef
 if ($("#demoapp").length) {
   new Vue({
@@ -33,7 +38,7 @@ var app = Lama.mount("#demoappx", {
 setTimeout(function(){   
     app.validate(()=>{alert('ok'); console.log(app.getValue());}, ()=>{alert('ko')});
  }, 3000);
-
+*/
 /*
 $("#lama").lama({
   "schema": {
