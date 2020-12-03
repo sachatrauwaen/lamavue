@@ -60,7 +60,7 @@ export default {
             "horizontal": false
         });
 
-        // eslint-disable-next-line no-undef
+        
         Lama.registerView({
             "id": "bootstrap4-create",
             "parent": "bootstrap4-edit",
@@ -69,8 +69,7 @@ export default {
             "type": "create",
             "displayReadonly": false
         });
-
-        // eslint-disable-next-line no-undef
-        Lama.defaultView = "bootstrap4";
+        
+        
     }
 }

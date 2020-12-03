@@ -19,7 +19,6 @@ export default  {
   name: "BuilderField",
   props: {
     value: {},
-    data: {},
     schema: {},
     options: {},
     connector: {},

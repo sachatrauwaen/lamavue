@@ -159,14 +159,7 @@ export default {
             }
           }
         },
-        view: "bootstrap4-create",
-        connector: {
-          currentCulture: "fr-FR",
-          connect() {},
-          loadAll: function(resources, onSuccess) {
-            onSuccess();
-          }
-        }
+        view: "bootstrap4-create"
       }
     };
   },

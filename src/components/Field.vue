@@ -7,11 +7,10 @@
 <script>
 import Lama from "../lama";
 
-let comp = {
-  name: "Field",
+export default {
+  name: "FormField",
   props: {
     value: {},
-    data: {},
     schema: {},
     options: {},
     view:{},
@@ -70,8 +69,8 @@ let comp = {
   },
   methods: {},
   components: {}
-};
-export default comp;
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

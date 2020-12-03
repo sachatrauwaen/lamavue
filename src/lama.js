@@ -1,19 +1,23 @@
 import Vue from 'vue'
 import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
 import { required, email, numeric } from 'vee-validate/dist/rules';
-import VueI18n from 'vue-i18n'
-import './BaseView'
+//import VueI18n from 'vue-i18n'
+
+import BaseView from "./BaseView";
+import Bootstap4View from "./Bootstap4View";
+import DefaultConnector from "./DefaultConnector";
+import LamaForm from "./components/Form.vue";
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
 
-Vue.use(VueI18n)
+//Vue.use(VueI18n)
 
 extend('required', required);
 extend('email', email);
 extend('numeric', numeric);
 
-export default {
+let Lama = {
     /**
      * @namespace Namespace for all Lama Field Class Implementations.
      */
@@ -401,17 +405,17 @@ export default {
     },
 
     mergeObject2: function (source, target) {
-        var isArray = this.isArray;
-        var isObject = this.isObject;
-        var isUndefined = this.isUndefined;
-        var copyOf = this.copyOf;
+        //var isArray = this.isArray;
+        //var isObject = this.isObject;
+        //var isUndefined = this.isUndefined;
+        //var copyOf = this.copyOf;
 
-        var _merge = function (source, target) {
-            if (isArray(source)) {
-                if (isArray(target)) {
+        var _merge = (source, target) => {
+            if (this.isArray(source)) {
+                if (this.isArray(target)) {
                     // merge array elements
                     for (let index = 0; index < source.length; index++) {
-                        target.push(copyOf(source[index]));
+                        target.push(this.copyOf(source[index]));
                     }
                     //$.each(source, function (index) {
                     //    target.push(copyOf(source[index]));
@@ -422,14 +426,14 @@ export default {
                     // skip
                 }
             }
-            else if (isObject(source)) {
-                if (isObject(target)) {
+            else if (this.isObject(source)) {
+                if (this.isObject(target)) {
                     // merge object properties
                     for (const key in source) {
                         // eslint-disable-next-line no-prototype-builtins
                         if (source.hasOwnProperty(key)) {
-                            if (isUndefined(target[key])) {
-                                target[key] = copyOf(source[key]);
+                            if (this.isUndefined(target[key])) {
+                                target[key] = this.copyOf(source[key]);
                             } else {
                                 target[key] = _merge(source[key], target[key]);
                             }
@@ -454,7 +458,7 @@ export default {
             }
             else {
                 // otherwise, it's a scalar, always overwrite
-                target = copyOf(source);
+                target = this.copyOf(source);
             }
 
             return target;
@@ -1027,7 +1031,8 @@ export default {
     defaultErrorCallback: function (error) {
         if (error && error.message) {
             // log to debug
-            this.logError(JSON.stringify(error));
+            //this.logError(JSON.stringify(error));
+            console.log(error);
 
             // error out
             throw new Error("Lama caught an error with the default error handler: " + JSON.stringify(error));
@@ -1133,5 +1138,62 @@ export default {
                 }
             }
         }
+    },
+    installed: false,
+    install(Vue, options) {
+        if (this.installed) {
+            console.warn("[LamaVue] allready installed");
+            return
+        }
+        this.installed = true;
+
+        this.registerView(BaseView);
+        Bootstap4View.register();
+        if (options && options.view)
+            this.defaultView = options.view;
+        else
+            this.defaultView = "bootstrap4-edit";
+        this.registerConnectorClass("default", DefaultConnector);
+    },
+    mount(elementOrSelector, config) {
+        let app = new Vue({
+            data: {
+                model: config.data
+            },
+            render: function (h) {
+                var self = this;
+                return h(LamaForm, {
+                    ref: 'form',
+                    props: {
+                        schema: config.schema,
+                        options: config.options,
+                        view: config.view,
+                        connector: config.connector,
+                        value: self.model
+                    },
+                    on: {
+                        input: function (event) {
+                            //self.$emit('input', event.target.value)
+                            self.model = event;
+                        }
+                    }
+                });
+
+            }
+        }).$mount(elementOrSelector);
+        return {
+            getValue(){
+                return app.model;
+            },
+            validate(successCallback, errorCallBack){
+                app.$refs.form.validate(successCallback, errorCallBack);
+            }
+        };
     }
+}
+export default Lama;
+
+if (typeof window !== 'undefined' ) {
+    window.Lama = Lama;
+    Vue.use(Lama);
 }

@@ -1,16 +1,42 @@
 import Vue from 'vue'
-//import './lama'
 import App from './App.vue'
-
-
+import Lama from "./lama";
 
 Vue.config.productionTip = false
 
+// eslint-disable-next-line no-undef
+if ($("#demoapp").length) {
+  new Vue({
+    render: h => h(App),
+  }).$mount('#demoapp')
+}
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
 
+var app = Lama.mount("#demoappx", {
+  "schema": {
+    "title": "What do you think of Alpaca?",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        required: true
+      }
+    }
+  },
+  "options":{
+
+  }
+});
+
+
+setTimeout(function(){ 
+
+  
+app.validate(()=>{alert('ok'); console.log(app.getValue());}, ()=>{alert('ko')});
+
+
+ }, 3000);
 
 /*
 $("#lama").lama({

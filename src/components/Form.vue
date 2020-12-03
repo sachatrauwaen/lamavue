@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ValidationObserver >
+    <ValidationObserver ref="validationobserver">
       <div>
         <form-field v-model="model" v-bind="props"></form-field>
       </div>
@@ -10,24 +10,17 @@
 </template>
 
 <script>
-import Field from "./Field.vue";
+import Vue from 'vue'
+import FormField from "./Field.vue";
 import Lama from "../lama";
-import BaseView from '../BaseView';
-import Bootstap4View from '../Bootstap4View';
-import DefaultConnector from '../DefaultConnector';
-
-Lama.registerView(BaseView);
-Bootstap4View.register();
-Lama.registerConnectorClass("default", DefaultConnector);
-
+Vue.use(Lama);
 
 export default {
   name: "Form",
   props: {
-    data: {},
     schema: {},
-    options: {},    
-    view:{},
+    options: {},
+    view: {},
     connector: {},
     value: {}
   },
@@ -40,20 +33,32 @@ export default {
         this.$emit("input", val);
       }
     },
-    props(){
+    props() {
+      let connector = this.connector || Lama.getConnectorClass("default");
+      let view = this.view || Lama.defaultView;
       return {
         schema: this.schema,
-        options:this.options,
-        view: this.view,
-        connector:this.connector
+        options: this.options,
+        view: view,
+        connector: connector
       };
     },
     label() {
       return this.schema.title;
     }
   },
-  methods: {},
-  components: {formField: Field}
+  methods: {
+    validate(successCallback, errorCallBack){
+      this.$refs.validationobserver.validate().then(success => {
+        if (success) {
+          if (successCallback) successCallback();
+        } else{
+          if (errorCallBack) errorCallBack();
+        }
+      });
+    }
+  },
+  components: { FormField }
 };
 </script>
 

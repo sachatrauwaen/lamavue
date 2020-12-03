@@ -20,7 +20,6 @@
 export default {
   name: "Control",
   props: {
-    data: {},
     schema: {},
     options: {},
     messages: {},

@@ -8,9 +8,9 @@
 
 <script>
 import Lama from "../lama";
-import Field from "./Field.vue";
+import FormField from "./Field.vue";
 
-let comp = {
+export default {
   name: "Fields",
   props: {
     value: {},
@@ -106,10 +106,13 @@ let comp = {
       }
       return true;
     }
-  },
-  components: {formField: Field}
+  },  
+  //components: { FormField },
+  beforeCreate: function () {
+    this.$options.components.FormField = FormField
+  }
 };
-export default comp;
+ 
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

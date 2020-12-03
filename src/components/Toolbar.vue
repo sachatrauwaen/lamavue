@@ -23,7 +23,6 @@
 export default {
   name: "Toolbar",
   props: {
-    data: {},
     schema: {},
     options: {},
     messages: {},

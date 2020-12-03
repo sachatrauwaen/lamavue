@@ -16,7 +16,7 @@
 import Toolbar from "./Toolbar.vue";
 import ArrayItemContainer from "./ArrayItemContainer.vue";
 import Lama from "../lama";
-import Field from "./Field.vue";
+import FormField from "./Field.vue";
 
 export default {
   name: "List",
@@ -105,7 +105,10 @@ export default {
       this.showIndex=(index== this.showIndex ? -1 : index);
     }
   },
-  components: { Toolbar, ArrayItemContainer, formField: Field }
+  components: { Toolbar, ArrayItemContainer},
+  beforeCreate: function () {
+    this.$options.components.FormField = FormField
+  }
 };
 </script>
 
