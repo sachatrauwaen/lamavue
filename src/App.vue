@@ -40,26 +40,9 @@ export default {
       activeTab: 0,
       tabs: ["Builder", "Schema", "Options", "Demo"],
       model: {
-        schema: {
-          title: "What do you think of Alpaca?",
+        schema: {          
           type: "object",
-          properties: {
-            name: {
-              type: "string",
-              title: "Name",
-              required: true
-            },
-            amount: {
-              type: "number",
-              title: "Amount",
-              required: true
-            },
-            ranking: {
-              type: "string",
-              title: "Ranking",
-              enum: ["excellent", "not too shabby", "alpaca built my hotrod"]
-            }
-          }
+          properties: {}
         },
         options: { fields: {} }
       },

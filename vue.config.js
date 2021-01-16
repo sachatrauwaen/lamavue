@@ -1,12 +1,7 @@
 module.exports = {
   css: {
-    extract: true
+    extract: false
   },
-  filenameHashing:false,
-  configureWebpack: {
-    output: {
-      libraryExport: 'default'
-    }
-  }
+  filenameHashing:false
  
 }

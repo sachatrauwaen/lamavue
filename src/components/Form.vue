@@ -5,7 +5,9 @@
         <form-field v-model="model" v-bind="props"></form-field>
       </div>
     </ValidationObserver>
+    <div v-if="debug">
     {{model}}
+    </div>
   </div>
 </template>
 
@@ -22,7 +24,11 @@ export default {
     options: {},
     view: {},
     connector: {},
-    value: {}
+    value: {},
+     debug:{
+      "type" : Boolean,
+      "default": false
+    }
   },
   computed: {
     model: {

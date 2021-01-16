@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Lama from "./lama";
+//import Lama from "./lama";
 
 Vue.config.productionTip = false
-/*
+
 
 // eslint-disable-next-line no-undef
 if ($("#demoapp").length) {
@@ -12,7 +12,7 @@ if ($("#demoapp").length) {
   }).$mount('#demoapp')
 }
 
-
+/*
 var app = Lama.mount("#demoappx", {
   "schema": {
     "title": "What do you think of Alpaca?",

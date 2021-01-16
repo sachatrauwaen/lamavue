@@ -2,6 +2,7 @@
   "name": "lamavue",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/lamavue.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name lamavue ./src/lamavue.js ",
