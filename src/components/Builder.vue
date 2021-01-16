@@ -98,7 +98,7 @@ export default {
         }
         this.$emit("input", {
           schema: {
-            title: "What do you think of Alpaca?",
+            //title: "What do you think of Alpaca?",
             type: "object",
             properties: props,
           },

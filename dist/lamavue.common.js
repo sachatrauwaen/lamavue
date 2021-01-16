@@ -32799,12 +32799,12 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=b6befb94&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"161888d0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Builder.vue?vue&type=template&id=2f129546&
-var Buildervue_type_template_id_2f129546_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'lama-form',_vm.props,false))],1),_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.demo),callback:function ($$v) {_vm.demo=$$v},expression:"demo"}},'lama-form',_vm.demoProps,false)),(_vm.debug)?_c('div',[_c('hr'),_vm._v(" schema = "+_vm._s(_vm.value.schema)+" "),_c('hr'),_vm._v(" options = "+_vm._s(_vm.value.options)+" ")]):_vm._e()],1)]),_c('hr')])}
-var Buildervue_type_template_id_2f129546_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"161888d0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Builder.vue?vue&type=template&id=c2836db4&
+var Buildervue_type_template_id_c2836db4_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'lama-form',_vm.props,false))],1),_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.demo),callback:function ($$v) {_vm.demo=$$v},expression:"demo"}},'lama-form',_vm.demoProps,false)),(_vm.debug)?_c('div',[_c('hr'),_vm._v(" schema = "+_vm._s(_vm.value.schema)+" "),_c('hr'),_vm._v(" options = "+_vm._s(_vm.value.options)+" ")]):_vm._e()],1)]),_c('hr')])}
+var Buildervue_type_template_id_c2836db4_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Builder.vue?vue&type=template&id=2f129546&
+// CONCATENATED MODULE: ./src/components/Builder.vue?vue&type=template&id=c2836db4&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"161888d0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Form.vue?vue&type=template&id=e6f0ddee&scoped=true&
 var Formvue_type_template_id_e6f0ddee_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('ValidationObserver',{ref:"validationobserver"},[_c('div',[_c('form-field',_vm._b({model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'form-field',_vm.props,false))],1)]),(_vm.debug)?_c('div',[_vm._v(" "+_vm._s(_vm.model)+" ")]):_vm._e()],1)}
@@ -41604,7 +41604,7 @@ lama.registerFieldComponent("builder", BuilderField);
 
         this.$emit("input", {
           schema: {
-            title: "What do you think of Alpaca?",
+            //title: "What do you think of Alpaca?",
             type: "object",
             properties: props
           },
@@ -41669,8 +41669,8 @@ lama.registerFieldComponent("builder", BuilderField);
 
 var Builder_component = normalizeComponent(
   components_Buildervue_type_script_lang_js_,
-  Buildervue_type_template_id_2f129546_render,
-  Buildervue_type_template_id_2f129546_staticRenderFns,
+  Buildervue_type_template_id_c2836db4_render,
+  Buildervue_type_template_id_c2836db4_staticRenderFns,
   false,
   null,
   null,
