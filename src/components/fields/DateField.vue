@@ -18,7 +18,7 @@
 <script>
 import ControlField from "./ControlField.vue";
 import Control from "./Control.vue";
-//import VueCtkDateTimePicker from "vue-ctk-date-time-picker";
+import VueCtkDateTimePicker from "vue-ctk-date-time-picker";
 import "vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css";
 
 let DateField = {
@@ -31,7 +31,7 @@ let DateField = {
   },
   computed: {},
   methods: {},
-  components: { Control, VueCtkDateTimePicker: () => import("vue-ctk-date-time-picker") },
+  components: { Control, VueCtkDateTimePicker },
   builder: {
     props() {
       return {
