@@ -74,10 +74,8 @@ let ImageField = {
         return;
       }
       let config = {
-        query: {
-          type: "folders",
+          file: file,
           folder: this.baseFolder
-        }
       };
       this.connector.upload(
         config,
