@@ -55,7 +55,7 @@ export default {
     save() {
       this.$emit(
         "save",
-        this.$refs.cropper.getCroppedCanvas().toDataURL(),
+        this.$refs.cropper.getCroppedCanvas(),
         this.$refs.cropper.getData()
       );
     },

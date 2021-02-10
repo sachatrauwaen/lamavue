@@ -9,27 +9,32 @@
       ></image-editor>
     </template>
     <div v-show="!showImageEditor">
-       <input       
+      <input
         ref="input"
         type="file"
         name="image"
         accept="image/*"
         @change="setImage"
         class="form-control-file"
-        style="margin-bottom:10px"
+        style="margin-bottom: 10px"
       />
       <input
-      type="text"
-      class="form-control"
-      :aria-describedby="options.label"
-      v-model="model"
-      :class="{'is-invalid':flags.invalid && flags.touched}"
-       style="margin-bottom:10px"
-    />
-      
+        type="text"
+        class="form-control"
+        :aria-describedby="options.label"
+        v-model="model"
+        :class="{ 'is-invalid': flags.invalid && flags.touched }"
+        style="margin-bottom: 10px"
+      />
+
       <div>
         <a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">
-          <img :src="imageSrc" alt="Image" style="margin: 10px 0" class="img-fluid" />
+          <img
+            :src="imageSrc"
+            alt="Image"
+            style="margin: 10px 0"
+            class="img-fluid"
+          />
         </a>
       </div>
     </div>
@@ -47,24 +52,24 @@ import "cropperjs/dist/cropper.css";
 import FileBrowser from "./FileBrowser.vue";
 
 
+
 let ImageField = {
   name: "ImageField",
   extends: ControlField,
   props: {
     value: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
-      showImageEditor: false
+      showImageEditor: false,
     };
   },
   computed: {
     imageSrc() {
       return this.value;
     },
-    
   },
   methods: {
     setImage(e) {
@@ -74,13 +79,14 @@ let ImageField = {
         return;
       }
       let config = {
-          file: file,
-          folder: this.baseFolder
+        file: file,
+        name: file.name,
+        folder: this.baseFolder,
       };
       this.connector.upload(
         config,
-        data => {
-            this.model = data.url;
+        (data) => {
+          this.model = data.url;
         },
         () => {}
       );
@@ -110,13 +116,38 @@ let ImageField = {
     cancelImageEditor() {
       this.showImageEditor = false;
     },
-    saveImageEditor(cropUrl) {
+    saveImageEditor(canvas) {
       this.showImageEditor = false;
-      this.model =  cropUrl;
+
+      canvas.toBlob((blob) => {
+        let config = {
+          file: blob,
+          name: this.model,
+          folder: this.baseFolder,
+        };
+        this.connector.upload(
+          config,
+          (data) => {
+            this.model = data.url;
+          },
+          () => {}
+        );
+      }, this.toMine(this.model));
     },
     remove() {
       this.model = null;
-    }
+    },
+    toMine(filename) {
+
+      if (filename.endsWith(".jpg"))
+        return "image/jpeg";
+      else if (filename.endsWith(".jpeg"))
+        return "image/jpeg";
+      else if (filename.endsWith(".png"))
+        return "image/png";
+      else 
+        return "image/png";
+    },
   },
   components: { Control, VueCropper, FileBrowser, ImageEditor },
   builder: {
@@ -127,15 +158,15 @@ let ImageField = {
           properties: {
             required: {
               title: "Required",
-              type: "boolean"
+              type: "boolean",
             },
             multilanguage: {
               title: "Multi language",
-              type: "boolean"
-            }
-          }
+              type: "boolean",
+            },
+          },
         },
-        options: {}
+        options: {},
       };
     },
     fromBuilder(field) {
@@ -143,12 +174,12 @@ let ImageField = {
         schema: {
           title: field.label,
           type: "string",
-          required: field.required
+          required: field.required,
         },
         options: {
           type: "image",
-          multilanguage: field.multilanguage
-        }
+          multilanguage: field.multilanguage,
+        },
       };
     },
     toBuilder(def) {
@@ -156,10 +187,10 @@ let ImageField = {
         label: def.schema.title,
         fieldType: "image",
         required: def.schema.required,
-        multilanguage: def.options.multilanguage
+        multilanguage: def.options.multilanguage,
       };
-    }
-  }
+    },
+  },
 };
 
 export default ImageField;
@@ -167,5 +198,4 @@ export default ImageField;
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
-
 </style>
