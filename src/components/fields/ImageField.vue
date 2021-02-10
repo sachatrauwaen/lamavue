@@ -64,11 +64,12 @@ let ImageField = {
   data() {
     return {
       showImageEditor: false,
+      imageVersion : new Date().getTime()
     };
   },
   computed: {
     imageSrc() {
-      return this.value + new Date().getTime();
+      return this.value +"?v="+ this.imageVersion;
     },
   },
   methods: {
@@ -87,6 +88,7 @@ let ImageField = {
         config,
         (data) => {
           this.model = data.url;
+          this.updateImageVersion();
         },
         () => {}
       );
@@ -129,6 +131,7 @@ let ImageField = {
           config,
           (data) => {
             this.model = data.url;
+            this.updateImageVersion();
           },
           () => {}
         );
@@ -148,6 +151,9 @@ let ImageField = {
       else 
         return "image/png";
     },
+    updateImageVersion(){
+      this.imageVersion=new Date().getTime();
+    }
   },
   components: { Control, VueCropper, FileBrowser, ImageEditor },
   builder: {
