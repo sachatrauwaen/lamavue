@@ -68,7 +68,7 @@ let ImageField = {
   },
   computed: {
     imageSrc() {
-      return this.value;
+      return this.value + new Date().getTime();
     },
   },
   methods: {

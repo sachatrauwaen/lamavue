@@ -39096,12 +39096,12 @@ var FileField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_FileField = (FileField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"161888d0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageField.vue?vue&type=template&id=fcd68592&
-var ImageFieldvue_type_template_id_fcd68592_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value,"cropperData":{}},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":"image/*"},on:{"change":_vm.setImage}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}}),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])])]}}])},'control',_vm.props,false))}
-var ImageFieldvue_type_template_id_fcd68592_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"161888d0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageField.vue?vue&type=template&id=6414909d&
+var ImageFieldvue_type_template_id_6414909d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value,"cropperData":{}},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":"image/*"},on:{"change":_vm.setImage}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}}),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])])]}}])},'control',_vm.props,false))}
+var ImageFieldvue_type_template_id_6414909d_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageField.vue?vue&type=template&id=fcd68592&
+// CONCATENATED MODULE: ./src/components/fields/ImageField.vue?vue&type=template&id=6414909d&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
@@ -39284,7 +39284,7 @@ var ImageField = {
   },
   computed: {
     imageSrc: function imageSrc() {
-      return this.value;
+      return this.value + new Date().getTime();
     }
   },
   methods: {
@@ -39415,8 +39415,8 @@ var ImageField = {
 
 var ImageField_component = normalizeComponent(
   fields_ImageFieldvue_type_script_lang_js_,
-  ImageFieldvue_type_template_id_fcd68592_render,
-  ImageFieldvue_type_template_id_fcd68592_staticRenderFns,
+  ImageFieldvue_type_template_id_6414909d_render,
+  ImageFieldvue_type_template_id_6414909d_staticRenderFns,
   false,
   null,
   null,
