@@ -28,7 +28,7 @@
       />
 
       <div>
-        <a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">
+        <a v-if="value" href="#" @click.prevent="edit" title="Edit Image">
           <img
             :src="imageSrc"
             alt="Image"

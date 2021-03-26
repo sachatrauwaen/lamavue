@@ -1,7 +1,7 @@
 <template>
   <control v-bind="props">
     <select class="form-control" v-model="model">
-      <option v-for="option in items" :key="option.value">{{option.label}}</option>
+      <option v-for="option in items" :key="option.value" :value="option.value">{{option.label}}</option>
     </select>
   </control>
 </template>

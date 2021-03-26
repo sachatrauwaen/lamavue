@@ -34,6 +34,7 @@ let ArrayField = {
         schema: this.schema,
         options: this.options,
         view: this.view,
+        connector:this.connector,
         errorCallback: this.errorCallback
       };
     }
