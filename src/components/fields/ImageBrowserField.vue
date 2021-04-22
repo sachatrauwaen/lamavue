@@ -2,14 +2,14 @@
   <control v-bind="props">
     <template v-if="showImageEditor">
       <image-editor
-        :imageUrl="value.url"
+        :imageUrl="value.rawUrl || value.url"
         :cropperData="value.crop"
         @cancel="cancelImageEditor"
         @save="saveImageEditor"
       ></image-editor>
     </template>
     <div v-show="!showImageEditor">
-      <file-browser v-model="imageFile" v-bind="props"></file-browser>     
+      <file-browser v-model="imageFile" v-bind="fileBrowserProps"></file-browser>     
       <div class="btn-group" role="group" aria-label="Basic example">       
         <button
           v-if="imageSrc"
@@ -21,7 +21,7 @@
       </div>
       <div>
         <a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">
-          <img :src="imageSrc" alt="Image" style="margin: 10px 0" class="img-fluid" />
+          <img :src="imageSrc" alt="Image" style="margin: 10px 0;max-height:200px;" class="img-fluid" />
         </a>
       </div>
     </div>
@@ -39,7 +39,7 @@ import FileBrowser from "./FileBrowser.vue";
 
 
 let ImagexField = {
-  name: "ImageField",
+  name: "ImageBrowserField",
   extends: ControlField,
   props: {
     value: {
@@ -52,8 +52,16 @@ let ImagexField = {
     };
   },
   computed: {
+    fileBrowserProps(){
+      return{
+        onlyImages: true,
+        connector: this.connector,
+        showFolderSelector: false,
+        showFileSelector:true
+      }
+    },
     imageSrc() {
-      if (this.value) return this.value.cropUrl || this.value.url;
+      if (this.value) return this.value.url;
       else return "";
     },
     imageFile: {
@@ -61,7 +69,7 @@ let ImagexField = {
         return this.model
           ? {
               id: this.model.id,
-              url: this.model.url,
+              url: this.model.rawUrl || this.model.url,
               filename: this.model.filename,
               width: this.model.width,
               height: this.model.height
@@ -75,7 +83,8 @@ let ImagexField = {
             filename: val.filename,
             width: val.width,
             height: val.height,
-            url: val.url
+            url: val.url,
+            rawUrl: val.url
           };
         } else {
           this.model = null;
@@ -93,17 +102,44 @@ let ImagexField = {
     cancelImageEditor() {
       this.showImageEditor = false;
     },
-    saveImageEditor(cropUrl, cropData) {
+    saveImageEditor(cropCanvas, cropData) {
       this.showImageEditor = false;
-      this.model = {
-        id: this.model.id,
-        url: this.model.url,
-        filename: this.model.filename,
-        width: this.model.width,
-        height: this.model.height,
-        cropUrl: cropUrl,
-        crop: cropData
-      };
+      // this.model = {
+      //   id: this.model.id,
+      //   url: this.model.url,
+      //   filename: this.model.filename,
+      //   width: this.model.width,
+      //   height: this.model.height,
+      //   cropUrl: cropCanvas.toDataURL('image/jpeg'),
+      //   crop: cropData
+      // };
+
+      cropCanvas.toBlob((blob) => {
+        
+        let config = {
+              file:  blob,
+              name: this.model.filename,
+              folder: this.baseFolder,
+              hidden:true
+            };
+            this.connector.upload(
+              config,
+              (data) => {
+                this.model = {
+                  id: this.model.id,
+                  url: data.url,
+                  filename: this.model.filename,
+                  width: this.model.width,
+                  height: this.model.height,
+                  rawUrl: this.model.rawUrl,
+                  cropUrl: data.url,
+                  crop: cropData
+                };
+                this.updateImageVersion();
+              },
+              () => {}
+            );        
+        });     
     },
     remove() {
       this.model = null;
@@ -116,38 +152,24 @@ let ImagexField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            },
-            multilanguage: {
-              title: "Multi language",
-              type: "boolean"
-            }
           }
         },
         options: {}
       };
     },
-    fromBuilder(field) {
+    fromBuilder() {
       return {
         schema: {
-          title: field.label,
           type: "string",
-          required: field.required
         },
         options: {
-          type: "imagex",
-          multilanguage: field.multilanguage
+          type: "imagebrowser",
         }
       };
     },
-    toBuilder(def) {
+    toBuilder() {
       return {
-        label: def.schema.title,
-        fieldType: "imagex",
-        required: def.schema.required,
-        multilanguage: def.options.multilanguage
+        fieldType: "imagebrowser",
       };
     }
   }

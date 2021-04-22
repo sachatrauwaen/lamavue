@@ -34,30 +34,22 @@ let CheckBoxField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            }
           }
         },
         options: {}
       };
     },
-    fromBuilder(field) {
+    fromBuilder() {
       return {
         schema: {
-          title: field.label,
-          type: "boolean",
-          required: field.required
+          type: "boolean"
         },
         options: {}
       };
     },
-    toBuilder(def) {
+    toBuilder() {
       return {
-        label: def.schema.title,
         fieldType: "checkbox",
-        required: def.schema.required
       };
     }
   }

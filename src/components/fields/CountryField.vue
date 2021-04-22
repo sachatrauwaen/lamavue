@@ -1,12 +1,12 @@
 
 <script>
 
-import SelectField from "./SelectField.vue";
+import SelectBaseField from "./SelectBaseField.vue";
 import Lama from "../../lama";
 
 let CountryField = {
   name: "CountryField",
-  extends: SelectField,
+  extends: SelectBaseField,
   props: {
     
   },
@@ -39,20 +39,18 @@ let CountryField = {
         options: {}
       };
     },
-    fromBuilder(field) {     
+    fromBuilder() {     
       return {
         schema: {
           type: "string",
-          title: field.label,
         },
         options: {
           type: "country",
         }
       };
     },
-    toBuilder(def) {
-      return {
-        label: def.schema.title,
+    toBuilder() {
+      return {        
         fieldType: "country",
       };
     }

@@ -6,6 +6,7 @@
       :aria-describedby="options.label"
       v-model.number="model"
       :class="{'is-invalid':flags.invalid && flags.touched}"
+       :placeholder="options.placeholder"
     />
   </control>
 </template>
@@ -30,14 +31,9 @@ let NumberField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            },
             placeholder: {
-              title: "Field Placeholder",
-              description: "Field placeholder.",
-              type: "number"
+              title: "Placeholder",
+              type: "string"
             }
           }
         },
@@ -48,9 +44,6 @@ let NumberField = {
       return {
         schema: {
           type: "number",
-          title: field.label,
-          required: field.required,
-          placeholder: field.placeholder
         },
         options: {
           placeholder: field.placeholder
@@ -59,9 +52,7 @@ let NumberField = {
     },
     toBuilder(def) {
       return {
-        label: def.schema.title,
         fieldType: "number",
-        required: def.schema.required,
         placeholder: def.options.placeholder
       };
     }

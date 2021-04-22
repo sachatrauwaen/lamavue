@@ -15,7 +15,7 @@
         name="image"
         accept="image/*"
         @change="setImage"
-        class="form-control-file"
+        class="form-control-file normalFileUpload"
         style="margin-bottom: 10px"
       />
       <input
@@ -26,13 +26,12 @@
         :class="{ 'is-invalid': flags.invalid && flags.touched }"
         style="margin-bottom: 10px"
       />
-
       <div>
         <a v-if="value" href="#" @click.prevent="edit" title="Edit Image">
           <img
             :src="imageSrc"
             alt="Image"
-            style="margin: 10px 0"
+            style="margin: 10px 0; max-height:200px;"
             class="img-fluid"
           />
         </a>
@@ -48,10 +47,7 @@ import Control from "./Control.vue";
 import ImageEditor from "./ImageEditor.vue";
 import VueCropper from "vue-cropperjs";
 import "cropperjs/dist/cropper.css";
-
 import FileBrowser from "./FileBrowser.vue";
-
-
 
 let ImageField = {
   name: "ImageField",
@@ -162,38 +158,25 @@ let ImageField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean",
-            },
-            multilanguage: {
-              title: "Multi language",
-              type: "boolean",
-            },
+            
           },
         },
         options: {},
       };
     },
-    fromBuilder(field) {
+    fromBuilder() {
       return {
-        schema: {
-          title: field.label,
-          type: "string",
-          required: field.required,
+        schema: {         
+          type: "string",         
         },
         options: {
-          type: "image",
-          multilanguage: field.multilanguage,
+          type: "image",          
         },
       };
     },
-    toBuilder(def) {
-      return {
-        label: def.schema.title,
-        fieldType: "image",
-        required: def.schema.required,
-        multilanguage: def.options.multilanguage,
+    toBuilder() {
+      return {       
+        fieldType: "image",       
       };
     },
   },

@@ -25,7 +25,7 @@
         name="image"
         accept="image/*"
         @change="setImage"
-        class="form-control-file"
+        class="form-control-file normalFileUpload"
         style="margin-bottom:10px"
       />
   </div>
@@ -46,6 +46,10 @@ export default {
       default:true
     },
     showFileSelector:{
+      type:Boolean,
+      default:true
+    },
+    onlyImages:{
       type:Boolean,
       default:true
     }
@@ -96,7 +100,8 @@ export default {
       let config = {
         query: {
           type: "files",
-          folder: this.folder
+          folder: this.folder,
+          onlyImages: this.onlyImages
         }
       };
       this.connector.loadDataSource(
@@ -110,21 +115,21 @@ export default {
     },
     setImage(e) {
       const file = e.target.files[0];
-      if (file.type.indexOf("image/") === -1) {
+      if (this.onlyImages && file.type.indexOf("image/") === -1) {
         alert("Please select an image file");
         return;
       }
       let config = {
-        query: {
-          type: "folders",
-          folder: this.baseFolder
-        }
+        file: file,
+        name: file.name,
+        folder: this.baseFolder,
       };
       this.connector.upload(
         config,
-        data => {
-            this.model = data;
-            this.fetchFiles();
+        (data) => {
+          this.files.push(data);
+          this.model = data;
+          this.updateImageVersion();
         },
         () => {}
       );

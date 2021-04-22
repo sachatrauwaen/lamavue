@@ -2,13 +2,14 @@
   <div>
     <div class="modal-mask"></div>
     <div class="editor">
-      <div style="margin-bottom:10px">
+      <div style="margin-bottom:10px;">
         <vue-cropper
           ref="cropper"
           :responsive="true"
           :src="imageUrl"
           :data="cropperData"
           alt="Image"
+          containerStyle="max-height:400px;"
         ></vue-cropper>
       </div>
       <button

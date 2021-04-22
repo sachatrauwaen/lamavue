@@ -7,6 +7,7 @@ import BaseView from "./BaseView";
 import Bootstap4View from "./Bootstap4View";
 import DefaultConnector from "./DefaultConnector";
 import LamaForm from "./components/Form.vue";
+import LamaBuilder from "./components/Builder.vue";
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
@@ -1185,8 +1186,43 @@ let Lama = {
             getValue(){
                 return app.model;
             },
+            setValue(val){
+                return app.model = val;
+            },
             validate(successCallback, errorCallBack){
                 app.$refs.form.validate(successCallback, errorCallBack);
+            }
+        };
+    },
+    mountBuilder(elementOrSelector, config) {
+        let app = new Vue({
+            data: {
+                model: config.data
+            },
+            render: function (h) {
+                var self = this;
+                return h(LamaBuilder, {
+                    ref: 'builder',
+                    props: {                       
+                        connector: config.connector,
+                        value: self.model
+                    },
+                    on: {
+                        input: function (event) {
+                            //self.$emit('input', event.target.value)
+                            self.model = event;
+                        }
+                    }
+                });
+
+            }
+        }).$mount(elementOrSelector);
+        return {
+            getValue(){
+                return app.model;
+            },
+            validate(successCallback, errorCallBack){
+                app.$refs.builder.validate(successCallback, errorCallBack);
             }
         };
     }

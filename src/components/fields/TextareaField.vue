@@ -23,45 +23,20 @@ let TextareaField = {
   computed: {},
   methods: {},
   components: { Control },
-  builder: {
-    props() {
+  builder: {   
+    fromBuilder() {
       return {
-        schema: {
-          type: "object",
-          properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            },
-            placeholder: {
-              title: "Field Placeholder",
-              description: "Field placeholder.",
-              type: "string"
-            }
-          }
-        },
-        options: {}
-      };
-    },
-    fromBuilder(field) {
-      return {
-        schema: {
-          title: field.label,
-          type: "string",
-          required: field.required
+        schema: {          
+          type: "string",          
         },
         options: {
-          type: "textarea",
-          placeholder: field.placeholder
+          type: "textarea",          
         }
       };
     },
-    toBuilder(def) {
+    toBuilder() {
       return {
-        label: def.schema.title,
         fieldType: "textarea",
-        required: def.schema.required,
-        placeholder: def.options.placeholder
       };
     }
   }

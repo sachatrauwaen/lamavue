@@ -79,7 +79,6 @@ let RadioField = {
       return {
         schema: {
           type: "string",
-          title: field.label,
           enum: _enum
         },
         options: {
@@ -90,7 +89,6 @@ let RadioField = {
     },
     toBuilder(def) {
       return {
-        label: def.schema.title,
         fieldType: "radio",
         options: def.schema.enum.map((a, i) => {
           return {

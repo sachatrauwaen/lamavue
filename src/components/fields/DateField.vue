@@ -38,17 +38,9 @@ let DateField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            },
             placeholder: {
               title: "Placeholder",
               type: "string"
-            },
-            multilanguage: {
-              title: "Multi language",
-              type: "boolean"
             }
           }
         },
@@ -58,24 +50,18 @@ let DateField = {
     fromBuilder(field) {
       return {
         schema: {
-          title: field.label,
           type: "string",
-          required: field.required
         },
         options: {
           type: "date",
           placeholder: field.placeholder,
-          multilanguage: field.multilanguage
         }
       };
     },
     toBuilder(def) {
       return {
-        label: def.schema.title,
         fieldType: "date",
-        required: def.schema.required,
-        placeholder: def.options.placeholder,
-        multilanguage: def.options.multilanguage
+        placeholder: def.options.placeholder
       };
     }
   }

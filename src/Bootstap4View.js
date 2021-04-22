@@ -5,14 +5,16 @@ import CKEditorField from './components/fields/CKEditorField.vue'
 import CountryField from './components/fields/CountryField.vue'
 import DateField from './components/fields/DateField.vue'
 import FileField from './components/fields/FileField.vue'
+import FileBrowserField from './components/fields/FileBrowserField.vue'
 import ImageField from './components/fields/ImageField.vue'
-import ImagexField from './components/fields/ImagexField.vue'
+import ImageBrowserField from './components/fields/ImageBrowserField.vue'
 import NumberField from './components/fields/NumberField.vue'
 import ObjectField from './components/fields/ObjectField.vue'
 import RadioField from './components/fields/RadioField.vue'
 import SelectField from './components/fields/SelectField.vue'
 import TextField from './components/fields/TextField.vue'
 import TextareaField from './components/fields/TextareaField.vue'
+import IconField from './components/fields/IconField.vue'
 import Lama from "./lama";
 
 export default {
@@ -29,8 +31,9 @@ export default {
         Lama.registerFieldComponent("country", CountryField);
         Lama.registerFieldComponent("date", DateField);
         Lama.registerFieldComponent("file", FileField);
+        Lama.registerFieldComponent("filebrowser", FileBrowserField);
         Lama.registerFieldComponent("image", ImageField);
-        Lama.registerFieldComponent("imagex", ImagexField);
+        Lama.registerFieldComponent("imagebrowser", ImageBrowserField);
         Lama.registerFieldComponent("number", NumberField);
         Lama.registerDefaultSchemaFieldMapping("number", "number");
         Lama.registerFieldComponent("object", ObjectField);
@@ -40,6 +43,8 @@ export default {
         Lama.registerFieldComponent("textarea", TextareaField);
         Lama.registerFieldComponent("text", TextField);
         Lama.registerDefaultSchemaFieldMapping("string", "text");
+
+        Lama.registerFieldComponent("icon", IconField);
 
         Lama.registerView({
             "id": "bootstrap4-edit",

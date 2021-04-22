@@ -2,9 +2,12 @@
   <div class>
     <container v-model="model" v-bind="props">
       <fields v-model="model" v-bind="props"></fields>
-
-      <fields v-if="model.fieldType" v-model="model" v-bind="builderProps"></fields>
-      {{model.builder}}
+      <fields
+        v-if="model.fieldType"
+        v-model="model"
+        v-bind="builderProps"
+      ></fields>
+      {{ model.builder }}
     </container>
   </div>
 </template>
@@ -15,14 +18,14 @@ import Fields from "./Fields.vue";
 import Container from "./Container.vue";
 import Lama from "../lama";
 
-export default  {
+export default {
   name: "BuilderField",
   props: {
     value: {},
     schema: {},
     options: {},
     connector: {},
-    errorCallback: {}
+    // errorCallback: {}
   },
   computed: {
     field() {
@@ -32,8 +35,8 @@ export default  {
         this.options,
         this.schema,
         this.view,
-        this.connector,
-        this.errorCallback
+        this.connector
+        //this.errorCallback
       );
       return field;
     },
@@ -43,15 +46,14 @@ export default  {
       },
       set(val) {
         this.$emit("input", val);
-      }
+      },
     },
     props() {
       return {
         schema: this.schema,
-        options: this.options
+        options: this.options,
       };
     },
-
     itemcomponent() {
       var schemaType = this.schema.type;
       var component = null;
@@ -103,8 +105,52 @@ export default  {
     builderProps() {
       if (!this.model.fieldType) return null;
       let builderComponent = Lama.getFieldComponent(this.model.fieldType);
-      return builderComponent.builder.props();
-    }
+      let props = {
+        schema: {
+          type: "object",
+          properties: {},
+        },
+        options: {
+          fields: {},
+        },
+      };
+      if (builderComponent.builder && builderComponent.builder.props) {
+        let extendProps = builderComponent.builder.props();
+        if (extendProps.schema && extendProps.schema.properties) {
+          props.schema.properties = Object.assign(
+            extendProps.schema.properties,
+            props.schema.properties
+          );
+        }
+        if (extendProps.options && extendProps.options.fields) {
+          props.options.fields = Object.assign(
+            extendProps.options.fields,
+            props.options.fields
+          );
+        }
+      }
+      while (builderComponent.extends) {
+        builderComponent = builderComponent.extends;
+        if (builderComponent.builder) {
+          let extendProps = builderComponent.builder.props();
+          if (extendProps) {
+            if (extendProps.schema && extendProps.schema.properties) {
+              props.schema.properties = Object.assign(
+                extendProps.schema.properties,
+                props.schema.properties
+              );
+            }
+            if (extendProps.options && extendProps.options.fields) {
+              props.options.fields = Object.assign(
+                extendProps.options.fields,
+                props.options.fields
+              );
+            }
+          }
+        }
+      }
+      return props;
+    },
   },
   methods: {
     label(field) {
@@ -113,9 +159,9 @@ export default  {
     propChange(key, value) {
       this.$set(this.model, key, value);
       this.$emit("input", this.model);
-    }
+    },
   },
-  components: { Fields, Container }
+  components: { Fields, Container },
 };
 </script>
 

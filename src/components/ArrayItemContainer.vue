@@ -6,7 +6,7 @@
           class="btn btn-link btn-sm"
           aria-expanded="true"
           aria-controls="collapseOne"
-          @click="showBody"
+          @click.stop.prevent="showBody"
         >{{headerLabel}}</button>
       </div>
       <div style="float:right">
@@ -55,7 +55,7 @@ export default {
   methods: {
     showBody() {
       //this.showBody = !this.showBody;
-      this.$emit("show-body");
+      this.$emit("show-body");      
     }
   },
   components: {}

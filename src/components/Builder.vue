@@ -2,15 +2,21 @@
   <div>
     <div class="row">
       <div class="col-md-6">
-        <lama-form v-bind="props" v-model="model" :debug="debug"></lama-form>
+        <lama-form v-bind="props" v-model="fields" :debug="debug"></lama-form>
+        <div class="form-group">
+          <select class="form-control" v-model="schemaType">
+            <option value="object">Object</option>
+            <option value="array">array</option>
+          </select>
+        </div>
       </div>
       <div class="col-md-6">
         <lama-form v-bind="demoProps" v-model="demo" :debug="debug"></lama-form>
         <div v-if="debug">
-        <hr />
-        schema = {{ value.schema }}
-        <hr />
-        options = {{ value.options }}
+          <hr />
+          schema = {{ value.schema }}
+          <hr />
+          options = {{ value.options }}
         </div>
       </div>
     </div>
@@ -32,10 +38,10 @@ export default {
   props: {
     value: {},
     connector: {},
-    debug:{
-      "type" : Boolean,
-      "default": false
-    }
+    debug: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -43,22 +49,22 @@ export default {
     };
   },
   computed: {
-    model: {
+    fields: {
       get() {
         let fields = [];
-        if (this.value.schema && this.value.schema.properties) {
-          for (const key in this.value.schema.properties) {
-            const sch = this.value.schema.properties[key];
-            const opt = this.value.options.fields[key] || {};
+        if (this.schemaProperties && this.schemaProperties) {
+          for (const key in this.schemaProperties) {
+            const sch = this.schemaProperties[key];
+            const opt = this.optionsFields[key] || {};
+            let type = opt.type;
+            if (!opt.type) {
+              type = Lama.guessOptionsType(sch);
+            }
             let field = {
               fieldName: key,
               label: sch.title,
               fieldType: type,
             };
-            let type = opt.type;
-            if (!opt.type) {
-              type = Lama.guessOptionsType(sch);
-            }
             if (type) {
               let builderComponent = Lama.getFieldComponent(type);
               if (
@@ -70,6 +76,19 @@ export default {
                   schema: sch,
                   options: opt,
                 });
+                while (builderComponent.extends) {
+                  builderComponent = builderComponent.extends;
+                  if (
+                    builderComponent.builder &&
+                    builderComponent.builder.toBuilder
+                  ) {
+                    let extendField = builderComponent.builder.toBuilder({
+                      schema: sch,
+                      options: opt,
+                    });
+                    field = Object.assign(extendField, field);
+                  }
+                }
                 field.fieldName = key;
               }
             }
@@ -86,6 +105,17 @@ export default {
           if (field.fieldType) {
             let builderComponent = Lama.getFieldComponent(field.fieldType);
             let builder = builderComponent.builder.fromBuilder(field);
+            while (builderComponent.extends) {
+              builderComponent = builderComponent.extends;
+              if (
+                builderComponent.builder &&
+                builderComponent.builder.fromBuilder
+              ) {
+                let extendBuilder = builderComponent.builder.fromBuilder(field);
+                builder.schema = Object.assign(extendBuilder.schema, builder.schema);
+                builder.options = Object.assign(extendBuilder.options, builder.options);
+              }
+            }
             props[field.fieldName] = builder.schema;
             fields[field.fieldName] = builder.options;
           } else {
@@ -97,14 +127,51 @@ export default {
           }
         }
         this.$emit("input", {
-          schema: {
-            //title: "What do you think of Alpaca?",
-            type: "object",
-            properties: props,
-          },
-          options: { fields: fields },
+          schema:
+            this.schemaType == "array"
+              ? {
+                  //title: "What do you think of Alpaca?",
+                  type: "array",
+                  items: { type: "object", properties: props },
+                }
+              : {
+                  //title: "What do you think of Alpaca?",
+                  type: "object",
+                  properties: props,
+                },
+          options:
+            this.schemaType == "array"
+              ? { fields: { items: { fields: fields } } }
+              : { fields: fields },
         });
-        //this.$emit("input", val);
+      },
+    },
+    schemaType: {
+      get() {
+        if (this.value.schema && this.value.schema.type)
+          return this.value.schema.type;
+        else return "object";
+      },
+      set(val) {
+        let props = this.schemaProperties;
+        let fields = this.optionsFields;
+        this.demo = val == "array" ? [] : {};
+        this.$emit("input", {
+          schema:
+            val == "array"
+              ? {
+                  //title: "What do you think of Alpaca?",
+                  type: "array",
+                  items: { type: "object", properties: props },
+                }
+              : {
+                  //title: "What do you think of Alpaca?",
+                  type: "object",
+                  properties: props,
+                },
+          options:
+            val == "array" ? { items: { fields: fields } } : { fields: fields },
+        });
       },
     },
     demoProps() {
@@ -113,12 +180,26 @@ export default {
       demoSchema.properties = demoSchema.properties || {};
       return {
         schema: demoSchema,
-        options: JSON.parse(JSON.stringify(this.value.options)),
+        options: JSON.parse(JSON.stringify(this.value.options || {})),
         connector: this.connector,
       };
     },
     props() {
       return builderUtils.getObjectProps();
+    },
+    schemaProperties() {
+      if (this.value.schema && this.value.schema.type)
+        return this.value.schema.type == "array"
+          ? this.value.schema.items.properties
+          : this.value.schema.properties;
+      else return {};
+    },
+    optionsFields() {
+      if (this.value.schema && this.value.schema.type && this.value.options)
+        return this.value.schema.type == "array"
+          ? this.value.options.items.fields
+          : this.value.options.fields;
+      else return {};
     },
   },
   methods: {

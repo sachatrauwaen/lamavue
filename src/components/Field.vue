@@ -24,8 +24,8 @@ export default {
         this.options,
         this.schema,
         this.view,
-        this.connector,
-        this.errorCallback
+        this.connector
+        //this.errorCallback
       );
       return field;
     },

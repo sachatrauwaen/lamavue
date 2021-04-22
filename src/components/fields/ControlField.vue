@@ -33,7 +33,94 @@ let ControlField = {
     }
   },
   methods: {},
-  components: { Control }
+  components: { Control },
+  builder: {
+    props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            required: {
+              type: "boolean",
+            },
+            // placeholder: {
+            //   title: "Placeholder",
+            //   type: "string",
+            // },
+            multilanguage: {
+              type: "boolean",
+            },
+            dependencies: {
+              type: "array",
+              title: "Dependencies",
+              items: {
+                type: "object",
+                properties: {
+                  fieldname: {
+                    title: "Field",
+                    type: "string",
+                  },
+                  values: {
+                    title: "Values (value1, value2, ...)",
+                    type: "string",
+                  },
+                },
+              },
+            },
+          },
+        },
+        options: {
+          fields: {
+            required: {
+              rightLabel: "Required",
+            },
+            multilanguage: {
+              rightLabel: "Multi language",
+            },
+          },
+        },
+      };
+    },
+    fromBuilder(field) {
+      let optDeps = {};
+      if (field.dependencies) {
+        for (let index = 0; index < field.dependencies.length; index++) {
+          const d = field.dependencies[index];
+          optDeps[d.fieldname] = d.values;
+        }
+      }
+      return {
+        schema: {
+          title: field.label,          
+          required: field.required,
+        },
+        options: {
+          
+          multilanguage: field.multilanguage,
+          dependencies: optDeps,
+        },
+      };
+    },
+    toBuilder(def) {
+      let deps = [];
+      if (def.options.dependencies) {
+        for (const key in def.options.dependencies) {
+          const d = def.options.dependencies[key];
+          deps.push({
+            fieldname: key,
+            values: d,
+          });
+        }
+      }
+      return {
+        label: def.schema.title,        
+        required: def.schema.required,
+        //placeholder: def.options.placeholder,
+        multilanguage: def.options.multilanguage,
+        dependencies: deps,
+      };
+    },
+  },
 };
 export default ControlField;
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="form-row">
-    <div v-for="(value, key) in visibleFields" :key="key" class="col-12">
+    <div v-for="(value, key) in visibleFields" :key="key" class="col-12 col-md-12">
       <form-field v-model="model[key]" v-bind="itemProps(key)" @input="propChange(key, $event)"></form-field>
     </div>
   </div>
@@ -53,8 +53,8 @@ export default {
           options,
           schema,
           view,
-          this.connector,
-          this.errorCallback
+          this.connector
+          //this.errorCallback
         );
       }
       return fields;
@@ -76,6 +76,9 @@ export default {
         this.$emit("input", val);
       }
     }
+    // columns(){
+    //   return this.options.columns || 1;
+    // }
   },
   methods: {
     propChange(key, value) {

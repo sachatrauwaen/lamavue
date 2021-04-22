@@ -1,17 +1,10 @@
-<template>
-  <control v-bind="props">
-    <select class="form-control" v-model="model">
-      <option v-for="option in items" :key="option.value" :value="option.value">{{option.label}}</option>
-    </select>
-  </control>
-</template>
 
 <script>
-import ControlField from "./ControlField.vue";
+import SelectBaseField from "./SelectBaseField.vue";
 
 let SelectField = {
   name: "SelectField",
-  extends: ControlField,
+  extends: SelectBaseField,
   props: {
     value: {
       type: String
@@ -80,7 +73,6 @@ let SelectField = {
       return {
         schema: {
           type: "string",
-          title: field.label,
           enum: _enum
         },
         options: {
@@ -91,7 +83,6 @@ let SelectField = {
     },
     toBuilder(def) {
       return {
-        label: def.schema.title,
         fieldType: "select",
         options: def.schema.enum.map((a, i) => {
           return {

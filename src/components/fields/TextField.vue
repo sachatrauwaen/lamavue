@@ -5,7 +5,7 @@
       class="form-control"
       :aria-describedby="options.label"
       v-model="model"
-      :class="{'is-invalid':flags.invalid && flags.touched}"
+      :class="{ 'is-invalid': flags.invalid && flags.touched }"
       :placeholder="options.placeholder"
     />
   </control>
@@ -20,8 +20,8 @@ let TextField = {
   extends: ControlField,
   props: {
     value: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {},
   methods: {},
@@ -32,57 +32,41 @@ let TextField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              
-              type: "boolean"
-            },
             placeholder: {
               title: "Placeholder",
-              type: "string"
+              type: "string",
             },
-            multilanguage: {
-              title: "Multi language",
-              type: "boolean"
-            }
-          }
+          },
         },
         options: {
           fields: {
-            required: {
-              rightLabel: "Required"
-            }
-          }
-        }
+            
+          },
+        },
       };
     },
     fromBuilder(field) {
       return {
         schema: {
-          title: field.label,
           type: "string",
-          required: field.required
         },
         options: {
+          type: "text",
           placeholder: field.placeholder,
-          multilanguage: field.multilanguage
-        }
+        },
       };
     },
     toBuilder(def) {
       return {
-        label: def.schema.title,
         fieldType: "text",
-        required: def.schema.required,
         placeholder: def.options.placeholder,
-        multilanguage: def.options.multilanguage
       };
-    }
-  }
+    },
+  },
 };
 
 export default TextField;
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

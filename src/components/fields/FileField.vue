@@ -10,7 +10,7 @@
       />
       <input
       type="text"
-      class="form-control"
+      class="form-control normalFileUpload"
       :aria-describedby="options.label"
       v-model="model"
       :class="{'is-invalid':flags.invalid && flags.touched}"
@@ -44,23 +44,19 @@ let FileField = {
   methods: {
     setFile(e) {
       const file = e.target.files[0];
-      if (file.type.indexOf("image/") === -1) {
-        alert("Please select an image file");
-        return;
-      }
       let config = {
-        query: {
-          folder: this.baseFolder
-        }
+        file: file,
+        name: file.name,
+        folder: this.baseFolder,
       };
       this.connector.upload(
         config,
-        data => {
-            this.model = data.url;
+        (data) => {
+          this.model = data.url;
+          this.updateImageVersion();
         },
         () => {}
-      );
-
+      );     
     },
     showFileChooser() {
       this.$refs.input.click();
@@ -73,42 +69,25 @@ let FileField = {
         schema: {
           type: "object",
           properties: {
-            required: {
-              title: "Required",
-              type: "boolean"
-            },
-            placeholder: {
-              title: "Placeholder",
-              type: "string"
-            },
-            multilanguage: {
-              title: "Multi language",
-              type: "boolean"
-            }
+            
           }
         },
         options: {}
       };
     },
-    fromBuilder(field) {
+    fromBuilder() {
       return {
-        schema: {
-          title: field.label,
-          type: "string",
-          required: field.required
+        schema: {         
+          type: "string",         
         },
         options: {
-          type: "file",
-          multilanguage: field.multilanguage
+          type: "file"         
         }
       };
     },
-    toBuilder(def) {
-      return {
-        label: def.schema.title,
-        fieldType: "file",
-        required: def.schema.required,
-        multilanguage: def.options.multilanguage
+    toBuilder() {
+      return {       
+        fieldType: "file"       
       };
     }
   }
