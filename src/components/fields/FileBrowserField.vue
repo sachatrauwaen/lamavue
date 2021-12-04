@@ -1,8 +1,6 @@
 <template>
   <control v-bind="props">
-
     <file-browser v-model="fileObj" v-bind="fileBrowserProps"></file-browser>  
-    
   </control>
 </template>
 

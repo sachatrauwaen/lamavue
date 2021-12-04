@@ -15,6 +15,10 @@ import SelectField from './components/fields/SelectField.vue'
 import TextField from './components/fields/TextField.vue'
 import TextareaField from './components/fields/TextareaField.vue'
 import IconField from './components/fields/IconField.vue'
+import GuidField from './components/fields/GuidField.vue'
+import RelationField from './components/fields/RelationField.vue'
+import PageField from './components/fields/PageField.vue'
+import LinkField from './components/fields/LinkField.vue'
 import Lama from "./lama";
 
 export default {
@@ -42,6 +46,10 @@ export default {
         Lama.registerFieldComponent("select", SelectField);
         Lama.registerFieldComponent("textarea", TextareaField);
         Lama.registerFieldComponent("text", TextField);
+        Lama.registerFieldComponent("guid", GuidField);
+        Lama.registerFieldComponent("relation", RelationField);
+        Lama.registerFieldComponent("page", PageField);
+        Lama.registerFieldComponent("link", LinkField);
         Lama.registerDefaultSchemaFieldMapping("string", "text");
 
         Lama.registerFieldComponent("icon", IconField);

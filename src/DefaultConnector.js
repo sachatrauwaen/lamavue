@@ -25,12 +25,25 @@ export default {
         console.log(config);
 
         if (config && config.query && config.query) {
+
+            if (config.query.type == "data") {
+                successCallback([{ value: "1", text: "data 1" }, { value: "2", text: "data 2" }]);
+            }
+            if (config.query.type == "page") {
+                successCallback([{ value: "1", text: "page 1" }, { value: "2", text: "page 2" }]);
+            }
+
             if (config.query.type == "folders") {
                 successCallback([{ id: "1", name: "Files", url: "/Files" }]);
             }
 
             if (config.query.type == "files") {
-                var files = [{ id: "1", url: "https://agontuk.github.io/assets/images/berserk.jpg", name: "berserk.jpg", folderId: "1" }];
+                var files = [{
+                    id: "1",
+                    url: "https://agontuk.github.io/assets/images/berserk.jpg",
+                    name: "berserk.jpg",
+                    folderId: "1"
+                }];
                 successCallback(files.filter((f) => {
                     if (config.query.folder)
                         return f.folderId == config.query.folder;
@@ -40,7 +53,8 @@ export default {
                     return {
                         id: f.id,
                         filename: f.name,
-                        url: f.url
+                        url: f.url,
+                        thumbUrl: f.url
                     };
                 }));
             }
@@ -53,7 +67,11 @@ export default {
     },
     // eslint-disable-next-line no-unused-vars
     upload(config, successCallback, errorCallback) {
-        successCallback({ id:"2", url: "https://agontuk.github.io/assets/images/berserk.jpg", filename: "berserk.jpg" });
+        successCallback({
+            id: "2",
+            url: "https://agontuk.github.io/assets/images/berserk.jpg",
+            filename: "berserk.jpg"
+        });
     }
 }
 
