@@ -12,13 +12,11 @@
       
     >
       <template #selected-option="option">
-        <font-awesome-icon :icon="option.label" />
-        <span :class="option.value"></span>
+        <font-awesome-icon :icon="option.label" />        
         <span style="margin-left: 0.5rem">{{ option.label }}</span>
       </template>
       <template v-slot:option="option">
         <font-awesome-icon :icon="option.label" />
-        <span :class="option.value"></span>
         {{ option.label }}
       </template>
     </vue-select>
