@@ -9,7 +9,7 @@
           :src="imageUrl"
           :data="cropperData"
           alt="Image"
-          containerStyle="max-height:400px;"
+          :containerStyle="{maxHeight:'400px'}"
         ></vue-cropper>
       </div>
       <button

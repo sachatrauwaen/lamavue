@@ -1,6 +1,6 @@
 <template>
   <container v-model="model" v-bind="props">
-    <fields v-model="model" v-bind="props"></fields>
+    <fields ref="fields" v-model="model" v-bind="props"></fields>
   </container>
 </template>
 
@@ -40,7 +40,12 @@ let ObjectField = {
       };
     }
   },
-  methods: {},
+    methods: {
+        init() {
+            this.$refs.fields.init();
+
+        }
+    },
   components: { Container, Fields },
   builder: {
     props() {

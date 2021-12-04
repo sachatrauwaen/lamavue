@@ -969,6 +969,10 @@ let Lama = {
             data = [];
         }
 
+        //else if (this.isEmpty(data) && schema.default) {
+        //    data = schema.default;
+        //}
+
         // if we have data, bind it in
         return {
             component,
