@@ -1,14 +1,30 @@
 
 <script>
-    import ObjectField from "./ObjectField.vue";
+    import ObjectBaseField from "./ObjectBaseField.vue";
 
     let LinkField = {
         name: "LinkField",
-        extends: ObjectField,
+        extends: ObjectBaseField,
         data() {
             return {};
         },
         computed: {
+             model: {
+                get() {
+                    return this.value;
+                },
+                set(val) {
+                    if (val.type=="page")
+                        val.url= val.page.url;
+                    else if (val.type=="email")
+                        val.url= 'mailto:'+val.email;
+                    else if (val.type=="phone")
+                        val.url= 'phone:'+val.phone;
+                    
+
+                    this.$emit("input", val);
+                }
+            },
             props() {
                 let self = this;
                 return {

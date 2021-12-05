@@ -9,7 +9,7 @@
                     @search="fetchOptions"
                     :clearable="true"
                     :options="items"
-                    :reduce="option=> option.value"
+                    :reduce="reduce"
                     :filterable="false"></vue-select>
 
     </control>
@@ -75,7 +75,10 @@
                         loading(false);
                     }
                 );
-            })
+            }),
+            reduce(option){
+                return option.value;
+            }
         },
         components: {
             VueSelect

@@ -40086,12 +40086,12 @@ var size = {
     }]
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ObjectField.vue?vue&type=template&id=690da242&scoped=true&
-var ObjectFieldvue_type_template_id_690da242_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('container',_vm._b({model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'container',_vm.props,false),[_c('fields',_vm._b({ref:"fields",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'fields',_vm.props,false))],1)}
-var ObjectFieldvue_type_template_id_690da242_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ObjectBaseField.vue?vue&type=template&id=79e84eb7&scoped=true&
+var ObjectBaseFieldvue_type_template_id_79e84eb7_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('container',_vm._b({model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'container',_vm.props,false),[_c('fields',_vm._b({ref:"fields",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'fields',_vm.props,false))],1)}
+var ObjectBaseFieldvue_type_template_id_79e84eb7_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ObjectField.vue?vue&type=template&id=690da242&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/ObjectBaseField.vue?vue&type=template&id=79e84eb7&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Container.vue?vue&type=template&id=761588b4&scoped=true&
 var Containervue_type_template_id_761588b4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.schema.title)?_c('div',{staticClass:"card",staticStyle:{"margin-bottom":"10px"}},[(_vm.showBody || !_vm.showHeader)?_c('div',{staticClass:"card-body"},[_c('h5',[_vm._v(_vm._s(_vm.schema.title))]),_vm._t("default")],2):_vm._e()]):_c('div',[_vm._t("default")],2)])}
@@ -40431,6 +40431,78 @@ var Fields_component = normalizeComponent(
 )
 
 /* harmony default export */ var Fields = (Fields_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ObjectBaseField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+
+
+var ObjectBaseField = {
+  name: "ObjectBaseField",
+  props: {
+    value: {
+      type: Object
+    },
+    schema: {},
+    options: {},
+    view: {},
+    connector: {}
+  },
+  computed: {
+    model: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(val) {
+        this.$emit("input", val);
+      }
+    },
+    props: function props() {
+      return {
+        schema: this.schema,
+        options: this.options,
+        view: this.view,
+        connector: this.connector,
+        errorCallback: this.errorCallback
+      };
+    }
+  },
+  methods: {
+    init: function init() {
+      this.$refs.fields.init();
+    }
+  },
+  components: {
+    Container: Container,
+    Fields: Fields
+  }
+};
+/* harmony default export */ var ObjectBaseFieldvue_type_script_lang_js_ = (ObjectBaseField);
+// CONCATENATED MODULE: ./src/components/fields/ObjectBaseField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_ObjectBaseFieldvue_type_script_lang_js_ = (ObjectBaseFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/ObjectBaseField.vue
+
+
+
+
+
+/* normalize component */
+
+var ObjectBaseField_component = normalizeComponent(
+  fields_ObjectBaseFieldvue_type_script_lang_js_,
+  ObjectBaseFieldvue_type_template_id_79e84eb7_scoped_true_render,
+  ObjectBaseFieldvue_type_template_id_79e84eb7_scoped_true_staticRenderFns,
+  false,
+  null,
+  "79e84eb7",
+  null
+  
+)
+
+/* harmony default export */ var fields_ObjectBaseField = (ObjectBaseField_component.exports);
 // CONCATENATED MODULE: ./src/builderUtils.js
 
 
@@ -40586,54 +40658,14 @@ var Fields_component = normalizeComponent(
   }
 });
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ObjectField.vue?vue&type=script&lang=js&
-//
-//
-//
-//
-//
-//
-
 
 
 var ObjectField = {
   name: "ObjectField",
-  props: {
-    value: {
-      type: Object
-    },
-    schema: {},
-    options: {},
-    view: {},
-    connector: {}
-  },
-  computed: {
-    model: {
-      get: function get() {
-        return this.value;
-      },
-      set: function set(val) {
-        this.$emit("input", val);
-      }
-    },
-    props: function props() {
-      return {
-        schema: this.schema,
-        options: this.options,
-        view: this.view,
-        connector: this.connector,
-        errorCallback: this.errorCallback
-      };
-    }
-  },
-  methods: {
-    init: function init() {
-      this.$refs.fields.init();
-    }
-  },
-  components: {
-    Container: Container,
-    Fields: Fields
-  },
+  extends: fields_ObjectBaseField,
+  props: {},
+  computed: {},
+  methods: {},
   builder: {
     props: function props() {
       return {
@@ -40668,7 +40700,7 @@ var ObjectField = {
 // CONCATENATED MODULE: ./src/components/fields/ObjectField.vue?vue&type=script&lang=js&
  /* harmony default export */ var fields_ObjectFieldvue_type_script_lang_js_ = (ObjectFieldvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/components/fields/ObjectField.vue
-
+var ObjectField_render, ObjectField_staticRenderFns
 
 
 
@@ -40677,11 +40709,11 @@ var ObjectField = {
 
 var ObjectField_component = normalizeComponent(
   fields_ObjectFieldvue_type_script_lang_js_,
-  ObjectFieldvue_type_template_id_690da242_scoped_true_render,
-  ObjectFieldvue_type_template_id_690da242_scoped_true_staticRenderFns,
+  ObjectField_render,
+  ObjectField_staticRenderFns,
   false,
   null,
-  "690da242",
+  "9eba426c",
   null
   
 )
@@ -50093,12 +50125,12 @@ var GuidField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_GuidField = (GuidField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/VueSelectBaseField.vue?vue&type=template&id=5c85b579&scoped=true&
-var VueSelectBaseFieldvue_type_template_id_5c85b579_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"text","multiple":_vm.options.many,"placeholder":_vm.options.placeholder,"clearable":true,"options":_vm.items,"reduce":function (option){ return option.value; },"filterable":false},on:{"search":_vm.fetchOptions},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
-var VueSelectBaseFieldvue_type_template_id_5c85b579_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/VueSelectBaseField.vue?vue&type=template&id=4a69eb5d&scoped=true&
+var VueSelectBaseFieldvue_type_template_id_4a69eb5d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"text","multiple":_vm.options.many,"placeholder":_vm.options.placeholder,"clearable":true,"options":_vm.items,"reduce":_vm.reduce,"filterable":false},on:{"search":_vm.fetchOptions},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
+var VueSelectBaseFieldvue_type_template_id_4a69eb5d_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/VueSelectBaseField.vue?vue&type=template&id=5c85b579&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/VueSelectBaseField.vue?vue&type=template&id=4a69eb5d&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
 var es_string_search = __webpack_require__("841c");
@@ -50181,7 +50213,10 @@ var VueSelectBaseField = {
       }, function () {
         loading(false);
       });
-    })
+    }),
+    reduce: function reduce(option) {
+      return option.value;
+    }
   },
   components: {
     VueSelect: vue_select_default.a
@@ -50200,11 +50235,11 @@ var VueSelectBaseField = {
 
 var VueSelectBaseField_component = normalizeComponent(
   fields_VueSelectBaseFieldvue_type_script_lang_js_,
-  VueSelectBaseFieldvue_type_template_id_5c85b579_scoped_true_render,
-  VueSelectBaseFieldvue_type_template_id_5c85b579_scoped_true_staticRenderFns,
+  VueSelectBaseFieldvue_type_template_id_4a69eb5d_scoped_true_render,
+  VueSelectBaseFieldvue_type_template_id_4a69eb5d_scoped_true_staticRenderFns,
   false,
   null,
-  "5c85b579",
+  "4a69eb5d",
   null
   
 )
@@ -50323,12 +50358,19 @@ var PageField = {
     return {
       query: {
         type: "page",
-        search: ''
+        search: ""
       }
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    reduce: function reduce(option) {
+      return {
+        id: option.value,
+        url: option.url
+      };
+    }
+  },
   components: {},
   builder: {
     props: function props() {
@@ -50383,7 +50425,7 @@ var PageField_component = normalizeComponent(
   PageField_staticRenderFns,
   false,
   null,
-  "054f7f7d",
+  "347c173d",
   null
   
 )
@@ -50394,11 +50436,20 @@ var PageField_component = normalizeComponent(
 
 var LinkField = {
   name: "LinkField",
-  extends: fields_ObjectField,
+  extends: fields_ObjectBaseField,
   data: function data() {
     return {};
   },
   computed: {
+    model: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(val) {
+        if (val.type == "page") val.url = val.page.url;else if (val.type == "email") val.url = 'mailto:' + val.email;else if (val.type == "phone") val.url = 'phone:' + val.phone;
+        this.$emit("input", val);
+      }
+    },
     props: function props() {
       var self = this;
       return {
@@ -50527,7 +50578,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "4569133e",
+  "a61eeeae",
   null
   
 )
@@ -50650,10 +50701,12 @@ var LinkField_component = normalizeComponent(
       if (config.query.type == "page") {
         successCallback([{
           value: "1",
-          text: "page 1"
+          text: "page 1",
+          url: "/page1"
         }, {
           value: "2",
-          text: "page 2"
+          text: "page 2",
+          url: '/page2'
         }]);
       }
 
