@@ -144,8 +144,8 @@
                                 width: this.model.width,
                                 height: this.model.height,
                                 rawUrl: this.model.rawUrl,
-                                _url: data.url,
-                                url: cropCanvas.toDataURL('image/jpeg'),
+                                url: data.url,
+                                //url: cropCanvas.toDataURL('image/jpeg'),
                                 crop: cropData
                             };
                             this.updateImageVersion();
