@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label v-if="label" for>{{label}}</label>
+    <label v-if="showLabel && label" for>{{label}}</label>
     <span v-if="badge" class="badge badge-dark" style="float:right">{{badge}}</span>
     <ValidationProvider
       :name="options.label"
@@ -24,7 +24,8 @@ export default {
     options: {},
     messages: {},
     connector: {},
-    errors: {}
+    errors: {},
+    showLabel:{type: Boolean,default: true}
   },
   computed: {
     label() {

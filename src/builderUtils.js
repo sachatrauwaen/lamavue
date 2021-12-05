@@ -51,9 +51,20 @@ export default {
                 if (!f.fieldName) f.fieldName="field"+i;
                 if (f.fieldType) {
                     let builderComponent = Lama.getFieldComponent(f.fieldType);
-                    let d = builderComponent.builder.fromBuilder(f);
-                    props[f.fieldName] = d.schema;
-                    fields[f.fieldName] = d.options;
+                    let builder = builderComponent.builder.fromBuilder(f);
+                    while (builderComponent.extends) {
+                        builderComponent = builderComponent.extends;
+                        if (
+                            builderComponent.builder &&
+                            builderComponent.builder.fromBuilder
+                        ) {
+                            let extendBuilder = builderComponent.builder.fromBuilder(f);
+                            builder.schema = Object.assign(extendBuilder.schema, builder.schema);
+                            builder.options = Object.assign(extendBuilder.options, builder.options);
+                        }
+                    }
+                    props[f.fieldName] = builder.schema;
+                    fields[f.fieldName] = builder.options;
                 } else {
                     props[f.fieldName] = {
                         title: f.label
@@ -77,28 +88,41 @@ export default {
         let fields = [];
         if (def.schema && def.schema.properties) {
             for (const key in def.schema.properties) {
-                const f = def.schema.properties[key];
-                if (f) {
+                const sch = def.schema.properties[key];
+                if (sch) {
                     let opt = {};
                     if (def.options.fields && def.options.fields) {
                         opt = def.options.fields[key] || {};
                     }
                     let type = opt.type;
-                    if (!type && f.type) {
-                        type = Lama.guessOptionsType(f);
+                    if (!type && sch.type) {
+                        type = Lama.guessOptionsType(sch);
                     }
                     if (type) {
                         let builderComponent = Lama.getFieldComponent(type);
-                        let d = builderComponent.builder.toBuilder({
-                            schema: f,
+                        let field = builderComponent.builder.toBuilder({
+                            schema: sch,
                             options: opt
                         });
-                        d.fieldName = key;
-                        fields.push(d);
+                        while (builderComponent.extends) {
+                            builderComponent = builderComponent.extends;
+                            if (
+                                builderComponent.builder &&
+                                builderComponent.builder.toBuilder
+                            ) {
+                                let extendField = builderComponent.builder.toBuilder({
+                                    schema: sch,
+                                    options: opt,
+                                });
+                                field = Object.assign(extendField, field);
+                            }
+                        }
+                        field.fieldName = key;
+                        fields.push(field);
                     } else {
                         fields.push({
                             fieldName: key,
-                            label: f.title
+                            label: sch.title
                         });
                     }
                 } else {

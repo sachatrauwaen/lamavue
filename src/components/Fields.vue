@@ -82,8 +82,9 @@
         },
         methods: {
             propChange(key, value) {
-                this.$set(this.model, key, value);
-                this.$emit("input", this.model);
+                let obj = this.model;
+                this.$set(obj, key, value);
+                this.$emit("input", obj);
             },
             itemProps(key) {
                 return this.fields[key].props;

@@ -40274,12 +40274,12 @@ var Container_component = normalizeComponent(
 )
 
 /* harmony default export */ var Container = (Container_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=6adf1b3c&scoped=true&
-var Fieldsvue_type_template_id_6adf1b3c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
-var Fieldsvue_type_template_id_6adf1b3c_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=436cbe7c&scoped=true&
+var Fieldsvue_type_template_id_436cbe7c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
+var Fieldsvue_type_template_id_436cbe7c_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=6adf1b3c&scoped=true&
+// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=436cbe7c&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=script&lang=js&
 //
@@ -40355,8 +40355,9 @@ var Fieldsvue_type_template_id_6adf1b3c_scoped_true_staticRenderFns = []
   },
   methods: {
     propChange: function propChange(key, value) {
-      this.$set(this.model, key, value);
-      this.$emit("input", this.model);
+      var obj = this.model;
+      this.$set(obj, key, value);
+      this.$emit("input", obj);
     },
     itemProps: function itemProps(key) {
       return this.fields[key].props;
@@ -40429,17 +40430,18 @@ var Fieldsvue_type_template_id_6adf1b3c_scoped_true_staticRenderFns = []
 
 var Fields_component = normalizeComponent(
   components_Fieldsvue_type_script_lang_js_,
-  Fieldsvue_type_template_id_6adf1b3c_scoped_true_render,
-  Fieldsvue_type_template_id_6adf1b3c_scoped_true_staticRenderFns,
+  Fieldsvue_type_template_id_436cbe7c_scoped_true_render,
+  Fieldsvue_type_template_id_436cbe7c_scoped_true_staticRenderFns,
   false,
   null,
-  "6adf1b3c",
+  "436cbe7c",
   null
   
 )
 
 /* harmony default export */ var Fields = (Fields_component.exports);
 // CONCATENATED MODULE: ./src/builderUtils.js
+
 
 /* harmony default export */ var builderUtils = ({
   getObjectProps: function getObjectProps() {
@@ -40496,9 +40498,20 @@ var Fields_component = normalizeComponent(
 
         if (f.fieldType) {
           var builderComponent = lama.getFieldComponent(f.fieldType);
-          var d = builderComponent.builder.fromBuilder(f);
-          props[f.fieldName] = d.schema;
-          fields[f.fieldName] = d.options;
+          var builder = builderComponent.builder.fromBuilder(f);
+
+          while (builderComponent.extends) {
+            builderComponent = builderComponent.extends;
+
+            if (builderComponent.builder && builderComponent.builder.fromBuilder) {
+              var extendBuilder = builderComponent.builder.fromBuilder(f);
+              builder.schema = Object.assign(extendBuilder.schema, builder.schema);
+              builder.options = Object.assign(extendBuilder.options, builder.options);
+            }
+          }
+
+          props[f.fieldName] = builder.schema;
+          fields[f.fieldName] = builder.options;
         } else {
           props[f.fieldName] = {
             title: f.label
@@ -40524,9 +40537,9 @@ var Fields_component = normalizeComponent(
 
     if (def.schema && def.schema.properties) {
       for (var key in def.schema.properties) {
-        var f = def.schema.properties[key];
+        var sch = def.schema.properties[key];
 
-        if (f) {
+        if (sch) {
           var opt = {};
 
           if (def.options.fields && def.options.fields) {
@@ -40535,22 +40548,35 @@ var Fields_component = normalizeComponent(
 
           var type = opt.type;
 
-          if (!type && f.type) {
-            type = lama.guessOptionsType(f);
+          if (!type && sch.type) {
+            type = lama.guessOptionsType(sch);
           }
 
           if (type) {
             var builderComponent = lama.getFieldComponent(type);
-            var d = builderComponent.builder.toBuilder({
-              schema: f,
+            var field = builderComponent.builder.toBuilder({
+              schema: sch,
               options: opt
             });
-            d.fieldName = key;
-            fields.push(d);
+
+            while (builderComponent.extends) {
+              builderComponent = builderComponent.extends;
+
+              if (builderComponent.builder && builderComponent.builder.toBuilder) {
+                var extendField = builderComponent.builder.toBuilder({
+                  schema: sch,
+                  options: opt
+                });
+                field = Object.assign(extendField, field);
+              }
+            }
+
+            field.fieldName = key;
+            fields.push(field);
           } else {
             fields.push({
               fieldName: key,
-              label: f.title
+              label: sch.title
             });
           }
         } else {
@@ -41270,19 +41296,19 @@ var ArrayField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_ArrayField = (ArrayField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxField.vue?vue&type=template&id=4eb080f6&scoped=true&
-var CheckboxFieldvue_type_template_id_4eb080f6_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('div',{staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,null)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),(_vm.options.rightLabel)?_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.options.rightLabel))]):_vm._e()])]}}])},'control',_vm.props,false))}
-var CheckboxFieldvue_type_template_id_4eb080f6_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxField.vue?vue&type=template&id=6c5e24f2&scoped=true&
+var CheckboxFieldvue_type_template_id_6c5e24f2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({attrs:{"showLabel":false},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('div',{staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,null)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),(_vm.label)?_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.label))]):_vm._e()])]}}])},'control',_vm.props,false))}
+var CheckboxFieldvue_type_template_id_6c5e24f2_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=4eb080f6&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=6c5e24f2&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=1efccf92&scoped=true&
-var Controlvue_type_template_id_1efccf92_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.label)?_c('label',{attrs:{"for":""}},[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(flags.errors)?_c('div',{staticClass:"invalid-feedback"},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
-var Controlvue_type_template_id_1efccf92_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=8b835934&scoped=true&
+var Controlvue_type_template_id_8b835934_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',{attrs:{"for":""}},[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(flags.errors)?_c('div',{staticClass:"invalid-feedback"},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
+var Controlvue_type_template_id_8b835934_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=1efccf92&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=8b835934&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=script&lang=js&
 //
@@ -41310,7 +41336,11 @@ var Controlvue_type_template_id_1efccf92_scoped_true_staticRenderFns = []
     options: {},
     messages: {},
     connector: {},
-    errors: {}
+    errors: {},
+    showLabel: {
+      type: Boolean,
+      default: true
+    }
   },
   computed: {
     label: function label() {
@@ -41335,11 +41365,11 @@ var Controlvue_type_template_id_1efccf92_scoped_true_staticRenderFns = []
 
 var Control_component = normalizeComponent(
   fields_Controlvue_type_script_lang_js_,
-  Controlvue_type_template_id_1efccf92_scoped_true_render,
-  Controlvue_type_template_id_1efccf92_scoped_true_staticRenderFns,
+  Controlvue_type_template_id_8b835934_scoped_true_render,
+  Controlvue_type_template_id_8b835934_scoped_true_staticRenderFns,
   false,
   null,
-  "1efccf92",
+  "8b835934",
   null
   
 )
@@ -41538,7 +41568,11 @@ var CheckBoxField = {
       type: Boolean
     }
   },
-  computed: {},
+  computed: {
+    label: function label() {
+      return this.options.label || this.schema.title || this.options.rightLabel;
+    }
+  },
   methods: {},
   components: {},
   builder: {
@@ -41579,11 +41613,11 @@ var CheckBoxField = {
 
 var CheckboxField_component = normalizeComponent(
   fields_CheckboxFieldvue_type_script_lang_js_,
-  CheckboxFieldvue_type_template_id_4eb080f6_scoped_true_render,
-  CheckboxFieldvue_type_template_id_4eb080f6_scoped_true_staticRenderFns,
+  CheckboxFieldvue_type_template_id_6c5e24f2_scoped_true_render,
+  CheckboxFieldvue_type_template_id_6c5e24f2_scoped_true_staticRenderFns,
   false,
   null,
-  "4eb080f6",
+  "6c5e24f2",
   null
   
 )
