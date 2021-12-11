@@ -14,16 +14,18 @@ let RelationField = {
         type: "relation",
         action: this.options.dataService.action,
         dataKey: this.options.dataService.data.dataKey,
+        valueField: this.options.dataService.data.valueField,
+        textField: this.options.dataService.data.textField,
       };
     },
   },
   methods: {
-    map(item) {
-      return {
-        value: item[this.options.dataService.data.valueField],
-        text: item[this.options.dataService.data.textField],
-      };
-    },
+    // map(item) {
+    //   return {
+    //     value: item[this.options.dataService.data.valueField],
+    //     text: item[this.options.dataService.data.textField],
+    //   };
+    // },
   },
   components: {},
   builder: {
@@ -87,7 +89,11 @@ let RelationField = {
         placeholder: def.options.placeholder,
         many: def.schema.type == "array",
       };
-      if (def.options && def.options.dataService && def.options.dataService.data) {
+      if (
+        def.options &&
+        def.options.dataService &&
+        def.options.dataService.data
+      ) {
         builder.dataKey = def.options.dataService.data.dataKey;
         builder.valueField = def.options.dataService.data.valueField;
         builder.textField = def.options.dataService.data.textField;
