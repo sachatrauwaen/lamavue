@@ -10,8 +10,6 @@ import TextField from "./TextField.vue";
 import Control from "./Control.vue";
 import CKEditor from "ckeditor4-vue";
 
-
-
   const basicConfig = {
     toolbar: [
       {
@@ -249,6 +247,7 @@ let CKEditorField = {
   },
   computed: {
     editorConfig(){
+
       if (this.options.configset){
         return configSets[this.options.configset];
       } else{

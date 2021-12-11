@@ -6,14 +6,15 @@ let PageField = {
   extends: VueSelectBaseField,
   props: {},
   data() {
-    return {
-      query: {
-        type: "page",
-        search: "",
-      },
-    };
+    return {};
   },
-  computed: {},
+  computed: {
+    query() {
+      return {
+        type: "page",
+      };
+    },
+  },
   methods: {
     reduce(option) {
       return {

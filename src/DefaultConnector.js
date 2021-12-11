@@ -26,11 +26,12 @@ export default {
 
         if (config && config.query && config.query) {
 
-            if (config.query.type == "data") {
+            if (config.query.type == "relation") {
                 successCallback([{ value: "1", text: "data 1" }, { value: "2", text: "data 2" }]);
             }
             if (config.query.type == "page") {
-                successCallback([{ value: "1", text: "page 1", url:"/page1" }, { value: "2", text: "page 2", url:'/page2' }]);
+                successCallback([{ value: "1", text: "page 1", url:"/page1" },
+                 { value: "2", text: "page 2", url:'/page2' }]);
             }
 
             if (config.query.type == "folders") {

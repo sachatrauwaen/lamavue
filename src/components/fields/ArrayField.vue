@@ -79,12 +79,21 @@ let ArrayField = {
       };
     },
     toBuilder(def) {
-      let b = builderUtils.objectToBuilder({schema : def.schema.items, options: def.options.items});      
-      return {
-        label: def.schema.title,
-        fieldType: "array",
-        fields: b.fields
-      };
+      if (def.schema.items){
+        let b = builderUtils.objectToBuilder({schema : def.schema.items, options: def.options.items});      
+        return {
+          label: def.schema.title,
+          fieldType: "array",
+          fields: b.fields
+        };
+      }else {
+        return {
+          label: def.schema.title,
+          fieldType: "array",
+          fields: []
+        };
+      }
+
     }
   }
 };
