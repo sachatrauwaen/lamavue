@@ -37,7 +37,7 @@
                 return number;
             },
             init() {
-                if (Lama.isEmpty(this.model) && this.schema.default == "now") {
+                if (Lama.isEmpty(this.model) && this.schema.default == "today") {
                     let now = new Date();
                     this.model = now.getUTCFullYear() +
                         '-' + this.pad(now.getUTCMonth() + 1) +

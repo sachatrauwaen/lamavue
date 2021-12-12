@@ -1,6 +1,6 @@
 <template>
   <container v-bind="props">
-    <list v-model="model" v-bind="props"></list>
+    <list ref="list" v-model="model" v-bind="props"></list>
   </container>
 </template>
 
@@ -39,7 +39,12 @@ let ArrayBaseField = {
       };
     }
   },
-  methods: {},
+  methods: {
+    init() {
+            this.$refs.list.init();
+
+        }
+  },
   components: { Container, List },
   builder: {
     props() {
