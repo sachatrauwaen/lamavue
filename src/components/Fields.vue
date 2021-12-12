@@ -116,8 +116,10 @@
                 return true;
             },
             init() {
+                if (this.$refs.field){
                 for (var i = 0; i < this.$refs.field.length; i++) {
                     this.$refs.field[i].init();
+                }
                 }
             }
         },
