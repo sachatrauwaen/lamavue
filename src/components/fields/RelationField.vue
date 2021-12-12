@@ -70,7 +70,7 @@ let RelationField = {
           type: field.many ? "array" : "string",
         },
         options: {
-          type: "relation",
+          type: "select2",
           placeholder: field.placeholder,
           dataService: {
             action: "LookupData",

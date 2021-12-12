@@ -50348,7 +50348,7 @@ var RelationField = {
           type: field.many ? "array" : "string"
         },
         options: {
-          type: "relation",
+          type: "select2",
           placeholder: field.placeholder,
           dataService: {
             action: "LookupData",
@@ -50395,7 +50395,7 @@ var RelationField_component = normalizeComponent(
   RelationField_staticRenderFns,
   false,
   null,
-  "3bc7acc4",
+  "4ee29dc8",
   null
   
 )
