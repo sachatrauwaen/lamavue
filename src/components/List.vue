@@ -123,8 +123,10 @@ export default {
       this.showIndex = index == this.showIndex ? -1 : index;
     },
     init() {
-      for (var i = 0; i < this.$refs.formField.length; i++) {
-        this.$refs.formField[i].init();
+      if (this.$refs.formField) {
+        for (var i = 0; i < this.$refs.formField.length; i++) {
+          this.$refs.formField[i].init();
+        }
       }
     },
   },

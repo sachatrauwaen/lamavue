@@ -40826,12 +40826,12 @@ var ArrayBaseFieldvue_type_template_id_48a1f7a4_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/ArrayBaseField.vue?vue&type=template&id=48a1f7a4&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/List.vue?vue&type=template&id=58660b16&scoped=true&
-var Listvue_type_template_id_58660b16_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._l((_vm.model),function(item,index){return _c('div',{key:index},[_c('array-item-container',_vm._b({on:{"show-body":function($event){return _vm.showBody(index)}},scopedSlots:_vm._u([{key:"toolbar",fn:function(){return [_c('toolbar',_vm._b({on:{"show-body":function($event){return _vm.showBody(index + 1)}},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'toolbar',_vm.toolbarProps(index),false))]},proxy:true}],null,true),model:{value:(_vm.model[index]),callback:function ($$v) {_vm.$set(_vm.model, index, $$v)},expression:"model[index]"}},'array-item-container',_vm.containerProps(index),false),[_c('form-field',_vm._b({ref:"formField",refInFor:true,on:{"input":function($event){return _vm.itemChange(index, $event)}},model:{value:(_vm.model[index]),callback:function ($$v) {_vm.$set(_vm.model, index, $$v)},expression:"model[index]"}},'form-field',_vm.itemProps(item),false))],1)],1)}),(!_vm.model.length)?_c('toolbar',_vm._b({on:{"show-body":function($event){return _vm.showBody(0)}},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'toolbar',_vm.toolbarProps(-1),false)):_vm._e()],2)}
-var Listvue_type_template_id_58660b16_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/List.vue?vue&type=template&id=b1818a6e&scoped=true&
+var Listvue_type_template_id_b1818a6e_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_vm._l((_vm.model),function(item,index){return _c('div',{key:index},[_c('array-item-container',_vm._b({on:{"show-body":function($event){return _vm.showBody(index)}},scopedSlots:_vm._u([{key:"toolbar",fn:function(){return [_c('toolbar',_vm._b({on:{"show-body":function($event){return _vm.showBody(index + 1)}},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'toolbar',_vm.toolbarProps(index),false))]},proxy:true}],null,true),model:{value:(_vm.model[index]),callback:function ($$v) {_vm.$set(_vm.model, index, $$v)},expression:"model[index]"}},'array-item-container',_vm.containerProps(index),false),[_c('form-field',_vm._b({ref:"formField",refInFor:true,on:{"input":function($event){return _vm.itemChange(index, $event)}},model:{value:(_vm.model[index]),callback:function ($$v) {_vm.$set(_vm.model, index, $$v)},expression:"model[index]"}},'form-field',_vm.itemProps(item),false))],1)],1)}),(!_vm.model.length)?_c('toolbar',_vm._b({on:{"show-body":function($event){return _vm.showBody(0)}},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'toolbar',_vm.toolbarProps(-1),false)):_vm._e()],2)}
+var Listvue_type_template_id_b1818a6e_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/List.vue?vue&type=template&id=58660b16&scoped=true&
+// CONCATENATED MODULE: ./src/components/List.vue?vue&type=template&id=b1818a6e&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Toolbar.vue?vue&type=template&id=34304e92&scoped=true&
 var Toolbarvue_type_template_id_34304e92_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"btn-group btn-group-sm",attrs:{"role":"group","aria-label":"Toolbar"}},[(_vm.index >=0)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button","disabled":_vm.index ==0},on:{"click":_vm.up}},[_vm._v("Up")]):_vm._e(),(_vm.index >=0)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button","disabled":_vm.index+1 == _vm.model.length},on:{"click":_vm.down}},[_vm._v("Down")]):_vm._e(),_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":_vm.add}},[_vm._v("+")]),(_vm.index >=0)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":_vm.remove}},[_vm._v("-")]):_vm._e()])}
@@ -41144,8 +41144,10 @@ var ArrayItemContainer_component = normalizeComponent(
       this.showIndex = index == this.showIndex ? -1 : index;
     },
     init: function init() {
-      for (var i = 0; i < this.$refs.formField.length; i++) {
-        this.$refs.formField[i].init();
+      if (this.$refs.formField) {
+        for (var i = 0; i < this.$refs.formField.length; i++) {
+          this.$refs.formField[i].init();
+        }
       }
     }
   },
@@ -41169,11 +41171,11 @@ var ArrayItemContainer_component = normalizeComponent(
 
 var List_component = normalizeComponent(
   components_Listvue_type_script_lang_js_,
-  Listvue_type_template_id_58660b16_scoped_true_render,
-  Listvue_type_template_id_58660b16_scoped_true_staticRenderFns,
+  Listvue_type_template_id_b1818a6e_scoped_true_render,
+  Listvue_type_template_id_b1818a6e_scoped_true_staticRenderFns,
   false,
   null,
-  "58660b16",
+  "b1818a6e",
   null
   
 )
