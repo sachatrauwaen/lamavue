@@ -3,7 +3,7 @@
     <vue-select
       v-model="model"
       label="text"
-      :multiple="options.many"
+      :multiple="multiple"
       :placeholder="options.placeholder"
       style="margin-bottom: 10px"
       :clearable="true"
@@ -37,7 +37,7 @@ let VueSelectBaseField = {
       return {
         type: "",
       };
-    },
+    }
   },
   methods: {
     fetchOptions() {

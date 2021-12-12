@@ -1184,7 +1184,12 @@ let Lama = {
                     }
                 });
 
-            }
+            },
+            mounted() {
+                if (config.init)
+                    app.$refs.form.init();
+            }, 
+
         }).$mount(elementOrSelector);
         return {
             getValue(){
@@ -1196,6 +1201,7 @@ let Lama = {
             validate(successCallback, errorCallBack){
                 app.$refs.form.validate(successCallback, errorCallBack);
             }
+
         };
     },
     mountBuilder(elementOrSelector, config) {

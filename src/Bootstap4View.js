@@ -19,6 +19,8 @@ import GuidField from './components/fields/GuidField.vue'
 import RelationField from './components/fields/RelationField.vue'
 import PageField from './components/fields/PageField.vue'
 import LinkField from './components/fields/LinkField.vue'
+import GalleryField from './components/fields/GalleryField.vue'
+import DocumentsField from './components/fields/DocumentsField.vue'
 import Lama from "./lama";
 
 export default {
@@ -50,6 +52,8 @@ export default {
         Lama.registerFieldComponent("relation", RelationField);
         Lama.registerFieldComponent("page", PageField);
         Lama.registerFieldComponent("link", LinkField);
+        Lama.registerFieldComponent("gallery", GalleryField);
+        Lama.registerFieldComponent("documents", DocumentsField);
         Lama.registerDefaultSchemaFieldMapping("string", "text");
 
         Lama.registerFieldComponent("icon", IconField);
