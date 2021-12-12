@@ -1187,7 +1187,7 @@ let Lama = {
             },
             mounted() {
                 if (config.init)
-                    app.$refs.form.init();
+                    this.$refs.form.init();
             }, 
 
         }).$mount(elementOrSelector);

@@ -52159,7 +52159,7 @@ var lama_Lama = {
         });
       },
       mounted: function mounted() {
-        if (config.init) app.$refs.form.init();
+        if (config.init) this.$refs.form.init();
       }
     }).$mount(elementOrSelector);
     return {
