@@ -230,7 +230,7 @@
         },
         components: { LamaForm },
         mounted() {
-            //this.$refs.demoForm.init();
+            this.$refs.demoForm.init();
         }
     };
 </script>
