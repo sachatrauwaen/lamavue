@@ -23,6 +23,7 @@
                 <lama-form v-model="demoModel" v-bind="demo"></lama-form>
             </div>
         </div>
+        <input type="text" v-model="connector.currentCulture">
     </div>
 </template>
 

@@ -55,10 +55,12 @@ export default {
       set(val) {
         if (this.options.multilanguage) {
           let valueObject = {};
-          valueObject[this.connector.currentCulture] = val;
           if (Lama.isObject(this.value)) {
-            valueObject = Lama.mergeObject(this.value, valueObject);
+            //valueObject = Lama.mergeObject(this.value, valueObject);
+            valueObject = this.value;
+            
           }
+          this.$set(valueObject, this.connector.currentCulture, val);
           this.$emit("input", valueObject);
         } else {
           this.$emit("input", val);
