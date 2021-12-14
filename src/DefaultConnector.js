@@ -70,7 +70,8 @@ export default {
     upload(config, successCallback, errorCallback) {
         successCallback({
             id: "2",
-            url: "https://agontuk.github.io/assets/images/berserk.jpg",
+            url: "https://agontuk.github.io/assets/images/berserk.jpg?v=1   ",
+            
             filename: "berserk.jpg"
         });
     }

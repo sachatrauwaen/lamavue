@@ -42328,15 +42328,15 @@ var FileFieldvue_type_template_id_5598e0f6_staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=template&id=6b1388e2&scoped=true&
-var FileBrowservue_type_template_id_6b1388e2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option){ return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=template&id=212b6ce4&scoped=true&
+var FileBrowservue_type_template_id_212b6ce4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
 var filename = ref.filename;
 var thumbUrl = ref.thumbUrl;
 return [_c('div',{staticStyle:{"height":"20px","width":"20px","margin-right":"5px","display":"inline-block"}},[(_vm.onlyImages)?_c('img',{staticClass:"img-fluid",attrs:{"src":thumbUrl,"alt":filename}}):_vm._e()]),_c('span',[_vm._v(_vm._s(filename))])]}}],null,false,747883142),model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e(),(_vm.showOverwrite)?_c('div',{staticStyle:{"position":"absolute","bottom":"40px","right":"5px"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doOverwrite),expression:"doOverwrite"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.doOverwrite)?_vm._i(_vm.doOverwrite,null)>-1:(_vm.doOverwrite)},on:{"change":function($event){var $$a=_vm.doOverwrite,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.doOverwrite=$$a.concat([$$v]))}else{$$i>-1&&(_vm.doOverwrite=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.doOverwrite=$$c}}}}),_c('label',{},[_vm._v("Overwrite")])]):_vm._e()],1)}
-var FileBrowservue_type_template_id_6b1388e2_scoped_true_staticRenderFns = []
+var FileBrowservue_type_template_id_212b6ce4_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileBrowser.vue?vue&type=template&id=6b1388e2&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/FileBrowser.vue?vue&type=template&id=212b6ce4&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
@@ -42394,6 +42394,27 @@ var dist_vue_select = __webpack_require__("6dfc");
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ var FileBrowservue_type_script_lang_js_ = ({
@@ -42403,6 +42424,14 @@ var dist_vue_select = __webpack_require__("6dfc");
     connector: {},
     baseForlder: {},
     accept: {},
+    width: {
+      type: Number,
+      default: 0
+    },
+    height: {
+      type: Number,
+      default: 0
+    },
     fileMaxSize: {
       type: Number,
       default: 0
@@ -42495,7 +42524,7 @@ var dist_vue_select = __webpack_require__("6dfc");
       var file = e.target.files[0];
 
       if (this.fileMaxSize && file.size > this.fileMaxSize) {
-        alert('Please upload a smaller file, max size is ' + this.fileMaxSize + ' bytes');
+        alert("Please upload a smaller file, max size is " + this.fileMaxSize + " bytes");
         return;
       }
 
@@ -42508,7 +42537,9 @@ var dist_vue_select = __webpack_require__("6dfc");
         file: file,
         name: file.name,
         folder: this.baseFolder,
-        overwrite: this.doOverwrite
+        overwrite: this.doOverwrite,
+        width: this.width,
+        height: this.height
       };
       this.connector.upload(config, function (data) {
         _this3.files.push(data);
@@ -42518,20 +42549,20 @@ var dist_vue_select = __webpack_require__("6dfc");
         _this3.updateImageVersion();
       }, function () {});
       /*
-      if (typeof FileReader === "function") {
-        const reader = new FileReader();
-        reader.onload = event => {
-          this.model = {
-            url: event.target.result,
-          };
-          // rebuild cropperjs with the updated source
-          //this.$refs.cropper.replace(event.target.result);
-        };
-        reader.readAsDataURL(file);
-      } else {
-        alert("Sorry, FileReader API not supported");
-      }
-      */
+                if (typeof FileReader === "function") {
+                  const reader = new FileReader();
+                  reader.onload = event => {
+                    this.model = {
+                      url: event.target.result,
+                    };
+                    // rebuild cropperjs with the updated source
+                    //this.$refs.cropper.replace(event.target.result);
+                  };
+                  reader.readAsDataURL(file);
+                } else {
+                  alert("Sorry, FileReader API not supported");
+                }
+                */
     }
   },
   watch: {
@@ -42562,11 +42593,11 @@ var dist_vue_select = __webpack_require__("6dfc");
 
 var FileBrowser_component = normalizeComponent(
   fields_FileBrowservue_type_script_lang_js_,
-  FileBrowservue_type_template_id_6b1388e2_scoped_true_render,
-  FileBrowservue_type_template_id_6b1388e2_scoped_true_staticRenderFns,
+  FileBrowservue_type_template_id_212b6ce4_scoped_true_render,
+  FileBrowservue_type_template_id_212b6ce4_scoped_true_staticRenderFns,
   false,
   null,
-  "6b1388e2",
+  "212b6ce4",
   null
   
 )
@@ -42825,12 +42856,12 @@ var ImageFieldvue_type_template_id_fa2bcfe6_staticRenderFns = []
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.ends-with.js
 var es_string_ends_with = __webpack_require__("8a79");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageEditor.vue?vue&type=template&id=62cc2387&
-var ImageEditorvue_type_template_id_62cc2387_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"modal-mask"}),_c('div',{staticClass:"editor"},[_c('div',{staticStyle:{"margin-bottom":"10px"}},[_c('vue-cropper',{ref:"cropper",attrs:{"responsive":true,"src":_vm.imageUrl,"data":_vm.cropperData,"alt":"Image","containerStyle":{maxHeight:'400px'}}})],1),_c('button',{staticClass:"btn btn-sm btn-secondary mr-2",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.rotate(90)}}},[_vm._v("Rotate Right")]),_c('button',{staticClass:"btn btn-sm btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.rotate(-90)}}},[_vm._v("Rotate Left")]),_c('div',{staticClass:"btn-group btn-group-sm ml-2",staticStyle:{"float":"right"},attrs:{"role":"group","aria-label":"Basic example"}},[_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.save($event)}}},[_vm._v("Save")]),_c('button',{staticClass:"btn btn-light",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.cancel($event)}}},[_vm._v("Cancel")])])])])}
-var ImageEditorvue_type_template_id_62cc2387_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageEditor.vue?vue&type=template&id=0edbcb52&
+var ImageEditorvue_type_template_id_0edbcb52_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"modal-mask"}),_c('div',{staticClass:"editor"},[_c('div',{staticStyle:{"margin-bottom":"10px"}},[_c('vue-cropper',{ref:"cropper",attrs:{"responsive":true,"src":_vm.imageUrl,"data":_vm.cropperData,"aspect-ratio":_vm.ratio,"alt":"Image","containerStyle":{maxHeight:'400px'}}})],1),_c('button',{staticClass:"btn btn-sm btn-secondary mr-2",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.rotate(90)}}},[_vm._v("Rotate Right")]),_c('button',{staticClass:"btn btn-sm btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.rotate(-90)}}},[_vm._v("Rotate Left")]),_c('div',{staticClass:"btn-group btn-group-sm ml-2",staticStyle:{"float":"right"},attrs:{"role":"group","aria-label":"Basic example"}},[_c('button',{staticClass:"btn btn-primary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.save($event)}}},[_vm._v("Save")]),_c('button',{staticClass:"btn btn-light",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.cancel($event)}}},[_vm._v("Cancel")])])])])}
+var ImageEditorvue_type_template_id_0edbcb52_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageEditor.vue?vue&type=template&id=62cc2387&
+// CONCATENATED MODULE: ./src/components/fields/ImageEditor.vue?vue&type=template&id=0edbcb52&
 
 // EXTERNAL MODULE: ./node_modules/vue-cropperjs/dist/VueCropper.js
 var VueCropper = __webpack_require__("95c3");
@@ -42878,6 +42909,7 @@ var cropper = __webpack_require__("6107");
 //
 //
 //
+//
 
  //import DialogMixin from "vuejs-dialog/dist/vuejs-dialog-mixin.min.js";
 
@@ -42886,6 +42918,7 @@ var cropper = __webpack_require__("6107");
   //mixins: [DialogMixin],
   props: {
     imageUrl: {},
+    ratio: {},
     cropperData: {}
   },
   data: function data() {
@@ -42922,8 +42955,8 @@ var ImageEditorvue_type_style_index_0_lang_css_ = __webpack_require__("9cda");
 
 var ImageEditor_component = normalizeComponent(
   fields_ImageEditorvue_type_script_lang_js_,
-  ImageEditorvue_type_template_id_62cc2387_render,
-  ImageEditorvue_type_template_id_62cc2387_staticRenderFns,
+  ImageEditorvue_type_template_id_0edbcb52_render,
+  ImageEditorvue_type_template_id_0edbcb52_staticRenderFns,
   false,
   null,
   null,
@@ -43134,15 +43167,16 @@ var ImageField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_ImageField = (ImageField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowserField.vue?vue&type=template&id=4972f80a&
-var ImageBrowserFieldvue_type_template_id_4972f80a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value.rawUrl || _vm.value.url,"cropperData":_vm.value.crop},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('file-browser',_vm._b({model:{value:(_vm.imageFile),callback:function ($$v) {_vm.imageFile=$$v},expression:"imageFile"}},'file-browser',_vm.fileBrowserProps,false)),_c('div',{staticClass:"btn-group",attrs:{"role":"group","aria-label":"Basic example"}},[(_vm.imageSrc)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.remove($event)}}},[_vm._v(" Delete ")]):_vm._e(),(_vm.imageSrc && _vm.options.showEdit)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_vm._v("Edit")]):_vm._e()]),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])],1)],2)}
-var ImageBrowserFieldvue_type_template_id_4972f80a_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowserField.vue?vue&type=template&id=a97ef850&
+var ImageBrowserFieldvue_type_template_id_a97ef850_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value.rawUrl || _vm.value.url,"ratio":_vm.ratio,"cropperData":_vm.value.crop},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('file-browser',_vm._b({model:{value:(_vm.imageFile),callback:function ($$v) {_vm.imageFile=$$v},expression:"imageFile"}},'file-browser',_vm.fileBrowserProps,false)),_c('div',{staticClass:"btn-group",attrs:{"role":"group","aria-label":"Basic example"}},[(_vm.imageSrc)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.remove($event)}}},[_vm._v(" Delete ")]):_vm._e(),(_vm.imageSrc && _vm.options.showCropper)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_vm._v("Edit")]):_vm._e()]),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])],1)],2)}
+var ImageBrowserFieldvue_type_template_id_a97ef850_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageBrowserField.vue?vue&type=template&id=4972f80a&
+// CONCATENATED MODULE: ./src/components/fields/ImageBrowserField.vue?vue&type=template&id=a97ef850&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowserField.vue?vue&type=script&lang=js&
 
+//
 //
 //
 //
@@ -43197,7 +43231,7 @@ var ImagexField = {
       return {
         onlyImages: true,
         connector: this.connector,
-        baseForlder: this.options.folder,
+        baseForlder: this.options.uploadfolder,
         showFolderSelector: false,
         showFileSelector: true,
         showUpload: this.options.showUpload,
@@ -43232,10 +43266,20 @@ var ImagexField = {
             url: val.url,
             rawUrl: val.url
           };
+
+          if (this.options.showCropper) {
+            this.showImageEditor = true;
+          }
         } else {
           this.model = null;
         }
       }
+    },
+    ratio: function ratio() {
+      if (this.options.width && this.options.height) return this.options.width / this.options.height;else return 0;
+    },
+    isEdited: function isEdited() {
+      return this.model.url != this.model.rawUrl;
     }
   },
   methods: {
@@ -43243,12 +43287,16 @@ var ImagexField = {
       this.$refs.input.click();
     },
     edit: function edit() {
-      if (this.options.showEdit) {
+      if (this.options.showCropper) {
         this.showImageEditor = true;
       }
     },
     cancelImageEditor: function cancelImageEditor() {
       this.showImageEditor = false;
+
+      if (!this.isEdited) {
+        this.model = null;
+      }
     },
     updateImageVersion: function updateImageVersion() {
       this.imageVersion = Date.now();
@@ -43270,7 +43318,7 @@ var ImagexField = {
         var config = {
           file: blob,
           name: _this.model.filename,
-          folder: _this.baseFolder,
+          folder: _this.options.cropfolder,
           hidden: true
         };
 
@@ -43307,8 +43355,12 @@ var ImagexField = {
         schema: {
           type: "object",
           properties: {
-            folder: {
-              "title": "Folder",
+            uploadfolder: {
+              "title": "Upload Folder",
+              "type": "string"
+            },
+            cropfolder: {
+              "title": "Crop Folder",
               "type": "string"
             },
             showUpload: {
@@ -43320,7 +43372,7 @@ var ImagexField = {
             overwrite: {
               "type": "boolean"
             },
-            showEdit: {
+            showCropper: {
               "type": "boolean"
             },
             width: {
@@ -43354,7 +43406,7 @@ var ImagexField = {
             overwrite: {
               rightLabel: "Overwrite"
             },
-            showEdit: {
+            showCropper: {
               rightLabel: "Show cropper"
             }
           }
@@ -43368,11 +43420,11 @@ var ImagexField = {
         },
         options: {
           type: "imagebrowser",
-          folder: field.folder,
+          uploadfolder: field.uploadfolder,
           showUpload: field.showUpload,
           showOverwrite: field.showOverwrite,
           overwrite: field.overwrite,
-          showEdit: field.showEdit,
+          showCropper: field.showCropper,
           width: field.width,
           height: field.height,
           accept: field.accept,
@@ -43383,11 +43435,12 @@ var ImagexField = {
     toBuilder: function toBuilder(def) {
       return {
         fieldType: "imagebrowser",
-        folder: def.options.folder,
+        uploadfolder: def.options.uploadfolder,
+        cropfolder: def.options.cropfolder,
         showUpload: def.options.showUpload,
         showOverwrite: def.options.showOverwrite,
         overwrite: def.options.overwrite,
-        showEdit: def.options.showEdit,
+        showCropper: def.options.showCropper,
         width: def.options.width,
         height: def.options.height,
         accept: def.options.accept,
@@ -43409,8 +43462,8 @@ var ImagexField = {
 
 var ImageBrowserField_component = normalizeComponent(
   fields_ImageBrowserFieldvue_type_script_lang_js_,
-  ImageBrowserFieldvue_type_template_id_4972f80a_render,
-  ImageBrowserFieldvue_type_template_id_4972f80a_staticRenderFns,
+  ImageBrowserFieldvue_type_template_id_a97ef850_render,
+  ImageBrowserFieldvue_type_template_id_a97ef850_staticRenderFns,
   false,
   null,
   null,
@@ -51004,7 +51057,7 @@ var DocumentsField_component = normalizeComponent(
   upload: function upload(config, successCallback, errorCallback) {
     successCallback({
       id: "2",
-      url: "https://agontuk.github.io/assets/images/berserk.jpg",
+      url: "https://agontuk.github.io/assets/images/berserk.jpg?v=1   ",
       filename: "berserk.jpg"
     });
   }
