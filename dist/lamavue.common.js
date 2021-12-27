@@ -43882,12 +43882,12 @@ var TextareaField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_TextareaField = (TextareaField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/IconField.vue?vue&type=template&id=42b00ae8&scoped=true&
-var IconFieldvue_type_template_id_42b00ae8_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-select',{class:{ 'is-invalid': flags.invalid && flags.touched },staticStyle:{"margin-bottom":"10px"},attrs:{"placeholder":_vm.options.placeholder,"reduce":function (icon) { return icon.value; },"options":_vm.filteredIcons,"filterable":true,"filterBy":_vm.filterBy},scopedSlots:_vm._u([{key:"selected-option",fn:function(option){return [_c('font-awesome-icon',{attrs:{"icon":option.label}}),_c('span',{staticStyle:{"margin-left":"0.5rem"}},[_vm._v(_vm._s(option.label))])]}},{key:"option",fn:function(option){return [_c('font-awesome-icon',{attrs:{"icon":option.label}}),_vm._v(" "+_vm._s(option.label)+" ")]}}],null,true),model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
-var IconFieldvue_type_template_id_42b00ae8_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/IconField.vue?vue&type=template&id=791cb863&scoped=true&
+var IconFieldvue_type_template_id_791cb863_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-select',{class:{ 'is-invalid': flags.invalid && flags.touched },staticStyle:{"margin-bottom":"10px"},attrs:{"placeholder":_vm.options.placeholder,"reduce":function (icon) { return icon.value; },"options":_vm.filteredIcons,"filterable":true,"filterBy":_vm.filterBy},scopedSlots:_vm._u([{key:"selected-option",fn:function(option){return [_c('font-awesome-icon',{attrs:{"icon":option.label}}),_c('span',{staticStyle:{"margin-left":"0.5rem"}},[_vm._v(_vm._s(option.label))])]}},{key:"option",fn:function(option){return [_c('font-awesome-icon',{attrs:{"icon":option.label}}),_vm._v(" "+_vm._s(option.label)+" ")]}}],null,true),model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
+var IconFieldvue_type_template_id_791cb863_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/IconField.vue?vue&type=template&id=42b00ae8&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/IconField.vue?vue&type=template&id=791cb863&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.filter.js
 var es_array_filter = __webpack_require__("4de4");
@@ -50052,7 +50052,7 @@ var IconFieldvue_type_script_lang_js_TextField = {
         return key !== "faFontAwesomeLogoFull" && _this.icons[key].iconName;
       }).map(function (key) {
         return {
-          value: _this.icons[key].prefix + " " + _this.icons[key].iconName,
+          value: _this.icons[key].prefix + " fa" + _this.icons[key].iconName,
           label: _this.icons[key].iconName
         };
       });
@@ -50117,11 +50117,11 @@ var IconFieldvue_type_script_lang_js_TextField = {
 
 var IconField_component = normalizeComponent(
   fields_IconFieldvue_type_script_lang_js_,
-  IconFieldvue_type_template_id_42b00ae8_scoped_true_render,
-  IconFieldvue_type_template_id_42b00ae8_scoped_true_staticRenderFns,
+  IconFieldvue_type_template_id_791cb863_scoped_true_render,
+  IconFieldvue_type_template_id_791cb863_scoped_true_staticRenderFns,
   false,
   null,
-  "42b00ae8",
+  "791cb863",
   null
   
 )
