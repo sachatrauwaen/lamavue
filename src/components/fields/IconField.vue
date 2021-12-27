@@ -53,7 +53,7 @@ let TextField = {
         .filter((key) => key !== "faFontAwesomeLogoFull" && this.icons[key].iconName)
         .map((key) => {
           return {
-            value: this.icons[key].prefix + " fa" + this.icons[key].iconName,
+            value: this.icons[key].prefix + " fa-" + this.icons[key].iconName,
             label: this.icons[key].iconName,
           };
         });
