@@ -1,8 +1,8 @@
 <template>
   <div class>
     <container v-model="model" v-bind="props">
-      <fields v-model="model" v-bind="props"></fields>
-      <fields
+      <fields ref="fields1" v-model="model" v-bind="props"></fields>
+      <fields ref="fields2"
         v-if="model.fieldType"
         v-model="model"
         v-bind="builderProps"
@@ -160,8 +160,13 @@ export default {
       this.$set(this.model, key, value);
       this.$emit("input", this.model);
     },
+    init() {
+        //if (this.$refs.fields1) this.$refs.fields1.init();
+        //if (this.$refs.fields2) this.$refs.fields2.init();
+
+    },
   },
-  components: { Fields, Container },
+  components: { Fields, Container }, 
 };
 </script>
 

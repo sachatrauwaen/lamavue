@@ -102,6 +102,7 @@
                     let fields = {};
                     for (let index = 0; index < val.length; index++) {
                         const field = val[index];
+                        if (Lama.isEmpty(field.fieldName)) field.fieldName = 'field' + index;
                         if (field.fieldType) {
                             let builderComponent = Lama.getFieldComponent(field.fieldType);
                             let builder = builderComponent.builder.fromBuilder(field);
@@ -211,6 +212,7 @@
                             type: "string",
                             title: "Field Name",
                             required: true,
+                            default:'ffff'
                         },
                         label: {
                             type: "string",
