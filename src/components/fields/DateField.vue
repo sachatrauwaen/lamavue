@@ -37,11 +37,13 @@
                 return number;
             },
             init() {
-                if (Lama.isEmpty(this.model) && this.schema.default == "now") {
+                if (Lama.isEmpty(this.model) && this.schema.default == "today") {
                     let now = new Date();
                     this.model = now.getUTCFullYear() +
                         '-' + this.pad(now.getUTCMonth() + 1) +
                         '-' + this.pad(now.getUTCDate());
+                } else if (Lama.isEmpty(this.model) && this.schema.default) {
+                    this.model = this.schema.default;
                 }
             }
         },

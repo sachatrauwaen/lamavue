@@ -8,6 +8,7 @@
           :responsive="true"
           :src="imageUrl"
           :data="cropperData"
+          :aspect-ratio="ratio"
           alt="Image"
           :containerStyle="{maxHeight:'400px'}"
         ></vue-cropper>
@@ -47,6 +48,7 @@ export default {
   //mixins: [DialogMixin],
   props: {
     imageUrl: {},
+    ratio:{},
     cropperData: {}
   },
   data() {

@@ -2,6 +2,7 @@
     <control v-bind="props">
         <template v-if="showImageEditor">
             <image-editor :imageUrl="value.rawUrl || value.url"
+                          :ratio="ratio"
                           :cropperData="value.crop"
                           @cancel="cancelImageEditor"
                           @save="saveImageEditor"></image-editor>
@@ -15,7 +16,7 @@
                         @click.prevent="remove">
                     Delete
                 </button>
-                <button v-if="imageSrc && options.showEdit" type="button" class="btn btn-secondary" @click.prevent="edit">Edit</button>
+                <button v-if="imageSrc && options.showCropper" type="button" class="btn btn-secondary" @click.prevent="edit">Edit</button>
             </div>
             <div>
                 <a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">
@@ -55,7 +56,7 @@
                 return {
                     onlyImages: true,
                     connector: this.connector,
-                    baseForlder: this.options.folder,
+                    baseForlder: this.options.uploadfolder,
                     showFolderSelector: false,
                     showFileSelector: true,
                     showUpload: this.options.showUpload,
@@ -64,7 +65,7 @@
                     width: this.options.width,
                     height: this.options.height,
                     accept: this.options.accept,
-                    fileMaxSize: this.options.fileMaxSize
+                    fileMaxSize: this.options.fileMaxSize,
                 }
             },
             imageSrc() {
@@ -93,10 +94,22 @@
                             url: val.url,
                             rawUrl: val.url
                         };
+                        if (this.options.showCropper){
+                            this.showImageEditor=true;
+                        }
                     } else {
                         this.model = null;
                     }
                 }
+            },
+            ratio(){
+                if (this.options.width && this.options.height)
+                    return this.options.width/this.options.height;
+                else
+                    return 0;                
+            },
+            isEdited(){
+                return this.model.url != this.model.rawUrl;
             }
         },
         methods: {
@@ -104,12 +117,15 @@
                 this.$refs.input.click();
             },
             edit() {
-                if (this.options.showEdit) {
+                if (this.options.showCropper) {
                     this.showImageEditor = true;
                 }
             },
             cancelImageEditor() {
                 this.showImageEditor = false;
+                if(!this.isEdited){
+                    this.model = null;
+                }
             },
             updateImageVersion() {
                 this.imageVersion = Date.now();
@@ -131,7 +147,7 @@
                     let config = {
                         file: blob,
                         name: this.model.filename,
-                        folder: this.baseFolder,
+                        folder: this.options.cropfolder,
                         hidden: true
                     };
                     this.connector.upload(
@@ -144,8 +160,8 @@
                                 width: this.model.width,
                                 height: this.model.height,
                                 rawUrl: this.model.rawUrl,
-                                _url: data.url,
-                                url: cropCanvas.toDataURL('image/jpeg'),
+                                url: data.url,
+                                //url: cropCanvas.toDataURL('image/jpeg'),
                                 crop: cropData
                             };
                             this.updateImageVersion();
@@ -165,8 +181,12 @@
                     schema: {
                         type: "object",
                         properties: {
-                            folder: {
-                                "title": "Folder",
+                            uploadfolder: {
+                                "title": "Upload Folder",
+                                "type": "string"
+                            },
+                            cropfolder: {
+                                "title": "Crop Folder",
                                 "type": "string"
                             },
                             showUpload: {
@@ -178,7 +198,7 @@
                             overwrite: {
                                 "type": "boolean"
                             },
-                            showEdit: {
+                            showCropper: {
                                 "type": "boolean"
                             },
                             width: {
@@ -212,7 +232,7 @@
                             overwrite: {
                                 rightLabel: "Overwrite",
                             },
-                            showEdit: {
+                            showCropper: {
                                 rightLabel: "Show cropper",
                             },
                         }
@@ -226,11 +246,11 @@
                     },
                     options: {
                         type: "imagebrowser",
-                        folder: field.folder,
+                        uploadfolder: field.uploadfolder,
                         showUpload: field.showUpload,
                         showOverwrite: field.showOverwrite,
                         overwrite: field.overwrite,
-                        showEdit: field.showEdit,
+                        showCropper: field.showCropper,
                         width: field.width,
                         height: field.height,
                         accept: field.accept,
@@ -241,11 +261,12 @@
             toBuilder(def) {
                 return {
                     fieldType: "imagebrowser",
-                    folder: def.options.folder,
+                    uploadfolder: def.options.uploadfolder,
+                    cropfolder: def.options.cropfolder,
                     showUpload: def.options.showUpload,
                     showOverwrite: def.options.showOverwrite,
                     overwrite: def.options.overwrite,
-                    showEdit: def.options.showEdit,
+                    showCropper: def.options.showCropper,
                     width: def.options.width,
                     height: def.options.height,
                     accept: def.options.accept,

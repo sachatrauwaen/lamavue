@@ -747,7 +747,7 @@ let Lama = {
         var messageForLocale = null;
         while (viewId) {
             var view = this.views[viewId];
-            if (view["messages"]) {
+            if (view && view["messages"]) {
                 if (view["messages"][locale]) {
                     messageForLocale = view["messages"][locale][key];
                 }
@@ -1184,7 +1184,12 @@ let Lama = {
                     }
                 });
 
-            }
+            },
+            mounted() {
+                if (config.init)
+                    this.$refs.form.init();
+            }, 
+
         }).$mount(elementOrSelector);
         return {
             getValue(){
@@ -1196,6 +1201,7 @@ let Lama = {
             validate(successCallback, errorCallBack){
                 app.$refs.form.validate(successCallback, errorCallBack);
             }
+
         };
     },
     mountBuilder(elementOrSelector, config) {

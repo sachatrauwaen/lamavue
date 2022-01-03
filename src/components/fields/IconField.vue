@@ -12,13 +12,11 @@
       
     >
       <template #selected-option="option">
-        <font-awesome-icon :icon="option.label" />
-        <span :class="option.value"></span>
+        <font-awesome-icon :icon="option.label" />        
         <span style="margin-left: 0.5rem">{{ option.label }}</span>
       </template>
       <template v-slot:option="option">
         <font-awesome-icon :icon="option.label" />
-        <span :class="option.value"></span>
         {{ option.label }}
       </template>
     </vue-select>
@@ -55,7 +53,7 @@ let TextField = {
         .filter((key) => key !== "faFontAwesomeLogoFull" && this.icons[key].iconName)
         .map((key) => {
           return {
-            value: this.icons[key].prefix + " " + this.icons[key].iconName,
+            value: this.icons[key].prefix + " fa-" + this.icons[key].iconName,
             label: this.icons[key].iconName,
           };
         });

@@ -1,11 +1,34 @@
-<script>
-import builderUtils from "../../builderUtils";
-import ArrayBaseField from "./ArrayBaseField.vue";
+<template>
+  <container v-bind="props">
+    <list ref="list" v-model="model" v-bind="props"></list>
+  </container>
+</template>
 
-let ArrayField = {
-  name: "ArrayField",
-   extends: ArrayBaseField,
+<script>
+import Container from "../Container.vue";
+import List from "../List.vue";
+import builderUtils from "../../builderUtils";
+
+let ArrayBaseField = {
+  name: "ArrayBaseField",
+  props: {
+    value: {
+      type: Array
+    },
+    schema: {},
+    options: {},
+    connector: {},
+    errorCallback: {}
+  },
   computed: {
+    model: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        this.$emit("input", val);
+      }
+    },
     props() {
       return {
         schema: this.schema,
@@ -16,25 +39,24 @@ let ArrayField = {
       };
     }
   },
-  methods: {},
+  methods: {
+    init() {
+            this.$refs.list.init();
+
+        }
+  },
+  components: { Container, List },
   builder: {
     props() {
       return {
         schema: {
           type: "object",
           properties: {
-            fields: {
-              title: "Fields",
-              type: "array",
-              items: builderUtils.getObjectProps().schema.items
-            }
           }
         },
         options: {
           fields: {
             fields:{
-              
-              items: builderUtils.getObjectProps().options.items
             }
           }
         }
@@ -47,34 +69,24 @@ let ArrayField = {
         schema: {
           title: field.label,
           type: "array",
-          items: def.schema
+          
         },
-        options: {
-          items:  def.options          
+        options: {          
         }
       };
     },
     toBuilder(def) {
-      if (def.schema.items){
-        let b = builderUtils.objectToBuilder({schema : def.schema.items, options: def.options.items});      
         return {
           label: def.schema.title,
           fieldType: "array",
-          fields: b.fields
-        };
-      }else {
-        return {
-          label: def.schema.title,
-          fieldType: "array",
-          fields: []
-        };
-      }
-
+        };      
     }
   }
 };
 
-export default ArrayField;
+export default ArrayBaseField;
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

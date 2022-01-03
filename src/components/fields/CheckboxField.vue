@@ -1,5 +1,5 @@
 <template>
-  <control v-bind="props" v-slot="flags">
+  <control v-bind="props" v-slot="flags" :showLabel="false">
     <div class="form-check">
       <input
         type="checkbox"
@@ -9,7 +9,7 @@
         :class="{'is-invalid':flags.invalid && flags.touched}"
         :placeholder="options.placeholder"
       />
-      <label v-if="options.rightLabel" class="form-check-label">{{options.rightLabel}}</label>
+      <label v-if="label" class="form-check-label">{{label}}</label>
     </div>
   </control>
 </template>
@@ -25,7 +25,11 @@ let CheckBoxField = {
       type: Boolean
     }
   },
-  computed: {},
+  computed: {
+    label() {
+      return this.options.label || this.schema.title || this.options.rightLabel;
+    },
+  },
   methods: {},
   components: {},
   builder: {
