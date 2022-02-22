@@ -5,7 +5,7 @@
                                   :no-label="true"
                                   :no-header="true"
                                   :no-button-now="true"
-                                  format="YYYY-MM-DD"
+                                  format="YYYY-MM-DDT00:00:00"
                                   formatted="ll"
                                   v-model="model"
                                   :class="{'is-invalid':flags.invalid && flags.touched}"

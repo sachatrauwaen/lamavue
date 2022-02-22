@@ -42196,12 +42196,12 @@ var CountryField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_CountryField = (CountryField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DateField.vue?vue&type=template&id=2eb474ac&scoped=true&
-var DateFieldvue_type_template_id_2eb474ac_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-ctk-date-time-picker',{class:{'is-invalid':flags.invalid && flags.touched},attrs:{"only-date":true,"auto-close":true,"no-label":true,"no-header":true,"no-button-now":true,"format":"YYYY-MM-DD","formatted":"ll","placeholder":_vm.options.placeholder},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
-var DateFieldvue_type_template_id_2eb474ac_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DateField.vue?vue&type=template&id=4d908058&scoped=true&
+var DateFieldvue_type_template_id_4d908058_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-ctk-date-time-picker',{class:{'is-invalid':flags.invalid && flags.touched},attrs:{"only-date":true,"auto-close":true,"no-label":true,"no-header":true,"no-button-now":true,"format":"YYYY-MM-DDT00:00:00","formatted":"ll","placeholder":_vm.options.placeholder},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
+var DateFieldvue_type_template_id_4d908058_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/DateField.vue?vue&type=template&id=2eb474ac&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/DateField.vue?vue&type=template&id=4d908058&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.common.js
 var vue_ctk_date_time_picker_common = __webpack_require__("e30a");
@@ -42308,11 +42308,11 @@ var DateField = {
 
 var DateField_component = normalizeComponent(
   fields_DateFieldvue_type_script_lang_js_,
-  DateFieldvue_type_template_id_2eb474ac_scoped_true_render,
-  DateFieldvue_type_template_id_2eb474ac_scoped_true_staticRenderFns,
+  DateFieldvue_type_template_id_4d908058_scoped_true_render,
+  DateFieldvue_type_template_id_4d908058_scoped_true_staticRenderFns,
   false,
   null,
-  "2eb474ac",
+  "4d908058",
   null
   
 )
