@@ -71,7 +71,8 @@ export default {
         this.model.splice(this.index+1, 0, itemData);
       }
       this.$emit("show-body");
-      this.$emit("input", this.model);
+        this.$emit("input", this.model);
+        this.$emit("added");
     },
     remove() {
       this.model.splice(this.index, 1);

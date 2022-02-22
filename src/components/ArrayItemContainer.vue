@@ -29,7 +29,6 @@ export default {
     data: {},
     schema: {},
     options: {},
-
     connector: {},
     errorCallback: {},
     messages: {},
@@ -43,11 +42,8 @@ export default {
   computed: {
     headerLabel() {
       if (!this.value) return "[empty item]";
-      
       if (!Lama.isObject(this.value)) return this.value;
-
-      let keys = Object.keys(this.value);
-
+      let keys = Object.keys(this.schema.properties);
       let l = this.value[keys[0]];
       return l ? l : "[empty item]";
     }

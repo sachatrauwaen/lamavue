@@ -1,5 +1,6 @@
 .DS_Store
 node_modules
+.vs
 
 # local env files
 .env.local
@@ -19,3 +20,4 @@ yarn-error.log*
 *.sln
 *.sw?
 *.zip
+*.sqlite

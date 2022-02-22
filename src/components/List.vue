@@ -11,6 +11,7 @@
             v-model="model"
             v-bind="toolbarProps(index)"
             @show-body="showBody(index + 1)"
+            @added="added(index + 1)"
           ></toolbar>
         </template>
         <form-field
@@ -121,7 +122,14 @@ export default {
     },
     showBody(index) {
       this.showIndex = index == this.showIndex ? -1 : index;
-    },
+      },
+      added(index) {
+          this.$nextTick(() => {
+            if (this.$refs.formField && this.$refs.formField.length > 0) {
+                  this.$refs.formField[0].init(index);
+              }
+          })
+      },
     init() {
       if (this.$refs.formField) {
         for (var i = 0; i < this.$refs.formField.length; i++) {

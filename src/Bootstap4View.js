@@ -13,6 +13,7 @@ import ObjectField from './components/fields/ObjectField.vue'
 import RadioField from './components/fields/RadioField.vue'
 import SelectField from './components/fields/SelectField.vue'
 import TextField from './components/fields/TextField.vue'
+import ColorField from './components/fields/ColorField.vue'
 import TextareaField from './components/fields/TextareaField.vue'
 import IconField from './components/fields/IconField.vue'
 import GuidField from './components/fields/GuidField.vue'
@@ -34,29 +35,29 @@ export default {
         Lama.registerFieldComponent("checkbox", CheckboxField);
         Lama.registerDefaultSchemaFieldMapping("boolean", "checkbox");
         Lama.registerFieldComponent("ckeditor", CKEditorField);
+        Lama.registerFieldComponent("color", ColorField);
         Lama.registerFieldComponent("country", CountryField);
         Lama.registerFieldComponent("date", DateField);
+        Lama.registerFieldComponent("documents", DocumentsField);
         Lama.registerFieldComponent("file", FileField);
         Lama.registerFieldComponent("filebrowser", FileBrowserField);
+        Lama.registerFieldComponent("gallery", GalleryField);
+        Lama.registerFieldComponent("guid", GuidField);
+        Lama.registerFieldComponent("icon", IconField);
         Lama.registerFieldComponent("image", ImageField);
         Lama.registerFieldComponent("imagebrowser", ImageBrowserField);
+        Lama.registerFieldComponent("link", LinkField);
         Lama.registerFieldComponent("number", NumberField);
         Lama.registerDefaultSchemaFieldMapping("number", "number");
         Lama.registerFieldComponent("object", ObjectField);
         Lama.registerDefaultSchemaFieldMapping("object", "object");
+        Lama.registerFieldComponent("page", PageField);
         Lama.registerFieldComponent("radio", RadioField);
+        Lama.registerFieldComponent("relation", RelationField);
         Lama.registerFieldComponent("select", SelectField);
         Lama.registerFieldComponent("textarea", TextareaField);
         Lama.registerFieldComponent("text", TextField);
-        Lama.registerFieldComponent("guid", GuidField);
-        Lama.registerFieldComponent("relation", RelationField);
-        Lama.registerFieldComponent("page", PageField);
-        Lama.registerFieldComponent("link", LinkField);
-        Lama.registerFieldComponent("gallery", GalleryField);
-        Lama.registerFieldComponent("documents", DocumentsField);
         Lama.registerDefaultSchemaFieldMapping("string", "text");
-
-        Lama.registerFieldComponent("icon", IconField);
 
         Lama.registerView({
             "id": "bootstrap4-edit",
