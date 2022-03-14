@@ -142,7 +142,7 @@
                                 },
                         options:
                             this.schemaType == "array"
-                                ? { fields: { items: { fields: fields } } }
+                                ? {  items: { fields: fields } }
                                 : { fields: fields },
                     });
                 },
