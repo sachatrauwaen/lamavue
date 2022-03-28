@@ -15,13 +15,12 @@
                 },
                 set(val) {
                     if (val.type=="page")
-                        val.url= val.page.url;
+                        val.url = val && val.page ? val.page.url : "";
                     else if (val.type=="email")
-                        val.url= 'mailto:'+val.email;
+                        val.url = val && val.email ? 'mailto:'+val.email : "";
                     else if (val.type=="phone")
-                        val.url= 'phone:'+val.phone;
+                        val.url=  val && val.url ? 'phone:'+val.phone : "";
                     
-
                     this.$emit("input", val);
                 }
             },
@@ -64,7 +63,6 @@
                     },
                     options: {
                         fields: {
-                            
                             type: {
                                 type:"select"
                             },
@@ -103,7 +101,6 @@
                                     type: ["url", "page"]
                                 }
                             }
-
                         }
                     },
                     view: this.view,
@@ -143,10 +140,7 @@
             }
         }
     };
-
     export default LinkField;
-
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

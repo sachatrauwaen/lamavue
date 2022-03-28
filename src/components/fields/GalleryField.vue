@@ -1,4 +1,9 @@
-
+<template>
+    <container v-bind="props">
+        <input type="file" multiple @change="setFile" style="margin-bottom:10px;" />
+        <list ref="list" v-model="model" v-bind="props"></list>
+    </container>
+</template>
 <script>
 import ArrayBaseField from "./ArrayBaseField.vue";
 
@@ -36,7 +41,28 @@ let GalleryField = {
       };
     },
   },
-  methods: {},
+  methods: {
+      setFile(e) {
+          const files = e.target.files;
+          let val = this.model || [];
+          for (var i = 0; i < files.length; i++) {
+              let config = {
+                  file: files[i],
+                  name: files[i].name,
+                  folder: this.baseFolder,
+              };
+              this.connector.upload(
+                  config,
+                  (data) => {
+                      val.push({ Image: data.url });
+                      this.model = val;
+                      //this.updateImageVersion();
+                  },
+                  () => { }
+              );
+          }
+      },
+  },
   created() {},
   components: {},
   builder: {
