@@ -41715,12 +41715,12 @@ var CheckboxField_component = normalizeComponent(
 )
 
 /* harmony default export */ var CheckboxField = (CheckboxField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CKEditorField.vue?vue&type=template&id=69607164&scoped=true&
-var CKEditorFieldvue_type_template_id_69607164_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('ckeditor',{attrs:{"config":_vm.editorConfig},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
-var CKEditorFieldvue_type_template_id_69607164_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CKEditorField.vue?vue&type=template&id=4340f8d8&scoped=true&
+var CKEditorFieldvue_type_template_id_4340f8d8_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('ckeditor',{attrs:{"config":_vm.editorConfig},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
+var CKEditorFieldvue_type_template_id_4340f8d8_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CKEditorField.vue?vue&type=template&id=69607164&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CKEditorField.vue?vue&type=template&id=4340f8d8&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72faad2d-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/TextField.vue?vue&type=template&id=62b4b940&scoped=true&
 var TextFieldvue_type_template_id_62b4b940_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
@@ -41857,7 +41857,7 @@ var basicConfig = {
   // Simplify the dialog windows.
   removeDialogTabs: "image:advanced;link:advanced",
   // Remove one plugin.
-  removePlugins: "elementspath,link",
+  removePlugins: "elementspath",
   //extraPlugins: "dnnpages",
   //autoGrow_onStartup : true,
   //autoGrow_minHeight : 100,
@@ -41900,7 +41900,7 @@ var standardConfig = {
   // Simplify the dialog windows.
   removeDialogTabs: "image:advanced;link:advanced",
   // Remove one plugin.
-  removePlugins: "elementspath,link",
+  removePlugins: "elementspath",
   //extraPlugins: "dnnpages",
   //autoGrow_onStartup : true,
   //autoGrow_minHeight : 100,
@@ -41946,7 +41946,7 @@ var fullConfig = {
   // Simplify the dialog windows.
   removeDialogTabs: "image:advanced;link:advanced",
   // Remove one plugin.
-  removePlugins: "elementspath,link,image",
+  removePlugins: "elementspath,image",
   //extraPlugins: "dnnpages",
   //autoGrow_onStartup : true,
   //autoGrow_minHeight : 100,
@@ -42038,11 +42038,11 @@ var CKEditorField = {
 
 var CKEditorField_component = normalizeComponent(
   fields_CKEditorFieldvue_type_script_lang_js_,
-  CKEditorFieldvue_type_template_id_69607164_scoped_true_render,
-  CKEditorFieldvue_type_template_id_69607164_scoped_true_staticRenderFns,
+  CKEditorFieldvue_type_template_id_4340f8d8_scoped_true_render,
+  CKEditorFieldvue_type_template_id_4340f8d8_scoped_true_staticRenderFns,
   false,
   null,
-  "69607164",
+  "4340f8d8",
   null
   
 )
