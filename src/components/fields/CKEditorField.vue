@@ -56,7 +56,7 @@ import CKEditor from "ckeditor4-vue";
     // Simplify the dialog windows.
     removeDialogTabs: "image:advanced;link:advanced",
     // Remove one plugin.
-    removePlugins: "elementspath,link",
+    removePlugins: "elementspath",
     //extraPlugins: "dnnpages",
     //autoGrow_onStartup : true,
     //autoGrow_minHeight : 100,
@@ -119,7 +119,7 @@ import CKEditor from "ckeditor4-vue";
     // Simplify the dialog windows.
     removeDialogTabs: "image:advanced;link:advanced",
     // Remove one plugin.
-    removePlugins: "elementspath,link",
+    removePlugins: "elementspath",
     //extraPlugins: "dnnpages",
     //autoGrow_onStartup : true,
     //autoGrow_minHeight : 100,
@@ -221,7 +221,7 @@ import CKEditor from "ckeditor4-vue";
     // Simplify the dialog windows.
     removeDialogTabs: "image:advanced;link:advanced",
     // Remove one plugin.
-    removePlugins: "elementspath,link,image",
+    removePlugins: "elementspath,image",
     //extraPlugins: "dnnpages",
     //autoGrow_onStartup : true,
     //autoGrow_minHeight : 100,
