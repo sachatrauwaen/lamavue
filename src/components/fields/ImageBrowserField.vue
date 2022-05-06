@@ -142,8 +142,31 @@
                 //   crop: cropData
                 // };
 
-                cropCanvas.toBlob((blob) => {
+                var canvas = document.createElement('canvas');
+                
 
+                var MAX_WIDTH = this.options.width;
+                var MAX_HEIGHT = this.options.height;
+                var width = cropCanvas.width;
+                var height = cropCanvas.height;
+
+                if (width > height) {
+                    if (width > MAX_WIDTH) {
+                        height *= MAX_WIDTH / width;
+                        width = MAX_WIDTH;
+                    }
+                } else {
+                    if (height > MAX_HEIGHT) {
+                        width *= MAX_HEIGHT / height;
+                        height = MAX_HEIGHT;
+                    }
+                }
+                canvas.width = width;
+                canvas.height = height;
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(cropCanvas, 0, 0, width, height);
+
+                canvas.toBlob((blob) => {
                     let config = {
                         file: blob,
                         name: this.model.filename,

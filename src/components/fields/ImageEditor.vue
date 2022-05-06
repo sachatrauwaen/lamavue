@@ -9,6 +9,8 @@
           :src="imageUrl"
           :data="cropperData"
           :aspect-ratio="ratio"
+          :viewMode="1"
+          :autoCropArea="1"
           alt="Image"
           :containerStyle="{maxHeight:'400px'}"
         ></vue-cropper>

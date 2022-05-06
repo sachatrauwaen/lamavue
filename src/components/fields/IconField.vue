@@ -3,7 +3,7 @@
     <vue-select
       v-model="model"
       :placeholder="options.placeholder"
-      :reduce="(icon) => icon.value"
+      :reduce="(icon) => icon.class"
       style="margin-bottom: 10px"
       :options="filteredIcons"
       :filterable="true"
@@ -12,11 +12,11 @@
       
     >
       <template #selected-option="option">
-        <font-awesome-icon :icon="option.label" />        
+        <font-awesome-icon :icon="option.value" />        
         <span style="margin-left: 0.5rem">{{ option.label }}</span>
       </template>
       <template v-slot:option="option">
-        <font-awesome-icon :icon="option.label" />
+        <font-awesome-icon :icon="option.value" />
         {{ option.label }}
       </template>
     </vue-select>
@@ -30,9 +30,10 @@ import VueSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
-//import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-library.add(fas);
+    library.add(fas);
+    library.add(fab);
 
 let TextField = {
   name: "IconField",
@@ -44,7 +45,7 @@ let TextField = {
   },
   data() {
     return {
-      icons: { ...fas /*, ...fab*/ },
+      icons: { ...fas , ...fab },
     };
   },
   computed: {
@@ -53,7 +54,8 @@ let TextField = {
         .filter((key) => key !== "faFontAwesomeLogoFull" && this.icons[key].iconName)
         .map((key) => {
           return {
-            value: this.icons[key].prefix + " fa-" + this.icons[key].iconName,
+            class: this.icons[key].prefix + " fa-" + this.icons[key].iconName,
+            value: [this.icons[key].prefix, this.icons[key].iconName],
             label: this.icons[key].iconName,
           };
         });
