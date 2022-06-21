@@ -71,9 +71,11 @@
                         }
                     },
                     options: {
-                        secure: {
-                            rightLabel: "Overwrite",
-                        },
+                        fields: {
+                            secure: {
+                                rightLabel: "Secure",
+                            },
+                        }
                     }
                 };
             },
