@@ -184,6 +184,7 @@ export default {
         name: file.name,
         folder: this.baseFolder,
         overwrite: this.doOverwrite,
+        secure: this.secure,
         width: this.width,
         height: this.height,
       };
