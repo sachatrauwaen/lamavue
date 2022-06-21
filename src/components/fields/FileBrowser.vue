@@ -101,6 +101,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    secure: {
+          type: Boolean,
+          default: false,
+    },
     onlyImages: {
       type: Boolean,
       default: true,

@@ -12,7 +12,6 @@
                v-model="model"
                :class="{'is-invalid':flags.invalid && flags.touched}"
                style="margin-bottom:10px" />
-
     </control>
 </template>
 
@@ -43,13 +42,14 @@
                 let config = {
                     file: file,
                     name: file.name,
+                    secure: this.options.secure,
                     folder: this.baseFolder,
                 };
                 this.connector.upload(
                     config,
                     (data) => {
                         this.model = data.url;
-                        this.updateImageVersion();
+                        //this.updateImageVersion();
                     },
                     () => { }
                 );
