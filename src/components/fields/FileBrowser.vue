@@ -102,8 +102,8 @@ export default {
       default: false,
     },
     secure: {
-          type: Boolean,
-          default: false,
+      type: Boolean,
+      default: false,
     },
     onlyImages: {
       type: Boolean,
@@ -139,6 +139,7 @@ export default {
         query: {
           type: "folders",
           folder: this.baseFolder,
+          secure: this.secure,
         },
       };
       this.connector.loadDataSource(
@@ -159,6 +160,7 @@ export default {
           type: "files",
           folder: this.folder,
           onlyImages: this.onlyImages,
+          secure: this.secure,
         },
       };
       this.connector.loadDataSource(

@@ -28,7 +28,8 @@ let FileField = {
         onlyImages: true,
         connector: this.connector,
         showFolderSelector: false,
-        showFileSelector:true
+        showFileSelector: true,
+        secure: this.options.secure
       }
     },
     fileObj: {
@@ -75,25 +76,36 @@ let FileField = {
             multilanguage: {
               title: "Multi language",
               type: "boolean"
-            }
+            },
+            secure: {
+              "type": "boolean"
+            },
           }
         },
-        options: {}
+        options: {
+          fields: {
+            secure: {
+              rightLabel: "Secure",
+            }
+          }
+        }
       };
     },
-    fromBuilder() {
+    fromBuilder(field) {
       return {
         schema: {
           type: "string",
         },
         options: {
           type: "filebrowser",
+          secure: field.secure,
         }
       };
     },
-    toBuilder() {
+    toBuilder(def) {
       return {
-        fieldType: "filebrowser"
+        fieldType: "filebrowser",
+        secure: def.options.secure,
       };
     }
   }

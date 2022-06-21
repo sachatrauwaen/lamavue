@@ -67,14 +67,14 @@
                         properties: {
                             secure: {
                                 "type": "boolean"
-                            },
+                            }
                         }
                     },
                     options: {
                         fields: {
                             secure: {
                                 rightLabel: "Secure",
-                            },
+                            }
                         }
                     }
                 };
