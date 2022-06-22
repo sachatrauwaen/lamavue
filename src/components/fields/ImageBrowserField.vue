@@ -8,7 +8,7 @@
                           @save="saveImageEditor"></image-editor>
         </template>
         <div v-show="!showImageEditor">
-            <file-browser v-model="imageFile" v-bind="fileBrowserProps"></file-browser>
+            <image-browser v-model="imageFile" v-bind="fileBrowserProps"></image-browser>
             <div class="btn-group" role="group" aria-label="Basic example">
                 <button v-if="imageSrc"
                         type="button"
@@ -34,7 +34,7 @@
     import ImageEditor from "./ImageEditor.vue";
     import VueCropper from "vue-cropperjs";
     import "cropperjs/dist/cropper.css";
-    import FileBrowser from "./FileBrowser.vue";
+    import ImageBrowser from "./ImageBrowser.vue";
 
 
     let ImagexField = {
@@ -54,7 +54,6 @@
         computed: {
             fileBrowserProps() {
                 return {
-                    onlyImages: true,
                     connector: this.connector,
                     baseForlder: this.options.uploadfolder,
                     showFolderSelector: false,
@@ -197,7 +196,7 @@
                 this.model = null;
             }
         },
-        components: { Control, VueCropper, FileBrowser, ImageEditor },
+        components: { Control, VueCropper, ImageBrowser, ImageEditor },
         builder: {
             props() {
                 return {

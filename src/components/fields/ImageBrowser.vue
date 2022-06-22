@@ -28,6 +28,11 @@
             display: inline-block;
           "
         >
+          <img
+            :src="thumbUrl"
+            :alt="filename"
+            class="img-fluid"
+          />
         </div>
         <span>{{ filename }}</span>
       </template>
@@ -147,7 +152,7 @@ export default {
     fetchFiles() {
       let config = {
         query: {
-          type: "files",
+          type: "images",
           folder: this.folder,
           secure: this.secure,
         },
@@ -168,6 +173,10 @@ export default {
             this.fileMaxSize +
             " bytes"
         );
+        return;
+      }
+      if (file.type.indexOf("image/") === -1) {
+        alert("Please select an image file");
         return;
       }
       let config = {
