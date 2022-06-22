@@ -19,18 +19,6 @@
       :options="files"
       :filterable="true"
     >
-      <template #option="{ filename, thumbUrl }">
-        <div
-          style="
-            height: 20px;
-            width: 20px;
-            margin-right: 5px;
-            display: inline-block;
-          "
-        >
-        </div>
-        <span>{{ filename }}</span>
-      </template>
     </vue-select>
     <input
       v-if="showUpload"
