@@ -20,6 +20,7 @@ import GuidField from './components/fields/GuidField.vue'
 import RelationField from './components/fields/RelationField.vue'
 import PageField from './components/fields/PageField.vue'
 import LinkField from './components/fields/LinkField.vue'
+import UrlField from './components/fields/UrlField.vue'
 import GalleryField from './components/fields/GalleryField.vue'
 import DocumentsField from './components/fields/DocumentsField.vue'
 import Lama from "./lama";
@@ -47,6 +48,7 @@ export default {
         Lama.registerFieldComponent("image", ImageField);
         Lama.registerFieldComponent("imagebrowser", ImageBrowserField);
         Lama.registerFieldComponent("link", LinkField);
+        Lama.registerFieldComponent("url", UrlField);
         Lama.registerFieldComponent("number", NumberField);
         Lama.registerDefaultSchemaFieldMapping("number", "number");
         Lama.registerFieldComponent("object", ObjectField);
