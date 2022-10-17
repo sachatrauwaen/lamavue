@@ -54,6 +54,9 @@
                             required: {
                                 type: "boolean",
                             },
+                            hidden: {
+                                type: "boolean",
+                            },
                             // placeholder: {
                             //   title: "Placeholder",
                             //   type: "string",
@@ -85,6 +88,9 @@
                             required: {
                                 rightLabel: "Required",
                             },
+                            hidden: {
+                                rightLabel: "Hiden",
+                            },
                             multilanguage: {
                                 rightLabel: "Multi language",
                             },
@@ -105,8 +111,10 @@
                         title: field.label,
                         default: field.default,
                         required: field.required,
+                        
                     },
                     options: {
+                        hidden: field.hidden,
                         multilanguage: field.multilanguage,
                         dependencies: optDeps,
                     },
@@ -127,6 +135,7 @@
                     label: def.schema.title,
                     default: def.schema.default,
                     required: def.schema.required,
+                    hidden: def.options.hidden,
                     //placeholder: def.options.placeholder,
                     multilanguage: def.options.multilanguage,
                     dependencies: deps,

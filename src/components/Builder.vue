@@ -30,8 +30,10 @@
     import builderUtils from "../builderUtils";
 
     import BuilderField from "./BuilderField.vue";
+    import LazyTextField from "./fields/LazyTextField.vue";
 
     Lama.registerFieldComponent("builder", BuilderField);
+    Lama.registerFieldComponent("lazytext", LazyTextField);
 
     export default {
         name: "Builder",
@@ -204,6 +206,7 @@
             },
         },
         methods: {
+            /*
             fieldProps() {
                 let defautProps = {
                     type: "object",
@@ -212,7 +215,7 @@
                             type: "string",
                             title: "Field Name",
                             required: true,
-                            default:'ffff'
+                            default:''
                         },
                         label: {
                             type: "string",
@@ -229,6 +232,7 @@
 
                 return defautProps;
             },
+            */
         },
         components: { LamaForm },
         mounted() {

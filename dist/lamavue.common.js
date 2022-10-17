@@ -37098,12 +37098,12 @@ var staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/App.vue?vue&type=template&id=71911ee2&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Builder.vue?vue&type=template&id=408e3d3c&
-var Buildervue_type_template_id_408e3d3c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.fields),callback:function ($$v) {_vm.fields=$$v},expression:"fields"}},'lama-form',_vm.props,false)),_c('div',{staticClass:"form-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.schemaType),expression:"schemaType"}],staticClass:"form-control",on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.schemaType=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},[_c('option',{attrs:{"value":"object"}},[_vm._v("Object")]),_c('option',{attrs:{"value":"array"}},[_vm._v("array")])])])],1),_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({ref:"demoForm",attrs:{"debug":_vm.debug},model:{value:(_vm.demo),callback:function ($$v) {_vm.demo=$$v},expression:"demo"}},'lama-form',_vm.demoProps,false)),(_vm.debug)?_c('div',[_c('hr'),_vm._v(" schema = "+_vm._s(_vm.value.schema)+" "),_c('hr'),_vm._v(" options = "+_vm._s(_vm.value.options)+" ")]):_vm._e()],1)]),_c('hr')])}
-var Buildervue_type_template_id_408e3d3c_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Builder.vue?vue&type=template&id=080a6a68&
+var Buildervue_type_template_id_080a6a68_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({attrs:{"debug":_vm.debug},model:{value:(_vm.fields),callback:function ($$v) {_vm.fields=$$v},expression:"fields"}},'lama-form',_vm.props,false)),_c('div',{staticClass:"form-group"},[_c('select',{directives:[{name:"model",rawName:"v-model",value:(_vm.schemaType),expression:"schemaType"}],staticClass:"form-control",on:{"change":function($event){var $$selectedVal = Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return val}); _vm.schemaType=$event.target.multiple ? $$selectedVal : $$selectedVal[0]}}},[_c('option',{attrs:{"value":"object"}},[_vm._v("Object")]),_c('option',{attrs:{"value":"array"}},[_vm._v("array")])])])],1),_c('div',{staticClass:"col-md-6"},[_c('lama-form',_vm._b({ref:"demoForm",attrs:{"debug":_vm.debug},model:{value:(_vm.demo),callback:function ($$v) {_vm.demo=$$v},expression:"demo"}},'lama-form',_vm.demoProps,false)),(_vm.debug)?_c('div',[_c('hr'),_vm._v(" schema = "+_vm._s(_vm.value.schema)+" "),_c('hr'),_vm._v(" options = "+_vm._s(_vm.value.options)+" ")]):_vm._e()],1)]),_c('hr')])}
+var Buildervue_type_template_id_080a6a68_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Builder.vue?vue&type=template&id=408e3d3c&
+// CONCATENATED MODULE: ./src/components/Builder.vue?vue&type=template&id=080a6a68&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.assign.js
 var es_object_assign = __webpack_require__("cca6");
@@ -41239,12 +41239,12 @@ var Container_component = normalizeComponent(
 )
 
 /* harmony default export */ var Container = (Container_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=757f84f6&scoped=true&
-var Fieldsvue_type_template_id_757f84f6_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
-var Fieldsvue_type_template_id_757f84f6_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=26d71520&scoped=true&
+var Fieldsvue_type_template_id_26d71520_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
+var Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=757f84f6&scoped=true&
+// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=26d71520&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=script&lang=js&
 //
@@ -41329,6 +41329,7 @@ var Fieldsvue_type_template_id_757f84f6_scoped_true_staticRenderFns = []
     },
     visible: function visible(key) {
       var opt = this.itemProps(key).options;
+      if (opt.hidden) return false;
 
       if (opt.dependencies) {
         var ok = true;
@@ -41397,11 +41398,11 @@ var Fieldsvue_type_template_id_757f84f6_scoped_true_staticRenderFns = []
 
 var Fields_component = normalizeComponent(
   components_Fieldsvue_type_script_lang_js_,
-  Fieldsvue_type_template_id_757f84f6_scoped_true_render,
-  Fieldsvue_type_template_id_757f84f6_scoped_true_staticRenderFns,
+  Fieldsvue_type_template_id_26d71520_scoped_true_render,
+  Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns,
   false,
   null,
-  "757f84f6",
+  "26d71520",
   null
   
 )
@@ -41521,7 +41522,11 @@ var ObjectBaseField_component = normalizeComponent(
       options: {
         items: {
           type: "builder",
-          fields: {}
+          fields: {
+            fieldName: {
+              type: "lazytext"
+            }
+          }
         }
       }
     };
@@ -42556,6 +42561,9 @@ var ControlField = {
             required: {
               type: "boolean"
             },
+            hidden: {
+              type: "boolean"
+            },
             // placeholder: {
             //   title: "Placeholder",
             //   type: "string",
@@ -42587,6 +42595,9 @@ var ControlField = {
             required: {
               rightLabel: "Required"
             },
+            hidden: {
+              rightLabel: "Hiden"
+            },
             multilanguage: {
               rightLabel: "Multi language"
             }
@@ -42611,6 +42622,7 @@ var ControlField = {
           required: field.required
         },
         options: {
+          hidden: field.hidden,
           multilanguage: field.multilanguage,
           dependencies: optDeps
         }
@@ -42633,6 +42645,7 @@ var ControlField = {
         label: def.schema.title,
         default: def.schema.default,
         required: def.schema.required,
+        hidden: def.options.hidden,
         //placeholder: def.options.placeholder,
         multilanguage: def.options.multilanguage,
         dependencies: deps
@@ -42657,7 +42670,7 @@ var ControlField_component = normalizeComponent(
   ControlField_staticRenderFns,
   false,
   null,
-  "0a9e5c18",
+  "37f4801a",
   null
   
 )
@@ -57490,6 +57503,101 @@ var BuilderField_component = normalizeComponent(
 )
 
 /* harmony default export */ var BuilderField = (BuilderField_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/LazyTextField.vue?vue&type=template&id=5b8fdc5a&scoped=true&
+var LazyTextFieldvue_type_template_id_5b8fdc5a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model.lazy",value:(_vm.model),expression:"model",modifiers:{"lazy":true}}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"change":function($event){_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var LazyTextFieldvue_type_template_id_5b8fdc5a_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/LazyTextField.vue?vue&type=template&id=5b8fdc5a&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/LazyTextField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var LazyTextFieldvue_type_script_lang_js_TextField = {
+  name: "LazyTextField",
+  extends: fields_ControlField,
+  props: {
+    value: {
+      type: String
+    }
+  },
+  computed: {},
+  methods: {},
+  components: {
+    Control: Control
+  },
+  builder: {
+    props: function props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            placeholder: {
+              title: "Placeholder",
+              type: "string"
+            }
+          }
+        },
+        options: {
+          fields: {}
+        }
+      };
+    },
+    fromBuilder: function fromBuilder(field) {
+      return {
+        schema: {
+          type: "string"
+        },
+        options: {
+          type: "text",
+          placeholder: field.placeholder
+        }
+      };
+    },
+    toBuilder: function toBuilder(def) {
+      return {
+        fieldType: "text",
+        placeholder: def.options.placeholder
+      };
+    }
+  }
+};
+/* harmony default export */ var LazyTextFieldvue_type_script_lang_js_ = (LazyTextFieldvue_type_script_lang_js_TextField);
+// CONCATENATED MODULE: ./src/components/fields/LazyTextField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_LazyTextFieldvue_type_script_lang_js_ = (LazyTextFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/LazyTextField.vue
+
+
+
+
+
+/* normalize component */
+
+var LazyTextField_component = normalizeComponent(
+  fields_LazyTextFieldvue_type_script_lang_js_,
+  LazyTextFieldvue_type_template_id_5b8fdc5a_scoped_true_render,
+  LazyTextFieldvue_type_template_id_5b8fdc5a_scoped_true_staticRenderFns,
+  false,
+  null,
+  "5b8fdc5a",
+  null
+  
+)
+
+/* harmony default export */ var LazyTextField = (LazyTextField_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Builder.vue?vue&type=script&lang=js&
 
 //
@@ -57522,7 +57630,9 @@ var BuilderField_component = normalizeComponent(
 
 
 
+
 lama.registerFieldComponent("builder", BuilderField);
+lama.registerFieldComponent("lazytext", LazyTextField);
 /* harmony default export */ var Buildervue_type_script_lang_js_ = ({
   name: "Builder",
   props: {
@@ -57698,30 +57808,32 @@ lama.registerFieldComponent("builder", BuilderField);
     }
   },
   methods: {
-    fieldProps: function fieldProps() {
-      var defautProps = {
-        type: "object",
-        properties: {
-          fieldname: {
-            type: "string",
-            title: "Field Name",
-            required: true,
-            default: 'ffff'
-          },
-          label: {
-            type: "string",
-            title: "Label",
-            required: true
-          },
-          fieldType: {
-            type: "string",
-            title: "Field Type",
-            enum: this.fieldTypes
-          }
-        }
-      };
-      return defautProps;
-    }
+    /*
+    fieldProps() {
+        let defautProps = {
+            type: "object",
+            properties: {
+                fieldname: {
+                    type: "string",
+                    title: "Field Name",
+                    required: true,
+                    default:''
+                },
+                label: {
+                    type: "string",
+                    title: "Label",
+                    required: true,
+                },
+                fieldType: {
+                    type: "string",
+                    title: "Field Type",
+                    enum: this.fieldTypes,
+                },
+            },
+        };
+         return defautProps;
+    },
+    */
   },
   components: {
     LamaForm: Form
@@ -57742,8 +57854,8 @@ lama.registerFieldComponent("builder", BuilderField);
 
 var Builder_component = normalizeComponent(
   components_Buildervue_type_script_lang_js_,
-  Buildervue_type_template_id_408e3d3c_render,
-  Buildervue_type_template_id_408e3d3c_staticRenderFns,
+  Buildervue_type_template_id_080a6a68_render,
+  Buildervue_type_template_id_080a6a68_staticRenderFns,
   false,
   null,
   null,

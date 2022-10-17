@@ -91,6 +91,7 @@
             },
             visible(key) {
                 var opt = this.itemProps(key).options;
+                if (opt.hidden) return false;
                 if (opt.dependencies) {
                     let ok = true;
                     for (const prop in opt.dependencies) {

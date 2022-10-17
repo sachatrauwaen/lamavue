@@ -37,7 +37,11 @@ export default {
             options: {
                 items: {
                     type: "builder",
-                    fields: {}
+                    fields: {
+                        fieldName: {
+                            type: "lazytext"
+                        },
+                    }
                 }
             }
         };
