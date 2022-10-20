@@ -41239,12 +41239,12 @@ var Container_component = normalizeComponent(
 )
 
 /* harmony default export */ var Container = (Container_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=26d71520&scoped=true&
-var Fieldsvue_type_template_id_26d71520_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
-var Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2ebe0549-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=feeef86c&scoped=true&
+var Fieldsvue_type_template_id_feeef86c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.visibleFields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
+var Fieldsvue_type_template_id_feeef86c_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=26d71520&scoped=true&
+// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=feeef86c&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=script&lang=js&
 //
@@ -41339,7 +41339,7 @@ var Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns = []
           var valok = false;
 
           for (var i = 0; i < val.length; i++) {
-            valok = valok || this.model[prop] == val[i];
+            valok = valok || this.model[prop] == true || this.model[prop] == val[i];
           }
 
           ok = ok && valok; //ok = ok && this.model[prop] == val;
@@ -41398,11 +41398,11 @@ var Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns = []
 
 var Fields_component = normalizeComponent(
   components_Fieldsvue_type_script_lang_js_,
-  Fieldsvue_type_template_id_26d71520_scoped_true_render,
-  Fieldsvue_type_template_id_26d71520_scoped_true_staticRenderFns,
+  Fieldsvue_type_template_id_feeef86c_scoped_true_render,
+  Fieldsvue_type_template_id_feeef86c_scoped_true_staticRenderFns,
   false,
   null,
-  "26d71520",
+  "feeef86c",
   null
   
 )
