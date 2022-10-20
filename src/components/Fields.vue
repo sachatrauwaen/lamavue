@@ -98,7 +98,7 @@
                         const val = opt.dependencies[prop];
                         let valok = false;
                         for (var i = 0; i < val.length; i++) {
-                            valok = valok || this.model[prop] == val[i];
+                            valok = valok || this.model[prop] == true || this.model[prop] == val[i];
                         }
                         ok = ok && valok;
                         //ok = ok && this.model[prop] == val;
