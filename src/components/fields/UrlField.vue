@@ -2,7 +2,7 @@
     <control v-bind="props" v-slot="flags">
         <vue-bootstrap-typeahead v-model="model" :data="items" :serializer="s => s.url" 
                                  :class="{ 'is-invalid': flags.invalid && flags.touched }" >
-            <template slot="suggestion" slot-scope="{ data, htmlText }">
+            <template slot="suggestion" slot-scope="{ data }">
                 <span>{{data.text}}</span>&nbsp;
                 <small>({{ data.url }})</small>
             </template>
@@ -31,14 +31,14 @@
             };
         },
         computed: {
-            //model: {
-            //    get() {
-            //        return this.value || '';
-            //    },
-            //    set(val) {
-            //        this.$emit("input", val);
-            //    }
-            //},
+            model: {
+                get() {
+                    return this.value || '';
+                },
+                set(val) {
+                    this.$emit("input", val);
+                }
+            },
             query() {
                 return {
                     type: "page",
