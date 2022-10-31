@@ -20,7 +20,8 @@ let ColorField = {
   extends: ControlField,
   props: {
     value: {
-      type: String,
+       type: String,
+       default:''
     },
   },
   computed: {},

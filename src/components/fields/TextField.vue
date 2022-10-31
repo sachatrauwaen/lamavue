@@ -21,6 +21,7 @@ let TextField = {
   props: {
     value: {
       type: String,
+      default: ''
     },
   },
   computed: {},

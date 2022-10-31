@@ -235,7 +235,6 @@ import CKEditor from "ckeditor4-vue";
 
   const configSets = {basic: basicConfig, standard: standardConfig, full: fullConfig};
 
-
 let CKEditorField = {
   name: "CKEditorField",
   extends: TextField,
@@ -247,7 +246,6 @@ let CKEditorField = {
   },
   computed: {
     editorConfig(){
-
       if (this.options.configset){
         return configSets[this.options.configset];
       } else{

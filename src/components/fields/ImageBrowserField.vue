@@ -91,7 +91,8 @@
                             width: val.width,
                             height: val.height,
                             url: val.url,
-                            rawUrl: val.url
+                            rawUrl: val.url,
+                            cropUrl: val.url
                         };
                         if (this.options.showCropper){
                             this.showImageEditor=true;
@@ -177,14 +178,14 @@
                         (data) => {
                             this.model = {
                                 id: this.model.id,
-                                //url: data.url,
                                 filename: this.model.filename,
                                 width: this.model.width,
                                 height: this.model.height,
                                 rawUrl: this.model.rawUrl,
                                 url: data.url,
                                 //url: cropCanvas.toDataURL('image/jpeg'),
-                                crop: cropData
+                                crop: cropData,
+                                cropUrl: data.url
                             };
                             this.updateImageVersion();
                         },
@@ -269,6 +270,7 @@
                     options: {
                         type: "imagebrowser",
                         uploadfolder: field.uploadfolder,
+                        cropfolder: field.cropfolder,
                         showUpload: field.showUpload,
                         showOverwrite: field.showOverwrite,
                         overwrite: field.overwrite,

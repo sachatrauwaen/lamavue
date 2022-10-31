@@ -21,6 +21,7 @@
         props: {
             value: {
                 type: String,
+                default: ''
             },
         },
         data() {
@@ -30,6 +31,14 @@
             };
         },
         computed: {
+            //model: {
+            //    get() {
+            //        return this.value || '';
+            //    },
+            //    set(val) {
+            //        this.$emit("input", val);
+            //    }
+            //},
             query() {
                 return {
                     type: "page",
@@ -61,8 +70,7 @@
             },
             reduce(option) {
                 return option.url;
-            },
-           
+            }
         },
         created() {
             this.fetchOptions();
@@ -90,7 +98,7 @@
             fromBuilder(field) {
                 return {
                     schema: {
-                        type: "string",
+                        type: "string"
                     },
                     options: {
                         type: "url",
