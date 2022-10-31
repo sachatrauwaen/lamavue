@@ -19,11 +19,11 @@
     "core-js": "^3.6.4",
     "vee-validate": "^3.2.5",
     "vue": "^2.6.11",
-    "vue-bootstrap-typeahead": "^0.2.6",
     "vue-cropperjs": "^4.0.1",
     "vue-ctk-date-time-picker": "^2.4.0",
     "vue-i18n": "^8.16.0",
-    "vue-select": "^3.10.0"
+    "vue-select": "^3.10.0",
+    "vue-typeahead-bootstrap": "^2.12.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",

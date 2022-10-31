@@ -70,7 +70,7 @@ export default {
         options: { fields: {} },
       },
       connector: Lama.getConnectorClass("default"),
-      demoModel: {},
+      demoModel: {url:"/page1"},
       demo: {
         schema: {
           title: "What do you think of Alpaca?",
@@ -94,7 +94,10 @@ export default {
             adr: {
               type: "object",
               title: "Adress",
-            },
+              },
+              url: {
+                  title: "Url",
+              },
             obj: {
               title: "What do you think of Alpaca?",
               type: "object",
@@ -162,7 +165,11 @@ export default {
             },
             adr: {
               type: "address",
-            },
+                },
+                url: {
+                    type: "url"
+                    
+                },
           },
         },
         view: "bootstrap4-create",

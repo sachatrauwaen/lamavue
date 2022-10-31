@@ -1,19 +1,21 @@
 <template>
     <control v-bind="props" v-slot="flags">
-        <vue-bootstrap-typeahead v-model="model" :data="items" :serializer="s => s.url" 
+        <vue-typeahead-bootstrap v-model="model" :data="items" :serializer="s => s.url" 
                                  :class="{ 'is-invalid': flags.invalid && flags.touched }" >
             <template slot="suggestion" slot-scope="{ data }">
                 <span>{{data.text}}</span>&nbsp;
                 <small>({{ data.url }})</small>
             </template>
-        </vue-bootstrap-typeahead>
+        </vue-typeahead-bootstrap>
     </control>
 </template>
 
 <script>
     import ControlField from "./ControlField.vue";
     import Control from "./Control.vue";
-    import VueBootstrapTypeahead from 'vue-bootstrap-typeahead'
+    //import VueBootstrapTypeahead from 'vue-bootstrap-typeahead'
+
+    import VueTypeaheadBootstrap from 'vue-typeahead-bootstrap';
 
     let UrlField = {
         name: "UrlField",
@@ -75,7 +77,7 @@
         created() {
             this.fetchOptions();
         },
-        components: { Control, VueBootstrapTypeahead },
+        components: { Control, VueTypeaheadBootstrap },
         builder: {
             props() {
                 return {
