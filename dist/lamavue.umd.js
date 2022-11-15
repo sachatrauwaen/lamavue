@@ -50286,12 +50286,12 @@ var ImageField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_ImageField = (ImageField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowserField.vue?vue&type=template&id=441e744d&
-var ImageBrowserFieldvue_type_template_id_441e744d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value.rawUrl || _vm.value.url,"ratio":_vm.ratio,"cropperData":_vm.value.crop},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('image-browser',_vm._b({model:{value:(_vm.imageFile),callback:function ($$v) {_vm.imageFile=$$v},expression:"imageFile"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',{staticClass:"btn-group",attrs:{"role":"group","aria-label":"Basic example"}},[(_vm.imageSrc)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.remove($event)}}},[_vm._v(" Delete ")]):_vm._e(),(_vm.imageSrc && _vm.options.showCropper)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_vm._v("Edit")]):_vm._e()]),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])],1)],2)}
-var ImageBrowserFieldvue_type_template_id_441e744d_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowserField.vue?vue&type=template&id=80abd7a6&
+var ImageBrowserFieldvue_type_template_id_80abd7a6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.showImageEditor)?[_c('image-editor',{attrs:{"imageUrl":_vm.value.rawUrl || _vm.value.url,"ratio":_vm.ratio,"cropperData":_vm.value.crop},on:{"cancel":_vm.cancelImageEditor,"save":_vm.saveImageEditor}})]:_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.showImageEditor),expression:"!showImageEditor"}]},[_c('image-browser',_vm._b({model:{value:(_vm.imageFile),callback:function ($$v) {_vm.imageFile=$$v},expression:"imageFile"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',{staticClass:"btn-group",attrs:{"role":"group","aria-label":"Basic example"}},[(_vm.imageSrc)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.remove($event)}}},[_vm._v(" Delete ")]):_vm._e(),(_vm.imageSrc && _vm.options.showCropper)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_vm._v("Edit")]):_vm._e()]),_c('div',[(_vm.imageSrc)?_c('a',{attrs:{"href":"#","title":"Edit Image"},on:{"click":function($event){$event.preventDefault();return _vm.edit($event)}}},[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})]):_vm._e()])],1)],2)}
+var ImageBrowserFieldvue_type_template_id_80abd7a6_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageBrowserField.vue?vue&type=template&id=441e744d&
+// CONCATENATED MODULE: ./src/components/fields/ImageBrowserField.vue?vue&type=template&id=80abd7a6&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageBrowser.vue?vue&type=template&id=03fba340&scoped=true&
 var ImageBrowservue_type_template_id_03fba340_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
@@ -50615,7 +50615,7 @@ var ImagexField = {
     fileBrowserProps: function fileBrowserProps() {
       return {
         connector: this.connector,
-        baseForlder: this.options.uploadfolder,
+        baseFolder: this.options.uploadfolder,
         showFolderSelector: false,
         showFileSelector: true,
         showUpload: this.options.showUpload,
@@ -50870,8 +50870,8 @@ var ImagexField = {
 
 var ImageBrowserField_component = normalizeComponent(
   fields_ImageBrowserFieldvue_type_script_lang_js_,
-  ImageBrowserFieldvue_type_template_id_441e744d_render,
-  ImageBrowserFieldvue_type_template_id_441e744d_staticRenderFns,
+  ImageBrowserFieldvue_type_template_id_80abd7a6_render,
+  ImageBrowserFieldvue_type_template_id_80abd7a6_staticRenderFns,
   false,
   null,
   null,

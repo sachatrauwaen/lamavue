@@ -55,7 +55,7 @@
             fileBrowserProps() {
                 return {
                     connector: this.connector,
-                    baseForlder: this.options.uploadfolder,
+                    baseFolder: this.options.uploadfolder,
                     showFolderSelector: false,
                     showFileSelector: true,
                     showUpload: this.options.showUpload,
