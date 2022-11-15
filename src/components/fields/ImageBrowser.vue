@@ -66,7 +66,7 @@ export default {
   props: {
     value: {},
     connector: {},
-    baseForlder: {},
+    baseFolder: {},
     accept: {},
     width: {
       type: Number,
@@ -213,7 +213,10 @@ export default {
                   alert("Sorry, FileReader API not supported");
                 }
                 */
-    },
+      },
+      updateImageVersion() {
+          this.imageVersion = Date.now();
+      },
   },
   watch: {
     value(val) {
