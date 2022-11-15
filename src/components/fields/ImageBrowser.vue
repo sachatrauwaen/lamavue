@@ -153,7 +153,7 @@ export default {
       let config = {
         query: {
           type: "images",
-          folder: this.folder,
+          folder: this.baseFolder,
           secure: this.secure,
         },
       };
