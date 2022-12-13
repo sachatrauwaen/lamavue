@@ -56,6 +56,8 @@ import Builder from "./components/Builder.vue";
 import LamaForm from "./components/Form.vue";
 import Lama from "./lama";
 
+Lama.registerFieldComponent("imageidbrowser", Lama.components.ImageIdBrowserField);
+
 export default {
   name: "App",
   data() {

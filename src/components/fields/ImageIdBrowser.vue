@@ -230,7 +230,7 @@ export default {
         this.folder = this.value.folderId;
         this.fetchFiles();
       }
-      this.$emit("change", val);
+      this.$emit("change", this.selected);
     },
   },
   created() {
