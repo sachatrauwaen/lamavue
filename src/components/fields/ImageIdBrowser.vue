@@ -125,7 +125,7 @@ export default {
       },
       set(val) {
           this.model = val ? val.id : null;
-          this.$emit("change", val);
+          //this.$emit("change", val);
       },
     },
   },
@@ -196,8 +196,9 @@ export default {
       this.connector.upload(
         config,
         (data) => {
-          this.files.push(data);
-            this.selected = data;
+          let f = data[0];
+          this.files.push(f);
+          this.selected = f;
           this.updateImageVersion();
         },
         () => {}
@@ -229,6 +230,7 @@ export default {
         this.folder = this.value.folderId;
         this.fetchFiles();
       }
+      this.$emit("change", val);
     },
   },
   created() {

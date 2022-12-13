@@ -21,7 +21,7 @@
         -->
         <div>
             <!--<a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">-->
-                <img :src="imageSrc" alt="Image" style="margin: 10px 0;max-height:200px;" class="img-fluid" />
+                <img v-if="imageSrc" :src="imageSrc" alt="Image" style="margin: 10px 0;max-height:200px;" class="img-fluid" />
             <!--</a>-->
         </div>
         <!--</div>-->
