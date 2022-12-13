@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-import { required, email, numeric } from 'vee-validate/dist/rules';
+import { required, email, numeric, min, max, regex } from 'vee-validate/dist/rules';
 //import VueI18n from 'vue-i18n'
 
 import BaseView from "./BaseView";
@@ -17,6 +17,9 @@ Vue.component('ValidationObserver', ValidationObserver);
 extend('required', required);
 extend('email', email);
 extend('numeric', numeric);
+extend('min', min);
+extend('max', max);
+extend('regex', regex);
 
 let Lama = {
     /**
