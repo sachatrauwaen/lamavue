@@ -62376,15 +62376,15 @@ var ImageIdBrowserFieldvue_type_template_id_37f657e8_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=37f657e8&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=39837cbb&scoped=true&
-var ImageIdBrowservue_type_template_id_39837cbb_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=1531c473&scoped=true&
+var ImageIdBrowservue_type_template_id_1531c473_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
 var filename = ref.filename;
 var thumbUrl = ref.thumbUrl;
 return [_c('div',{staticStyle:{"height":"20px","width":"20px","margin-right":"5px","display":"inline-block"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":thumbUrl,"alt":filename}})]),_c('span',[_vm._v(_vm._s(filename))])]}}],null,false,2783742681),model:{value:(_vm.selected),callback:function ($$v) {_vm.selected=$$v},expression:"selected"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e()],1)}
-var ImageIdBrowservue_type_template_id_39837cbb_scoped_true_staticRenderFns = []
+var ImageIdBrowservue_type_template_id_1531c473_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=39837cbb&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=1531c473&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=script&lang=js&
 
@@ -62558,6 +62558,10 @@ var ImageIdBrowservue_type_template_id_39837cbb_scoped_true_staticRenderFns = []
       };
       this.connector.loadDataSource(config, function (data) {
         _this3.files = data;
+
+        if (_this3.selected) {
+          _this3.$emit("change", _this3.selected);
+        }
       }, function () {});
     },
     setImage: function setImage(e) {
@@ -62643,11 +62647,11 @@ var ImageIdBrowservue_type_template_id_39837cbb_scoped_true_staticRenderFns = []
 
 var ImageIdBrowser_component = normalizeComponent(
   fields_ImageIdBrowservue_type_script_lang_js_,
-  ImageIdBrowservue_type_template_id_39837cbb_scoped_true_render,
-  ImageIdBrowservue_type_template_id_39837cbb_scoped_true_staticRenderFns,
+  ImageIdBrowservue_type_template_id_1531c473_scoped_true_render,
+  ImageIdBrowservue_type_template_id_1531c473_scoped_true_staticRenderFns,
   false,
   null,
-  "39837cbb",
+  "1531c473",
   null
   
 )

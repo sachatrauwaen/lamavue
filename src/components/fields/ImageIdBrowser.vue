@@ -165,7 +165,10 @@ export default {
       this.connector.loadDataSource(
         config,
         (data) => {
-          this.files = data;
+            this.files = data;
+            if (this.selected) {
+                this.$emit("change", this.selected);
+            }
         },
         () => {}
       );
