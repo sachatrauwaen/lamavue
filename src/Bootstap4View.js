@@ -8,6 +8,7 @@ import FileField from './components/fields/FileField.vue'
 import FileBrowserField from './components/fields/FileBrowserField.vue'
 import ImageField from './components/fields/ImageField.vue'
 import ImageBrowserField from './components/fields/ImageBrowserField.vue'
+//import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
 import NumberField from './components/fields/NumberField.vue'
 import ObjectField from './components/fields/ObjectField.vue'
 import RadioField from './components/fields/RadioField.vue'
@@ -23,6 +24,7 @@ import LinkField from './components/fields/LinkField.vue'
 import UrlField from './components/fields/UrlField.vue'
 import GalleryField from './components/fields/GalleryField.vue'
 import DocumentsField from './components/fields/DocumentsField.vue'
+
 import Lama from "./lama";
 
 export default {
@@ -47,6 +49,7 @@ export default {
         Lama.registerFieldComponent("icon", IconField);
         Lama.registerFieldComponent("image", ImageField);
         Lama.registerFieldComponent("imagebrowser", ImageBrowserField);
+        //Lama.registerFieldComponent("imageidbrowser", ImageIdBrowserField);
         Lama.registerFieldComponent("link", LinkField);
         Lama.registerFieldComponent("url", UrlField);
         Lama.registerFieldComponent("number", NumberField);

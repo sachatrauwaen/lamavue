@@ -48460,12 +48460,12 @@ var CheckboxFieldvue_type_template_id_273e836a_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=273e836a&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=72a817b7&scoped=true&
-var Controlvue_type_template_id_72a817b7_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',{attrs:{"for":""}},[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(flags.errors)?_c('div',{staticClass:"invalid-feedback"},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
-var Controlvue_type_template_id_72a817b7_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=e43be58c&scoped=true&
+var Controlvue_type_template_id_e43be58c_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(flags.errors)?_c('div',{staticClass:"invalid-feedback"},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
+var Controlvue_type_template_id_e43be58c_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=72a817b7&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=e43be58c&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=script&lang=js&
 //
@@ -48522,11 +48522,11 @@ var Controlvue_type_template_id_72a817b7_scoped_true_staticRenderFns = []
 
 var Control_component = normalizeComponent(
   fields_Controlvue_type_script_lang_js_,
-  Controlvue_type_template_id_72a817b7_scoped_true_render,
-  Controlvue_type_template_id_72a817b7_scoped_true_staticRenderFns,
+  Controlvue_type_template_id_e43be58c_scoped_true_render,
+  Controlvue_type_template_id_e43be58c_scoped_true_staticRenderFns,
   false,
   null,
-  "72a817b7",
+  "e43be58c",
   null
   
 )
@@ -62184,6 +62184,7 @@ var DocumentsField_component = normalizeComponent(
 
 
 
+ //import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
 
 
 
@@ -62220,7 +62221,8 @@ var DocumentsField_component = normalizeComponent(
     lama.registerFieldComponent("guid", fields_GuidField);
     lama.registerFieldComponent("icon", IconField);
     lama.registerFieldComponent("image", fields_ImageField);
-    lama.registerFieldComponent("imagebrowser", ImageBrowserField);
+    lama.registerFieldComponent("imagebrowser", ImageBrowserField); //Lama.registerFieldComponent("imageidbrowser", ImageIdBrowserField);
+
     lama.registerFieldComponent("link", fields_LinkField);
     lama.registerFieldComponent("url", fields_UrlField);
     lama.registerFieldComponent("number", fields_NumberField);
@@ -62318,7 +62320,7 @@ var DocumentsField_component = normalizeComponent(
           folderId: "1"
         }];
         successCallback(images.filter(function (f) {
-          if (config.query.folder) return f.folderId == config.query.folder;else return false;
+          if (config.query.folder) return f.folderId == config.query.folder;else return true;
         }).map(function (f) {
           return {
             id: f.id,
@@ -62352,12 +62354,563 @@ var DocumentsField_component = normalizeComponent(
   // eslint-disable-next-line no-unused-vars
   upload: function upload(config, successCallback, errorCallback) {
     successCallback({
-      id: "2",
+      id: "1",
       url: "https://agontuk.github.io/assets/images/berserk.jpg?v=1   ",
       filename: "berserk.jpg"
     });
   }
 });
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=60d3fcf0&
+var ImageIdBrowserFieldvue_type_template_id_60d3fcf0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}})])],1)}
+var ImageIdBrowserFieldvue_type_template_id_60d3fcf0_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=60d3fcf0&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=185ef1cc&scoped=true&
+var ImageIdBrowservue_type_template_id_185ef1cc_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
+var filename = ref.filename;
+var thumbUrl = ref.thumbUrl;
+return [_c('div',{staticStyle:{"height":"20px","width":"20px","margin-right":"5px","display":"inline-block"}},[_c('img',{staticClass:"img-fluid",attrs:{"src":thumbUrl,"alt":filename}})]),_c('span',[_vm._v(_vm._s(filename))])]}}],null,false,2783742681),model:{value:(_vm.selected),callback:function ($$v) {_vm.selected=$$v},expression:"selected"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e()],1)}
+var ImageIdBrowservue_type_template_id_185ef1cc_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=185ef1cc&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=script&lang=js&
+
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ var ImageIdBrowservue_type_script_lang_js_ = ({
+  name: "ImageIdBrowser",
+  props: {
+    value: {},
+    connector: {},
+    baseFolder: {},
+    accept: {},
+    width: {
+      type: Number,
+      default: 0
+    },
+    height: {
+      type: Number,
+      default: 0
+    },
+    fileMaxSize: {
+      type: Number,
+      default: 0
+    },
+    showFolderSelector: {
+      type: Boolean,
+      default: true
+    },
+    showFileSelector: {
+      type: Boolean,
+      default: true
+    },
+    showUpload: {
+      type: Boolean,
+      default: true
+    },
+    showOverwrite: {
+      type: Boolean,
+      default: false
+    },
+    overwrite: {
+      type: Boolean,
+      default: false
+    },
+    secure: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data: function data() {
+    return {
+      folders: [],
+      folder: null,
+      files: [],
+      fileId: -1,
+      doOverwrite: false
+    };
+  },
+  computed: {
+    model: {
+      get: function get() {
+        return this.value;
+      },
+      set: function set(val) {
+        this.$emit("input", val);
+      }
+    },
+    selected: {
+      get: function get() {
+        var _this = this;
+
+        var filteredFiles = this.files.filter(function (f) {
+          return f.id == _this.value;
+        });
+        return filteredFiles.length ? filteredFiles[0] : null;
+      },
+      set: function set(val) {
+        this.model = val ? val.id : null;
+        this.$emit("change", val);
+      }
+    }
+  },
+  methods: {
+    folderChange: function folderChange() {
+      this.fetchFiles();
+    },
+    fetchFolders: function fetchFolders() {
+      var _this2 = this;
+
+      //let self=this;
+      var config = {
+        query: {
+          type: "folders",
+          folder: this.baseFolder,
+          secure: this.secure
+        }
+      };
+      this.connector.loadDataSource(config, function (data) {
+        _this2.folders = data;
+
+        if (data.length) {
+          _this2.folder = data[0].id;
+
+          _this2.fetchFiles();
+        }
+      }, function () {});
+    },
+    fetchFiles: function fetchFiles() {
+      var _this3 = this;
+
+      var config = {
+        query: {
+          type: "images",
+          folder: this.baseFolder,
+          secure: this.secure
+        }
+      };
+      this.connector.loadDataSource(config, function (data) {
+        _this3.files = data;
+      }, function () {});
+    },
+    setImage: function setImage(e) {
+      var _this4 = this;
+
+      var file = e.target.files[0];
+
+      if (this.fileMaxSize && file.size > this.fileMaxSize) {
+        alert("Please upload a smaller file, max size is " + this.fileMaxSize + " bytes");
+        return;
+      }
+
+      if (file.type.indexOf("image/") === -1) {
+        alert("Please select an image file");
+        return;
+      }
+
+      var config = {
+        file: file,
+        name: file.name,
+        folder: this.baseFolder,
+        overwrite: this.doOverwrite,
+        secure: this.secure,
+        width: this.width,
+        height: this.height
+      };
+      this.connector.upload(config, function (data) {
+        _this4.files.push(data);
+
+        _this4.selected = data;
+
+        _this4.updateImageVersion();
+      }, function () {});
+      /*
+                if (typeof FileReader === "function") {
+                  const reader = new FileReader();
+                  reader.onload = event => {
+                    this.model = {
+                      url: event.target.result,
+                    };
+                    // rebuild cropperjs with the updated source
+                    //this.$refs.cropper.replace(event.target.result);
+                  };
+                  reader.readAsDataURL(file);
+                } else {
+                  alert("Sorry, FileReader API not supported");
+                }
+                */
+    },
+    updateImageVersion: function updateImageVersion() {
+      this.imageVersion = Date.now();
+    }
+  },
+  watch: {
+    value: function value(val) {
+      if (val && val.folderId) {
+        this.folder = this.value.folderId;
+        this.fetchFiles();
+      }
+    }
+  },
+  created: function created() {
+    this.fetchFolders();
+    this.doOverwrite = this.overwrite;
+  },
+  components: {
+    VueSelect: vue_select_default.a
+  }
+});
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowser.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_ImageIdBrowservue_type_script_lang_js_ = (ImageIdBrowservue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowser.vue
+
+
+
+
+
+/* normalize component */
+
+var ImageIdBrowser_component = normalizeComponent(
+  fields_ImageIdBrowservue_type_script_lang_js_,
+  ImageIdBrowservue_type_template_id_185ef1cc_scoped_true_render,
+  ImageIdBrowservue_type_template_id_185ef1cc_scoped_true_staticRenderFns,
+  false,
+  null,
+  "185ef1cc",
+  null
+  
+)
+
+/* harmony default export */ var ImageIdBrowser = (ImageIdBrowser_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//import Vue from "vue";
+
+
+
+
+
+
+var ImageIdBrowserField = {
+  name: "ImageIdBrowserField",
+  extends: fields_ControlField,
+  props: {
+    value: {}
+  },
+  data: function data() {
+    return {
+      showImageEditor: false,
+      imageVersion: Date.now(),
+      imageSrc: ''
+    };
+  },
+  computed: {
+    fileBrowserProps: function fileBrowserProps() {
+      return {
+        connector: this.connector,
+        baseFolder: this.options.uploadfolder,
+        showFolderSelector: false,
+        showFileSelector: true,
+        showUpload: this.options.showUpload,
+        showOverwrite: false,
+        overwrite: true,
+        width: this.options.width,
+        height: this.options.height,
+        accept: this.options.accept,
+        fileMaxSize: this.options.fileMaxSize
+      };
+    },
+    //imageSrc() {
+    //    if (this.value) return this.value.url + (this.value.url.indexOf('data:') == 0 ? '' : "?v=" + this.imageVersion);
+    //    else return "";
+    //},
+    ratio: function ratio() {
+      if (this.options.width && this.options.height) return this.options.width / this.options.height;else return 0;
+    },
+    isEdited: function isEdited() {
+      return this.model.url != this.model.rawUrl;
+    }
+  },
+  methods: {
+    imageChange: function imageChange(image) {
+      this.imageSrc = image.url;
+    },
+    showFileChooser: function showFileChooser() {
+      this.$refs.input.click();
+    },
+    edit: function edit() {
+      if (this.options.showCropper) {
+        this.showImageEditor = true;
+      }
+    },
+    cancelImageEditor: function cancelImageEditor() {
+      this.showImageEditor = false;
+
+      if (!this.isEdited) {
+        this.model = null;
+      }
+    },
+    updateImageVersion: function updateImageVersion() {
+      this.imageVersion = Date.now();
+    },
+    saveImageEditor: function saveImageEditor(cropCanvas, cropData) {
+      var _this = this;
+
+      this.showImageEditor = false; // this.model = {
+      //   id: this.model.id,
+      //   url: this.model.url,
+      //   filename: this.model.filename,
+      //   width: this.model.width,
+      //   height: this.model.height,
+      //   cropUrl: cropCanvas.toDataURL('image/jpeg'),
+      //   crop: cropData
+      // };
+
+      var canvas = document.createElement('canvas');
+      var MAX_WIDTH = this.options.width;
+      var MAX_HEIGHT = this.options.height;
+      var width = cropCanvas.width;
+      var height = cropCanvas.height;
+
+      if (width > height) {
+        if (width > MAX_WIDTH) {
+          height *= MAX_WIDTH / width;
+          width = MAX_WIDTH;
+        }
+      } else {
+        if (height > MAX_HEIGHT) {
+          width *= MAX_HEIGHT / height;
+          height = MAX_HEIGHT;
+        }
+      }
+
+      canvas.width = width;
+      canvas.height = height;
+      var ctx = canvas.getContext("2d");
+      ctx.drawImage(cropCanvas, 0, 0, width, height);
+      canvas.toBlob(function (blob) {
+        var config = {
+          file: blob,
+          name: _this.model.filename,
+          folder: _this.options.cropfolder,
+          hidden: true
+        };
+
+        _this.connector.upload(config, function (data) {
+          _this.model = {
+            id: _this.model.id,
+            filename: _this.model.filename,
+            width: _this.model.width,
+            height: _this.model.height,
+            rawUrl: _this.model.rawUrl,
+            url: data.url,
+            //url: cropCanvas.toDataURL('image/jpeg'),
+            crop: cropData,
+            cropUrl: data.url
+          };
+
+          _this.updateImageVersion();
+        }, function () {});
+      });
+    },
+    remove: function remove() {
+      this.model = null;
+    }
+  },
+  components: {
+    Control: Control,
+    VueCropper: VueCropper_default.a,
+    ImageBrowser: ImageIdBrowser,
+    ImageEditor: ImageEditor
+  },
+  builder: {
+    props: function props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            showUpload: {
+              "type": "boolean"
+            },
+            showCropper: {
+              "type": "boolean"
+            },
+            width: {
+              "title": "Width",
+              "type": "number"
+            },
+            height: {
+              "title": "Height",
+              "type": "number"
+            },
+            accept: {
+              "title": "Accept",
+              "type": "string",
+              "default": "image/*"
+            },
+            fileMaxSize: {
+              "title": "max size (bytes)",
+              "type": "number",
+              "default": 0
+            }
+          }
+        },
+        options: {
+          fields: {
+            showUpload: {
+              rightLabel: "Show upload"
+            },
+            showCropper: {
+              rightLabel: "Show cropper"
+            }
+          }
+        }
+      };
+    },
+    fromBuilder: function fromBuilder(field) {
+      return {
+        schema: {
+          type: "string"
+        },
+        options: {
+          type: "imageidbrowser",
+          uploadfolder: field.uploadfolder,
+          cropfolder: field.cropfolder,
+          showUpload: field.showUpload,
+          showCropper: field.showCropper,
+          width: field.width,
+          height: field.height,
+          accept: field.accept,
+          fileMaxSize: field.fileMaxSize
+        }
+      };
+    },
+    toBuilder: function toBuilder(def) {
+      return {
+        fieldType: "imageidbrowser",
+        uploadfolder: def.options.uploadfolder,
+        cropfolder: def.options.cropfolder,
+        showUpload: def.options.showUpload,
+        showCropper: def.options.showCropper,
+        width: def.options.width,
+        height: def.options.height,
+        accept: def.options.accept,
+        fileMaxSize: def.options.fileMaxSize
+      };
+    }
+  }
+};
+/* harmony default export */ var ImageIdBrowserFieldvue_type_script_lang_js_ = (ImageIdBrowserField);
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_ImageIdBrowserFieldvue_type_script_lang_js_ = (ImageIdBrowserFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue
+
+
+
+
+
+/* normalize component */
+
+var ImageIdBrowserField_component = normalizeComponent(
+  fields_ImageIdBrowserFieldvue_type_script_lang_js_,
+  ImageIdBrowserFieldvue_type_template_id_60d3fcf0_render,
+  ImageIdBrowserFieldvue_type_template_id_60d3fcf0_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var fields_ImageIdBrowserField = (ImageIdBrowserField_component.exports);
 // CONCATENATED MODULE: ./src/lama.js
 
 
@@ -62370,6 +62923,7 @@ var DocumentsField_component = normalizeComponent(
 
 
  //import VueI18n from 'vue-i18n'
+
 
 
 
@@ -63598,6 +64152,9 @@ var lama_Lama = {
         app.$refs.builder.validate(successCallback, errorCallBack);
       }
     };
+  },
+  components: {
+    ImageIdBrowserField: fields_ImageIdBrowserField
   }
 };
 /* harmony default export */ var lama = (lama_Lama);

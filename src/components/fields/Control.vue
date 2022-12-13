@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label v-if="showLabel && label" for>{{label}}</label>
+    <label v-if="showLabel && label" >{{label}}</label>
     <span v-if="badge" class="badge badge-dark" style="float:right">{{badge}}</span>
     <ValidationProvider
       :name="options.label"

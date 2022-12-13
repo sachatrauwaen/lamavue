@@ -44,7 +44,7 @@ export default {
                     if (config.query.folder)
                         return f.folderId == config.query.folder;
                     else
-                        return false;
+                        return true;
                 }).map(f => {
                     return {
                         id: f.id,
@@ -84,7 +84,7 @@ export default {
     // eslint-disable-next-line no-unused-vars
     upload(config, successCallback, errorCallback) {
         successCallback({
-            id: "2",
+            id: "1",
             url: "https://agontuk.github.io/assets/images/berserk.jpg?v=1   ",
             
             filename: "berserk.jpg"

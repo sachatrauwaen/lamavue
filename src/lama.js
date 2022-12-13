@@ -9,6 +9,8 @@ import DefaultConnector from "./DefaultConnector";
 import LamaForm from "./components/Form.vue";
 import LamaBuilder from "./components/Builder.vue";
 
+import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
+
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
 
@@ -1191,17 +1193,17 @@ let Lama = {
             mounted() {
                 if (config.init)
                     this.$refs.form.init();
-            }, 
+            },
 
         }).$mount(elementOrSelector);
         return {
-            getValue(){
+            getValue() {
                 return app.model;
             },
-            setValue(val){
+            setValue(val) {
                 return app.model = val;
             },
-            validate(successCallback, errorCallBack){
+            validate(successCallback, errorCallBack) {
                 app.$refs.form.validate(successCallback, errorCallBack);
             }
 
@@ -1216,7 +1218,7 @@ let Lama = {
                 var self = this;
                 return h(LamaBuilder, {
                     ref: 'builder',
-                    props: {                       
+                    props: {
                         connector: config.connector,
                         value: self.model
                     },
@@ -1231,13 +1233,16 @@ let Lama = {
             }
         }).$mount(elementOrSelector);
         return {
-            getValue(){
+            getValue() {
                 return app.model;
             },
-            validate(successCallback, errorCallBack){
+            validate(successCallback, errorCallBack) {
                 app.$refs.builder.validate(successCallback, errorCallBack);
             }
         };
+    },
+    components: {
+        ImageIdBrowserField: ImageIdBrowserField
     }
 }
 export default Lama;
