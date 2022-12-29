@@ -199,7 +199,7 @@ export default {
       this.connector.upload(
         config,
         (data) => {
-          let f = data[0];
+          let f = data;
           this.files.push(f);
           this.selected = f;
           this.updateImageVersion();
