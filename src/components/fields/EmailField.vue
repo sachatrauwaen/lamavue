@@ -1,9 +1,8 @@
 <template>
   <control v-bind="props" v-slot="flags">
     <input
-      type="text"
+      type="email"
       class="form-control"
-      :pattern="pattern"
       :aria-describedby="options.label"
       v-model="model"
       :class="{ 'is-invalid': flags.invalid && flags.touched }"
@@ -16,8 +15,8 @@
 import ControlField from "./ControlField.vue";
 import Control from "./Control.vue";
 
-let TextField = {
-  name: "TextField",
+let EmailField = {
+  name: "EmailField",
   extends: ControlField,
   props: {
     value: {
@@ -25,11 +24,7 @@ let TextField = {
       default: ''
     },
   },
-  computed: {
-      pattern() {
-          return this.options.pattern;
-      }
-  },
+  computed: {},
   methods: {},
   components: { Control },
   builder: {
@@ -41,11 +36,7 @@ let TextField = {
             placeholder: {
               title: "Placeholder",
               type: "string",
-              },
-              pattern: {
-                  title: "Pattern (reg.exp.)",
-                  type: "string",
-              },
+            },
           },
         },
         options: {
@@ -61,23 +52,21 @@ let TextField = {
           type: "string",
         },
         options: {
-          type: "text",
+          type: "email",
           placeholder: field.placeholder,
-          pattern: field.pattern,
         },
       };
     },
     toBuilder(def) {
       return {
-        fieldType: "text",
+          fieldType: "email",
         placeholder: def.options.placeholder,
-        pattern: def.options.pattern,
       };
     },
   },
 };
 
-export default TextField;
+export default EmailField;
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>

@@ -14,6 +14,8 @@ import ObjectField from './components/fields/ObjectField.vue'
 import RadioField from './components/fields/RadioField.vue'
 import SelectField from './components/fields/SelectField.vue'
 import TextField from './components/fields/TextField.vue'
+import EmailField from './components/fields/EmailField.vue'
+import PasswordField from './components/fields/PasswordField.vue'
 import ColorField from './components/fields/ColorField.vue'
 import TextareaField from './components/fields/TextareaField.vue'
 import IconField from './components/fields/IconField.vue'
@@ -62,6 +64,8 @@ export default {
         Lama.registerFieldComponent("select", SelectField);
         Lama.registerFieldComponent("textarea", TextareaField);
         Lama.registerFieldComponent("text", TextField);
+        Lama.registerFieldComponent("email", EmailField);
+        Lama.registerFieldComponent("password", PasswordField);
         Lama.registerDefaultSchemaFieldMapping("string", "text");
 
         Lama.registerView({

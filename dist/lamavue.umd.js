@@ -48804,14 +48804,15 @@ var CKEditorFieldvue_type_template_id_68fb91da_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/CKEditorField.vue?vue&type=template&id=68fb91da&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/TextField.vue?vue&type=template&id=331a2642&scoped=true&
-var TextFieldvue_type_template_id_331a2642_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
-var TextFieldvue_type_template_id_331a2642_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/TextField.vue?vue&type=template&id=39555b28&scoped=true&
+var TextFieldvue_type_template_id_39555b28_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","pattern":_vm.pattern,"aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var TextFieldvue_type_template_id_39555b28_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/TextField.vue?vue&type=template&id=331a2642&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/TextField.vue?vue&type=template&id=39555b28&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/TextField.vue?vue&type=script&lang=js&
+//
 //
 //
 //
@@ -48836,7 +48837,11 @@ var TextField = {
       default: ''
     }
   },
-  computed: {},
+  computed: {
+    pattern: function pattern() {
+      return this.options.pattern;
+    }
+  },
   methods: {},
   components: {
     Control: Control
@@ -48849,6 +48854,10 @@ var TextField = {
           properties: {
             placeholder: {
               title: "Placeholder",
+              type: "string"
+            },
+            pattern: {
+              title: "Pattern (reg.exp.)",
               type: "string"
             }
           }
@@ -48865,14 +48874,16 @@ var TextField = {
         },
         options: {
           type: "text",
-          placeholder: field.placeholder
+          placeholder: field.placeholder,
+          pattern: field.pattern
         }
       };
     },
     toBuilder: function toBuilder(def) {
       return {
         fieldType: "text",
-        placeholder: def.options.placeholder
+        placeholder: def.options.placeholder,
+        pattern: def.options.pattern
       };
     }
   }
@@ -48890,11 +48901,11 @@ var TextField = {
 
 var TextField_component = normalizeComponent(
   fields_TextFieldvue_type_script_lang_js_,
-  TextFieldvue_type_template_id_331a2642_scoped_true_render,
-  TextFieldvue_type_template_id_331a2642_scoped_true_staticRenderFns,
+  TextFieldvue_type_template_id_39555b28_scoped_true_render,
+  TextFieldvue_type_template_id_39555b28_scoped_true_staticRenderFns,
   false,
   null,
-  "331a2642",
+  "39555b28",
   null
   
 )
@@ -51186,6 +51197,198 @@ var SelectField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_SelectField = (SelectField_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/EmailField.vue?vue&type=template&id=fbb6c186&scoped=true&
+var EmailFieldvue_type_template_id_fbb6c186_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"email","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var EmailFieldvue_type_template_id_fbb6c186_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/EmailField.vue?vue&type=template&id=fbb6c186&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/EmailField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var EmailField = {
+  name: "EmailField",
+  extends: fields_ControlField,
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {},
+  methods: {},
+  components: {
+    Control: Control
+  },
+  builder: {
+    props: function props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            placeholder: {
+              title: "Placeholder",
+              type: "string"
+            }
+          }
+        },
+        options: {
+          fields: {}
+        }
+      };
+    },
+    fromBuilder: function fromBuilder(field) {
+      return {
+        schema: {
+          type: "string"
+        },
+        options: {
+          type: "email",
+          placeholder: field.placeholder
+        }
+      };
+    },
+    toBuilder: function toBuilder(def) {
+      return {
+        fieldType: "email",
+        placeholder: def.options.placeholder
+      };
+    }
+  }
+};
+/* harmony default export */ var EmailFieldvue_type_script_lang_js_ = (EmailField);
+// CONCATENATED MODULE: ./src/components/fields/EmailField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_EmailFieldvue_type_script_lang_js_ = (EmailFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/EmailField.vue
+
+
+
+
+
+/* normalize component */
+
+var EmailField_component = normalizeComponent(
+  fields_EmailFieldvue_type_script_lang_js_,
+  EmailFieldvue_type_template_id_fbb6c186_scoped_true_render,
+  EmailFieldvue_type_template_id_fbb6c186_scoped_true_staticRenderFns,
+  false,
+  null,
+  "fbb6c186",
+  null
+  
+)
+
+/* harmony default export */ var fields_EmailField = (EmailField_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/PasswordField.vue?vue&type=template&id=12cf92d4&scoped=true&
+var PasswordFieldvue_type_template_id_12cf92d4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"password","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var PasswordFieldvue_type_template_id_12cf92d4_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/PasswordField.vue?vue&type=template&id=12cf92d4&scoped=true&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/PasswordField.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var PasswordField = {
+  name: "PasswordField",
+  extends: fields_ControlField,
+  props: {
+    value: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {},
+  methods: {},
+  components: {
+    Control: Control
+  },
+  builder: {
+    props: function props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            placeholder: {
+              title: "Placeholder",
+              type: "string"
+            }
+          }
+        },
+        options: {
+          fields: {}
+        }
+      };
+    },
+    fromBuilder: function fromBuilder(field) {
+      return {
+        schema: {
+          type: "string"
+        },
+        options: {
+          type: "password",
+          placeholder: field.placeholder
+        }
+      };
+    },
+    toBuilder: function toBuilder(def) {
+      return {
+        fieldType: "password",
+        placeholder: def.options.placeholder
+      };
+    }
+  }
+};
+/* harmony default export */ var PasswordFieldvue_type_script_lang_js_ = (PasswordField);
+// CONCATENATED MODULE: ./src/components/fields/PasswordField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_PasswordFieldvue_type_script_lang_js_ = (PasswordFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/PasswordField.vue
+
+
+
+
+
+/* normalize component */
+
+var PasswordField_component = normalizeComponent(
+  fields_PasswordFieldvue_type_script_lang_js_,
+  PasswordFieldvue_type_template_id_12cf92d4_scoped_true_render,
+  PasswordFieldvue_type_template_id_12cf92d4_scoped_true_staticRenderFns,
+  false,
+  null,
+  "12cf92d4",
+  null
+  
+)
+
+/* harmony default export */ var fields_PasswordField = (PasswordField_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ColorField.vue?vue&type=template&id=35d7b710&scoped=true&
 var ColorFieldvue_type_template_id_35d7b710_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"color","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
 var ColorFieldvue_type_template_id_35d7b710_scoped_true_staticRenderFns = []
@@ -62211,6 +62414,8 @@ var DocumentsField_component = normalizeComponent(
 
 
 
+
+
 /* harmony default export */ var Bootstap4View = ({
   register: function register() {
     //Lama.registerFieldComponent("textarea", () => import('./components/TextareaField.vue') );
@@ -62244,6 +62449,8 @@ var DocumentsField_component = normalizeComponent(
     lama.registerFieldComponent("select", fields_SelectField);
     lama.registerFieldComponent("textarea", fields_TextareaField);
     lama.registerFieldComponent("text", fields_TextField);
+    lama.registerFieldComponent("email", fields_EmailField);
+    lama.registerFieldComponent("password", fields_PasswordField);
     lama.registerDefaultSchemaFieldMapping("string", "text");
     lama.registerView({
       "id": "bootstrap4-edit",
