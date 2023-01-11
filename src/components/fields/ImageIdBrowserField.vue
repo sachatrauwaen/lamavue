@@ -186,7 +186,11 @@
                         properties: {                            
                             showUpload: {
                                 "type": "boolean"
-                            },                            
+                            },
+                            uploadfolder: {
+                                "title": "Upload Folder",
+                                "type": "string"
+                            },
                             showCropper: {
                                 "type": "boolean"
                             },
@@ -236,9 +240,7 @@
                     options: {
                         type: "imageidbrowser",
                         uploadfolder: field.uploadfolder,
-                        cropfolder: field.cropfolder,
                         showUpload: field.showUpload,
-                        showCropper: field.showCropper,
                         width: field.width,
                         height: field.height,
                         accept: field.accept,
@@ -251,9 +253,7 @@
                 return {
                     fieldType: "imageidbrowser",
                     uploadfolder: def.options.uploadfolder,
-                    cropfolder: def.options.cropfolder,
                     showUpload: def.options.showUpload,
-                    showCropper: def.options.showCropper,
                     width: def.options.width,
                     height: def.options.height,
                     accept: def.options.accept,
