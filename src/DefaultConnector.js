@@ -1,5 +1,6 @@
 export default {
     currentCulture: "fr-FR",
+    viewType:"create",
     connect() {
 
     },
@@ -9,15 +10,6 @@ export default {
     getMessage() {
 
     },
-    /**
-         * Loads data source (value/text) pairs from a remote source.
-         * This default implementation allows for config to be a string identifying a URL.
-         *
-         * @param config
-         * @param successCallback
-         * @param errorCallback
-         * @returns {*}
-         */
     loadDataSource: function (config, successCallback, errorCallback) {
         //return this._handleLoadDataSource(config, successCallback, errorCallback);
 

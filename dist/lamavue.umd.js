@@ -62276,21 +62276,12 @@ var DocumentsField_component = normalizeComponent(
 
 /* harmony default export */ var DefaultConnector = ({
   currentCulture: "fr-FR",
+  viewType: "create",
   connect: function connect() {},
   loadAll: function loadAll(resources, onSuccess) {
     onSuccess();
   },
   getMessage: function getMessage() {},
-
-  /**
-       * Loads data source (value/text) pairs from a remote source.
-       * This default implementation allows for config to be a string identifying a URL.
-       *
-       * @param config
-       * @param successCallback
-       * @param errorCallback
-       * @returns {*}
-       */
   loadDataSource: function loadDataSource(config, successCallback, errorCallback) {
     //return this._handleLoadDataSource(config, successCallback, errorCallback);
     console.log("loadDataSource");
@@ -62369,12 +62360,12 @@ var DocumentsField_component = normalizeComponent(
     });
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=37f657e8&
-var ImageIdBrowserFieldvue_type_template_id_37f657e8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)}
-var ImageIdBrowserFieldvue_type_template_id_37f657e8_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=247c13b2&
+var ImageIdBrowserFieldvue_type_template_id_247c13b2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.connector.viewType=='create' && _vm.options.disabledOnCreate)?_c('div',[_vm._v(" Image can be uploaded after item created. ")]):_c('div',[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)])}
+var ImageIdBrowserFieldvue_type_template_id_247c13b2_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=37f657e8&
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=247c13b2&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=0a05c9b2&scoped=true&
 var ImageIdBrowservue_type_template_id_0a05c9b2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
@@ -62688,6 +62679,12 @@ var ImageIdBrowser_component = normalizeComponent(
 //
 //
 //
+//
+//
+//
+//
+//
+//
 //import Vue from "vue";
 
 
@@ -62856,6 +62853,9 @@ var ImageIdBrowserField = {
               "title": "max size (bytes)",
               "type": "number",
               "default": 0
+            },
+            disabledOnCreate: {
+              "type": "boolean"
             }
           }
         },
@@ -62866,6 +62866,9 @@ var ImageIdBrowserField = {
             },
             showCropper: {
               rightLabel: "Show cropper"
+            },
+            disabledOnCreate: {
+              rightLabel: "Disabled on create"
             }
           }
         }
@@ -62885,7 +62888,8 @@ var ImageIdBrowserField = {
           width: field.width,
           height: field.height,
           accept: field.accept,
-          fileMaxSize: field.fileMaxSize
+          fileMaxSize: field.fileMaxSize,
+          disabledOnCreate: field.disabledOnCreate
         }
       };
     },
@@ -62899,7 +62903,8 @@ var ImageIdBrowserField = {
         width: def.options.width,
         height: def.options.height,
         accept: def.options.accept,
-        fileMaxSize: def.options.fileMaxSize
+        fileMaxSize: def.options.fileMaxSize,
+        disabledOnCreate: def.options.disabledOnCreate
       };
     }
   }
@@ -62917,8 +62922,8 @@ var ImageIdBrowserField = {
 
 var ImageIdBrowserField_component = normalizeComponent(
   fields_ImageIdBrowserFieldvue_type_script_lang_js_,
-  ImageIdBrowserFieldvue_type_template_id_37f657e8_render,
-  ImageIdBrowserFieldvue_type_template_id_37f657e8_staticRenderFns,
+  ImageIdBrowserFieldvue_type_template_id_247c13b2_render,
+  ImageIdBrowserFieldvue_type_template_id_247c13b2_staticRenderFns,
   false,
   null,
   null,

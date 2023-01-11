@@ -7,24 +7,30 @@
                       @cancel="cancelImageEditor"
                       @save="saveImageEditor"></image-editor>
     </template>
+    
     <div v-show="!showImageEditor">-->
-        <image-browser v-model="model" v-bind="fileBrowserProps" @change="imageChange"></image-browser>
-        <!--<div class="btn-group" role="group" aria-label="Basic example">
-        <button v-if="imageSrc"
-                type="button"
-                class="btn btn-secondary"
-                @click.prevent="remove">
-            Delete
-        </button>
-        <button v-if="imageSrc && options.showCropper" type="button" class="btn btn-secondary" @click.prevent="edit">Edit</button>
+        <div v-if="connector.viewType=='create' && options.disabledOnCreate">
+            Image can be uploaded after item created.
         </div>
-        -->
-        <div>
-            <!--<a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">-->
+        <div v-else>
+            <image-browser v-model="model" v-bind="fileBrowserProps" @change="imageChange"></image-browser>
+            <!--<div class="btn-group" role="group" aria-label="Basic example">
+    <button v-if="imageSrc"
+            type="button"
+            class="btn btn-secondary"
+            @click.prevent="remove">
+        Delete
+    </button>
+    <button v-if="imageSrc && options.showCropper" type="button" class="btn btn-secondary" @click.prevent="edit">Edit</button>
+    </div>
+    -->
+            <div>
+                <!--<a v-if="imageSrc" href="#" @click.prevent="edit" title="Edit Image">-->
                 <img v-if="imageSrc" :src="imageSrc" alt="Image" style="margin: 10px 0;max-height:200px;" class="img-fluid" />
-            <!--</a>-->
+                <!--</a>-->
+            </div>
+            <!--</div>-->
         </div>
-        <!--</div>-->
     </control>
 </template>
 
@@ -65,7 +71,7 @@
                     width: this.options.width,
                     height: this.options.height,
                     accept: this.options.accept,
-                    fileMaxSize: this.options.fileMaxSize,
+                    fileMaxSize: this.options.fileMaxSize                    
                 }
             },
             //imageSrc() {
@@ -201,6 +207,9 @@
                                 "title": "max size (bytes)",
                                 "type": "number",
                                 "default": 0
+                            },
+                            disabledOnCreate: {
+                                "type": "boolean"
                             }
                         }
                     },
@@ -212,6 +221,9 @@
                             showCropper: {
                                 rightLabel: "Show cropper",
                             },
+                            disabledOnCreate: {
+                                rightLabel: "Disabled on create"
+                            }
                         }
                     }
                 };
@@ -230,7 +242,8 @@
                         width: field.width,
                         height: field.height,
                         accept: field.accept,
-                        fileMaxSize: field.fileMaxSize
+                        fileMaxSize: field.fileMaxSize,
+                        disabledOnCreate: field.disabledOnCreate
                     }
                 };
             },
@@ -244,7 +257,8 @@
                     width: def.options.width,
                     height: def.options.height,
                     accept: def.options.accept,
-                    fileMaxSize: def.options.fileMaxSize
+                    fileMaxSize: def.options.fileMaxSize,
+                    disabledOnCreate: def.options.disabledOnCreate
                 };
             }
         }
