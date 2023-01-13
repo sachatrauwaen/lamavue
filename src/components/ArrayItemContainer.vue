@@ -44,7 +44,14 @@ export default {
       if (!this.value) return "[empty item]";
       if (!Lama.isObject(this.value)) return this.value;
       let keys = Object.keys(this.schema.properties);
-      let l = this.value[keys[0]];
+        let l = this.value[keys[0]];
+        if (Lama.isObject(l)) {
+            if (l[this.options.titleField]) {
+                l = l[this.options.titleField];
+            } else {
+                l = l[Object.keys(l)[0]];
+            }
+        }
       return l ? l : "[empty item]";
     }
   },

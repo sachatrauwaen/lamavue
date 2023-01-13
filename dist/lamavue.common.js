@@ -48011,12 +48011,12 @@ var Toolbar_component = normalizeComponent(
 )
 
 /* harmony default export */ var Toolbar = (Toolbar_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArrayItemContainer.vue?vue&type=template&id=84255274&scoped=true&
-var ArrayItemContainervue_type_template_id_84255274_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card",staticStyle:{"margin-bottom":"10px"}},[_c('div',{staticClass:"card-header"},[_c('div',{staticStyle:{"float":"left"}},[_c('button',{staticClass:"btn btn-link btn-sm",attrs:{"aria-expanded":"true","aria-controls":"collapseOne"},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.showBody($event)}}},[_vm._v(_vm._s(_vm.headerLabel))])]),_c('div',{staticStyle:{"float":"right"}},[_vm._t("toolbar")],2)]),(_vm.show)?_c('div',{staticClass:"card-body"},[_vm._t("default")],2):_vm._e()])}
-var ArrayItemContainervue_type_template_id_84255274_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArrayItemContainer.vue?vue&type=template&id=4153952e&scoped=true&
+var ArrayItemContainervue_type_template_id_4153952e_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card",staticStyle:{"margin-bottom":"10px"}},[_c('div',{staticClass:"card-header"},[_c('div',{staticStyle:{"float":"left"}},[_c('button',{staticClass:"btn btn-link btn-sm",attrs:{"aria-expanded":"true","aria-controls":"collapseOne"},on:{"click":function($event){$event.stopPropagation();$event.preventDefault();return _vm.showBody($event)}}},[_vm._v(_vm._s(_vm.headerLabel))])]),_c('div',{staticStyle:{"float":"right"}},[_vm._t("toolbar")],2)]),(_vm.show)?_c('div',{staticClass:"card-body"},[_vm._t("default")],2):_vm._e()])}
+var ArrayItemContainervue_type_template_id_4153952e_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/ArrayItemContainer.vue?vue&type=template&id=84255274&scoped=true&
+// CONCATENATED MODULE: ./src/components/ArrayItemContainer.vue?vue&type=template&id=4153952e&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/ArrayItemContainer.vue?vue&type=script&lang=js&
 
@@ -48064,6 +48064,15 @@ var ArrayItemContainervue_type_template_id_84255274_scoped_true_staticRenderFns 
       if (!lama.isObject(this.value)) return this.value;
       var keys = Object.keys(this.schema.properties);
       var l = this.value[keys[0]];
+
+      if (lama.isObject(l)) {
+        if (l[this.options.titleField]) {
+          l = l[this.options.titleField];
+        } else {
+          l = l[Object.keys(l)[0]];
+        }
+      }
+
       return l ? l : "[empty item]";
     }
   },
@@ -48087,11 +48096,11 @@ var ArrayItemContainervue_type_template_id_84255274_scoped_true_staticRenderFns 
 
 var ArrayItemContainer_component = normalizeComponent(
   components_ArrayItemContainervue_type_script_lang_js_,
-  ArrayItemContainervue_type_template_id_84255274_scoped_true_render,
-  ArrayItemContainervue_type_template_id_84255274_scoped_true_staticRenderFns,
+  ArrayItemContainervue_type_template_id_4153952e_scoped_true_render,
+  ArrayItemContainervue_type_template_id_4153952e_scoped_true_staticRenderFns,
   false,
   null,
-  "84255274",
+  "4153952e",
   null
   
 )
@@ -48383,6 +48392,10 @@ var ArrayField = {
               title: "Fields",
               type: "array",
               items: builderUtils.getObjectProps().schema.items
+            },
+            titleField: {
+              title: "Title Field",
+              type: "string"
             }
           }
         },
@@ -48398,6 +48411,7 @@ var ArrayField = {
     fromBuilder: function fromBuilder(field) {
       var def = builderUtils.objectFromBuilder(field);
       def.schema.title = "";
+      def.options.titleField = field.titleField;
       return {
         schema: {
           title: field.label,
@@ -48418,13 +48432,15 @@ var ArrayField = {
         return {
           label: def.schema.title,
           fieldType: "array",
-          fields: b.fields
+          fields: b.fields,
+          titleField: def.options.items.titleField
         };
       } else {
         return {
           label: def.schema.title,
           fieldType: "array",
-          fields: []
+          fields: [],
+          titleField: def.options.items.titleField
         };
       }
     }
@@ -48447,7 +48463,7 @@ var ArrayField_component = normalizeComponent(
   ArrayField_staticRenderFns,
   false,
   null,
-  "6863c4cc",
+  "d66f120e",
   null
   
 )

@@ -27,13 +27,16 @@ let ArrayField = {
               title: "Fields",
               type: "array",
               items: builderUtils.getObjectProps().schema.items
+            },
+            titleField: {
+                title: "Title Field",
+                type: "string"
             }
           }
         },
         options: {
           fields: {
-            fields:{
-              
+            fields:{              
               items: builderUtils.getObjectProps().options.items
             }
           }
@@ -42,7 +45,8 @@ let ArrayField = {
     },
     fromBuilder(field) {
       let def = builderUtils.objectFromBuilder(field);
-      def.schema.title="";
+        def.schema.title = "";
+        def.options.titleField = field.titleField;
       return {
         schema: {
           title: field.label,
@@ -50,7 +54,7 @@ let ArrayField = {
           items: def.schema
         },
         options: {
-          items:  def.options          
+          items: def.options          
         }
       };
     },
@@ -60,16 +64,17 @@ let ArrayField = {
         return {
           label: def.schema.title,
           fieldType: "array",
-          fields: b.fields
+          fields: b.fields,
+          titleField: def.options.items.titleField
         };
       }else {
         return {
           label: def.schema.title,
           fieldType: "array",
-          fields: []
+          fields: [],
+          titleField: def.options.items.titleField
         };
       }
-
     }
   }
 };
