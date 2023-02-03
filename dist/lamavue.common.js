@@ -48643,7 +48643,7 @@ var ControlField = {
               rightLabel: "Required"
             },
             hidden: {
-              rightLabel: "Hiden"
+              rightLabel: "Hidden"
             },
             multilanguage: {
               rightLabel: "Multi language"
@@ -48717,7 +48717,7 @@ var ControlField_component = normalizeComponent(
   ControlField_staticRenderFns,
   false,
   null,
-  "37f4801a",
+  "14a227d8",
   null
   
 )
@@ -61000,7 +61000,7 @@ var LinkField = {
         return this.value;
       },
       set: function set(val) {
-        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'phone:' + val.phone : "";
+        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
         this.$emit("input", val);
       }
     },
@@ -61132,7 +61132,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "4cf1f9d2",
+  "3ddba44a",
   null
   
 )

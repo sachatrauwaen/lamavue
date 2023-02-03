@@ -19,7 +19,7 @@
                     else if (val.type=="email")
                         val.url = val && val.email ? 'mailto:'+val.email : "";
                     else if (val.type=="phone")
-                        val.url = val && val.phone ? 'phone:'+val.phone : "";
+                        val.url = val && val.phone ? 'tel:'+val.phone : "";
                     
                     this.$emit("input", val);
                 }

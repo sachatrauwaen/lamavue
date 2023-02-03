@@ -89,7 +89,7 @@
                                 rightLabel: "Required",
                             },
                             hidden: {
-                                rightLabel: "Hiden",
+                                rightLabel: "Hidden",
                             },
                             multilanguage: {
                                 rightLabel: "Multi language",
