@@ -981,7 +981,7 @@ let Lama = {
         // if we have data, bind it in
         return {
             component,
-            props: { data, options, schema, view, connector, errorCallback }
+            props: { data, options, schema, view, connector }
         };
         //return new FieldClass(el, data, options, schema, view, connector, errorCallback);
 

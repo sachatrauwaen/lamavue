@@ -6,6 +6,7 @@
                                   :no-header="true"
                                   :no-button-now="true"
                                   format="YYYY-MM-DDT00:00:00"
+                                  :locale="locale"
                                   formatted="ll"
                                   v-model="model"
                                   :class="{'is-invalid':flags.invalid && flags.touched}"
@@ -28,7 +29,11 @@
                 type: String
             }
         },
-        computed: {},
+        computed: {
+            locale() {
+                return this.connector.currentCulture.substring(0, 2);
+            }
+        },
         methods: {
             pad(number) {
                 if (number < 10) {

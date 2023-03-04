@@ -9,9 +9,9 @@
       slim
     >
       <slot v-bind="flags"></slot>
-      <div v-if="flags.errors" class="invalid-feedback">
+      <div v-if="flags.errors.length" class="invalid-feedback" style="display:block">
         <span v-for="(error, index) in flags.errors" :key="index">{{error}}</span>
-      </div>
+      </div> 
     </ValidationProvider>
   </div>
 </template>
@@ -24,12 +24,12 @@ export default {
     options: {},
     messages: {},
     connector: {},
-    errors: {},
+    //errors: {},
     showLabel:{type: Boolean,default: true}
   },
   computed: {
     label() {
-      return this.options.label || this.schema.title;
+          return (this.options.label || this.schema.title) + (this.schema.required ?' *':'');
     },
     badge() {
       return this.options.multilanguage ? this.connector.currentCulture.substring(0, 2).toUpperCase() : "";

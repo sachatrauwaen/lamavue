@@ -23,7 +23,7 @@ let TextField = {
     value: {
       type: String,
       default: ''
-    },
+    }
   },
   computed: {
       pattern() {

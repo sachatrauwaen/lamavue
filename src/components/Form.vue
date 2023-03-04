@@ -1,8 +1,15 @@
 <template>
     <div>
-        <ValidationObserver ref="validationobserver">
+        <ValidationObserver ref="validationobserver" v-slot="flags">
             <div>
                 <form-field ref="formField" v-model="model" v-bind="props"></form-field>
+                <div v-if="flags.failed" class="alert alert-danger" role="alert">
+                    <template v-for="(v,k) in flags.errors">
+                        <div v-for="e in v" :key="e" >
+                            {{e}}
+                        </div>
+                    </template>
+                </div>
             </div>
         </ValidationObserver>
         <div v-if="debug">
