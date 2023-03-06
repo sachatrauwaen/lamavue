@@ -48813,6 +48813,154 @@ var CheckboxField_component = normalizeComponent(
 )
 
 /* harmony default export */ var CheckboxField = (CheckboxField_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=template&id=c7a40d90&scoped=true&
+var CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return _vm._l((_vm.schema.enum),function(c){return _c('div',{key:c,staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":c,"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,c)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=c,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.optionLabel(c)))])])})}}])},'control',_vm.props,false))}
+var CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=template&id=c7a40d90&scoped=true&
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
+var es_array_index_of = __webpack_require__("c975");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
+var es_array_map = __webpack_require__("d81d");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=script&lang=js&
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var CheckboxListFieldvue_type_script_lang_js_CheckBoxField = {
+  name: "CheckBoxField",
+  extends: fields_ControlField,
+  props: {
+    value: {
+      type: Array
+    }
+  },
+  computed: {
+    label: function label() {
+      return this.options.label || this.schema.title || this.options.rightLabel;
+    },
+    model: {
+      get: function get() {
+        return this.value || [];
+      },
+      set: function set(val) {
+        this.$emit("input", val);
+      }
+    }
+  },
+  methods: {
+    optionLabel: function optionLabel(value) {
+      var idx = this.schema.enum.indexOf(value);
+      return this.options.optionLabels[idx];
+    }
+  },
+  components: {},
+  builder: {
+    props: function props() {
+      return {
+        schema: {
+          type: "object",
+          properties: {
+            options: {
+              title: "Options",
+              type: "array",
+              items: {
+                type: "object",
+                properties: {
+                  value: {
+                    type: "string",
+                    title: "Value"
+                  },
+                  label: {
+                    type: "string",
+                    title: "Label"
+                  }
+                }
+              }
+            }
+          }
+        },
+        options: {}
+      };
+    },
+    fromBuilder: function fromBuilder(field) {
+      var _enum = [];
+      var optionLabels = [];
+
+      if (field.options) {
+        _enum = field.options.map(function (o) {
+          return o.value;
+        });
+        optionLabels = field.options.map(function (o) {
+          return o.label;
+        });
+      }
+
+      return {
+        schema: {
+          type: "array",
+          enum: _enum
+        },
+        options: {
+          type: "checkboxlist",
+          optionLabels: optionLabels
+        }
+      };
+    },
+    toBuilder: function toBuilder(def) {
+      return {
+        fieldType: "checkboxlist",
+        options: def.schema.enum.map(function (a, i) {
+          return {
+            value: a,
+            label: def.options.optionLabels ? def.options.optionLabels[i] : a
+          };
+        })
+      };
+    }
+  }
+};
+/* harmony default export */ var CheckboxListFieldvue_type_script_lang_js_ = (CheckboxListFieldvue_type_script_lang_js_CheckBoxField);
+// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_CheckboxListFieldvue_type_script_lang_js_ = (CheckboxListFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue
+
+
+
+
+
+/* normalize component */
+
+var CheckboxListField_component = normalizeComponent(
+  fields_CheckboxListFieldvue_type_script_lang_js_,
+  CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_render,
+  CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_staticRenderFns,
+  false,
+  null,
+  "c7a40d90",
+  null
+  
+)
+
+/* harmony default export */ var CheckboxListField = (CheckboxListField_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CKEditorField.vue?vue&type=template&id=68fb91da&scoped=true&
 var CKEditorFieldvue_type_template_id_68fb91da_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('ckeditor',{attrs:{"config":_vm.editorConfig},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
 var CKEditorFieldvue_type_template_id_68fb91da_scoped_true_staticRenderFns = []
@@ -49164,9 +49312,6 @@ var SelectBaseFieldvue_type_template_id_cd7516fe_scoped_true_staticRenderFns = [
 
 
 // CONCATENATED MODULE: ./src/components/fields/SelectBaseField.vue?vue&type=template&id=cd7516fe&scoped=true&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.map.js
-var es_array_map = __webpack_require__("d81d");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/SelectBaseField.vue?vue&type=script&lang=js&
 
@@ -49959,9 +50104,6 @@ var ImageFieldvue_type_template_id_ed2f91ba_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/components/fields/ImageField.vue?vue&type=template&id=ed2f91ba&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
-var es_array_index_of = __webpack_require__("c975");
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.ends-with.js
 var es_string_ends_with = __webpack_require__("8a79");
@@ -62417,6 +62559,7 @@ var DocumentsField_component = normalizeComponent(
 
 
 
+
  //import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
 
 
@@ -62444,6 +62587,7 @@ var DocumentsField_component = normalizeComponent(
     lama.registerFieldComponent("array", fields_ArrayField);
     lama.registerDefaultSchemaFieldMapping("array", "array");
     lama.registerFieldComponent("checkbox", CheckboxField);
+    lama.registerFieldComponent("checkboxlist", CheckboxListField);
     lama.registerDefaultSchemaFieldMapping("boolean", "checkbox");
     lama.registerFieldComponent("ckeditor", fields_CKEditorField);
     lama.registerFieldComponent("color", fields_ColorField);

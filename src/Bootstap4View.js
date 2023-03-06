@@ -1,6 +1,7 @@
 import AddressField from './components/fields/AddressField.vue'
 import ArrayField from './components/fields/ArrayField.vue'
 import CheckboxField from './components/fields/CheckboxField.vue'
+import CheckboxListField from './components/fields/CheckboxListField.vue'
 import CKEditorField from './components/fields/CKEditorField.vue'
 import CountryField from './components/fields/CountryField.vue'
 import DateField from './components/fields/DateField.vue'
@@ -38,6 +39,7 @@ export default {
         Lama.registerFieldComponent("array", ArrayField);
         Lama.registerDefaultSchemaFieldMapping("array", "array");
         Lama.registerFieldComponent("checkbox", CheckboxField);
+        Lama.registerFieldComponent("checkboxlist", CheckboxListField);
         Lama.registerDefaultSchemaFieldMapping("boolean", "checkbox");
         Lama.registerFieldComponent("ckeditor", CKEditorField);
         Lama.registerFieldComponent("color", ColorField);
