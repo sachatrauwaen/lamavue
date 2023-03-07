@@ -35,7 +35,7 @@
         },
         methods: {
             init() {
-                if (Lama.isEmpty(this.model) && this.schema.default) {
+                if (Lama.isValEmpty(this.model) && this.schema.default) {
                     this.model = this.schema.default;
                 }
             }
@@ -57,10 +57,10 @@
                             hidden: {
                                 type: "boolean",
                             },
-                            // placeholder: {
-                            //   title: "Placeholder",
-                            //   type: "string",
-                            // },
+                            helper: {
+                               title: "Helper",
+                               type: "string",
+                            },
                             multilanguage: {
                                 type: "boolean",
                             },
@@ -111,12 +111,13 @@
                         title: field.label,
                         default: field.default,
                         required: field.required,
-                        
+
                     },
                     options: {
                         hidden: field.hidden,
                         multilanguage: field.multilanguage,
                         dependencies: optDeps,
+                        helper: field.helper
                     },
                 };
             },
@@ -136,7 +137,7 @@
                     default: def.schema.default,
                     required: def.schema.required,
                     hidden: def.options.hidden,
-                    //placeholder: def.options.placeholder,
+                    helper: def.options.helper,
                     multilanguage: def.options.multilanguage,
                     dependencies: deps,
                 };

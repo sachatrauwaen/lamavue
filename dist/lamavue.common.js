@@ -48476,15 +48476,14 @@ var CheckboxFieldvue_type_template_id_273e836a_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=273e836a&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=34fc1653&scoped=true&
-var Controlvue_type_template_id_34fc1653_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(flags.errors.length)?_c('div',{staticClass:"invalid-feedback",staticStyle:{"display":"block"}},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
-var Controlvue_type_template_id_34fc1653_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=feab9db4&scoped=true&
+var Controlvue_type_template_id_feab9db4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(_vm.options.helper)?_c('small',{staticClass:"form-text text-muted"},[_vm._v(_vm._s(_vm.options.helper))]):_vm._e(),(flags.errors.length)?_c('div',{staticClass:"invalid-feedback",staticStyle:{"display":"block"}},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
+var Controlvue_type_template_id_feab9db4_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=34fc1653&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=feab9db4&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -48538,11 +48537,11 @@ var Controlvue_type_template_id_34fc1653_scoped_true_staticRenderFns = []
 
 var Control_component = normalizeComponent(
   fields_Controlvue_type_script_lang_js_,
-  Controlvue_type_template_id_34fc1653_scoped_true_render,
-  Controlvue_type_template_id_34fc1653_scoped_true_staticRenderFns,
+  Controlvue_type_template_id_feab9db4_scoped_true_render,
+  Controlvue_type_template_id_feab9db4_scoped_true_staticRenderFns,
   false,
   null,
-  "34fc1653",
+  "feab9db4",
   null
   
 )
@@ -48587,7 +48586,7 @@ var ControlField = {
   },
   methods: {
     init: function init() {
-      if (lama.isEmpty(this.model) && this.schema.default) {
+      if (lama.isValEmpty(this.model) && this.schema.default) {
         this.model = this.schema.default;
       }
     }
@@ -48611,10 +48610,10 @@ var ControlField = {
             hidden: {
               type: "boolean"
             },
-            // placeholder: {
-            //   title: "Placeholder",
-            //   type: "string",
-            // },
+            helper: {
+              title: "Helper",
+              type: "string"
+            },
             multilanguage: {
               type: "boolean"
             },
@@ -48671,7 +48670,8 @@ var ControlField = {
         options: {
           hidden: field.hidden,
           multilanguage: field.multilanguage,
-          dependencies: optDeps
+          dependencies: optDeps,
+          helper: field.helper
         }
       };
     },
@@ -48693,7 +48693,7 @@ var ControlField = {
         default: def.schema.default,
         required: def.schema.required,
         hidden: def.options.hidden,
-        //placeholder: def.options.placeholder,
+        helper: def.options.helper,
         multilanguage: def.options.multilanguage,
         dependencies: deps
       };
@@ -48717,7 +48717,7 @@ var ControlField_component = normalizeComponent(
   ControlField_staticRenderFns,
   false,
   null,
-  "14a227d8",
+  "73efac38",
   null
   
 )
