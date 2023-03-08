@@ -1,6 +1,7 @@
 <template>
     <control v-bind="props" v-slot="flags">
-        <div class="form-check" v-for="c in schema.enum" :key="c">
+        
+        <div class="form-check form-check-inline" v-for="c in schema.enum" :key="c">
             <input type="checkbox"
                    class="form-check-input"
                    :aria-describedby="options.label"

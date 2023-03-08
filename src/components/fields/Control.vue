@@ -4,8 +4,7 @@
     <span v-if="badge" class="badge badge-dark" style="float:right">{{badge}}</span>
     <ValidationProvider :name="options.label"
                         :rules="{ required: schema.required }"
-                        v-slot="flags"
-                        slim>
+                        v-slot="flags" tag="div">
         <slot v-bind="flags"></slot>
         <small v-if="options.helper" class="form-text text-muted">{{options.helper}}</small>        
         <div v-if="flags.errors.length" class="invalid-feedback" style="display:block">

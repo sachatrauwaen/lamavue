@@ -47270,12 +47270,12 @@ var Container_component = normalizeComponent(
 )
 
 /* harmony default export */ var Container = (Container_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=046df422&scoped=true&
-var Fieldsvue_type_template_id_046df422_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.fields),function(value,key){return _c('div',{key:key,staticClass:"col-12 col-md-12"},[_c('form-field',_vm._b({directives:[{name:"show",rawName:"v-show",value:(_vm.visible(key)),expression:"visible(key)"}],ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
-var Fieldsvue_type_template_id_046df422_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=4ac0248a&scoped=true&
+var Fieldsvue_type_template_id_4ac0248a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.fields),function(value,key){return _c('div',{key:key,class:['col-12', 'col-md-12', 'lama-type-'+_vm.itemProps(key).options.type, 'lama-field-'+key]},[_c('form-field',_vm._b({directives:[{name:"show",rawName:"v-show",value:(_vm.visible(key)),expression:"visible(key)"}],ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
+var Fieldsvue_type_template_id_4ac0248a_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=046df422&scoped=true&
+// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=4ac0248a&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=script&lang=js&
 //
@@ -47429,11 +47429,11 @@ var Fieldsvue_type_template_id_046df422_scoped_true_staticRenderFns = []
 
 var Fields_component = normalizeComponent(
   components_Fieldsvue_type_script_lang_js_,
-  Fieldsvue_type_template_id_046df422_scoped_true_render,
-  Fieldsvue_type_template_id_046df422_scoped_true_staticRenderFns,
+  Fieldsvue_type_template_id_4ac0248a_scoped_true_render,
+  Fieldsvue_type_template_id_4ac0248a_scoped_true_staticRenderFns,
   false,
   null,
-  "046df422",
+  "4ac0248a",
   null
   
 )
@@ -48476,15 +48476,14 @@ var CheckboxFieldvue_type_template_id_273e836a_scoped_true_staticRenderFns = []
 
 // CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=273e836a&scoped=true&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=feab9db4&scoped=true&
-var Controlvue_type_template_id_feab9db4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"slim":""},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(_vm.options.helper)?_c('small',{staticClass:"form-text text-muted"},[_vm._v(_vm._s(_vm.options.helper))]):_vm._e(),(flags.errors.length)?_c('div',{staticClass:"invalid-feedback",staticStyle:{"display":"block"}},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
-var Controlvue_type_template_id_feab9db4_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=8de29d08&scoped=true&
+var Controlvue_type_template_id_8de29d08_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"tag":"div"},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(_vm.options.helper)?_c('small',{staticClass:"form-text text-muted"},[_vm._v(_vm._s(_vm.options.helper))]):_vm._e(),(flags.errors.length)?_c('div',{staticClass:"invalid-feedback",staticStyle:{"display":"block"}},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
+var Controlvue_type_template_id_8de29d08_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=feab9db4&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/Control.vue?vue&type=template&id=8de29d08&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -48537,11 +48536,11 @@ var Controlvue_type_template_id_feab9db4_scoped_true_staticRenderFns = []
 
 var Control_component = normalizeComponent(
   fields_Controlvue_type_script_lang_js_,
-  Controlvue_type_template_id_feab9db4_scoped_true_render,
-  Controlvue_type_template_id_feab9db4_scoped_true_staticRenderFns,
+  Controlvue_type_template_id_8de29d08_scoped_true_render,
+  Controlvue_type_template_id_8de29d08_scoped_true_staticRenderFns,
   false,
   null,
-  "feab9db4",
+  "8de29d08",
   null
   
 )
@@ -48804,12 +48803,12 @@ var CheckboxField_component = normalizeComponent(
 )
 
 /* harmony default export */ var CheckboxField = (CheckboxField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=template&id=c7a40d90&scoped=true&
-var CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return _vm._l((_vm.schema.enum),function(c){return _c('div',{key:c,staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":c,"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,c)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=c,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.optionLabel(c)))])])})}}])},'control',_vm.props,false))}
-var CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=template&id=9c4ae7d8&scoped=true&
+var CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return _vm._l((_vm.schema.enum),function(c){return _c('div',{key:c,staticClass:"form-check form-check-inline"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":c,"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,c)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=c,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.optionLabel(c)))])])})}}])},'control',_vm.props,false))}
+var CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=template&id=c7a40d90&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=template&id=9c4ae7d8&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
@@ -48820,6 +48819,7 @@ var es_array_map = __webpack_require__("d81d");
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=script&lang=js&
 
 
+//
 //
 //
 //
@@ -48942,11 +48942,11 @@ var CheckboxListFieldvue_type_script_lang_js_CheckBoxField = {
 
 var CheckboxListField_component = normalizeComponent(
   fields_CheckboxListFieldvue_type_script_lang_js_,
-  CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_render,
-  CheckboxListFieldvue_type_template_id_c7a40d90_scoped_true_staticRenderFns,
+  CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_render,
+  CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_staticRenderFns,
   false,
   null,
-  "c7a40d90",
+  "9c4ae7d8",
   null
   
 )
