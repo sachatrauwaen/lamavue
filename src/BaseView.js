@@ -255,6 +255,7 @@ export default {
         "required": "This field is required",
         "valid": "",
         "invalid": "This field is invalid",
+        "imageAfterItemCreated": "Image can be uploaded after item created.",
         "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         "timeUnits": { SECOND: "seconds", MINUTE: "minutes", HOUR: "hours", DAY: "days", MONTH: "months", YEAR: "years" },
         "countryCallingCodes": [

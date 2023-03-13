@@ -10,7 +10,7 @@
     
     <div v-show="!showImageEditor">-->
         <div v-if="connector.viewType=='create' && options.disabledOnCreate">
-            Image can be uploaded after item created.
+            {{getMessage('imageAfterItemCreated')}}
         </div>
         <div v-else>
             <image-browser v-model="model" v-bind="fileBrowserProps" @change="imageChange"></image-browser>
@@ -36,6 +36,7 @@
 
 <script>
     //import Vue from "vue";
+    import Lama from "../../lama";
     import ControlField from "./ControlField.vue";
     import Control from "./Control.vue";
     import ImageEditor from "./ImageEditor.vue";
@@ -175,6 +176,9 @@
             },
             remove() {
                 this.model = null;
+            },
+            getMessage(key) {
+                return Lama.getMessage(this.view, key, this.connector.currentCulture);
             }
         },
         components: { Control, VueCropper, ImageBrowser, ImageEditor },

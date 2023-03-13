@@ -46111,6 +46111,7 @@ var size = {
     "required": "This field is required",
     "valid": "",
     "invalid": "This field is invalid",
+    "imageAfterItemCreated": "Image can be uploaded after item created.",
     "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "timeUnits": {
       SECOND: "seconds",
@@ -49444,12 +49445,12 @@ var CountryField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_CountryField = (CountryField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DateField.vue?vue&type=template&id=da05b3ec&scoped=true&
-var DateFieldvue_type_template_id_da05b3ec_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-ctk-date-time-picker',{class:{'is-invalid':flags.invalid && flags.touched},attrs:{"only-date":true,"auto-close":true,"no-label":true,"no-header":true,"no-button-now":true,"format":"YYYY-MM-DDT00:00:00","locale":_vm.locale,"formatted":"ll","placeholder":_vm.options.placeholder},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
-var DateFieldvue_type_template_id_da05b3ec_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DateField.vue?vue&type=template&id=42b4a58b&scoped=true&
+var DateFieldvue_type_template_id_42b4a58b_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('vue-ctk-date-time-picker',{class:{'is-invalid':flags.invalid && flags.touched},attrs:{"only-date":true,"auto-close":true,"no-label":true,"no-header":true,"no-button-now":true,"format":"YYYY-MM-DDT00:00:00","locale":_vm.locale,"formatted":"ll","label":_vm.options.placeholder},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})]}}])},'control',_vm.props,false))}
+var DateFieldvue_type_template_id_42b4a58b_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/DateField.vue?vue&type=template&id=da05b3ec&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/DateField.vue?vue&type=template&id=42b4a58b&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.common.js
 var vue_ctk_date_time_picker_common = __webpack_require__("e30a");
@@ -49561,11 +49562,11 @@ var DateField = {
 
 var DateField_component = normalizeComponent(
   fields_DateFieldvue_type_script_lang_js_,
-  DateFieldvue_type_template_id_da05b3ec_scoped_true_render,
-  DateFieldvue_type_template_id_da05b3ec_scoped_true_staticRenderFns,
+  DateFieldvue_type_template_id_42b4a58b_scoped_true_render,
+  DateFieldvue_type_template_id_42b4a58b_scoped_true_staticRenderFns,
   false,
   null,
-  "da05b3ec",
+  "42b4a58b",
   null
   
 )
@@ -62638,7 +62639,7 @@ var DocumentsField_component = normalizeComponent(
 
 
 /* harmony default export */ var DefaultConnector = ({
-  currentCulture: "fr-FR",
+  currentCulture: "nl-NL",
   viewType: "create",
   connect: function connect() {},
   loadAll: function loadAll(resources, onSuccess) {
@@ -62723,12 +62724,59 @@ var DocumentsField_component = normalizeComponent(
     });
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=b3b44990&
-var ImageIdBrowserFieldvue_type_template_id_b3b44990_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.connector.viewType=='create' && _vm.options.disabledOnCreate)?_c('div',[_vm._v(" Image can be uploaded after item created. ")]):_c('div',[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)])}
-var ImageIdBrowserFieldvue_type_template_id_b3b44990_staticRenderFns = []
+// CONCATENATED MODULE: ./src/messages/nl-NL.js
+
+/* harmony default export */ var nl_NL = ({
+  register: function register() {
+    lama.registerView({
+      "id": "base",
+      "messages": {
+        "nl-NL": {
+          required: "Dit veld is verplicht",
+          invalid: "Dit veld is ongeldig",
+          imageAfterItemCreated: "Afbeelding kan worden geüpload nadat het item is gemaakt.",
+          months: ["Januari", "Februari", "Maart", "April", "Mei", "Juni", "July", "Augustus", "September", "Oktober", "November", "December"],
+          timeUnits: {
+            SECOND: "seconden",
+            MINUTE: "minuten",
+            HOUR: "uren",
+            DAY: "dagen",
+            MONTH: "maanden",
+            YEAR: "jaren"
+          },
+          "notOptional": "Dit veld is niet optioneel.",
+          "disallowValue": "{0} zijn verboden waarden.",
+          "invalidValueOfEnum": "Dit veld moet één van volgende bevatten : {0}. [{1}]",
+          "notEnoughItems": "Het minimum aantal elementen is {0}",
+          "tooManyItems": "Het maximum aantal elementen is {0}",
+          "valueNotUnique": "De waarden zijn uniek",
+          "notAnArray": "Deze waarde is geen lijst",
+          "invalidDate": "De datum komt niet overeen met formaat {0}",
+          "invalidEmail": "Ongeldig e-mailadres, vb.: info@cloudcms.com",
+          "stringNotAnInteger": "Deze waarde is geen geheel getal.",
+          "invalidIPv4": "Ongeldig IPv4 adres, vb.: 192.168.0.1",
+          "stringValueTooSmall": "De minimale waarde voor dit veld is {0}",
+          "stringValueTooLarge": "De maximale waarde voor dit veld is {0}",
+          "stringValueTooSmallExclusive": "De waarde moet groter zijn dan {0}",
+          "stringValueTooLargeExclusive": "De waarde moet kleiner zijn dan {0}",
+          "stringDivisibleBy": "De waarde moet deelbaar zijn door {0}",
+          "stringNotANumber": "Deze waarde is geen getal.",
+          "invalidPassword": "Ongeldig wachtwoord",
+          "invalidPhone": "Ongeldig telefoonnummer, vb: (123) 456-9999",
+          "invalidPattern": "Dit veld moet overeenkomen met patroon {0}",
+          "stringTooShort": "Dit veld moet minstens {0} tekens bevatten",
+          "stringTooLong": "Dit veld moet minder dan {0} tekens bevatten"
+        }
+      }
+    });
+  }
+});
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
+var ImageIdBrowserFieldvue_type_template_id_1b8534ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.connector.viewType=='create' && _vm.options.disabledOnCreate)?_c('div',[_vm._v(" "+_vm._s(_vm.getMessage('imageAfterItemCreated'))+" ")]):_c('div',[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)])}
+var ImageIdBrowserFieldvue_type_template_id_1b8534ec_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=b3b44990&
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=0a05c9b2&scoped=true&
 var ImageIdBrowservue_type_template_id_0a05c9b2_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
@@ -63055,6 +63103,7 @@ var ImageIdBrowser_component = normalizeComponent(
 
 
 
+
 var ImageIdBrowserField = {
   name: "ImageIdBrowserField",
   extends: fields_ControlField,
@@ -63179,6 +63228,9 @@ var ImageIdBrowserField = {
     },
     remove: function remove() {
       this.model = null;
+    },
+    getMessage: function getMessage(key) {
+      return lama.getMessage(this.view, key, this.connector.currentCulture);
     }
   },
   components: {
@@ -63285,8 +63337,8 @@ var ImageIdBrowserField = {
 
 var ImageIdBrowserField_component = normalizeComponent(
   fields_ImageIdBrowserFieldvue_type_script_lang_js_,
-  ImageIdBrowserFieldvue_type_template_id_b3b44990_render,
-  ImageIdBrowserFieldvue_type_template_id_b3b44990_staticRenderFns,
+  ImageIdBrowserFieldvue_type_template_id_1b8534ec_render,
+  ImageIdBrowserFieldvue_type_template_id_1b8534ec_staticRenderFns,
   false,
   null,
   null,
@@ -63307,6 +63359,7 @@ var ImageIdBrowserField_component = normalizeComponent(
 
 
  //import VueI18n from 'vue-i18n'
+
 
 
 
@@ -64461,6 +64514,7 @@ var lama_Lama = {
 
     this.installed = true;
     this.registerView(BaseView);
+    nl_NL.register();
     Bootstap4View.register();
     if (options && options.view) this.defaultView = options.view;else this.defaultView = "bootstrap4-edit";
     this.registerConnectorClass("default", DefaultConnector);

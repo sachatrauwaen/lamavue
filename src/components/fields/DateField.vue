@@ -6,11 +6,11 @@
                                   :no-header="true"
                                   :no-button-now="true"
                                   format="YYYY-MM-DDT00:00:00"
-                                  :locale="locale"
+                                  :locale="locale"                                  
                                   formatted="ll"
                                   v-model="model"
                                   :class="{'is-invalid':flags.invalid && flags.touched}"
-                                  :placeholder="options.placeholder" />
+                                  :label="options.placeholder" />
     </control>
 </template>
 

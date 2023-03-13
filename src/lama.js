@@ -4,10 +4,13 @@ import { required, email, numeric, min, max, regex } from 'vee-validate/dist/rul
 //import VueI18n from 'vue-i18n'
 
 import BaseView from "./BaseView";
+
 import Bootstap4View from "./Bootstap4View";
 import DefaultConnector from "./DefaultConnector";
 import LamaForm from "./components/Form.vue";
 import LamaBuilder from "./components/Builder.vue";
+
+import nlNLView from "./messages/nl-NL";
 
 import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
 
@@ -1158,6 +1161,7 @@ let Lama = {
         this.installed = true;
 
         this.registerView(BaseView);
+        nlNLView.register();
         Bootstap4View.register();
         if (options && options.view)
             this.defaultView = options.view;
