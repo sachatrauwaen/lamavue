@@ -43113,6 +43113,7 @@ __webpack_require__.d(__webpack_exports__, "LamaForm", function() { return /* re
 __webpack_require__.d(__webpack_exports__, "Builder", function() { return /* reexport */ Builder; });
 __webpack_require__.d(__webpack_exports__, "Control", function() { return /* reexport */ Control; });
 __webpack_require__.d(__webpack_exports__, "ControlField", function() { return /* reexport */ fields_ControlField; });
+__webpack_require__.d(__webpack_exports__, "VueSelectBaseField", function() { return /* reexport */ fields_VueSelectBaseField; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -65605,6 +65606,7 @@ var App_component = normalizeComponent(
 
 /* harmony default export */ var App = (App_component.exports);
 // CONCATENATED MODULE: ./src/lamavue.js
+
 
 
 
