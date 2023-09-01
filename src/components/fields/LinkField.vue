@@ -17,7 +17,7 @@
                     if (val.type=="page")
                         val.url = val && val.page ? val.page.url : "";
                     else if (val.type == "file")
-                        val.url = val && val.file ? val.file.url : "";
+                        val.url = val && val.file ? val.file : "";
                     else if (val.type=="email")
                         val.url = val && val.email ? 'mailto:'+val.email : "";
                     else if (val.type=="phone")
