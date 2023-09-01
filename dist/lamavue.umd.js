@@ -61161,7 +61161,7 @@ var LinkField = {
         return this.value;
       },
       set: function set(val) {
-        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "file") val.url = val && val.file ? val.file.url : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
+        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "file") val.url = val && val.file ? val.file : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
         this.$emit("input", val);
       }
     },
@@ -61303,7 +61303,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "e049debc",
+  "58343e3e",
   null
   
 )
