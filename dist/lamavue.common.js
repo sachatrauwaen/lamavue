@@ -48805,12 +48805,12 @@ var CheckboxField_component = normalizeComponent(
 )
 
 /* harmony default export */ var CheckboxField = (CheckboxField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=template&id=9c4ae7d8&scoped=true&
-var CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return _vm._l((_vm.schema.enum),function(c){return _c('div',{key:c,staticClass:"form-check form-check-inline"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":c,"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,c)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=c,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.optionLabel(c)))])])})}}])},'control',_vm.props,false))}
-var CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxListField.vue?vue&type=template&id=3e2a3451&scoped=true&
+var CheckboxListFieldvue_type_template_id_3e2a3451_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return _vm._l((_vm.items),function(c){return _c('div',{key:c,staticClass:"form-check form-check-inline"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":c,"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,c)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=c,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.optionLabel(c)))])])})}}])},'control',_vm.props,false))}
+var CheckboxListFieldvue_type_template_id_3e2a3451_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=template&id=9c4ae7d8&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CheckboxListField.vue?vue&type=template&id=3e2a3451&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
@@ -48839,7 +48839,7 @@ var es_array_map = __webpack_require__("d81d");
 //
 
 var CheckboxListFieldvue_type_script_lang_js_CheckBoxField = {
-  name: "CheckBoxField",
+  name: "CheckBoxListField",
   extends: fields_ControlField,
   props: {
     value: {
@@ -48857,6 +48857,9 @@ var CheckboxListFieldvue_type_script_lang_js_CheckBoxField = {
       set: function set(val) {
         this.$emit("input", val);
       }
+    },
+    items: function items() {
+      return this.schema.enum;
     }
   },
   methods: {
@@ -48944,11 +48947,11 @@ var CheckboxListFieldvue_type_script_lang_js_CheckBoxField = {
 
 var CheckboxListField_component = normalizeComponent(
   fields_CheckboxListFieldvue_type_script_lang_js_,
-  CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_render,
-  CheckboxListFieldvue_type_template_id_9c4ae7d8_scoped_true_staticRenderFns,
+  CheckboxListFieldvue_type_template_id_3e2a3451_scoped_true_render,
+  CheckboxListFieldvue_type_template_id_3e2a3451_scoped_true_staticRenderFns,
   false,
   null,
-  "9c4ae7d8",
+  "3e2a3451",
   null
   
 )
