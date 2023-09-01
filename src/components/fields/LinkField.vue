@@ -16,6 +16,8 @@
                 set(val) {
                     if (val.type=="page")
                         val.url = val && val.page ? val.page.url : "";
+                    else if (val.type == "file")
+                        val.url = val && val.file ? val.file.url : "";
                     else if (val.type=="email")
                         val.url = val && val.email ? 'mailto:'+val.email : "";
                     else if (val.type=="phone")
@@ -38,7 +40,7 @@
                             type: {
                                 title: "Type",
                                 type: "string",
-                                enum : ["url", "page", "email", "phone"]
+                                enum : ["url", "page", "file", "email", "phone"]
                             },
                             url: {
                                 title: "Url",
@@ -46,6 +48,10 @@
                             },
                             page: {
                                 title: "Page",
+                                type: "string"
+                            },
+                            file: {
+                                title: "File",
                                 type: "string"
                             },
                             email: {
@@ -80,6 +86,13 @@
                                     type: ["page"]
                                 }
                             },
+                            file: {
+                                type: "file",
+                                dependencies:
+                                {
+                                    type: ["file"]
+                                }
+                            },
                             email: {
                                 type: "text",
                                 dependencies:
@@ -98,7 +111,7 @@
                                 rightLabel: "Open in new window",
                                 dependencies:
                                 {
-                                    type: ["url", "page"]
+                                    type: ["url", "page", "file"]
                                 }
                             }
                         }

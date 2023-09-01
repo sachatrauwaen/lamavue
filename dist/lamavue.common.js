@@ -61149,7 +61149,7 @@ var LinkField = {
         return this.value;
       },
       set: function set(val) {
-        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
+        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "file") val.url = val && val.file ? val.file.url : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
         this.$emit("input", val);
       }
     },
@@ -61167,7 +61167,7 @@ var LinkField = {
             type: {
               title: "Type",
               type: "string",
-              enum: ["url", "page", "email", "phone"]
+              enum: ["url", "page", "file", "email", "phone"]
             },
             url: {
               title: "Url",
@@ -61175,6 +61175,10 @@ var LinkField = {
             },
             page: {
               title: "Page",
+              type: "string"
+            },
+            file: {
+              title: "File",
               type: "string"
             },
             email: {
@@ -61207,6 +61211,12 @@ var LinkField = {
                 type: ["page"]
               }
             },
+            file: {
+              type: "file",
+              dependencies: {
+                type: ["file"]
+              }
+            },
             email: {
               type: "text",
               dependencies: {
@@ -61222,7 +61232,7 @@ var LinkField = {
             newWindow: {
               rightLabel: "Open in new window",
               dependencies: {
-                type: ["url", "page"]
+                type: ["url", "page", "file"]
               }
             }
           }
@@ -61281,7 +61291,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "3ddba44a",
+  "e049debc",
   null
   
 )
