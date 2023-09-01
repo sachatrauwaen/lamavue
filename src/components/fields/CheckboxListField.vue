@@ -1,7 +1,7 @@
 <template>
     <control v-bind="props" v-slot="flags">
         
-        <div class="form-check form-check-inline" v-for="c in schema.enum" :key="c">
+        <div class="form-check form-check-inline" v-for="c in items" :key="c">
             <input type="checkbox"
                    class="form-check-input"
                    :aria-describedby="options.label"
@@ -18,7 +18,7 @@
     import ControlField from "./ControlField.vue";
 
     let CheckBoxField = {
-        name: "CheckBoxField",
+        name: "CheckBoxListField",
         extends: ControlField,
         props: {
             value: {
@@ -37,6 +37,9 @@
                     this.$emit("input", val);
                 }
             },
+            items() {
+                return this.schema.enum;
+            }
         },
         methods: {
             optionLabel(value) {
