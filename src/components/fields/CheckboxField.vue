@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import ControlField from "./ControlField.vue";
+    import ControlField from "./ControlField.vue";
+    import Lama from "../../lama";
 
 let CheckBoxField = {
   name: "CheckBoxField",
@@ -30,7 +31,13 @@ let CheckBoxField = {
       return this.options.label || this.schema.title || this.options.rightLabel;
     },
   },
-  methods: {},
+    methods: {
+        init() {
+            if (Lama.isValEmpty(this.model) ) {
+                this.model = this.schema.default == true || this.schema.default == "true";
+            }
+        }
+    },
   components: {},
   builder: {
     props() {

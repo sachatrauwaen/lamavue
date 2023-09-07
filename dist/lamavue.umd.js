@@ -48480,12 +48480,12 @@ var ArrayField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_ArrayField = (ArrayField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxField.vue?vue&type=template&id=273e836a&scoped=true&
-var CheckboxFieldvue_type_template_id_273e836a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({attrs:{"showLabel":false},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('div',{staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,null)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),(_vm.label)?_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.label))]):_vm._e()])]}}])},'control',_vm.props,false))}
-var CheckboxFieldvue_type_template_id_273e836a_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CheckboxField.vue?vue&type=template&id=58722490&scoped=true&
+var CheckboxFieldvue_type_template_id_58722490_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({attrs:{"showLabel":false},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('div',{staticClass:"form-check"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-check-input",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"checkbox","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"checked":Array.isArray(_vm.model)?_vm._i(_vm.model,null)>-1:(_vm.model)},on:{"change":function($event){var $$a=_vm.model,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.model=$$a.concat([$$v]))}else{$$i>-1&&(_vm.model=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.model=$$c}}}}),(_vm.label)?_c('label',{staticClass:"form-check-label"},[_vm._v(_vm._s(_vm.label))]):_vm._e()])]}}])},'control',_vm.props,false))}
+var CheckboxFieldvue_type_template_id_58722490_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=273e836a&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CheckboxField.vue?vue&type=template&id=58722490&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/Control.vue?vue&type=template&id=8de29d08&scoped=true&
 var Controlvue_type_template_id_8de29d08_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-group"},[(_vm.showLabel && _vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.badge)?_c('span',{staticClass:"badge badge-dark",staticStyle:{"float":"right"}},[_vm._v(_vm._s(_vm.badge))]):_vm._e(),_c('ValidationProvider',{attrs:{"name":_vm.options.label,"rules":{ required: _vm.schema.required },"tag":"div"},scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_vm._t("default",null,null,flags),(_vm.options.helper)?_c('small',{staticClass:"form-text text-muted"},[_vm._v(_vm._s(_vm.options.helper))]):_vm._e(),(flags.errors.length)?_c('div',{staticClass:"invalid-feedback",staticStyle:{"display":"block"}},_vm._l((flags.errors),function(error,index){return _c('span',{key:index},[_vm._v(_vm._s(error))])}),0):_vm._e()]}}],null,true)})],1)}
@@ -48751,6 +48751,7 @@ var ControlField_component = normalizeComponent(
 //
 //
 
+
 var CheckBoxField = {
   name: "CheckBoxField",
   extends: fields_ControlField,
@@ -48764,7 +48765,13 @@ var CheckBoxField = {
       return this.options.label || this.schema.title || this.options.rightLabel;
     }
   },
-  methods: {},
+  methods: {
+    init: function init() {
+      if (lama.isValEmpty(this.model)) {
+        this.model = this.schema.default == true || this.schema.default == "true";
+      }
+    }
+  },
   components: {},
   builder: {
     props: function props() {
@@ -48804,11 +48811,11 @@ var CheckBoxField = {
 
 var CheckboxField_component = normalizeComponent(
   fields_CheckboxFieldvue_type_script_lang_js_,
-  CheckboxFieldvue_type_template_id_273e836a_scoped_true_render,
-  CheckboxFieldvue_type_template_id_273e836a_scoped_true_staticRenderFns,
+  CheckboxFieldvue_type_template_id_58722490_scoped_true_render,
+  CheckboxFieldvue_type_template_id_58722490_scoped_true_staticRenderFns,
   false,
   null,
-  "273e836a",
+  "58722490",
   null
   
 )
