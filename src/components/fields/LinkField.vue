@@ -71,14 +71,14 @@
                         fields: {
                             text: {
                                 type: 'text',
-                                multilanguage: self.options.multilanguage
+                                multilanguage: self.options.multilanguageLink
                             },
                             type: {
                                 type:"select"
                             },
                             url: {
                                 type: 'text',
-                                multilanguage: self.options.multilanguage,
+                                multilanguage: self.options.multilanguageLink,
                                 dependencies:
                                 {
                                     type: ["url"]
@@ -86,7 +86,7 @@
                             },
                             page: {
                                 type: "page",
-                                multilanguage: self.options.multilanguage,
+                                multilanguage: self.options.multilanguageLink,
                                 dependencies:
                                 {
                                     type: ["page"]
@@ -94,7 +94,7 @@
                             },
                             file: {
                                 type: "file",
-                                multilanguage: self.options.multilanguage,
+                                multilanguage: self.options.multilanguageLink,
                                 dependencies:
                                 {
                                     type: ["file"]
@@ -102,7 +102,7 @@
                             },
                             email: {
                                 type: "text",
-                                multilanguage: self.options.multilanguage,
+                                multilanguage: self.options.multilanguageLink,
                                 dependencies:
                                 {
                                     type: ["email"]
@@ -139,14 +139,14 @@
                     schema: {
                         type: "object",
                         properties: {
-                            multilanguage: {
+                            multilanguageLink: {
                                 type: "boolean",
                             },
                         }
                     },
                     options: {
                         fields: {
-                            multilanguage: {
+                            multilanguageLink: {
                                 rightLabel: "Multi language",
                             },
                         },
@@ -161,7 +161,7 @@
                     },
                     options: {
                         type: "link",
-                        multilanguage: field.multilanguage,
+                        multilanguageLink: field.multilanguageLink,
                     }
                 };
             },
@@ -169,7 +169,7 @@
                 return {
                     label: def.schema.title,
                     fieldType: "link",
-                    multilanguage: def.options.multilanguage,
+                    multilanguageLink: def.options.multilanguageLink,
                 };
             }
         }
