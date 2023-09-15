@@ -57,8 +57,9 @@ export default {
           let valueObject = {};
           if (Lama.isObject(this.value)) {
             //valueObject = Lama.mergeObject(this.value, valueObject);
-            valueObject = this.value;
-            
+            valueObject = this.value;            
+          } else if (!Lama.isEmpty(this.value) && this.connector.defaultCulture){
+            this.$set(valueObject, this.connector.defaultCulture, val);
           }
           this.$set(valueObject, this.connector.currentCulture, val);
           this.$emit("input", valueObject);

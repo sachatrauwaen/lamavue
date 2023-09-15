@@ -178,20 +178,20 @@ export default {
       );
 
       /*
-                if (typeof FileReader === "function") {
-                  const reader = new FileReader();
-                  reader.onload = event => {
-                    this.model = {
-                      url: event.target.result,
-                    };
-                    // rebuild cropperjs with the updated source
-                    //this.$refs.cropper.replace(event.target.result);
-                  };
-                  reader.readAsDataURL(file);
-                } else {
-                  alert("Sorry, FileReader API not supported");
-                }
-                */
+        if (typeof FileReader === "function") {
+            const reader = new FileReader();
+            reader.onload = event => {
+            this.model = {
+                url: event.target.result,
+            };
+            // rebuild cropperjs with the updated source
+            //this.$refs.cropper.replace(event.target.result);
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Sorry, FileReader API not supported");
+        }
+        */
     },
   },
   watch: {

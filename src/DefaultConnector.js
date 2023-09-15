@@ -1,5 +1,6 @@
 export default {
     currentCulture: "nl-NL",
+    defaultCulture: "fr-FR",
     viewType:"create",
     connect() {
 

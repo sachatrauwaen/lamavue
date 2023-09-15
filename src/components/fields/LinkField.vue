@@ -69,11 +69,16 @@
                     },
                     options: {
                         fields: {
+                            text: {
+                                type: 'text',
+                                multilanguage: self.options.multilanguage
+                            },
                             type: {
                                 type:"select"
                             },
                             url: {
                                 type: 'text',
+                                multilanguage: self.options.multilanguage,
                                 dependencies:
                                 {
                                     type: ["url"]
@@ -81,6 +86,7 @@
                             },
                             page: {
                                 type: "page",
+                                multilanguage: self.options.multilanguage,
                                 dependencies:
                                 {
                                     type: ["page"]
@@ -88,6 +94,7 @@
                             },
                             file: {
                                 type: "file",
+                                multilanguage: self.options.multilanguage,
                                 dependencies:
                                 {
                                     type: ["file"]
@@ -95,6 +102,7 @@
                             },
                             email: {
                                 type: "text",
+                                multilanguage: self.options.multilanguage,
                                 dependencies:
                                 {
                                     type: ["email"]
@@ -102,6 +110,7 @@
                             },
                             phone: {
                                 type: "text",
+                                multilanguage: self.options.multilanguage,
                                 dependencies:
                                 {
                                     type: ["phone"]
@@ -129,9 +138,19 @@
                 return {
                     schema: {
                         type: "object",
-                        properties: {}
+                        properties: {
+                            multilanguage: {
+                                type: "boolean",
+                            },
+                        }
                     },
-                    options: {}
+                    options: {
+                        fields: {
+                            multilanguage: {
+                                rightLabel: "Multi language",
+                            },
+                        },
+                    }
                 };
             },
             fromBuilder(field) {
@@ -141,14 +160,16 @@
                         type: "object"
                     },
                     options: {
-                        type: "link"
+                        type: "link",
+                        multilanguage: field.multilanguage,
                     }
                 };
             },
             toBuilder(def) {
                 return {
                     label: def.schema.title,
-                    fieldType: "link"
+                    fieldType: "link",
+                    multilanguage: def.options.multilanguage,
                 };
             }
         }
