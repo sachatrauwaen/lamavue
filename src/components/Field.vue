@@ -45,9 +45,12 @@ export default {
     model: {
       get() {
         if (this.options.multilanguage) {
-          return Lama.isObject(this.value)
-            ? this.value[this.connector.currentCulture]
-            : this.value;
+            if (Lama.isObject(this.value)) {
+                return Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture)
+                    ? this.value[this.connector.currentCulture] : this.value[this.connector.defaultCulture];
+            } else {
+                return this.value;
+            }
         } else {
           return this.value;
         }

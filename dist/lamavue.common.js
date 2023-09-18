@@ -43151,12 +43151,12 @@ var Formvue_type_template_id_496a1fab_scoped_true_staticRenderFns = []
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Field.vue?vue&type=template&id=08ab043d&scoped=true&
-var Fieldvue_type_template_id_08ab043d_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c(_vm.fieldComponent,_vm._b({ref:"comp",tag:"component",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'component',_vm.props,false))],1)}
-var Fieldvue_type_template_id_08ab043d_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Field.vue?vue&type=template&id=34a1f8c9&scoped=true&
+var Fieldvue_type_template_id_34a1f8c9_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c(_vm.fieldComponent,_vm._b({ref:"comp",tag:"component",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'component',_vm.props,false))],1)}
+var Fieldvue_type_template_id_34a1f8c9_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Field.vue?vue&type=template&id=08ab043d&scoped=true&
+// CONCATENATED MODULE: ./src/components/Field.vue?vue&type=template&id=34a1f8c9&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.slice.js
 var es_array_slice = __webpack_require__("fb6a");
@@ -61147,6 +61147,7 @@ var PageField_component = normalizeComponent(
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/LinkField.vue?vue&type=script&lang=js&
 //
 
+
 var LinkField = {
   name: "LinkField",
   extends: fields_ObjectBaseField,
@@ -61159,7 +61160,13 @@ var LinkField = {
         return this.value;
       },
       set: function set(val) {
-        if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "file") val.url = val && val.file ? val.file : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
+        if (this.options.multilanguageLink) {
+          val.url = lama.isObject(val.url) ? val.url : {};
+          if (val.type == "page") val.url[this.connector.currentCulture] = val && val.page && val.page[this.connector.currentCulture] ? val.page[this.connector.currentCulture].url : "";else if (val.type == "file") val.url[this.connector.currentCulture] = val && val.file && val.file[this.connector.currentCulture] ? val.file[this.connector.currentCulture] : "";else if (val.type == "email") val.url[this.connector.currentCulture] = val && val.email && val.email[this.connector.currentCulture] ? 'mailto:' + val.email[this.connector.currentCulture] : "";else if (val.type == "phone") val.url[this.connector.currentCulture] = val && val.phone && val.phone[this.connector.currentCulture] ? 'tel:' + val.phone[this.connector.currentCulture] : "";
+        } else {
+          if (val.type == "page") val.url = val && val.page ? val.page.url : "";else if (val.type == "file") val.url = val && val.file ? val.file : "";else if (val.type == "email") val.url = val && val.email ? 'mailto:' + val.email : "";else if (val.type == "phone") val.url = val && val.phone ? 'tel:' + val.phone : "";
+        }
+
         this.$emit("input", val);
       }
     },
@@ -61322,7 +61329,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "273b81ab",
+  "2384b742",
   null
   
 )
@@ -64683,7 +64690,11 @@ if (typeof window !== 'undefined') {
     model: {
       get: function get() {
         if (this.options.multilanguage) {
-          return lama.isObject(this.value) ? this.value[this.connector.currentCulture] : this.value;
+          if (lama.isObject(this.value)) {
+            return Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ? this.value[this.connector.currentCulture] : this.value[this.connector.defaultCulture];
+          } else {
+            return this.value;
+          }
         } else {
           return this.value;
         }
@@ -64732,11 +64743,11 @@ if (typeof window !== 'undefined') {
 
 var Field_component = normalizeComponent(
   components_Fieldvue_type_script_lang_js_,
-  Fieldvue_type_template_id_08ab043d_scoped_true_render,
-  Fieldvue_type_template_id_08ab043d_scoped_true_staticRenderFns,
+  Fieldvue_type_template_id_34a1f8c9_scoped_true_render,
+  Fieldvue_type_template_id_34a1f8c9_scoped_true_staticRenderFns,
   false,
   null,
-  "08ab043d",
+  "34a1f8c9",
   null
   
 )

@@ -1,6 +1,7 @@
 
 <script>
     import ObjectBaseField from "./ObjectBaseField.vue";
+    import Lama from "../../lama";
 
     let LinkField = {
         name: "LinkField",
@@ -14,15 +15,26 @@
                     return this.value;
                 },
                 set(val) {
-                    if (val.type=="page")
-                        val.url = val && val.page ? val.page.url : "";
-                    else if (val.type == "file")
-                        val.url = val && val.file ? val.file : "";
-                    else if (val.type=="email")
-                        val.url = val && val.email ? 'mailto:'+val.email : "";
-                    else if (val.type=="phone")
-                        val.url = val && val.phone ? 'tel:'+val.phone : "";
-                    
+                    if (this.options.multilanguageLink) {
+                        val.url = Lama.isObject(val.url) ? val.url : {};
+                        if (val.type == "page")
+                            val.url[this.connector.currentCulture] = val && val.page && val.page[this.connector.currentCulture] ? val.page[this.connector.currentCulture].url : "";
+                        else if (val.type == "file")
+                            val.url[this.connector.currentCulture] = val && val.file && val.file[this.connector.currentCulture] ? val.file[this.connector.currentCulture] : "";
+                        else if (val.type == "email")
+                            val.url[this.connector.currentCulture] = val && val.email && val.email[this.connector.currentCulture] ? 'mailto:' + val.email[this.connector.currentCulture] : "";
+                        else if (val.type == "phone")
+                            val.url[this.connector.currentCulture] = val && val.phone && val.phone[this.connector.currentCulture] ? 'tel:' + val.phone[this.connector.currentCulture] : "";
+                    } else {
+                        if (val.type == "page")
+                            val.url = val && val.page ? val.page.url : "";
+                        else if (val.type == "file")
+                            val.url = val && val.file ? val.file : "";
+                        else if (val.type == "email")
+                            val.url = val && val.email ? 'mailto:' + val.email : "";
+                        else if (val.type == "phone")
+                            val.url = val && val.phone ? 'tel:' + val.phone : "";
+                    }
                     this.$emit("input", val);
                 }
             },
