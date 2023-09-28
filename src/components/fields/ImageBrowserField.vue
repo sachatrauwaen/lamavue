@@ -191,7 +191,18 @@
                         },
                         () => { }
                     );
-                });
+                }, this.toMine(this.model.filename));
+            },
+            toMine(filename) {
+
+                if (filename.endsWith(".jpg"))
+                    return "image/jpeg";
+                else if (filename.endsWith(".jpeg"))
+                    return "image/jpeg";
+                else if (filename.endsWith(".png"))
+                    return "image/png";
+                else
+                    return "image/png";
             },
             remove() {
                 this.model = null;
