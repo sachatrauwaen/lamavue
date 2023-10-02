@@ -103,7 +103,23 @@ export default {
     secure: {
       type: Boolean,
       default: false,
-    }
+    },
+    requireMinSize: {
+        type: Boolean,
+        default: false,
+    },
+    resizeOnUpload: {
+        type: Boolean,
+        default: false,
+    },
+      resizeWidth: {
+          type: Number,
+          default: 0,
+      },
+      resizeHeight: {
+          type: Number,
+          default: 0,
+      },
   },
   data() {
     return {
@@ -188,31 +204,119 @@ export default {
         width: this.width,
         height: this.height,
       };
-      this.connector.upload(
-        config,
-        (data) => {
-          this.files.push(data);
-          this.model = data;
-          this.updateImageVersion();
-        },
-        () => {}
-      );
 
-      /*
-                if (typeof FileReader === "function") {
-                  const reader = new FileReader();
-                  reader.onload = event => {
-                    this.model = {
-                      url: event.target.result,
-                    };
-                    // rebuild cropperjs with the updated source
-                    //this.$refs.cropper.replace(event.target.result);
-                  };
-                  reader.readAsDataURL(file);
+        if (this.requireMinSize) {
+            let self = this;
+            var _URL = window.URL || window.webkitURL;
+
+            var img = new Image();
+            var objectUrl = _URL.createObjectURL(file);
+            img.onload = function () {
+                //alert(this.width + " " + this.height);
+                _URL.revokeObjectURL(objectUrl);
+                if (this.width < self.width || this.height < self.height) {
+                    self.$refs.input.value = null;
+                    alert("Image to small : " + this.width + "x" + this.height + " (min required " + self.width +"x"+self.height +")");
                 } else {
-                  alert("Sorry, FileReader API not supported");
+                    self.uploadImage(config);
                 }
-                */
+            };
+            img.src = objectUrl;
+        } else {
+            self.uploadImage(config);
+        }
+
+        /*
+        if (typeof FileReader === "function") {
+            const reader = new FileReader();
+            reader.onload = event => {
+            this.model = {
+                url: event.target.result,
+            };
+            // rebuild cropperjs with the updated source
+            //this.$refs.cropper.replace(event.target.result);
+            };
+            reader.readAsDataURL(file);
+        } else {
+            alert("Sorry, FileReader API not supported");
+        }
+        */
+      },
+      uploadImage(config) {
+
+          if (this.resizeOnUpload) {
+              //var resizedImage;
+              var self = this;
+              // Read in file
+              var file = config.file;
+
+              var _URL = window.URL || window.webkitURL;
+              var objectUrl = _URL.createObjectURL(file);
+
+
+              //var reader = new FileReader();
+              //reader.onload = function (readerEvent) {
+                  var image = new Image();
+                  image.onload = function () {
+
+                      var canvas = document.createElement('canvas');
+
+                      var MAX_WIDTH = self.resizeWidth;
+                      var MAX_HEIGHT = self.resizeHeight;
+                      var width = canvas.width;
+                      var height = canvas.height;
+
+                      if (width > height) {
+                          if (width > MAX_WIDTH) {
+                              height *= MAX_WIDTH / width;
+                              width = MAX_WIDTH;
+                          }
+                      } else {
+                          if (height > MAX_HEIGHT) {
+                              width *= MAX_HEIGHT / height;
+                              height = MAX_HEIGHT;
+                          }
+                      }
+                      canvas.width = width;
+                      canvas.height = height;
+                      canvas.getContext('2d').drawImage(image, 0, 0, width, height);
+                      //resizedImage = canvas.toDataURL('image/jpeg');
+
+                      canvas.toBlob((blob) => {
+                          config.file = blob;
+                          self.upload(config);
+                      }, self.toMine(config.name));
+                  }
+                  //image.src = readerEvent.target.result;
+                  image.src = objectUrl;
+              //}
+              //reader.readAsDataURL(file);
+
+          } else {
+              this.upload(config)
+          }
+      },
+      toMine(filename) {
+
+          if (filename.endsWith(".jpg"))
+              return "image/jpeg";
+          else if (filename.endsWith(".jpeg"))
+              return "image/jpeg";
+          else if (filename.endsWith(".png"))
+              return "image/png";
+          else
+              return "image/png";
+      },
+      upload(config) {
+          this.connector.upload(
+              config,
+              (data) => {
+                  this.files.push(data);
+                  this.model = data;
+                  this.updateImageVersion();
+              },
+              () => { }
+          );
       },
       updateImageVersion() {
           this.imageVersion = Date.now();

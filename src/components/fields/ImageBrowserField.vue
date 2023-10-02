@@ -65,6 +65,10 @@
                     height: this.options.height,
                     accept: this.options.accept,
                     fileMaxSize: this.options.fileMaxSize,
+                    requireMinSize: this.options.requireMinSize,
+                    resizeOnUpload: this.options.resizeOnUpload,
+                    resizeWidth: this.options.resizeWidth,
+                    resizeHeight: this.options.resizeHeight
                 }
             },
             imageSrc() {
@@ -235,16 +239,30 @@
                             showCropper: {
                                 "type": "boolean"
                             },
+                            requireMinSize: {
+                                "type": "boolean"
+                            },
                             width: {
-                                "title": "Width",
+                                "title": "Width (for cropper & min. size)",
                                 "type": "number"
                             },
                             height: {
-                                "title": "Height",
+                                "title": "Height (for cropper & min. size)",
+                                "type": "number"
+                            },
+                            resizeOnUpload: {
+                                "type": "boolean"
+                            },
+                            resizeWidth: {
+                                "title": "Max upload width",
+                                "type": "number"
+                            },
+                            resizeHeight: {
+                                "title": "Max upload height",
                                 "type": "number"
                             },
                             accept: {
-                                "title": "Accept",
+                                "title": "Accept (see html accept attribute of input)",
                                 "type": "string",
                                 "default": "image/*"
                             },
@@ -252,7 +270,8 @@
                                 "title": "max size (bytes)",
                                 "type": "number",
                                 "default": 0
-                            }
+                            },
+                            
                         }
                     },
                     options: {
@@ -268,6 +287,24 @@
                             },
                             showCropper: {
                                 rightLabel: "Show cropper",
+                            },
+                            requireMinSize: {
+                                rightLabel: "Require min. size",
+                            },
+                            resizeOnUpload: {
+                                rightLabel: "Resize on upload",
+                            },
+                            resizeWidth: {
+                                dependencies:
+                                {
+                                    resizeOnUpload: [true]
+                                }
+                            },
+                            resizeHeight: {
+                                dependencies:
+                                {
+                                    resizeOnUpload: [true]
+                                }
                             },
                         }
                     }
@@ -289,7 +326,11 @@
                         width: field.width,
                         height: field.height,
                         accept: field.accept,
-                        fileMaxSize: field.fileMaxSize
+                        fileMaxSize: field.fileMaxSize,
+                        requireMinSize: field.requireMinSize,
+                        resizeOnUpload: field.resizeOnUpload,
+                        resizeWidth: field.resizeWidth,
+                        resizeHeight: field.resizeHeight
                     }
                 };
             },
@@ -305,7 +346,11 @@
                     width: def.options.width,
                     height: def.options.height,
                     accept: def.options.accept,
-                    fileMaxSize: def.options.fileMaxSize
+                    fileMaxSize: def.options.fileMaxSize,
+                    requireMinSize: def.options.requireMinSize,
+                    resizeOnUpload: def.options.resizeOnUpload,
+                    resizeWidth: def.options.resizeWidth,
+                    resizeHeight: def.options.resizeHeight
                 };
             }
         }
