@@ -60,7 +60,7 @@
 <script>
 import VueSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
-    import Lama from "../../lama";
+import Lama from "../../lama";
 
 export default {
   name: "ImageBrowser",

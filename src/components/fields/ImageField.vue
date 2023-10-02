@@ -47,7 +47,8 @@ import Control from "./Control.vue";
 import ImageEditor from "./ImageEditor.vue";
 import VueCropper from "vue-cropperjs";
 import "cropperjs/dist/cropper.css";
-import FileBrowser from "./FileBrowser.vue";
+    import FileBrowser from "./FileBrowser.vue";
+    import Lama from "../../lama";
 
 let ImageField = {
   name: "ImageField",
@@ -131,22 +132,11 @@ let ImageField = {
           },
           () => {}
         );
-      }, this.toMine(this.model));
+      }, Lama.toMine(this.model));
     },
     remove() {
       this.model = null;
-    },
-    toMine(filename) {
-
-      if (filename.endsWith(".jpg"))
-        return "image/jpeg";
-      else if (filename.endsWith(".jpeg"))
-        return "image/jpeg";
-      else if (filename.endsWith(".png"))
-        return "image/png";
-      else 
-        return "image/png";
-    },
+    },    
     updateImageVersion(){
       this.imageVersion=new Date().getTime();
     }

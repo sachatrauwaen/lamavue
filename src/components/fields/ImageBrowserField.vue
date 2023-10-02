@@ -35,7 +35,7 @@
     import VueCropper from "vue-cropperjs";
     import "cropperjs/dist/cropper.css";
     import ImageBrowser from "./ImageBrowser.vue";
-
+    import Lama from "../../lama";
 
     let ImagexField = {
         name: "ImageBrowserField",
@@ -195,19 +195,8 @@
                         },
                         () => { }
                     );
-                }, this.toMine(this.model.filename));
-            },
-            toMine(filename) {
-
-                if (filename.endsWith(".jpg"))
-                    return "image/jpeg";
-                else if (filename.endsWith(".jpeg"))
-                    return "image/jpeg";
-                else if (filename.endsWith(".png"))
-                    return "image/png";
-                else
-                    return "image/png";
-            },
+                }, Lama.toMine(this.model.filename));
+            },            
             remove() {
                 this.model = null;
             }
