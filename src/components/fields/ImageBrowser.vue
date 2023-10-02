@@ -264,8 +264,8 @@ export default {
 
                       var MAX_WIDTH = self.resizeWidth;
                       var MAX_HEIGHT = self.resizeHeight;
-                      var width = canvas.width;
-                      var height = canvas.height;
+                      var width = this.width;
+                      var height = this.height;
 
                       if (width > height) {
                           if (width > MAX_WIDTH) {
