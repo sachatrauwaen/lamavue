@@ -65229,7 +65229,7 @@ var lama_Lama = {
     return a;
   },
   endsWith: function endsWith(text, suffix) {
-    return this.indexOf(suffix, text.length - suffix.length) !== -1;
+    return text.indexOf(suffix, text.length - suffix.length) !== -1;
   },
   toMine: function toMine(filename) {
     if (lama_Lama.endsWith(filename, ".jpg")) return "image/jpeg";else if (lama_Lama.endsWith(filename, ".jpeg")) return "image/jpeg";else if (lama_Lama.endsWith(filename, ".png")) return "image/png";else return "image/png";

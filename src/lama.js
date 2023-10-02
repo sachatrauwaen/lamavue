@@ -46,7 +46,7 @@ let Lama = {
         return a;
     },
     endsWith: function (text, suffix) {
-        return this.indexOf(suffix, text.length - suffix.length) !== -1;
+        return text.indexOf(suffix, text.length - suffix.length) !== -1;
     },
     toMine(filename) {
         if (Lama.endsWith(filename, ".jpg"))
