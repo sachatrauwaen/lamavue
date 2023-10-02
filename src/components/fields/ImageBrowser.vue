@@ -60,9 +60,10 @@
 <script>
 import VueSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
+    import Lama from "../../lama";
 
 export default {
-  name: "FileBrowser",
+  name: "ImageBrowser",
   props: {
     value: {},
     connector: {},
@@ -285,7 +286,7 @@ export default {
                       canvas.toBlob((blob) => {
                           config.file = blob;
                           self.upload(config);
-                      }, self.toMine(config.name));
+                      }, Lama.toMine(config.name));
                   }
                   //image.src = readerEvent.target.result;
                   image.src = objectUrl;
@@ -296,17 +297,7 @@ export default {
               this.upload(config)
           }
       },
-      toMine(filename) {
-
-          if (filename.endsWith(".jpg"))
-              return "image/jpeg";
-          else if (filename.endsWith(".jpeg"))
-              return "image/jpeg";
-          else if (filename.endsWith(".png"))
-              return "image/png";
-          else
-              return "image/png";
-      },
+      
       upload(config) {
           this.connector.upload(
               config,

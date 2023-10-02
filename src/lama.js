@@ -45,7 +45,19 @@ let Lama = {
                 a[key] = b[key];
         return a;
     },
-
+    endsWith: function (text, suffix) {
+        return this.indexOf(suffix, text.length - suffix.length) !== -1;
+    },
+    toMine(filename) {
+        if (Lama.endsWith(filename, ".jpg"))
+            return "image/jpeg";
+        else if (Lama.endsWith(filename, ".jpeg"))
+            return "image/jpeg";
+        else if (Lama.endsWith(filename, ".png"))
+            return "image/png";
+        else
+            return "image/png";
+    },
     /**
      * Makes an array.
      *
