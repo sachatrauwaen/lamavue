@@ -49,7 +49,7 @@ export default {
   props: {
     value: {},
     connector: {},
-    baseForlder: {},
+    baseFolder: {},
     accept: {},
     width: {
       type: Number,
