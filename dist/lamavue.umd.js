@@ -51367,12 +51367,12 @@ var FileField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_FileField = (FileField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowserField.vue?vue&type=template&id=374fbc0b&
-var FileBrowserFieldvue_type_template_id_374fbc0b_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('file-browser',_vm._b({model:{value:(_vm.fileObj),callback:function ($$v) {_vm.fileObj=$$v},expression:"fileObj"}},'file-browser',_vm.fileBrowserProps,false))],1)}
-var FileBrowserFieldvue_type_template_id_374fbc0b_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowserField.vue?vue&type=template&id=74f17b97&
+var FileBrowserFieldvue_type_template_id_74f17b97_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('file-browser',_vm._b({model:{value:(_vm.fileObj),callback:function ($$v) {_vm.fileObj=$$v},expression:"fileObj"}},'file-browser',_vm.fileBrowserProps,false))],1)}
+var FileBrowserFieldvue_type_template_id_74f17b97_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileBrowserField.vue?vue&type=template&id=374fbc0b&
+// CONCATENATED MODULE: ./src/components/fields/FileBrowserField.vue?vue&type=template&id=74f17b97&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=template&id=ea699ed8&scoped=true&
 var FileBrowservue_type_template_id_ea699ed8_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e(),(_vm.showOverwrite)?_c('div',{staticStyle:{"position":"absolute","bottom":"40px","right":"5px"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doOverwrite),expression:"doOverwrite"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.doOverwrite)?_vm._i(_vm.doOverwrite,null)>-1:(_vm.doOverwrite)},on:{"change":function($event){var $$a=_vm.doOverwrite,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.doOverwrite=$$a.concat([$$v]))}else{$$i>-1&&(_vm.doOverwrite=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.doOverwrite=$$c}}}}),_c('label',{},[_vm._v("Overwrite")])]):_vm._e()],1)}
@@ -51741,6 +51741,7 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
     toBuilder: function toBuilder(def) {
       return {
         fieldType: "filebrowser",
+        uploadfolder: def.options.uploadfolder,
         overwrite: def.options.overwrite,
         secure: def.options.secure
       };
@@ -51760,8 +51761,8 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
 
 var FileBrowserField_component = normalizeComponent(
   fields_FileBrowserFieldvue_type_script_lang_js_,
-  FileBrowserFieldvue_type_template_id_374fbc0b_render,
-  FileBrowserFieldvue_type_template_id_374fbc0b_staticRenderFns,
+  FileBrowserFieldvue_type_template_id_74f17b97_render,
+  FileBrowserFieldvue_type_template_id_74f17b97_staticRenderFns,
   false,
   null,
   null,

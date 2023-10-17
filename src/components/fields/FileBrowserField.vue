@@ -119,6 +119,7 @@
             toBuilder(def) {
                 return {
                     fieldType: "filebrowser",
+                    uploadfolder: def.options.uploadfolder,
                     overwrite: def.options.overwrite,
                     secure: def.options.secure,
                 };
