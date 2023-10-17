@@ -107,6 +107,8 @@
                             file: {
                                 type: "file",
                                 multilanguage: self.options.multilanguageLink,
+                                uploadfolder: self.options.uploadfolder,
+                                overwrite: self.options.overwrite,
                                 dependencies:
                                 {
                                     type: ["file"]
@@ -151,6 +153,13 @@
                     schema: {
                         type: "object",
                         properties: {
+                            uploadfolder: {
+                                "title": "File Upload Folder",
+                                "type": "string"
+                            },
+                            overwrite: {
+                                "type": "boolean"
+                            },
                             multilanguageLink: {
                                 type: "boolean",
                             },
@@ -158,6 +167,9 @@
                     },
                     options: {
                         fields: {
+                            overwrite: {
+                                rightLabel: "File Overwrite",
+                            },
                             multilanguageLink: {
                                 rightLabel: "Multi language",
                             },
@@ -173,6 +185,8 @@
                     },
                     options: {
                         type: "link",
+                        uploadfolder: field.uploadfolder,
+                        overwrite: field.overwrite,
                         multilanguageLink: field.multilanguageLink,
                     }
                 };
@@ -181,6 +195,8 @@
                 return {
                     label: def.schema.title,
                     fieldType: "link",
+                    uploadfolder: def.options.uploadfolder,
+                    overwrite: def.options.overwrite,
                     multilanguageLink: def.options.multilanguageLink,
                 };
             }

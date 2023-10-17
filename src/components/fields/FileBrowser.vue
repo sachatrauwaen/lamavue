@@ -136,7 +136,8 @@ export default {
       let config = {
         query: {
           type: "files",
-          folder: this.folder,
+          //folder: this.folder,
+          folder: this.baseFolder,
           secure: this.secure,
         },
       };

@@ -17,8 +17,7 @@
 
 <script>
     import ControlField from "./ControlField.vue";
-    import Control from "./Control.vue";
-    import FileBrowser from "./FileBrowser.vue";
+    import Control from "./Control.vue";    
 
     let FileField = {
         name: "FileField",
@@ -43,12 +42,15 @@
                     file: file,
                     name: file.name,
                     secure: this.options.secure,
-                    folder: this.baseFolder,
+                    //folder: this.baseFolder,
+                    folder: this.options.uploadfolder,
+                    overwrite: this.options.overwrite
                 };
                 this.connector.upload(
                     config,
                     (data) => {
                         this.model = data.url;
+
                         //this.updateImageVersion();
                     },
                     () => { }
@@ -58,13 +60,20 @@
                 this.$refs.input.click();
             }
         },
-        components: { Control, FileBrowser },
+        components: { Control },
         builder: {
             props() {
                 return {
                     schema: {
                         type: "object",
                         properties: {
+                            uploadfolder: {
+                                "title": "Upload Folder",
+                                "type": "string"
+                            },
+                            overwrite: {
+                                "type": "boolean"
+                            },
                             secure: {
                                 "type": "boolean"
                             }
@@ -72,6 +81,9 @@
                     },
                     options: {
                         fields: {
+                            overwrite: {
+                                rightLabel: "Overwrite",
+                            },
                             secure: {
                                 rightLabel: "Secure",
                             }
@@ -86,6 +98,8 @@
                     },
                     options: {
                         type: "file",
+                        uploadfolder: field.uploadfolder,
+                        overwrite: field.overwrite,
                         secure: field.secure,
                     }
                 };
@@ -93,6 +107,8 @@
             toBuilder(def) {
                 return {
                     fieldType: "file",
+                    uploadfolder: def.options.uploadfolder,
+                    overwrite: def.options.overwrite,
                     secure: def.options.secure,
                 };
             }
