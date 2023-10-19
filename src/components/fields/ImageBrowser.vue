@@ -205,9 +205,9 @@ export default {
         width: this.width,
         height: this.height,
       };
-
+        let self = this;
         if (this.requireMinSize) {
-            let self = this;
+            
             var _URL = window.URL || window.webkitURL;
 
             var img = new Image();
