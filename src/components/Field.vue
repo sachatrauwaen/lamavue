@@ -45,7 +45,10 @@ export default {
     model: {
       get() {
         if (this.options.multilanguage) {
-            if (Lama.isObject(this.value)) {
+            if (Lama.isObject(this.value) && (
+                Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ||
+                Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)
+               ) ) {
                 return Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture)
                     ? this.value[this.connector.currentCulture] : this.value[this.connector.defaultCulture];
             } else {
@@ -58,7 +61,10 @@ export default {
       set(val) {
         if (this.options.multilanguage) {
           let valueObject = {};
-          if (Lama.isObject(this.value)) {
+            if (Lama.isObject(this.value) && (
+                Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ||
+                Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)
+            )) {
             //valueObject = Lama.mergeObject(this.value, valueObject);
             valueObject = this.value;            
           } else if (!Lama.isEmpty(this.value)

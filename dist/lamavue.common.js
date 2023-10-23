@@ -44778,12 +44778,12 @@ var Formvue_type_template_id_496a1fab_scoped_true_staticRenderFns = []
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
 var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Field.vue?vue&type=template&id=34a1f8c9&scoped=true&
-var Fieldvue_type_template_id_34a1f8c9_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c(_vm.fieldComponent,_vm._b({ref:"comp",tag:"component",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'component',_vm.props,false))],1)}
-var Fieldvue_type_template_id_34a1f8c9_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"40500c24-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Field.vue?vue&type=template&id=0e46f2d9&scoped=true&
+var Fieldvue_type_template_id_0e46f2d9_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c(_vm.fieldComponent,_vm._b({ref:"comp",tag:"component",model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'component',_vm.props,false))],1)}
+var Fieldvue_type_template_id_0e46f2d9_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Field.vue?vue&type=template&id=34a1f8c9&scoped=true&
+// CONCATENATED MODULE: ./src/components/Field.vue?vue&type=template&id=0e46f2d9&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
@@ -66524,7 +66524,7 @@ if (typeof window !== 'undefined') {
     model: {
       get: function get() {
         if (this.options.multilanguage) {
-          if (lama.isObject(this.value)) {
+          if (lama.isObject(this.value) && (Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) || Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture))) {
             return Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ? this.value[this.connector.currentCulture] : this.value[this.connector.defaultCulture];
           } else {
             return this.value;
@@ -66537,7 +66537,7 @@ if (typeof window !== 'undefined') {
         if (this.options.multilanguage) {
           var valueObject = {};
 
-          if (lama.isObject(this.value)) {
+          if (lama.isObject(this.value) && (Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) || Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture))) {
             //valueObject = Lama.mergeObject(this.value, valueObject);
             valueObject = this.value;
           } else if (!lama.isEmpty(this.value) && this.connector.defaultCulture && this.connector.defaultCulture != this.connector.currentCulture) {
@@ -66577,11 +66577,11 @@ if (typeof window !== 'undefined') {
 
 var Field_component = normalizeComponent(
   components_Fieldvue_type_script_lang_js_,
-  Fieldvue_type_template_id_34a1f8c9_scoped_true_render,
-  Fieldvue_type_template_id_34a1f8c9_scoped_true_staticRenderFns,
+  Fieldvue_type_template_id_0e46f2d9_scoped_true_render,
+  Fieldvue_type_template_id_0e46f2d9_scoped_true_staticRenderFns,
   false,
   null,
-  "34a1f8c9",
+  "0e46f2d9",
   null
   
 )
