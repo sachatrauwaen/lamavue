@@ -112,6 +112,7 @@ export default {
         schema: this.field.props.schema,
         options: this.field.props.options,
         view: this.field.props.view,
+        connector: this.connector,
         index: index,
         show: index == this.showIndex,
       };

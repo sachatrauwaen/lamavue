@@ -43,11 +43,18 @@ export default {
     headerLabel() {
       if (!this.value) return "[empty item]";
       if (!Lama.isObject(this.value)) return this.value;
-      let keys = Object.keys(this.schema.properties);
-        let l = this.value[keys[0]];
+          let keys = Object.keys(this.schema.properties);
+          let firstKey = keys[0];
+          let l = this.value[firstKey];
         if (Lama.isObject(l)) {
             if (l[this.options.titleField]) {
                 l = l[this.options.titleField];
+                if (Lama.isObject(l) && l[this.connector.currentCulture]) {
+                    l = l[this.connector.currentCulture];
+                }
+                else {
+                    l = l[Object.keys(l)[0]]
+                }
             } else {
                 l = l[Object.keys(l)[0]];
             }
