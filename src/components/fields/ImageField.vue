@@ -87,7 +87,9 @@ let ImageField = {
           this.model = data.url;
           this.updateImageVersion();
         },
-        () => {}
+        (message) => {
+            alert(message);
+        }
       );
 
       /*

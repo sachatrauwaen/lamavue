@@ -204,7 +204,9 @@ export default {
           this.selected = f;
           this.updateImageVersion();
         },
-        () => {}
+        (message) => {
+            alert(message);
+        }
       );
 
       /*

@@ -175,7 +175,9 @@ export default {
           this.model = data;
           this.updateImageVersion();
         },
-        () => {}
+        (message) => {
+          alert(message);
+        }
       );
 
       /*

@@ -53,7 +53,9 @@
 
                         //this.updateImageVersion();
                     },
-                    () => { }
+                    (message) => {
+                      alert(message);
+                    }
                 );
             },
             showFileChooser() {
