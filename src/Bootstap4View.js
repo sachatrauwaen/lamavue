@@ -88,7 +88,6 @@ export default {
             },
             "horizontal": false
         });
-
         
         Lama.registerView({
             "id": "bootstrap4-create",
@@ -98,7 +97,5 @@ export default {
             "type": "create",
             "displayReadonly": false
         });
-        
-        
     }
 }
