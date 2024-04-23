@@ -18,6 +18,7 @@ let SelectField = {
     },
     schema: {},
     options: {},
+    view: {},
     connector: {}
   },
   computed: {  

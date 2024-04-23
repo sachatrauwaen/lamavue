@@ -93,7 +93,7 @@ export default {
       var options =
         this.options && this.options.items ? this.options.items : {};
       options.label = options.label || schema.title || "";
-      var view = this.view && this.view.items ? this.view.items : {};
+      var view = this.view ? this.view : {};
       // eslint-disable-next-line no-undef
       let field = Lama.createFieldInstance(
         "",
