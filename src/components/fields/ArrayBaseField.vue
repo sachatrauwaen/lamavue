@@ -18,6 +18,7 @@ let ArrayBaseField = {
     schema: {},
     options: {},
     connector: {},
+    view: {},
     errorCallback: {}
   },
   computed: {

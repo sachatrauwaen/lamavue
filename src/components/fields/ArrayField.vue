@@ -4,7 +4,7 @@ import ArrayBaseField from "./ArrayBaseField.vue";
 
 let ArrayField = {
   name: "ArrayField",
-   extends: ArrayBaseField,
+  extends: ArrayBaseField,
   computed: {
     props() {
       return {
