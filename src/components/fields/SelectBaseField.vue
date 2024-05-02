@@ -1,6 +1,7 @@
 <template>
   <control v-bind="props">
-    <select class="form-control" v-model="model">
+    <select class="form-control" v-model="model" :disabled="schema.readonly" >
+      <option v-if="!schema.required" value="">{{options.noneLabel || "None"}}</option>
       <option v-for="option in items" :key="option.value" :value="option.value">{{option.label}}</option>
     </select>
   </control>

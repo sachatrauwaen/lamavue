@@ -54,6 +54,9 @@
                             required: {
                                 type: "boolean",
                             },
+                            readonly: {
+                                type: "boolean",
+                            },
                             hidden: {
                                 type: "boolean",
                             },
@@ -88,6 +91,9 @@
                             required: {
                                 rightLabel: "Required",
                             },
+                            readonly: {
+                                rightLabel: "Readonly",
+                            },
                             hidden: {
                                 rightLabel: "Hidden",
                             },
@@ -111,7 +117,7 @@
                         title: field.label,
                         default: field.default,
                         required: field.required,
-
+                        readonly: field.readonly,
                     },
                     options: {
                         hidden: field.hidden,
@@ -136,6 +142,7 @@
                     label: def.schema.title,
                     default: def.schema.default,
                     required: def.schema.required,
+                    readonly: def.schema.readonly,
                     hidden: def.options.hidden,
                     helper: def.options.helper,
                     multilanguage: def.options.multilanguage,

@@ -1,7 +1,7 @@
 <template>
   <control v-bind="props">
     <div class="form-check" v-for="(val, index ) in schema.enum" :key="val">
-      <input class="form-check-input" type="radio" v-model="model" :value="val" />
+      <input class="form-check-input" type="radio" v-model="model" :value="val" :readonly="schema.readonly" />
       <label class="form-check-label">{{label(index)}}</label>
     </div>
   </control>

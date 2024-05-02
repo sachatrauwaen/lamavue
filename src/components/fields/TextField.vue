@@ -8,6 +8,7 @@
       v-model="model"
       :class="{ 'is-invalid': flags.invalid && flags.touched }"
       :placeholder="options.placeholder"
+      :readonly="schema.readonly"
     />
   </control>
 </template>

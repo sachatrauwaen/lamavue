@@ -10,6 +10,7 @@
       :options="items"
       :reduce="reduce"
       :filterable="true"
+      :disabled="schema.readonly"
     ></vue-select>
   </control>
 </template>

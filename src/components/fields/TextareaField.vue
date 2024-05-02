@@ -8,6 +8,7 @@
       :rows="options.rows"
       :cols="options.cols"
       :class="{'is-invalid':flags.invalid && flags.touched}"
+      :readonly="schema.readonly"
     />
   </control>
 </template>

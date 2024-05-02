@@ -10,7 +10,7 @@
                                   formatted="ll"
                                   v-model="model"
                                   :class="{'is-invalid':flags.invalid && flags.touched}"
-                                  :label="options.placeholder" />
+                                  :label="options.placeholder" :disabled="schema.readonly" />
     </control>
 </template>
 

@@ -8,7 +8,8 @@
                    :value="c"
                    v-model="model"
                    :class="{'is-invalid':flags.invalid && flags.touched}"
-                   :placeholder="options.placeholder" />
+                   :placeholder="options.placeholder"
+                   :readonly="schema.readonly" />
             <label class="form-check-label">{{optionLabel(c)}}</label>
         </div>
     </control>
