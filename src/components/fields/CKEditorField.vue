@@ -1,6 +1,6 @@
 <template>
   <control v-bind="props">
-    <ckeditor v-model="model" :config="editorConfig"></ckeditor>
+    <ckeditor v-model="model" :config="editorConfig" @namespaceloaded="onNamespaceLoaded" @ready="onEditorReady"></ckeditor>
   </control>
 </template>
 
@@ -253,7 +253,14 @@ let CKEditorField = {
       }
     }
   },
-  methods: {},
+    methods: {
+        /*eslint no-unused-vars: ["error", { "args": "none" }]*/
+      onNamespaceLoaded(CKEDITOR) {
+        },
+        /*eslint no-unused-vars: ["error", { "args": "none" }]*/
+      onEditorReady(evt) {
+      }
+  },
   components: { Control, ckeditor: CKEditor.component },
   builder: {
     props() {
