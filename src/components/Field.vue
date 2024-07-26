@@ -45,12 +45,18 @@ export default {
     model: {
       get() {
         if (this.options.multilanguage) {
-            if (Lama.isObject(this.value) && (
-                Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ||
-                Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)
-               ) ) {
-                return Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture)
-                    ? this.value[this.connector.currentCulture] : this.value[this.connector.defaultCulture];
+            if (Lama.isObject(this.value)) {
+                if (Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture)) {
+                    return this.value[this.connector.currentCulture];
+                } else if (Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)) {
+                    //let val = this.value[this.connector.defaultCulture];
+                    //if (Lama.isString(val))
+                    //    return this.value[this.connector.defaultCulture] + ' [' + this.connector.defaultCulture.substring(0, 2).toUpperCase() + ']';
+                    //else
+                        return this.value[this.connector.defaultCulture];
+                } else {
+                    return null;
+                }
             } else {
                 return this.value;
             }
@@ -89,7 +95,7 @@ export default {
   methods: {
     init() {
       if (this.$refs.comp) this.$refs.comp.init();
-    },
+      }
   },
   components: {},
 };

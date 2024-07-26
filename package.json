@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/lamavue.umd.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --target lib --name lamavue ./src/lamavue.js",
     "buildapp": "vue-cli-service build --mode development",
     "lint": "vue-cli-service lint",
@@ -16,7 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "@googlemaps/js-api-loader": "^1.16.6",
-    "ckeditor4-vue": "^0.2.0",
+    "ckeditor4-vue": "^2.4.0",
     "core-js": "^3.6.4",
     "vee-validate": "^3.2.5",
     "vue": "^2.6.11",

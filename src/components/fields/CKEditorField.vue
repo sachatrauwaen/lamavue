@@ -65,6 +65,7 @@
         //skin : 'flat',
         customConfig: "",
         stylesSet: [],
+        versionCheck: false
     };
 
     const standardConfig = {
@@ -128,6 +129,7 @@
         //skin : 'flat',
         customConfig: "",
         stylesSet: [],
+        versionCheck: false
     };
 
     const fullConfig = {
@@ -231,6 +233,7 @@
         customConfig: "",
         stylesSet: [],
         //easyimage_toolbar :['EasyImageAlignLeft', 'EasyImageAlignCenter', 'EasyImageAlignRight']
+        versionCheck: false
     };
 
     const configSets = { basic: basicConfig, standard: standardConfig, full: fullConfig };
@@ -253,7 +256,7 @@
                 }
             },
             editorUrl() {
-                return "";
+                return undefined;
             }
         },
         methods: {
