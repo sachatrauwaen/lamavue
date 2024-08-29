@@ -1,6 +1,6 @@
 <template>
     <control v-bind="props">
-        <ckeditor v-model="model" :config="editorConfig" :editor-url="editorUrl" @namespaceloaded="onNamespaceLoaded" @ready="onEditorReady"></ckeditor>
+        <ckeditor :value="model" @input="model= $event" :config="editorConfig" @namespaceloaded="onNamespaceLoaded" @ready="onEditorReady" :editor-url="editorUrl" ></ckeditor>
     </control>
 </template>
 
@@ -9,6 +9,7 @@
     import TextField from "./TextField.vue";
     import Control from "./Control.vue";
     import CKEditor from "ckeditor4-vue";
+    //import CKEditor from "./VueCkeditor";
 
     const basicConfig = {
         toolbar: [
@@ -248,11 +249,19 @@
             };
         },
         computed: {
+            model: {
+                get() {
+                    return this.value || '';
+                },
+                set(val) {
+                    this.$emit("input", val);
+                }
+            },
             editorConfig() {
                 if (this.options.configset) {
-                    return configSets[this.options.configset];
+                    return Object.assign({}, configSets[this.options.configset]); // clone
                 } else {
-                    return basicConfig;
+                    return Object.assign({}, basicConfig); // clone
                 }
             },
             editorUrl() {
