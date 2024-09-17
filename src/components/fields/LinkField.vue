@@ -163,6 +163,23 @@
                             multilanguageLink: {
                                 type: "boolean",
                             },
+                            dependencies: {
+                                type: "array",
+                                title: "Dependencies",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        fieldname: {
+                                            title: "Field",
+                                            type: "string",
+                                        },
+                                        values: {
+                                            title: "Values (value1, value2, ...)",
+                                            type: "string",
+                                        },
+                                    },
+                                },
+                            },
                         }
                     },
                     options: {
@@ -178,6 +195,13 @@
                 };
             },
             fromBuilder(field) {
+                let optDeps = {};
+                if (field.dependencies) {
+                    for (let index = 0; index < field.dependencies.length; index++) {
+                        const d = field.dependencies[index];
+                        optDeps[d.fieldname] = d.values;
+                    }
+                }
                 return {
                     schema: {
                         title: field.label,
@@ -188,16 +212,28 @@
                         uploadfolder: field.uploadfolder,
                         overwrite: field.overwrite,
                         multilanguageLink: field.multilanguageLink,
+                        dependencies: optDeps,
                     }
                 };
             },
             toBuilder(def) {
+                let deps = [];
+                if (def.options.dependencies) {
+                    for (const key in def.options.dependencies) {
+                        const d = def.options.dependencies[key];
+                        deps.push({
+                            fieldname: key,
+                            values: d,
+                        });
+                    }
+                }
                 return {
                     label: def.schema.title,
                     fieldType: "link",
                     uploadfolder: def.options.uploadfolder,
                     overwrite: def.options.overwrite,
                     multilanguageLink: def.options.multilanguageLink,
+                    dependencies: deps,
                 };
             }
         }

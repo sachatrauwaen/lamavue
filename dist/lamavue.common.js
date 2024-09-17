@@ -66399,6 +66399,9 @@ var PageField_component = normalizeComponent(
 
 /* harmony default export */ var fields_PageField = (PageField_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/LinkField.vue?vue&type=script&lang=js&
+
+
+
 //
 
 
@@ -66542,6 +66545,23 @@ var LinkField = {
             },
             multilanguageLink: {
               type: "boolean"
+            },
+            dependencies: {
+              type: "array",
+              title: "Dependencies",
+              items: {
+                type: "object",
+                properties: {
+                  fieldname: {
+                    title: "Field",
+                    type: "string"
+                  },
+                  values: {
+                    title: "Values (value1, value2, ...)",
+                    type: "string"
+                  }
+                }
+              }
             }
           }
         },
@@ -66558,6 +66578,15 @@ var LinkField = {
       };
     },
     fromBuilder: function fromBuilder(field) {
+      var optDeps = {};
+
+      if (field.dependencies) {
+        for (var index = 0; index < field.dependencies.length; index++) {
+          var d = field.dependencies[index];
+          optDeps[d.fieldname] = d.values;
+        }
+      }
+
       return {
         schema: {
           title: field.label,
@@ -66567,17 +66596,31 @@ var LinkField = {
           type: "link",
           uploadfolder: field.uploadfolder,
           overwrite: field.overwrite,
-          multilanguageLink: field.multilanguageLink
+          multilanguageLink: field.multilanguageLink,
+          dependencies: optDeps
         }
       };
     },
     toBuilder: function toBuilder(def) {
+      var deps = [];
+
+      if (def.options.dependencies) {
+        for (var key in def.options.dependencies) {
+          var d = def.options.dependencies[key];
+          deps.push({
+            fieldname: key,
+            values: d
+          });
+        }
+      }
+
       return {
         label: def.schema.title,
         fieldType: "link",
         uploadfolder: def.options.uploadfolder,
         overwrite: def.options.overwrite,
-        multilanguageLink: def.options.multilanguageLink
+        multilanguageLink: def.options.multilanguageLink,
+        dependencies: deps
       };
     }
   }
@@ -66599,7 +66642,7 @@ var LinkField_component = normalizeComponent(
   LinkField_staticRenderFns,
   false,
   null,
-  "eae24a84",
+  "436a64ed",
   null
   
 )
