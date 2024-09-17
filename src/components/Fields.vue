@@ -97,11 +97,25 @@
                     for (const prop in opt.dependencies) {
                         const val = opt.dependencies[prop];
                         let valok = false;
+                        if (val) {
+                            if (val.indexOf(',') >= 0) {
+                                let vals = val.split(',');
+                                for (var i = 0; i < vals.length; i++) {
+                                    valok = valok || this.model[prop] == vals[i];
+                                }
+                            } else {
+                                valok = valok || this.model[prop] == val;
+                            }
+                        } else {
+                            valok = valok || this.model[prop] == true;
+                        }
+                        /*
+                        let valok = false;
                         for (var i = 0; i < val.length; i++) {
                             valok = valok || this.model[prop] == true || this.model[prop] == val[i];
                         }
+                        */
                         ok = ok && valok;
-                        //ok = ok && this.model[prop] == val;
                     }
                     return ok;
                 }
