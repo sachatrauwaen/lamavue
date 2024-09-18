@@ -50569,12 +50569,12 @@ var Container_component = normalizeComponent(
 )
 
 /* harmony default export */ var Container = (Container_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=0a1a8f2a&scoped=true&
-var Fieldsvue_type_template_id_0a1a8f2a_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.fields),function(value,key){return _c('div',{key:key,class:['col-12', 'col-md-12', 'lama-type-'+_vm.itemProps(key).options.type, 'lama-field-'+key]},[_c('form-field',_vm._b({directives:[{name:"show",rawName:"v-show",value:(_vm.visible(key)),expression:"visible(key)"}],ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
-var Fieldsvue_type_template_id_0a1a8f2a_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fields.vue?vue&type=template&id=7c18d949&scoped=true&
+var Fieldsvue_type_template_id_7c18d949_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"form-row"},_vm._l((_vm.fields),function(value,key){return _c('div',{key:key,class:['col-12', 'col-md-12', 'lama-type-'+_vm.itemProps(key).options.type, 'lama-field-'+key]},[_c('form-field',_vm._b({directives:[{name:"show",rawName:"v-show",value:(_vm.visible(key)),expression:"visible(key)"}],ref:"field",refInFor:true,on:{"input":function($event){return _vm.propChange(key, $event)}},model:{value:(_vm.model[key]),callback:function ($$v) {_vm.$set(_vm.model, key, $$v)},expression:"model[key]"}},'form-field',_vm.itemProps(key),false))],1)}),0)}
+var Fieldsvue_type_template_id_7c18d949_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=0a1a8f2a&scoped=true&
+// CONCATENATED MODULE: ./src/components/Fields.vue?vue&type=template&id=7c18d949&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.split.js
 var es_string_split = __webpack_require__("1276");
@@ -50675,7 +50675,11 @@ var es_string_split = __webpack_require__("1276");
           var valok = false;
 
           if (val) {
-            if (val.indexOf(',') >= 0) {
+            if (lama.isArray(val)) {
+              for (var idx = 0; idx < val.length; idx++) {
+                valok = valok || this.model[prop] == val[idx];
+              }
+            } else if (val.indexOf(',') >= 0) {
               var vals = val.split(',');
 
               for (var i = 0; i < vals.length; i++) {
@@ -50751,11 +50755,11 @@ var es_string_split = __webpack_require__("1276");
 
 var Fields_component = normalizeComponent(
   components_Fieldsvue_type_script_lang_js_,
-  Fieldsvue_type_template_id_0a1a8f2a_scoped_true_render,
-  Fieldsvue_type_template_id_0a1a8f2a_scoped_true_staticRenderFns,
+  Fieldsvue_type_template_id_7c18d949_scoped_true_render,
+  Fieldsvue_type_template_id_7c18d949_scoped_true_staticRenderFns,
   false,
   null,
-  "0a1a8f2a",
+  "7c18d949",
   null
   
 )

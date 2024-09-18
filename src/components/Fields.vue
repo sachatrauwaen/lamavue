@@ -98,7 +98,11 @@
                         const val = opt.dependencies[prop];
                         let valok = false;
                         if (val) {
-                            if (val.indexOf(',') >= 0) {
+                            if (Lama.isArray(val)) {
+                                for (var idx = 0; idx < val.length; idx++) {
+                                    valok = valok || this.model[prop] == val[idx];
+                                }
+                            } else if (val.indexOf(',') >= 0) {
                                 let vals = val.split(',');
                                 for (var i = 0; i < vals.length; i++) {
                                     valok = valok || this.model[prop] == vals[i];
