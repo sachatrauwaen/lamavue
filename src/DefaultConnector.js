@@ -82,6 +82,10 @@ export default {
             
             filename: "berserk.jpg"
         });
+    },
+    // eslint-disable-next-line no-unused-vars
+    deleteFile(config, successCallback, errorCallback) {
+        successCallback();
     }
 }
 

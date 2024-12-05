@@ -54670,18 +54670,19 @@ var DateField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_DateField = (DateField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=9f8470fc&
-var FileFieldvue_type_template_id_9f8470fc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
-var FileFieldvue_type_template_id_9f8470fc_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=5344a92c&
+var FileFieldvue_type_template_id_5344a92c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label,"disabled":_vm.options.deleteOld ? 'disabled':''},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}}),(_vm.options.deleteOld && _vm.value)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.deleteFile($event)}}},[_vm._v("Delete")]):_vm._e()]}}])},'control',_vm.props,false))}
+var FileFieldvue_type_template_id_5344a92c_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=9f8470fc&
+// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=5344a92c&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=script&lang=js&
 
+//
 //
 //
 //
@@ -54738,6 +54739,19 @@ var FileField = {
     },
     showFileChooser: function showFileChooser() {
       this.$refs.input.click();
+    },
+    deleteFile: function deleteFile() {
+      var _this2 = this;
+
+      var config = {
+        url: this.value,
+        folder: this.options.uploadfolder
+      };
+      this.connector.deleteFile(config, function () {
+        _this2.model = ''; //this.updateImageVersion();
+      }, function (message) {
+        alert(message);
+      });
     }
   },
   components: {
@@ -54817,8 +54831,8 @@ var FileField = {
 
 var FileField_component = normalizeComponent(
   fields_FileFieldvue_type_script_lang_js_,
-  FileFieldvue_type_template_id_9f8470fc_render,
-  FileFieldvue_type_template_id_9f8470fc_staticRenderFns,
+  FileFieldvue_type_template_id_5344a92c_render,
+  FileFieldvue_type_template_id_5344a92c_staticRenderFns,
   false,
   null,
   null,
@@ -68108,6 +68122,10 @@ var DocumentsField_component = normalizeComponent(
       url: "https://agontuk.github.io/assets/images/berserk.jpg?v=1   ",
       filename: "berserk.jpg"
     });
+  },
+  // eslint-disable-next-line no-unused-vars
+  deleteFile: function deleteFile(config, successCallback, errorCallback) {
+    successCallback();
   }
 });
 // CONCATENATED MODULE: ./src/messages/nl-NL.js

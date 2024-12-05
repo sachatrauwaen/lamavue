@@ -11,7 +11,8 @@
                :aria-describedby="options.label"
                v-model="model"
                :class="{'is-invalid':flags.invalid && flags.touched}"
-               style="margin-bottom:10px" />
+               style="margin-bottom:10px" :disabled="options.deleteOld ? 'disabled':''" />
+        <button v-if="options.deleteOld && value" type="button" class="btn btn-secondary" @click.prevent="deleteFile">Delete</button>
     </control>
 </template>
 
@@ -62,6 +63,23 @@
             },
             showFileChooser() {
                 this.$refs.input.click();
+            },
+            deleteFile() {
+                let config = {
+                    url: this.value,
+                    folder: this.options.uploadfolder,
+                };
+                this.connector.deleteFile(
+                    config,
+                    () => {
+                        this.model = '';
+
+                        //this.updateImageVersion();
+                    },
+                    (message) => {
+                        alert(message);
+                    }
+                );
             }
         },
         components: { Control },
