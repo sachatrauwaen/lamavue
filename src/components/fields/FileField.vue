@@ -41,10 +41,12 @@
                 let config = {
                     file: file,
                     name: file.name,
+                    old: this.value,
                     secure: this.options.secure,
                     //folder: this.baseFolder,
                     folder: this.options.uploadfolder,
-                    overwrite: this.options.overwrite
+                    overwrite: this.options.overwrite,
+                    deleteOld: this.options.deleteOld,
                 };
                 this.connector.upload(
                     config,
@@ -78,6 +80,9 @@
                             },
                             secure: {
                                 "type": "boolean"
+                            },
+                            deleteOld: {
+                                "type": "boolean"
                             }
                         }
                     },
@@ -88,6 +93,9 @@
                             },
                             secure: {
                                 rightLabel: "Secure",
+                            },
+                            deleteOld: {
+                                rightLabel: "Delete old version",
                             }
                         }
                     }
@@ -103,6 +111,7 @@
                         uploadfolder: field.uploadfolder,
                         overwrite: field.overwrite,
                         secure: field.secure,
+                        deleteOld: field.deleteOld,
                     }
                 };
             },
@@ -112,6 +121,7 @@
                     uploadfolder: def.options.uploadfolder,
                     overwrite: def.options.overwrite,
                     secure: def.options.secure,
+                    deleteOld: def.options.deleteOld,
                 };
             }
         }

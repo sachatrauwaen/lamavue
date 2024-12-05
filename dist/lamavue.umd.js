@@ -54670,12 +54670,12 @@ var DateField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_DateField = (DateField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=3ba2f42d&
-var FileFieldvue_type_template_id_3ba2f42d_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
-var FileFieldvue_type_template_id_3ba2f42d_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=9f8470fc&
+var FileFieldvue_type_template_id_9f8470fc_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var FileFieldvue_type_template_id_9f8470fc_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=3ba2f42d&
+// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=9f8470fc&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
@@ -54723,10 +54723,12 @@ var FileField = {
       var config = {
         file: file,
         name: file.name,
+        old: this.value,
         secure: this.options.secure,
         //folder: this.baseFolder,
         folder: this.options.uploadfolder,
-        overwrite: this.options.overwrite
+        overwrite: this.options.overwrite,
+        deleteOld: this.options.deleteOld
       };
       this.connector.upload(config, function (data) {
         _this.model = data.url; //this.updateImageVersion();
@@ -54756,6 +54758,9 @@ var FileField = {
             },
             secure: {
               "type": "boolean"
+            },
+            deleteOld: {
+              "type": "boolean"
             }
           }
         },
@@ -54766,6 +54771,9 @@ var FileField = {
             },
             secure: {
               rightLabel: "Secure"
+            },
+            deleteOld: {
+              rightLabel: "Delete old version"
             }
           }
         }
@@ -54780,7 +54788,8 @@ var FileField = {
           type: "file",
           uploadfolder: field.uploadfolder,
           overwrite: field.overwrite,
-          secure: field.secure
+          secure: field.secure,
+          deleteOld: field.deleteOld
         }
       };
     },
@@ -54789,7 +54798,8 @@ var FileField = {
         fieldType: "file",
         uploadfolder: def.options.uploadfolder,
         overwrite: def.options.overwrite,
-        secure: def.options.secure
+        secure: def.options.secure,
+        deleteOld: def.options.deleteOld
       };
     }
   }
@@ -54807,8 +54817,8 @@ var FileField = {
 
 var FileField_component = normalizeComponent(
   fields_FileFieldvue_type_script_lang_js_,
-  FileFieldvue_type_template_id_3ba2f42d_render,
-  FileFieldvue_type_template_id_3ba2f42d_staticRenderFns,
+  FileFieldvue_type_template_id_9f8470fc_render,
+  FileFieldvue_type_template_id_9f8470fc_staticRenderFns,
   false,
   null,
   null,
