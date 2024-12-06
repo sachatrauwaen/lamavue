@@ -54661,19 +54661,18 @@ var DateField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_DateField = (DateField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=5344a92c&
-var FileFieldvue_type_template_id_5344a92c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label,"disabled":_vm.options.deleteOld ? 'disabled':''},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}}),(_vm.options.deleteOld && _vm.value)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.deleteFile($event)}}},[_vm._v("Delete")]):_vm._e()]}}])},'control',_vm.props,false))}
-var FileFieldvue_type_template_id_5344a92c_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=template&id=dcdb40ce&
+var FileFieldvue_type_template_id_dcdb40ce_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{ref:"input",staticClass:"form-control-file",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"file"},on:{"change":_vm.setFile}}),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control normalFileUpload",class:{'is-invalid':flags.invalid && flags.touched},staticStyle:{"margin-bottom":"10px"},attrs:{"type":"text","aria-describedby":_vm.options.label},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var FileFieldvue_type_template_id_dcdb40ce_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=5344a92c&
+// CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=dcdb40ce&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=script&lang=js&
 
-//
 //
 //
 //
@@ -54736,6 +54735,7 @@ var FileField = {
 
       var config = {
         url: this.value,
+        secure: this.options.secure,
         folder: this.options.uploadfolder
       };
       this.connector.deleteFile(config, function () {
@@ -54763,10 +54763,10 @@ var FileField = {
             },
             secure: {
               "type": "boolean"
-            },
-            deleteOld: {
-              "type": "boolean"
-            }
+            } //deleteOld: {
+            //    "type": "boolean"
+            //}
+
           }
         },
         options: {
@@ -54776,10 +54776,10 @@ var FileField = {
             },
             secure: {
               rightLabel: "Secure"
-            },
-            deleteOld: {
-              rightLabel: "Delete old version"
-            }
+            } //deleteOld: {
+            //    rightLabel: "Delete old version",
+            //}
+
           }
         }
       };
@@ -54793,8 +54793,8 @@ var FileField = {
           type: "file",
           uploadfolder: field.uploadfolder,
           overwrite: field.overwrite,
-          secure: field.secure,
-          deleteOld: field.deleteOld
+          secure: field.secure //deleteOld: field.deleteOld,
+
         }
       };
     },
@@ -54803,8 +54803,8 @@ var FileField = {
         fieldType: "file",
         uploadfolder: def.options.uploadfolder,
         overwrite: def.options.overwrite,
-        secure: def.options.secure,
-        deleteOld: def.options.deleteOld
+        secure: def.options.secure //deleteOld: def.options.deleteOld,
+
       };
     }
   }
@@ -54822,8 +54822,8 @@ var FileField = {
 
 var FileField_component = normalizeComponent(
   fields_FileFieldvue_type_script_lang_js_,
-  FileFieldvue_type_template_id_5344a92c_render,
-  FileFieldvue_type_template_id_5344a92c_staticRenderFns,
+  FileFieldvue_type_template_id_dcdb40ce_render,
+  FileFieldvue_type_template_id_dcdb40ce_staticRenderFns,
   false,
   null,
   null,
@@ -54832,19 +54832,19 @@ var FileField_component = normalizeComponent(
 )
 
 /* harmony default export */ var fields_FileField = (FileField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowserField.vue?vue&type=template&id=74f17b97&
-var FileBrowserFieldvue_type_template_id_74f17b97_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('file-browser',_vm._b({model:{value:(_vm.fileObj),callback:function ($$v) {_vm.fileObj=$$v},expression:"fileObj"}},'file-browser',_vm.fileBrowserProps,false))],1)}
-var FileBrowserFieldvue_type_template_id_74f17b97_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowserField.vue?vue&type=template&id=76ccb631&
+var FileBrowserFieldvue_type_template_id_76ccb631_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('file-browser',_vm._b({model:{value:(_vm.fileObj),callback:function ($$v) {_vm.fileObj=$$v},expression:"fileObj"}},'file-browser',_vm.fileBrowserProps,false))],1)}
+var FileBrowserFieldvue_type_template_id_76ccb631_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileBrowserField.vue?vue&type=template&id=74f17b97&
+// CONCATENATED MODULE: ./src/components/fields/FileBrowserField.vue?vue&type=template&id=76ccb631&
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=template&id=67f25abe&scoped=true&
-var FileBrowservue_type_template_id_67f25abe_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e(),(_vm.showOverwrite)?_c('div',{staticStyle:{"position":"absolute","bottom":"40px","right":"5px"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doOverwrite),expression:"doOverwrite"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.doOverwrite)?_vm._i(_vm.doOverwrite,null)>-1:(_vm.doOverwrite)},on:{"change":function($event){var $$a=_vm.doOverwrite,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.doOverwrite=$$a.concat([$$v]))}else{$$i>-1&&(_vm.doOverwrite=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.doOverwrite=$$c}}}}),_c('label',{},[_vm._v("Overwrite")])]):_vm._e()],1)}
-var FileBrowservue_type_template_id_67f25abe_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=template&id=45a38f73&scoped=true&
+var FileBrowservue_type_template_id_45a38f73_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}}):_vm._e(),(_vm.showUpload)?_c('input',{ref:"input",staticClass:"form-control-file normalFileUpload",staticStyle:{"margin-bottom":"10px"},attrs:{"type":"file","name":"image","accept":_vm.accept},on:{"change":_vm.setImage}}):_vm._e(),(_vm.showOverwrite)?_c('div',{staticStyle:{"position":"absolute","bottom":"40px","right":"5px"}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.doOverwrite),expression:"doOverwrite"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.doOverwrite)?_vm._i(_vm.doOverwrite,null)>-1:(_vm.doOverwrite)},on:{"change":function($event){var $$a=_vm.doOverwrite,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$el.checked){$$i<0&&(_vm.doOverwrite=$$a.concat([$$v]))}else{$$i>-1&&(_vm.doOverwrite=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.doOverwrite=$$c}}}}),_c('label',{},[_vm._v("Overwrite")])]):_vm._e(),(_vm.value && _vm.deleteFile && !_vm.confirmDelete)?_c('button',{staticClass:"btn btn-secondary",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.startDeleteFile($event)}}},[_vm._v("Delete")]):_vm._e(),(_vm.value && _vm.deleteFile && _vm.confirmDelete)?_c('button',{staticClass:"btn btn-primary ml-2",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.confirmDeleteFile($event)}}},[_vm._v("Confirm")]):_vm._e(),(_vm.value && _vm.deleteFile && _vm.confirmDelete)?_c('button',{staticClass:"btn btn-secondary ml-2",attrs:{"type":"button"},on:{"click":function($event){$event.preventDefault();return _vm.cancelDeleteFile($event)}}},[_vm._v("Cancel")]):_vm._e()],1)}
+var FileBrowservue_type_template_id_45a38f73_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/FileBrowser.vue?vue&type=template&id=67f25abe&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/FileBrowser.vue?vue&type=template&id=45a38f73&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -54859,6 +54859,10 @@ var dist_vue_select = __webpack_require__("6dfc");
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileBrowser.vue?vue&type=script&lang=js&
 
 
+//
+//
+//
+//
 //
 //
 //
@@ -54945,6 +54949,14 @@ var dist_vue_select = __webpack_require__("6dfc");
     secure: {
       type: Boolean,
       default: false
+    },
+    deleteFile: {
+      type: Boolean,
+      default: false
+    },
+    replaceOnUpload: {
+      type: Boolean,
+      default: false
     }
   },
   data: function data() {
@@ -54953,7 +54965,8 @@ var dist_vue_select = __webpack_require__("6dfc");
       folder: null,
       files: [],
       fileId: -1,
-      doOverwrite: false
+      doOverwrite: false,
+      confirmDelete: false
     };
   },
   computed: {
@@ -55023,7 +55036,9 @@ var dist_vue_select = __webpack_require__("6dfc");
         overwrite: this.doOverwrite,
         secure: this.secure,
         width: this.width,
-        height: this.height
+        height: this.height,
+        old: this.value,
+        deleteOld: this.replaceOnUpload
       };
       this.connector.upload(config, function (data) {
         _this3.files.push(data);
@@ -55049,6 +55064,27 @@ var dist_vue_select = __webpack_require__("6dfc");
             alert("Sorry, FileReader API not supported");
         }
         */
+    },
+    confirmDeleteFile: function confirmDeleteFile() {
+      var _this4 = this;
+
+      var config = {
+        url: this.value,
+        secure: this.secure,
+        folder: this.baseFolder
+      };
+      this.connector.deleteFile(config, function () {
+        _this4.model = '';
+        _this4.confirmDelete = false; //this.updateImageVersion();
+      }, function (message) {
+        alert(message);
+      });
+    },
+    startDeleteFile: function startDeleteFile() {
+      this.confirmDelete = true;
+    },
+    cancelDeleteFile: function cancelDeleteFile() {
+      this.confirmDelete = false;
     }
   },
   watch: {
@@ -55079,11 +55115,11 @@ var dist_vue_select = __webpack_require__("6dfc");
 
 var FileBrowser_component = normalizeComponent(
   fields_FileBrowservue_type_script_lang_js_,
-  FileBrowservue_type_template_id_67f25abe_scoped_true_render,
-  FileBrowservue_type_template_id_67f25abe_scoped_true_staticRenderFns,
+  FileBrowservue_type_template_id_45a38f73_scoped_true_render,
+  FileBrowservue_type_template_id_45a38f73_scoped_true_staticRenderFns,
   false,
   null,
-  "67f25abe",
+  "45a38f73",
   null
   
 )
@@ -55121,7 +55157,9 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
         connector: this.connector,
         showFolderSelector: false,
         showFileSelector: true,
-        secure: this.options.secure
+        secure: this.options.secure,
+        deleteFile: this.options.deleteFile,
+        replaceOnUpload: this.options.replaceOnUpload
       };
     },
     fileObj: {
@@ -55156,14 +55194,6 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
         schema: {
           type: "object",
           properties: {
-            //required: {
-            //  title: "Required",
-            //  type: "boolean"
-            //},
-            //placeholder: {
-            //  title: "Placeholder",
-            //  type: "string"
-            //},
             uploadfolder: {
               "title": "Upload Folder",
               "type": "string"
@@ -55171,11 +55201,13 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
             overwrite: {
               "type": "boolean"
             },
-            //multilanguage: {
-            //  title: "Multi language",
-            //  type: "boolean"
-            //},
             secure: {
+              "type": "boolean"
+            },
+            replaceOnUpload: {
+              "type": "boolean"
+            },
+            deleteFile: {
               "type": "boolean"
             }
           }
@@ -55187,6 +55219,12 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
             },
             secure: {
               rightLabel: "Secure"
+            },
+            replaceOnUpload: {
+              rightLabel: "Replace on upload"
+            },
+            deleteFile: {
+              rightLabel: "Delete file"
             }
           }
         }
@@ -55201,7 +55239,9 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
           type: "filebrowser",
           uploadfolder: field.uploadfolder,
           overwrite: field.overwrite,
-          secure: field.secure
+          secure: field.secure,
+          replaceOnUpload: field.replaceOnUpload,
+          deleteFile: field.deleteFile
         }
       };
     },
@@ -55210,7 +55250,9 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
         fieldType: "filebrowser",
         uploadfolder: def.options.uploadfolder,
         overwrite: def.options.overwrite,
-        secure: def.options.secure
+        secure: def.options.secure,
+        replaceOnUpload: def.options.replaceOnUpload,
+        deleteFile: def.options.deleteFile
       };
     }
   }
@@ -55228,8 +55270,8 @@ var FileBrowserFieldvue_type_script_lang_js_FileField = {
 
 var FileBrowserField_component = normalizeComponent(
   fields_FileBrowserFieldvue_type_script_lang_js_,
-  FileBrowserFieldvue_type_template_id_74f17b97_render,
-  FileBrowserFieldvue_type_template_id_74f17b97_staticRenderFns,
+  FileBrowserFieldvue_type_template_id_76ccb631_render,
+  FileBrowserFieldvue_type_template_id_76ccb631_staticRenderFns,
   false,
   null,
   null,

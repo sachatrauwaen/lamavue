@@ -37,6 +37,10 @@
       <input type="checkbox" v-model="doOverwrite" />
       <label class="">Overwrite</label>
     </div>
+    <button v-if="value && deleteFile && !confirmDelete" type="button" class="btn btn-secondary" @click.prevent="startDeleteFile">Delete</button>
+    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-primary ml-2" @click.prevent="confirmDeleteFile">Confirm</button>
+    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-secondary ml-2" @click.prevent="cancelDeleteFile">Cancel</button>
+    
   </div>
 </template>
 
@@ -86,7 +90,15 @@ export default {
     secure: {
       type: Boolean,
       default: false,
-    }
+    },
+    deleteFile: {
+      type: Boolean,
+      default: false,
+    },
+    replaceOnUpload: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -95,6 +107,7 @@ export default {
       files: [],
       fileId: -1,
       doOverwrite: false,
+      confirmDelete: false,
     };
   },
   computed: {
@@ -167,6 +180,8 @@ export default {
         secure: this.secure,
         width: this.width,
         height: this.height,
+        old: this.value,
+        deleteOld: this.replaceOnUpload,
       };
       this.connector.upload(
         config,
@@ -196,6 +211,31 @@ export default {
         }
         */
     },
+    confirmDeleteFile() {
+      let config = {
+          url: this.value,
+          secure: this.secure,
+          folder: this.baseFolder,
+      };
+      this.connector.deleteFile(
+        config,
+        () => {
+            this.model = '';
+            this.confirmDelete = false;
+            //this.updateImageVersion();
+        },
+        (message) => {
+          alert(message);
+        }
+      );
+    },
+    startDeleteFile() {
+      this.confirmDelete = true;
+    },
+    cancelDeleteFile() {
+      this.confirmDelete = false;
+    },
+
   },
   watch: {
     value(val) {

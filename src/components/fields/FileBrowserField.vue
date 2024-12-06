@@ -31,7 +31,9 @@
                     connector: this.connector,
                     showFolderSelector: false,
                     showFileSelector: true,
-                    secure: this.options.secure
+                    secure: this.options.secure,
+                    deleteFile: this.options.deleteFile,
+                    replaceOnUpload: this.options.replaceOnUpload
                 }
             },
             fileObj: {
@@ -67,14 +69,6 @@
                     schema: {
                         type: "object",
                         properties: {
-                            //required: {
-                            //  title: "Required",
-                            //  type: "boolean"
-                            //},
-                            //placeholder: {
-                            //  title: "Placeholder",
-                            //  type: "string"
-                            //},
                             uploadfolder: {
                                 "title": "Upload Folder",
                                 "type": "string"
@@ -82,13 +76,15 @@
                             overwrite: {
                                 "type": "boolean"
                             },
-                            //multilanguage: {
-                            //  title: "Multi language",
-                            //  type: "boolean"
-                            //},
                             secure: {
                                 "type": "boolean"
                             },
+                            replaceOnUpload: {
+                                "type": "boolean"
+                            },
+                            deleteFile: {
+                                "type": "boolean"
+                            }
                         }
                     },
                     options: {
@@ -98,6 +94,12 @@
                             },
                             secure: {
                                 rightLabel: "Secure",
+                            },
+                            replaceOnUpload: {
+                                rightLabel: "Replace on upload",
+                            },
+                            deleteFile: {
+                                rightLabel: "Delete file",
                             }
                         }
                     }
@@ -113,6 +115,8 @@
                         uploadfolder: field.uploadfolder,
                         overwrite: field.overwrite,
                         secure: field.secure,
+                        replaceOnUpload: field.replaceOnUpload,
+                        deleteFile: field.deleteFile
                     }
                 };
             },
@@ -122,6 +126,8 @@
                     uploadfolder: def.options.uploadfolder,
                     overwrite: def.options.overwrite,
                     secure: def.options.secure,
+                    replaceOnUpload: def.options.replaceOnUpload,
+                    deleteFile: def.options.deleteFile
                 };
             }
         }

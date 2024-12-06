@@ -11,8 +11,7 @@
                :aria-describedby="options.label"
                v-model="model"
                :class="{'is-invalid':flags.invalid && flags.touched}"
-               style="margin-bottom:10px" :disabled="options.deleteOld ? 'disabled':''" />
-        <button v-if="options.deleteOld && value" type="button" class="btn btn-secondary" @click.prevent="deleteFile">Delete</button>
+               style="margin-bottom:10px" />        
     </control>
 </template>
 
@@ -67,6 +66,7 @@
             deleteFile() {
                 let config = {
                     url: this.value,
+                    secure: this.options.secure,
                     folder: this.options.uploadfolder,
                 };
                 this.connector.deleteFile(
@@ -99,9 +99,9 @@
                             secure: {
                                 "type": "boolean"
                             },
-                            deleteOld: {
-                                "type": "boolean"
-                            }
+                            //deleteOld: {
+                            //    "type": "boolean"
+                            //}
                         }
                     },
                     options: {
@@ -112,9 +112,9 @@
                             secure: {
                                 rightLabel: "Secure",
                             },
-                            deleteOld: {
-                                rightLabel: "Delete old version",
-                            }
+                            //deleteOld: {
+                            //    rightLabel: "Delete old version",
+                            //}
                         }
                     }
                 };
@@ -129,7 +129,7 @@
                         uploadfolder: field.uploadfolder,
                         overwrite: field.overwrite,
                         secure: field.secure,
-                        deleteOld: field.deleteOld,
+                        //deleteOld: field.deleteOld,
                     }
                 };
             },
@@ -139,7 +139,7 @@
                     uploadfolder: def.options.uploadfolder,
                     overwrite: def.options.overwrite,
                     secure: def.options.secure,
-                    deleteOld: def.options.deleteOld,
+                    //deleteOld: def.options.deleteOld,
                 };
             }
         }
