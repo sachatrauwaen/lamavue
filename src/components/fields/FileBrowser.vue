@@ -180,7 +180,7 @@ export default {
         secure: this.secure,
         width: this.width,
         height: this.height,
-        old: this.value,
+        old: this.value ? this.value.url : null,
         deleteOld: this.replaceOnUpload,
       };
       this.connector.upload(
