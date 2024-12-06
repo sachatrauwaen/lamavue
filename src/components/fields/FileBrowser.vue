@@ -213,7 +213,7 @@ export default {
     },
     confirmDeleteFile() {
       let config = {
-          url: this.value,
+          url: this.value.url,
           secure: this.secure,
           folder: this.baseFolder,
       };
