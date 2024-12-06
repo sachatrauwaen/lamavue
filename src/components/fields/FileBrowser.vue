@@ -37,8 +37,8 @@
       <input type="checkbox" v-model="doOverwrite" />
       <label class="">Overwrite</label>
     </div>
-    <button v-if="value && deleteFile && !confirmDelete" type="button" class="btn btn-secondary" @click.prevent="startDeleteFile">Delete</button>
-    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-primary ml-2" @click.prevent="confirmDeleteFile">Confirm</button>
+    <button v-if="value && deleteFile && !confirmDelete" type="button" class="btn btn-secondary" @click.prevent="startDeleteFile">Delete file from the server</button>
+    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-primary ml-2" @click.prevent="confirmDeleteFile">Confirm file delete</button>
     <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-secondary ml-2" @click.prevent="cancelDeleteFile">Cancel</button>
     
   </div>
@@ -222,6 +222,7 @@ export default {
         () => {
             this.model = '';
             this.confirmDelete = false;
+            this.fetchFiles();
             //this.updateImageVersion();
         },
         (message) => {
