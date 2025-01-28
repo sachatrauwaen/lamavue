@@ -194,7 +194,7 @@ export default {
               } 
           }
           this.model = data;
-          this.updateImageVersion();
+          // this.updateImageVersion();
         },
         (message) => {
           alert(message);
