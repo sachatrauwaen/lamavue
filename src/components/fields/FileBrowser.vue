@@ -187,7 +187,7 @@ export default {
         config,
         (data) => {
           this.files.push(data);
-          if (this.replaceOnUpload) {
+            if (this.replaceOnUpload && this.value) {
               const index = this.files.findIndex(item => item.url === this.value.url);
               if (index !== -1) {
                 this.files.splice(index, 1);
