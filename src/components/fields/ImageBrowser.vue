@@ -49,7 +49,7 @@
     />
     <div
       v-if="showOverwrite"
-      style="position: absolute; bottom: 40px; right: 5px"
+      style="position: absolute; top: 80px; right: 5px"
     >
       <input type="checkbox" v-model="doOverwrite" />
       <label class="">Overwrite</label>
