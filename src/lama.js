@@ -1013,7 +1013,16 @@ let Lama = {
         }
 
         if (schema.type === "object") {
-            return {};
+            const result = {};
+
+            // Process properties if they exist
+            if (schema.properties) {
+                for (const [propName, propSchema] of Object.entries(schema.properties)) {
+                    result[propName] = this.createEmptyDataInstance(propSchema);
+                }
+            }
+
+            return result;
         }
 
         if (schema.type === "array") {

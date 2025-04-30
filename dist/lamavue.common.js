@@ -4485,6 +4485,23 @@ module.exports = nativeCreate;
 
 /***/ }),
 
+/***/ "4fad":
+/***/ (function(module, exports, __webpack_require__) {
+
+var $ = __webpack_require__("23e7");
+var $entries = __webpack_require__("6f53").entries;
+
+// `Object.entries` method
+// https://tc39.github.io/ecma262/#sec-object.entries
+$({ target: 'Object', stat: true }, {
+  entries: function entries(O) {
+    return $entries(O);
+  }
+});
+
+
+/***/ }),
+
 /***/ "5083":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6729,6 +6746,45 @@ var TEMPLATE = String(String).split('String');
 })(Function.prototype, 'toString', function toString() {
   return typeof this == 'function' && getInternalState(this).source || inspectSource(this);
 });
+
+
+/***/ }),
+
+/***/ "6f53":
+/***/ (function(module, exports, __webpack_require__) {
+
+var DESCRIPTORS = __webpack_require__("83ab");
+var objectKeys = __webpack_require__("df75");
+var toIndexedObject = __webpack_require__("fc6a");
+var propertyIsEnumerable = __webpack_require__("d1e7").f;
+
+// `Object.{ entries, values }` methods implementation
+var createMethod = function (TO_ENTRIES) {
+  return function (it) {
+    var O = toIndexedObject(it);
+    var keys = objectKeys(O);
+    var length = keys.length;
+    var i = 0;
+    var result = [];
+    var key;
+    while (length > i) {
+      key = keys[i++];
+      if (!DESCRIPTORS || propertyIsEnumerable.call(O, key)) {
+        result.push(TO_ENTRIES ? [key, O[key]] : O[key]);
+      }
+    }
+    return result;
+  };
+};
+
+module.exports = {
+  // `Object.entries` method
+  // https://tc39.github.io/ecma262/#sec-object.entries
+  entries: createMethod(true),
+  // `Object.values` method
+  // https://tc39.github.io/ecma262/#sec-object.values
+  values: createMethod(false)
+};
 
 
 /***/ }),
@@ -46436,6 +46492,9 @@ var es_array_index_of = __webpack_require__("c975");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.slice.js
 var es_array_slice = __webpack_require__("fb6a");
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.entries.js
+var es_object_entries = __webpack_require__("4fad");
+
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.object.keys.js
 var es_object_keys = __webpack_require__("b64b");
 
@@ -46457,6 +46516,10 @@ var es_string_ends_with = __webpack_require__("8a79");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.replace.js
 var es_string_replace = __webpack_require__("5319");
 
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.symbol.js
 var es_symbol = __webpack_require__("a4d3");
 
@@ -46475,6 +46538,84 @@ var es_string_iterator = __webpack_require__("3ca3");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/web.dom-collections.iterator.js
 var web_dom_collections_iterator = __webpack_require__("ddb0");
 
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js
+
+
+
+
+
+
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.from.js
+var es_array_from = __webpack_require__("a630");
+
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
+var es_function_name = __webpack_require__("b0c0");
+
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+
+
+
+
+
+
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(n);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js
+
+
+
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/typeof.js
 
 
@@ -54699,9 +54840,6 @@ var FileFieldvue_type_template_id_dcdb40ce_staticRenderFns = []
 
 
 // CONCATENATED MODULE: ./src/components/fields/FileField.vue?vue&type=template&id=dcdb40ce&
-
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
-var es_function_name = __webpack_require__("b0c0");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/FileField.vue?vue&type=script&lang=js&
 
@@ -66811,24 +66949,11 @@ var es_array_join = __webpack_require__("a15b");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.trim.js
 var es_string_trim = __webpack_require__("498a");
 
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
-
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
-
-  return arr2;
-}
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
 function _arrayWithoutHoles(arr) {
   if (Array.isArray(arr)) return _arrayLikeToArray(arr);
 }
-// EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.from.js
-var es_array_from = __webpack_require__("a630");
-
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
 
 
@@ -66840,22 +66965,6 @@ var es_array_from = __webpack_require__("a630");
 
 function _iterableToArray(iter) {
   if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
-
-
-
-
-
-
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(n);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 // CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
 function _nonIterableSpread() {
@@ -68847,6 +68956,8 @@ var ImageIdBrowserField_component = normalizeComponent(
 
 
 
+
+
  //import VueI18n from 'vue-i18n'
 
 
@@ -69866,7 +69977,19 @@ var lama_Lama = {
     }
 
     if (schema.type === "object") {
-      return {};
+      var result = {}; // Process properties if they exist
+
+      if (schema.properties) {
+        for (var _i = 0, _Object$entries = Object.entries(schema.properties); _i < _Object$entries.length; _i++) {
+          var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+              propName = _Object$entries$_i[0],
+              propSchema = _Object$entries$_i[1];
+
+          result[propName] = this.createEmptyDataInstance(propSchema);
+        }
+      }
+
+      return result;
     }
 
     if (schema.type === "array") {
