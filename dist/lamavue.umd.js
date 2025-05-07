@@ -819,6 +819,19 @@ fixRegExpWellKnownSymbolLogic('split', 2, function (SPLIT, nativeSplit, maybeCal
 
 /***/ }),
 
+/***/ "129f":
+/***/ (function(module, exports) {
+
+// `SameValue` abstract operation
+// https://tc39.github.io/ecma262/#sec-samevalue
+module.exports = Object.is || function is(x, y) {
+  // eslint-disable-next-line no-self-compare
+  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
+};
+
+
+/***/ }),
+
 /***/ "14c3":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7788,6 +7801,48 @@ module.exports = function (object, key, value) {
   if (propertyKey in object) definePropertyModule.f(object, propertyKey, createPropertyDescriptor(0, value));
   else object[propertyKey] = value;
 };
+
+
+/***/ }),
+
+/***/ "841c":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var fixRegExpWellKnownSymbolLogic = __webpack_require__("d784");
+var anObject = __webpack_require__("825a");
+var requireObjectCoercible = __webpack_require__("1d80");
+var sameValue = __webpack_require__("129f");
+var regExpExec = __webpack_require__("14c3");
+
+// @@search logic
+fixRegExpWellKnownSymbolLogic('search', 1, function (SEARCH, nativeSearch, maybeCallNative) {
+  return [
+    // `String.prototype.search` method
+    // https://tc39.github.io/ecma262/#sec-string.prototype.search
+    function search(regexp) {
+      var O = requireObjectCoercible(this);
+      var searcher = regexp == undefined ? undefined : regexp[SEARCH];
+      return searcher !== undefined ? searcher.call(regexp, O) : new RegExp(regexp)[SEARCH](String(O));
+    },
+    // `RegExp.prototype[@@search]` method
+    // https://tc39.github.io/ecma262/#sec-regexp.prototype-@@search
+    function (regexp) {
+      var res = maybeCallNative(nativeSearch, regexp, this);
+      if (res.done) return res.value;
+
+      var rx = anObject(regexp);
+      var S = String(this);
+
+      var previousLastIndex = rx.lastIndex;
+      if (!sameValue(previousLastIndex, 0)) rx.lastIndex = 0;
+      var result = regExpExec(rx, S);
+      if (!sameValue(rx.lastIndex, previousLastIndex)) rx.lastIndex = previousLastIndex;
+      return result === null ? -1 : result.index;
+    }
+  ];
+});
 
 
 /***/ }),
@@ -68374,13 +68429,126 @@ var DocumentsField_component = normalizeComponent(
     });
   }
 });
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
-var ImageIdBrowserFieldvue_type_template_id_1b8534ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.connector.viewType=='create' && _vm.options.disabledOnCreate)?_c('div',[_vm._v(" "+_vm._s(_vm.getMessage('imageAfterItemCreated'))+" ")]):_c('div',[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)])}
-var ImageIdBrowserFieldvue_type_template_id_1b8534ec_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DynamicVueSelectBaseField.vue?vue&type=template&id=116b6583&scoped=true&
+var DynamicVueSelectBaseFieldvue_type_template_id_116b6583_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"text","multiple":_vm.options.many,"placeholder":_vm.options.placeholder,"clearable":true,"options":_vm.items,"reduce":_vm.reduce,"filterable":false},on:{"search":_vm.fetchOptions},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}})],1)}
+var DynamicVueSelectBaseFieldvue_type_template_id_116b6583_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
+// CONCATENATED MODULE: ./src/components/fields/DynamicVueSelectBaseField.vue?vue&type=template&id=116b6583&scoped=true&
 
+// EXTERNAL MODULE: ./node_modules/core-js/modules/es.string.search.js
+var es_string_search = __webpack_require__("841c");
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/DynamicVueSelectBaseField.vue?vue&type=script&lang=js&
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+function DynamicVueSelectBaseFieldvue_type_script_lang_js_debounce(func) {
+  var _this = this;
+
+  var timeout = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+  var timer;
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      func.apply(_this, args);
+    }, timeout);
+  };
+}
+
+var DynamicVueSelectBaseField = {
+  name: "DynamicVueSelectBaseField",
+  extends: fields_ControlField,
+  props: {},
+  data: function data() {
+    return {
+      query: {
+        type: '',
+        search: ''
+      },
+      items: []
+    };
+  },
+  computed: {
+    multiple: function multiple() {
+      return this.schema.type == 'array';
+    }
+  },
+  methods: {
+    fetchOptions: function fetchOptions(search, loading) {
+      if (search.length) {
+        loading(true); //$.debounce(300, saveInput);
+
+        this.search(loading, search, this);
+      }
+    },
+    search: DynamicVueSelectBaseFieldvue_type_script_lang_js_debounce(function (loading, search, vm) {
+      vm.query.search = search;
+      var config = {
+        query: vm.query
+      };
+      vm.connector.loadDataSource(config, function (data) {
+        vm.items = data;
+        loading(false);
+      }, function () {
+        loading(false);
+      });
+    }),
+    reduce: function reduce(option) {
+      return option.value;
+    }
+  },
+  components: {
+    VueSelect: vue_select_default.a
+  }
+};
+/* harmony default export */ var DynamicVueSelectBaseFieldvue_type_script_lang_js_ = (DynamicVueSelectBaseField);
+// CONCATENATED MODULE: ./src/components/fields/DynamicVueSelectBaseField.vue?vue&type=script&lang=js&
+ /* harmony default export */ var fields_DynamicVueSelectBaseFieldvue_type_script_lang_js_ = (DynamicVueSelectBaseFieldvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/fields/DynamicVueSelectBaseField.vue
+
+
+
+
+
+/* normalize component */
+
+var DynamicVueSelectBaseField_component = normalizeComponent(
+  fields_DynamicVueSelectBaseFieldvue_type_script_lang_js_,
+  DynamicVueSelectBaseFieldvue_type_template_id_116b6583_scoped_true_render,
+  DynamicVueSelectBaseFieldvue_type_template_id_116b6583_scoped_true_staticRenderFns,
+  false,
+  null,
+  "116b6583",
+  null
+  
+)
+
+/* harmony default export */ var fields_DynamicVueSelectBaseField = (DynamicVueSelectBaseField_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowser.vue?vue&type=template&id=bb2abb72&scoped=true&
 var ImageIdBrowservue_type_template_id_bb2abb72_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(_vm.showFolderSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"name","filterable":true,"clearable":false,"options":_vm.folders,"reduce":function (option) { return option.id; }},on:{"input":_vm.folderChange},model:{value:(_vm.folder),callback:function ($$v) {_vm.folder=$$v},expression:"folder"}}):_vm._e(),(_vm.showFileSelector)?_c('vue-select',{staticStyle:{"margin-bottom":"10px"},attrs:{"label":"filename","options":_vm.files,"filterable":true},scopedSlots:_vm._u([{key:"option",fn:function(ref){
 var filename = ref.filename;
@@ -68664,6 +68832,13 @@ var ImageIdBrowser_component = normalizeComponent(
 )
 
 /* harmony default export */ var ImageIdBrowser = (ImageIdBrowser_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
+var ImageIdBrowserFieldvue_type_template_id_1b8534ec_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[(_vm.connector.viewType=='create' && _vm.options.disabledOnCreate)?_c('div',[_vm._v(" "+_vm._s(_vm.getMessage('imageAfterItemCreated'))+" ")]):_c('div',[_c('image-browser',_vm._b({on:{"change":_vm.imageChange},model:{value:(_vm.model),callback:function ($$v) {_vm.model=$$v},expression:"model"}},'image-browser',_vm.fileBrowserProps,false)),_c('div',[(_vm.imageSrc)?_c('img',{staticClass:"img-fluid",staticStyle:{"margin":"10px 0","max-height":"200px"},attrs:{"src":_vm.imageSrc,"alt":"Image"}}):_vm._e()])],1)])}
+var ImageIdBrowserFieldvue_type_template_id_1b8534ec_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/fields/ImageIdBrowserField.vue?vue&type=template&id=1b8534ec&
+
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/ImageIdBrowserField.vue?vue&type=script&lang=js&
 //
 //
@@ -68968,6 +69143,44 @@ var ImageIdBrowserField_component = normalizeComponent(
 
 
  //import VueI18n from 'vue-i18n'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70218,7 +70431,45 @@ var lama_Lama = {
     };
   },
   components: {
-    ImageIdBrowserField: fields_ImageIdBrowserField
+    AddressField: fields_AddressField,
+    ArrayBaseField: fields_ArrayBaseField,
+    ArrayField: fields_ArrayField,
+    CheckboxField: CheckboxField,
+    CheckboxListField: CheckboxListField,
+    CKEditorField: fields_CKEditorField,
+    ColorField: fields_ColorField,
+    Control: Control,
+    ControlField: fields_ControlField,
+    CountryField: fields_CountryField,
+    DateField: fields_DateField,
+    DocumentsField: fields_DocumentsField,
+    DynamicVueSelectBaseField: fields_DynamicVueSelectBaseField,
+    EmailField: fields_EmailField,
+    FileField: fields_FileField,
+    FileBrowser: FileBrowser,
+    FileBrowserField: FileBrowserField,
+    GalleryField: fields_GalleryField,
+    GuidField: fields_GuidField,
+    IconField: IconField,
+    ImageBrowser: ImageBrowser,
+    ImageBrowserField: ImageBrowserField,
+    ImageField: fields_ImageField,
+    ImageIdBrowser: ImageIdBrowser,
+    ImageIdBrowserField: fields_ImageIdBrowserField,
+    LinkField: fields_LinkField,
+    NumberField: fields_NumberField,
+    ObjectBaseField: fields_ObjectBaseField,
+    ObjectField: fields_ObjectField,
+    PageField: fields_PageField,
+    PasswordField: fields_PasswordField,
+    RadioField: fields_RadioField,
+    RelationField: fields_RelationField,
+    SelectBaseField: SelectBaseField,
+    SelectField: fields_SelectField,
+    TextField: fields_TextField,
+    TextareaField: fields_TextareaField,
+    UrlField: fields_UrlField,
+    VueSelectBaseField: fields_VueSelectBaseField
   }
 };
 /* harmony default export */ var lama = (lama_Lama);

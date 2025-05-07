@@ -12,7 +12,47 @@ import LamaBuilder from "./components/Builder.vue";
 
 import nlNLView from "./messages/nl-NL";
 
+import AddressField from './components/fields/AddressField.vue'
+import ArrayBaseField from './components/fields/ArrayBaseField.vue'
+import ArrayField from './components/fields/ArrayField.vue'
+import CheckboxField from './components/fields/CheckboxField.vue'
+import CheckboxListField from './components/fields/CheckboxListField.vue'
+import CKEditorField from './components/fields/CKEditorField.vue'
+import Control from './components/fields/Control.vue';
+import ColorField from './components/fields/ColorField.vue'
+import ControlField from './components/fields/ControlField.vue'
+import CountryField from './components/fields/CountryField.vue'
+import DateField from './components/fields/DateField.vue'
+import DocumentsField from './components/fields/DocumentsField.vue'
+import DynamicVueSelectBaseField from './components/fields/DynamicVueSelectBaseField.vue'
+import EmailField from './components/fields/EmailField.vue'
+import FileBrowser from './components/fields/FileBrowser.vue'
+import FileBrowserField from './components/fields/FileBrowserField.vue'
+import FileField from './components/fields/FileField.vue'
+import GalleryField from './components/fields/GalleryField.vue'
+import GuidField from './components/fields/GuidField.vue'
+import IconField from './components/fields/IconField.vue'
+import ImageBrowser from './components/fields/ImageBrowser.vue'
+import ImageBrowserField from './components/fields/ImageBrowserField.vue'
+import ImageField from './components/fields/ImageField.vue'
+import ImageIdBrowser from './components/fields/ImageIdBrowser.vue'
 import ImageIdBrowserField from './components/fields/ImageIdBrowserField.vue'
+import LinkField from './components/fields/LinkField.vue'
+import NumberField from './components/fields/NumberField.vue'
+import ObjectBaseField from './components/fields/ObjectBaseField.vue'
+import ObjectField from './components/fields/ObjectField.vue'
+import PageField from './components/fields/PageField.vue'
+import PasswordField from './components/fields/PasswordField.vue'
+import RadioField from './components/fields/RadioField.vue'
+import RelationField from './components/fields/RelationField.vue'
+import SelectBaseField from './components/fields/SelectBaseField.vue'
+import SelectField from './components/fields/SelectField.vue'
+import TextareaField from './components/fields/TextareaField.vue'
+import TextField from './components/fields/TextField.vue'
+import UrlField from './components/fields/UrlField.vue'
+import VueSelectBaseField from './components/fields/VueSelectBaseField.vue'
+
+
 
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.component('ValidationObserver', ValidationObserver);
@@ -1267,7 +1307,45 @@ let Lama = {
         };
     },
     components: {
-        ImageIdBrowserField: ImageIdBrowserField
+        AddressField: AddressField,
+        ArrayBaseField: ArrayBaseField,
+        ArrayField: ArrayField,
+        CheckboxField: CheckboxField,
+        CheckboxListField: CheckboxListField,
+        CKEditorField: CKEditorField,
+        ColorField: ColorField,
+        Control: Control,
+        ControlField: ControlField,
+        CountryField: CountryField,
+        DateField: DateField,
+        DocumentsField: DocumentsField,
+        DynamicVueSelectBaseField: DynamicVueSelectBaseField,
+        EmailField: EmailField,
+        FileField: FileField,
+        FileBrowser: FileBrowser,
+        FileBrowserField: FileBrowserField,
+        GalleryField: GalleryField,
+        GuidField: GuidField,
+        IconField: IconField,
+        ImageBrowser: ImageBrowser,
+        ImageBrowserField: ImageBrowserField,
+        ImageField: ImageField,
+        ImageIdBrowser: ImageIdBrowser,
+        ImageIdBrowserField: ImageIdBrowserField,
+        LinkField: LinkField,
+        NumberField: NumberField,
+        ObjectBaseField: ObjectBaseField,
+        ObjectField: ObjectField,
+        PageField: PageField,
+        PasswordField: PasswordField,
+        RadioField: RadioField,
+        RelationField: RelationField,
+        SelectBaseField: SelectBaseField,
+        SelectField: SelectField,
+        TextField: TextField,
+        TextareaField: TextareaField,
+        UrlField: UrlField,
+        VueSelectBaseField: VueSelectBaseField,
     }
 }
 export default Lama;

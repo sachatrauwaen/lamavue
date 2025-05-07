@@ -30,7 +30,7 @@
         };
     }
 
-    let VueSelectBaseField = {
+    let DynamicVueSelectBaseField = {
         name: "DynamicVueSelectBaseField",
         extends: ControlField,
         props: {
@@ -86,7 +86,7 @@
 
     };
 
-    export default VueSelectBaseField;
+    export default DynamicVueSelectBaseField;
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
