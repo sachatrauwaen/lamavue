@@ -1,5 +1,7 @@
 # lamavue
 
+LamaVue is a front-end UI built with Vue.js for managing structured JSON data. Originally developed as a modern replacement for Alpaca Forms, it is primarily used in the DNN Open Content Module, but can also be integrated into other projects. LamaVue provides a flexible, responsive editing experience for content administrators and developers alike.
+
 ## Project setup
 ```
 npm install
