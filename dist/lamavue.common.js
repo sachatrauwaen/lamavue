@@ -66295,12 +66295,12 @@ var IconField_component = normalizeComponent(
 )
 
 /* harmony default export */ var IconField = (IconField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/GuidField.vue?vue&type=template&id=cd6243f4&scoped=true&
-var GuidFieldvue_type_template_id_cd6243f4_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
-var GuidFieldvue_type_template_id_cd6243f4_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/GuidField.vue?vue&type=template&id=a39267b6&scoped=true&
+var GuidFieldvue_type_template_id_a39267b6_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
+var GuidFieldvue_type_template_id_a39267b6_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/GuidField.vue?vue&type=template&id=cd6243f4&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/GuidField.vue?vue&type=template&id=a39267b6&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/GuidField.vue?vue&type=script&lang=js&
 
@@ -66343,7 +66343,7 @@ var GuidField = {
     Control: Control
   },
   created: function created() {
-    if (lama.isEmpty(this.model)) {
+    if (lama.isValEmpty(this.model)) {
       this.model = this.createGuid();
     }
   },
@@ -66396,11 +66396,11 @@ var GuidField = {
 
 var GuidField_component = normalizeComponent(
   fields_GuidFieldvue_type_script_lang_js_,
-  GuidFieldvue_type_template_id_cd6243f4_scoped_true_render,
-  GuidFieldvue_type_template_id_cd6243f4_scoped_true_staticRenderFns,
+  GuidFieldvue_type_template_id_a39267b6_scoped_true_render,
+  GuidFieldvue_type_template_id_a39267b6_scoped_true_staticRenderFns,
   false,
   null,
-  "cd6243f4",
+  "a39267b6",
   null
   
 )

@@ -33,7 +33,7 @@
         },
         components: { Control },
         created() {
-            if (Lama.isEmpty(this.model)) {
+            if (Lama.isValEmpty(this.model)) {
                 this.model = this.createGuid()
             }
         },
