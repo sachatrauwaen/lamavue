@@ -245,7 +245,9 @@
         props: {},
         data() {
             return {
+                commonConfig: {
 
+                }
             };
         },
         computed: {
@@ -259,21 +261,33 @@
             },
             editorConfig() {
                 if (this.options.configset) {
-                    return Object.assign({}, configSets[this.options.configset]); // clone
+                    return Object.assign(this.commonConfig, configSets[this.options.configset]); // clone
                 } else {
-                    return Object.assign({}, basicConfig); // clone
+                    return Object.assign(this.commonConfig, basicConfig); // clone
                 }
             },
             editorUrl() {
-                return undefined;
+                if (this.options.local && this.connector.CKEditor && this.connector.CKEditor.editorUrl) {
+                    return this.connector.CKEditor.editorUrl;
+                } else {
+                    return undefined;
+                }
             }
         },
         methods: {
             /*eslint no-unused-vars: ["error", { "args": "none" }]*/
             onNamespaceLoaded(CKEDITOR) {
+                if (this.connector.CKEditor && this.connector.CKEditor.getConfig) {
+                    this.commonConfig = this.connector.CKEditor.getConfig();
+                }
             },
             /*eslint no-unused-vars: ["error", { "args": "none" }]*/
             onEditorReady(evt) {
+                if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
+                    evt.editor.on('fileUploadRequest', function (fileUploadRequestEvent) {
+                        this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);                    
+                    });
+                }
             }
         },
         components: { Control, ckeditor: CKEditor.component },
@@ -288,13 +302,19 @@
                                 "type": "string",
                                 "enum": ["basic", "standard", "full"]
                             },
+                            local: {
+                                "type": "boolean"
+                            },
                         },
                     },
                     options: {
                         fields: {
                             configset: {
                                 "type": "select"
-                            }
+                            },
+                            local: {
+                                rightLabel: "Local (not from cloud)",
+                            },
                         }
                     },
                 };
@@ -307,14 +327,16 @@
                     },
                     options: {
                         type: "ckeditor",
-                        configset: field.configset
+                        configset: field.configset,
+                        local: field.local
                     },
                 };
             },
             toBuilder(def) {
                 return {
                     fieldType: "ckeditor",
-                    configset: def.options.configset
+                    configset: def.options.configset,
+                    local: def.optons.local
                 };
             },
         },
