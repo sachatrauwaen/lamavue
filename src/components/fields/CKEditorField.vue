@@ -336,7 +336,7 @@
                 return {
                     fieldType: "ckeditor",
                     configset: def.options.configset,
-                    local: def.optons.local
+                    local: def.options.local
                 };
             },
         },
