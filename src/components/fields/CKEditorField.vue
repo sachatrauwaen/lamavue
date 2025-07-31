@@ -284,7 +284,7 @@
             /*eslint no-unused-vars: ["error", { "args": "none" }]*/
             onEditorReady(editor) {
                 if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
-                    editor.on('fileUploadRequest', function (fileUploadRequestEvent) {
+                    editor.on('fileUploadRequest', (fileUploadRequestEvent) => {
                         this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);                    
                     });
                 }

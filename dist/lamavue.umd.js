@@ -54254,12 +54254,12 @@ var CheckboxListField_component = normalizeComponent(
 )
 
 /* harmony default export */ var CheckboxListField = (CheckboxListField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CKEditorField.vue?vue&type=template&id=a23a6a98&scoped=true&
-var CKEditorFieldvue_type_template_id_a23a6a98_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('ckeditor',{attrs:{"value":_vm.model,"config":_vm.editorConfig,"editor-url":_vm.editorUrl},on:{"input":function($event){_vm.model= $event},"namespaceloaded":_vm.onNamespaceLoaded,"ready":_vm.onEditorReady}})],1)}
-var CKEditorFieldvue_type_template_id_a23a6a98_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/CKEditorField.vue?vue&type=template&id=6486f69b&scoped=true&
+var CKEditorFieldvue_type_template_id_6486f69b_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({},'control',_vm.props,false),[_c('ckeditor',{attrs:{"value":_vm.model,"config":_vm.editorConfig,"editor-url":_vm.editorUrl},on:{"input":function($event){_vm.model= $event},"namespaceloaded":_vm.onNamespaceLoaded,"ready":_vm.onEditorReady}})],1)}
+var CKEditorFieldvue_type_template_id_6486f69b_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/CKEditorField.vue?vue&type=template&id=a23a6a98&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/CKEditorField.vue?vue&type=template&id=6486f69b&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/TextField.vue?vue&type=template&id=08f9dc05&scoped=true&
 var TextFieldvue_type_template_id_08f9dc05_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.model),expression:"model"}],staticClass:"form-control",class:{ 'is-invalid': flags.invalid && flags.touched },attrs:{"type":"text","pattern":_vm.pattern,"aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder,"readonly":_vm.schema.readonly},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=$event.target.value}}})]}}])},'control',_vm.props,false))}
@@ -54562,9 +54562,11 @@ var CKEditorField = {
 
     /*eslint no-unused-vars: ["error", { "args": "none" }]*/
     onEditorReady: function onEditorReady(editor) {
+      var _this = this;
+
       if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
         editor.on('fileUploadRequest', function (fileUploadRequestEvent) {
-          this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);
+          _this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);
         });
       }
     }
@@ -54636,11 +54638,11 @@ var CKEditorField = {
 
 var CKEditorField_component = normalizeComponent(
   fields_CKEditorFieldvue_type_script_lang_js_,
-  CKEditorFieldvue_type_template_id_a23a6a98_scoped_true_render,
-  CKEditorFieldvue_type_template_id_a23a6a98_scoped_true_staticRenderFns,
+  CKEditorFieldvue_type_template_id_6486f69b_scoped_true_render,
+  CKEditorFieldvue_type_template_id_6486f69b_scoped_true_staticRenderFns,
   false,
   null,
-  "a23a6a98",
+  "6486f69b",
   null
   
 )
