@@ -282,9 +282,9 @@
                 }
             },
             /*eslint no-unused-vars: ["error", { "args": "none" }]*/
-            onEditorReady(evt) {
+            onEditorReady(editor) {
                 if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
-                    evt.editor.on('fileUploadRequest', function (fileUploadRequestEvent) {
+                    editor.on('fileUploadRequest', function (fileUploadRequestEvent) {
                         this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);                    
                     });
                 }
