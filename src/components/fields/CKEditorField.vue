@@ -1,6 +1,6 @@
 <template>
     <control v-bind="props">
-        <ckeditor :value="model" @input="model= $event" :config="editorConfig" @namespaceloaded="onNamespaceLoaded" @ready="onEditorReady" :editor-url="editorUrl" ></ckeditor>
+        <ckeditor :value="model" @input="model= $event" :config="editorConfigIntern" @namespaceloaded="onNamespaceLoadedIntern" @ready="onEditorReadyIntern" :editor-url="editorUrl"></ckeditor>
     </control>
 </template>
 
@@ -259,11 +259,14 @@
                     this.$emit("input", val);
                 }
             },
+            editorConfigIntern() {
+                return Object.assign(this.commonConfig, this.editorConfig); // clone
+            },
             editorConfig() {
                 if (this.options.configset) {
-                    return Object.assign(this.commonConfig, configSets[this.options.configset]); // clone
+                    return configSets[this.options.configset];
                 } else {
-                    return Object.assign(this.commonConfig, basicConfig); // clone
+                    return basicConfig;
                 }
             },
             editorUrl() {
@@ -275,19 +278,25 @@
             }
         },
         methods: {
-            /*eslint no-unused-vars: ["error", { "args": "none" }]*/
-            onNamespaceLoaded(CKEDITOR) {
+            onNamespaceLoadedIntern(CKEDITOR) {
                 if (this.connector.CKEditor && this.connector.CKEditor.getConfig) {
                     this.commonConfig = this.connector.CKEditor.getConfig();
                 }
+                this.onNamespaceLoaded(CKEDITOR);
+            },
+            onEditorReadyIntern(editor) {
+                if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
+                    editor.on('fileUploadRequest', (fileUploadRequestEvent) => {
+                        this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);
+                    });
+                }
+                this.onEditorReady(editor);
+            },
+            /*eslint no-unused-vars: ["error", { "args": "none" }]*/
+            onNamespaceLoaded(CKEDITOR) {
             },
             /*eslint no-unused-vars: ["error", { "args": "none" }]*/
             onEditorReady(editor) {
-                if (this.connector.CKEditor && this.connector.CKEditor.setRequestHeaders) {
-                    editor.on('fileUploadRequest', (fileUploadRequestEvent) => {
-                        this.connector.CKEditor.setRequestHeaders(fileUploadRequestEvent.data.fileLoader.xhr);                    
-                    });
-                }
             }
         },
         components: { Control, ckeditor: CKEditor.component },
