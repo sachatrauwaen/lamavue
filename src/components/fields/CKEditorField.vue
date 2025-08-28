@@ -245,9 +245,6 @@
         props: {},
         data() {
             return {
-                commonConfig: {
-
-                }
             };
         },
         computed: {
@@ -258,6 +255,12 @@
                 set(val) {
                     this.$emit("input", val);
                 }
+            },
+            commonConfig() {
+                if (this.connector.CKEditor && this.connector.CKEditor.getConfig)
+                    return this.connector.CKEditor.getConfig();
+                else
+                    return {};
             },
             editorConfigIntern() {
                 return Object.assign(this.commonConfig, this.editorConfig); // clone
@@ -279,9 +282,6 @@
         },
         methods: {
             onNamespaceLoadedIntern(CKEDITOR) {
-                if (this.connector.CKEditor && this.connector.CKEditor.getConfig) {
-                    this.commonConfig = this.connector.CKEditor.getConfig();
-                }
                 this.onNamespaceLoaded(CKEDITOR);
             },
             onEditorReadyIntern(editor) {
