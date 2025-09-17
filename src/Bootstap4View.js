@@ -97,5 +97,56 @@ export default {
             "type": "create",
             "displayReadonly": false
         });
+    },
+
+    registerSmall() {
+        //Lama.registerFieldComponent("textarea", () => import('./components/TextareaField.vue') );
+
+        Lama.registerFieldComponent("array", ArrayField);
+        Lama.registerDefaultSchemaFieldMapping("array", "array");
+        Lama.registerFieldComponent("checkbox", CheckboxField);
+        Lama.registerFieldComponent("checkboxlist", CheckboxListField);
+        Lama.registerDefaultSchemaFieldMapping("boolean", "checkbox");
+        Lama.registerFieldComponent("ckeditor", CKEditorField);
+        Lama.registerFieldComponent("color", ColorField);
+        Lama.registerFieldComponent("country", CountryField);
+        Lama.registerFieldComponent("date", DateField);
+        Lama.registerFieldComponent("file", FileField);
+        Lama.registerFieldComponent("number", NumberField);
+        Lama.registerDefaultSchemaFieldMapping("number", "number");
+        Lama.registerFieldComponent("radio", RadioField);
+        Lama.registerFieldComponent("select", SelectField);
+        Lama.registerFieldComponent("textarea", TextareaField);
+        Lama.registerFieldComponent("text", TextField);
+        Lama.registerFieldComponent("email", EmailField);
+        Lama.registerDefaultSchemaFieldMapping("string", "text");
+
+        Lama.registerView({
+            "id": "bootstrap4-edit",
+            "parent": "base",
+            "type": "edit",
+            "ui": "bootstrap4",
+            "title": "Bootstrap4 view",
+            "displayReadonly": false,
+            "components": {
+
+            },
+            //"callbacks": callbacks,
+            "styles": {
+                layoutRow: "form-row",
+                layoutColumn: ["col-1", "col-2", "col-3"]
+
+            },
+            "horizontal": false
+        });
+
+        Lama.registerView({
+            "id": "bootstrap4-create",
+            "parent": "bootstrap4-edit",
+            "title": "Create View for Bootstrap 4",
+            "ui": "bootstrap4",
+            "type": "create",
+            "displayReadonly": false
+        });
     }
 }

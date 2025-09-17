@@ -61,8 +61,8 @@
                                 type: "boolean",
                             },
                             helper: {
-                               title: "Helper",
-                               type: "string",
+                                title: "Helper",
+                                type: "string",
                             },
                             multilanguage: {
                                 type: "boolean",
@@ -99,6 +99,7 @@
                             },
                             multilanguage: {
                                 rightLabel: "Multi language",
+                                hidden: Lama.options.multilanguage === false,
                             },
                         },
                     },

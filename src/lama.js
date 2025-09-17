@@ -1220,10 +1220,11 @@ let Lama = {
             return
         }
         this.installed = true;
-
+        this.options = options || {};
         this.registerView(BaseView);
         nlNLView.register();
         Bootstap4View.register();
+
         if (options && options.view)
             this.defaultView = options.view;
         else
@@ -1346,11 +1347,12 @@ let Lama = {
         TextareaField: TextareaField,
         UrlField: UrlField,
         VueSelectBaseField: VueSelectBaseField,
-    }
+    },
+    options: {}
 }
 export default Lama;
 
 if (typeof window !== 'undefined' ) {
     window.Lama = Lama;
-    Vue.use(Lama);
+    Vue.use(Lama, window.LamaOptions );
 }

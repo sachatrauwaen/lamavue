@@ -43,6 +43,8 @@
 </template>
 
 <script>
+    window.LamaOptions = { multilanguage: false, small: true };
+
     import Builder from "./components/Builder.vue";
     import LamaForm from "./components/Form.vue";
     import Lama from "./lama";

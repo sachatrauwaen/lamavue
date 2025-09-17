@@ -2,10 +2,11 @@ import Lama from './lama'
 
 export default {
     getObjectProps() {
+        let fieldsFilter = Lama.options.fields || [];
         let types = [];
         const fieldClassRegistry = Lama.fieldClassRegistry;
         for (const key in fieldClassRegistry) {
-            if (fieldClassRegistry[key].builder) {
+            if (fieldClassRegistry[key].builder && (fieldsFilter.length == 0 || fieldsFilter.includes(key)) ) {
                 types.push(key);
             }
         }
