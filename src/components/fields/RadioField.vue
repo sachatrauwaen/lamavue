@@ -33,7 +33,7 @@ let RadioField = {
   },
   methods: {
     label(index) {
-      return this.schema.enum[index];
+          return this.options.optionLabels[index] || this.schema.enum[index];
     }
   },
   components: {},
