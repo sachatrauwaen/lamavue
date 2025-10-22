@@ -47,10 +47,7 @@
       class="form-control-file normalFileUpload"
       style="margin-bottom: 10px"
     />
-    <div
-      v-if="showOverwrite"
-      style="position: absolute; top: 80px; right: 5px"
-    >
+    <div v-if="showOverwrite">
       <input type="checkbox" v-model="doOverwrite" />
       <label class="">Overwrite</label>
     </div>
