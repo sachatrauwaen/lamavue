@@ -1,17 +1,8 @@
 import Vue from 'vue'
 import Form from './components/Form.vue'
-import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-import { required, email, numeric } from 'vee-validate/dist/rules';
 import VueI18n from 'vue-i18n'
 
-Vue.component('ValidationProvider', ValidationProvider);
-Vue.component('ValidationObserver', ValidationObserver);
-
-Vue.use(VueI18n)
-
-extend('required', required);
-extend('email', email);
-extend('numeric', numeric);
+Vue.use(VueI18n);
 
 (function ($) {
     var Lama = function () {

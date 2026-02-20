@@ -1,17 +1,13 @@
 <template>
     <div>
-        <ValidationObserver ref="validationobserver" v-slot="flags">
-            <div>
-                <form-field ref="formField" v-model="model" v-bind="props"></form-field>
-                <div v-if="flags.failed" class="alert alert-danger" role="alert">
-                    <template v-for="(v,k) in flags.errors">
-                        <div v-for="e in v" :key="e" >
-                            {{e}}
-                        </div>
-                    </template>
+        <div>
+            <form-field ref="formField" v-model="model" v-bind="props"></form-field>
+            <div v-if="hasErrors" class="alert alert-danger" role="alert">
+                <div v-for="(error, index) in allErrors" :key="index">
+                    {{error}}
                 </div>
             </div>
-        </ValidationObserver>
+        </div>
         <div v-if="debug">
             {{model}}
         </div>
@@ -37,6 +33,12 @@
                 "default": false
             }
         },
+        data() {
+            return {
+                hasErrors: false,
+                allErrors: []
+            };
+        },
         computed: {
             model: {
                 get() {
@@ -61,14 +63,35 @@
             }
         },
         methods: {
-            validate(successCallback, errorCallBack) {
-                this.$refs.validationobserver.validate().then(success => {
-                    if (success) {
-                        if (successCallback) successCallback();
-                    } else {
-                        if (errorCallBack) errorCallBack();
+            _findControls(component, controls) {
+                if (component.$options.name === 'Control') {
+                    controls.push(component);
+                }
+                if (component.$children) {
+                    for (var i = 0; i < component.$children.length; i++) {
+                        this._findControls(component.$children[i], controls);
                     }
-                });
+                }
+            },
+            validate(successCallback, errorCallBack) {
+                var controls = [];
+                this._findControls(this, controls);
+                var errors = [];
+                var allValid = true;
+                for (var i = 0; i < controls.length; i++) {
+                    var valid = controls[i].validate();
+                    if (!valid) {
+                        allValid = false;
+                        errors = errors.concat(controls[i].errors);
+                    }
+                }
+                this.allErrors = errors;
+                this.hasErrors = !allValid;
+                if (allValid) {
+                    if (successCallback) successCallback();
+                } else {
+                    if (errorCallBack) errorCallBack();
+                }
             },
             init() {
                 this.$refs.formField.init();

@@ -2,6 +2,6 @@ module.exports = {
   css: {
     extract: false
   },
-  filenameHashing:false
- 
+  filenameHashing:false,
+  transpileDependencies: ['zod']
 }

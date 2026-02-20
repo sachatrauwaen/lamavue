@@ -1,6 +1,4 @@
 import Vue from 'vue'
-import { ValidationProvider, ValidationObserver, extend } from 'vee-validate';
-import { required, email, numeric, min, max, regex } from 'vee-validate/dist/rules';
 //import VueI18n from 'vue-i18n'
 
 import BaseView from "./BaseView";
@@ -54,17 +52,7 @@ import VueSelectBaseField from './components/fields/VueSelectBaseField.vue'
 
 
 
-Vue.component('ValidationProvider', ValidationProvider);
-Vue.component('ValidationObserver', ValidationObserver);
-
 //Vue.use(VueI18n)
-
-extend('required', required);
-extend('email', email);
-extend('numeric', numeric);
-extend('min', min);
-extend('max', max);
-extend('regex', regex);
 
 let Lama = {
     /**
