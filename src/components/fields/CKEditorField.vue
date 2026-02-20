@@ -1,6 +1,6 @@
 <template>
     <control v-bind="props">
-        <ckeditor :value="model" @input="model= $event" :config="editorConfigIntern" @namespaceloaded="onNamespaceLoadedIntern" @ready="onEditorReadyIntern" :editor-url="editorUrl"></ckeditor>
+        <ckeditor v-model="model" :config="editorConfigIntern" @namespaceloaded="onNamespaceLoadedIntern" @ready="onEditorReadyIntern" :editor-url="editorUrl"></ckeditor>
     </control>
 </template>
 
@@ -8,7 +8,7 @@
     //import Vue from 'vue';
     import TextField from "./TextField.vue";
     import Control from "./Control.vue";
-    import CKEditor from "ckeditor4-vue";
+    import CKEditor from "@mayasabha/ckeditor4-vue3";
     //import CKEditor from "./VueCkeditor";
 
     const basicConfig = {
@@ -242,6 +242,7 @@
     let CKEditorField = {
         name: "CKEditorField",
         extends: TextField,
+        emits: ['update:modelValue'],
         props: {},
         data() {
             return {
@@ -250,10 +251,10 @@
         computed: {
             model: {
                 get() {
-                    return this.value || '';
+                    return this.modelValue || '';
                 },
                 set(val) {
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             },
             commonConfig() {

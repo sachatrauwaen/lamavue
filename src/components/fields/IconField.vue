@@ -39,7 +39,7 @@ let TextField = {
   name: "IconField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
     },
   },

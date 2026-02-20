@@ -16,7 +16,7 @@
 export default {
   name: "Container",
   props: {
-    value: {},
+    modelValue: {},
     data: {},
     schema: {},
     options: {},
@@ -33,9 +33,9 @@ export default {
       return this.schema.title;
     },
     headerLabel() {
-      if (!this.value) return "";
-      let keys = Object.keys(this.value);
-      let l = this.value[keys[0]];
+      if (!this.modelValue) return "";
+      let keys = Object.keys(this.modelValue);
+      let l = this.modelValue[keys[0]];
       return l ? l : "[empty item]";
     },
     showHeader() {

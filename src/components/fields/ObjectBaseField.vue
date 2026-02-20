@@ -10,8 +10,9 @@ import Fields from "../Fields.vue";
 
 let ObjectBaseField = {
   name: "ObjectBaseField",
+  emits: ['update:modelValue'],
   props: {
-    value: {
+    modelValue: {
       type: Object
     },
     schema: {},
@@ -22,10 +23,10 @@ let ObjectBaseField = {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       }
     },
     props() {
@@ -33,8 +34,7 @@ let ObjectBaseField = {
         schema: this.schema,
         options: this.options,
         view: this.view,
-        connector: this.connector,
-        errorCallback: this.errorCallback
+        connector: this.connector
       };
     }
   },

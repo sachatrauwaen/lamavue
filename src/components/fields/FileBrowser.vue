@@ -9,7 +9,7 @@
       :clearable="false"
       :options="folders"
       :reduce="(option) => option.id"
-      @input="folderChange"
+      @update:modelValue="folderChange"
     ></vue-select>
     <vue-select
       v-if="showFileSelector"
@@ -37,9 +37,9 @@
       <input type="checkbox" v-model="doOverwrite" />
       <label class="">Overwrite</label>
     </div>
-    <button v-if="value && deleteFile && !confirmDelete" type="button" class="btn btn-secondary" @click.prevent="startDeleteFile">Delete file from the server</button>
-    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-primary ml-2" @click.prevent="confirmDeleteFile">Confirm file delete</button>
-    <button v-if="value && deleteFile && confirmDelete" type="button" class="btn btn-secondary ml-2" @click.prevent="cancelDeleteFile">Cancel</button>
+    <button v-if="modelValue && deleteFile && !confirmDelete" type="button" class="btn btn-secondary" @click.prevent="startDeleteFile">Delete file from the server</button>
+    <button v-if="modelValue && deleteFile && confirmDelete" type="button" class="btn btn-primary ml-2" @click.prevent="confirmDeleteFile">Confirm file delete</button>
+    <button v-if="modelValue && deleteFile && confirmDelete" type="button" class="btn btn-secondary ml-2" @click.prevent="cancelDeleteFile">Cancel</button>
     
   </div>
 </template>
@@ -51,7 +51,7 @@ import "vue-select/dist/vue-select.css";
 export default {
   name: "FileBrowser",
   props: {
-    value: {},
+    modelValue: {},
     connector: {},
     baseFolder: {},
     accept: {},
@@ -113,10 +113,10 @@ export default {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       },
     },
   },
@@ -180,15 +180,15 @@ export default {
         secure: this.secure,
         width: this.width,
         height: this.height,
-        old: this.value ? this.value.url : null,
+        old: this.modelValue ? this.modelValue.url : null,
         deleteOld: this.replaceOnUpload,
       };
       this.connector.upload(
         config,
         (data) => {
           this.files.push(data);
-            if (this.replaceOnUpload && this.value) {
-              const index = this.files.findIndex(item => item.url === this.value.url);
+            if (this.replaceOnUpload && this.modelValue) {
+              const index = this.files.findIndex(item => item.url === this.modelValue.url);
               if (index !== -1) {
                 this.files.splice(index, 1);
               } 
@@ -219,7 +219,7 @@ export default {
     },
     confirmDeleteFile() {
       let config = {
-          url: this.value.url,
+          url: this.modelValue.url,
           secure: this.secure,
           folder: this.baseFolder,
       };
@@ -245,9 +245,9 @@ export default {
 
   },
   watch: {
-    value(val) {
+    modelValue(val) {
       if (val && val.folderId) {
-        this.folder = this.value.folderId;
+        this.folder = this.modelValue.folderId;
         this.fetchFiles();
       }
     },
@@ -256,6 +256,7 @@ export default {
     this.fetchFolders();
     this.doOverwrite = this.overwrite;
   },
+  emits: ['update:modelValue'],
   components: {
     VueSelect,
   },

@@ -18,7 +18,7 @@
         name: "GuidField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 type: String,
             },
         },

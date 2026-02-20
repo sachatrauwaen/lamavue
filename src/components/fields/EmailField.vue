@@ -20,7 +20,7 @@ let EmailField = {
   name: "EmailField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
       default: ''
     },

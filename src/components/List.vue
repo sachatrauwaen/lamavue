@@ -15,10 +15,10 @@
           ></toolbar>
         </template>
         <form-field
-          ref="formField"
-          v-model="model[index]"
+          :ref="el => setFormFieldRef(el, index)"
+          :modelValue="model[index]"
           v-bind="itemProps(item)"
-          @input="itemChange(index, $event)"
+          @update:modelValue="itemChange(index, $event)"
         ></form-field>
       </array-item-container>
     </div>
@@ -32,32 +32,34 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
 import Toolbar from "./Toolbar.vue";
 import ArrayItemContainer from "./ArrayItemContainer.vue";
 import Lama from "../lama";
-import FormField from "./Field.vue";
 
 export default {
   name: "List",
   props: {
-    value: {},
+    modelValue: {},
     schema: {},
     options: {},
     view: {},
     connector: {},
   },
+  emits: ['update:modelValue'],
   data() {
     return {
       showIndex: -1,
+      formFieldRefs: [],
     };
   },
   computed: {
     model: {
       get() {
-        return this.value || [];
+        return this.modelValue || [];
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       },
     },
     field() {
@@ -72,13 +74,20 @@ export default {
         options,
         schema,
         view,
-        this.connector,
-        this.errorCallback
+        this.connector
       );
       return field;
     },
   },
+  beforeUpdate() {
+    this.formFieldRefs = [];
+  },
   methods: {
+    setFormFieldRef(el, index) {
+      if (el) {
+        this.formFieldRefs[index] = el;
+      }
+    },
     toolbarProps(index) {
       return {
         data: this.field.props.data,
@@ -94,15 +103,13 @@ export default {
         this.options && this.options.items ? this.options.items : {};
       options.label = options.label || schema.title || "";
       var view = this.view ? this.view : {};
-      // eslint-disable-next-line no-undef
       let field = Lama.createFieldInstance(
         "",
         data,
         options,
         schema,
         view,
-        this.connector,
-        this.errorCallback
+        this.connector
       );
       return field.props;
     },
@@ -118,30 +125,32 @@ export default {
       };
     },
     itemChange(index, value) {
-      this.$set(this.model, index, value);
-      this.$emit("input", this.model);
+      var arr = this.model.slice();
+      arr[index] = value;
+      this.$emit("update:modelValue", arr);
     },
     showBody(index) {
       this.showIndex = index == this.showIndex ? -1 : index;
-      },
-      added(index) {
-          this.$nextTick(() => {
-            if (this.$refs.formField && this.$refs.formField.length > 0) {
-                  this.$refs.formField[0].init(index);
-              }
-          })
-      },
+    },
+    added(index) {
+      this.$nextTick(() => {
+        if (this.formFieldRefs && this.formFieldRefs.length > 0) {
+          this.formFieldRefs[0].init(index);
+        }
+      });
+    },
     init() {
-      if (this.$refs.formField) {
-        for (var i = 0; i < this.$refs.formField.length; i++) {
-          this.$refs.formField[i].init();
+      if (this.formFieldRefs) {
+        for (var i = 0; i < this.formFieldRefs.length; i++) {
+          if (this.formFieldRefs[i]) this.formFieldRefs[i].init();
         }
       }
     },
   },
-  components: { Toolbar, ArrayItemContainer },
-  beforeCreate: function () {
-    this.$options.components.FormField = FormField;
+  components: {
+    Toolbar,
+    ArrayItemContainer,
+    FormField: defineAsyncComponent(() => import("./Field.vue"))
   },
 };
 </script>

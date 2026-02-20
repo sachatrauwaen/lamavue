@@ -1,16 +1,16 @@
 <template>
     <control v-bind="props" v-slot="flags">
-        <vue-ctk-date-time-picker :only-date="true"
-                                  :auto-close="true"
-                                  :no-label="true"
-                                  :no-header="true"
-                                  :no-button-now="true"
-                                  format="YYYY-MM-DDT00:00:00"
-                                  :locale="locale"                                  
-                                  formatted="ll"
-                                  v-model="model"
-                                  :class="{'is-invalid':flags.invalid && flags.touched}"
-                                  :label="options.placeholder" :disabled="schema.readonly" />
+        <VueDatePicker
+            v-model="model"
+            :enable-time-picker="false"
+            :auto-apply="true"
+            :locale="locale"
+            :format="formatDate"
+            :class="{'is-invalid':flags.invalid && flags.touched}"
+            :placeholder="options.placeholder"
+            :disabled="schema.readonly"
+            text-input
+        />
     </control>
 </template>
 
@@ -18,14 +18,14 @@
     import Lama from "../../lama";
     import ControlField from "./ControlField.vue";
     import Control from "./Control.vue";
-    import VueCtkDateTimePicker from "vue-ctk-date-time-picker";
-    import "vue-ctk-date-time-picker/dist/vue-ctk-date-time-picker.css";
+    import VueDatePicker from "@vuepic/vue-datepicker";
+    import "@vuepic/vue-datepicker/dist/main.css";
 
     let DateField = {
         name: "DateField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 type: String
             }
         },
@@ -35,6 +35,11 @@
             }
         },
         methods: {
+            formatDate(date) {
+                if (!date) return '';
+                var d = date instanceof Date ? date : new Date(date);
+                return d.getFullYear() + '-' + this.pad(d.getMonth() + 1) + '-' + this.pad(d.getDate());
+            },
             pad(number) {
                 if (number < 10) {
                     return '0' + number;
@@ -52,7 +57,7 @@
                 }
             }
         },
-        components: { Control, VueCtkDateTimePicker },
+        components: { Control, VueDatePicker },
         builder: {
             props() {
                 return {

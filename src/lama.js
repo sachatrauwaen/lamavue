@@ -1,5 +1,4 @@
-import Vue from 'vue'
-//import VueI18n from 'vue-i18n'
+import { createApp, h, reactive } from 'vue'
 
 import BaseView from "./BaseView";
 
@@ -1202,9 +1201,9 @@ let Lama = {
         }
     },
     installed: false,
-    install(Vue, options) {
+    install(app, options) {
         if (this.installed) {
-            console.warn("[LamaVue] allready installed");
+            console.warn("[LamaVue] already installed");
             return
         }
         this.installed = true;
@@ -1220,78 +1219,64 @@ let Lama = {
         this.registerConnectorClass("default", DefaultConnector);
     },
     mount(elementOrSelector, config) {
-        let app = new Vue({
-            data: {
-                model: config.data
-            },
-            render: function (h) {
-                var self = this;
+        var state = reactive({ model: config.data });
+        var formRef = null;
+        var app = createApp({
+            render() {
                 return h(LamaForm, {
-                    ref: 'form',
-                    props: {
-                        schema: config.schema,
-                        options: config.options,
-                        view: config.view,
-                        connector: config.connector,
-                        value: self.model
-                    },
-                    on: {
-                        input: function (event) {
-                            //self.$emit('input', event.target.value)
-                            self.model = event;
-                        }
+                    ref: function (el) { formRef = el; },
+                    schema: config.schema,
+                    options: config.options,
+                    view: config.view,
+                    connector: config.connector,
+                    modelValue: state.model,
+                    'onUpdate:modelValue': function (event) {
+                        state.model = event;
                     }
                 });
-
             },
             mounted() {
-                if (config.init)
-                    this.$refs.form.init();
-            },
-
-        }).$mount(elementOrSelector);
+                if (config.init && formRef)
+                    formRef.init();
+            }
+        });
+        app.use(Lama, config.lamaOptions);
+        app.mount(elementOrSelector);
         return {
             getValue() {
-                return app.model;
+                return state.model;
             },
             setValue(val) {
-                return app.model = val;
+                state.model = val;
             },
             validate(successCallback, errorCallBack) {
-                app.$refs.form.validate(successCallback, errorCallBack);
+                if (formRef) formRef.validate(successCallback, errorCallBack);
             }
-
         };
     },
     mountBuilder(elementOrSelector, config) {
-        let app = new Vue({
-            data: {
-                model: config.data
-            },
-            render: function (h) {
-                var self = this;
+        var state = reactive({ model: config.data });
+        var builderRef = null;
+        var app = createApp({
+            render() {
                 return h(LamaBuilder, {
-                    ref: 'builder',
-                    props: {
-                        connector: config.connector,
-                        value: self.model
-                    },
-                    on: {
-                        input: function (event) {
-                            //self.$emit('input', event.target.value)
-                            self.model = event;
-                        }
+                    ref: function (el) { builderRef = el; },
+                    connector: config.connector,
+                    modelValue: state.model,
+                    'onUpdate:modelValue': function (event) {
+                        state.model = event;
                     }
                 });
-
             }
-        }).$mount(elementOrSelector);
+        });
+        app.use(Lama, config.lamaOptions);
+        app.mount(elementOrSelector);
         return {
             getValue() {
-                return app.model;
+                return state.model;
             },
             validate(successCallback, errorCallBack) {
-                app.$refs.builder.validate(successCallback, errorCallBack);
+                if (builderRef) builderRef.validate(successCallback, errorCallBack);
             }
         };
     },
@@ -1340,7 +1325,6 @@ let Lama = {
 }
 export default Lama;
 
-if (typeof window !== 'undefined' ) {
+if (typeof window !== 'undefined') {
     window.Lama = Lama;
-    Vue.use(Lama, window.LamaOptions );
 }

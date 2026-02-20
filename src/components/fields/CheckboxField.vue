@@ -23,7 +23,7 @@ let CheckBoxField = {
   name: "CheckBoxField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: Boolean
     }
   },

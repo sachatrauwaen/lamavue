@@ -12,7 +12,7 @@
         computed: {
              model: {
                 get() {
-                    return this.value;
+                    return this.modelValue;
                 },
                 set(val) {
                     if (this.options.multilanguageLink) {
@@ -35,7 +35,7 @@
                         else if (val.type == "phone")
                             val.url = val && val.phone ? 'tel:' + val.phone : "";
                     }
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             },
             props() {

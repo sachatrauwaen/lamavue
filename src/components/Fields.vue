@@ -1,30 +1,31 @@
 <template>
     <div class="form-row">
         <div v-for="(value, key) in fields" :key="key" :class="['col-12', 'col-md-12', 'lama-type-'+itemProps(key).options.type, 'lama-field-'+key]">
-            <form-field v-show="visible(key)" ref="field" v-model="model[key]" v-bind="itemProps(key)" @input="propChange(key, $event)"></form-field>
+            <form-field v-show="visible(key)" ref="field" :modelValue="model[key]" v-bind="itemProps(key)" @update:modelValue="propChange(key, $event)"></form-field>
         </div>
     </div>
 </template>
 
 <script>
+    import { defineAsyncComponent } from "vue";
     import Lama from "../lama";
-    import FormField from "./Field.vue";
 
     export default {
         name: "Fields",
         props: {
-            value: {},
+            modelValue: {},
             data: {},
             schema: {},
             options: {},
             view: {},
             connector: {}
         },
+        emits: ['update:modelValue'],
         computed: {
             fields() {
                 let fields = {};
                 for (let key in this.schema.properties) {
-                    var data = this.value && this.value[key] ? this.value[key] : undefined;
+                    var data = this.modelValue && this.modelValue[key] ? this.modelValue[key] : undefined;
                     var schema =
                         this.schema && this.schema.properties && this.schema.properties[key]
                             ? this.schema.properties[key]
@@ -40,13 +41,6 @@
                         this.view && this.view.fields && this.view.fields[key]
                             ? this.view.fields[key]
                             : this.view;
-                    /*
-                    if (schema.type =="array"){
-                      schema = schema.items;
-                      options = options.items ? options.items: {};
-                      view = view.items ? view.items: {};
-                    }
-                    */
                     fields[key] = Lama.createFieldInstance(
                         "",
                         data,
@@ -54,7 +48,6 @@
                         schema,
                         view,
                         this.connector
-                        //this.errorCallback
                     );
                 }
                 return fields;
@@ -70,21 +63,18 @@
             },
             model: {
                 get() {
-                    return this.value || {};
+                    return this.modelValue || {};
                 },
                 set(val) {
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             }
-            // columns(){
-            //   return this.options.columns || 1;
-            // }
         },
         methods: {
             propChange(key, value) {
                 let obj = this.model;
-                this.$set(obj, key, value);
-                this.$emit("input", obj);
+                obj[key] = value;
+                this.$emit("update:modelValue", obj);
             },
             itemProps(key) {
                 return this.fields[key].props;
@@ -113,12 +103,6 @@
                         } else {
                             valok = valok || this.model[prop] == true;
                         }
-                        /*
-                        let valok = false;
-                        for (var i = 0; i < val.length; i++) {
-                            valok = valok || this.model[prop] == true || this.model[prop] == val[i];
-                        }
-                        */
                         ok = ok && valok;
                     }
                     return ok;
@@ -142,25 +126,9 @@
                 }
             }
         },
-        //components: { FormField },
-        beforeCreate: function () {
-            this.$options.components.FormField = FormField
+        components: {
+            FormField: defineAsyncComponent(() => import("./Field.vue"))
         },
-        //mounted() {
-        //    for (let key in this.schema.properties) {
-        //        //var data = this.value && this.value[key] ? this.value[key] : undefined;
-        //        var schema =
-        //            this.schema && this.schema.properties && this.schema.properties[key]
-        //                ? this.schema.properties[key]
-        //                : {};
-
-        //        if (!Object.prototype.hasOwnProperty.call(this.model, key) && schema.default) {
-        //            this.model[key] = schema.default;
-        //        }
-                
-        //    }
-        //}
-       
     };
 
 </script>

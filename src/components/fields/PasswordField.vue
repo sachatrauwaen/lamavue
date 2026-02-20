@@ -20,7 +20,7 @@ let PasswordField = {
   name: "PasswordField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
       default: ''
     },

@@ -48,7 +48,7 @@
         name: "ImageIdBrowserField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 
             }
         },

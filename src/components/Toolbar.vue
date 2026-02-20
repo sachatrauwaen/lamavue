@@ -22,12 +22,13 @@
 <script>
 export default {
   name: "Toolbar",
+  emits: ['update:modelValue', 'show-body', 'added'],
   props: {
     schema: {},
     options: {},
     messages: {},
     connector: {},
-    value: {
+    modelValue: {
       type: Array
     },
     index: {}
@@ -35,10 +36,10 @@ export default {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       }
     }
   },
@@ -55,11 +56,11 @@ export default {
     },
     up() {
       this.array_move(this.model, this.index, this.index - 1);
-      this.$emit("input", this.model);
+      this.$emit("update:modelValue", this.model);
     },
     down() {
       this.array_move(this.model, this.index, this.index + 1);
-      this.$emit("input", this.model);
+      this.$emit("update:modelValue", this.model);
     },
     add() {
       var schema = this.schema;
@@ -71,12 +72,12 @@ export default {
         this.model.splice(this.index+1, 0, itemData);
       }
       this.$emit("show-body");
-        this.$emit("input", this.model);
+        this.$emit("update:modelValue", this.model);
         this.$emit("added");
     },
     remove() {
       this.model.splice(this.index, 1);
-      this.$emit("input", this.model);
+      this.$emit("update:modelValue", this.model);
     }
   },
   components: {}

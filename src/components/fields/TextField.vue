@@ -21,7 +21,7 @@ let TextField = {
   name: "TextField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
       default: ''
     }

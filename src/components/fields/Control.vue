@@ -17,6 +17,9 @@ import { z } from 'zod';
 
 export default {
   name: "Control",
+  inject: {
+    _formValidation: { default: null }
+  },
   props: {
     schema: {},
     options: {},
@@ -69,6 +72,9 @@ export default {
     }
   },
   mounted() {
+    if (this._formValidation) {
+      this._formValidation.register(this);
+    }
     if (this.$refs.provider) {
       this.$refs.provider.addEventListener('focusout', this._onFocusOut, true);
       this.$refs.provider.addEventListener('input', this._onInput, true);
@@ -78,7 +84,10 @@ export default {
       this._unwatchParent = this.$parent.$watch('model', this._onValueChange);
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
+    if (this._formValidation) {
+      this._formValidation.unregister(this);
+    }
     if (this.$refs.provider) {
       this.$refs.provider.removeEventListener('focusout', this._onFocusOut, true);
       this.$refs.provider.removeEventListener('input', this._onInput, true);

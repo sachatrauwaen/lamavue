@@ -1,9 +1,9 @@
 <template>
     <control v-bind="props">
         <template v-if="showImageEditor">
-            <image-editor :imageUrl="value.rawUrl || value.url"
+            <image-editor :imageUrl="modelValue.rawUrl || modelValue.url"
                           :ratio="ratio"
-                          :cropperData="value.crop"
+                          :cropperData="modelValue.crop"
                           @cancel="cancelImageEditor"
                           @save="saveImageEditor"></image-editor>
         </template>
@@ -41,7 +41,7 @@
         name: "ImageBrowserField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 type: Object
             }
         },
@@ -72,7 +72,7 @@
                 }
             },
             imageSrc() {
-                if (this.value) return this.value.url + (this.value.url.indexOf('data:') == 0 ? '' : "?v=" + this.imageVersion);
+                if (this.modelValue) return this.modelValue.url + (this.modelValue.url.indexOf('data:') == 0 ? '' : "?v=" + this.imageVersion);
                 else return "";
             },
             imageFile: {

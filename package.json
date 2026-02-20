@@ -1,59 +1,32 @@
 {
   "name": "lamavue",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "type": "module",
   "main": "dist/lamavue.umd.js",
+  "module": "dist/lamavue.mjs",
   "scripts": {
-    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --target lib --name lamavue ./src/lamavue.js",
-    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build --mode development --target lib --name lamavue ./src/lamavue.js",
-    "buildapp": "vue-cli-service build --mode development",
-    "lint": "vue-cli-service lint",
-    "inspect": "vue-cli-service inspect"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@fortawesome/vue-fontawesome": "^3.0.0",
     "@googlemaps/js-api-loader": "^1.16.6",
-    "ckeditor4-vue": "^2.4.0",
-    "core-js": "^3.6.4",
-    "zod": "^3.23.8",
-    "vue": "^2.6.11",
-    "vue-cropperjs": "^4.0.1",
-    "vue-ctk-date-time-picker": "^2.4.0",
-    "vue-i18n": "^8.16.0",
-    "vue-select": "^3.10.0",
-    "vue-typeahead-bootstrap": "^2.12.0"
+    "@mayasabha/ckeditor4-vue3": "^1.0.0",
+    "@vuepic/vue-datepicker": "^11.0.0",
+    "cropperjs": "^1.6.0",
+    "vue": "^3.4.0",
+    "vue-cropperjs": "^5.0.0",
+    "vue-i18n": "^9.0.0",
+    "vue-select": "^4.0.0-beta.6",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.2.0",
-    "@vue/cli-plugin-eslint": "~4.2.0",
-    "@vue/cli-service": "~4.2.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.1.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "rules": {
-      "vue/no-unused-vars": 1
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@vitejs/plugin-vue": "^6.0.4",
+    "vite": "^7.3.1"
+  }
 }

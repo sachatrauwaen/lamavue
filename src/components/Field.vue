@@ -3,8 +3,9 @@
     <component
       ref="comp"
       :is="fieldComponent"
+      :key="fieldProps.options.type"
       v-model="model"
-      v-bind="props"
+      v-bind="fieldProps"
     ></component>
   </div>
 </template>
@@ -15,12 +16,14 @@ import Lama from "../lama";
 export default {
   name: "FormField",
   props: {
-    value: {},
+    modelValue: {},
+    data: {},
     schema: {},
     options: {},
     view: {},
     connector: {},
   },
+  emits: ['update:modelValue'],
   computed: {
     field() {
       let field = Lama.createFieldInstance(
@@ -30,65 +33,51 @@ export default {
         this.schema,
         this.view,
         this.connector
-        //this.errorCallback
       );
       return field;
     },
-    /* model: {
-              get() {
-                return this.value;
-              },
-              set(val) {
-                this.$emit("input", val);
-              }
-            }, */
     model: {
       get() {
         if (this.options.multilanguage) {
-            if (Lama.isObject(this.value)) {
-                if (Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture)) {
-                    return this.value[this.connector.currentCulture];
-                } else if (Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)) {
-                    //let val = this.value[this.connector.defaultCulture];
-                    //if (Lama.isString(val))
-                    //    return this.value[this.connector.defaultCulture] + ' [' + this.connector.defaultCulture.substring(0, 2).toUpperCase() + ']';
-                    //else
-                        return this.value[this.connector.defaultCulture];
+            if (Lama.isObject(this.modelValue)) {
+                if (Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.currentCulture)) {
+                    return this.modelValue[this.connector.currentCulture];
+                } else if (Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.defaultCulture)) {
+                        return this.modelValue[this.connector.defaultCulture];
                 } else {
                     return null;
                 }
             } else {
-                return this.value;
+                return this.modelValue;
             }
         } else {
-          return this.value;
+          return this.modelValue;
         }
       },
       set(val) {
         if (this.options.multilanguage) {
           let valueObject = {};
-            if (Lama.isObject(this.value) && (
-                Object.prototype.hasOwnProperty.call(this.value, this.connector.currentCulture) ||
-                Object.prototype.hasOwnProperty.call(this.value, this.connector.defaultCulture)
+            if (Lama.isObject(this.modelValue) && (
+                Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.currentCulture) ||
+                Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.defaultCulture)
             )) {
-            //valueObject = Lama.mergeObject(this.value, valueObject);
-            valueObject = this.value;            
-          } else if (!Lama.isEmpty(this.value)
+            valueObject = this.modelValue;
+          } else if (!Lama.isEmpty(this.modelValue)
               && this.connector.defaultCulture
               && this.connector.defaultCulture != this.connector.currentCulture) {
-              this.$set(valueObject, this.connector.defaultCulture, this.value);
+              valueObject[this.connector.defaultCulture] = this.modelValue;
           }
-          this.$set(valueObject, this.connector.currentCulture, val);
-          this.$emit("input", valueObject);
+          valueObject[this.connector.currentCulture] = val;
+          this.$emit("update:modelValue", valueObject);
         } else {
-          this.$emit("input", val);
+          this.$emit("update:modelValue", val);
         }
       },
     },
     fieldComponent() {
       return this.field.component;
     },
-    props() {
+    fieldProps() {
       return this.field.props;
     },
   },

@@ -14,7 +14,7 @@ let SelectField = {
   name: "SelectBaseField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String
     },
     schema: {},

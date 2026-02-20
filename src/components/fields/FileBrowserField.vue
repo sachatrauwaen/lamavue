@@ -13,7 +13,7 @@
         name: "FileBrowserField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 type: Object
             }
         },

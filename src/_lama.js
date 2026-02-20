@@ -1,8 +1,5 @@
-import Vue from 'vue'
+import { createApp, h, reactive } from 'vue'
 import Form from './components/Form.vue'
-import VueI18n from 'vue-i18n'
-
-Vue.use(VueI18n);
 
 (function ($) {
     var Lama = function () {
@@ -56,61 +53,22 @@ Vue.use(VueI18n);
             callback = config.callback;
         } else {
             callback = function (field, afterRenderCallBack) {
-                /* 
-                const i18n = new VueI18n({
-                locale: 'ja', 
-                messages: , 
-                }) */
-
-                new Vue({
-                    //i18n,
-                    data: {
-                        model: field.props.data
-                    },
-                    render: function (h) {
-                        var self = this;
+                var state = reactive({ model: field.props.data });
+                createApp({
+                    render() {
                         return h(Form, {
-                            props: {
-                                data: field.props.data,
-                                schema: field.props.schema,
-                                options: field.props.options,
-                                view: field.props.view,
-                                connector: field.props.connector,
-                                value: self.model
-                            },
-                            on: {
-                                input: function (event) {
-                                    //self.$emit('input', event.target.value)
-                                    self.model = event;
-                                }
+                            data: field.props.data,
+                            schema: field.props.schema,
+                            options: field.props.options,
+                            view: field.props.view,
+                            connector: field.props.connector,
+                            modelValue: state.model,
+                            'onUpdate:modelValue': function (event) {
+                                state.model = event;
                             }
                         });
-                        /*
-                                                var self = this;
-                                                return h(field.component, {
-                                                    props: field.props
-                                                },
-                                                    [
-                                                        h(Fields, {
-                                                            props: {
-                                                                data: field.props.data,
-                                                                schema: field.props.schema,
-                                                                options: field.props.options,
-                                                                view: field.props.view,
-                                                                value: self.model
-                                                            },
-                                                            on: {
-                                                                input: function (event) {
-                                                                    //self.$emit('input', event.target.value)
-                                                                    self.model = event;
-                                                                }
-                                                            }
-                                                        })
-                                                    ]
-                                                )
-                                                */
                     }
-                }).$mount(el[0]);
+                }).mount(el[0]);
                 afterRenderCallBack();
             }
         }

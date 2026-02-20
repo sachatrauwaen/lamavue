@@ -20,7 +20,7 @@ let ColorField = {
   name: "ColorField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
        type: String,
        default:''
     },

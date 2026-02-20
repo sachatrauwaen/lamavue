@@ -14,9 +14,9 @@
                 <lama-form ref="demoForm" v-bind="demoProps" v-model="demo" :debug="debug"></lama-form>
                 <div v-if="debug">
                     <hr />
-                    schema = {{ value.schema }}
+                    schema = {{ modelValue.schema }}
                     <hr />
-                    options = {{ value.options }}
+                    options = {{ modelValue.options }}
                 </div>
             </div>
         </div>
@@ -37,8 +37,9 @@
 
     export default {
         name: "Builder",
+        emits: ['update:modelValue'],
         props: {
-            value: {},
+            modelValue: {},
             connector: {},
             debug: {
                 type: Boolean,
@@ -129,7 +130,7 @@
                             fields[field.fieldName] = {};
                         }
                     }
-                    this.$emit("input", {
+                    this.$emit("update:modelValue", {
                         schema:
                             this.schemaType == "array"
                                 ? {
@@ -151,15 +152,15 @@
             },
             schemaType: {
                 get() {
-                    if (this.value.schema && this.value.schema.type)
-                        return this.value.schema.type;
+                    if (this.modelValue.schema && this.modelValue.schema.type)
+                        return this.modelValue.schema.type;
                     else return "object";
                 },
                 set(val) {
                     let props = this.schemaProperties;
                     let fields = this.optionsFields;
                     this.demo = val == "array" ? [] : {};
-                    this.$emit("input", {
+                    this.$emit("update:modelValue", {
                         schema:
                             val == "array"
                                 ? {
@@ -178,12 +179,12 @@
                 },
             },
             demoProps() {
-                let demoSchema = JSON.parse(JSON.stringify(this.value.schema || {}));
+                let demoSchema = JSON.parse(JSON.stringify(this.modelValue.schema || {}));
                 demoSchema.type = demoSchema.type || "object";
                 demoSchema.properties = demoSchema.properties || {};
                 return {
                     schema: demoSchema,
-                    options: JSON.parse(JSON.stringify(this.value.options || {})),
+                    options: JSON.parse(JSON.stringify(this.modelValue.options || {})),
                     connector: this.connector,
                 };
             },
@@ -191,17 +192,17 @@
                 return builderUtils.getObjectProps();
             },
             schemaProperties() {
-                if (this.value.schema && this.value.schema.type)
-                    return this.value.schema.type == "array"
-                        ? this.value.schema.items.properties
-                        : this.value.schema.properties;
+                if (this.modelValue.schema && this.modelValue.schema.type)
+                    return this.modelValue.schema.type == "array"
+                        ? this.modelValue.schema.items.properties
+                        : this.modelValue.schema.properties;
                 else return {};
             },
             optionsFields() {
-                if (this.value.schema && this.value.schema.type && this.value.options)
-                    return this.value.schema.type == "array"
-                        ? this.value.options.items.fields
-                        : this.value.options.fields;
+                if (this.modelValue.schema && this.modelValue.schema.type && this.modelValue.options)
+                    return this.modelValue.schema.type == "array"
+                        ? this.modelValue.options.items.fields
+                        : this.modelValue.options.fields;
                 else return {};
             },
         },

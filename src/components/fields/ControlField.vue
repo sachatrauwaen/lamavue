@@ -8,20 +8,21 @@
             return {};
         },
         props: {
-            value: {},
+            modelValue: {},
             data: {},
             schema: {},
             options: {},
             view: {},
             connector: {}
         },
+        emits: ['update:modelValue'],
         computed: {
             model: {
                 get() {
-                    return this.value;
+                    return this.modelValue;
                 },
                 set(val) {
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             },
             props() {

@@ -23,7 +23,7 @@
         name: "FileField",
         extends: ControlField,
         props: {
-            value: {
+            modelValue: {
                 type: String
             }
         },
@@ -41,7 +41,7 @@
                 let config = {
                     file: file,
                     name: file.name,
-                    old: this.value,
+                    old: this.modelValue,
                     secure: this.options.secure,
                     //folder: this.baseFolder,
                     folder: this.options.uploadfolder,
@@ -65,7 +65,7 @@
             },
             deleteFile() {
                 let config = {
-                    url: this.value,
+                    url: this.modelValue,
                     secure: this.options.secure,
                     folder: this.options.uploadfolder,
                 };

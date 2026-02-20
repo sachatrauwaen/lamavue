@@ -13,8 +13,9 @@ import ControlField from "./ControlField.vue";
 let RadioField = {
   name: "RadioField",
   extends: ControlField,
+  emits: ['update:modelValue'],
   props: {
-    value: {
+    modelValue: {
       type: String
     },
     schema: {},
@@ -24,16 +25,16 @@ let RadioField = {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       }
     }
   },
   methods: {
     label(index) {
-          return this.options.optionLabels[index] || this.schema.enum[index];
+          return (this.options.optionLabels && this.options.optionLabels[index]) || this.schema.enum[index];
     }
   },
   components: {},

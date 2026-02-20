@@ -19,7 +19,7 @@ let TextField = {
   name: "LazyTextField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
     },
   },

@@ -11,23 +11,23 @@ import builderUtils from "../../builderUtils";
 
 let ArrayBaseField = {
   name: "ArrayBaseField",
+  emits: ['update:modelValue'],
   props: {
-    value: {
+    modelValue: {
       type: Array
     },
     schema: {},
     options: {},
     connector: {},
-    view: {},
-    errorCallback: {}
+    view: {}
   },
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       }
     },
     props() {
@@ -35,8 +35,7 @@ let ArrayBaseField = {
         schema: this.schema,
         options: this.options,
         view: this.view,
-        connector:this.connector,
-        errorCallback: this.errorCallback
+        connector:this.connector
       };
     }
   },

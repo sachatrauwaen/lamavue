@@ -9,7 +9,7 @@
       :clearable="false"
       :options="folders"
       :reduce="(option) => option.id"
-      @input="folderChange"
+      @update:modelValue="folderChange"
     ></vue-select>
     <vue-select
       v-if="showFileSelector"
@@ -57,7 +57,7 @@ import "vue-select/dist/vue-select.css";
 export default {
   name: "ImageIdBrowser",
   props: {
-    value: {},
+    modelValue: {},
     connector: {},
     baseFolder: {},
     accept: {},
@@ -110,16 +110,16 @@ export default {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       },
     },
     selected: {
       get() {
             let filteredFiles = this.files.filter(f => {
-                return f.id == this.value;
+                return f.id == this.modelValue;
             });
             return filteredFiles.length ? filteredFiles[0] : null;
       },
@@ -230,9 +230,9 @@ export default {
       },
   },
   watch: {
-    value(val) {
+    modelValue(val) {
       if (val && val.folderId) {
-        this.folder = this.value.folderId;
+        this.folder = this.modelValue.folderId;
         this.fetchFiles();
       }
       this.$emit("change", this.selected);
@@ -242,6 +242,7 @@ export default {
     this.fetchFolders();
     this.doOverwrite = this.overwrite;
   },
+  emits: ['update:modelValue', 'change'],
   components: {
     VueSelect,
   },

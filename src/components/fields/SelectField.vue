@@ -6,7 +6,7 @@ let SelectField = {
   name: "SelectField",
   extends: SelectBaseField,
   props: {
-    value: {
+    modelValue: {
       type: String
     },
     schema: {},

@@ -25,12 +25,11 @@ import Lama from "../lama";
 export default {
   name: "ArrayItemContainer",
   props: {
-    value: {},
+    modelValue: {},
     data: {},
     schema: {},
     options: {},
     connector: {},
-    errorCallback: {},
     messages: {},
     show:{}
   },
@@ -41,11 +40,11 @@ export default {
   },
   computed: {
     headerLabel() {
-      if (!this.value) return "[empty item]";
-      if (!Lama.isObject(this.value)) return this.value;
+      if (!this.modelValue) return "[empty item]";
+      if (!Lama.isObject(this.modelValue)) return this.modelValue;
           let keys = Object.keys(this.schema.properties);
           let firstKey = keys[0];
-          let l = this.value[firstKey];
+          let l = this.modelValue[firstKey];
         if (Lama.isObject(l)) {
             if (l[this.options.titleField]) {
                 l = l[this.options.titleField];

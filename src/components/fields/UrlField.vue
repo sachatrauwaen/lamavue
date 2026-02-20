@@ -1,27 +1,34 @@
 <template>
     <control v-bind="props" v-slot="flags">
-        <vue-typeahead-bootstrap v-model="model" :data="items" :serializer="s => s.url" 
-                                 :class="{ 'is-invalid': flags.invalid && flags.touched }" >
-            <template slot="suggestion" slot-scope="{ data }">
-                <span>{{data.text}}</span>&nbsp;
-                <small>({{ data.url }})</small>
-            </template>
-        </vue-typeahead-bootstrap>
+        <div class="position-relative">
+            <input
+                type="text"
+                class="form-control"
+                v-model="model"
+                :class="{ 'is-invalid': flags.invalid && flags.touched }"
+                :placeholder="options.placeholder"
+                list="url-suggestions"
+                autocomplete="off"
+            />
+            <datalist id="url-suggestions">
+                <option v-for="item in items" :key="item.url" :value="item.url">
+                    {{ item.text }} ({{ item.url }})
+                </option>
+            </datalist>
+        </div>
     </control>
 </template>
 
 <script>
     import ControlField from "./ControlField.vue";
     import Control from "./Control.vue";
-    //import VueBootstrapTypeahead from 'vue-bootstrap-typeahead'
-
-    import VueTypeaheadBootstrap from 'vue-typeahead-bootstrap';
 
     let UrlField = {
         name: "UrlField",
         extends: ControlField,
+        emits: ['update:modelValue'],
         props: {
-            value: {
+            modelValue: {
                 type: String,
                 default: ''
             },
@@ -35,10 +42,10 @@
         computed: {
             model: {
                 get() {
-                    return this.value || '';
+                    return this.modelValue || '';
                 },
                 set(val) {
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             },
             query() {
@@ -49,7 +56,6 @@
         },
         methods: {
             pageChange() {
-                //this.model = this.page;
             },
             fetchOptions() {
                 let self = this;
@@ -60,10 +66,8 @@
                     config,
                     (data) => {
                         self.items = data.map(self.map);
-                        //loading(false);
                     },
                     () => {
-                        //loading(false);
                     }
                 );
             },
@@ -77,7 +81,7 @@
         created() {
             this.fetchOptions();
         },
-        components: { Control, VueTypeaheadBootstrap },
+        components: { Control },
         builder: {
             props() {
                 return {

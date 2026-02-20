@@ -19,7 +19,7 @@ let NumberField = {
   name: "NumberField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: Number
     }
   },

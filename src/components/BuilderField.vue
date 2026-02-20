@@ -21,12 +21,12 @@ import Lama from "../lama";
 export default {
   name: "BuilderField",
   props: {
-    value: {},
+    modelValue: {},
     schema: {},
     options: {},
     connector: {},
-    // errorCallback: {}
   },
+  emits: ['update:modelValue'],
   computed: {
     field() {
       let field = Lama.createFieldInstance(
@@ -36,16 +36,15 @@ export default {
         this.schema,
         this.view,
         this.connector
-        //this.errorCallback
       );
       return field;
     },
     model: {
       get() {
-        return this.value;
+        return this.modelValue;
       },
       set(val) {
-        this.$emit("input", val);
+        this.$emit("update:modelValue", val);
       },
     },
     props() {
@@ -157,8 +156,8 @@ export default {
       return this.properties[field].title;
     },
     propChange(key, value) {
-      this.$set(this.model, key, value);
-      this.$emit("input", this.model);
+      this.model[key] = value;
+      this.$emit("update:modelValue", this.model);
     },
     init() {
         //if (this.$refs.fields1) this.$refs.fields1.init();

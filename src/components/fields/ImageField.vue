@@ -2,7 +2,7 @@
   <control v-bind="props" v-slot="flags">
     <template v-if="showImageEditor">
       <image-editor
-        :imageUrl="value"
+        :imageUrl="modelValue"
         :cropperData="{}"
         @cancel="cancelImageEditor"
         @save="saveImageEditor"
@@ -27,7 +27,7 @@
         style="margin-bottom: 10px"
       />
       <div>
-        <a v-if="value" href="#" @click.prevent="edit" title="Edit Image">
+        <a v-if="modelValue" href="#" @click.prevent="edit" title="Edit Image">
           <img
             :src="imageSrc"
             alt="Image"
@@ -54,7 +54,7 @@ let ImageField = {
   name: "ImageField",
   extends: ControlField,
   props: {
-    value: {
+    modelValue: {
       type: String,
     },
   },
@@ -66,7 +66,7 @@ let ImageField = {
   },
   computed: {
     imageSrc() {
-      return this.value +"?v="+ this.imageVersion;
+      return this.modelValue +"?v="+ this.imageVersion;
     },
   },
   methods: {

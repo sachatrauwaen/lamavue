@@ -21,8 +21,9 @@
     let CheckBoxField = {
         name: "CheckBoxListField",
         extends: ControlField,
+        emits: ['update:modelValue'],
         props: {
-            value: {
+            modelValue: {
                 type: Array
             }
         },
@@ -32,10 +33,10 @@
             },
             model: {
                 get() {
-                    return this.value || [];
+                    return this.modelValue || [];
                 },
                 set(val) {
-                    this.$emit("input", val);
+                    this.$emit("update:modelValue", val);
                 }
             },
             items() {
@@ -45,7 +46,7 @@
         methods: {
             optionLabel(value) {
                 let idx = this.schema.enum.indexOf(value);
-                return this.options.optionLabels[idx];
+                return (this.options.optionLabels && this.options.optionLabels[idx]) || value;
             }
         },
         components: {},
