@@ -21,18 +21,33 @@
       <!-- Left: Toolbox -->
       <div class="builder-toolbox">
         <div class="builder-panel-header">Toolbox</div>
-        <VueDraggable
-          v-model="toolboxItems"
-          :group="{ name: 'fields', pull: 'clone', put: false }"
-          :sort="false"
-          :clone="cloneField"
-          class="builder-toolbox-list"
-        >
-          <div v-for="item in toolboxItems" :key="item.type" class="builder-toolbox-item">
-            <span class="builder-toolbox-icon">+</span>
-            {{ item.label }}
+        <div class="builder-toolbox-list">
+          <div v-for="cat in toolboxCategories" :key="cat.name" class="builder-toolbox-category">
+            <div class="builder-toolbox-category-header" @click="toggleCategory(cat)">
+              <span class="builder-toolbox-chevron" :class="{ 'builder-toolbox-chevron--open': cat.open }">&#9656;</span>
+              {{ cat.name }}
+            </div>
+            <VueDraggable
+              v-show="cat.open"
+              v-model="cat.items"
+              :group="{ name: 'fields', pull: 'clone', put: false }"
+              :sort="false"
+              :clone="cloneField"
+              class="builder-toolbox-category-items"
+            >
+              <div
+                v-for="item in cat.items"
+                :key="item.type"
+                class="builder-toolbox-item"
+                title="Click or drag to add"
+                @click="addField(item)"
+              >
+                <font-awesome-icon :icon="fieldIcon(item.type)" class="builder-toolbox-icon" fixed-width />
+                {{ item.label }}
+              </div>
+            </VueDraggable>
           </div>
-        </VueDraggable>
+        </div>
       </div>
 
       <!-- Center: Canvas -->
@@ -52,10 +67,13 @@
             @click="selectedIndex = index"
           >
             <div class="builder-canvas-card-body">
-              <span class="builder-canvas-card-label">{{ field.label || field.fieldName || 'Untitled' }}</span>
-              <span class="badge badge-secondary ml-2">{{ field.fieldType || '?' }}</span>
+              <font-awesome-icon :icon="fieldIcon(field.fieldType)" class="builder-canvas-card-icon" fixed-width />
+              <span class="badge badge-secondary font-weight-light">{{ field.fieldType || '?' }}</span>
+              <span class="builder-canvas-card-label ml-2">{{ field.label || field.fieldName || 'Untitled' }}</span>
             </div>
-            <button class="btn btn-sm btn-outline-danger builder-canvas-card-delete" @click.stop="removeField(index)" title="Remove">&times;</button>
+            <button class="btn btn-sm btn-light builder-canvas-card-delete" @click.stop="removeField(index)" title="Remove">
+              <font-awesome-icon icon="trash" style="font-size: 13px; color: #dc3545;" />
+            </button>
           </div>
         </VueDraggable>
         <div v-if="!internalFields.length" class="builder-canvas-empty">
@@ -86,6 +104,7 @@
             v-if="selectedField.fieldType && selectedBuilderProps"
             v-model="internalFields[selectedIndex]"
             v-bind="selectedBuilderProps"
+            @update:modelValue="emitUpdate"
           ></fields>
         </div>
         <div v-else class="builder-properties-empty">
@@ -96,7 +115,7 @@
 
     <!-- Preview Tab -->
     <div v-if="activeTab === 'preview'" class="builder-preview">
-      <lama-form ref="demoForm" v-bind="demoProps" v-model="demo" :debug="debug"></lama-form>
+      <lama-form ref="demoForm" :key="previewKey" v-bind="demoProps" v-model="demo" :debug="debug"></lama-form>
       <div v-if="debug">
         <hr />
         schema = {{ modelValue.schema }}
@@ -113,6 +132,10 @@ import LamaForm from "./Form.vue";
 import Fields from "./Fields.vue";
 import Lama from "../lama";
 import builderUtils from "../builderUtils";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+library.add(fas);
 
 import BuilderField from "./BuilderField.vue";
 import LazyTextField from "./fields/LazyTextField.vue";
@@ -141,7 +164,8 @@ export default {
       internalFields: [],
       syncing: false,
       availableTypes: [],
-      toolboxItems: [],
+      toolboxCategories: [],
+      previewKey: 0,
     };
   },
   mounted() {
@@ -183,6 +207,59 @@ export default {
               props.options.fields = Object.assign(extendProps.options.fields, props.options.fields);
             }
           }
+        }
+      }
+      let depsProp = props.schema.properties.dependencies;
+      if (depsProp && depsProp.items && depsProp.items.properties && depsProp.items.properties.fieldname) {
+        let siblings = this.internalFields.filter((f, i) => i !== this.selectedIndex);
+        let siblingNames = siblings.map(f => f.fieldName).filter(Boolean);
+        depsProp.items.properties.fieldname = Object.assign({}, depsProp.items.properties.fieldname, {
+          enum: siblingNames,
+        });
+        if (!props.options.fields.dependencies) props.options.fields.dependencies = {};
+        props.options.fields.dependencies.items = props.options.fields.dependencies.items || {};
+        props.options.fields.dependencies.items.fields = props.options.fields.dependencies.items.fields || {};
+        props.options.fields.dependencies.items.fields.fieldname = { type: 'select' };
+
+        let allValues = [];
+        let allLabels = [];
+        let deps = this.selectedField.dependencies;
+        let referencedNames = Array.isArray(deps)
+          ? deps.map(d => d.fieldname).filter(Boolean)
+          : [];
+        let targetFields = referencedNames.length > 0
+          ? referencedNames.map(n => siblings.find(f => f.fieldName === n)).filter(Boolean)
+          : siblings;
+        for (let f of targetFields) {
+          if (f.fieldType === 'checkbox') {
+            if (allValues.indexOf('true') < 0) {
+              allValues.push('true', 'false');
+              allLabels.push('Checked', 'Unchecked');
+            }
+          } else if (['select', 'radio', 'checkboxlist'].includes(f.fieldType) && Array.isArray(f.options)) {
+            for (let opt of f.options) {
+              let val = opt.value != null ? opt.value : opt;
+              if (allValues.indexOf(String(val)) < 0) {
+                allValues.push(String(val));
+                allLabels.push(opt.label || String(val));
+              }
+            }
+          } else {
+            if (allValues.indexOf('__empty__') < 0) {
+              allValues.push('__empty__', '__notempty__');
+              allLabels.push('Empty', 'Non empty');
+            }
+          }
+        }
+        if (depsProp.items.properties.values) {
+          depsProp.items.properties.values = Object.assign({}, depsProp.items.properties.values, {
+            type: 'array',
+            enum: allValues,
+          });
+          props.options.fields.dependencies.items.fields.values = {
+            type: 'checkboxlist',
+            optionLabels: allLabels,
+          };
         }
       }
       return props;
@@ -243,17 +320,55 @@ export default {
     },
   },
   methods: {
+    fieldIcon(type) {
+      const icons = {
+        text: 'font', email: 'envelope', password: 'lock', number: 'hashtag',
+        textarea: 'align-left', checkbox: 'check-square', radio: 'dot-circle',
+        checkboxlist: 'list', select: 'caret-square-down', color: 'palette', date: 'calendar-alt',
+        url: 'link',
+        file: 'paperclip', image: 'image', imagebrowser: 'images',
+        filebrowser: 'folder-open', gallery: 'th', documents: 'file-alt',
+        object: 'cube', array: 'th-list',
+        ckeditor: 'pen-fancy', country: 'globe', guid: 'key', icon: 'star',
+        link: 'external-link-alt', relation: 'project-diagram', page: 'file', address: 'map-marker-alt',
+      };
+      return icons[type] || 'puzzle-piece';
+    },
+    toggleCategory(cat) {
+      let opening = !cat.open;
+      this.toolboxCategories.forEach(c => { c.open = false; });
+      cat.open = opening;
+    },
     refreshToolbox() {
+      const categoryMap = {
+        text: 'Inputs', email: 'Inputs', password: 'Inputs', number: 'Inputs',
+        textarea: 'Inputs', checkbox: 'Inputs', radio: 'Inputs',
+        checkboxlist: 'Inputs', select: 'Inputs', color: 'Inputs', date: 'Inputs',
+        url: 'Inputs',
+        file: 'Files', image: 'Files', imagebrowser: 'Files',
+        filebrowser: 'Files', gallery: 'Files', documents: 'Files',
+        object: 'Panels', array: 'Panels',
+      };
+      const categoryOrder = ['Inputs', 'Files', 'Panels', 'Advanced'];
+
       let fieldsFilter = (Lama.options && Lama.options.fields) || [];
       let types = [];
+      let grouped = {};
+      categoryOrder.forEach(c => { grouped[c] = []; });
+
       const reg = Lama.fieldClassRegistry;
       for (const key in reg) {
         if (reg[key].builder && (fieldsFilter.length === 0 || fieldsFilter.includes(key))) {
           types.push(key);
+          let cat = categoryMap[key] || 'Advanced';
+          if (!grouped[cat]) grouped[cat] = [];
+          grouped[cat].push({ type: key, label: key });
         }
       }
       this.availableTypes = types;
-      this.toolboxItems = types.map(t => ({ type: t, label: t }));
+      this.toolboxCategories = categoryOrder
+        .filter(c => grouped[c] && grouped[c].length > 0)
+        .map(c => ({ name: c, items: grouped[c], open: true }));
     },
     syncFromModel() {
       let fields = [];
@@ -348,9 +463,15 @@ export default {
       return {
         fieldType: original.type,
         fieldName: name,
-        label: original.type,
+        label: original.type.charAt(0).toUpperCase() + original.type.slice(1) + ' ' + count,
         _uid: ++uidCounter,
       };
+    },
+    addField(item) {
+      const field = this.cloneField(item);
+      this.internalFields.push(field);
+      this.selectedIndex = this.internalFields.length - 1;
+      this.emitUpdate();
     },
     onDragEnd() {
       this.emitUpdate();
@@ -369,12 +490,15 @@ export default {
     },
     switchToPreview() {
       this.activeTab = 'preview';
+      this.previewKey++;
+      const isArray = this.modelValue.schema && this.modelValue.schema.type === 'array';
+      this.demo = isArray ? [] : {};
       this.$nextTick(() => {
         if (this.$refs.demoForm) this.$refs.demoForm.init();
       });
     },
   },
-  components: { VueDraggable, LamaForm, Fields },
+  components: { VueDraggable, LamaForm, Fields, FontAwesomeIcon },
 };
 </script>
 
@@ -435,16 +559,46 @@ export default {
 }
 
 .builder-toolbox-icon {
-  display: inline-block;
   width: 18px;
-  height: 18px;
-  line-height: 16px;
-  text-align: center;
-  border: 1px solid #adb5bd;
-  border-radius: 3px;
-  margin-right: 6px;
-  font-size: 14px;
+  margin-right: 8px;
+  font-size: 13px;
   color: #6c757d;
+}
+
+.builder-toolbox-category {
+  margin-bottom: 2px;
+}
+
+.builder-toolbox-category-header {
+  padding: 6px 8px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #495057;
+  cursor: pointer;
+  user-select: none;
+  background: #f1f3f5;
+  border-radius: 3px;
+}
+
+.builder-toolbox-category-header:hover {
+  background: #e9ecef;
+}
+
+.builder-toolbox-chevron {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 10px;
+  transition: transform 0.15s;
+}
+
+.builder-toolbox-chevron--open {
+  transform: rotate(90deg);
+}
+
+.builder-toolbox-category-items {
+  padding: 2px 0 4px 0;
 }
 
 /* Canvas */
@@ -489,6 +643,12 @@ export default {
   display: flex;
   align-items: center;
   min-width: 0;
+}
+
+.builder-canvas-card-icon {
+  color: #6c757d;
+  margin-right: 8px;
+  font-size: 14px;
 }
 
 .builder-canvas-card-label {

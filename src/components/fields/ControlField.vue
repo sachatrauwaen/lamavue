@@ -70,7 +70,7 @@
                             },
                             dependencies: {
                                 type: "array",
-                                title: "Dependencies",
+                                title: "Show if",
                                 items: {
                                     type: "object",
                                     properties: {
@@ -79,7 +79,7 @@
                                             type: "string",
                                         },
                                         values: {
-                                            title: "Values (value1, value2, ...)",
+                                            title: "Values (or)",
                                             type: "string",
                                         },
                                     },
@@ -111,7 +111,7 @@
                 if (field.dependencies) {
                     for (let index = 0; index < field.dependencies.length; index++) {
                         const d = field.dependencies[index];
-                        optDeps[d.fieldname] = d.values;
+                        optDeps[d.fieldname] = Array.isArray(d.values) ? d.values.join(',') : (d.values || '');
                     }
                 }
                 return {
@@ -133,10 +133,18 @@
                 let deps = [];
                 if (def.options.dependencies) {
                     for (const key in def.options.dependencies) {
-                        const d = def.options.dependencies[key];
+                        let d = def.options.dependencies[key];
+                        let vals;
+                        if (Array.isArray(d)) {
+                            vals = d.map(v => String(v));
+                        } else if (typeof d === 'string' && d.indexOf(',') >= 0) {
+                            vals = d.split(',').map(v => v.trim());
+                        } else {
+                            vals = d != null ? [String(d)] : [];
+                        }
                         deps.push({
                             fieldname: key,
-                            values: d,
+                            values: vals,
                         });
                     }
                 }

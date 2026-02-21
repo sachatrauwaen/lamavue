@@ -6,7 +6,8 @@
                    class="form-check-input"
                    :aria-describedby="options.label"
                    :value="c"
-                   v-model="model"
+                   :checked="isChecked(c)"
+                   @change="toggleValue(c, $event)"
                    :class="{'is-invalid':flags.invalid && flags.touched}"
                    :placeholder="options.placeholder"
                    :readonly="schema.readonly" />
@@ -44,10 +45,27 @@
             }
         },
         methods: {
+            isChecked(value) {
+                return Array.isArray(this.modelValue) && this.modelValue.indexOf(value) > -1;
+            },
+            toggleValue(value, event) {
+                let arr = Array.isArray(this.modelValue) ? this.modelValue.slice() : [];
+                if (event.target.checked) {
+                    if (arr.indexOf(value) < 0) arr.push(value);
+                } else {
+                    arr = arr.filter(v => v !== value);
+                }
+                this.$emit('update:modelValue', arr);
+            },
             optionLabel(value) {
                 let idx = this.schema.enum.indexOf(value);
                 return (this.options.optionLabels && this.options.optionLabels[idx]) || value;
+            },
+            init() {
+            if (Lama.isValEmpty(this.model) && Lama.isString(this.schema.default)) {
+                this.model = this.schema.default.split(',');
             }
+        }
         },
         components: {},
         builder: {

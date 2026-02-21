@@ -90,15 +90,33 @@
                         if (val) {
                             if (Lama.isArray(val)) {
                                 for (var idx = 0; idx < val.length; idx++) {
-                                    valok = valok || this.model[prop] == val[idx];
+                                    if (val[idx] === '__empty__') {
+                                        valok = valok || Lama.isValEmpty(this.model[prop]);
+                                    } else if (val[idx] === '__notempty__') {
+                                        valok = valok || !Lama.isValEmpty(this.model[prop]);
+                                    } else {
+                                        valok = valok || this.model[prop] == val[idx];
+                                    }
                                 }
-                            } else if (val.indexOf(',') >= 0) {
+                            } else if (typeof val === 'string' && val.indexOf(',') >= 0) {
                                 let vals = val.split(',');
                                 for (var i = 0; i < vals.length; i++) {
-                                    valok = valok || this.model[prop] == vals[i];
+                                    let v = vals[i].trim();
+                                    if (v === '__empty__') valok = valok || Lama.isValEmpty(this.model[prop]);
+                                    else if (v === '__notempty__') valok = valok || !Lama.isValEmpty(this.model[prop]);
+                                    else if (v === 'true') valok = valok || this.model[prop] === true;
+                                    else if (v === 'false') valok = valok || this.model[prop] === false;
+                                    else if (Lama.isArray(this.model[prop])) valok = valok || this.model[prop].indexOf(v) >= 0;
+                                    else valok = valok || this.model[prop] == v;
+                                    
                                 }
                             } else {
-                                valok = valok || this.model[prop] == val;
+                                if (val === '__empty__') valok = Lama.isValEmpty(this.model[prop]);
+                                else if (val === '__notempty__') valok = !Lama.isValEmpty(this.model[prop]);
+                                else if (val === 'true') valok = this.model[prop] === true;
+                                else if (val === 'false') valok = this.model[prop] === false;
+                                else if (Lama.isArray(this.model[prop])) valok = valok || this.model[prop].indexOf(val) >= 0;
+                                else valok = this.model[prop] == val;
                             }
                         } else {
                             valok = valok || this.model[prop] == true;
