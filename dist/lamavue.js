@@ -1,4 +1,4 @@
-import o9, { defineComponent as $2, computed as i1, toRefs as Ft, unref as M, ref as m1, reactive as F3, h as A6, getCurrentInstance as s8, watch as V4, onMounted as t4, nextTick as g4, onUnmounted as i6, isRef as t0, openBlock as p, createElementBlock as A, createElementVNode as B, toDisplayString as W1, renderSlot as b1, createCommentVNode as j, defineAsyncComponent as l9, resolveComponent as E1, Fragment as B1, renderList as n2, normalizeClass as D1, withDirectives as r2, createVNode as e2, mergeProps as t2, vShow as m4, createBlock as H1, withCtx as L1, withModifiers as O2, normalizeProps as $1, guardReactiveProps as j1, vModelCheckbox as E5, vModelText as z4, vModelSelect as B0, useSlots as r6, toRef as d0, createSlots as f4, resolveDynamicComponent as T3, Teleport as It, Transition as n6, render as Ee, normalizeStyle as I4, useAttrs as Et, createTextVNode as a4, toValue as Rt, getCurrentScope as Bt, onScopeDispose as $t, onBeforeUpdate as Ut, withKeys as Zt, resolveDirective as jt, toHandlers as qt, vModelRadio as Yt, createApp as Re } from "vue";
+import o9, { defineComponent as $2, computed as i1, toRefs as It, unref as M, ref as m1, reactive as I3, h as A6, getCurrentInstance as s8, watch as V4, onMounted as t4, nextTick as g4, onUnmounted as i6, isRef as t0, openBlock as p, createElementBlock as A, createElementVNode as B, toDisplayString as W1, renderSlot as b1, createCommentVNode as j, defineAsyncComponent as l9, resolveComponent as E1, Fragment as R1, renderList as r2, normalizeClass as D1, withDirectives as n2, createVNode as e2, mergeProps as t2, vShow as m4, createBlock as H1, withCtx as L1, withModifiers as O2, normalizeProps as $1, guardReactiveProps as j1, vModelCheckbox as E5, vModelText as z4, vModelSelect as B0, useSlots as r6, toRef as d0, createSlots as f4, resolveDynamicComponent as T3, Teleport as Ft, Transition as n6, render as Ee, normalizeStyle as F4, useAttrs as Et, createTextVNode as a4, toValue as Rt, getCurrentScope as Bt, onScopeDispose as $t, onBeforeUpdate as Ut, withKeys as Zt, resolveDirective as jt, toHandlers as qt, vModelRadio as Yt, createApp as Re } from "vue";
 var Wt = Object.defineProperty, $0 = Object.getOwnPropertySymbols, s9 = Object.prototype.hasOwnProperty, f9 = Object.prototype.propertyIsEnumerable, Be = (e, a, t) => a in e ? Wt(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, C6 = (e, a) => {
   for (var t in a || (a = {}))
     s9.call(a, t) && Be(e, t, a[t]);
@@ -246,8 +246,8 @@ function j2(e, a, t, c, i) {
         }
       while (i = i.parentNode);
     if (c && e !== window) {
-      var w = H6(i || e), F = w && w.a, _ = w && w.d;
-      w && (n /= _, o /= F, m /= F, s /= _, l = n + s, u = o + m);
+      var w = H6(i || e), I = w && w.a, _ = w && w.d;
+      w && (n /= _, o /= I, m /= I, s /= _, l = n + s, u = o + m);
     }
     return {
       top: n,
@@ -409,8 +409,8 @@ function vc() {
       }
       var i = !1, r = 0;
       e.forEach(function(n) {
-        var o = 0, l = n.target, u = l.fromRect, s = j2(l), m = l.prevFromRect, b = l.prevToRect, w = n.rect, F = H6(l, !0);
-        F && (s.top -= F.f, s.left -= F.e), l.toRect = s, l.thisAnimationDuration && L8(m, s) && !L8(u, s) && // Make sure animatingRect is on line between toRect & fromRect
+        var o = 0, l = n.target, u = l.fromRect, s = j2(l), m = l.prevFromRect, b = l.prevToRect, w = n.rect, I = H6(l, !0);
+        I && (s.top -= I.f, s.left -= I.e), l.toRect = s, l.thisAnimationDuration && L8(m, s) && !L8(u, s) && // Make sure animatingRect is on line between toRect & fromRect
         (w.top - s.top) / (w.left - s.left) === (u.top - s.top) / (u.left - s.left) && (o = gc(w, m, b, c.options)), L8(s, u) || (l.prevFromRect = u, l.prevToRect = s, o || (o = c.options.animation), c.animate(l, w, s, o)), o && (i = !0, r = Math.max(r, o), clearTimeout(l.animationResetTimer), l.animationResetTimer = setTimeout(function() {
           l.animationTime = 0, l.prevFromRect = null, l.fromRect = null, l.prevToRect = null, l.thisAnimationDuration = null;
         }, o), l.thisAnimationDuration = o);
@@ -488,14 +488,14 @@ var h6 = [], N8 = {
   }
 };
 function zc(e) {
-  var a = e.sortable, t = e.rootEl, c = e.name, i = e.targetEl, r = e.cloneEl, n = e.toEl, o = e.fromEl, l = e.oldIndex, u = e.newIndex, s = e.oldDraggableIndex, m = e.newDraggableIndex, b = e.originalEvent, w = e.putSortable, F = e.extraEventProperties;
+  var a = e.sortable, t = e.rootEl, c = e.name, i = e.targetEl, r = e.cloneEl, n = e.toEl, o = e.fromEl, l = e.oldIndex, u = e.newIndex, s = e.oldDraggableIndex, m = e.newDraggableIndex, b = e.originalEvent, w = e.putSortable, I = e.extraEventProperties;
   if (a = a || t && t[A4], !!a) {
     var _, T = a.options, v = "on" + c.charAt(0).toUpperCase() + c.substr(1);
     window.CustomEvent && !b3 && !y0 ? _ = new CustomEvent(c, {
       bubbles: !0,
       cancelable: !0
     }) : (_ = document.createEvent("Event"), _.initEvent(c, !0, !0)), _.to = n || t, _.from = o || t, _.item = i || t, _.clone = r, _.oldIndex = l, _.newIndex = u, _.oldDraggableIndex = s, _.newDraggableIndex = m, _.originalEvent = b, _.pullMode = w ? w.lastPutMode : void 0;
-    var g = l3(l3({}, F), b0.getEventProperties(c, a));
+    var g = l3(l3({}, I), b0.getEventProperties(c, a));
     for (var x in g)
       _[x] = g[x];
     t && t.dispatchEvent(_), T[v] && T[v].call(a, _);
@@ -549,7 +549,7 @@ function d4(e) {
     newDraggableIndex: H3
   }, e));
 }
-var C1, T2, K1, A2, K3, P0, S2, N3, V6, N4, r0, H3, L0, i4, y6 = !1, Z0 = !1, j0 = [], W3, $4, A8, _8, Je, Qe, X6, m6, n0, o0 = !1, N0 = !1, F0, n4, S8 = [], a5 = !1, q0 = [], f8 = typeof document < "u", A0 = h9, e7 = y0 || b3 ? "cssFloat" : "float", bc = f8 && !m9 && !h9 && "draggable" in document.createElement("div"), M9 = (function() {
+var C1, T2, K1, A2, K3, P0, S2, N3, V6, N4, r0, H3, L0, i4, y6 = !1, Z0 = !1, j0 = [], W3, $4, A8, _8, Je, Qe, X6, m6, n0, o0 = !1, N0 = !1, I0, n4, S8 = [], a5 = !1, q0 = [], f8 = typeof document < "u", A0 = h9, e7 = y0 || b3 ? "cssFloat" : "float", bc = f8 && !m9 && !h9 && "draggable" in document.createElement("div"), M9 = (function() {
   if (f8) {
     if (b3)
       return !1;
@@ -775,7 +775,7 @@ Y1.prototype = /** @lends Sortable.prototype */
   _triggerDragStart: function(e, a) {
     a = a || e.pointerType == "touch" && e, !this.nativeDraggable || a ? this.options.supportPointer ? z2(document, "pointermove", this._onTouchMove) : a ? z2(document, "touchmove", this._onTouchMove) : z2(document, "mousemove", this._onTouchMove) : (z2(C1, "dragend", this), z2(A2, "dragstart", this._onDragStart));
     try {
-      document.selection ? I0(function() {
+      document.selection ? F0(function() {
         document.selection.empty();
       }) : window.getSelection().removeAllRanges();
     } catch {
@@ -859,16 +859,16 @@ Y1.prototype = /** @lends Sortable.prototype */
       this._onDrop();
       return;
     }
-    C4("setupClone", this), Y1.eventCanceled || (S2 = y9(C1), S2.removeAttribute("id"), S2.draggable = !1, S2.style["will-change"] = "", this._hideClone(), L4(S2, this.options.chosenClass, !1), Y1.clone = S2), t.cloneId = I0(function() {
+    C4("setupClone", this), Y1.eventCanceled || (S2 = y9(C1), S2.removeAttribute("id"), S2.draggable = !1, S2.style["will-change"] = "", this._hideClone(), L4(S2, this.options.chosenClass, !1), Y1.clone = S2), t.cloneId = F0(function() {
       C4("clone", t), !Y1.eventCanceled && (t.options.removeCloneOnHide || A2.insertBefore(S2, C1), t._hideClone(), d4({
         sortable: t,
         name: "clone"
       }));
-    }), !a && L4(C1, i.dragClass, !0), a ? (Z0 = !0, t._loopId = setInterval(t._emulateDragOver, 50)) : (v2(document, "mouseup", t._onDrop), v2(document, "touchend", t._onDrop), v2(document, "touchcancel", t._onDrop), c && (c.effectAllowed = "move", i.setData && i.setData.call(t, c, C1)), z2(document, "drop", t), q1(C1, "transform", "translateZ(0)")), y6 = !0, t._dragStartId = I0(t._dragStarted.bind(t, a, e)), z2(document, "selectstart", t), X6 = !0, c0 && q1(document.body, "user-select", "none");
+    }), !a && L4(C1, i.dragClass, !0), a ? (Z0 = !0, t._loopId = setInterval(t._emulateDragOver, 50)) : (v2(document, "mouseup", t._onDrop), v2(document, "touchend", t._onDrop), v2(document, "touchcancel", t._onDrop), c && (c.effectAllowed = "move", i.setData && i.setData.call(t, c, C1)), z2(document, "drop", t), q1(C1, "transform", "translateZ(0)")), y6 = !0, t._dragStartId = F0(t._dragStarted.bind(t, a, e)), z2(document, "selectstart", t), X6 = !0, c0 && q1(document.body, "user-select", "none");
   },
   // Returns true - if no further action is needed (either inserted or another condition)
   _onDragOver: function(e) {
-    var a = this.el, t = e.target, c, i, r, n = this.options, o = n.group, l = Y1.active, u = L0 === o, s = n.sort, m = i4 || l, b, w = this, F = !1;
+    var a = this.el, t = e.target, c, i, r, n = this.options, o = n.group, l = Y1.active, u = L0 === o, s = n.sort, m = i4 || l, b, w = this, I = !1;
     if (a5)
       return;
     function _(W, z1) {
@@ -897,7 +897,7 @@ Y1.prototype = /** @lends Sortable.prototype */
         insertion: W
       }), W && (u ? l._hideClone() : l._showClone(w), w !== m && (L4(C1, i4 ? i4.options.ghostClass : l.options.ghostClass, !1), L4(C1, n.ghostClass, !0)), i4 !== w && w !== Y1.active ? i4 = w : w === Y1.active && i4 && (i4 = null), m === w && (w._ignoreWhileAnimating = t), w.animateAll(function() {
         _("dragOverAnimationComplete"), w._ignoreWhileAnimating = null;
-      }), w !== m && (m.animateAll(), m._ignoreWhileAnimating = null)), (t === C1 && !C1.animated || t === a && !t.animated) && (m6 = null), !n.dragoverBubble && !e.rootEl && t !== document && (C1.parentNode[A4]._isOutsideThisEl(e.target), !W && G3(e)), !n.dragoverBubble && e.stopPropagation && e.stopPropagation(), F = !0;
+      }), w !== m && (m.animateAll(), m._ignoreWhileAnimating = null)), (t === C1 && !C1.animated || t === a && !t.animated) && (m6 = null), !n.dragoverBubble && !e.rootEl && t !== document && (C1.parentNode[A4]._isOutsideThisEl(e.target), !W && G3(e)), !n.dragoverBubble && e.stopPropagation && e.stopPropagation(), I = !0;
     }
     function g() {
       N4 = P4(C1), H3 = P4(C1, n.draggable), d4({
@@ -910,12 +910,12 @@ Y1.prototype = /** @lends Sortable.prototype */
       });
     }
     if (e.preventDefault !== void 0 && e.cancelable && e.preventDefault(), t = j4(t, n.draggable, a, !0), _("dragOver"), Y1.eventCanceled)
-      return F;
+      return I;
     if (C1.contains(e.target) || t.animated && t.animatingX && t.animatingY || w._ignoreWhileAnimating === t)
       return v(!1);
     if (Z0 = !1, l && !n.disabled && (u ? s || (r = T2 !== A2) : i4 === this || (this.lastPutMode = L0.checkPull(this, l, C1, e)) && o.checkPut(this, l, C1, e))) {
       if (b = this._getDirection(e, t) === "vertical", c = j2(C1), _("dragOverValid"), Y1.eventCanceled)
-        return F;
+        return I;
       if (r)
         return T2 = A2, T(), this._hideClone(), _("revert"), Y1.eventCanceled || (K3 ? A2.insertBefore(C1, K3) : A2.appendChild(C1)), v(!0);
       var x = R5(a, n.draggable);
@@ -925,11 +925,11 @@ Y1.prototype = /** @lends Sortable.prototype */
         if (x && a === e.target && (t = x), t && (i = j2(t)), _0(A2, a, C1, c, t, i, e, !!t) !== !1)
           return T(), x && x.nextSibling ? a.insertBefore(C1, x.nextSibling) : a.appendChild(C1), T2 = a, g(), v(!0);
       } else if (x && Hc(e, b, this)) {
-        var I = _6(a, 0, n, !0);
-        if (I === C1)
+        var F = _6(a, 0, n, !0);
+        if (F === C1)
           return v(!1);
-        if (t = I, i = j2(t), _0(A2, a, C1, c, t, i, e, !1) !== !1)
-          return T(), a.insertBefore(C1, I), T2 = a, g(), v(!0);
+        if (t = F, i = j2(t), _0(A2, a, C1, c, t, i, e, !1) !== !1)
+          return T(), a.insertBefore(C1, F), T2 = a, g(), v(!0);
       } else if (t.parentNode === a) {
         i = j2(t);
         var P = 0, E, U = C1.parentNode !== a, r1 = !Mc(C1.animated && C1.toRect || c, t.animated && t.toRect || i, b), X = b ? "top" : "left", D = Ke(t, "top", "top") || Ke(C1, "top", "top"), c1 = D ? D.scrollTop : void 0;
@@ -948,7 +948,7 @@ Y1.prototype = /** @lends Sortable.prototype */
         R = P === 1;
         var O = _0(A2, a, C1, c, t, i, e, R);
         if (O !== !1)
-          return (O === 1 || O === -1) && (R = O === 1), a5 = !0, setTimeout(wc, 30), T(), R && !L ? a.appendChild(C1) : t.parentNode.insertBefore(C1, R ? L : t), D && z9(D, 0, c1 - D.scrollTop), T2 = C1.parentNode, E !== void 0 && !N0 && (F0 = Math.abs(E - j2(t)[X])), g(), v(!0);
+          return (O === 1 || O === -1) && (R = O === 1), a5 = !0, setTimeout(wc, 30), T(), R && !L ? a.appendChild(C1) : t.parentNode.insertBefore(C1, R ? L : t), D && z9(D, 0, c1 - D.scrollTop), T2 = C1.parentNode, E !== void 0 && !N0 && (I0 = Math.abs(E - j2(t)[X])), g(), v(!0);
       }
       if (a.contains(C1))
         return v(!1);
@@ -1144,10 +1144,10 @@ function Lc(e, a, t) {
 function Nc(e, a, t, c, i, r, n, o) {
   var l = c ? e.clientY : e.clientX, u = c ? t.height : t.width, s = c ? t.top : t.left, m = c ? t.bottom : t.right, b = !1;
   if (!n) {
-    if (o && F0 < u * i) {
+    if (o && I0 < u * i) {
       if (!o0 && (n0 === 1 ? l > s + u * r / 2 : l < m - u * r / 2) && (o0 = !0), o0)
         b = !0;
-      else if (n0 === 1 ? l < s + F0 : l > m - F0)
+      else if (n0 === 1 ? l < s + I0 : l > m - I0)
         return -n0;
     } else if (l > s + u * (1 - i) / 2 && l < m - u * (1 - i) / 2)
       return Ac(a);
@@ -1169,7 +1169,7 @@ function Sc(e) {
     c.checked && q0.push(c);
   }
 }
-function I0(e) {
+function F0(e) {
   return setTimeout(e, 0);
 }
 function t5(e) {
@@ -1192,7 +1192,7 @@ Y1.utils = {
   toggleClass: L4,
   clone: y9,
   index: P4,
-  nextTick: I0,
+  nextTick: F0,
   cancelNextTick: t5,
   detectDirection: C9,
   getChild: _6
@@ -1280,9 +1280,9 @@ var O8 = g9(function(e, a, t, c) {
     c5 !== t && (c5 = t, E0(), J6 = a.scroll, s = a.scrollFn, J6 === !0 && (J6 = A3(t, !0)));
     var m = 0, b = J6;
     do {
-      var w = b, F = j2(w), _ = F.top, T = F.bottom, v = F.left, g = F.right, x = F.width, I = F.height, P = void 0, E = void 0, U = w.scrollWidth, r1 = w.scrollHeight, X = q1(w), D = w.scrollLeft, c1 = w.scrollTop;
-      w === l ? (P = x < U && (X.overflowX === "auto" || X.overflowX === "scroll" || X.overflowX === "visible"), E = I < r1 && (X.overflowY === "auto" || X.overflowY === "scroll" || X.overflowY === "visible")) : (P = x < U && (X.overflowX === "auto" || X.overflowX === "scroll"), E = I < r1 && (X.overflowY === "auto" || X.overflowY === "scroll"));
-      var g1 = P && (Math.abs(g - i) <= n && D + x < U) - (Math.abs(v - i) <= n && !!D), w1 = E && (Math.abs(T - r) <= n && c1 + I < r1) - (Math.abs(_ - r) <= n && !!c1);
+      var w = b, I = j2(w), _ = I.top, T = I.bottom, v = I.left, g = I.right, x = I.width, F = I.height, P = void 0, E = void 0, U = w.scrollWidth, r1 = w.scrollHeight, X = q1(w), D = w.scrollLeft, c1 = w.scrollTop;
+      w === l ? (P = x < U && (X.overflowX === "auto" || X.overflowX === "scroll" || X.overflowX === "visible"), E = F < r1 && (X.overflowY === "auto" || X.overflowY === "scroll" || X.overflowY === "visible")) : (P = x < U && (X.overflowX === "auto" || X.overflowX === "scroll"), E = F < r1 && (X.overflowY === "auto" || X.overflowY === "scroll"));
+      var g1 = P && (Math.abs(g - i) <= n && D + x < U) - (Math.abs(v - i) <= n && !!D), w1 = E && (Math.abs(T - r) <= n && c1 + F < r1) - (Math.abs(_ - r) <= n && !!c1);
       if (!Z2[m])
         for (var L = 0; L <= m; L++)
           Z2[L] || (Z2[L] = {});
@@ -1361,7 +1361,7 @@ function Pc() {
   };
 }
 const c7 = /* @__PURE__ */ Symbol("cloneElement");
-function Fc(...e) {
+function Ic(...e) {
   var a, t;
   const c = (a = s8()) == null ? void 0 : a.proxy;
   let i = null;
@@ -1376,7 +1376,7 @@ function Fc(...e) {
     fallbackOnBody: b,
     customUpdate: w
   } = (t = M(o)) != null ? t : {};
-  function F(D) {
+  function I(D) {
     var c1;
     const { from: g1, oldIndex: w1, item: L } = D, R = Array.from(g1.childNodes);
     i = m && !b ? R.slice(0, -1) : R;
@@ -1450,12 +1450,12 @@ function Fc(...e) {
   }
   const x = {
     onUpdate: v,
-    onStart: F,
+    onStart: I,
     onAdd: _,
     onRemove: T,
     onEnd: g
   };
-  function I(D) {
+  function F(D) {
     const c1 = M(r);
     return D || (D = ec(c1) ? ac(c1, c?.$el) : c1), D && !ic(D) && (D = D.$el), D || Kt("Root element not found"), D;
   }
@@ -1473,7 +1473,7 @@ function Fc(...e) {
     );
   }
   const E = (D) => {
-    D = I(D), l && U.destroy(), l = new Y1(D, P());
+    D = F(D), l && U.destroy(), l = new Y1(D, P());
   };
   V4(
     () => o,
@@ -1510,7 +1510,7 @@ const r5 = [
   "clone",
   "move",
   "change"
-], Ic = [
+], Fc = [
   "clone",
   "animation",
   "ghostClass",
@@ -1561,23 +1561,23 @@ const r5 = [
     prop: "modelValue",
     event: "update:modelValue"
   },
-  props: Ic,
+  props: Fc,
   emits: ["update:modelValue", ...r5],
   setup(e, { slots: a, emit: t, expose: c, attrs: i }) {
     const r = r5.reduce((s, m) => {
       const b = `on${m.replace(/^\S/, (w) => w.toUpperCase())}`;
       return s[b] = (...w) => t(m, ...w), s;
     }, {}), n = i1(() => {
-      const s = Ft(e), { modelValue: m } = s, b = u9(s, ["modelValue"]), w = Object.entries(b).reduce((F, [_, T]) => {
+      const s = It(e), { modelValue: m } = s, b = u9(s, ["modelValue"]), w = Object.entries(b).reduce((I, [_, T]) => {
         const v = M(T);
-        return v !== void 0 && (F[_] = v), F;
+        return v !== void 0 && (I[_] = v), I;
       }, {});
       return C6(C6({}, r), Jt(C6(C6({}, i), w)));
     }), o = i1({
       get: () => e.modelValue,
       set: (s) => t("update:modelValue", s)
-    }), l = m1(), u = F3(
-      Fc(e.target || l, o, n)
+    }), l = m1(), u = I3(
+      Ic(e.target || l, o, n)
     );
     return c(u), () => {
       var s;
@@ -3216,11 +3216,11 @@ const U5 = /* @__PURE__ */ c2(Bc, [["render", jc]]), qc = {
 function Wc(e, a, t, c, i, r) {
   const n = E1("form-field");
   return p(), A("div", Yc, [
-    (p(!0), A(B1, null, n2(r.fields, (o, l) => (p(), A("div", {
+    (p(!0), A(R1, null, r2(r.fields, (o, l) => (p(), A("div", {
       key: l,
       class: D1([r.colClass(l), "lama-type-" + r.itemProps(l).options.type, "lama-field-" + l])
     }, [
-      r2(e2(n, t2({
+      n2(e2(n, t2({
         ref_for: !0,
         ref: "field",
         modelValue: r.model[l]
@@ -3608,19 +3608,19 @@ class J3 {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (r) => !c[r] && delete c[r]
     ), !((t = (a = window?.google) === null || a === void 0 ? void 0 : a.maps) === null || t === void 0) && t.importLibrary || ((r) => {
-      let n, o, l, u = "The Google Maps JavaScript API", s = "google", m = "importLibrary", b = "__ib__", w = document, F = window;
-      F = F[s] || (F[s] = {});
-      const _ = F.maps || (F.maps = {}), T = /* @__PURE__ */ new Set(), v = new URLSearchParams(), g = () => (
+      let n, o, l, u = "The Google Maps JavaScript API", s = "google", m = "importLibrary", b = "__ib__", w = document, I = window;
+      I = I[s] || (I[s] = {});
+      const _ = I.maps || (I.maps = {}), T = /* @__PURE__ */ new Set(), v = new URLSearchParams(), g = () => (
         // @ts-ignore
-        n || (n = new Promise((x, I) => Qc(this, void 0, void 0, function* () {
+        n || (n = new Promise((x, F) => Qc(this, void 0, void 0, function* () {
           var P;
           yield o = w.createElement("script"), o.id = this.id, v.set("libraries", [...T] + "");
           for (l in r)
             v.set(l.replace(/[A-Z]/g, (E) => "_" + E[0].toLowerCase()), r[l]);
-          v.set("callback", s + ".maps." + b), o.src = this.url + "?" + v, _[b] = x, o.onerror = () => n = I(Error(u + " could not load.")), o.nonce = this.nonce || ((P = w.querySelector("script[nonce]")) === null || P === void 0 ? void 0 : P.nonce) || "", w.head.append(o);
+          v.set("callback", s + ".maps." + b), o.src = this.url + "?" + v, _[b] = x, o.onerror = () => n = F(Error(u + " could not load.")), o.nonce = this.nonce || ((P = w.querySelector("script[nonce]")) === null || P === void 0 ? void 0 : P.nonce) || "", w.head.append(o);
         })))
       );
-      _[m] ? console.warn(u + " only loads once. Ignoring:", r) : _[m] = (x, ...I) => T.add(x) && g().then(() => _[m](x, ...I));
+      _[m] ? console.warn(u + " only loads once. Ignoring:", r) : _[m] = (x, ...F) => T.add(x) && g().then(() => _[m](x, ...F));
     })(c);
     const i = this.libraries.map((r) => this.importLibrary(r));
     i.length || i.push(this.importLibrary("core")), Promise.all(i).then(() => this.callback(), (r) => {
@@ -3664,7 +3664,7 @@ class J3 {
       }
   }
 }
-var F8 = [{ countryName: "Afghanistan", iso2: "AF", iso3: "AFG", phoneCode: "93" }, { countryName: "Albania", iso2: "AL", iso3: "ALB", phoneCode: "355" }, { countryName: "Algeria", iso2: "DZ", iso3: "DZA", phoneCode: "213" }, { countryName: "American Samoa", iso2: "AS", iso3: "ASM", phoneCode: "1 684" }, { countryName: "Andorra", iso2: "AD", iso3: "AND", phoneCode: "376" }, { countryName: "Angola", iso2: "AO", iso3: "AGO", phoneCode: "244" }, { countryName: "Anguilla", iso2: "AI", iso3: "AIA", phoneCode: "1 264" }, { countryName: "Antarctica", iso2: "AQ", iso3: "ATA", phoneCode: "672" }, { countryName: "Antigua and Barbuda", iso2: "AG", iso3: "ATG", phoneCode: "1 268" }, { countryName: "Argentina", iso2: "AR", iso3: "ARG", phoneCode: "54" }, { countryName: "Armenia", iso2: "AM", iso3: "ARM", phoneCode: "374" }, { countryName: "Aruba", iso2: "AW", iso3: "ABW", phoneCode: "297" }, { countryName: "Australia", iso2: "AU", iso3: "AUS", phoneCode: "61" }, { countryName: "Austria", iso2: "AT", iso3: "AUT", phoneCode: "43" }, { countryName: "Azerbaijan", iso2: "AZ", iso3: "AZE", phoneCode: "994" }, { countryName: "Bahamas", iso2: "BS", iso3: "BHS", phoneCode: "1 242" }, { countryName: "Bahrain", iso2: "BH", iso3: "BHR", phoneCode: "973" }, { countryName: "Bangladesh", iso2: "BD", iso3: "BGD", phoneCode: "880" }, { countryName: "Barbados", iso2: "BB", iso3: "BRB", phoneCode: "1 246" }, { countryName: "Belarus", iso2: "BY", iso3: "BLR", phoneCode: "375" }, { countryName: "Belgium", iso2: "BE", iso3: "BEL", phoneCode: "32" }, { countryName: "Belize", iso2: "BZ", iso3: "BLZ", phoneCode: "501" }, { countryName: "Benin", iso2: "BJ", iso3: "BEN", phoneCode: "229" }, { countryName: "Bermuda", iso2: "BM", iso3: "BMU", phoneCode: "1 441" }, { countryName: "Bhutan", iso2: "BT", iso3: "BTN", phoneCode: "975" }, { countryName: "Bolivia", iso2: "BO", iso3: "BOL", phoneCode: "591" }, { countryName: "Bosnia and Herzegovina", iso2: "BA", iso3: "BIH", phoneCode: "387" }, { countryName: "Botswana", iso2: "BW", iso3: "BWA", phoneCode: "267" }, { countryName: "Brazil", iso2: "BR", iso3: "BRA", phoneCode: "55" }, { countryName: "British Indian Ocean Territory", iso2: "IO", iso3: "IOT", phoneCode: "" }, { countryName: "British Virgin Islands", iso2: "VG", iso3: "VGB", phoneCode: "1 284" }, { countryName: "Brunei", iso2: "BN", iso3: "BRN", phoneCode: "673" }, { countryName: "Bulgaria", iso2: "BG", iso3: "BGR", phoneCode: "359" }, { countryName: "Burkina Faso", iso2: "BF", iso3: "BFA", phoneCode: "226" }, { countryName: "Burma (Myanmar)", iso2: "MM", iso3: "MMR", phoneCode: "95" }, { countryName: "Burundi", iso2: "BI", iso3: "BDI", phoneCode: "257" }, { countryName: "Cambodia", iso2: "KH", iso3: "KHM", phoneCode: "855" }, { countryName: "Cameroon", iso2: "CM", iso3: "CMR", phoneCode: "237" }, { countryName: "Canada", iso2: "CA", iso3: "CAN", phoneCode: "1" }, { countryName: "Cape Verde", iso2: "CV", iso3: "CPV", phoneCode: "238" }, { countryName: "Cayman Islands", iso2: "KY", iso3: "CYM", phoneCode: "1 345" }, { countryName: "Central African Republic", iso2: "CF", iso3: "CAF", phoneCode: "236" }, { countryName: "Chad", iso2: "TD", iso3: "TCD", phoneCode: "235" }, { countryName: "Chile", iso2: "CL", iso3: "CHL", phoneCode: "56" }, { countryName: "China", iso2: "CN", iso3: "CHN", phoneCode: "86" }, { countryName: "Christmas Island", iso2: "CX", iso3: "CXR", phoneCode: "61" }, { countryName: "Cocos (Keeling) Islands", iso2: "CC", iso3: "CCK", phoneCode: "61" }, { countryName: "Colombia", iso2: "CO", iso3: "COL", phoneCode: "57" }, { countryName: "Comoros", iso2: "KM", iso3: "COM", phoneCode: "269" }, { countryName: "Cook Islands", iso2: "CK", iso3: "COK", phoneCode: "682" }, { countryName: "Costa Rica", iso2: "CR", iso3: "CRC", phoneCode: "506" }, { countryName: "Croatia", iso2: "HR", iso3: "HRV", phoneCode: "385" }, { countryName: "Cuba", iso2: "CU", iso3: "CUB", phoneCode: "53" }, { countryName: "Cyprus", iso2: "CY", iso3: "CYP", phoneCode: "357" }, { countryName: "Czech Republic", iso2: "CZ", iso3: "CZE", phoneCode: "420" }, { countryName: "Democratic Republic of the Congo", iso2: "CD", iso3: "COD", phoneCode: "243" }, { countryName: "Denmark", iso2: "DK", iso3: "DNK", phoneCode: "45" }, { countryName: "Djibouti", iso2: "DJ", iso3: "DJI", phoneCode: "253" }, { countryName: "Dominica", iso2: "DM", iso3: "DMA", phoneCode: "1 767" }, { countryName: "Dominican Republic", iso2: "DO", iso3: "DOM", phoneCode: "1 809" }, { countryName: "Ecuador", iso2: "EC", iso3: "ECU", phoneCode: "593" }, { countryName: "Egypt", iso2: "EG", iso3: "EGY", phoneCode: "20" }, { countryName: "El Salvador", iso2: "SV", iso3: "SLV", phoneCode: "503" }, { countryName: "Equatorial Guinea", iso2: "GQ", iso3: "GNQ", phoneCode: "240" }, { countryName: "Eritrea", iso2: "ER", iso3: "ERI", phoneCode: "291" }, { countryName: "Estonia", iso2: "EE", iso3: "EST", phoneCode: "372" }, { countryName: "Ethiopia", iso2: "ET", iso3: "ETH", phoneCode: "251" }, { countryName: "Falkland Islands", iso2: "FK", iso3: "FLK", phoneCode: "500" }, { countryName: "Faroe Islands", iso2: "FO", iso3: "FRO", phoneCode: "298" }, { countryName: "Fiji", iso2: "FJ", iso3: "FJI", phoneCode: "679" }, { countryName: "Finland", iso2: "FI", iso3: "FIN", phoneCode: "358" }, { countryName: "France", iso2: "FR", iso3: "FRA", phoneCode: "33" }, { countryName: "French Polynesia", iso2: "PF", iso3: "PYF", phoneCode: "689" }, { countryName: "Gabon", iso2: "GA", iso3: "GAB", phoneCode: "241" }, { countryName: "Gambia", iso2: "GM", iso3: "GMB", phoneCode: "220" }, { countryName: "Gaza Strip", iso2: "", iso3: "", phoneCode: "970" }, { countryName: "Georgia", iso2: "GE", iso3: "GEO", phoneCode: "995" }, { countryName: "Germany", iso2: "DE", iso3: "DEU", phoneCode: "49" }, { countryName: "Ghana", iso2: "GH", iso3: "GHA", phoneCode: "233" }, { countryName: "Gibraltar", iso2: "GI", iso3: "GIB", phoneCode: "350" }, { countryName: "Greece", iso2: "GR", iso3: "GRC", phoneCode: "30" }, { countryName: "Greenland", iso2: "GL", iso3: "GRL", phoneCode: "299" }, { countryName: "Grenada", iso2: "GD", iso3: "GRD", phoneCode: "1 473" }, { countryName: "Guam", iso2: "GU", iso3: "GUM", phoneCode: "1 671" }, { countryName: "Guatemala", iso2: "GT", iso3: "GTM", phoneCode: "502" }, { countryName: "Guinea", iso2: "GN", iso3: "GIN", phoneCode: "224" }, { countryName: "Guinea-Bissau", iso2: "GW", iso3: "GNB", phoneCode: "245" }, { countryName: "Guyana", iso2: "GY", iso3: "GUY", phoneCode: "592" }, { countryName: "Haiti", iso2: "HT", iso3: "HTI", phoneCode: "509" }, { countryName: "Holy See (Vatican City)", iso2: "VA", iso3: "VAT", phoneCode: "39" }, { countryName: "Honduras", iso2: "HN", iso3: "HND", phoneCode: "504" }, { countryName: "Hong Kong", iso2: "HK", iso3: "HKG", phoneCode: "852" }, { countryName: "Hungary", iso2: "HU", iso3: "HUN", phoneCode: "36" }, { countryName: "Iceland", iso2: "IS", iso3: "IS", phoneCode: "354" }, { countryName: "India", iso2: "IN", iso3: "IND", phoneCode: "91" }, { countryName: "Indonesia", iso2: "ID", iso3: "IDN", phoneCode: "62" }, { countryName: "Iran", iso2: "IR", iso3: "IRN", phoneCode: "98" }, { countryName: "Iraq", iso2: "IQ", iso3: "IRQ", phoneCode: "964" }, { countryName: "Ireland", iso2: "IE", iso3: "IRL", phoneCode: "353" }, { countryName: "Isle of Man", iso2: "IM", iso3: "IMN", phoneCode: "44" }, { countryName: "Israel", iso2: "IL", iso3: "ISR", phoneCode: "972" }, { countryName: "Italy", iso2: "IT", iso3: "ITA", phoneCode: "39" }, { countryName: "Ivory Coast", iso2: "CI", iso3: "CIV", phoneCode: "225" }, { countryName: "Jamaica", iso2: "JM", iso3: "JAM", phoneCode: "1 876" }, { countryName: "Japan", iso2: "JP", iso3: "JPN", phoneCode: "81" }, { countryName: "Jersey", iso2: "JE", iso3: "JEY", phoneCode: "" }, { countryName: "Jordan", iso2: "JO", iso3: "JOR", phoneCode: "962" }, { countryName: "Kazakhstan", iso2: "KZ", iso3: "KAZ", phoneCode: "7" }, { countryName: "Kenya", iso2: "KE", iso3: "KEN", phoneCode: "254" }, { countryName: "Kiribati", iso2: "KI", iso3: "KIR", phoneCode: "686" }, { countryName: "Kosovo", iso2: "", iso3: "", phoneCode: "381" }, { countryName: "Kuwait", iso2: "KW", iso3: "KWT", phoneCode: "965" }, { countryName: "Kyrgyzstan", iso2: "KG", iso3: "KGZ", phoneCode: "996" }, { countryName: "Laos", iso2: "LA", iso3: "LAO", phoneCode: "856" }, { countryName: "Latvia", iso2: "LV", iso3: "LVA", phoneCode: "371" }, { countryName: "Lebanon", iso2: "LB", iso3: "LBN", phoneCode: "961" }, { countryName: "Lesotho", iso2: "LS", iso3: "LSO", phoneCode: "266" }, { countryName: "Liberia", iso2: "LR", iso3: "LBR", phoneCode: "231" }, { countryName: "Libya", iso2: "LY", iso3: "LBY", phoneCode: "218" }, { countryName: "Liechtenstein", iso2: "LI", iso3: "LIE", phoneCode: "423" }, { countryName: "Lithuania", iso2: "LT", iso3: "LTU", phoneCode: "370" }, { countryName: "Luxembourg", iso2: "LU", iso3: "LUX", phoneCode: "352" }, { countryName: "Macau", iso2: "MO", iso3: "MAC", phoneCode: "853" }, { countryName: "Macedonia", iso2: "MK", iso3: "MKD", phoneCode: "389" }, { countryName: "Madagascar", iso2: "MG", iso3: "MDG", phoneCode: "261" }, { countryName: "Malawi", iso2: "MW", iso3: "MWI", phoneCode: "265" }, { countryName: "Malaysia", iso2: "MY", iso3: "MYS", phoneCode: "60" }, { countryName: "Maldives", iso2: "MV", iso3: "MDV", phoneCode: "960" }, { countryName: "Mali", iso2: "ML", iso3: "MLI", phoneCode: "223" }, { countryName: "Malta", iso2: "MT", iso3: "MLT", phoneCode: "356" }, { countryName: "Marshall Islands", iso2: "MH", iso3: "MHL", phoneCode: "692" }, { countryName: "Mauritania", iso2: "MR", iso3: "MRT", phoneCode: "222" }, { countryName: "Mauritius", iso2: "MU", iso3: "MUS", phoneCode: "230" }, { countryName: "Mayotte", iso2: "YT", iso3: "MYT", phoneCode: "262" }, { countryName: "Mexico", iso2: "MX", iso3: "MEX", phoneCode: "52" }, { countryName: "Micronesia", iso2: "FM", iso3: "FSM", phoneCode: "691" }, { countryName: "Moldova", iso2: "MD", iso3: "MDA", phoneCode: "373" }, { countryName: "Monaco", iso2: "MC", iso3: "MCO", phoneCode: "377" }, { countryName: "Mongolia", iso2: "MN", iso3: "MNG", phoneCode: "976" }, { countryName: "Montenegro", iso2: "ME", iso3: "MNE", phoneCode: "382" }, { countryName: "Montserrat", iso2: "MS", iso3: "MSR", phoneCode: "1 664" }, { countryName: "Morocco", iso2: "MA", iso3: "MAR", phoneCode: "212" }, { countryName: "Mozambique", iso2: "MZ", iso3: "MOZ", phoneCode: "258" }, { countryName: "Namibia", iso2: "NA", iso3: "NAM", phoneCode: "264" }, { countryName: "Nauru", iso2: "NR", iso3: "NRU", phoneCode: "674" }, { countryName: "Nepal", iso2: "NP", iso3: "NPL", phoneCode: "977" }, { countryName: "Netherlands", iso2: "NL", iso3: "NLD", phoneCode: "31" }, { countryName: "Netherlands Antilles", iso2: "AN", iso3: "ANT", phoneCode: "599" }, { countryName: "New Caledonia", iso2: "NC", iso3: "NCL", phoneCode: "687" }, { countryName: "New Zealand", iso2: "NZ", iso3: "NZL", phoneCode: "64" }, { countryName: "Nicaragua", iso2: "NI", iso3: "NIC", phoneCode: "505" }, { countryName: "Niger", iso2: "NE", iso3: "NER", phoneCode: "227" }, { countryName: "Nigeria", iso2: "NG", iso3: "NGA", phoneCode: "234" }, { countryName: "Niue", iso2: "NU", iso3: "NIU", phoneCode: "683" }, { countryName: "Norfolk Island", iso2: "", iso3: "NFK", phoneCode: "672" }, { countryName: "North Korea", iso2: "KP", iso3: "PRK", phoneCode: "850" }, { countryName: "Northern Mariana Islands", iso2: "MP", iso3: "MNP", phoneCode: "1 670" }, { countryName: "Norway", iso2: "NO", iso3: "NOR", phoneCode: "47" }, { countryName: "Oman", iso2: "OM", iso3: "OMN", phoneCode: "968" }, { countryName: "Pakistan", iso2: "PK", iso3: "PAK", phoneCode: "92" }, { countryName: "Palau", iso2: "PW", iso3: "PLW", phoneCode: "680" }, { countryName: "Panama", iso2: "PA", iso3: "PAN", phoneCode: "507" }, { countryName: "Papua New Guinea", iso2: "PG", iso3: "PNG", phoneCode: "675" }, { countryName: "Paraguay", iso2: "PY", iso3: "PRY", phoneCode: "595" }, { countryName: "Peru", iso2: "PE", iso3: "PER", phoneCode: "51" }, { countryName: "Philippines", iso2: "PH", iso3: "PHL", phoneCode: "63" }, { countryName: "Pitcairn Islands", iso2: "PN", iso3: "PCN", phoneCode: "870" }, { countryName: "Poland", iso2: "PL", iso3: "POL", phoneCode: "48" }, { countryName: "Portugal", iso2: "PT", iso3: "PRT", phoneCode: "351" }, { countryName: "Puerto Rico", iso2: "PR", iso3: "PRI", phoneCode: "1" }, { countryName: "Qatar", iso2: "QA", iso3: "QAT", phoneCode: "974" }, { countryName: "Republic of the Congo", iso2: "CG", iso3: "COG", phoneCode: "242" }, { countryName: "Romania", iso2: "RO", iso3: "ROU", phoneCode: "40" }, { countryName: "Russia", iso2: "RU", iso3: "RUS", phoneCode: "7" }, { countryName: "Rwanda", iso2: "RW", iso3: "RWA", phoneCode: "250" }, { countryName: "Saint Barthelemy", iso2: "BL", iso3: "BLM", phoneCode: "590" }, { countryName: "Saint Helena", iso2: "SH", iso3: "SHN", phoneCode: "290" }, { countryName: "Saint Kitts and Nevis", iso2: "KN", iso3: "KNA", phoneCode: "1 869" }, { countryName: "Saint Lucia", iso2: "LC", iso3: "LCA", phoneCode: "1 758" }, { countryName: "Saint Martin", iso2: "MF", iso3: "MAF", phoneCode: "1 599" }, { countryName: "Saint Pierre and Miquelon", iso2: "PM", iso3: "SPM", phoneCode: "508" }, { countryName: "Saint Vincent and the Grenadines", iso2: "VC", iso3: "VCT", phoneCode: "1 784" }, { countryName: "Samoa", iso2: "WS", iso3: "WSM", phoneCode: "685" }, { countryName: "San Marino", iso2: "SM", iso3: "SMR", phoneCode: "378" }, { countryName: "Sao Tome and Principe", iso2: "ST", iso3: "STP", phoneCode: "239" }, { countryName: "Saudi Arabia", iso2: "SA", iso3: "SAU", phoneCode: "966" }, { countryName: "Senegal", iso2: "SN", iso3: "SEN", phoneCode: "221" }, { countryName: "Serbia", iso2: "RS", iso3: "SRB", phoneCode: "381" }, { countryName: "Seychelles", iso2: "SC", iso3: "SYC", phoneCode: "248" }, { countryName: "Sierra Leone", iso2: "SL", iso3: "SLE", phoneCode: "232" }, { countryName: "Singapore", iso2: "SG", iso3: "SGP", phoneCode: "65" }, { countryName: "Slovakia", iso2: "SK", iso3: "SVK", phoneCode: "421" }, { countryName: "Slovenia", iso2: "SI", iso3: "SVN", phoneCode: "386" }, { countryName: "Solomon Islands", iso2: "SB", iso3: "SLB", phoneCode: "677" }, { countryName: "Somalia", iso2: "SO", iso3: "SOM", phoneCode: "252" }, { countryName: "South Africa", iso2: "ZA", iso3: "ZAF", phoneCode: "27" }, { countryName: "South Korea", iso2: "KR", iso3: "KOR", phoneCode: "82" }, { countryName: "Spain", iso2: "ES", iso3: "ESP", phoneCode: "34" }, { countryName: "Sri Lanka", iso2: "LK", iso3: "LKA", phoneCode: "94" }, { countryName: "Sudan", iso2: "SD", iso3: "SDN", phoneCode: "249" }, { countryName: "Suriname", iso2: "SR", iso3: "SUR", phoneCode: "597" }, { countryName: "Svalbard", iso2: "SJ", iso3: "SJM", phoneCode: "" }, { countryName: "Swaziland", iso2: "SZ", iso3: "SWZ", phoneCode: "268" }, { countryName: "Sweden", iso2: "SE", iso3: "SWE", phoneCode: "46" }, { countryName: "Switzerland", iso2: "CH", iso3: "CHE", phoneCode: "41" }, { countryName: "Syria", iso2: "SY", iso3: "SYR", phoneCode: "963" }, { countryName: "Taiwan", iso2: "TW", iso3: "TWN", phoneCode: "886" }, { countryName: "Tajikistan", iso2: "TJ", iso3: "TJK", phoneCode: "992" }, { countryName: "Tanzania", iso2: "TZ", iso3: "TZA", phoneCode: "255" }, { countryName: "Thailand", iso2: "TH", iso3: "THA", phoneCode: "66" }, { countryName: "Timor-Leste", iso2: "TL", iso3: "TLS", phoneCode: "670" }, { countryName: "Togo", iso2: "TG", iso3: "TGO", phoneCode: "228" }, { countryName: "Tokelau", iso2: "TK", iso3: "TKL", phoneCode: "690" }, { countryName: "Tonga", iso2: "TO", iso3: "TON", phoneCode: "676" }, { countryName: "Trinidad and Tobago", iso2: "TT", iso3: "TTO", phoneCode: "1 868" }, { countryName: "Tunisia", iso2: "TN", iso3: "TUN", phoneCode: "216" }, { countryName: "Turkey", iso2: "TR", iso3: "TUR", phoneCode: "90" }, { countryName: "Turkmenistan", iso2: "TM", iso3: "TKM", phoneCode: "993" }, { countryName: "Turks and Caicos Islands", iso2: "TC", iso3: "TCA", phoneCode: "1 649" }, { countryName: "Tuvalu", iso2: "TV", iso3: "TUV", phoneCode: "688" }, { countryName: "Uganda", iso2: "UG", iso3: "UGA", phoneCode: "256" }, { countryName: "Ukraine", iso2: "UA", iso3: "UKR", phoneCode: "380" }, { countryName: "United Arab Emirates", iso2: "AE", iso3: "ARE", phoneCode: "971" }, { countryName: "United Kingdom", iso2: "GB", iso3: "GBR", phoneCode: "44" }, { countryName: "United States", iso2: "US", iso3: "USA", phoneCode: "1" }, { countryName: "Uruguay", iso2: "UY", iso3: "URY", phoneCode: "598" }, { countryName: "US Virgin Islands", iso2: "VI", iso3: "VIR", phoneCode: "1 340" }, { countryName: "Uzbekistan", iso2: "UZ", iso3: "UZB", phoneCode: "998" }, { countryName: "Vanuatu", iso2: "VU", iso3: "VUT", phoneCode: "678" }, { countryName: "Venezuela", iso2: "VE", iso3: "VEN", phoneCode: "58" }, { countryName: "Vietnam", iso2: "VN", iso3: "VNM", phoneCode: "84" }, { countryName: "Wallis and Futuna", iso2: "WF", iso3: "WLF", phoneCode: "681" }, { countryName: "West Bank", iso2: "", iso3: "", phoneCode: "970" }, { countryName: "Western Sahara", iso2: "EH", iso3: "ESH", phoneCode: "" }, { countryName: "Yemen", iso2: "YE", iso3: "YEM", phoneCode: "967" }, { countryName: "Zambia", iso2: "ZM", iso3: "ZMB", phoneCode: "260" }, { countryName: "Zimbabwe", iso2: "ZW", iso3: "ZWE", phoneCode: "263" }];
+var I8 = [{ countryName: "Afghanistan", iso2: "AF", iso3: "AFG", phoneCode: "93" }, { countryName: "Albania", iso2: "AL", iso3: "ALB", phoneCode: "355" }, { countryName: "Algeria", iso2: "DZ", iso3: "DZA", phoneCode: "213" }, { countryName: "American Samoa", iso2: "AS", iso3: "ASM", phoneCode: "1 684" }, { countryName: "Andorra", iso2: "AD", iso3: "AND", phoneCode: "376" }, { countryName: "Angola", iso2: "AO", iso3: "AGO", phoneCode: "244" }, { countryName: "Anguilla", iso2: "AI", iso3: "AIA", phoneCode: "1 264" }, { countryName: "Antarctica", iso2: "AQ", iso3: "ATA", phoneCode: "672" }, { countryName: "Antigua and Barbuda", iso2: "AG", iso3: "ATG", phoneCode: "1 268" }, { countryName: "Argentina", iso2: "AR", iso3: "ARG", phoneCode: "54" }, { countryName: "Armenia", iso2: "AM", iso3: "ARM", phoneCode: "374" }, { countryName: "Aruba", iso2: "AW", iso3: "ABW", phoneCode: "297" }, { countryName: "Australia", iso2: "AU", iso3: "AUS", phoneCode: "61" }, { countryName: "Austria", iso2: "AT", iso3: "AUT", phoneCode: "43" }, { countryName: "Azerbaijan", iso2: "AZ", iso3: "AZE", phoneCode: "994" }, { countryName: "Bahamas", iso2: "BS", iso3: "BHS", phoneCode: "1 242" }, { countryName: "Bahrain", iso2: "BH", iso3: "BHR", phoneCode: "973" }, { countryName: "Bangladesh", iso2: "BD", iso3: "BGD", phoneCode: "880" }, { countryName: "Barbados", iso2: "BB", iso3: "BRB", phoneCode: "1 246" }, { countryName: "Belarus", iso2: "BY", iso3: "BLR", phoneCode: "375" }, { countryName: "Belgium", iso2: "BE", iso3: "BEL", phoneCode: "32" }, { countryName: "Belize", iso2: "BZ", iso3: "BLZ", phoneCode: "501" }, { countryName: "Benin", iso2: "BJ", iso3: "BEN", phoneCode: "229" }, { countryName: "Bermuda", iso2: "BM", iso3: "BMU", phoneCode: "1 441" }, { countryName: "Bhutan", iso2: "BT", iso3: "BTN", phoneCode: "975" }, { countryName: "Bolivia", iso2: "BO", iso3: "BOL", phoneCode: "591" }, { countryName: "Bosnia and Herzegovina", iso2: "BA", iso3: "BIH", phoneCode: "387" }, { countryName: "Botswana", iso2: "BW", iso3: "BWA", phoneCode: "267" }, { countryName: "Brazil", iso2: "BR", iso3: "BRA", phoneCode: "55" }, { countryName: "British Indian Ocean Territory", iso2: "IO", iso3: "IOT", phoneCode: "" }, { countryName: "British Virgin Islands", iso2: "VG", iso3: "VGB", phoneCode: "1 284" }, { countryName: "Brunei", iso2: "BN", iso3: "BRN", phoneCode: "673" }, { countryName: "Bulgaria", iso2: "BG", iso3: "BGR", phoneCode: "359" }, { countryName: "Burkina Faso", iso2: "BF", iso3: "BFA", phoneCode: "226" }, { countryName: "Burma (Myanmar)", iso2: "MM", iso3: "MMR", phoneCode: "95" }, { countryName: "Burundi", iso2: "BI", iso3: "BDI", phoneCode: "257" }, { countryName: "Cambodia", iso2: "KH", iso3: "KHM", phoneCode: "855" }, { countryName: "Cameroon", iso2: "CM", iso3: "CMR", phoneCode: "237" }, { countryName: "Canada", iso2: "CA", iso3: "CAN", phoneCode: "1" }, { countryName: "Cape Verde", iso2: "CV", iso3: "CPV", phoneCode: "238" }, { countryName: "Cayman Islands", iso2: "KY", iso3: "CYM", phoneCode: "1 345" }, { countryName: "Central African Republic", iso2: "CF", iso3: "CAF", phoneCode: "236" }, { countryName: "Chad", iso2: "TD", iso3: "TCD", phoneCode: "235" }, { countryName: "Chile", iso2: "CL", iso3: "CHL", phoneCode: "56" }, { countryName: "China", iso2: "CN", iso3: "CHN", phoneCode: "86" }, { countryName: "Christmas Island", iso2: "CX", iso3: "CXR", phoneCode: "61" }, { countryName: "Cocos (Keeling) Islands", iso2: "CC", iso3: "CCK", phoneCode: "61" }, { countryName: "Colombia", iso2: "CO", iso3: "COL", phoneCode: "57" }, { countryName: "Comoros", iso2: "KM", iso3: "COM", phoneCode: "269" }, { countryName: "Cook Islands", iso2: "CK", iso3: "COK", phoneCode: "682" }, { countryName: "Costa Rica", iso2: "CR", iso3: "CRC", phoneCode: "506" }, { countryName: "Croatia", iso2: "HR", iso3: "HRV", phoneCode: "385" }, { countryName: "Cuba", iso2: "CU", iso3: "CUB", phoneCode: "53" }, { countryName: "Cyprus", iso2: "CY", iso3: "CYP", phoneCode: "357" }, { countryName: "Czech Republic", iso2: "CZ", iso3: "CZE", phoneCode: "420" }, { countryName: "Democratic Republic of the Congo", iso2: "CD", iso3: "COD", phoneCode: "243" }, { countryName: "Denmark", iso2: "DK", iso3: "DNK", phoneCode: "45" }, { countryName: "Djibouti", iso2: "DJ", iso3: "DJI", phoneCode: "253" }, { countryName: "Dominica", iso2: "DM", iso3: "DMA", phoneCode: "1 767" }, { countryName: "Dominican Republic", iso2: "DO", iso3: "DOM", phoneCode: "1 809" }, { countryName: "Ecuador", iso2: "EC", iso3: "ECU", phoneCode: "593" }, { countryName: "Egypt", iso2: "EG", iso3: "EGY", phoneCode: "20" }, { countryName: "El Salvador", iso2: "SV", iso3: "SLV", phoneCode: "503" }, { countryName: "Equatorial Guinea", iso2: "GQ", iso3: "GNQ", phoneCode: "240" }, { countryName: "Eritrea", iso2: "ER", iso3: "ERI", phoneCode: "291" }, { countryName: "Estonia", iso2: "EE", iso3: "EST", phoneCode: "372" }, { countryName: "Ethiopia", iso2: "ET", iso3: "ETH", phoneCode: "251" }, { countryName: "Falkland Islands", iso2: "FK", iso3: "FLK", phoneCode: "500" }, { countryName: "Faroe Islands", iso2: "FO", iso3: "FRO", phoneCode: "298" }, { countryName: "Fiji", iso2: "FJ", iso3: "FJI", phoneCode: "679" }, { countryName: "Finland", iso2: "FI", iso3: "FIN", phoneCode: "358" }, { countryName: "France", iso2: "FR", iso3: "FRA", phoneCode: "33" }, { countryName: "French Polynesia", iso2: "PF", iso3: "PYF", phoneCode: "689" }, { countryName: "Gabon", iso2: "GA", iso3: "GAB", phoneCode: "241" }, { countryName: "Gambia", iso2: "GM", iso3: "GMB", phoneCode: "220" }, { countryName: "Gaza Strip", iso2: "", iso3: "", phoneCode: "970" }, { countryName: "Georgia", iso2: "GE", iso3: "GEO", phoneCode: "995" }, { countryName: "Germany", iso2: "DE", iso3: "DEU", phoneCode: "49" }, { countryName: "Ghana", iso2: "GH", iso3: "GHA", phoneCode: "233" }, { countryName: "Gibraltar", iso2: "GI", iso3: "GIB", phoneCode: "350" }, { countryName: "Greece", iso2: "GR", iso3: "GRC", phoneCode: "30" }, { countryName: "Greenland", iso2: "GL", iso3: "GRL", phoneCode: "299" }, { countryName: "Grenada", iso2: "GD", iso3: "GRD", phoneCode: "1 473" }, { countryName: "Guam", iso2: "GU", iso3: "GUM", phoneCode: "1 671" }, { countryName: "Guatemala", iso2: "GT", iso3: "GTM", phoneCode: "502" }, { countryName: "Guinea", iso2: "GN", iso3: "GIN", phoneCode: "224" }, { countryName: "Guinea-Bissau", iso2: "GW", iso3: "GNB", phoneCode: "245" }, { countryName: "Guyana", iso2: "GY", iso3: "GUY", phoneCode: "592" }, { countryName: "Haiti", iso2: "HT", iso3: "HTI", phoneCode: "509" }, { countryName: "Holy See (Vatican City)", iso2: "VA", iso3: "VAT", phoneCode: "39" }, { countryName: "Honduras", iso2: "HN", iso3: "HND", phoneCode: "504" }, { countryName: "Hong Kong", iso2: "HK", iso3: "HKG", phoneCode: "852" }, { countryName: "Hungary", iso2: "HU", iso3: "HUN", phoneCode: "36" }, { countryName: "Iceland", iso2: "IS", iso3: "IS", phoneCode: "354" }, { countryName: "India", iso2: "IN", iso3: "IND", phoneCode: "91" }, { countryName: "Indonesia", iso2: "ID", iso3: "IDN", phoneCode: "62" }, { countryName: "Iran", iso2: "IR", iso3: "IRN", phoneCode: "98" }, { countryName: "Iraq", iso2: "IQ", iso3: "IRQ", phoneCode: "964" }, { countryName: "Ireland", iso2: "IE", iso3: "IRL", phoneCode: "353" }, { countryName: "Isle of Man", iso2: "IM", iso3: "IMN", phoneCode: "44" }, { countryName: "Israel", iso2: "IL", iso3: "ISR", phoneCode: "972" }, { countryName: "Italy", iso2: "IT", iso3: "ITA", phoneCode: "39" }, { countryName: "Ivory Coast", iso2: "CI", iso3: "CIV", phoneCode: "225" }, { countryName: "Jamaica", iso2: "JM", iso3: "JAM", phoneCode: "1 876" }, { countryName: "Japan", iso2: "JP", iso3: "JPN", phoneCode: "81" }, { countryName: "Jersey", iso2: "JE", iso3: "JEY", phoneCode: "" }, { countryName: "Jordan", iso2: "JO", iso3: "JOR", phoneCode: "962" }, { countryName: "Kazakhstan", iso2: "KZ", iso3: "KAZ", phoneCode: "7" }, { countryName: "Kenya", iso2: "KE", iso3: "KEN", phoneCode: "254" }, { countryName: "Kiribati", iso2: "KI", iso3: "KIR", phoneCode: "686" }, { countryName: "Kosovo", iso2: "", iso3: "", phoneCode: "381" }, { countryName: "Kuwait", iso2: "KW", iso3: "KWT", phoneCode: "965" }, { countryName: "Kyrgyzstan", iso2: "KG", iso3: "KGZ", phoneCode: "996" }, { countryName: "Laos", iso2: "LA", iso3: "LAO", phoneCode: "856" }, { countryName: "Latvia", iso2: "LV", iso3: "LVA", phoneCode: "371" }, { countryName: "Lebanon", iso2: "LB", iso3: "LBN", phoneCode: "961" }, { countryName: "Lesotho", iso2: "LS", iso3: "LSO", phoneCode: "266" }, { countryName: "Liberia", iso2: "LR", iso3: "LBR", phoneCode: "231" }, { countryName: "Libya", iso2: "LY", iso3: "LBY", phoneCode: "218" }, { countryName: "Liechtenstein", iso2: "LI", iso3: "LIE", phoneCode: "423" }, { countryName: "Lithuania", iso2: "LT", iso3: "LTU", phoneCode: "370" }, { countryName: "Luxembourg", iso2: "LU", iso3: "LUX", phoneCode: "352" }, { countryName: "Macau", iso2: "MO", iso3: "MAC", phoneCode: "853" }, { countryName: "Macedonia", iso2: "MK", iso3: "MKD", phoneCode: "389" }, { countryName: "Madagascar", iso2: "MG", iso3: "MDG", phoneCode: "261" }, { countryName: "Malawi", iso2: "MW", iso3: "MWI", phoneCode: "265" }, { countryName: "Malaysia", iso2: "MY", iso3: "MYS", phoneCode: "60" }, { countryName: "Maldives", iso2: "MV", iso3: "MDV", phoneCode: "960" }, { countryName: "Mali", iso2: "ML", iso3: "MLI", phoneCode: "223" }, { countryName: "Malta", iso2: "MT", iso3: "MLT", phoneCode: "356" }, { countryName: "Marshall Islands", iso2: "MH", iso3: "MHL", phoneCode: "692" }, { countryName: "Mauritania", iso2: "MR", iso3: "MRT", phoneCode: "222" }, { countryName: "Mauritius", iso2: "MU", iso3: "MUS", phoneCode: "230" }, { countryName: "Mayotte", iso2: "YT", iso3: "MYT", phoneCode: "262" }, { countryName: "Mexico", iso2: "MX", iso3: "MEX", phoneCode: "52" }, { countryName: "Micronesia", iso2: "FM", iso3: "FSM", phoneCode: "691" }, { countryName: "Moldova", iso2: "MD", iso3: "MDA", phoneCode: "373" }, { countryName: "Monaco", iso2: "MC", iso3: "MCO", phoneCode: "377" }, { countryName: "Mongolia", iso2: "MN", iso3: "MNG", phoneCode: "976" }, { countryName: "Montenegro", iso2: "ME", iso3: "MNE", phoneCode: "382" }, { countryName: "Montserrat", iso2: "MS", iso3: "MSR", phoneCode: "1 664" }, { countryName: "Morocco", iso2: "MA", iso3: "MAR", phoneCode: "212" }, { countryName: "Mozambique", iso2: "MZ", iso3: "MOZ", phoneCode: "258" }, { countryName: "Namibia", iso2: "NA", iso3: "NAM", phoneCode: "264" }, { countryName: "Nauru", iso2: "NR", iso3: "NRU", phoneCode: "674" }, { countryName: "Nepal", iso2: "NP", iso3: "NPL", phoneCode: "977" }, { countryName: "Netherlands", iso2: "NL", iso3: "NLD", phoneCode: "31" }, { countryName: "Netherlands Antilles", iso2: "AN", iso3: "ANT", phoneCode: "599" }, { countryName: "New Caledonia", iso2: "NC", iso3: "NCL", phoneCode: "687" }, { countryName: "New Zealand", iso2: "NZ", iso3: "NZL", phoneCode: "64" }, { countryName: "Nicaragua", iso2: "NI", iso3: "NIC", phoneCode: "505" }, { countryName: "Niger", iso2: "NE", iso3: "NER", phoneCode: "227" }, { countryName: "Nigeria", iso2: "NG", iso3: "NGA", phoneCode: "234" }, { countryName: "Niue", iso2: "NU", iso3: "NIU", phoneCode: "683" }, { countryName: "Norfolk Island", iso2: "", iso3: "NFK", phoneCode: "672" }, { countryName: "North Korea", iso2: "KP", iso3: "PRK", phoneCode: "850" }, { countryName: "Northern Mariana Islands", iso2: "MP", iso3: "MNP", phoneCode: "1 670" }, { countryName: "Norway", iso2: "NO", iso3: "NOR", phoneCode: "47" }, { countryName: "Oman", iso2: "OM", iso3: "OMN", phoneCode: "968" }, { countryName: "Pakistan", iso2: "PK", iso3: "PAK", phoneCode: "92" }, { countryName: "Palau", iso2: "PW", iso3: "PLW", phoneCode: "680" }, { countryName: "Panama", iso2: "PA", iso3: "PAN", phoneCode: "507" }, { countryName: "Papua New Guinea", iso2: "PG", iso3: "PNG", phoneCode: "675" }, { countryName: "Paraguay", iso2: "PY", iso3: "PRY", phoneCode: "595" }, { countryName: "Peru", iso2: "PE", iso3: "PER", phoneCode: "51" }, { countryName: "Philippines", iso2: "PH", iso3: "PHL", phoneCode: "63" }, { countryName: "Pitcairn Islands", iso2: "PN", iso3: "PCN", phoneCode: "870" }, { countryName: "Poland", iso2: "PL", iso3: "POL", phoneCode: "48" }, { countryName: "Portugal", iso2: "PT", iso3: "PRT", phoneCode: "351" }, { countryName: "Puerto Rico", iso2: "PR", iso3: "PRI", phoneCode: "1" }, { countryName: "Qatar", iso2: "QA", iso3: "QAT", phoneCode: "974" }, { countryName: "Republic of the Congo", iso2: "CG", iso3: "COG", phoneCode: "242" }, { countryName: "Romania", iso2: "RO", iso3: "ROU", phoneCode: "40" }, { countryName: "Russia", iso2: "RU", iso3: "RUS", phoneCode: "7" }, { countryName: "Rwanda", iso2: "RW", iso3: "RWA", phoneCode: "250" }, { countryName: "Saint Barthelemy", iso2: "BL", iso3: "BLM", phoneCode: "590" }, { countryName: "Saint Helena", iso2: "SH", iso3: "SHN", phoneCode: "290" }, { countryName: "Saint Kitts and Nevis", iso2: "KN", iso3: "KNA", phoneCode: "1 869" }, { countryName: "Saint Lucia", iso2: "LC", iso3: "LCA", phoneCode: "1 758" }, { countryName: "Saint Martin", iso2: "MF", iso3: "MAF", phoneCode: "1 599" }, { countryName: "Saint Pierre and Miquelon", iso2: "PM", iso3: "SPM", phoneCode: "508" }, { countryName: "Saint Vincent and the Grenadines", iso2: "VC", iso3: "VCT", phoneCode: "1 784" }, { countryName: "Samoa", iso2: "WS", iso3: "WSM", phoneCode: "685" }, { countryName: "San Marino", iso2: "SM", iso3: "SMR", phoneCode: "378" }, { countryName: "Sao Tome and Principe", iso2: "ST", iso3: "STP", phoneCode: "239" }, { countryName: "Saudi Arabia", iso2: "SA", iso3: "SAU", phoneCode: "966" }, { countryName: "Senegal", iso2: "SN", iso3: "SEN", phoneCode: "221" }, { countryName: "Serbia", iso2: "RS", iso3: "SRB", phoneCode: "381" }, { countryName: "Seychelles", iso2: "SC", iso3: "SYC", phoneCode: "248" }, { countryName: "Sierra Leone", iso2: "SL", iso3: "SLE", phoneCode: "232" }, { countryName: "Singapore", iso2: "SG", iso3: "SGP", phoneCode: "65" }, { countryName: "Slovakia", iso2: "SK", iso3: "SVK", phoneCode: "421" }, { countryName: "Slovenia", iso2: "SI", iso3: "SVN", phoneCode: "386" }, { countryName: "Solomon Islands", iso2: "SB", iso3: "SLB", phoneCode: "677" }, { countryName: "Somalia", iso2: "SO", iso3: "SOM", phoneCode: "252" }, { countryName: "South Africa", iso2: "ZA", iso3: "ZAF", phoneCode: "27" }, { countryName: "South Korea", iso2: "KR", iso3: "KOR", phoneCode: "82" }, { countryName: "Spain", iso2: "ES", iso3: "ESP", phoneCode: "34" }, { countryName: "Sri Lanka", iso2: "LK", iso3: "LKA", phoneCode: "94" }, { countryName: "Sudan", iso2: "SD", iso3: "SDN", phoneCode: "249" }, { countryName: "Suriname", iso2: "SR", iso3: "SUR", phoneCode: "597" }, { countryName: "Svalbard", iso2: "SJ", iso3: "SJM", phoneCode: "" }, { countryName: "Swaziland", iso2: "SZ", iso3: "SWZ", phoneCode: "268" }, { countryName: "Sweden", iso2: "SE", iso3: "SWE", phoneCode: "46" }, { countryName: "Switzerland", iso2: "CH", iso3: "CHE", phoneCode: "41" }, { countryName: "Syria", iso2: "SY", iso3: "SYR", phoneCode: "963" }, { countryName: "Taiwan", iso2: "TW", iso3: "TWN", phoneCode: "886" }, { countryName: "Tajikistan", iso2: "TJ", iso3: "TJK", phoneCode: "992" }, { countryName: "Tanzania", iso2: "TZ", iso3: "TZA", phoneCode: "255" }, { countryName: "Thailand", iso2: "TH", iso3: "THA", phoneCode: "66" }, { countryName: "Timor-Leste", iso2: "TL", iso3: "TLS", phoneCode: "670" }, { countryName: "Togo", iso2: "TG", iso3: "TGO", phoneCode: "228" }, { countryName: "Tokelau", iso2: "TK", iso3: "TKL", phoneCode: "690" }, { countryName: "Tonga", iso2: "TO", iso3: "TON", phoneCode: "676" }, { countryName: "Trinidad and Tobago", iso2: "TT", iso3: "TTO", phoneCode: "1 868" }, { countryName: "Tunisia", iso2: "TN", iso3: "TUN", phoneCode: "216" }, { countryName: "Turkey", iso2: "TR", iso3: "TUR", phoneCode: "90" }, { countryName: "Turkmenistan", iso2: "TM", iso3: "TKM", phoneCode: "993" }, { countryName: "Turks and Caicos Islands", iso2: "TC", iso3: "TCA", phoneCode: "1 649" }, { countryName: "Tuvalu", iso2: "TV", iso3: "TUV", phoneCode: "688" }, { countryName: "Uganda", iso2: "UG", iso3: "UGA", phoneCode: "256" }, { countryName: "Ukraine", iso2: "UA", iso3: "UKR", phoneCode: "380" }, { countryName: "United Arab Emirates", iso2: "AE", iso3: "ARE", phoneCode: "971" }, { countryName: "United Kingdom", iso2: "GB", iso3: "GBR", phoneCode: "44" }, { countryName: "United States", iso2: "US", iso3: "USA", phoneCode: "1" }, { countryName: "Uruguay", iso2: "UY", iso3: "URY", phoneCode: "598" }, { countryName: "US Virgin Islands", iso2: "VI", iso3: "VIR", phoneCode: "1 340" }, { countryName: "Uzbekistan", iso2: "UZ", iso3: "UZB", phoneCode: "998" }, { countryName: "Vanuatu", iso2: "VU", iso3: "VUT", phoneCode: "678" }, { countryName: "Venezuela", iso2: "VE", iso3: "VEN", phoneCode: "58" }, { countryName: "Vietnam", iso2: "VN", iso3: "VNM", phoneCode: "84" }, { countryName: "Wallis and Futuna", iso2: "WF", iso3: "WLF", phoneCode: "681" }, { countryName: "West Bank", iso2: "", iso3: "", phoneCode: "970" }, { countryName: "Western Sahara", iso2: "EH", iso3: "ESH", phoneCode: "" }, { countryName: "Yemen", iso2: "YE", iso3: "YEM", phoneCode: "967" }, { countryName: "Zambia", iso2: "ZM", iso3: "ZMB", phoneCode: "260" }, { countryName: "Zimbabwe", iso2: "ZW", iso3: "ZWE", phoneCode: "263" }];
 let ii = {
   name: "AddressField",
   extends: j5,
@@ -3906,9 +3906,9 @@ let ii = {
     },
     countryISO3(e) {
       e = e.toUpperCase();
-      for (let a = 0; a < F8.length; ++a)
-        if (F8[a].iso2 === e)
-          return F8[a].iso3.toLowerCase();
+      for (let a = 0; a < I8.length; ++a)
+        if (I8[a].iso2 === e)
+          return I8[a].iso3.toLowerCase();
       return "";
     }
   },
@@ -4220,7 +4220,7 @@ const zi = /* @__PURE__ */ c2(ui, [["render", gi]]), yi = {
 function bi(e, a, t, c, i, r) {
   const n = E1("toolbar"), o = E1("form-field"), l = E1("array-item-container");
   return p(), A("div", null, [
-    (p(!0), A(B1, null, n2(r.model, (u, s) => (p(), A("div", { key: s }, [
+    (p(!0), A(R1, null, r2(r.model, (u, s) => (p(), A("div", { key: s }, [
       e2(l, t2({
         modelValue: r.model[s],
         "onUpdate:modelValue": (m) => r.model[s] = m
@@ -4730,7 +4730,7 @@ var O1;
 (function(e) {
   e.errToObj = (a) => typeof a == "string" ? { message: a } : a || {}, e.toString = (a) => typeof a == "string" ? a : a?.message;
 })(O1 || (O1 = {}));
-class I3 {
+class F3 {
   constructor(a, t, c, i) {
     this._cachedPath = [], this.parent = a, this.data = t, this._path = c, this._key = i;
   }
@@ -4983,8 +4983,8 @@ class p2 {
   }
 }
 const Ni = /^c[^\s-]{8,}$/i, Ai = /^[0-9a-z]+$/, _i = /^[0-9A-HJKMNP-TV-Z]{26}$/i, Si = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i, ki = /^[a-z0-9_-]{21}$/i, Ti = /^[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]*$/, Di = /^[-+]?P(?!$)(?:(?:[-+]?\d+Y)|(?:[-+]?\d+[.,]\d+Y$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:(?:[-+]?\d+W)|(?:[-+]?\d+[.,]\d+W$))?(?:(?:[-+]?\d+D)|(?:[-+]?\d+[.,]\d+D$))?(?:T(?=[\d+-])(?:(?:[-+]?\d+H)|(?:[-+]?\d+[.,]\d+H$))?(?:(?:[-+]?\d+M)|(?:[-+]?\d+[.,]\d+M$))?(?:[-+]?\d+(?:[.,]\d+)?S)?)??$/, Oi = /^(?!\.)(?!.*\.\.)([A-Z0-9_'+\-\.]*)[A-Z0-9_+-]@([A-Z0-9][A-Z0-9\-]*\.)+[A-Z]{2,}$/i, Pi = "^(\\p{Extended_Pictographic}|\\p{Emoji_Component})+$";
-let I8;
-const Fi = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, Ii = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/(3[0-2]|[12]?[0-9])$/, Ei = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/, Ri = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, Bi = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/, $i = /^([0-9a-zA-Z-_]{4})*(([0-9a-zA-Z-_]{2}(==)?)|([0-9a-zA-Z-_]{3}(=)?))?$/, S9 = "((\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-((0[13578]|1[02])-(0[1-9]|[12]\\d|3[01])|(0[469]|11)-(0[1-9]|[12]\\d|30)|(02)-(0[1-9]|1\\d|2[0-8])))", Ui = new RegExp(`^${S9}$`);
+let F8;
+const Ii = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])$/, Fi = /^(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\/(3[0-2]|[12]?[0-9])$/, Ei = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$/, Ri = /^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))\/(12[0-8]|1[01][0-9]|[1-9]?[0-9])$/, Bi = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/, $i = /^([0-9a-zA-Z-_]{4})*(([0-9a-zA-Z-_]{2}(==)?)|([0-9a-zA-Z-_]{3}(=)?))?$/, S9 = "((\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-((0[13578]|1[02])-(0[1-9]|[12]\\d|3[01])|(0[469]|11)-(0[1-9]|[12]\\d|30)|(02)-(0[1-9]|1\\d|2[0-8])))", Ui = new RegExp(`^${S9}$`);
 function k9(e) {
   let a = "[0-5]\\d";
   e.precision ? a = `${a}\\.\\d{${e.precision}}` : e.precision == null && (a = `${a}(\\.\\d+)?`);
@@ -5000,7 +5000,7 @@ function ji(e) {
   return t.push(e.local ? "Z?" : "Z"), e.offset && t.push("([+-]\\d{2}:?\\d{2})"), a = `${a}(${t.join("|")})`, new RegExp(`^${a}$`);
 }
 function qi(e, a) {
-  return !!((a === "v4" || !a) && Fi.test(e) || (a === "v6" || !a) && Ei.test(e));
+  return !!((a === "v4" || !a) && Ii.test(e) || (a === "v6" || !a) && Ei.test(e));
 }
 function Yi(e, a) {
   if (!Ti.test(e))
@@ -5016,7 +5016,7 @@ function Yi(e, a) {
   }
 }
 function Wi(e, a) {
-  return !!((a === "v4" || !a) && Ii.test(e) || (a === "v6" || !a) && Ri.test(e));
+  return !!((a === "v4" || !a) && Fi.test(e) || (a === "v6" || !a) && Ri.test(e));
 }
 class _3 extends p2 {
   _parse(a) {
@@ -5073,7 +5073,7 @@ class _3 extends p2 {
           message: r.message
         }), c.dirty());
       else if (r.kind === "emoji")
-        I8 || (I8 = new RegExp(Pi, "u")), I8.test(a.data) || (i = this._getOrReturnCtx(a, i), S1(i, {
+        F8 || (F8 = new RegExp(Pi, "u")), F8.test(a.data) || (i = this._getOrReturnCtx(a, i), S1(i, {
           validation: "emoji",
           code: p1.invalid_string,
           message: r.message
@@ -5948,8 +5948,8 @@ class n3 extends p2 {
       exact: !1,
       message: i.maxLength.message
     }), c.dirty()), t.common.async)
-      return Promise.all([...t.data].map((n, o) => i.type._parseAsync(new I3(t, n, t.path, o)))).then((n) => S4.mergeArray(c, n));
-    const r = [...t.data].map((n, o) => i.type._parseSync(new I3(t, n, t.path, o)));
+      return Promise.all([...t.data].map((n, o) => i.type._parseAsync(new F3(t, n, t.path, o)))).then((n) => S4.mergeArray(c, n));
+    const r = [...t.data].map((n, o) => i.type._parseSync(new F3(t, n, t.path, o)));
     return S4.mergeArray(c, r);
   }
   get element() {
@@ -6029,7 +6029,7 @@ class K2 extends p2 {
       const s = r[u], m = i.data[u];
       l.push({
         key: { status: "valid", value: u },
-        value: s._parse(new I3(i, m, i.path, u)),
+        value: s._parse(new F3(i, m, i.path, u)),
         alwaysSet: u in i.data
       });
     }
@@ -6054,7 +6054,7 @@ class K2 extends p2 {
         l.push({
           key: { status: "valid", value: s },
           value: u._parse(
-            new I3(i, m, i.path, s)
+            new F3(i, m, i.path, s)
             //, ctx.child(key), value, getParsedType(value)
           ),
           alwaysSet: s in i.data
@@ -6451,7 +6451,7 @@ class t6 extends p2 {
     }), t.dirty());
     const r = [...c.data].map((n, o) => {
       const l = this._def.items[o] || this._def.rest;
-      return l ? l._parse(new I3(c, n, c.path, o)) : null;
+      return l ? l._parse(new F3(c, n, c.path, o)) : null;
     }).filter((n) => !!n);
     return c.common.async ? Promise.all(r).then((n) => S4.mergeArray(t, n)) : S4.mergeArray(t, r);
   }
@@ -6491,8 +6491,8 @@ class p7 extends p2 {
         received: c.parsedType
       }), X1;
     const i = this._def.keyType, r = this._def.valueType, n = [...c.data.entries()].map(([o, l], u) => ({
-      key: i._parse(new I3(c, o, c.path, [u, "key"])),
-      value: r._parse(new I3(c, l, c.path, [u, "value"]))
+      key: i._parse(new F3(c, o, c.path, [u, "key"])),
+      value: r._parse(new F3(c, l, c.path, [u, "value"]))
     }));
     if (c.common.async) {
       const o = /* @__PURE__ */ new Map();
@@ -6558,7 +6558,7 @@ class m0 extends p2 {
       }
       return { status: t.value, value: u };
     }
-    const o = [...c.data.values()].map((l, u) => r._parse(new I3(c, l, c.path, u)));
+    const o = [...c.data.values()].map((l, u) => r._parse(new F3(c, l, c.path, u)));
     return c.common.async ? Promise.all(o).then((l) => n(l)) : n(o);
   }
   min(a, t) {
@@ -7114,7 +7114,7 @@ function or(e, a, t, c, i, r) {
       b1(e.$slots, "default", $1(j1(r.flags))),
       t.options.helper ? (p(), A("small", rr, W1(t.options.helper), 1)) : j("", !0),
       r.flags.errors.length ? (p(), A("div", nr, [
-        (p(!0), A(B1, null, n2(r.flags.errors, (n, o) => (p(), A("span", { key: o }, W1(n), 1))), 128))
+        (p(!0), A(R1, null, r2(r.flags.errors, (n, o) => (p(), A("span", { key: o }, W1(n), 1))), 128))
       ])) : j("", !0)
     ], 512)
   ]);
@@ -7280,10 +7280,10 @@ let lr = {
     }
   }
 };
-const F2 = lr;
+const I2 = lr;
 let sr = {
   name: "CheckBoxField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: Boolean
@@ -7334,7 +7334,7 @@ function mr(e, a, t, c, i, r) {
   return p(), H1(n, t2(e.props, { showLabel: !1 }), {
     default: L1((o) => [
       B("div", ur, [
-        r2(B("input", {
+        n2(B("input", {
           type: "checkbox",
           class: D1(["form-check-input", { "is-invalid": o.invalid && o.touched }]),
           "aria-describedby": e.options.label,
@@ -7353,7 +7353,7 @@ function mr(e, a, t, c, i, r) {
 const h5 = /* @__PURE__ */ c2(fr, [["render", mr]]);
 let vr = {
   name: "CheckBoxListField",
-  extends: F2,
+  extends: I2,
   emits: ["update:modelValue"],
   props: {
     modelValue: {
@@ -7450,7 +7450,7 @@ function yr(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      (p(!0), A(B1, null, n2(e.items, (l) => (p(), A("div", {
+      (p(!0), A(R1, null, r2(e.items, (l) => (p(), A("div", {
         class: "form-check form-check-inline",
         key: l
       }, [
@@ -7473,7 +7473,7 @@ function yr(e, a, t, c, i, r) {
 const m5 = /* @__PURE__ */ c2(pr, [["render", yr]]);
 let br = {
   name: "TextField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String,
@@ -7534,7 +7534,7 @@ function Vr(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "text",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         pattern: e.pattern,
@@ -7602,15 +7602,15 @@ function xr() {
       function w(v, g) {
         var x = Object.keys(v);
         if (Object.getOwnPropertySymbols) {
-          var I = Object.getOwnPropertySymbols(v);
-          g && (I = I.filter((function(P) {
+          var F = Object.getOwnPropertySymbols(v);
+          g && (F = F.filter((function(P) {
             return Object.getOwnPropertyDescriptor(v, P).enumerable;
-          }))), x.push.apply(x, I);
+          }))), x.push.apply(x, F);
         }
         return x;
       }
-      function F(v, g, x) {
-        return (g = (function(I) {
+      function I(v, g, x) {
+        return (g = (function(F) {
           var P = (function(E, U) {
             if (b(E) != "object" || !E) return E;
             var r1 = E[Symbol.toPrimitive];
@@ -7620,20 +7620,20 @@ function xr() {
               throw new TypeError("@@toPrimitive must return a primitive value.");
             }
             return (U === "string" ? String : Number)(E);
-          })(I, "string");
+          })(F, "string");
           return b(P) == "symbol" ? P : P + "";
         })(g)) in v ? Object.defineProperty(v, g, { value: x, enumerable: !0, configurable: !0, writable: !0 }) : v[g] = x, v;
       }
       m.scriptLoader = function(v) {
         return new Promise((function(g, x) {
-          (function(I, P, E) {
+          (function(F, P, E) {
             var U = document.head || document.getElementsByTagName("head")[0], r1 = document.createElement("script");
             typeof P == "function" && (E = P, P = {}), P = P || {}, E = E || function() {
-            }, r1.type = P.type || "text/javascript", r1.charset = P.charset || "utf8", r1.async = !("async" in P) || !!P.async, r1.src = I, P.attrs && (function(X, D) {
+            }, r1.type = P.type || "text/javascript", r1.charset = P.charset || "utf8", r1.async = !("async" in P) || !!P.async, r1.src = F, P.attrs && (function(X, D) {
               for (var c1 in D) X.setAttribute(c1, D[c1]);
             })(r1, P.attrs), P.text && (r1.text = String(P.text)), ("onload" in r1 ? u : s)(r1, E), r1.onload || u(r1, E), U.appendChild(r1);
-          })(v, (function(I) {
-            return o = void 0, I ? x(I) : window.CKEDITOR ? void g(CKEDITOR) : x(new Error("Script loaded from editorUrl doesn't provide CKEDITOR namespace."));
+          })(v, (function(F) {
+            return o = void 0, F ? x(F) : window.CKEDITOR ? void g(CKEDITOR) : x(new Error("Script loaded from editorUrl doesn't provide CKEDITOR namespace."));
           }));
         }));
       };
@@ -7648,8 +7648,8 @@ function xr() {
           v.$emit("namespaceloaded", g);
         })).then((function() {
           if (!v.$_destroyed) {
-            var g = v.prepareConfig(), x = v.type === "inline" ? "inline" : "replace", I = v.$el.firstElementChild;
-            CKEDITOR[x](I, g);
+            var g = v.prepareConfig(), x = v.type === "inline" ? "inline" : "replace", F = v.$el.firstElementChild;
+            CKEDITOR[x](F, g);
           }
         })).catch((function(g) {
           console.log("[ckeditor.js] Error while loading namespace from integrations package", g);
@@ -7663,22 +7663,22 @@ function xr() {
       }, readOnly: function(v) {
         this.instance && this.instance.setReadOnly(v);
       } }, methods: { prepareConfig: function() {
-        var v = this, g = this.config ? (function(I) {
+        var v = this, g = this.config ? (function(F) {
           for (var P = 1; P < arguments.length; P++) {
             var E = arguments[P] != null ? arguments[P] : {};
             P % 2 ? w(Object(E), !0).forEach((function(U) {
-              F(I, U, E[U]);
-            })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(I, Object.getOwnPropertyDescriptors(E)) : w(Object(E)).forEach((function(U) {
-              Object.defineProperty(I, U, Object.getOwnPropertyDescriptor(E, U));
+              I(F, U, E[U]);
+            })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(F, Object.getOwnPropertyDescriptors(E)) : w(Object(E)).forEach((function(U) {
+              Object.defineProperty(F, U, Object.getOwnPropertyDescriptor(E, U));
             }));
           }
-          return I;
+          return F;
         })({}, this.config) : {};
         g.on = g.on || {}, g.delayIfDetached === void 0 && (g.delayIfDetached = !0), this.readOnly !== null && (g.readOnly = this.readOnly), g.hasOwnProperty("versionCheck") || (g.versionCheck = !1);
         var x = g.on.instanceReady;
-        return g.on.instanceReady = function(I) {
-          v.instance = I.editor, v.$nextTick().then((function() {
-            v.prepareComponentData(), x && x(I);
+        return g.on.instanceReady = function(F) {
+          v.instance = F.editor, v.$nextTick().then((function() {
+            v.prepareComponentData(), x && x(F);
           }));
         }, g;
       }, prepareComponentData: function() {
@@ -7689,21 +7689,21 @@ function xr() {
           g !== x ? (v.readyEmitted || (v.$emit("ready", v.instance), v.readyEmitted = !0), v.$emit("update:modelValue", x)) : v.readyEmitted || (v.$emit("ready", v.instance), v.readyEmitted = !0), v.instance.fire("unlockSnapshot");
         } });
       }, $_setUpEditorEvents: function() {
-        var v = this, g = this.instance, x = (function(I, P) {
+        var v = this, g = this.instance, x = (function(F, P) {
           var E, U = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
           return function() {
             clearTimeout(E);
             for (var r1 = arguments.length, X = new Array(r1), D = 0; D < r1; D++) X[D] = arguments[D];
-            E = setTimeout(I.bind.apply(I, [U].concat(X)), P);
+            E = setTimeout(F.bind.apply(F, [U].concat(X)), P);
           };
-        })((function(I) {
+        })((function(F) {
           var P = g.getData();
-          v.modelValue !== P && v.$emit("update:modelValue", P, I, g);
+          v.modelValue !== P && v.$emit("update:modelValue", P, F, g);
         }), this.throttle);
-        g.on("change", x), g.on("focus", (function(I) {
-          v.$emit("focus", I, g);
-        })), g.on("blur", (function(I) {
-          v.$emit("blur", I, g);
+        g.on("change", x), g.on("focus", (function(F) {
+          v.$emit("focus", F, g);
+        })), g.on("blur", (function(F) {
+          v.$emit("blur", F, g);
         }));
       } } }, T = { install: function(v) {
         v.component("ckeditor", _);
@@ -8049,7 +8049,7 @@ function kr(e, a, t, c, i, r) {
 const v5 = /* @__PURE__ */ c2(Sr, [["render", kr]]);
 let Tr = {
   name: "SelectBaseField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -8077,21 +8077,21 @@ let Tr = {
 const Dr = Tr, Or = ["disabled"], Pr = {
   key: 0,
   value: ""
-}, Fr = ["value"];
-function Ir(e, a, t, c, i, r) {
+}, Ir = ["value"];
+function Fr(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1(() => [
-      r2(B("select", {
+      n2(B("select", {
         class: "form-control",
         "onUpdate:modelValue": a[0] || (a[0] = (o) => e.model = o),
         disabled: e.schema.readonly
       }, [
         e.schema.required ? j("", !0) : (p(), A("option", Pr, W1(e.options.noneLabel || "None"), 1)),
-        (p(!0), A(B1, null, n2(e.items, (o) => (p(), A("option", {
+        (p(!0), A(R1, null, r2(e.items, (o) => (p(), A("option", {
           key: o.value,
           value: o.value
-        }, W1(o.label), 9, Fr))), 128))
+        }, W1(o.label), 9, Ir))), 128))
       ], 8, Or), [
         [B0, e.model]
       ])
@@ -8099,7 +8099,7 @@ function Ir(e, a, t, c, i, r) {
     _: 1
   }, 16);
 }
-const Y5 = /* @__PURE__ */ c2(Dr, [["render", Ir]]);
+const Y5 = /* @__PURE__ */ c2(Dr, [["render", Fr]]);
 let Er = {
   name: "CountryField",
   extends: Y5,
@@ -8146,14 +8146,14 @@ let Er = {
     }
   }
 };
-const p5 = Er, P9 = 6048e5, Rr = 864e5, Br = 6e4, F9 = 36e5, $r = 1e3, V7 = /* @__PURE__ */ Symbol.for("constructDateFrom");
+const p5 = Er, P9 = 6048e5, Rr = 864e5, Br = 6e4, I9 = 36e5, $r = 1e3, V7 = /* @__PURE__ */ Symbol.for("constructDateFrom");
 function V2(e, a) {
   return typeof e == "function" ? e(a) : e && typeof e == "object" && V7 in e ? e[V7](a) : e instanceof Date ? new e.constructor(a) : new Date(a);
 }
 function Z1(e, a) {
   return V2(a || e, e);
 }
-function F4(e, a, t) {
+function I4(e, a, t) {
   const c = Z1(e, t?.in);
   return isNaN(a) ? V2(t?.in || e, NaN) : (a && c.setDate(c.getDate() + a), c);
 }
@@ -8171,7 +8171,7 @@ function G4(e, a, t) {
     i
   ), c);
 }
-function I9(e, a, t) {
+function F9(e, a, t) {
   const {
     years: c = 0,
     months: i = 0,
@@ -8180,14 +8180,14 @@ function I9(e, a, t) {
     hours: o = 0,
     minutes: l = 0,
     seconds: u = 0
-  } = a, s = Z1(e, t?.in), m = i || c ? G4(s, i + c * 12) : s, b = n || r ? F4(m, n + r * 7) : m, w = l + o * 60, _ = (u + w * 60) * 1e3;
+  } = a, s = Z1(e, t?.in), m = i || c ? G4(s, i + c * 12) : s, b = n || r ? I4(m, n + r * 7) : m, w = l + o * 60, _ = (u + w * 60) * 1e3;
   return V2(e, +b + _);
 }
 function Ur(e, a, t) {
   return V2(e, +Z1(e) + a);
 }
 function Zr(e, a, t) {
-  return Ur(e, a * F9);
+  return Ur(e, a * I9);
 }
 let jr = {};
 function o6() {
@@ -9435,14 +9435,14 @@ function G9(e) {
   return On.test(e);
 }
 function z5(e, a, t) {
-  const c = Fn(e, a, t);
+  const c = In(e, a, t);
   if (console.warn(c), Pn.includes(e)) throw new RangeError(c);
 }
-function Fn(e, a, t) {
+function In(e, a, t) {
   const c = e[0] === "Y" ? "years" : "days of the month";
   return `Use \`${e.toLowerCase()}\` instead of \`${e}\` (in \`${a}\`) for formatting ${c} to the input \`${t}\`; see: https://github.com/date-fns/date-fns/blob/master/docs/unicodeTokens.md`;
 }
-const In = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g, En = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g, Rn = /^'([^]*?)'?$/, Bn = /''/g, $n = /[a-zA-Z]/;
+const Fn = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g, En = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g, Rn = /^'([^]*?)'?$/, Bn = /''/g, $n = /[a-zA-Z]/;
 function o3(e, a, t) {
   const c = o6(), i = t?.locale ?? c.locale ?? q9, r = t?.firstWeekContainsDate ?? t?.locale?.options?.firstWeekContainsDate ?? c.firstWeekContainsDate ?? c.locale?.options?.firstWeekContainsDate ?? 1, n = t?.weekStartsOn ?? t?.locale?.options?.weekStartsOn ?? c.weekStartsOn ?? c.locale?.options?.weekStartsOn ?? 0, o = Z1(e, t?.in);
   if (!l0(o))
@@ -9454,7 +9454,7 @@ function o3(e, a, t) {
       return b(s, i.formatLong);
     }
     return s;
-  }).join("").match(In).map((s) => {
+  }).join("").match(Fn).map((s) => {
     if (s === "''")
       return { isToken: !1, value: "'" };
     const m = s[0];
@@ -9509,7 +9509,7 @@ function R3(e, a) {
 function s2(e, a) {
   return Z1(e, a?.in).getMonth();
 }
-function F6(e) {
+function I6(e) {
   return Z1(e).getSeconds();
 }
 function G1(e, a) {
@@ -9518,7 +9518,7 @@ function G1(e, a) {
 function c6(e, a) {
   return +Z1(e) > +Z1(a);
 }
-function I6(e, a) {
+function F6(e, a) {
   return +Z1(e) < +Z1(a);
 }
 function w6(e, a) {
@@ -9672,7 +9672,7 @@ function c3(e, a) {
     };
   const c = t[1] === "+" ? 1 : -1, i = t[2] ? parseInt(t[2], 10) : 0, r = t[3] ? parseInt(t[3], 10) : 0, n = t[5] ? parseInt(t[5], 10) : 0;
   return {
-    value: c * (i * F9 + r * Br + n * $r),
+    value: c * (i * I9 + r * Br + n * $r),
     rest: a.slice(t[0].length)
   };
 }
@@ -10283,7 +10283,7 @@ class po extends y2 {
 }
 function Q5(e, a, t) {
   const c = o6(), i = t?.weekStartsOn ?? t?.locale?.options?.weekStartsOn ?? c.weekStartsOn ?? c.locale?.options?.weekStartsOn ?? 0, r = Z1(e, t?.in), n = r.getDay(), l = (a % 7 + 7) % 7, u = 7 - i, s = a < 0 || a > 6 ? a - (n + u) % 7 : (l + u) % 7 - (n + u) % 7;
-  return F4(r, s, t);
+  return I4(r, s, t);
 }
 class go extends y2 {
   priority = 90;
@@ -10455,7 +10455,7 @@ class yo extends y2 {
 }
 function bo(e, a, t) {
   const c = Z1(e, t?.in), i = Yn(c, t), r = a - i;
-  return F4(c, r, t);
+  return I4(c, r, t);
 }
 class Mo extends y2 {
   priority = 90;
@@ -10910,7 +10910,7 @@ const Po = {
   x: new To(),
   t: new Do(),
   T: new Oo()
-}, Fo = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g, Io = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g, Eo = /^'([^]*?)'?$/, Ro = /''/g, Bo = /\S/, $o = /[a-zA-Z]/;
+}, Io = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g, Fo = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g, Eo = /^'([^]*?)'?$/, Ro = /''/g, Bo = /\S/, $o = /[a-zA-Z]/;
 function y5(e, a, t, c) {
   const i = () => V2(c?.in || t, NaN), r = qn(), n = c?.locale ?? r.locale ?? q9, o = c?.firstWeekContainsDate ?? c?.locale?.options?.firstWeekContainsDate ?? r.firstWeekContainsDate ?? r.locale?.options?.firstWeekContainsDate ?? 1, l = c?.weekStartsOn ?? c?.locale?.options?.weekStartsOn ?? r.weekStartsOn ?? r.locale?.options?.weekStartsOn ?? 0;
   if (!a)
@@ -10919,14 +10919,14 @@ function y5(e, a, t, c) {
     firstWeekContainsDate: o,
     weekStartsOn: l,
     locale: n
-  }, s = [new Jn(c?.in, t)], m = a.match(Io).map((T) => {
+  }, s = [new Jn(c?.in, t)], m = a.match(Fo).map((T) => {
     const v = T[0];
     if (v in g5) {
       const g = g5[v];
       return g(T, n.formatLong);
     }
     return T;
-  }).join("").match(Fo), b = [];
+  }).join("").match(Io), b = [];
   for (let T of m) {
     !c?.useAdditionalWeekYearTokens && G9(T) && z5(T, a, e), !c?.useAdditionalDayOfYearTokens && W9(T) && z5(T, a, e);
     const v = T[0], g = Po[v];
@@ -10945,15 +10945,15 @@ function y5(e, a, t, c) {
           `The format string mustn't contain \`${T}\` and any other token at the same time`
         );
       b.push({ token: v, fullToken: T });
-      const I = g.run(
+      const F = g.run(
         e,
         T,
         n.match,
         u
       );
-      if (!I)
+      if (!F)
         return i();
-      s.push(I.setter), e = I.rest;
+      s.push(F.setter), e = F.rest;
     } else {
       if (v.match($o))
         throw new RangeError(
@@ -10970,16 +10970,16 @@ function y5(e, a, t, c) {
   const w = s.map((T) => T.priority).sort((T, v) => v - T).filter((T, v, g) => g.indexOf(T) === v).map(
     (T) => s.filter((v) => v.priority === T).sort((v, g) => g.subPriority - v.subPriority)
   ).map((T) => T[0]);
-  let F = Z1(t, c?.in);
-  if (isNaN(+F)) return i();
+  let I = Z1(t, c?.in);
+  if (isNaN(+I)) return i();
   const _ = {};
   for (const T of w) {
-    if (!T.validate(F, u))
+    if (!T.validate(I, u))
       return i();
-    const v = T.set(F, _, u);
-    Array.isArray(v) ? (F = v[0], Object.assign(_, v[1])) : F = v;
+    const v = T.set(I, _, u);
+    Array.isArray(v) ? (I = v[0], Object.assign(_, v[1])) : I = v;
   }
-  return F;
+  return I;
 }
 function Uo(e) {
   return e.match(Eo)[1].replace(Ro, "'");
@@ -10993,7 +10993,7 @@ function k7(e, a, t) {
   return +Q3(c) == +Q3(i);
 }
 function ea(e, a, t) {
-  return F4(e, -a, t);
+  return I4(e, -a, t);
 }
 function aa(e, a, t) {
   const c = Z1(e, t?.in), i = c.getFullYear(), r = c.getDate(), n = V2(e, 0);
@@ -11037,8 +11037,8 @@ function qo(e, a, t) {
     hours: o = 0,
     minutes: l = 0,
     seconds: u = 0
-  } = a, s = E6(e, i + c * 12, t), m = ea(s, n + r * 7, t), b = l + o * 60, F = (u + b * 60) * 1e3;
-  return V2(e, +m - F);
+  } = a, s = E6(e, i + c * 12, t), m = ea(s, n + r * 7, t), b = l + o * 60, I = (u + b * 60) * 1e3;
+  return V2(e, +m - I);
 }
 function ia(e, a, t) {
   return W5(e, -a, t);
@@ -11380,7 +11380,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
 }, P3 = (e, a, t, c) => {
   let i = e ? l1(e) : l1();
   return (a || a === 0) && (i = Zo(i, +a)), (t || t === 0) && (i = jo(i, +t)), (c || c === 0) && (i = ca(i, +c)), ta(i, 0);
-}, D2 = (e, a) => !e || !a ? !1 : I6(X2(e), X2(a)), f2 = (e, a) => !e || !a ? !1 : w6(X2(e), X2(a)), E2 = (e, a) => !e || !a ? !1 : c6(X2(e), X2(a)), g0 = (e, a, t) => e?.[0] && e?.[1] ? E2(t, e[0]) && D2(t, e[1]) : e?.[0] && a ? E2(t, e[0]) && D2(t, a) || D2(t, e[0]) && E2(t, a) : !1, Y4 = (e) => {
+}, D2 = (e, a) => !e || !a ? !1 : F6(X2(e), X2(a)), f2 = (e, a) => !e || !a ? !1 : w6(X2(e), X2(a)), E2 = (e, a) => !e || !a ? !1 : c6(X2(e), X2(a)), g0 = (e, a, t) => e?.[0] && e?.[1] ? E2(t, e[0]) && D2(t, e[1]) : e?.[0] && a ? E2(t, e[0]) && D2(t, a) || D2(t, e[0]) && E2(t, a) : !1, Y4 = (e) => {
   const a = x2(new Date(e), { date: 1 });
   return X2(a);
 }, $8 = (e, a, t) => a && (t || t === 0) ? Object.fromEntries(
@@ -11392,7 +11392,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
 }, a6 = (e) => ({
   hours: g3(e),
   minutes: R3(e),
-  seconds: F6(e)
+  seconds: I6(e)
 }), ua = (e, a) => {
   if (a) {
     const t = G1(l1(a));
@@ -11419,7 +11419,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   const t = {
     hours: g3(l1()),
     minutes: R3(l1()),
-    seconds: a ? F6(l1()) : 0
+    seconds: a ? I6(l1()) : 0
   };
   return Object.assign(t, e);
 }, S3 = (e, a, t) => [x2(l1(e), { date: 1 }), x2(l1(), { month: a, year: t, date: 1 })], h3 = (e, a, t) => {
@@ -11446,11 +11446,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
 }), U8 = (e, a, t, c) => {
   if (!e) return !0;
   if (c) {
-    const i = t === "max" ? I6(e, a) : c6(e, a), r = { seconds: 0, milliseconds: 0 };
+    const i = t === "max" ? F6(e, a) : c6(e, a), r = { seconds: 0, milliseconds: 0 };
     return i || w6(x2(e, r), x2(a, r));
   }
   return t === "max" ? e.getTime() <= a.getTime() : e.getTime() >= a.getTime();
-}, Z8 = (e, a, t) => e ? ul(e, a) : l1(t ?? a), F7 = (e, a, t, c, i) => {
+}, Z8 = (e, a, t) => e ? ul(e, a) : l1(t ?? a), I7 = (e, a, t, c, i) => {
   if (Array.isArray(c)) {
     const n = Z8(e, c[0], a), o = Z8(e, c[1], a);
     return U8(c[0], n, t, !!a) && U8(c[1], o, t, !!a) && i;
@@ -11469,10 +11469,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     return e.size ? e.has(c) : !0;
   }
   return !0;
-}, ga = (e, a, t) => typeof e == "function" ? e({ month: a, year: t }) : !!e.months.find((c) => c.month === a && c.year === t), fe = (e, a) => typeof e == "function" ? e(a) : e.years.includes(a), V5 = (e) => `dp-${o3(e, "yyyy-MM-dd")}`, I7 = (e, a) => {
-  const t = ea(X2(a), e), c = F4(X2(a), e);
+}, ga = (e, a, t) => typeof e == "function" ? e({ month: a, year: t }) : !!e.months.find((c) => c.month === a && c.year === t), fe = (e, a) => typeof e == "function" ? e(a) : e.years.includes(a), V5 = (e) => `dp-${o3(e, "yyyy-MM-dd")}`, F7 = (e, a) => {
+  const t = ea(X2(a), e), c = I4(X2(a), e);
   return { before: t, after: c };
-}, za = (e, a) => a < +e[0] || a > +e[1], K6 = F3({
+}, za = (e, a) => a < +e[0] || a > +e[1], K6 = I3({
   menuFocused: !1,
   shiftKeyInMenu: !1
 }), ya = () => {
@@ -11486,7 +11486,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     setMenuFocused: e,
     setShiftKey: a
   };
-}, w2 = F3({
+}, w2 = I3({
   monthYear: [],
   calendar: [],
   time: [],
@@ -11497,7 +11497,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     1: []
   },
   monthPicker: []
-}), q8 = m1(null), k0 = m1(!1), Y8 = m1(!1), W8 = m1(!1), G8 = m1(!1), o4 = m1(0), I2 = m1(0), B3 = () => {
+}), q8 = m1(null), k0 = m1(!1), Y8 = m1(!1), W8 = m1(!1), G8 = m1(!1), o4 = m1(0), F2 = m1(0), B3 = () => {
   const e = i1(() => k0.value ? [...w2.selectionGrid, w2.actionRow].filter((m) => m.length) : Y8.value ? [
     ...w2.timePicker[0],
     ...w2.timePicker[1],
@@ -11506,12 +11506,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   ].filter((m) => m.length) : W8.value ? [...w2.monthPicker, w2.actionRow] : [w2.monthYear, ...w2.calendar, w2.time, w2.actionRow].filter((m) => m.length)), a = (m) => {
     o4.value = m ? o4.value + 1 : o4.value - 1;
     let b = null;
-    e.value[I2.value] && (b = e.value[I2.value][o4.value]), !b && e.value[I2.value + (m ? 1 : -1)] ? (I2.value = I2.value + (m ? 1 : -1), o4.value = m ? 0 : e.value[I2.value].length - 1) : b || (o4.value = m ? o4.value - 1 : o4.value + 1);
+    e.value[F2.value] && (b = e.value[F2.value][o4.value]), !b && e.value[F2.value + (m ? 1 : -1)] ? (F2.value = F2.value + (m ? 1 : -1), o4.value = m ? 0 : e.value[F2.value].length - 1) : b || (o4.value = m ? o4.value - 1 : o4.value + 1);
   }, t = (m) => {
-    I2.value === 0 && !m || I2.value === e.value.length && m || (I2.value = m ? I2.value + 1 : I2.value - 1, e.value[I2.value] ? e.value[I2.value] && !e.value[I2.value][o4.value] && o4.value !== 0 && (o4.value = e.value[I2.value].length - 1) : I2.value = m ? I2.value - 1 : I2.value + 1);
+    F2.value === 0 && !m || F2.value === e.value.length && m || (F2.value = m ? F2.value + 1 : F2.value - 1, e.value[F2.value] ? e.value[F2.value] && !e.value[F2.value][o4.value] && o4.value !== 0 && (o4.value = e.value[F2.value].length - 1) : F2.value = m ? F2.value - 1 : F2.value + 1);
   }, c = (m) => {
     let b = null;
-    e.value[I2.value] && (b = e.value[I2.value][o4.value]), b ? b.focus({ preventScroll: !k0.value }) : o4.value = m ? o4.value - 1 : o4.value + 1;
+    e.value[F2.value] && (b = e.value[F2.value][o4.value]), b ? b.focus({ preventScroll: !k0.value }) : o4.value = m ? o4.value - 1 : o4.value + 1;
   }, i = () => {
     a(!0), c(!0);
   }, r = () => {
@@ -11525,7 +11525,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   }, u = (m, b) => {
     w2[b] = m;
   }, s = () => {
-    o4.value = 0, I2.value = 0;
+    o4.value = 0, F2.value = 0;
   };
   return {
     buildMatrix: l,
@@ -11706,9 +11706,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   const a = () => {
     const E = e.enableSeconds ? ":ss" : "", U = e.enableMinutes ? ":mm" : "";
     return e.is24 ? `HH${U}${E}` : `hh${U}${E} aa`;
-  }, t = () => e.format ? e.format : e.monthPicker ? "MM/yyyy" : e.timePicker ? a() : e.weekPicker ? `${T.value?.type === "iso" ? "II" : "ww"}-RR` : e.yearPicker ? "yyyy" : e.quarterPicker ? "QQQ/yyyy" : e.enableTimePicker ? `MM/dd/yyyy, ${a()}` : "MM/dd/yyyy", c = (E) => ma(E, e.enableSeconds), i = () => I.value.enabled ? e.startTime && Array.isArray(e.startTime) ? [c(e.startTime[0]), c(e.startTime[1])] : null : e.startTime && !Array.isArray(e.startTime) ? c(e.startTime) : null, r = i1(() => vl(e.multiCalendars)), n = i1(() => i()), o = i1(() => ml(e.ariaLabels)), l = i1(() => yl(e.filters)), u = i1(() => gl(e.transitions)), s = i1(() => bl(e.actionRow)), m = i1(
+  }, t = () => e.format ? e.format : e.monthPicker ? "MM/yyyy" : e.timePicker ? a() : e.weekPicker ? `${T.value?.type === "iso" ? "II" : "ww"}-RR` : e.yearPicker ? "yyyy" : e.quarterPicker ? "QQQ/yyyy" : e.enableTimePicker ? `MM/dd/yyyy, ${a()}` : "MM/dd/yyyy", c = (E) => ma(E, e.enableSeconds), i = () => F.value.enabled ? e.startTime && Array.isArray(e.startTime) ? [c(e.startTime[0]), c(e.startTime[1])] : null : e.startTime && !Array.isArray(e.startTime) ? c(e.startTime) : null, r = i1(() => vl(e.multiCalendars)), n = i1(() => i()), o = i1(() => ml(e.ariaLabels)), l = i1(() => yl(e.filters)), u = i1(() => gl(e.transitions)), s = i1(() => bl(e.actionRow)), m = i1(
     () => pl(e.previewFormat, e.format, t())
-  ), b = i1(() => zl(e.textInput)), w = i1(() => Ml(e.inline)), F = i1(() => Cl(e.config)), _ = i1(() => Vl(e.highlight)), T = i1(() => xl(e.weekNumbers)), v = i1(() => Hl(e.timezone)), g = i1(() => Al(e.multiDates)), x = i1(
+  ), b = i1(() => zl(e.textInput)), w = i1(() => Ml(e.inline)), I = i1(() => Cl(e.config)), _ = i1(() => Vl(e.highlight)), T = i1(() => xl(e.weekNumbers)), v = i1(() => Hl(e.timezone)), g = i1(() => Al(e.multiDates)), x = i1(
     () => Nl({
       minDate: e.minDate,
       maxDate: e.maxDate,
@@ -11721,7 +11721,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       isMonthPicker: e.monthPicker,
       isYearPicker: e.yearPicker
     })
-  ), I = i1(() => wl(e.range)), P = i1(() => _l(e.ui));
+  ), F = i1(() => wl(e.range)), P = i1(() => _l(e.ui));
   return {
     defaultedTransitions: u,
     defaultedMultiCalendars: r,
@@ -11732,10 +11732,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     defaultedPreviewFormat: m,
     defaultedTextInput: b,
     defaultedInline: w,
-    defaultedConfig: F,
+    defaultedConfig: I,
     defaultedHighlight: _,
     defaultedWeekNumbers: T,
-    defaultedRange: I,
+    defaultedRange: F,
     propDates: x,
     defaultedTz: v,
     defaultedMultiDates: g,
@@ -11743,7 +11743,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     getDefaultPattern: t,
     getDefaultStartTime: i,
     handleEventPropagation: (E) => {
-      F.value.allowStopPropagation && E.stopPropagation(), F.value.allowPreventDefault && E.preventDefault();
+      I.value.allowStopPropagation && E.stopPropagation(), I.value.allowPreventDefault && E.preventDefault();
     }
   };
 }, Sl = (e, a, { isInputFocused: t, isTextInputDate: c }) => {
@@ -11759,7 +11759,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   }), V4(m, () => {
     J();
   });
-  const w = (C) => o.value.timezone && o.value.convertModel ? x4(C, o.value.timezone) : C, F = (C) => {
+  const w = (C) => o.value.timezone && o.value.convertModel ? x4(C, o.value.timezone) : C, I = (C) => {
     if (o.value.timezone && o.value.convertModel) {
       const s1 = Go(o.value.timezone, C);
       return Zr(C, s1);
@@ -11776,14 +11776,14 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   ), T = (C) => C ? a.modelType ? q(C) : {
     hours: g3(C),
     minutes: R3(C),
-    seconds: a.enableSeconds ? F6(C) : 0
+    seconds: a.enableSeconds ? I6(C) : 0
   } : null, v = (C) => a.modelType ? q(C) : { month: s2(C), year: G1(C) }, g = (C) => Array.isArray(C) ? l.value.enabled ? C.map((s1) => x(s1, q4(l1(), s1))) : S0(
     () => [
       q4(l1(), C[0]),
       C[1] ? q4(l1(), C[1]) : p6(n.value.partialRange)
     ],
     n.value.enabled
-  ) : q4(l1(), +C), x = (C, s1) => (typeof C == "string" || typeof C == "number") && a.modelType ? o1(C) : s1, I = (C) => Array.isArray(C) ? [
+  ) : q4(l1(), +C), x = (C, s1) => (typeof C == "string" || typeof C == "number") && a.modelType ? o1(C) : s1, F = (C) => Array.isArray(C) ? [
     x(
       C[0],
       P3(null, +C[0].hours, +C[0].minutes, C[0].seconds)
@@ -11831,7 +11831,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       q(C[0]),
       C[1] ? q(C[1]) : p6(n.value.partialRange)
     ];
-  }, c1 = () => Array.isArray(i.value) ? i.value[1] ? D() : q(e4(i.value[0])) : [], g1 = () => (i.value || []).map((C) => q(C)), w1 = (C = !1) => (C || X(), a.modelAuto ? c1() : l.value.enabled ? g1() : Array.isArray(i.value) ? S0(() => D(), n.value.enabled) : q(e4(i.value))), L = (C) => !C || Array.isArray(C) && !C.length ? null : a.timePicker ? I(e4(C)) : a.monthPicker ? P(e4(C)) : a.yearPicker ? g(e4(C)) : l.value.enabled ? E(e4(C)) : a.weekPicker ? U(e4(C)) : r1(e4(C)), R = (C) => {
+  }, c1 = () => Array.isArray(i.value) ? i.value[1] ? D() : q(e4(i.value[0])) : [], g1 = () => (i.value || []).map((C) => q(C)), w1 = (C = !1) => (C || X(), a.modelAuto ? c1() : l.value.enabled ? g1() : Array.isArray(i.value) ? S0(() => D(), n.value.enabled) : q(e4(i.value))), L = (C) => !C || Array.isArray(C) && !C.length ? null : a.timePicker ? F(e4(C)) : a.monthPicker ? P(e4(C)) : a.yearPicker ? g(e4(C)) : l.value.enabled ? E(e4(C)) : a.weekPicker ? U(e4(C)) : r1(e4(C)), R = (C) => {
     if (c.value) return;
     const s1 = L(C);
     C5(e4(s1)) ? (i.value = e4(s1), J()) : (i.value = null, s.value = "");
@@ -11850,7 +11850,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     ) : w(
       y5(C, a.modelType, /* @__PURE__ */ new Date(), { locale: b.value })
     ) : w(new Date(C));
-  }, q = (C) => C ? a.utc ? ol(C, a.utc === "preserve", a.enableSeconds) : a.modelType ? a.modelType === "timestamp" ? +F(C) : a.modelType === "iso" ? F(C).toISOString() : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? _(F(C)) : _(F(C), a.modelType, !0) : F(C) : "", k1 = (C, s1 = !1, l2 = !1) => {
+  }, q = (C) => C ? a.utc ? ol(C, a.utc === "preserve", a.enableSeconds) : a.modelType ? a.modelType === "timestamp" ? +I(C) : a.modelType === "iso" ? I(C).toISOString() : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? _(I(C)) : _(I(C), a.modelType, !0) : I(C) : "", k1 = (C, s1 = !1, l2 = !1) => {
     if (l2) return C;
     if (e("update:model-value", C), o.value.emitTimezone && s1) {
       const f1 = Array.isArray(C) ? C.map((Q1) => x4(e4(Q1), o.value.emitTimezone)) : x4(e4(C), o.value.emitTimezone);
@@ -11888,8 +11888,8 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     const b = x2(l1(), { month: e.month, year: e.year });
     let w = s ? G4(b, 1) : E6(b, 1);
     e.disableYearSelect && (w = q4(w, e.year));
-    let F = s2(w), _ = G1(w);
-    t.value.months.includes(F) && (w = r(w, s), F = s2(w), _ = G1(w)), t.value.years.includes(_) && (w = n(w, s), _ = G1(w)), i(F, _, s, e.preventMinMaxNavigation) && l(F, _, m);
+    let I = s2(w), _ = G1(w);
+    t.value.months.includes(I) && (w = r(w, s), I = s2(w), _ = G1(w)), t.value.years.includes(_) && (w = n(w, s), _ = G1(w)), i(I, _, s, e.preventMinMaxNavigation) && l(I, _, m);
   }, l = (s, m, b) => {
     a("update-month-year", { month: s, year: m, fromNav: b });
   }, u = i1(() => (s) => va(
@@ -12054,13 +12054,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       defaultedInline: l,
       defaultedRange: u,
       defaultedMultiDates: s
-    } = _2(c), { isTimeValid: m, isMonthValid: b } = $3(c), { buildMatrix: w } = B3(), F = m1(null), _ = m1(null), T = m1(!1), v = m1({}), g = m1(null), x = m1(null);
+    } = _2(c), { isTimeValid: m, isMonthValid: b } = $3(c), { buildMatrix: w } = B3(), I = m1(null), _ = m1(null), T = m1(!1), v = m1({}), g = m1(null), x = m1(null);
     t4(() => {
-      c.arrowNavigation && w([q2(F), q2(_)], "actionRow"), I(), window.addEventListener("resize", I);
+      c.arrowNavigation && w([q2(I), q2(_)], "actionRow"), F(), window.addEventListener("resize", F);
     }), i6(() => {
-      window.removeEventListener("resize", I);
+      window.removeEventListener("resize", F);
     });
-    const I = () => {
+    const F = () => {
       T.value = !1, setTimeout(() => {
         const L = g.value?.getBoundingClientRect(), R = x.value?.getBoundingClientRect();
         L && R && (v.value.maxWidth = `${R.width - L.width - 20}px`), T.value = !0;
@@ -12095,18 +12095,18 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         disabled: E.value,
         selectDate: () => L.$emit("select-date"),
         closePicker: () => L.$emit("close-picker")
-      }))) : (p(), A(B1, { key: 1 }, [
+      }))) : (p(), A(R1, { key: 1 }, [
         M(i).showPreview ? (p(), A("div", {
           key: 0,
           class: "dp__selection_preview",
           title: g1.value,
-          style: I4(v.value)
+          style: F4(v.value)
         }, [
           L.$slots["action-preview"] && T.value ? b1(L.$slots, "action-preview", {
             key: 0,
             value: L.internalModelValue
           }) : j("", !0),
-          !L.$slots["action-preview"] && T.value ? (p(), A(B1, { key: 1 }, [
+          !L.$slots["action-preview"] && T.value ? (p(), A(R1, { key: 1 }, [
             a4(W1(g1.value), 1)
           ], 64)) : j("", !0)
         ], 12, Tl)) : j("", !0),
@@ -12120,11 +12120,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             key: 0,
             value: L.internalModelValue
           }) : j("", !0),
-          L.$slots["action-buttons"] ? j("", !0) : (p(), A(B1, { key: 1 }, [
+          L.$slots["action-buttons"] ? j("", !0) : (p(), A(R1, { key: 1 }, [
             !M(l).enabled && M(i).showCancel ? (p(), A("button", {
               key: 0,
               ref_key: "cancelButtonRef",
-              ref: F,
+              ref: I,
               type: "button",
               class: "dp__action_button dp__action_cancel",
               onClick: R[0] || (R[0] = (O) => L.$emit("close-picker")),
@@ -12153,7 +12153,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       ], 64))
     ], 512));
   }
-}), Pl = ["role", "aria-label", "tabindex"], Fl = { class: "dp__selection_grid_header" }, Il = ["aria-selected", "aria-disabled", "data-test-id", "onClick", "onKeydown", "onMouseover"], El = ["aria-label"], C0 = /* @__PURE__ */ $2({
+}), Pl = ["role", "aria-label", "tabindex"], Il = { class: "dp__selection_grid_header" }, Fl = ["aria-selected", "aria-disabled", "data-test-id", "onClick", "onKeydown", "onMouseover"], El = ["aria-label"], C0 = /* @__PURE__ */ $2({
   __name: "SelectionOverlay",
   props: {
     items: {},
@@ -12178,9 +12178,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   setup(e, { expose: a, emit: t }) {
     const { setSelectionGrid: c, buildMultiLevelMatrix: i, setMonthPicker: r } = B3(), n = t, o = e, { defaultedAriaLabels: l, defaultedTextInput: u, defaultedConfig: s, handleEventPropagation: m } = _2(
       o
-    ), { hideNavigationButtons: b } = v8(), w = m1(!1), F = m1(null), _ = m1(null), T = m1([]), v = m1(), g = m1(null), x = m1(0), I = m1(null);
+    ), { hideNavigationButtons: b } = v8(), w = m1(!1), I = m1(null), _ = m1(null), T = m1([]), v = m1(), g = m1(null), x = m1(0), F = m1(null);
     Ut(() => {
-      F.value = null;
+      I.value = null;
     }), t4(() => {
       g4().then(() => g1()), o.noOverlayFocus || E(), P(!0);
     }), i6(() => P(!1));
@@ -12188,7 +12188,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       o.arrowNavigation && (o.headerRefs?.length ? r(N) : c(N));
     }, E = () => {
       const N = q2(_);
-      N && (u.value.enabled || (F.value ? F.value?.focus({ preventScroll: !0 }) : N.focus({ preventScroll: !0 })), w.value = N.clientHeight < N.scrollHeight);
+      N && (u.value.enabled || (I.value ? I.value?.focus({ preventScroll: !0 }) : N.focus({ preventScroll: !0 })), w.value = N.clientHeight < N.scrollHeight);
     }, U = i1(
       () => ({
         dp__overlay: !0,
@@ -12219,7 +12219,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     );
     const g1 = (N = !0) => {
       g4().then(() => {
-        const Q = q2(F), Z = q2(_), x1 = q2(g), H = q2(I), C = x1 ? x1.getBoundingClientRect().height : 0;
+        const Q = q2(I), Z = q2(_), x1 = q2(g), H = q2(F), C = x1 ? x1.getBoundingClientRect().height : 0;
         Z && (Z.getBoundingClientRect().height ? x.value = Z.getBoundingClientRect().height - C : x.value = s.value.modeHeight - C), Q && H && N && (H.scrollTop = Q.offsetTop - H.offsetTop - (x.value / 2 - Q.getBoundingClientRect().height) - C);
       });
     }, w1 = (N) => {
@@ -12229,7 +12229,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     }, R = (N) => {
       o.escClose && (L(), m(N));
     }, O = (N, Q, Z, x1) => {
-      N && ((Q.active || Q.value === o.focusValue) && (F.value = N), o.arrowNavigation && (Array.isArray(T.value[Z]) ? T.value[Z][x1] = N : T.value[Z] = [N], W()));
+      N && ((Q.active || Q.value === o.focusValue) && (I.value = N), o.arrowNavigation && (Array.isArray(T.value[Z]) ? T.value[Z][x1] = N : T.value[Z] = [N], W()));
     }, W = () => {
       const N = o.headerRefs?.length ? [o.headerRefs].concat(T.value) : T.value.concat([o.skipButtonRef ? [] : [g.value]]);
       i(e4(N), o.headerRefs?.length ? "monthPicker" : "selectionGrid");
@@ -12265,7 +12265,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       ref_key: "gridWrapRef",
       ref: _,
       class: D1(U.value),
-      style: I4(r1.value),
+      style: F4(r1.value),
       role: e.useRelative ? void 0 : "dialog",
       "aria-label": e.overlayLabel,
       tabindex: e.useRelative ? void 0 : "0",
@@ -12275,20 +12275,20 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     }, [
       B("div", {
         ref_key: "containerRef",
-        ref: I,
+        ref: F,
         class: D1(c1.value),
-        style: I4({ "--dp-overlay-height": `${x.value}px` }),
+        style: F4({ "--dp-overlay-height": `${x.value}px` }),
         role: "grid"
       }, [
-        B("div", Fl, [
+        B("div", Il, [
           b1(N.$slots, "header")
         ]),
-        N.$slots.overlay ? b1(N.$slots, "overlay", { key: 0 }) : (p(!0), A(B1, { key: 1 }, n2(e.items, (Z, x1) => (p(), A("div", {
+        N.$slots.overlay ? b1(N.$slots, "overlay", { key: 0 }) : (p(!0), A(R1, { key: 1 }, r2(e.items, (Z, x1) => (p(), A("div", {
           key: x1,
           class: D1(["dp__overlay_row", { dp__flex_row: e.items.length >= 3 }]),
           role: "row"
         }, [
-          (p(!0), A(B1, null, n2(Z, (H, C) => (p(), A("div", {
+          (p(!0), A(R1, null, r2(Z, (H, C) => (p(), A("div", {
             key: H.value,
             ref_for: !0,
             ref: (s1) => O(s1, H, x1, C),
@@ -12309,14 +12309,14 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                 key: 0,
                 item: H
               }) : j("", !0),
-              N.$slots.item ? j("", !0) : (p(), A(B1, { key: 1 }, [
+              N.$slots.item ? j("", !0) : (p(), A(R1, { key: 1 }, [
                 a4(W1(H.text), 1)
               ], 64))
             ], 2)
-          ], 42, Il))), 128))
+          ], 42, Fl))), 128))
         ], 2))), 128))
       ], 6),
-      N.$slots["button-icon"] ? r2((p(), A("button", {
+      N.$slots["button-icon"] ? n2((p(), A("button", {
         key: 0,
         ref_key: "toggleButton",
         ref: g,
@@ -12356,7 +12356,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       }),
       "data-dp-mobile": e.isMobile
     }, [
-      (p(!0), A(B1, null, n2(t.value, (n, o) => (p(), A("div", {
+      (p(!0), A(R1, null, r2(t.value, (n, o) => (p(), A("div", {
         key: n,
         class: D1(c.value)
       }, [
@@ -12411,14 +12411,14 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   },
   emits: ["toggle-year-picker", "year-select", "handle-year"],
   setup(e, { emit: a }) {
-    const t = a, c = e, { showRightIcon: i, showLeftIcon: r } = v8(), { defaultedConfig: n, defaultedMultiCalendars: o, defaultedAriaLabels: l, defaultedTransitions: u, defaultedUI: s } = _2(c), { showTransition: m, transitionName: b } = V0(u), w = m1(!1), F = i1(() => le(c.year, c.locale)), _ = (g = !1, x) => {
+    const t = a, c = e, { showRightIcon: i, showLeftIcon: r } = v8(), { defaultedConfig: n, defaultedMultiCalendars: o, defaultedAriaLabels: l, defaultedTransitions: u, defaultedUI: s } = _2(c), { showTransition: m, transitionName: b } = V0(u), w = m1(!1), I = i1(() => le(c.year, c.locale)), _ = (g = !1, x) => {
       w.value = !w.value, t("toggle-year-picker", { flow: g, show: x });
     }, T = (g) => {
       w.value = !1, t("year-select", g);
     }, v = (g = !1) => {
       t("handle-year", g);
     };
-    return (g, x) => (p(), A(B1, null, [
+    return (g, x) => (p(), A(R1, null, [
       B("div", {
         class: D1(["dp--year-mode-picker", { "dp--hidden-el": w.value }])
       }, [
@@ -12428,7 +12428,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           "aria-label": M(l)?.prevYear,
           disabled: e.isDisabled(!1),
           class: D1(M(s)?.navBtnPrev),
-          onActivate: x[0] || (x[0] = (I) => v(!1))
+          onActivate: x[0] || (x[0] = (F) => v(!1))
         }, {
           default: L1(() => [
             g.$slots["arrow-left"] ? b1(g.$slots, "arrow-left", { key: 0 }) : j("", !0),
@@ -12448,11 +12448,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           g.$slots.year ? b1(g.$slots, "year", {
             key: 0,
             year: e.year,
-            text: F.value,
+            text: I.value,
             value: e.year
           }) : j("", !0),
-          g.$slots.year ? j("", !0) : (p(), A(B1, { key: 1 }, [
-            a4(W1(F.value), 1)
+          g.$slots.year ? j("", !0) : (p(), A(R1, { key: 1 }, [
+            a4(W1(I.value), 1)
           ], 64))
         ], 40, $l),
         M(i)(M(o), e.instance) ? (p(), H1(s0, {
@@ -12461,7 +12461,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           "aria-label": M(l)?.nextYear,
           disabled: e.isDisabled(!0),
           class: D1(M(s)?.navBtnNext),
-          onActivate: x[3] || (x[3] = (I) => v(!0))
+          onActivate: x[3] || (x[3] = (F) => v(!0))
         }, {
           default: L1(() => [
             g.$slots["arrow-right"] ? b1(g.$slots, "arrow-right", { key: 0 }) : j("", !0),
@@ -12487,7 +12487,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             "overlay-label": M(l)?.yearPicker?.(!0),
             type: "year",
             onToggle: _,
-            onSelected: x[4] || (x[4] = (I) => T(I))
+            onSelected: x[4] || (x[4] = (F) => T(F))
           }, f4({
             "button-icon": L1(() => [
               g.$slots["calendar-icon"] ? b1(g.$slots, "calendar-icon", { key: 0 }) : j("", !0),
@@ -12497,10 +12497,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           }, [
             g.$slots["year-overlay-value"] ? {
               name: "item",
-              fn: L1(({ item: I }) => [
+              fn: L1(({ item: F }) => [
                 b1(g.$slots, "year-overlay-value", {
-                  text: I.text,
-                  value: I.value
+                  text: F.text,
+                  value: F.value
                 })
               ]),
               key: "0"
@@ -12551,11 +12551,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       n.preventMinMaxNavigation,
       c1
     );
-  }), F = () => Array.isArray(r.value) && e.value.solo && r.value[1], _ = () => {
+  }), I = () => Array.isArray(r.value) && e.value.solo && r.value[1], _ = () => {
     for (let D = 0; D < e.value.count; D++)
       if (D === 0)
         i.value[D] = i.value[0];
-      else if (D === e.value.count - 1 && F())
+      else if (D === e.value.count - 1 && I())
         i.value[D] = {
           month: s2(r.value[1]),
           year: G1(r.value[1])
@@ -12576,13 +12576,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       const D = Array.isArray(r.value) ? g(r.value) : r.value;
       i.value[0] = { month: s2(D), year: G1(D) };
     }
-  }, I = () => {
+  }, F = () => {
     x(), e.value.count && _();
   };
   V4(r, (D, c1) => {
-    n.isTextInputDate && JSON.stringify(D ?? {}) !== JSON.stringify(c1 ?? {}) && I();
+    n.isTextInputDate && JSON.stringify(D ?? {}) !== JSON.stringify(c1 ?? {}) && F();
   }), t4(() => {
-    I();
+    F();
   });
   const P = (D, c1) => {
     i.value[c1].year = D, s("update-month-year", { instance: c1, year: D, month: i.value[c1].month }), e.value.count && !e.value.solo && T(c1);
@@ -12625,9 +12625,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     defaultedFilters: s,
     defaultedMultiDates: m
   } = _2(e), b = () => {
-    e.isTextInputDate && I(G1(l1(e.startDate)), 0);
-  }, { modelValue: w, year: F, month: _, calendars: T } = x0(e, a, b), v = i1(() => na(e.formatLocale, e.locale, e.monthNameFormat)), g = m1(null), { checkMinMaxRange: x } = $3(e), {
-    selectYear: I,
+    e.isTextInputDate && F(G1(l1(e.startDate)), 0);
+  }, { modelValue: w, year: I, month: _, calendars: T } = x0(e, a, b), v = i1(() => na(e.formatLocale, e.locale, e.monthNameFormat)), g = m1(null), { checkMinMaxRange: x } = $3(e), {
+    selectYear: F,
     groupedYears: P,
     showYearPicker: E,
     toggleYearPicker: U,
@@ -12640,7 +12640,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     range: n,
     highlight: o,
     calendars: T,
-    year: F,
+    year: I,
     propDates: l,
     month: _,
     filters: s,
@@ -12648,19 +12648,19 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     emit: a
   });
   t4(() => {
-    e.startDate && (w.value && e.focusStartDate || !w.value) && I(G1(l1(e.startDate)), 0);
+    e.startDate && (w.value && e.focusStartDate || !w.value) && F(G1(l1(e.startDate)), 0);
   });
   const c1 = (Q) => Q ? { month: s2(Q), year: G1(Q) } : { month: null, year: null }, g1 = () => w.value ? Array.isArray(w.value) ? w.value.map((Q) => c1(Q)) : c1(w.value) : c1(), w1 = (Q, Z) => {
     const x1 = T.value[Q], H = g1();
     return Array.isArray(H) ? H.some((C) => C.year === x1?.year && C.month === Z) : x1?.year === H.year && Z === H.month;
   }, L = (Q, Z, x1) => {
     const H = g1();
-    return Array.isArray(H) ? F.value(Z) === H[x1]?.year && Q === H[x1]?.month : !1;
+    return Array.isArray(H) ? I.value(Z) === H[x1]?.year && Q === H[x1]?.month : !1;
   }, R = (Q, Z) => {
     if (n.value.enabled) {
       const x1 = g1();
       if (Array.isArray(w.value) && Array.isArray(x1)) {
-        const H = L(Q, Z, 0) || L(Q, Z, 1), C = h3(Y4(l1()), Q, F.value(Z));
+        const H = L(Q, Z, 0) || L(Q, Z, 1), C = h3(Y4(l1()), Q, I.value(Z));
         return g0(w.value, g.value, C) && !H;
       }
       return !1;
@@ -12669,13 +12669,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   }, O = i1(() => (Q) => R6(v.value, (Z) => {
     const x1 = w1(Q, Z.value), H = p0(
       Z.value,
-      ua(F.value(Q), l.value.minDate),
-      da(F.value(Q), l.value.maxDate)
-    ) || dl(l.value.disabledDates, F.value(Q), Z.value) || s.value.months?.includes(Z.value) || !hl(l.value.allowedDates, F.value(Q), Z.value) || za(e.yearRange, F.value(Q)), C = R(Z.value, Q), s1 = ga(o.value, Z.value, F.value(Q));
+      ua(I.value(Q), l.value.minDate),
+      da(I.value(Q), l.value.maxDate)
+    ) || dl(l.value.disabledDates, I.value(Q), Z.value) || s.value.months?.includes(Z.value) || !hl(l.value.allowedDates, I.value(Q), Z.value) || za(e.yearRange, I.value(Q)), C = R(Z.value, Q), s1 = ga(o.value, Z.value, I.value(Q));
     return { active: x1, disabled: H, isBetween: C, highlighted: s1 };
-  })), W = (Q, Z) => h3(Y4(l1()), Q, F.value(Z)), z1 = (Q, Z) => {
+  })), W = (Q, Z) => h3(Y4(l1()), Q, I.value(Z)), z1 = (Q, Z) => {
     const x1 = w.value ? w.value : Y4(/* @__PURE__ */ new Date());
-    w.value = h3(x1, Q, F.value(Z)), a("auto-apply"), a("update-flow-step");
+    w.value = h3(x1, Q, I.value(Z)), a("auto-apply"), a("update-flow-step");
   }, J = (Q, Z) => {
     const x1 = W(Q, Z);
     n.value.fixedEnd || n.value.fixedStart ? w.value = Ca(x1, w, a, n) : w.value ? x(x1, w.value) && (w.value = de(w, W(Q, Z), a)) : w.value = [W(Q, Z)], g4().then(() => {
@@ -12684,7 +12684,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   }, o1 = (Q, Z) => {
     ue(W(Q, Z), w, m.value.limit), a("auto-apply", !0);
   }, q = (Q, Z) => (T.value[Z].month = Q, N(Z, T.value[Z].year, Q), m.value.enabled ? o1(Q, Z) : n.value.enabled ? J(Q, Z) : z1(Q, Z)), k1 = (Q, Z) => {
-    I(Q, Z), N(Z, Q, null);
+    F(Q, Z), N(Z, Q, null);
   }, N = (Q, Z, x1) => {
     let H = x1;
     if (!H && H !== 0) {
@@ -12696,7 +12696,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   return {
     groupedMonths: O,
     groupedYears: P,
-    year: F,
+    year: I,
     isDisabled: D,
     defaultedMultiCalendars: t,
     defaultedAriaLabels: c,
@@ -12756,18 +12756,18 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       defaultedMultiCalendars: m,
       defaultedConfig: b,
       showYearPicker: w,
-      modelValue: F,
+      modelValue: I,
       presetDate: _,
       setHoverDate: T,
       selectMonth: v,
       selectYear: g,
       toggleYearPicker: x,
-      handleYearSelect: I,
+      handleYearSelect: F,
       handleYear: P,
       getModelMonthYear: E
     } = Ul(n, c);
     return a({ getSidebarProps: () => ({
-      modelValue: F,
+      modelValue: I,
       year: u,
       getModelMonthYear: E,
       selectMonth: v,
@@ -12813,10 +12813,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               year: M(u)(X),
               "is-disabled": (D) => M(s)(X, D),
               onHandleYear: (D) => M(P)(X, D),
-              onYearSelect: (D) => M(I)(D, X),
+              onYearSelect: (D) => M(F)(D, X),
               onToggleYearPicker: (D) => M(x)(X, D?.flow, D?.show)
             }), f4({ _: 2 }, [
-              n2(M(r), (D, c1) => ({
+              r2(M(r), (D, c1) => ({
                 name: D,
                 fn: L1((g1) => [
                   b1(U.$slots, D, $1(j1(g1)))
@@ -12848,13 +12848,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   t4(() => {
     e.startDate && (c.value && e.focusStartDate || !c.value) && (s.value = G1(l1(e.startDate)));
   });
-  const m = (v) => Array.isArray(c.value) ? c.value.some((g) => G1(g) === v) : c.value ? G1(c.value) === v : !1, b = (v) => l.value.enabled && Array.isArray(c.value) ? g0(c.value, i.value, T(v)) : !1, w = (v) => u.value.allowedDates instanceof Map ? u.value.allowedDates.size ? u.value.allowedDates.has(`${v}`) : !1 : !0, F = (v) => u.value.disabledDates instanceof Map ? u.value.disabledDates.size ? u.value.disabledDates.has(`${v}`) : !1 : typeof u.value.disabledDates == "function" ? u.value.disabledDates(q4(X2(L6(l1())), v)) : !0, _ = i1(() => R6(ne(e.yearRange, e.locale, e.reverseYears), (v) => {
+  const m = (v) => Array.isArray(c.value) ? c.value.some((g) => G1(g) === v) : c.value ? G1(c.value) === v : !1, b = (v) => l.value.enabled && Array.isArray(c.value) ? g0(c.value, i.value, T(v)) : !1, w = (v) => u.value.allowedDates instanceof Map ? u.value.allowedDates.size ? u.value.allowedDates.has(`${v}`) : !1 : !0, I = (v) => u.value.disabledDates instanceof Map ? u.value.disabledDates.size ? u.value.disabledDates.has(`${v}`) : !1 : typeof u.value.disabledDates == "function" ? u.value.disabledDates(q4(X2(L6(l1())), v)) : !0, _ = i1(() => R6(ne(e.yearRange, e.locale, e.reverseYears), (v) => {
     const g = m(v.value), x = p0(
       v.value,
       B6(u.value.minDate),
       B6(u.value.maxDate)
-    ) || o.value.years.includes(v.value) || !w(v.value) || F(v.value), I = b(v.value) && !g, P = fe(r.value, v.value);
-    return { active: g, disabled: x, isBetween: I, highlighted: P };
+    ) || o.value.years.includes(v.value) || !w(v.value) || I(v.value), F = b(v.value) && !g, P = fe(r.value, v.value);
+    return { active: g, disabled: x, isBetween: F, highlighted: P };
   })), T = (v) => q4(Y4(L6(/* @__PURE__ */ new Date())), v);
   return {
     groupedYears: _,
@@ -12964,11 +12964,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       defaultedConfig: s,
       defaultedRange: m,
       defaultedMultiCalendars: b
-    } = _2(i), { transitionName: w, showTransition: F } = V0(l), _ = F3({
+    } = _2(i), { transitionName: w, showTransition: I } = V0(l), _ = I3({
       hours: !1,
       minutes: !1,
       seconds: !1
-    }), T = m1("AM"), v = m1(null), g = m1([]), x = m1(), I = m1(!1);
+    }), T = m1("AM"), v = m1(null), g = m1([]), x = m1(), F = m1(!1);
     t4(() => {
       c("mounted");
     });
@@ -12985,7 +12985,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         return !i.validateTime(y, a2);
       }
       return !1;
-    }, D = i1(() => (y) => !Q(+i[y] + +i[`${y}Increment`], y) || X(y, !0)), c1 = i1(() => (y) => !Q(+i[y] - +i[`${y}Increment`], y) || X(y, !1)), g1 = (y, _1) => I9(x2(l1(), y), _1), w1 = (y, _1) => qo(x2(l1(), y), _1), L = i1(
+    }, D = i1(() => (y) => !Q(+i[y] + +i[`${y}Increment`], y) || X(y, !0)), c1 = i1(() => (y) => !Q(+i[y] - +i[`${y}Increment`], y) || X(y, !1)), g1 = (y, _1) => F9(x2(l1(), y), _1), w1 = (y, _1) => qo(x2(l1(), y), _1), L = i1(
       () => ({
         dp__time_col: !0,
         dp__time_col_block: !i.timePickerInline,
@@ -13015,26 +13015,26 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       const G = i.disabledTimesConfig(i.order, y === "hours" ? _1 : void 0);
       return G[y] ? !!G[y]?.includes(_1) : !0;
     }, o1 = (y, _1) => _1 !== "hours" || T.value === "AM" ? y : y + 12, q = (y) => {
-      const _1 = i.is24 ? 24 : 12, G = y === "hours" ? _1 : 60, a2 = +i[`${y}GridIncrement`], R1 = y === "hours" && !i.is24 ? a2 : 0, Y2 = [];
-      for (let L2 = R1; L2 < G; L2 += a2)
+      const _1 = i.is24 ? 24 : 12, G = y === "hours" ? _1 : 60, a2 = +i[`${y}GridIncrement`], B1 = y === "hours" && !i.is24 ? a2 : 0, Y2 = [];
+      for (let L2 = B1; L2 < G; L2 += a2)
         Y2.push({ value: i.is24 ? L2 : o1(L2, y), text: L2 < 10 ? `0${L2}` : `${L2}` });
       return y === "hours" && !i.is24 && Y2.unshift({ value: T.value === "PM" ? 12 : 0, text: "12" }), R6(Y2, (L2) => ({ active: !1, disabled: u.value.times[y].includes(L2.value) || !Q(L2.value, y) || J(y, L2.value) || r1(y, L2.value) }));
     }, k1 = (y) => y >= 0 ? y : 59, N = (y) => y >= 0 ? y : 23, Q = (y, _1) => {
-      const G = i.minTime ? P($8(i.minTime)) : null, a2 = i.maxTime ? P($8(i.maxTime)) : null, R1 = P(
+      const G = i.minTime ? P($8(i.minTime)) : null, a2 = i.maxTime ? P($8(i.maxTime)) : null, B1 = P(
         $8(
           U.value,
           _1,
           _1 === "minutes" || _1 === "seconds" ? k1(y) : N(y)
         )
       );
-      return G && a2 ? (I6(R1, a2) || w6(R1, a2)) && (c6(R1, G) || w6(R1, G)) : G ? c6(R1, G) || w6(R1, G) : a2 ? I6(R1, a2) || w6(R1, a2) : !0;
+      return G && a2 ? (F6(B1, a2) || w6(B1, a2)) && (c6(B1, G) || w6(B1, G)) : G ? c6(B1, G) || w6(B1, G) : a2 ? F6(B1, a2) || w6(B1, a2) : !0;
     }, Z = (y) => i[`no${y[0].toUpperCase() + y.slice(1)}Overlay`], x1 = (y) => {
-      Z(y) || (_[y] = !_[y], _[y] ? (I.value = !0, c("overlay-opened", y)) : (I.value = !1, c("overlay-closed", y)));
-    }, H = (y) => y === "hours" ? g3 : y === "minutes" ? R3 : F6, C = () => {
+      Z(y) || (_[y] = !_[y], _[y] ? (F.value = !0, c("overlay-opened", y)) : (F.value = !1, c("overlay-closed", y)));
+    }, H = (y) => y === "hours" ? g3 : y === "minutes" ? R3 : I6, C = () => {
       x.value && clearTimeout(x.value);
     }, s1 = (y, _1 = !0, G) => {
-      const a2 = _1 ? g1 : w1, R1 = _1 ? +i[`${y}Increment`] : -+i[`${y}Increment`];
-      Q(+i[y] + R1, y) && c(
+      const a2 = _1 ? g1 : w1, B1 = _1 ? +i[`${y}Increment`] : -+i[`${y}Increment`];
+      Q(+i[y] + B1, y) && c(
         `update:${y}`,
         H(y)(a2({ [y]: +i[y] }, { [y]: +i[`${y}Increment`] }))
       ), !G?.keyboard && s.value.timeArrowHoldThreshold && (x.value = setTimeout(() => {
@@ -13048,27 +13048,27 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       if (y && i.arrowNavigation) {
         Array.isArray(g.value[_1]) ? g.value[_1][G] = y : g.value[_1] = [y];
         const a2 = g.value.reduce(
-          (R1, Y2) => Y2.map((L2, y4) => [...R1[y4] || [], Y2[y4]]),
+          (B1, Y2) => Y2.map((L2, y4) => [...B1[y4] || [], Y2[y4]]),
           []
         );
         n(i.closeTimePickerBtn), v.value && (a2[1] = a2[1].concat(v.value)), r(a2, i.order);
       }
     }, V1 = (y, _1) => (x1(y), c(`update:${y}`, _1));
     return a({ openChildCmp: Q1 }), (y, _1) => y.disabled ? j("", !0) : (p(), A("div", Yl, [
-      (p(!0), A(B1, null, n2(O.value, (G, a2) => (p(), A("div", {
+      (p(!0), A(R1, null, r2(O.value, (G, a2) => (p(), A("div", {
         key: a2,
         class: D1(L.value),
         "data-compact": R.value && !y.enableSeconds,
         "data-collapsed": R.value && y.enableSeconds
       }, [
-        G.separator ? (p(), A(B1, { key: 0 }, [
-          I.value ? j("", !0) : (p(), A(B1, { key: 0 }, [
+        G.separator ? (p(), A(R1, { key: 0 }, [
+          F.value ? j("", !0) : (p(), A(R1, { key: 0 }, [
             a4(":")
           ], 64))
-        ], 64)) : (p(), A(B1, { key: 1 }, [
+        ], 64)) : (p(), A(R1, { key: 1 }, [
           B("button", {
             ref_for: !0,
-            ref: (R1) => u1(R1, a2, 0),
+            ref: (B1) => u1(B1, a2, 0),
             type: "button",
             class: D1({
               dp__btn: !0,
@@ -13076,29 +13076,29 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               dp__inc_dec_button_inline: y.timePickerInline,
               dp__tp_inline_btn_top: y.timePickerInline,
               dp__inc_dec_button_disabled: D.value(G.type),
-              "dp--hidden-el": I.value
+              "dp--hidden-el": F.value
             }),
             "data-test-id": `${G.type}-time-inc-btn-${i.order}`,
             "aria-label": M(o)?.incrementValue(G.type),
             tabindex: "0",
-            onKeydown: (R1) => M(v4)(R1, () => s1(G.type, !0, { keyboard: !0 }), !0),
-            onClick: (R1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !0),
-            onMousedown: (R1) => M(s).timeArrowHoldThreshold ? s1(G.type, !0) : void 0,
+            onKeydown: (B1) => M(v4)(B1, () => s1(G.type, !0, { keyboard: !0 }), !0),
+            onClick: (B1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !0),
+            onMousedown: (B1) => M(s).timeArrowHoldThreshold ? s1(G.type, !0) : void 0,
             onMouseup: C
           }, [
-            i.timePickerInline ? (p(), A(B1, { key: 1 }, [
-              y.$slots["tp-inline-arrow-up"] ? b1(y.$slots, "tp-inline-arrow-up", { key: 0 }) : (p(), A(B1, { key: 1 }, [
+            i.timePickerInline ? (p(), A(R1, { key: 1 }, [
+              y.$slots["tp-inline-arrow-up"] ? b1(y.$slots, "tp-inline-arrow-up", { key: 0 }) : (p(), A(R1, { key: 1 }, [
                 _1[2] || (_1[2] = B("span", { class: "dp__tp_inline_btn_bar dp__tp_btn_in_l" }, null, -1)),
                 _1[3] || (_1[3] = B("span", { class: "dp__tp_inline_btn_bar dp__tp_btn_in_r" }, null, -1))
               ], 64))
-            ], 64)) : (p(), A(B1, { key: 0 }, [
+            ], 64)) : (p(), A(R1, { key: 0 }, [
               y.$slots["arrow-up"] ? b1(y.$slots, "arrow-up", { key: 0 }) : j("", !0),
               y.$slots["arrow-up"] ? j("", !0) : (p(), H1(M(ce), { key: 1 }))
             ], 64))
           ], 42, Gl),
           B("button", {
             ref_for: !0,
-            ref: (R1) => u1(R1, a2, 1),
+            ref: (B1) => u1(B1, a2, 1),
             type: "button",
             "aria-label": `${z1.value(G.type).text}-${M(o)?.openTpOverlay(G.type)}`,
             class: D1({
@@ -13107,26 +13107,26 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               dp__time_display_inline: y.timePickerInline,
               "dp--time-invalid": E.value(G.type),
               "dp--time-overlay-btn": !E.value(G.type),
-              "dp--hidden-el": I.value
+              "dp--hidden-el": F.value
             }),
             disabled: Z(G.type),
             tabindex: "0",
             "data-test-id": `${G.type}-toggle-overlay-btn-${i.order}`,
-            onKeydown: (R1) => M(v4)(R1, () => x1(G.type), !0),
-            onClick: (R1) => x1(G.type)
+            onKeydown: (B1) => M(v4)(B1, () => x1(G.type), !0),
+            onClick: (B1) => x1(G.type)
           }, [
             y.$slots[G.type] ? b1(y.$slots, G.type, {
               key: 0,
               text: z1.value(G.type).text,
               value: z1.value(G.type).value
             }) : j("", !0),
-            y.$slots[G.type] ? j("", !0) : (p(), A(B1, { key: 1 }, [
+            y.$slots[G.type] ? j("", !0) : (p(), A(R1, { key: 1 }, [
               a4(W1(z1.value(G.type).text), 1)
             ], 64))
           ], 42, Kl),
           B("button", {
             ref_for: !0,
-            ref: (R1) => u1(R1, a2, 2),
+            ref: (B1) => u1(B1, a2, 2),
             type: "button",
             class: D1({
               dp__btn: !0,
@@ -13134,22 +13134,22 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               dp__inc_dec_button_inline: y.timePickerInline,
               dp__tp_inline_btn_bottom: y.timePickerInline,
               dp__inc_dec_button_disabled: c1.value(G.type),
-              "dp--hidden-el": I.value
+              "dp--hidden-el": F.value
             }),
             "data-test-id": `${G.type}-time-dec-btn-${i.order}`,
             "aria-label": M(o)?.decrementValue(G.type),
             tabindex: "0",
-            onKeydown: (R1) => M(v4)(R1, () => s1(G.type, !1, { keyboard: !0 }), !0),
-            onClick: (R1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !1),
-            onMousedown: (R1) => M(s).timeArrowHoldThreshold ? s1(G.type, !1) : void 0,
+            onKeydown: (B1) => M(v4)(B1, () => s1(G.type, !1, { keyboard: !0 }), !0),
+            onClick: (B1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !1),
+            onMousedown: (B1) => M(s).timeArrowHoldThreshold ? s1(G.type, !1) : void 0,
             onMouseup: C
           }, [
-            i.timePickerInline ? (p(), A(B1, { key: 1 }, [
-              y.$slots["tp-inline-arrow-down"] ? b1(y.$slots, "tp-inline-arrow-down", { key: 0 }) : (p(), A(B1, { key: 1 }, [
+            i.timePickerInline ? (p(), A(R1, { key: 1 }, [
+              y.$slots["tp-inline-arrow-down"] ? b1(y.$slots, "tp-inline-arrow-down", { key: 0 }) : (p(), A(R1, { key: 1 }, [
                 _1[4] || (_1[4] = B("span", { class: "dp__tp_inline_btn_bar dp__tp_btn_in_l" }, null, -1)),
                 _1[5] || (_1[5] = B("span", { class: "dp__tp_inline_btn_bar dp__tp_btn_in_r" }, null, -1))
               ], 64))
-            ], 64)) : (p(), A(B1, { key: 0 }, [
+            ], 64)) : (p(), A(R1, { key: 0 }, [
               y.$slots["arrow-down"] ? b1(y.$slots, "arrow-down", { key: 0 }) : j("", !0),
               y.$slots["arrow-down"] ? j("", !0) : (p(), H1(M(ie), { key: 1 }))
             ], 64))
@@ -13176,10 +13176,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           onKeydown: _1[0] || (_1[0] = (G) => M(v4)(G, () => f1(), !0))
         }, W1(T.value), 41, Ql))
       ])),
-      (p(!0), A(B1, null, n2(W.value, (G, a2) => (p(), H1(n6, {
+      (p(!0), A(R1, null, r2(W.value, (G, a2) => (p(), H1(n6, {
         key: a2,
         name: M(w)(_[G.type]),
-        css: M(F)
+        css: M(I)
       }, {
         default: L1(() => [
           _[G.type] ? (p(), H1(C0, {
@@ -13193,9 +13193,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             "arrow-navigation": y.arrowNavigation,
             "aria-labels": y.ariaLabels,
             "overlay-label": M(o).timeOverlay?.(G.type),
-            onSelected: (R1) => V1(G.type, R1),
-            onToggle: (R1) => x1(G.type),
-            onResetFlow: _1[1] || (_1[1] = (R1) => y.$emit("reset-flow"))
+            onSelected: (B1) => V1(G.type, B1),
+            onToggle: (B1) => x1(G.type),
+            onResetFlow: _1[1] || (_1[1] = (B1) => y.$emit("reset-flow"))
           }, f4({
             "button-icon": L1(() => [
               y.$slots["clock-icon"] ? b1(y.$slots, "clock-icon", { key: 0 }) : j("", !0),
@@ -13205,10 +13205,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           }, [
             y.$slots[`${G.type}-overlay-value`] ? {
               name: "item",
-              fn: L1(({ item: R1 }) => [
+              fn: L1(({ item: B1 }) => [
                 b1(y.$slots, `${G.type}-overlay-value`, {
-                  text: R1.text,
-                  value: R1.value
+                  text: B1.text,
+                  value: B1.value
                 })
               ]),
               key: "0"
@@ -13255,7 +13255,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     "am-pm-change"
   ],
   setup(e, { expose: a, emit: t }) {
-    const c = t, i = e, { buildMatrix: r, setTimePicker: n } = B3(), o = r6(), { defaultedTransitions: l, defaultedAriaLabels: u, defaultedTextInput: s, defaultedConfig: m, defaultedRange: b } = _2(i), { transitionName: w, showTransition: F } = V0(l), { hideNavigationButtons: _ } = v8(), T = m1(null), v = m1(null), g = m1([]), x = m1(null), I = m1(!1);
+    const c = t, i = e, { buildMatrix: r, setTimePicker: n } = B3(), o = r6(), { defaultedTransitions: l, defaultedAriaLabels: u, defaultedTextInput: s, defaultedConfig: m, defaultedRange: b } = _2(i), { transitionName: w, showTransition: I } = V0(l), { hideNavigationButtons: _ } = v8(), T = m1(null), v = m1(null), g = m1([]), x = m1(null), F = m1(!1);
     t4(() => {
       c("mount"), !i.timePicker && i.arrowNavigation ? r([q2(T.value)], "time") : n(!0, i.timePicker);
     });
@@ -13291,15 +13291,15 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         J && J.focus({ preventScroll: !0 });
       }
     }, W = (J) => {
-      I.value = !1, c("overlay-closed", J);
+      F.value = !1, c("overlay-closed", J);
     }, z1 = (J) => {
-      I.value = !0, c("overlay-opened", J);
+      F.value = !0, c("overlay-opened", J);
     };
     return a({ toggleTimePicker: X }), (J, o1) => (p(), A("div", {
       class: "dp--tp-wrap",
       "data-dp-mobile": J.isMobile
     }, [
-      !J.timePicker && !J.timePickerInline ? r2((p(), A("button", {
+      !J.timePicker && !J.timePickerInline ? n2((p(), A("button", {
         key: 0,
         ref_key: "openTimePickerBtn",
         ref: T,
@@ -13318,7 +13318,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       ]) : j("", !0),
       e2(n6, {
         name: M(w)(E.value),
-        css: M(F) && !J.timePickerInline
+        css: M(I) && !J.timePickerInline
       }, {
         default: L1(() => [
           E.value || J.timePicker || J.timePickerInline ? (p(), A("div", {
@@ -13331,7 +13331,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               "dp--overlay-absolute": !i.timePicker && !J.timePickerInline,
               "dp--overlay-relative": i.timePicker
             }),
-            style: I4(J.timePicker ? { height: `${M(m).modeHeight}px` } : void 0),
+            style: F4(J.timePicker ? { height: `${M(m).modeHeight}px` } : void 0),
             "aria-label": M(u)?.timePicker,
             tabindex: J.timePickerInline ? void 0 : 0
           }, [
@@ -13354,7 +13354,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                 key: 1,
                 class: D1(J.timePickerInline ? "dp__flex" : "dp__overlay_row dp__flex_row")
               }, [
-                (p(!0), A(B1, null, n2(r1.value, (q, k1) => r2((p(), H1(es, t2({ key: k1 }, { ref_for: !0 }, {
+                (p(!0), A(R1, null, r2(r1.value, (q, k1) => n2((p(), H1(es, t2({ key: k1 }, { ref_for: !0 }, {
                   ...J.$props,
                   order: k1,
                   hours: q.hours,
@@ -13376,7 +13376,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                   onOverlayOpened: z1,
                   onAmPmChange: o1[2] || (o1[2] = (N) => J.$emit("am-pm-change", N))
                 }), f4({ _: 2 }, [
-                  n2(M(c1), (N, Q) => ({
+                  r2(M(c1), (N, Q) => ({
                     name: N,
                     fn: L1((Z) => [
                       b1(J.$slots, N, t2({ ref_for: !0 }, Z))
@@ -13386,12 +13386,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                   [m4, k1 === 0 ? !0 : P.value]
                 ])), 128))
               ], 2)),
-              !J.timePicker && !J.timePickerInline ? r2((p(), A("button", {
+              !J.timePicker && !J.timePickerInline ? n2((p(), A("button", {
                 key: 2,
                 ref_key: "closeTimePickerBtn",
                 ref: v,
                 type: "button",
-                class: D1({ ...D.value, "dp--hidden-el": I.value }),
+                class: D1({ ...D.value, "dp--hidden-el": F.value }),
                 "aria-label": M(u)?.closeTimePicker,
                 tabindex: "0",
                 onKeydown: o1[3] || (o1[3] = (q) => M(v4)(q, () => X(!1))),
@@ -13410,11 +13410,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     ], 8, as));
   }
 }), wa = (e, a, t, c) => {
-  const { defaultedRange: i } = _2(e), r = (x, I) => Array.isArray(a[x]) ? a[x][I] : a[x], n = (x) => e.enableSeconds ? Array.isArray(a.seconds) ? a.seconds[x] : a.seconds : 0, o = (x, I) => x ? I !== void 0 ? P3(x, r("hours", I), r("minutes", I), n(I)) : P3(x, a.hours, a.minutes, n()) : ca(l1(), n(I)), l = (x, I) => {
-    a[x] = I;
-  }, u = i1(() => e.modelAuto && i.value.enabled ? Array.isArray(t.value) ? t.value.length > 1 : !1 : i.value.enabled), s = (x, I) => {
+  const { defaultedRange: i } = _2(e), r = (x, F) => Array.isArray(a[x]) ? a[x][F] : a[x], n = (x) => e.enableSeconds ? Array.isArray(a.seconds) ? a.seconds[x] : a.seconds : 0, o = (x, F) => x ? F !== void 0 ? P3(x, r("hours", F), r("minutes", F), n(F)) : P3(x, a.hours, a.minutes, n()) : ca(l1(), n(F)), l = (x, F) => {
+    a[x] = F;
+  }, u = i1(() => e.modelAuto && i.value.enabled ? Array.isArray(t.value) ? t.value.length > 1 : !1 : i.value.enabled), s = (x, F) => {
     const P = Object.fromEntries(
-      Object.keys(a).map((E) => E === x ? [E, I] : [E, a[E]].slice())
+      Object.keys(a).map((E) => E === x ? [E, F] : [E, a[E]].slice())
     );
     if (u.value && !i.value.disableTimeRangeValidation) {
       const E = (r1) => t.value ? P3(
@@ -13423,33 +13423,33 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         P.minutes[r1],
         P.seconds[r1]
       ) : null, U = (r1) => ta(t.value[r1], 0);
-      return !(f2(E(0), E(1)) && (c6(E(0), U(1)) || I6(E(1), U(0))));
+      return !(f2(E(0), E(1)) && (c6(E(0), U(1)) || F6(E(1), U(0))));
     }
     return !0;
-  }, m = (x, I) => {
-    s(x, I) && (l(x, I), c && c());
+  }, m = (x, F) => {
+    s(x, F) && (l(x, F), c && c());
   }, b = (x) => {
     m("hours", x);
   }, w = (x) => {
     m("minutes", x);
-  }, F = (x) => {
+  }, I = (x) => {
     m("seconds", x);
-  }, _ = (x, I, P, E) => {
-    I && b(x), !I && !P && w(x), P && F(x), t.value && E(t.value);
+  }, _ = (x, F, P, E) => {
+    F && b(x), !F && !P && w(x), P && I(x), t.value && E(t.value);
   }, T = (x) => {
     if (x) {
-      const I = Array.isArray(x), P = I ? [+x[0].hours, +x[1].hours] : +x.hours, E = I ? [+x[0].minutes, +x[1].minutes] : +x.minutes, U = I ? [+x[0].seconds, +x[1].seconds] : +x.seconds;
+      const F = Array.isArray(x), P = F ? [+x[0].hours, +x[1].hours] : +x.hours, E = F ? [+x[0].minutes, +x[1].minutes] : +x.minutes, U = F ? [+x[0].seconds, +x[1].seconds] : +x.seconds;
       l("hours", P), l("minutes", E), e.enableSeconds && l("seconds", U);
     }
-  }, v = (x, I) => {
+  }, v = (x, F) => {
     const P = {
       hours: Array.isArray(a.hours) ? a.hours[x] : a.hours,
       disabledArr: []
     };
-    return (I || I === 0) && (P.hours = I), Array.isArray(e.disabledTimes) && (P.disabledArr = i.value.enabled && Array.isArray(e.disabledTimes[x]) ? e.disabledTimes[x] : e.disabledTimes), P;
-  }, g = i1(() => (x, I) => {
+    return (F || F === 0) && (P.hours = F), Array.isArray(e.disabledTimes) && (P.disabledArr = i.value.enabled && Array.isArray(e.disabledTimes[x]) ? e.disabledTimes[x] : e.disabledTimes), P;
+  }, g = i1(() => (x, F) => {
     if (Array.isArray(e.disabledTimes)) {
-      const { disabledArr: P, hours: E } = v(x, I), U = P.filter((r1) => +r1.hours === E);
+      const { disabledArr: P, hours: E } = v(x, F), U = P.filter((r1) => +r1.hours === E);
       return U[0]?.minutes === "*" ? { hours: [E], minutes: void 0, seconds: void 0 } : {
         hours: [],
         minutes: U?.map((r1) => +r1.minutes) ?? [],
@@ -13462,7 +13462,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     setTime: l,
     updateHours: b,
     updateMinutes: w,
-    updateSeconds: F,
+    updateSeconds: I,
     getSetDateTime: o,
     updateTimeValues: _,
     getSecondsValue: n,
@@ -13472,9 +13472,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   };
 }, rs = (e, a) => {
   const t = () => {
-    e.isTextInputDate && I();
-  }, { modelValue: c, time: i } = x0(e, a, t), { defaultedStartTime: r, defaultedRange: n, defaultedTz: o } = _2(e), { updateTimeValues: l, getSetDateTime: u, setTime: s, assignStartTime: m, disabledTimesConfig: b, validateTime: w } = wa(e, i, c, F);
-  function F() {
+    e.isTextInputDate && F();
+  }, { modelValue: c, time: i } = x0(e, a, t), { defaultedStartTime: r, defaultedRange: n, defaultedTz: o } = _2(e), { updateTimeValues: l, getSetDateTime: u, setTime: s, assignStartTime: m, disabledTimesConfig: b, validateTime: w } = wa(e, i, c, I);
+  function I() {
     a("update-flow-step");
   }
   const _ = (E) => {
@@ -13501,7 +13501,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       c.value = x4(u(T()), o.value.timezone);
   }, g = (E) => Array.isArray(E) ? [a6(l1(E[0])), a6(l1(E[1]))] : [a6(E ?? l1())], x = (E, U, r1) => {
     s("hours", E), s("minutes", U), s("seconds", e.enableSeconds ? r1 : 0);
-  }, I = () => {
+  }, F = () => {
     const [E, U] = g(c.value);
     return n.value.enabled ? x(
       [E.hours, U.hours],
@@ -13511,7 +13511,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   };
   t4(() => {
     if (!e.shadow)
-      return m(r.value), c.value ? I() : v();
+      return m(r.value), c.value ? F() : v();
   });
   const P = () => {
     Array.isArray(c.value) ? c.value = c.value.map((E, U) => E && u(E, U)) : c.value = u(c.value), a("time-update");
@@ -13550,9 +13550,9 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       modelValue: u,
       time: l,
       updateTime: m
-    }), toggleTimePicker: (w, F = !1, _ = "") => {
-      o.value?.toggleTimePicker(w, F, _);
-    } }), (w, F) => (p(), H1(h8, {
+    }), toggleTimePicker: (w, I = !1, _ = "") => {
+      o.value?.toggleTimePicker(w, I, _);
+    } }), (w, I) => (p(), H1(h8, {
       "multi-calendars": 0,
       stretch: "",
       "is-mobile": w.isMobile
@@ -13568,15 +13568,15 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           "internal-model-value": w.internalModelValue,
           "disabled-times-config": M(s),
           "validate-time": M(b),
-          "onUpdate:hours": F[0] || (F[0] = (_) => M(m)(_)),
-          "onUpdate:minutes": F[1] || (F[1] = (_) => M(m)(_, !1)),
-          "onUpdate:seconds": F[2] || (F[2] = (_) => M(m)(_, !1, !0)),
-          onAmPmChange: F[3] || (F[3] = (_) => w.$emit("am-pm-change", _)),
-          onResetFlow: F[4] || (F[4] = (_) => w.$emit("reset-flow")),
-          onOverlayClosed: F[5] || (F[5] = (_) => w.$emit("overlay-toggle", { open: !1, overlay: _ })),
-          onOverlayOpened: F[6] || (F[6] = (_) => w.$emit("overlay-toggle", { open: !0, overlay: _ }))
+          "onUpdate:hours": I[0] || (I[0] = (_) => M(m)(_)),
+          "onUpdate:minutes": I[1] || (I[1] = (_) => M(m)(_, !1)),
+          "onUpdate:seconds": I[2] || (I[2] = (_) => M(m)(_, !1, !0)),
+          onAmPmChange: I[3] || (I[3] = (_) => w.$emit("am-pm-change", _)),
+          onResetFlow: I[4] || (I[4] = (_) => w.$emit("reset-flow")),
+          onOverlayClosed: I[5] || (I[5] = (_) => w.$emit("overlay-toggle", { open: !1, overlay: _ })),
+          onOverlayOpened: I[6] || (I[6] = (_) => w.$emit("overlay-toggle", { open: !0, overlay: _ }))
         }), f4({ _: 2 }, [
-          n2(M(n), (_, T) => ({
+          r2(M(n), (_, T) => ({
             name: _,
             fn: L1((v) => [
               b1(w.$slots, _, $1(j1(v)))
@@ -13614,7 +13614,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       defaultedHighlight: s,
       propDates: m,
       defaultedUI: b
-    } = _2(i), { transitionName: w, showTransition: F } = V0(r), { buildMatrix: _ } = B3(), { handleMonthYearChange: T, isDisabled: v, updateMonthYear: g } = kl(i, c), { showLeftIcon: x, showRightIcon: I } = v8(), P = m1(!1), E = m1(!1), U = m1(!1), r1 = m1([null, null, null, null]);
+    } = _2(i), { transitionName: w, showTransition: I } = V0(r), { buildMatrix: _ } = B3(), { handleMonthYearChange: T, isDisabled: v, updateMonthYear: g } = kl(i, c), { showLeftIcon: x, showRightIcon: F } = v8(), P = m1(!1), E = m1(!1), U = m1(!1), r1 = m1([null, null, null, null]);
     t4(() => {
       c("mount");
     });
@@ -13697,7 +13697,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           instance: e.instance,
           isDisabled: M(v)
         })))
-      ])) : (p(), A(B1, { key: 1 }, [
+      ])) : (p(), A(R1, { key: 1 }, [
         N.$slots["top-extra"] ? (p(), A("div", ss, [
           b1(N.$slots, "top-extra", { value: N.internalModelValue })
         ])) : j("", !0),
@@ -13722,7 +13722,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               dp__year_disable_select: N.disableYearSelect
             }])
           }, [
-            (p(!0), A(B1, null, n2(k1.value, (Z, x1) => (p(), A(B1, {
+            (p(!0), A(R1, null, r2(k1.value, (Z, x1) => (p(), A(R1, {
               key: Z.type
             }, [
               B("button", {
@@ -13741,13 +13741,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                   text: Z.text,
                   value: i[Z.type]
                 }) : j("", !0),
-                N.$slots[Z.type] ? j("", !0) : (p(), A(B1, { key: 1 }, [
+                N.$slots[Z.type] ? j("", !0) : (p(), A(R1, { key: 1 }, [
                   a4(W1(Z.text), 1)
                 ], 64))
               ], 42, us),
               e2(n6, {
                 name: M(w)(Z.showSelectionGrid),
-                css: M(F)
+                css: M(I)
               }, {
                 default: L1(() => [
                   Z.showSelectionGrid ? (p(), H1(C0, {
@@ -13820,7 +13820,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             ]),
             _: 3
           }, 8, ["aria-label", "disabled", "class"])) : j("", !0),
-          M(I)(M(o), e.instance) ? (p(), H1(s0, {
+          M(F)(M(o), e.instance) ? (p(), H1(s0, {
             key: 2,
             ref: "rightIcon",
             "el-name": "action-next",
@@ -13882,11 +13882,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       defaultedWeekNumbers: s,
       defaultedMultiDates: m,
       defaultedUI: b
-    } = _2(i), w = m1(null), F = m1({
+    } = _2(i), w = m1(null), I = m1({
       bottom: "",
       left: "",
       transform: ""
-    }), _ = m1([]), T = m1(null), v = m1(!0), g = m1(""), x = m1({ startX: 0, endX: 0, startY: 0, endY: 0 }), I = m1([]), P = m1({ left: "50%" }), E = m1(!1), U = i1(() => i.calendar ? i.calendar(i.mappedDates) : i.mappedDates), r1 = i1(() => i.dayNames ? Array.isArray(i.dayNames) ? i.dayNames : i.dayNames(i.locale, +i.weekStart) : Jo(i.formatLocale, i.locale, +i.weekStart));
+    }), _ = m1([]), T = m1(null), v = m1(!0), g = m1(""), x = m1({ startX: 0, endX: 0, startY: 0, endY: 0 }), F = m1([]), P = m1({ left: "50%" }), E = m1(!1), U = i1(() => i.calendar ? i.calendar(i.mappedDates) : i.mappedDates), r1 = i1(() => i.dayNames ? Array.isArray(i.dayNames) ? i.dayNames : i.dayNames(i.locale, +i.weekStart) : Jo(i.formatLocale, i.locale, +i.weekStart));
     t4(() => {
       c("mount", { cmp: "calendar", refs: _ }), o.value.noSwipe || T.value && (T.value.addEventListener("touchstart", o1, { passive: !1 }), T.value.addEventListener("touchend", q, { passive: !1 }), T.value.addEventListener("touchmove", k1, { passive: !1 })), i.monthChangeOnScroll && T.value && T.value.addEventListener("wheel", Z, { passive: !1 });
     }), i6(() => {
@@ -13916,18 +13916,18 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       const { width: u1, height: V1 } = f1.getBoundingClientRect();
       w.value = Q1.value;
       let y = { left: `${u1 / 2}px` }, _1 = -50;
-      if (await g4(), I.value[0]) {
-        const { left: G, width: a2 } = I.value[0].getBoundingClientRect();
+      if (await g4(), F.value[0]) {
+        const { left: G, width: a2 } = F.value[0].getBoundingClientRect();
         G < 0 && (y = { left: "0" }, _1 = 0, P.value.left = `${u1 / 2}px`), window.innerWidth < G + a2 && (y = { right: "0" }, _1 = 0, P.value.left = `${a2 - u1 / 2}px`);
       }
-      F.value = {
+      I.value = {
         bottom: `${V1}px`,
         ...y,
         transform: `translateX(${_1}%)`
       };
     }, W = async (f1, Q1, u1) => {
       const V1 = q2(_.value[Q1][u1]);
-      V1 && (f1.marker?.customPosition && f1.marker?.tooltip?.length ? F.value = f1.marker.customPosition(V1) : await O(V1, f1), c("tooltip-open", f1.marker));
+      V1 && (f1.marker?.customPosition && f1.marker?.tooltip?.length ? I.value = f1.marker.customPosition(V1) : await O(V1, f1), c("tooltip-open", f1.marker));
     }, z1 = async (f1, Q1, u1) => {
       if (E.value && m.value.enabled && m.value.dragSelect)
         return c("select-date", f1);
@@ -13936,7 +13936,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         await W(f1, Q1, u1);
       }
     }, J = (f1) => {
-      w.value && (w.value = null, F.value = JSON.parse(JSON.stringify({ bottom: "", left: "", transform: "" })), c("tooltip-close", f1.marker));
+      w.value && (w.value = null, I.value = JSON.parse(JSON.stringify({ bottom: "", left: "", transform: "" })), c("tooltip-close", f1.marker));
     }, o1 = (f1) => {
       x.value.startX = f1.changedTouches[0].screenX, x.value.startY = f1.changedTouches[0].screenY;
     }, q = (f1) => {
@@ -13971,7 +13971,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       }, [
         B("div", hs, [
           f1.weekNumbers ? (p(), A("div", ms, W1(f1.weekNumName), 1)) : j("", !0),
-          (p(!0), A(B1, null, n2(r1.value, (u1, V1) => (p(), A("div", {
+          (p(!0), A(R1, null, r2(r1.value, (u1, V1) => (p(), A("div", {
             key: V1,
             class: "dp__calendar_header_item",
             role: "gridcell",
@@ -13983,7 +13983,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               day: u1,
               index: V1
             }) : j("", !0),
-            f1.$slots["calendar-header"] ? j("", !0) : (p(), A(B1, { key: 1 }, [
+            f1.$slots["calendar-header"] ? j("", !0) : (p(), A(R1, { key: 1 }, [
               a4(W1(u1), 1)
             ], 64))
           ], 8, vs))), 128))
@@ -14000,7 +14000,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
               role: "rowgroup",
               onMouseleave: Q1[1] || (Q1[1] = (u1) => E.value = !1)
             }, [
-              (p(!0), A(B1, null, n2(U.value, (u1, V1) => (p(), A("div", {
+              (p(!0), A(R1, null, r2(U.value, (u1, V1) => (p(), A("div", {
                 key: V1,
                 class: "dp__calendar_row",
                 role: "row"
@@ -14008,7 +14008,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                 f1.weekNumbers ? (p(), A("div", ps, [
                   B("div", gs, W1(H(u1.days)), 1)
                 ])) : j("", !0),
-                (p(!0), A(B1, null, n2(u1.days, (y, _1) => (p(), A("div", {
+                (p(!0), A(R1, null, r2(u1.days, (y, _1) => (p(), A("div", {
                   id: M(V5)(y.value),
                   ref_for: !0,
                   ref: (G) => Q(G, V1, _1),
@@ -14036,10 +14036,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                       day: +y.text,
                       date: y.value
                     }) : j("", !0),
-                    f1.$slots.day ? j("", !0) : (p(), A(B1, { key: 1 }, [
+                    f1.$slots.day ? j("", !0) : (p(), A(R1, { key: 1 }, [
                       a4(W1(y.text), 1)
                     ], 64)),
-                    y.marker && R.value(y) ? (p(), A(B1, { key: 2 }, [
+                    y.marker && R.value(y) ? (p(), A(R1, { key: 2 }, [
                       f1.$slots.marker ? b1(f1.$slots, "marker", {
                         key: 0,
                         marker: y.marker,
@@ -14048,23 +14048,23 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                       }) : (p(), A("div", {
                         key: 1,
                         class: D1(g1.value(y.marker)),
-                        style: I4(y.marker.color ? { backgroundColor: y.marker.color } : {})
+                        style: F4(y.marker.color ? { backgroundColor: y.marker.color } : {})
                       }, null, 6))
                     ], 64)) : j("", !0),
                     w1.value(y.value) ? (p(), A("div", {
                       key: 3,
                       ref_for: !0,
                       ref_key: "activeTooltip",
-                      ref: I,
+                      ref: F,
                       class: "dp__marker_tooltip",
-                      style: I4(F.value)
+                      style: F4(I.value)
                     }, [
                       y.marker?.tooltip ? (p(), A("div", {
                         key: 0,
                         class: "dp__tooltip_content",
                         onClick: s1
                       }, [
-                        (p(!0), A(B1, null, n2(y.marker.tooltip, (G, a2) => (p(), A("div", {
+                        (p(!0), A(R1, null, r2(y.marker.tooltip, (G, a2) => (p(), A("div", {
                           key: a2,
                           class: "dp__tooltip_text"
                         }, [
@@ -14073,17 +14073,17 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                             tooltip: G,
                             day: y.value
                           }) : j("", !0),
-                          f1.$slots["marker-tooltip"] ? j("", !0) : (p(), A(B1, { key: 1 }, [
+                          f1.$slots["marker-tooltip"] ? j("", !0) : (p(), A(R1, { key: 1 }, [
                             B("div", {
                               class: "dp__tooltip_mark",
-                              style: I4(G.color ? { backgroundColor: G.color } : {})
+                              style: F4(G.color ? { backgroundColor: G.color } : {})
                             }, null, 4),
                             B("div", null, W1(G.text), 1)
                           ], 64))
                         ]))), 128)),
                         B("div", {
                           class: "dp__arrow_bottom_tp",
-                          style: I4(P.value)
+                          style: F4(P.value)
                         }, null, 4)
                       ])) : j("", !0)
                     ], 4)) : j("", !0)
@@ -14101,12 +14101,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   const i = m1([]), r = m1(/* @__PURE__ */ new Date()), n = m1(), o = () => q(e.isTextInputDate), { modelValue: l, calendars: u, time: s, today: m } = x0(e, a, o), {
     defaultedMultiCalendars: b,
     defaultedStartTime: w,
-    defaultedRange: F,
+    defaultedRange: I,
     defaultedConfig: _,
     defaultedTz: T,
     propDates: v,
     defaultedMultiDates: g
-  } = _2(e), { validateMonthYearInRange: x, isDisabled: I, isDateRangeAllowed: P, checkMinMaxRange: E } = $3(e), { updateTimeValues: U, getSetDateTime: r1, setTime: X, assignStartTime: D, validateTime: c1, disabledTimesConfig: g1 } = wa(e, s, l, c), w1 = i1(
+  } = _2(e), { validateMonthYearInRange: x, isDisabled: F, isDateRangeAllowed: P, checkMinMaxRange: E } = $3(e), { updateTimeValues: U, getSetDateTime: r1, setTime: X, assignStartTime: D, validateTime: c1, disabledTimesConfig: g1 } = wa(e, s, l, c), w1 = i1(
     () => ($) => u.value[$] ? u.value[$].month : 0
   ), L = i1(
     () => ($) => u.value[$] ? u.value[$].year : 0
@@ -14127,14 +14127,14 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       return Array.isArray(l.value) ? (i.value = l.value, C($)) : Q(l.value, $);
     if (b.value.count && $ && !e.startDate)
       return N(l1(), $);
-  }, k1 = () => Array.isArray(l.value) && F.value.enabled ? s2(l.value[0]) === s2(l.value[1] ?? l.value[0]) : !1, N = ($ = /* @__PURE__ */ new Date(), y1 = !1) => {
+  }, k1 = () => Array.isArray(l.value) && I.value.enabled ? s2(l.value[0]) === s2(l.value[1] ?? l.value[0]) : !1, N = ($ = /* @__PURE__ */ new Date(), y1 = !1) => {
     if ((!b.value.count || !b.value.static || y1) && O(0, s2($), G1($)), b.value.count && (!l.value || k1() || !b.value.solo) && (!b.value.solo || y1))
       for (let P1 = 1; P1 < b.value.count; P1++) {
-        const U1 = x2(l1(), { month: w1.value(P1 - 1), year: L.value(P1 - 1) }), d1 = I9(U1, { months: 1 });
+        const U1 = x2(l1(), { month: w1.value(P1 - 1), year: L.value(P1 - 1) }), d1 = F9(U1, { months: 1 });
         u.value[P1] = { month: s2(d1), year: G1(d1) };
       }
   }, Q = ($, y1) => {
-    N($), X("hours", g3($)), X("minutes", R3($)), X("seconds", F6($)), b.value.count && y1 && f1();
+    N($), X("hours", g3($)), X("minutes", R3($)), X("seconds", I6($)), b.value.count && y1 && f1();
   }, Z = ($) => {
     if (b.value.count) {
       if (b.value.solo) return 0;
@@ -14143,14 +14143,14 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     }
     return 1;
   }, x1 = ($, y1) => {
-    $[1] && F.value.showLastInRange ? N($[Z($)], y1) : N($[0], y1);
+    $[1] && I.value.showLastInRange ? N($[Z($)], y1) : N($[0], y1);
     const P1 = (U1, d1) => [
       U1($[0]),
       $[1] ? U1($[1]) : s[d1][1]
     ];
-    X("hours", P1(g3, "hours")), X("minutes", P1(R3, "minutes")), X("seconds", P1(F6, "seconds"));
+    X("hours", P1(g3, "hours")), X("minutes", P1(R3, "minutes")), X("seconds", P1(I6, "seconds"));
   }, H = ($, y1) => {
-    if ((F.value.enabled || e.weekPicker) && !g.value.enabled)
+    if ((I.value.enabled || e.weekPicker) && !g.value.enabled)
       return x1($, y1);
     if (g.value.enabled && y1) {
       const P1 = $[$.length - 1];
@@ -14208,54 +14208,54 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     }
   }, a2 = ($, y1, P1, U1) => {
     if (e.sixWeeks && $.length < 6) {
-      const d1 = 6 - $.length, I1 = (y1.getDay() + 7 - U1) % 7, A1 = 6 - (P1.getDay() + 7 - U1) % 7, [d2, k4] = G(I1, A1);
+      const d1 = 6 - $.length, F1 = (y1.getDay() + 7 - U1) % 7, A1 = 6 - (P1.getDay() + 7 - U1) % 7, [d2, k4] = G(F1, A1);
       for (let b4 = 1; b4 <= d1; b4++)
         if (k4 ? !!(b4 % 2) == d2 : d2) {
-          const Q4 = $[0].days[0], T4 = R1(F4(Q4.value, -7), s2(y1));
+          const Q4 = $[0].days[0], T4 = B1(I4(Q4.value, -7), s2(y1));
           $.unshift({ days: T4 });
         } else {
-          const Q4 = $[$.length - 1], T4 = Q4.days[Q4.days.length - 1], b8 = R1(F4(T4.value, 1), s2(y1));
+          const Q4 = $[$.length - 1], T4 = Q4.days[Q4.days.length - 1], b8 = B1(I4(T4.value, 1), s2(y1));
           $.push({ days: b8 });
         }
     }
     return $;
-  }, R1 = ($, y1) => {
+  }, B1 = ($, y1) => {
     const P1 = l1($), U1 = [];
     for (let d1 = 0; d1 < 7; d1++) {
-      const I1 = F4(P1, d1), A1 = s2(I1) !== y1;
+      const F1 = I4(P1, d1), A1 = s2(F1) !== y1;
       U1.push({
-        text: e.hideOffsetDates && A1 ? "" : I1.getDate(),
-        value: I1,
+        text: e.hideOffsetDates && A1 ? "" : F1.getDate(),
+        value: F1,
         current: !A1,
         classData: {}
       });
     }
     return U1;
   }, Y2 = ($, y1) => {
-    const P1 = [], U1 = new Date(y1, $), d1 = new Date(y1, $ + 1, 0), I1 = e.weekStart, A1 = K4(U1, { weekStartsOn: I1 }), d2 = (k4) => {
-      const b4 = R1(k4, $);
+    const P1 = [], U1 = new Date(y1, $), d1 = new Date(y1, $ + 1, 0), F1 = e.weekStart, A1 = K4(U1, { weekStartsOn: F1 }), d2 = (k4) => {
+      const b4 = B1(k4, $);
       if (P1.push({ days: b4 }), !P1[P1.length - 1].days.some(
         (Q4) => f2(X2(Q4.value), X2(d1))
       )) {
-        const Q4 = F4(k4, 7);
+        const Q4 = I4(k4, 7);
         d2(Q4);
       }
     };
-    return d2(A1), a2(P1, U1, d1, I1);
+    return d2(A1), a2(P1, U1, d1, F1);
   }, L2 = ($) => {
     const y1 = P3(l1($.value), s.hours, s.minutes, M3());
     a("date-update", y1), g.value.enabled ? ue(y1, l, g.value.limit) : l.value = y1, c(), g4().then(() => {
       o1();
     });
-  }, y4 = ($) => F.value.noDisabledRange ? ha(i.value[0], $).some((y1) => I(y1)) : !1, Y = () => {
-    i.value = l.value ? l.value.slice() : [], i.value.length === 2 && !(F.value.fixedStart || F.value.fixedEnd) && (i.value = []);
+  }, y4 = ($) => I.value.noDisabledRange ? ha(i.value[0], $).some((y1) => F(y1)) : !1, Y = () => {
+    i.value = l.value ? l.value.slice() : [], i.value.length === 2 && !(I.value.fixedStart || I.value.fixedEnd) && (i.value = []);
   }, N1 = ($, y1) => {
     const P1 = [
       l1($.value),
-      F4(l1($.value), +F.value.autoRange)
+      I4(l1($.value), +I.value.autoRange)
     ];
-    P(P1) ? (y1 && F1($.value), i.value = P1) : a("invalid-date", $.value);
-  }, F1 = ($) => {
+    P(P1) ? (y1 && I1($.value), i.value = P1) : a("invalid-date", $.value);
+  }, I1 = ($) => {
     const y1 = s2(l1($)), P1 = G1(l1($));
     if (O(0, y1, P1), b.value.count > 0)
       for (let U1 = 1; U1 < b.value.count; U1++) {
@@ -14265,12 +14265,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         O(U1, d1.month, d1.year);
       }
   }, J4 = ($) => {
-    if (y4($.value) || !E($.value, l.value, F.value.fixedStart ? 0 : 1))
+    if (y4($.value) || !E($.value, l.value, I.value.fixedStart ? 0 : 1))
       return a("invalid-date", $.value);
-    i.value = Ca(l1($.value), l, a, F);
+    i.value = Ca(l1($.value), l, a, I);
   }, w4 = ($, y1) => {
-    if (Y(), F.value.autoRange) return N1($, y1);
-    if (F.value.fixedStart || F.value.fixedEnd) return J4($);
+    if (Y(), I.value.autoRange) return N1($, y1);
+    if (I.value.fixedStart || I.value.fixedEnd) return J4($);
     i.value[0] ? E(l1($.value), l.value) && !y4($.value) ? D2(l1($.value), l1(i.value[0])) ? (i.value.unshift(l1($.value)), a("range-end", i.value[0])) : (i.value[1] = l1($.value), a("range-end", i.value[1])) : (e.autoApply && a("auto-apply-invalid", $.value), a("invalid-date", $.value)) : (i.value[0] = l1($.value), a("range-start", i.value[0]));
   }, M3 = ($ = !0) => e.enableSeconds ? Array.isArray(s.seconds) ? $ ? s.seconds[0] : s.seconds[1] : s.seconds : 0, r4 = ($) => {
     i.value[$] = P3(
@@ -14284,8 +14284,8 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
   }, s6 = () => {
     i.value.length && (i.value[0] && !i.value[1] ? r4(0) : (r4(0), r4(1), c()), l6(), l.value = i.value.slice(), m8(i.value, a, e.autoApply, e.modelAuto));
   }, U3 = ($, y1 = !1) => {
-    if (I($.value) || !$.current && e.hideOffsetDates) return a("invalid-date", $.value);
-    if (n.value = JSON.parse(JSON.stringify($)), !F.value.enabled) return L2($);
+    if (F($.value) || !$.current && e.hideOffsetDates) return a("invalid-date", $.value);
+    if (n.value = JSON.parse(JSON.stringify($)), !I.value.enabled) return L2($);
     B7(s.hours) && B7(s.minutes) && !g.value.enabled && (w4($, y1), s6());
   }, Z6 = ($, y1) => {
     O($, y1.month, y1.year, !0), b.value.count && !b.value.solo && l2($), a("update-month-year", { instance: $, month: y1.month, year: y1.year }), t(b.value.solo ? $ : void 0);
@@ -14295,12 +14295,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     Ma({
       value: $,
       modelValue: l,
-      range: F.value.enabled,
+      range: I.value.enabled,
       timezone: y1 ? void 0 : T.value.timezone
     }), W(), e.multiCalendars && g4().then(() => q(!0));
   }, i2 = () => {
     const $ = re(l1(), T.value);
-    !F.value.enabled && !g.value.enabled ? l.value = $ : l.value && Array.isArray(l.value) && l.value[0] ? g.value.enabled ? l.value = [...l.value, $] : l.value = D2($, l.value[0]) ? [$, l.value[0]] : [l.value[0], $] : l.value = [$], W();
+    !I.value.enabled && !g.value.enabled ? l.value = $ : l.value && Array.isArray(l.value) && l.value[0] ? g.value.enabled ? l.value = [...l.value, $] : l.value = D2($, l.value[0]) ? [$, l.value[0]] : [l.value[0], $] : l.value = [$], W();
   }, f6 = () => {
     if (Array.isArray(l.value))
       if (g.value.enabled) {
@@ -14376,13 +14376,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       today: m,
       validateTime: b,
       getCalendarDays: w,
-      getMarker: F,
+      getMarker: I,
       handleArrow: _,
       handleScroll: T,
       handleSwipe: v,
       selectDate: g,
       updateMonthYear: x,
-      presetDate: I,
+      presetDate: F,
       selectCurrentDate: P,
       updateTime: E,
       assignMonthAndYear: U,
@@ -14407,7 +14407,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     );
     const q = i1(() => (u1) => w(n.value(u1), o.value(u1)).map((V1) => ({
       ...V1,
-      days: V1.days.map((y) => (y.marker = F(y), y.classData = c1(y), y))
+      days: V1.days.map((y) => (y.marker = I(y), y.classData = c1(y), y))
     })));
     function k1(u1) {
       u1 || u1 === 0 ? R.value[u1]?.triggerTransition(n.value(u1), o.value(u1)) : R.value.forEach((V1, y) => V1.triggerTransition(n.value(y), o.value(y)));
@@ -14444,7 +14444,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     };
     return a({
       clearHoverDate: g1,
-      presetDate: I,
+      presetDate: F,
       selectCurrentDate: P,
       toggleMonthPicker: Z,
       toggleYearPicker: x1,
@@ -14459,13 +14459,13 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         updateTime: E,
         updateMonthYear: x,
         selectDate: g,
-        presetDate: I
+        presetDate: F
       }),
       changeMonth: s1,
       changeYear: l2,
       selectWeekDate: C,
       setStartTime: r1
-    }), (u1, V1) => (p(), A(B1, null, [
+    }), (u1, V1) => (p(), A(R1, null, [
       e2(h8, {
         "multi-calendars": M(w1).count,
         collapse: u1.collapse,
@@ -14489,10 +14489,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             onOverlayClosed: Q1,
             onOverlayOpened: V1[2] || (V1[2] = (G) => u1.$emit("overlay-toggle", { open: !0, overlay: G }))
           }), f4({ _: 2 }, [
-            n2(M(z1), (G, a2) => ({
+            r2(M(z1), (G, a2) => ({
               name: G,
-              fn: L1((R1) => [
-                b1(u1.$slots, G, $1(j1(R1)))
+              fn: L1((B1) => [
+                b1(u1.$slots, G, $1(j1(B1)))
               ])
             }))
           ]), 1040, ["months", "years", "month", "year", "instance", "onUpdateMonthYear"])),
@@ -14515,10 +14515,10 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             onTooltipOpen: V1[6] || (V1[6] = (G) => u1.$emit("tooltip-open", G)),
             onTooltipClose: V1[7] || (V1[7] = (G) => u1.$emit("tooltip-close", G))
           }), f4({ _: 2 }, [
-            n2(M(W), (G, a2) => ({
+            r2(M(W), (G, a2) => ({
               name: G,
-              fn: L1((R1) => [
-                b1(u1.$slots, G, $1(j1({ ...R1 })))
+              fn: L1((B1) => [
+                b1(u1.$slots, G, $1(j1({ ...B1 })))
               ])
             }))
           ]), 1040, ["mapped-dates", "month", "year", "instance", "onSelectDate", "onHandleSpace", "onHandleScroll", "onHandleSwipe"])
@@ -14546,7 +14546,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           onOverlayOpened: V1[14] || (V1[14] = (y) => f1(y, !0)),
           onAmPmChange: V1[15] || (V1[15] = (y) => u1.$emit("am-pm-change", y))
         }), f4({ _: 2 }, [
-          n2(M(J), (y, _1) => ({
+          r2(M(J), (y, _1) => ({
             name: y,
             fn: L1((G) => [
               b1(u1.$slots, y, $1(j1(G)))
@@ -14565,7 +14565,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
     propDates: o,
     defaultedFilters: l,
     defaultedMultiDates: u
-  } = _2(e), { modelValue: s, year: m, month: b, calendars: w } = x0(e, a), { isDisabled: F } = $3(e), { selectYear: _, groupedYears: T, showYearPicker: v, isDisabled: g, toggleYearPicker: x, handleYearSelect: I, handleYear: P } = Va({
+  } = _2(e), { modelValue: s, year: m, month: b, calendars: w } = x0(e, a), { isDisabled: I } = $3(e), { selectYear: _, groupedYears: T, showYearPicker: v, isDisabled: g, toggleYearPicker: x, handleYearSelect: F, handleYear: P } = Va({
     modelValue: s,
     multiCalendars: c,
     range: n,
@@ -14592,7 +14592,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       start: L6(O),
       end: Z9(O)
     }).map((W) => {
-      const z1 = Q3(W), J = L7(W), o1 = F(W), q = r1(z1), k1 = D(z1);
+      const z1 = Q3(W), J = L7(W), o1 = I(W), q = r1(z1), k1 = D(z1);
       return {
         text: E(z1, J),
         value: z1,
@@ -14627,7 +14627,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         return w.value[O].month = s2(L7(R)), u.value.enabled ? g1(R) : n.value.enabled ? w1(R) : L(R);
     },
     toggleYearPicker: x,
-    handleYearSelect: I,
+    handleYearSelect: F,
     handleYear: P
   };
 }, xs = { class: "dp--quarter-items" }, ws = ["data-test-id", "disabled", "onClick", "onMouseover"], Hs = /* @__PURE__ */ $2({
@@ -14657,7 +14657,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       isDisabled: m,
       quarters: b,
       modelValue: w,
-      showYearPicker: F,
+      showYearPicker: I,
       setHoverDate: _,
       selectQuarter: T,
       toggleYearPicker: v,
@@ -14670,42 +14670,42 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       selectQuarter: T,
       handleYearSelect: g,
       handleYear: x
-    }) }), (I, P) => (p(), H1(h8, {
+    }) }), (F, P) => (p(), H1(h8, {
       "multi-calendars": M(o).count,
-      collapse: I.collapse,
+      collapse: F.collapse,
       stretch: "",
-      "is-mobile": I.isMobile
+      "is-mobile": F.isMobile
     }, {
       default: L1(({ instance: E }) => [
         B("div", {
           class: "dp-quarter-picker-wrap",
-          style: I4({ minHeight: `${M(l).modeHeight}px` })
+          style: F4({ minHeight: `${M(l).modeHeight}px` })
         }, [
-          I.$slots["top-extra"] ? b1(I.$slots, "top-extra", {
+          F.$slots["top-extra"] ? b1(F.$slots, "top-extra", {
             key: 0,
-            value: I.internalModelValue
+            value: F.internalModelValue
           }) : j("", !0),
           B("div", null, [
-            e2(ba, t2(I.$props, {
+            e2(ba, t2(F.$props, {
               items: M(u)(E),
               instance: E,
-              "show-year-picker": M(F)[E],
+              "show-year-picker": M(I)[E],
               year: M(s)(E),
               "is-disabled": (U) => M(m)(E, U),
               onHandleYear: (U) => M(x)(E, U),
               onYearSelect: (U) => M(g)(U, E),
               onToggleYearPicker: (U) => M(v)(E, U?.flow, U?.show)
             }), f4({ _: 2 }, [
-              n2(M(n), (U, r1) => ({
+              r2(M(n), (U, r1) => ({
                 name: U,
                 fn: L1((X) => [
-                  b1(I.$slots, U, $1(j1(X)))
+                  b1(F.$slots, U, $1(j1(X)))
                 ])
               }))
             ]), 1040, ["items", "instance", "show-year-picker", "year", "is-disabled", "onHandleYear", "onYearSelect", "onToggleYearPicker"])
           ]),
           B("div", xs, [
-            (p(!0), A(B1, null, n2(M(b)(E), (U, r1) => (p(), A("div", { key: r1 }, [
+            (p(!0), A(R1, null, r2(M(b)(E), (U, r1) => (p(), A("div", { key: r1 }, [
               B("button", {
                 type: "button",
                 class: D1(["dp--qr-btn", {
@@ -14719,11 +14719,11 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
                 onClick: (X) => M(T)(U.value, E, U.disabled),
                 onMouseover: (X) => M(_)(U.value)
               }, [
-                I.$slots.quarter ? b1(I.$slots, "quarter", {
+                F.$slots.quarter ? b1(F.$slots, "quarter", {
                   key: 0,
                   value: U.value,
                   text: U.text
-                }) : (p(), A(B1, { key: 1 }, [
+                }) : (p(), A(R1, { key: 1 }, [
                   a4(W1(U.text), 1)
                 ], 64))
               ], 42, ws)
@@ -14812,12 +14812,12 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         flowStep: w1.value,
         menuWrapRef: r.value
       };
-    }), { setMenuFocused: o, setShiftKey: l, control: u } = ya(), s = r6(), { defaultedTextInput: m, defaultedInline: b, defaultedConfig: w, defaultedUI: F, handleEventPropagation: _ } = _2(i), { isMobile: T } = Ha(w, i.shadow), v = m1(null), g = m1(0), x = m1(null), I = m1(!1), P = m1(null), E = m1(!1), U = (Y) => {
+    }), { setMenuFocused: o, setShiftKey: l, control: u } = ya(), s = r6(), { defaultedTextInput: m, defaultedInline: b, defaultedConfig: w, defaultedUI: I, handleEventPropagation: _ } = _2(i), { isMobile: T } = Ha(w, i.shadow), v = m1(null), g = m1(0), x = m1(null), F = m1(!1), P = m1(null), E = m1(!1), U = (Y) => {
       E.value = !0, w.value.allowPreventDefault && Y.preventDefault(), O3(Y, w.value, !0);
     };
     t4(() => {
       if (!i.shadow) {
-        I.value = !0, r1(), window.addEventListener("resize", r1);
+        F.value = !0, r1(), window.addEventListener("resize", r1);
         const Y = q2(r);
         Y && !m.value.enabled && !b.value.enabled && (o(!0), o1()), Y && (Y.addEventListener("pointerdown", U), Y.addEventListener("mousedown", U));
       }
@@ -14848,7 +14848,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
         dp__menu: !0,
         dp__menu_index: !b.value.enabled,
         dp__relative: b.value.enabled,
-        ...F.value.menu ?? {}
+        ...I.value.menu ?? {}
       })
     ), C = (Y) => {
       O3(Y, w.value, !0);
@@ -14875,7 +14875,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       y("presetDate", Rt(Y), N1);
     }, a2 = () => {
       y("clearHoverDate");
-    }, R1 = (Y, N1) => {
+    }, B1 = (Y, N1) => {
       y("updateMonthYear", Y, N1);
     }, Y2 = (Y, N1) => {
       Y.preventDefault(), l2(N1);
@@ -14904,7 +14904,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       b.value.enabled && !b.value.input && !r.value?.contains(Y.target) && E.value && (E.value = !1, c("menu-blur"));
     };
     return a({
-      updateMonthYear: R1,
+      updateMonthYear: B1,
       switchView: V1,
       handleFlow: W,
       onValueCleared: () => {
@@ -14918,7 +14918,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       role: M(b).enabled ? void 0 : "dialog",
       "aria-label": Y.ariaLabels?.menu,
       class: D1(H.value),
-      style: I4({ "--dp-arrow-left": J.value }),
+      style: F4({ "--dp-arrow-left": J.value }),
       onMouseleave: a2,
       onClick: C,
       onKeydown: L2
@@ -14946,7 +14946,7 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           "dp--menu-content-wrapper-collapsed": e.collapse && (Y.presetDates?.length || !!Y.$slots["left-sidebar"] || !!Y.$slots["right-sidebar"])
         }),
         "data-dp-mobile": M(T),
-        style: I4({ "--dp-menu-width": `${g.value}px` })
+        style: F4({ "--dp-menu-width": `${g.value}px` })
       }, [
         Y.$slots["left-sidebar"] ? (p(), A("div", Ss, [
           b1(Y.$slots, "left-sidebar", $1(j1(q.value)))
@@ -14956,22 +14956,22 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
           class: D1({ "dp--preset-dates-collapsed": e.collapse, "dp--preset-dates": !0 }),
           "data-dp-mobile": M(T)
         }, [
-          (p(!0), A(B1, null, n2(Y.presetDates, (F1, J4) => (p(), A(B1, { key: J4 }, [
-            F1.slot ? b1(Y.$slots, F1.slot, {
+          (p(!0), A(R1, null, r2(Y.presetDates, (I1, J4) => (p(), A(R1, { key: J4 }, [
+            I1.slot ? b1(Y.$slots, I1.slot, {
               key: 0,
               presetDate: G,
-              label: F1.label,
-              value: F1.value
+              label: I1.label,
+              value: I1.value
             }) : (p(), A("button", {
               key: 1,
               type: "button",
-              style: I4(F1.style || {}),
+              style: F4(I1.style || {}),
               class: D1(["dp__btn dp--preset-range", { "dp--preset-range-collapsed": e.collapse }]),
-              "data-test-id": F1.testId ?? void 0,
+              "data-test-id": I1.testId ?? void 0,
               "data-dp-mobile": M(T),
-              onClick: O2((w4) => G(F1.value, F1.noTz), ["prevent"]),
-              onKeydown: (w4) => M(v4)(w4, () => G(F1.value, F1.noTz), !0)
-            }, W1(F1.label), 47, Ts))
+              onClick: O2((w4) => G(I1.value, I1.noTz), ["prevent"]),
+              onKeydown: (w4) => M(v4)(w4, () => G(I1.value, I1.noTz), !0)
+            }, W1(I1.label), 47, Ts))
           ], 64))), 128))
         ], 10, ks)) : j("", !0),
         B("div", {
@@ -14989,29 +14989,29 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
             onUpdateFlowStep: M(L),
             onResetFlow: M(O),
             onFocusMenu: o1,
-            onSelectDate: N1[0] || (N1[0] = (F1) => Y.$emit("select-date")),
-            onDateUpdate: N1[1] || (N1[1] = (F1) => Y.$emit("date-update", F1)),
-            onTooltipOpen: N1[2] || (N1[2] = (F1) => Y.$emit("tooltip-open", F1)),
-            onTooltipClose: N1[3] || (N1[3] = (F1) => Y.$emit("tooltip-close", F1)),
-            onAutoApply: N1[4] || (N1[4] = (F1) => Y.$emit("auto-apply", F1)),
-            onRangeStart: N1[5] || (N1[5] = (F1) => Y.$emit("range-start", F1)),
-            onRangeEnd: N1[6] || (N1[6] = (F1) => Y.$emit("range-end", F1)),
-            onInvalidFixedRange: N1[7] || (N1[7] = (F1) => Y.$emit("invalid-fixed-range", F1)),
-            onTimeUpdate: N1[8] || (N1[8] = (F1) => Y.$emit("time-update")),
-            onAmPmChange: N1[9] || (N1[9] = (F1) => Y.$emit("am-pm-change", F1)),
-            onTimePickerOpen: N1[10] || (N1[10] = (F1) => Y.$emit("time-picker-open", F1)),
+            onSelectDate: N1[0] || (N1[0] = (I1) => Y.$emit("select-date")),
+            onDateUpdate: N1[1] || (N1[1] = (I1) => Y.$emit("date-update", I1)),
+            onTooltipOpen: N1[2] || (N1[2] = (I1) => Y.$emit("tooltip-open", I1)),
+            onTooltipClose: N1[3] || (N1[3] = (I1) => Y.$emit("tooltip-close", I1)),
+            onAutoApply: N1[4] || (N1[4] = (I1) => Y.$emit("auto-apply", I1)),
+            onRangeStart: N1[5] || (N1[5] = (I1) => Y.$emit("range-start", I1)),
+            onRangeEnd: N1[6] || (N1[6] = (I1) => Y.$emit("range-end", I1)),
+            onInvalidFixedRange: N1[7] || (N1[7] = (I1) => Y.$emit("invalid-fixed-range", I1)),
+            onTimeUpdate: N1[8] || (N1[8] = (I1) => Y.$emit("time-update")),
+            onAmPmChange: N1[9] || (N1[9] = (I1) => Y.$emit("am-pm-change", I1)),
+            onTimePickerOpen: N1[10] || (N1[10] = (I1) => Y.$emit("time-picker-open", I1)),
             onTimePickerClose: Q1,
             onRecalculatePosition: k1,
-            onUpdateMonthYear: N1[11] || (N1[11] = (F1) => Y.$emit("update-month-year", F1)),
-            onAutoApplyInvalid: N1[12] || (N1[12] = (F1) => Y.$emit("auto-apply-invalid", F1)),
-            onInvalidDate: N1[13] || (N1[13] = (F1) => Y.$emit("invalid-date", F1)),
-            onOverlayToggle: N1[14] || (N1[14] = (F1) => Y.$emit("overlay-toggle", F1)),
-            "onUpdate:internalModelValue": N1[15] || (N1[15] = (F1) => Y.$emit("update:internal-model-value", F1))
+            onUpdateMonthYear: N1[11] || (N1[11] = (I1) => Y.$emit("update-month-year", I1)),
+            onAutoApplyInvalid: N1[12] || (N1[12] = (I1) => Y.$emit("auto-apply-invalid", I1)),
+            onInvalidDate: N1[13] || (N1[13] = (I1) => Y.$emit("invalid-date", I1)),
+            onOverlayToggle: N1[14] || (N1[14] = (I1) => Y.$emit("overlay-toggle", I1)),
+            "onUpdate:internalModelValue": N1[15] || (N1[15] = (I1) => Y.$emit("update:internal-model-value", I1))
           }), f4({ _: 2 }, [
-            n2(Q.value, (F1, J4) => ({
-              name: F1,
+            r2(Q.value, (I1, J4) => ({
+              name: I1,
               fn: L1((w4) => [
-                b1(Y.$slots, F1, $1(j1({ ...w4 })))
+                b1(Y.$slots, I1, $1(j1({ ...w4 })))
               ])
             }))
           ]), 1040, ["flow-step", "onMount", "onUpdateFlowStep", "onResetFlow"]))
@@ -15028,18 +15028,18 @@ const M5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), le = (e, a) =
       ], 14, _s),
       !Y.autoApply || M(w).keepActionRow ? (p(), H1(Ol, t2({
         key: 3,
-        "menu-mount": I.value
+        "menu-mount": F.value
       }, n.value, {
         "calendar-width": g.value,
-        onClosePicker: N1[16] || (N1[16] = (F1) => Y.$emit("close-picker")),
-        onSelectDate: N1[17] || (N1[17] = (F1) => Y.$emit("select-date")),
-        onInvalidSelect: N1[18] || (N1[18] = (F1) => Y.$emit("invalid-select")),
+        onClosePicker: N1[16] || (N1[16] = (I1) => Y.$emit("close-picker")),
+        onSelectDate: N1[17] || (N1[17] = (I1) => Y.$emit("select-date")),
+        onInvalidSelect: N1[18] || (N1[18] = (I1) => Y.$emit("invalid-select")),
         onSelectNow: _1
       }), f4({ _: 2 }, [
-        n2(M(N), (F1, J4) => ({
-          name: F1,
+        r2(M(N), (I1, J4) => ({
+          name: I1,
           fn: L1((w4) => [
-            b1(Y.$slots, F1, $1(j1({ ...w4 })))
+            b1(Y.$slots, I1, $1(j1({ ...w4 })))
           ])
         }))
       ]), 1040, ["menu-mount", "calendar-width"])) : j("", !0)
@@ -15064,7 +15064,7 @@ const Ps = ({
   V4(w, () => {
     m.value = JSON.parse(JSON.stringify({})), P();
   });
-  const F = (O) => {
+  const I = (O) => {
     if (n.teleport) {
       const W = O.getBoundingClientRect();
       return {
@@ -15080,17 +15080,17 @@ const Ps = ({
   }, v = (O, W) => {
     n.position === M6.left && T(O), n.position === M6.right && _(O, W), n.position === M6.center && (m.value.left = `${O + W / 2 - u.value.width / 2}px`);
   }, g = (O) => {
-    const { width: W, height: z1 } = O.getBoundingClientRect(), { top: J, left: o1 } = F(O);
+    const { width: W, height: z1 } = O.getBoundingClientRect(), { top: J, left: o1 } = I(O);
     return { top: +J, left: +o1, width: W, height: z1 };
   }, x = () => {
     m.value.left = "50%", m.value.top = "50%", m.value.transform = "translate(-50%, -50%)", m.value.position = "fixed", delete m.value.opacity;
-  }, I = () => {
+  }, F = () => {
     const O = q2(t);
     m.value = n.altPosition(O);
   }, P = (O = !0) => {
     if (!i.value.enabled) {
       if (w.value) return x();
-      if (n.altPosition !== null) return I();
+      if (n.altPosition !== null) return F();
       if (O) {
         const W = n.teleport ? a.value?.$el : e.value;
         W && (u.value = W.getBoundingClientRect()), r("recalculate-position");
@@ -15220,10 +15220,10 @@ const Ps = ({
   { name: "tp-inline-arrow-up", use: ["shared", "time"] },
   { name: "tp-inline-arrow-down", use: ["shared", "time"] },
   { name: "menu-header", use: ["menu"] }
-], Fs = [{ name: "trigger" }, { name: "input-icon" }, { name: "clear-icon" }, { name: "dp-input" }], Is = {
+], Is = [{ name: "trigger" }, { name: "input-icon" }, { name: "clear-icon" }, { name: "dp-input" }], Fs = {
   all: () => w3,
   monthYear: () => w3.filter((e) => e.use.includes("month-year")),
-  input: () => Fs,
+  input: () => Is,
   timePicker: () => w3.filter((e) => e.use.includes("time")),
   action: () => w3.filter((e) => e.use.includes("action")),
   calendar: () => w3.filter((e) => e.use.includes("calendar")),
@@ -15232,7 +15232,7 @@ const Ps = ({
   yearMode: () => w3.filter((e) => e.use.includes("year-mode"))
 }, _4 = (e, a, t) => {
   const c = [];
-  return Is[a]().forEach((i) => {
+  return Fs[a]().forEach((i) => {
     e[i.name] && c.push(i.name);
   }), t?.length && t.forEach((i) => {
     i.slot && c.push(i.slot);
@@ -15248,7 +15248,7 @@ const Ps = ({
       seconds: 0
     };
     return c.value.enabled ? [w[b], w[b]] : w[b];
-  }, l = F3({
+  }, l = I3({
     hours: o("hours"),
     minutes: o("minutes"),
     seconds: o("seconds")
@@ -15297,23 +15297,23 @@ const Ps = ({
     !H.current && a.hideOffsetDates || (s.value = H.value);
   }, w = () => {
     s.value = null;
-  }, F = (H) => Array.isArray(e.value) && l.value.enabled && e.value[0] && s.value ? H ? E2(s.value, e.value[0]) : D2(s.value, e.value[0]) : !0, _ = (H, C) => {
+  }, I = (H) => Array.isArray(e.value) && l.value.enabled && e.value[0] && s.value ? H ? E2(s.value, e.value[0]) : D2(s.value, e.value[0]) : !0, _ = (H, C) => {
     const s1 = () => e.value ? C ? e.value[0] || null : e.value[1] : null, l2 = e.value && Array.isArray(e.value) ? s1() : null;
     return f2(l1(H.value), l2);
   }, T = (H) => {
     const C = Array.isArray(e.value) ? e.value[0] : null;
     return H ? !D2(s.value ?? null, C) : !0;
-  }, v = (H, C = !0) => (l.value.enabled || a.weekPicker) && Array.isArray(e.value) && e.value.length === 2 ? a.hideOffsetDates && !H.current ? !1 : f2(l1(H.value), e.value[C ? 0 : 1]) : l.value.enabled ? _(H, C) && T(C) || f2(H.value, Array.isArray(e.value) ? e.value[0] : null) && F(C) : !1, g = (H, C) => {
+  }, v = (H, C = !0) => (l.value.enabled || a.weekPicker) && Array.isArray(e.value) && e.value.length === 2 ? a.hideOffsetDates && !H.current ? !1 : f2(l1(H.value), e.value[C ? 0 : 1]) : l.value.enabled ? _(H, C) && T(C) || f2(H.value, Array.isArray(e.value) ? e.value[0] : null) && I(C) : !1, g = (H, C) => {
     if (Array.isArray(e.value) && e.value[0] && e.value.length === 1) {
       const s1 = f2(H.value, s.value);
       return C ? E2(e.value[0], H.value) && s1 : D2(e.value[0], H.value) && s1;
     }
     return !1;
-  }, x = (H) => !e.value || a.hideOffsetDates && !H.current ? !1 : l.value.enabled ? a.modelAuto && Array.isArray(e.value) ? f2(H.value, e.value[0] ? e.value[0] : m.value) : !1 : c.value.enabled && Array.isArray(e.value) ? e.value.some((C) => f2(C, H.value)) : f2(H.value, e.value ? e.value : m.value), I = (H) => {
+  }, x = (H) => !e.value || a.hideOffsetDates && !H.current ? !1 : l.value.enabled ? a.modelAuto && Array.isArray(e.value) ? f2(H.value, e.value[0] ? e.value[0] : m.value) : !1 : c.value.enabled && Array.isArray(e.value) ? e.value.some((C) => f2(C, H.value)) : f2(H.value, e.value ? e.value : m.value), F = (H) => {
     if (l.value.autoRange || a.weekPicker) {
       if (s.value) {
         if (a.hideOffsetDates && !H.current) return !1;
-        const C = F4(s.value, +l.value.autoRange), s1 = u3(l1(s.value), a.weekStart);
+        const C = I4(s.value, +l.value.autoRange), s1 = u3(l1(s.value), a.weekStart);
         return a.weekPicker ? f2(s1[1], l1(H.value)) : f2(C, l1(H.value));
       }
       return !1;
@@ -15322,7 +15322,7 @@ const Ps = ({
   }, P = (H) => {
     if (l.value.autoRange || a.weekPicker) {
       if (s.value) {
-        const C = F4(s.value, +l.value.autoRange);
+        const C = I4(s.value, +l.value.autoRange);
         if (a.hideOffsetDates && !H.current) return !1;
         const s1 = u3(l1(s.value), a.weekStart);
         return a.weekPicker ? E2(H.value, s1[0]) && D2(H.value, s1[1]) : E2(H.value, s.value) && D2(H.value, C);
@@ -15349,13 +15349,13 @@ const Ps = ({
     return C && (typeof r.value == "function" ? !r.value(H.value, C) : !r.value.options.highlightDisabled);
   }, L = (H) => typeof r.value == "function" ? r.value(H.value) : r.value.weekdays?.includes(H.value.getDay()), R = (H) => (l.value.enabled || a.weekPicker) && (!(t.value.count > 0) || H.current) && X() && !(!H.current && a.hideOffsetDates) && !x(H) ? U(H) : !1, O = (H) => {
     if (Array.isArray(e.value) && e.value.length === 1) {
-      const { before: C, after: s1 } = I7(+l.value.maxRange, e.value[0]);
-      return I6(H.value, C) || c6(H.value, s1);
+      const { before: C, after: s1 } = F7(+l.value.maxRange, e.value[0]);
+      return F6(H.value, C) || c6(H.value, s1);
     }
     return !1;
   }, W = (H) => {
     if (Array.isArray(e.value) && e.value.length === 1) {
-      const { before: C, after: s1 } = I7(+l.value.minRange, e.value[0]);
+      const { before: C, after: s1 } = F7(+l.value.minRange, e.value[0]);
       return g0([C, s1], e.value[0], H.value);
     }
     return !1;
@@ -15418,7 +15418,7 @@ const Ps = ({
     ...Q(H),
     dp__cell_auto_range: P(H),
     dp__cell_auto_range_start: E(H),
-    dp__cell_auto_range_end: I(H)
+    dp__cell_auto_range_end: F(H)
   }), x1 = (H) => l.value.enabled ? l.value.autoRange ? Z(H) : a.modelAuto ? { ...o1(H), ...Q(H) } : a.weekPicker ? k1(H) : Q(H) : a.weekPicker ? q(H) : o1(H);
   return {
     setHoverDate: b,
@@ -15440,7 +15440,7 @@ const Ps = ({
   }, b = (L, R, O, W) => {
     let z1 = !1;
     return W && (c.value.minDate || c.value.maxDate) ? c.value.minDate && c.value.maxDate ? z1 = m(L, R, O) : (c.value.minDate && u(L, R) || c.value.maxDate && s(L, R)) && (z1 = !0) : z1 = !0, z1;
-  }, w = (L) => Array.isArray(c.value.allowedDates) && !c.value.allowedDates.length ? !0 : c.value.allowedDates ? !t8(L, c.value.allowedDates, sa(e.monthPicker, e.yearPicker)) : !1, F = (L) => !l(L), _ = (L) => t.value.noDisabledRange ? !U9({ start: L[0], end: L[1] }).some((R) => F(R)) : !0, T = (L) => {
+  }, w = (L) => Array.isArray(c.value.allowedDates) && !c.value.allowedDates.length ? !0 : c.value.allowedDates ? !t8(L, c.value.allowedDates, sa(e.monthPicker, e.yearPicker)) : !1, I = (L) => !l(L), _ = (L) => t.value.noDisabledRange ? !U9({ start: L[0], end: L[1] }).some((R) => I(R)) : !0, T = (L) => {
     if (L) {
       const R = G1(L);
       return R >= +e.yearRange[0] && R <= e.yearRange[1];
@@ -15448,14 +15448,14 @@ const Ps = ({
     return !0;
   }, v = (L, R) => !!(Array.isArray(L) && L[R] && (t.value.maxRange || t.value.minRange) && T(L[R])), g = (L, R, O = 0) => {
     if (v(R, O) && T(L)) {
-      const W = R9(L, R[O]), z1 = ha(R[O], L), J = z1.length === 1 ? 0 : z1.filter((q) => F(q)).length, o1 = Math.abs(W) - (t.value.minMaxRawRange ? 0 : J);
+      const W = R9(L, R[O]), z1 = ha(R[O], L), J = z1.length === 1 ? 0 : z1.filter((q) => I(q)).length, o1 = Math.abs(W) - (t.value.minMaxRawRange ? 0 : J);
       if (t.value.minRange && t.value.maxRange)
         return o1 >= +t.value.minRange && o1 <= +t.value.maxRange;
       if (t.value.minRange) return o1 >= +t.value.minRange;
       if (t.value.maxRange) return o1 <= +t.value.maxRange;
     }
     return !0;
-  }, x = () => !e.enableTimePicker || e.monthPicker || e.yearPicker || e.ignoreTimeValidation, I = (L) => Array.isArray(L) ? [L[0] ? j8(L[0]) : null, L[1] ? j8(L[1]) : null] : j8(L), P = (L, R, O) => L.find(
+  }, x = () => !e.enableTimePicker || e.monthPicker || e.yearPicker || e.ignoreTimeValidation, F = (L) => Array.isArray(L) ? [L[0] ? j8(L[0]) : null, L[1] ? j8(L[1]) : null] : j8(L), P = (L, R, O) => L.find(
     (W) => +W.hours === g3(R) && W.minutes === "*" ? !0 : +W.minutes === R3(R) && +W.hours === g3(R)
   ) && O, E = (L, R, O) => {
     const [W, z1] = L, [J, o1] = R;
@@ -15469,14 +15469,14 @@ const Ps = ({
   }, X = (L, R) => e.disabledTimes ? Array.isArray(e.disabledTimes) ? U(R, L) : r1(R, L) : R, D = (L) => {
     let R = !0;
     if (!L || x()) return !0;
-    const O = !c.value.minDate && !c.value.maxDate ? I(L) : L;
-    return (e.maxTime || c.value.maxDate) && (R = F7(
+    const O = !c.value.minDate && !c.value.maxDate ? F(L) : L;
+    return (e.maxTime || c.value.maxDate) && (R = I7(
       e.maxTime,
       c.value.maxDate,
       "max",
       e4(O),
       R
-    )), (e.minTime || c.value.minDate) && (R = F7(
+    )), (e.minTime || c.value.minDate) && (R = I7(
       e.minTime,
       c.value.minDate,
       "min",
@@ -15502,7 +15502,7 @@ const Ps = ({
     return R;
   }, g1 = i1(() => (L) => !e.enableTimePicker || e.ignoreTimeValidation ? !0 : D(L)), w1 = i1(() => (L) => e.monthPicker ? Array.isArray(L) && (t.value.enabled || i.value.enabled) ? !L.filter((R) => !c1(R)).length : c1(L) : !0);
   return {
-    isDisabled: F,
+    isDisabled: I,
     validateDate: l,
     validateMonthYearInRange: b,
     isDateRangeAllowed: _,
@@ -15515,7 +15515,7 @@ const Ps = ({
   const e = i1(() => (c, i) => c?.includes(i)), a = i1(() => (c, i) => c.count ? c.solo ? !0 : i === 0 : !0), t = i1(() => (c, i) => c.count ? c.solo ? !0 : i === c.count - 1 : !0);
   return { hideNavigationButtons: e, showLeftIcon: a, showRightIcon: t };
 }, Rs = (e, a, t) => {
-  const c = m1(0), i = F3({
+  const c = m1(0), i = I3({
     [e6.timePicker]: !e.enableTimePicker || e.timePicker || e.monthPicker,
     [e6.calendar]: !1,
     [e6.header]: !1
@@ -15578,7 +15578,7 @@ const Ps = ({
       defaultedUI: m,
       getDefaultPattern: b,
       getDefaultStartTime: w
-    } = _2(i), { checkMinMaxRange: F } = $3(i), _ = m1(), T = m1(null), v = m1(!1), g = m1(!1), x = i1(
+    } = _2(i), { checkMinMaxRange: I } = $3(i), _ = m1(), T = m1(null), v = m1(!1), g = m1(!1), x = i1(
       () => ({
         dp__pointer: !i.disabled && !i.readonly && !r.value.enabled,
         dp__disabled: i.disabled,
@@ -15592,7 +15592,7 @@ const Ps = ({
         dp__input_reg: !r.value.enabled,
         ...m.value.input ?? {}
       })
-    ), I = () => {
+    ), F = () => {
       c("set-input-date", null), i.clearable && i.autoApply && (c("set-empty-date"), _.value = null);
     }, P = (q) => {
       const k1 = w();
@@ -15610,7 +15610,7 @@ const Ps = ({
         const Z = P(N.trim()), x1 = Q ? P(Q.trim()) : void 0;
         if (c6(Z, x1)) return;
         const H = Z && x1 ? [Z, x1] : [Z];
-        F(x1, H, 0) && (_.value = Z ? H : null);
+        I(x1, H, 0) && (_.value = Z ? H : null);
       }
     }, U = () => {
       g.value = !0;
@@ -15624,7 +15624,7 @@ const Ps = ({
         _.value = P(q);
     }, X = (q) => {
       const k1 = typeof q == "string" ? q : q.target?.value;
-      k1 !== "" ? (r.value.openMenu && !i.isMenuOpen && c("open"), r1(k1), c("set-input-date", _.value)) : I(), g.value = !1, c("update:input-value", k1), c("text-input", q, _.value);
+      k1 !== "" ? (r.value.openMenu && !i.isMenuOpen && c("open"), r1(k1), c("set-input-date", _.value)) : F(), g.value = !1, c("update:input-value", k1), c("text-input", q, _.value);
     }, D = (q) => {
       r.value.enabled ? (r1(q.target.value), r.value.enterSubmit && C5(_.value) && i.inputValue !== "" ? (c("set-input-date", _.value, !0), _.value = null) : r.value.enterSubmit && i.inputValue === "" && (_.value = null, c("clear"))) : w1(q);
     }, c1 = (q, k1) => {
@@ -15797,7 +15797,7 @@ const Ps = ({
     "text-input"
   ],
   setup(e, { expose: a, emit: t }) {
-    const c = t, i = e, r = r6(), n = m1(!1), o = d0(i, "modelValue"), l = d0(i, "timezone"), u = m1(null), s = m1(null), m = m1(null), b = m1(!1), w = m1(null), F = m1(!1), _ = m1(!1), T = m1(!1), v = m1(!1), { setMenuFocused: g, setShiftKey: x } = ya(), { clearArrowNav: I } = B3(), { validateDate: P, isValidTime: E } = $3(i), {
+    const c = t, i = e, r = r6(), n = m1(!1), o = d0(i, "modelValue"), l = d0(i, "timezone"), u = m1(null), s = m1(null), m = m1(null), b = m1(!1), w = m1(null), I = m1(!1), _ = m1(!1), T = m1(!1), v = m1(!1), { setMenuFocused: g, setShiftKey: x } = ya(), { clearArrowNav: F } = B3(), { validateDate: P, isValidTime: E } = $3(i), {
       defaultedTransitions: U,
       defaultedTextInput: r1,
       defaultedInline: X,
@@ -15808,9 +15808,9 @@ const Ps = ({
     t4(() => {
       H(i.modelValue), g4().then(() => {
         X.value.enabled || (N(w.value)?.addEventListener("scroll", G), window?.addEventListener("resize", a2));
-      }), X.value.enabled && (n.value = !0), window?.addEventListener("keyup", R1), window?.addEventListener("keydown", Y2);
+      }), X.value.enabled && (n.value = !0), window?.addEventListener("keyup", B1), window?.addEventListener("keydown", Y2);
     }), i6(() => {
-      X.value.enabled || (N(w.value)?.removeEventListener("scroll", G), window?.removeEventListener("resize", a2)), window?.removeEventListener("keyup", R1), window?.removeEventListener("keydown", Y2);
+      X.value.enabled || (N(w.value)?.removeEventListener("scroll", G), window?.removeEventListener("resize", a2)), window?.removeEventListener("keyup", B1), window?.removeEventListener("keydown", Y2);
     });
     const W = _4(r, "all", i.presetDates), z1 = _4(r, "input");
     V4(
@@ -15854,7 +15854,7 @@ const Ps = ({
       n.value && k1();
       const d1 = s.value?.$el.getBoundingClientRect().width ?? 0;
       T.value = document.body.offsetWidth <= d1;
-    }, R1 = (d1) => {
+    }, B1 = (d1) => {
       d1.key === "Tab" && !X.value.enabled && !i.teleport && D.value.tabOutClosesMenu && (w.value.contains(document.activeElement) || r4()), _.value = d1.shiftKey;
     }, Y2 = (d1) => {
       _.value = d1.shiftKey;
@@ -15867,23 +15867,23 @@ const Ps = ({
       return !d1 || !Array.isArray(d1) && P(d1) ? !0 : Array.isArray(d1) ? g1.value.enabled || d1.length === 2 && P(d1[0]) && P(d1[1]) ? !0 : c1.value.partialRange && !i.timePicker ? P(d1[0]) : !1 : !1;
     }, N1 = () => {
       l2() && Y() ? (C(), r4()) : c("invalid-select", x1.value);
-    }, F1 = (d1) => {
+    }, I1 = (d1) => {
       J4(), C(), D.value.closeOnAutoApply && !d1 && r4();
     }, J4 = () => {
       m.value && r1.value.enabled && m.value.setParsedDate(x1.value);
     }, w4 = (d1 = !1) => {
-      i.autoApply && E(x1.value) && Y() && (c1.value.enabled && Array.isArray(x1.value) ? (c1.value.partialRange || x1.value.length === 2) && F1(d1) : F1(d1));
+      i.autoApply && E(x1.value) && Y() && (c1.value.enabled && Array.isArray(x1.value) ? (c1.value.partialRange || x1.value.length === 2) && I1(d1) : I1(d1));
     }, M3 = () => {
       r1.value.enabled || (x1.value = null);
     }, r4 = (d1 = !1) => {
-      d1 && x1.value && D.value.setDateOnMenuClose && N1(), X.value.enabled || (n.value && (n.value = !1, q.value = !1, g(!1), x(!1), I(), c("closed"), Z.value && H(o.value)), M3(), c("blur"), s.value?.$el?.remove());
-    }, l6 = (d1, I1, A1 = !1) => {
+      d1 && x1.value && D.value.setDateOnMenuClose && N1(), X.value.enabled || (n.value && (n.value = !1, q.value = !1, g(!1), x(!1), F(), c("closed"), Z.value && H(o.value)), M3(), c("blur"), s.value?.$el?.remove());
+    }, l6 = (d1, F1, A1 = !1) => {
       if (!d1) {
         x1.value = null;
         return;
       }
       const d2 = Array.isArray(d1) ? !d1.some((b4) => !P(b4)) : P(d1), k4 = E(d1);
-      d2 && k4 ? (v.value = !0, x1.value = d1, I1 ? (F.value = A1, N1(), c("text-submit")) : i.autoApply && w4(!0), g4().then(() => {
+      d2 && k4 ? (v.value = !0, x1.value = d1, F1 ? (I.value = A1, N1(), c("text-submit")) : i.autoApply && w4(!0), g4().then(() => {
         v.value = !1;
       })) : c("invalid-date", d1);
     }, s6 = () => {
@@ -15893,7 +15893,7 @@ const Ps = ({
     }, j6 = () => {
       r1.value.enabled && (b.value = !0, s1()), c("focus");
     }, i2 = () => {
-      r1.value.enabled && (b.value = !1, H(i.modelValue), F.value && cl(w.value, _.value)?.focus()), c("blur");
+      r1.value.enabled && (b.value = !1, H(i.modelValue), I.value && cl(w.value, _.value)?.focus()), c("blur");
     }, f6 = (d1) => {
       s.value && s.value.updateMonthYear(0, {
         month: D7(d1.month),
@@ -15901,9 +15901,9 @@ const Ps = ({
       });
     }, Z3 = (d1) => {
       H(d1 ?? i.modelValue);
-    }, $ = (d1, I1) => {
-      s.value?.switchView(d1, I1);
-    }, y1 = (d1, I1) => D.value.onClickOutside ? D.value.onClickOutside(d1, I1) : r4(!0), P1 = (d1 = 0) => {
+    }, $ = (d1, F1) => {
+      s.value?.switchView(d1, F1);
+    }, y1 = (d1, F1) => D.value.onClickOutside ? D.value.onClickOutside(d1, F1) : r4(!0), P1 = (d1 = 0) => {
       s.value?.handleFlow(d1);
     }, U1 = () => u;
     return Gs(
@@ -15926,7 +15926,7 @@ const Ps = ({
       toggleMenu: U3,
       handleFlow: P1,
       getDpWrapMenuRef: U1
-    }), (d1, I1) => (p(), A("div", {
+    }), (d1, F1) => (p(), A("div", {
       ref_key: "pickerWrapperRef",
       ref: w,
       class: D1(f1.value),
@@ -15937,7 +15937,7 @@ const Ps = ({
         ref_key: "inputRef",
         ref: m,
         "input-value": M(Z),
-        "onUpdate:inputValue": I1[0] || (I1[0] = (A1) => t0(Z) ? Z.value = A1 : null),
+        "onUpdate:inputValue": F1[0] || (F1[0] = (A1) => t0(Z) ? Z.value = A1 : null),
         "is-menu-open": n.value
       }, d1.$props, {
         onClear: y4,
@@ -15949,17 +15949,17 @@ const Ps = ({
         onClose: r4,
         onFocus: j6,
         onBlur: i2,
-        onRealBlur: I1[1] || (I1[1] = (A1) => b.value = !1),
-        onTextInput: I1[2] || (I1[2] = (A1) => d1.$emit("text-input", A1))
+        onRealBlur: F1[1] || (F1[1] = (A1) => b.value = !1),
+        onTextInput: F1[2] || (F1[2] = (A1) => d1.$emit("text-input", A1))
       }), f4({ _: 2 }, [
-        n2(M(z1), (A1, d2) => ({
+        r2(M(z1), (A1, d2) => ({
           name: A1,
           fn: L1((k4) => [
             b1(d1.$slots, A1, $1(j1(k4)))
           ])
         }))
       ]), 1040, ["input-value", "is-menu-open", "onSetEmptyDate"]),
-      (p(), H1(T3(d1.teleport ? It : "div"), $1(j1(u1.value)), {
+      (p(), H1(T3(d1.teleport ? Ft : "div"), $1(j1(u1.value)), {
         default: L1(() => [
           e2(n6, {
             name: M(w1)(M(J)),
@@ -15979,7 +15979,7 @@ const Ps = ({
                   ref: s
                 }, d1.$props, {
                   "internal-model-value": M(x1),
-                  "onUpdate:internalModelValue": I1[3] || (I1[3] = (A1) => t0(x1) ? x1.value = A1 : null),
+                  "onUpdate:internalModelValue": F1[3] || (F1[3] = (A1) => t0(x1) ? x1.value = A1 : null),
                   class: { [Q1.value]: !0, "dp--menu-wrapper": d1.teleport },
                   "open-on-top": M(J),
                   "no-overlay-focus": y.value,
@@ -15990,25 +15990,25 @@ const Ps = ({
                   onSelectDate: N1,
                   onAutoApply: w4,
                   onTimeUpdate: s6,
-                  onFlowStep: I1[4] || (I1[4] = (A1) => d1.$emit("flow-step", A1)),
-                  onUpdateMonthYear: I1[5] || (I1[5] = (A1) => d1.$emit("update-month-year", A1)),
-                  onInvalidSelect: I1[6] || (I1[6] = (A1) => d1.$emit("invalid-select", M(x1))),
-                  onAutoApplyInvalid: I1[7] || (I1[7] = (A1) => d1.$emit("invalid-select", A1)),
-                  onInvalidFixedRange: I1[8] || (I1[8] = (A1) => d1.$emit("invalid-fixed-range", A1)),
+                  onFlowStep: F1[4] || (F1[4] = (A1) => d1.$emit("flow-step", A1)),
+                  onUpdateMonthYear: F1[5] || (F1[5] = (A1) => d1.$emit("update-month-year", A1)),
+                  onInvalidSelect: F1[6] || (F1[6] = (A1) => d1.$emit("invalid-select", M(x1))),
+                  onAutoApplyInvalid: F1[7] || (F1[7] = (A1) => d1.$emit("invalid-select", A1)),
+                  onInvalidFixedRange: F1[8] || (F1[8] = (A1) => d1.$emit("invalid-fixed-range", A1)),
                   onRecalculatePosition: M(k1),
-                  onTooltipOpen: I1[9] || (I1[9] = (A1) => d1.$emit("tooltip-open", A1)),
-                  onTooltipClose: I1[10] || (I1[10] = (A1) => d1.$emit("tooltip-close", A1)),
-                  onTimePickerOpen: I1[11] || (I1[11] = (A1) => d1.$emit("time-picker-open", A1)),
-                  onTimePickerClose: I1[12] || (I1[12] = (A1) => d1.$emit("time-picker-close", A1)),
-                  onAmPmChange: I1[13] || (I1[13] = (A1) => d1.$emit("am-pm-change", A1)),
-                  onRangeStart: I1[14] || (I1[14] = (A1) => d1.$emit("range-start", A1)),
-                  onRangeEnd: I1[15] || (I1[15] = (A1) => d1.$emit("range-end", A1)),
-                  onDateUpdate: I1[16] || (I1[16] = (A1) => d1.$emit("date-update", A1)),
-                  onInvalidDate: I1[17] || (I1[17] = (A1) => d1.$emit("invalid-date", A1)),
-                  onOverlayToggle: I1[18] || (I1[18] = (A1) => d1.$emit("overlay-toggle", A1)),
-                  onMenuBlur: I1[19] || (I1[19] = (A1) => d1.$emit("blur"))
+                  onTooltipOpen: F1[9] || (F1[9] = (A1) => d1.$emit("tooltip-open", A1)),
+                  onTooltipClose: F1[10] || (F1[10] = (A1) => d1.$emit("tooltip-close", A1)),
+                  onTimePickerOpen: F1[11] || (F1[11] = (A1) => d1.$emit("time-picker-open", A1)),
+                  onTimePickerClose: F1[12] || (F1[12] = (A1) => d1.$emit("time-picker-close", A1)),
+                  onAmPmChange: F1[13] || (F1[13] = (A1) => d1.$emit("am-pm-change", A1)),
+                  onRangeStart: F1[14] || (F1[14] = (A1) => d1.$emit("range-start", A1)),
+                  onRangeEnd: F1[15] || (F1[15] = (A1) => d1.$emit("range-end", A1)),
+                  onDateUpdate: F1[16] || (F1[16] = (A1) => d1.$emit("date-update", A1)),
+                  onInvalidDate: F1[17] || (F1[17] = (A1) => d1.$emit("invalid-date", A1)),
+                  onOverlayToggle: F1[18] || (F1[18] = (A1) => d1.$emit("overlay-toggle", A1)),
+                  onMenuBlur: F1[19] || (F1[19] = (A1) => d1.$emit("blur"))
                 }), f4({ _: 2 }, [
-                  n2(M(W), (A1, d2) => ({
+                  r2(M(W), (A1, d2) => ({
                     name: A1,
                     fn: L1((k4) => [
                       b1(d1.$slots, A1, $1(j1({ ...k4 })))
@@ -16038,7 +16038,7 @@ Object.entries(Js).forEach(([e, a]) => {
 });
 let Qs = {
   name: "DateField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -16124,7 +16124,7 @@ function af(e, a, t, c, i, r) {
 const x5 = /* @__PURE__ */ c2(ef, [["render", af]]);
 let tf = {
   name: "FileField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -16254,7 +16254,7 @@ function nf(e, a, t, c, i, r) {
         class: "form-control-file",
         style: { "margin-bottom": "10px" }
       }, null, 544),
-      r2(B("input", {
+      n2(B("input", {
         type: "text",
         class: D1(["form-control normalFileUpload", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -16903,7 +16903,7 @@ https://vue-select.org/api/props.html#getoptionkey`, e, a);
 }, Of = ["disabled", "title", "aria-label", "onClick"], Pf = {
   ref: "actions",
   class: "vs__actions"
-}, Ff = ["disabled"], If = { class: "vs__spinner" }, Ef = ["id"], Rf = ["id", "aria-selected", "onMouseover", "onClick"], Bf = {
+}, If = ["disabled"], Ff = { class: "vs__spinner" }, Ef = ["id"], Rf = ["id", "aria-selected", "onMouseover", "onClick"], Bf = {
   key: 0,
   class: "vs__no-options"
 }, $f = /* @__PURE__ */ a4(" Sorry, no matching options. "), Uf = ["id"];
@@ -16925,7 +16925,7 @@ function Zf(e, a, t, c, i, r) {
       onMousedown: a[1] || (a[1] = (o) => r.toggleDropdown(o))
     }, [
       B("div", Df, [
-        (p(!0), A(B1, null, n2(r.selectedValue, (o, l) => b1(e.$slots, "selected-option-container", {
+        (p(!0), A(R1, null, r2(r.selectedValue, (o, l) => b1(e.$slots, "selected-option-container", {
           option: r.normalizeOptionForSlot(o),
           deselect: r.deselect,
           multiple: t.multiple,
@@ -16958,7 +16958,7 @@ function Zf(e, a, t, c, i, r) {
         ])
       ], 512),
       B("div", Pf, [
-        r2(B("button", {
+        n2(B("button", {
           ref: "clearButton",
           disabled: t.disabled,
           type: "button",
@@ -16968,14 +16968,14 @@ function Zf(e, a, t, c, i, r) {
           onClick: a[0] || (a[0] = (...o) => r.clearSelection && r.clearSelection(...o))
         }, [
           (p(), H1(T3(r.childComponents.Deselect)))
-        ], 8, Ff), [
+        ], 8, If), [
           [m4, r.showClearButton]
         ]),
         b1(e.$slots, "open-indicator", $1(j1(r.scope.openIndicator)), () => [
           t.noDrop ? j("", !0) : (p(), H1(T3(r.childComponents.OpenIndicator), $1(t2({ key: 0 }, r.scope.openIndicator.attributes)), null, 16))
         ]),
         b1(e.$slots, "spinner", $1(j1(r.scope.spinner)), () => [
-          r2(B("div", If, "Loading...", 512), [
+          n2(B("div", Ff, "Loading...", 512), [
             [m4, e.mutableLoading]
           ])
         ])
@@ -16983,7 +16983,7 @@ function Zf(e, a, t, c, i, r) {
     ], 40, Tf),
     e2(n6, { name: t.transition }, {
       default: L1(() => [
-        r.dropdownOpen ? r2((p(), A("ul", {
+        r.dropdownOpen ? n2((p(), A("ul", {
           id: `vs${t.uid}__listbox`,
           ref: "dropdownMenu",
           key: `vs${t.uid}__listbox`,
@@ -16994,7 +16994,7 @@ function Zf(e, a, t, c, i, r) {
           onMouseup: a[3] || (a[3] = (...o) => r.onMouseUp && r.onMouseUp(...o))
         }, [
           b1(e.$slots, "list-header", $1(j1(r.scope.listHeader))),
-          (p(!0), A(B1, null, n2(r.filteredOptions, (o, l) => (p(), A("li", {
+          (p(!0), A(R1, null, r2(r.filteredOptions, (o, l) => (p(), A("li", {
             id: `vs${t.uid}__option-${l}`,
             key: t.getOptionKey(o),
             role: "option",
@@ -17252,7 +17252,7 @@ function Wf(e, a, t, c, i, r) {
       style: { "margin-bottom": "10px" }
     }, null, 40, qf)) : j("", !0),
     t.showOverwrite ? (p(), A("div", Yf, [
-      r2(B("input", {
+      n2(B("input", {
         type: "checkbox",
         "onUpdate:modelValue": a[3] || (a[3] = (o) => i.doOverwrite = o)
       }, null, 512), [
@@ -17283,7 +17283,7 @@ function Wf(e, a, t, c, i, r) {
 const ve = /* @__PURE__ */ c2(jf, [["render", Wf]]);
 let Gf = {
   name: "FileBrowserField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: Object
@@ -17484,7 +17484,7 @@ function Qf() {
         }) : z[f] = h, z;
       }
       function m(z) {
-        return b(z) || w(z) || F(z) || T();
+        return b(z) || w(z) || I(z) || T();
       }
       function b(z) {
         if (Array.isArray(z)) return _(z);
@@ -17492,7 +17492,7 @@ function Qf() {
       function w(z) {
         if (typeof Symbol < "u" && z[Symbol.iterator] != null || z["@@iterator"] != null) return Array.from(z);
       }
-      function F(z, f) {
+      function I(z, f) {
         if (z) {
           if (typeof z == "string") return _(z, f);
           var h = Object.prototype.toString.call(z).slice(8, -1);
@@ -17509,7 +17509,7 @@ function Qf() {
         throw new TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
       }
-      var v = typeof window < "u" && typeof window.document < "u", g = v ? window : {}, x = v && g.document.documentElement ? "ontouchstart" in g.document.documentElement : !1, I = v ? "PointerEvent" in g : !1, P = "cropper", E = "all", U = "crop", r1 = "move", X = "zoom", D = "e", c1 = "w", g1 = "s", w1 = "n", L = "ne", R = "nw", O = "se", W = "sw", z1 = "".concat(P, "-crop"), J = "".concat(P, "-disabled"), o1 = "".concat(P, "-hidden"), q = "".concat(P, "-hide"), k1 = "".concat(P, "-invisible"), N = "".concat(P, "-modal"), Q = "".concat(P, "-move"), Z = "".concat(P, "Action"), x1 = "".concat(P, "Preview"), H = "crop", C = "move", s1 = "none", l2 = "crop", f1 = "cropend", Q1 = "cropmove", u1 = "cropstart", V1 = "dblclick", y = x ? "touchstart" : "mousedown", _1 = x ? "touchmove" : "mousemove", G = x ? "touchend touchcancel" : "mouseup", a2 = I ? "pointerdown" : y, R1 = I ? "pointermove" : _1, Y2 = I ? "pointerup pointercancel" : G, L2 = "ready", y4 = "resize", Y = "wheel", N1 = "zoom", F1 = "image/jpeg", J4 = /^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/, w4 = /^data:/, M3 = /^data:image\/jpeg;base64,/, r4 = /^img|canvas$/i, l6 = 200, s6 = 100, U3 = {
+      var v = typeof window < "u" && typeof window.document < "u", g = v ? window : {}, x = v && g.document.documentElement ? "ontouchstart" in g.document.documentElement : !1, F = v ? "PointerEvent" in g : !1, P = "cropper", E = "all", U = "crop", r1 = "move", X = "zoom", D = "e", c1 = "w", g1 = "s", w1 = "n", L = "ne", R = "nw", O = "se", W = "sw", z1 = "".concat(P, "-crop"), J = "".concat(P, "-disabled"), o1 = "".concat(P, "-hidden"), q = "".concat(P, "-hide"), k1 = "".concat(P, "-invisible"), N = "".concat(P, "-modal"), Q = "".concat(P, "-move"), Z = "".concat(P, "Action"), x1 = "".concat(P, "Preview"), H = "crop", C = "move", s1 = "none", l2 = "crop", f1 = "cropend", Q1 = "cropmove", u1 = "cropstart", V1 = "dblclick", y = x ? "touchstart" : "mousedown", _1 = x ? "touchmove" : "mousemove", G = x ? "touchend touchcancel" : "mouseup", a2 = F ? "pointerdown" : y, B1 = F ? "pointermove" : _1, Y2 = F ? "pointerup pointercancel" : G, L2 = "ready", y4 = "resize", Y = "wheel", N1 = "zoom", I1 = "image/jpeg", J4 = /^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/, w4 = /^data:/, M3 = /^data:image\/jpeg;base64,/, r4 = /^img|canvas$/i, l6 = 200, s6 = 100, U3 = {
         // Define the view mode of the cropper
         viewMode: 0,
         // 0, 1, 2, 3
@@ -17608,11 +17608,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return typeof z == "function";
       }
       var d1 = Array.prototype.slice;
-      function I1(z) {
+      function F1(z) {
         return Array.from ? Array.from(z) : d1.call(z);
       }
       function A1(z, f) {
-        return z && U1(f) && (Array.isArray(z) || i2(z.length) ? I1(z).forEach(function(h, d) {
+        return z && U1(f) && (Array.isArray(z) || i2(z.length) ? F1(z).forEach(function(h, d) {
           f.call(z, h, d, z);
         }) : $(z) && Object.keys(z).forEach(function(h) {
           f.call(z, z[h], h, z);
@@ -17862,7 +17862,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           aspectRatio: k,
           width: j3,
           height: V3
-        }, "cover"), Fe = Math.min(Oe.width, Math.max(Pe.width, V)), Ie = Math.min(Oe.height, Math.max(Pe.height, S)), Ot = [-Fe / 2, -Ie / 2, Fe, Ie];
+        }, "cover"), Ie = Math.min(Oe.width, Math.max(Pe.width, V)), Fe = Math.min(Oe.height, Math.max(Pe.height, S)), Ot = [-Ie / 2, -Fe / 2, Ie, Fe];
         return a3.width = b4(x8), a3.height = b4(w8), M4.fillStyle = W2, M4.fillRect(0, 0, x8, w8), M4.save(), M4.translate(x8 / 2, w8 / 2), M4.rotate(v1 * Math.PI / 180), M4.scale(e1, h1), M4.imageSmoothingEnabled = U2, M4.imageSmoothingQuality = H4, M4.drawImage.apply(M4, [z].concat(m(Ot.map(function(Pt) {
           return Math.floor(b4(Pt));
         })))), M4.restore(), a3;
@@ -17884,7 +17884,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       }
       function wt(z, f) {
         for (var h = [], d = 8192, k = new Uint8Array(z); k.length > 0; )
-          h.push(Te.apply(null, I1(k.subarray(0, d)))), k = k.subarray(d);
+          h.push(Te.apply(null, F1(k.subarray(0, d)))), k = k.subarray(d);
         return "data:".concat(f, ";base64,").concat(btoa(h.join("")));
       }
       function Ht(z) {
@@ -18121,14 +18121,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           U1(h.cropstart) && D4(f, u1, h.cropstart), U1(h.cropmove) && D4(f, Q1, h.cropmove), U1(h.cropend) && D4(f, f1, h.cropend), U1(h.crop) && D4(f, l2, h.crop), U1(h.zoom) && D4(f, N1, h.zoom), D4(d, a2, this.onCropStart = this.cropStart.bind(this)), h.zoomable && h.zoomOnWheel && D4(d, Y, this.onWheel = this.wheel.bind(this), {
             passive: !1,
             capture: !0
-          }), h.toggleDragModeOnDblclick && D4(d, V1, this.onDblclick = this.dblclick.bind(this)), D4(f.ownerDocument, R1, this.onCropMove = this.cropMove.bind(this)), D4(f.ownerDocument, Y2, this.onCropEnd = this.cropEnd.bind(this)), h.responsive && D4(window, y4, this.onResize = this.resize.bind(this));
+          }), h.toggleDragModeOnDblclick && D4(d, V1, this.onDblclick = this.dblclick.bind(this)), D4(f.ownerDocument, B1, this.onCropMove = this.cropMove.bind(this)), D4(f.ownerDocument, Y2, this.onCropEnd = this.cropEnd.bind(this)), h.responsive && D4(window, y4, this.onResize = this.resize.bind(this));
         },
         unbind: function() {
           var f = this.element, h = this.options, d = this.cropper;
           U1(h.cropstart) && B4(f, u1, h.cropstart), U1(h.cropmove) && B4(f, Q1, h.cropmove), U1(h.cropend) && B4(f, f1, h.cropend), U1(h.crop) && B4(f, l2, h.crop), U1(h.zoom) && B4(f, N1, h.zoom), B4(d, a2, this.onCropStart), h.zoomable && h.zoomOnWheel && B4(d, Y, this.onWheel, {
             passive: !1,
             capture: !0
-          }), h.toggleDragModeOnDblclick && B4(d, V1, this.onDblclick), B4(f.ownerDocument, R1, this.onCropMove), B4(f.ownerDocument, Y2, this.onCropEnd), h.responsive && B4(window, y4, this.onResize);
+          }), h.toggleDragModeOnDblclick && B4(d, V1, this.onDblclick), B4(f.ownerDocument, B1, this.onCropMove), B4(f.ownerDocument, Y2, this.onCropEnd), h.responsive && B4(window, y4, this.onResize);
         }
       }, St = {
         resize: function() {
@@ -18661,7 +18661,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }
               var S = new XMLHttpRequest(), K = this.clone.bind(this);
               this.reloading = !0, this.xhr = S, S.onabort = K, S.onerror = K, S.ontimeout = K, S.onprogress = function() {
-                S.getResponseHeader("content-type") !== F1 && S.abort();
+                S.getResponseHeader("content-type") !== I1 && S.abort();
               }, S.onload = function() {
                 d.read(S.response);
               }, S.onloadend = function() {
@@ -18674,7 +18674,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           value: function(h) {
             var d = this.options, k = this.imageData, V = Ht(h), S = 0, K = 1, v1 = 1;
             if (V > 1) {
-              this.url = wt(h, F1);
+              this.url = wt(h, I1);
               var n1 = Lt(V);
               S = n1.rotate, K = n1.scaleX, v1 = n1.scaleY;
             }
@@ -19081,7 +19081,7 @@ function nu(e, a, t, c, i, r) {
 const pe = /* @__PURE__ */ c2(tu, [["render", nu]]);
 let ou = {
   name: "ImageField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -19193,7 +19193,7 @@ function uu(e, a, t, c, i, r) {
         onCancel: e.cancelImageEditor,
         onSave: e.saveImageEditor
       }, null, 8, ["imageUrl", "onCancel", "onSave"])) : j("", !0),
-      r2(B("div", null, [
+      n2(B("div", null, [
         B("input", {
           ref: "input",
           type: "file",
@@ -19203,7 +19203,7 @@ function uu(e, a, t, c, i, r) {
           class: "form-control-file normalFileUpload",
           style: { "margin-bottom": "10px" }
         }, null, 544),
-        r2(B("input", {
+        n2(B("input", {
           type: "text",
           class: D1(["form-control", { "is-invalid": l.invalid && l.touched }]),
           "aria-describedby": e.options.label,
@@ -19469,7 +19469,7 @@ function gu(e, a, t, c, i, r) {
       style: { "margin-bottom": "10px" }
     }, null, 40, vu)) : j("", !0),
     t.showOverwrite ? (p(), A("div", pu, [
-      r2(B("input", {
+      n2(B("input", {
         type: "checkbox",
         "onUpdate:modelValue": a[3] || (a[3] = (o) => i.doOverwrite = o)
       }, null, 512), [
@@ -19482,7 +19482,7 @@ function gu(e, a, t, c, i, r) {
 const Aa = /* @__PURE__ */ c2(du, [["render", gu]]);
 let zu = {
   name: "ImageBrowserField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: Object
@@ -19752,7 +19752,7 @@ function Cu(e, a, t, c, i, r) {
         onCancel: e.cancelImageEditor,
         onSave: e.saveImageEditor
       }, null, 8, ["imageUrl", "ratio", "cropperData", "onCancel", "onSave"])) : j("", !0),
-      r2(B("div", null, [
+      n2(B("div", null, [
         e2(o, t2({
           modelValue: e.imageFile,
           "onUpdate:modelValue": a[0] || (a[0] = (u) => e.imageFile = u)
@@ -19796,7 +19796,7 @@ function Cu(e, a, t, c, i, r) {
 const _a = /* @__PURE__ */ c2(yu, [["render", Cu]]);
 let Vu = {
   name: "NumberField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: Number
@@ -19843,7 +19843,7 @@ function Hu(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "number",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -19865,7 +19865,7 @@ function Hu(e, a, t, c, i, r) {
 const H5 = /* @__PURE__ */ c2(xu, [["render", Hu]]);
 let Lu = {
   name: "RadioField",
-  extends: F2,
+  extends: I2,
   emits: ["update:modelValue"],
   props: {
     modelValue: {
@@ -19948,11 +19948,11 @@ function Su(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1(() => [
-      (p(!0), A(B1, null, n2(e.schema.enum, (o, l) => (p(), A("div", {
+      (p(!0), A(R1, null, r2(e.schema.enum, (o, l) => (p(), A("div", {
         class: "form-check",
         key: o
       }, [
-        r2(B("input", {
+        n2(B("input", {
           class: "form-check-input",
           type: "radio",
           "onUpdate:modelValue": a[0] || (a[0] = (u) => e.model = u),
@@ -20049,7 +20049,7 @@ let ku = {
 const N5 = ku;
 let Tu = {
   name: "EmailField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String,
@@ -20100,7 +20100,7 @@ function Pu(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "email",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -20115,9 +20115,9 @@ function Pu(e, a, t, c, i, r) {
   }, 16);
 }
 const A5 = /* @__PURE__ */ c2(Du, [["render", Pu]]);
-let Fu = {
+let Iu = {
   name: "PasswordField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String,
@@ -20163,12 +20163,12 @@ let Fu = {
     }
   }
 };
-const Iu = Fu, Eu = ["aria-describedby", "placeholder", "readonly"];
+const Fu = Iu, Eu = ["aria-describedby", "placeholder", "readonly"];
 function Ru(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "password",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -20182,10 +20182,10 @@ function Ru(e, a, t, c, i, r) {
     _: 1
   }, 16);
 }
-const Sa = /* @__PURE__ */ c2(Iu, [["render", Ru]]);
+const Sa = /* @__PURE__ */ c2(Fu, [["render", Ru]]);
 let Bu = {
   name: "ColorField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String,
@@ -20236,7 +20236,7 @@ function Zu(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "color",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -20281,7 +20281,7 @@ function Wu(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("textarea", {
+      n2(B("textarea", {
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
         "onUpdate:modelValue": a[0] || (a[0] = (l) => e.model = l),
@@ -20387,7 +20387,7 @@ try {
 }
 var od = ge.navigator || {}, K7 = od.userAgent, X7 = K7 === void 0 ? "" : K7, g8 = ge, p4 = Ta, D0 = Da;
 g8.document;
-var ze = !!p4.documentElement && !!p4.head && typeof p4.addEventListener == "function" && typeof p4.createElement == "function", ld = ~X7.indexOf("MSIE") || ~X7.indexOf("Trident/"), z3 = "___FONT_AWESOME___", k5 = 16, Oa = "fa", Pa = "svg-inline--fa", Fa = "data-fa-i2svg";
+var ze = !!p4.documentElement && !!p4.head && typeof p4.addEventListener == "function" && typeof p4.createElement == "function", ld = ~X7.indexOf("MSIE") || ~X7.indexOf("Trident/"), z3 = "___FONT_AWESOME___", k5 = 16, Oa = "fa", Pa = "svg-inline--fa", Ia = "data-fa-i2svg";
 (function() {
   try {
     return process.env.NODE_ENV === "production";
@@ -20399,7 +20399,7 @@ var J8 = {
   GROUP: "group",
   PRIMARY: "primary",
   SECONDARY: "secondary"
-}, Ia = g8.FontAwesomeConfig || {};
+}, Fa = g8.FontAwesomeConfig || {};
 function sd(e) {
   var a = p4.querySelector("script[" + e + "]");
   if (a)
@@ -20412,7 +20412,7 @@ if (p4 && typeof p4.querySelector == "function") {
   var ud = [["data-family-prefix", "familyPrefix"], ["data-replacement-class", "replacementClass"], ["data-auto-replace-svg", "autoReplaceSvg"], ["data-auto-add-css", "autoAddCss"], ["data-auto-a11y", "autoA11y"], ["data-search-pseudo-elements", "searchPseudoElements"], ["data-observe-mutations", "observeMutations"], ["data-mutate-approach", "mutateApproach"], ["data-keep-original-source", "keepOriginalSource"], ["data-measure-performance", "measurePerformance"], ["data-show-missing-icons", "showMissingIcons"]];
   ud.forEach(function(e) {
     var a = ka(e, 2), t = a[0], c = a[1], i = fd(sd(t));
-    i != null && (Ia[c] = i);
+    i != null && (Fa[c] = i);
   });
 }
 var dd = {
@@ -20427,7 +20427,7 @@ var dd = {
   keepOriginalSource: !0,
   measurePerformance: !1,
   showMissingIcons: !0
-}, T5 = m2({}, dd, Ia);
+}, T5 = m2({}, dd, Fa);
 T5.autoReplaceSvg || (T5.observeMutations = !1);
 var u4 = m2({}, T5);
 g8.FontAwesomeConfig = u4;
@@ -20660,7 +20660,7 @@ function Ld(e) {
     })
   }, w = l.children ? {
     children: l.children.map(J7)
-  } : {}, F = {
+  } : {}, I = {
     tag: "g",
     attributes: m2({}, m.inner),
     children: [J7(m2({
@@ -20670,7 +20670,7 @@ function Ld(e) {
   }, _ = {
     tag: "g",
     attributes: m2({}, m.outer),
-    children: [F]
+    children: [I]
   }, T = "mask-".concat(r || n8()), v = "clip-".concat(r || n8()), g = {
     tag: "mask",
     attributes: m2({}, Q8, {
@@ -20763,11 +20763,11 @@ function _d(e) {
   }];
 }
 function Sd(e) {
-  var a = e.icons, t = a.main, c = a.mask, i = e.prefix, r = e.iconName, n = e.transform, o = e.symbol, l = e.title, u = e.maskId, s = e.titleId, m = e.extra, b = e.watchable, w = b === void 0 ? !1 : b, F = c.found ? c : t, _ = F.width, T = F.height, v = i === "fak", g = v ? "" : "fa-w-".concat(Math.ceil(_ / T * 16)), x = [u4.replacementClass, r ? "".concat(u4.familyPrefix, "-").concat(r) : "", g].filter(function(D) {
+  var a = e.icons, t = a.main, c = a.mask, i = e.prefix, r = e.iconName, n = e.transform, o = e.symbol, l = e.title, u = e.maskId, s = e.titleId, m = e.extra, b = e.watchable, w = b === void 0 ? !1 : b, I = c.found ? c : t, _ = I.width, T = I.height, v = i === "fak", g = v ? "" : "fa-w-".concat(Math.ceil(_ / T * 16)), x = [u4.replacementClass, r ? "".concat(u4.familyPrefix, "-").concat(r) : "", g].filter(function(D) {
     return m.classes.indexOf(D) === -1;
   }).filter(function(D) {
     return D !== "" || !!D;
-  }).concat(m.classes).join(" "), I = {
+  }).concat(m.classes).join(" "), F = {
     children: [],
     attributes: m2({}, m.attributes, {
       "data-prefix": i,
@@ -20780,14 +20780,14 @@ function Sd(e) {
   }, P = v && !~m.classes.indexOf("fa-fw") ? {
     width: "".concat(_ / T * 16 * 0.0625, "em")
   } : {};
-  w && (I.attributes[Fa] = ""), l && I.children.push({
+  w && (F.attributes[Ia] = ""), l && F.children.push({
     tag: "title",
     attributes: {
-      id: I.attributes["aria-labelledby"] || "title-".concat(s || n8())
+      id: F.attributes["aria-labelledby"] || "title-".concat(s || n8())
     },
     children: [l]
   });
-  var E = m2({}, I, {
+  var E = m2({}, F, {
     prefix: i,
     iconName: r,
     main: t,
@@ -20805,7 +20805,7 @@ function kd(e) {
   } : {}, {
     class: n.classes.join(" ")
   });
-  l && (u[Fa] = "");
+  l && (u[Ia] = "");
   var s = m2({}, n.styles);
   Ce(i) && (s.transform = wd({
     transform: i,
@@ -21458,7 +21458,7 @@ function Pd() {
   }
   return i;
 }
-var Fd = /* @__PURE__ */ (function() {
+var Id = /* @__PURE__ */ (function() {
   function e() {
     Gu(this, e), this.definitions = {};
   }
@@ -21516,7 +21516,7 @@ function t9(e) {
   if (c)
     return e9(y8.definitions, t, c) || e9(i3.styles, t, c);
 }
-function Id(e) {
+function Fd(e) {
   return function(a) {
     var t = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, c = (a || {}).icon ? a : t9(a || {}), i = t.mask;
     return i && (i = (i || {}).icon ? i : t9(i || {})), e(c, m2({}, t, {
@@ -21524,14 +21524,14 @@ function Id(e) {
     }));
   };
 }
-var y8 = new Fd(), c9 = !1, o8 = {
+var y8 = new Id(), c9 = !1, o8 = {
   transform: function(a) {
     return Dd(a);
   }
-}, Ed = Id(function(e) {
-  var a = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, t = a.transform, c = t === void 0 ? k3 : t, i = a.symbol, r = i === void 0 ? !1 : i, n = a.mask, o = n === void 0 ? null : n, l = a.maskId, u = l === void 0 ? null : l, s = a.title, m = s === void 0 ? null : s, b = a.titleId, w = b === void 0 ? null : b, F = a.classes, _ = F === void 0 ? [] : F, T = a.attributes, v = T === void 0 ? {} : T, g = a.styles, x = g === void 0 ? {} : g;
+}, Ed = Fd(function(e) {
+  var a = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {}, t = a.transform, c = t === void 0 ? k3 : t, i = a.symbol, r = i === void 0 ? !1 : i, n = a.mask, o = n === void 0 ? null : n, l = a.maskId, u = l === void 0 ? null : l, s = a.title, m = s === void 0 ? null : s, b = a.titleId, w = b === void 0 ? null : b, I = a.classes, _ = I === void 0 ? [] : I, T = a.attributes, v = T === void 0 ? {} : T, g = a.styles, x = g === void 0 ? {} : g;
   if (e) {
-    var I = e.prefix, P = e.iconName, E = e.icon;
+    var F = e.prefix, P = e.iconName, E = e.icon;
     return Ja(m2({
       type: "icon"
     }, e), function() {
@@ -21545,7 +21545,7 @@ var y8 = new Fd(), c9 = !1, o8 = {
             icon: {}
           }
         },
-        prefix: I,
+        prefix: F,
         iconName: P,
         transform: m2({}, k3, c),
         symbol: r,
@@ -21778,11 +21778,11 @@ var Bd = {
   prefix: "fas",
   iconName: "baby-carriage",
   icon: [512, 512, [], "f77d", "M144.8 17c-11.3-17.8-37.2-22.8-54-9.4C35.3 51.9 0 118 0 192h256L144.8 17zM496 96h-48c-35.3 0-64 28.7-64 64v64H0c0 50.6 23 96.4 60.3 130.7C25.7 363.6 0 394.7 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-8.9-1.8-17.2-4.4-25.2 21.6 5.9 44.6 9.2 68.4 9.2s46.9-3.3 68.4-9.2c-2.7 8-4.4 16.3-4.4 25.2 0 44.2 35.8 80 80 80s80-35.8 80-80c0-37.3-25.7-68.4-60.3-77.3C425 320.4 448 274.6 448 224v-64h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM80 464c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm320-32c0 17.6-14.4 32-32 32s-32-14.4-32-32 14.4-32 32-32 32 14.4 32 32z"]
-}, Fh = {
+}, Ih = {
   prefix: "fas",
   iconName: "backspace",
   icon: [640, 512, [], "f55a", "M576 64H205.26A63.97 63.97 0 0 0 160 82.75L9.37 233.37c-12.5 12.5-12.5 32.76 0 45.25L160 429.25c12 12 28.28 18.75 45.25 18.75H576c35.35 0 64-28.65 64-64V128c0-35.35-28.65-64-64-64zm-84.69 254.06c6.25 6.25 6.25 16.38 0 22.63l-22.62 22.62c-6.25 6.25-16.38 6.25-22.63 0L384 301.25l-62.06 62.06c-6.25 6.25-16.38 6.25-22.63 0l-22.62-22.62c-6.25-6.25-6.25-16.38 0-22.63L338.75 256l-62.06-62.06c-6.25-6.25-6.25-16.38 0-22.63l22.62-22.62c6.25-6.25 16.38-6.25 22.63 0L384 210.75l62.06-62.06c6.25-6.25 16.38-6.25 22.63 0l22.62 22.62c6.25 6.25 6.25 16.38 0 22.63L429.25 256l62.06 62.06z"]
-}, Ih = {
+}, Fh = {
   prefix: "fas",
   iconName: "backward",
   icon: [512, 512, [], "f04a", "M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"]
@@ -21994,11 +21994,11 @@ var Bd = {
   prefix: "fas",
   iconName: "box-tissue",
   icon: [512, 512, [], "e05b", "M383.88,287.82l64-192H338.47a70.2,70.2,0,0,1-66.59-48,70.21,70.21,0,0,0-66.6-48H63.88l64,288Zm-384,192a32,32,0,0,0,32,32h448a32,32,0,0,0,32-32v-64H-.12Zm480-256H438.94l-21.33,64h14.27a16,16,0,0,1,0,32h-352a16,16,0,1,1,0-32H95.09l-14.22-64h-49a32,32,0,0,0-32,32v128h512v-128A32,32,0,0,0,479.88,223.82Z"]
-}, Fm = {
+}, Im = {
   prefix: "fas",
   iconName: "boxes",
   icon: [576, 512, [], "f468", "M560 288h-80v96l-32-21.3-32 21.3v-96h-80c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V304c0-8.8-7.2-16-16-16zm-384-64h224c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16h-80v96l-32-21.3L256 96V0h-80c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16zm64 64h-80v96l-32-21.3L96 384v-96H16c-8.8 0-16 7.2-16 16v192c0 8.8 7.2 16 16 16h224c8.8 0 16-7.2 16-16V304c0-8.8-7.2-16-16-16z"]
-}, Im = {
+}, Fm = {
   prefix: "fas",
   iconName: "braille",
   icon: [640, 512, [], "f2a1", "M128 256c0 35.346-28.654 64-64 64S0 291.346 0 256s28.654-64 64-64 64 28.654 64 64zM64 384c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0-352C28.654 32 0 60.654 0 96s28.654 64 64 64 64-28.654 64-64-28.654-64-64-64zm160 192c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 160c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0-352c-35.346 0-64 28.654-64 64s28.654 64 64 64 64-28.654 64-64-28.654-64-64-64zm224 192c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 160c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0-352c-35.346 0-64 28.654-64 64s28.654 64 64 64 64-28.654 64-64-28.654-64-64-64zm160 192c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0 160c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32zm0-320c-17.673 0-32 14.327-32 32s14.327 32 32 32 32-14.327 32-32-14.327-32-32-32z"]
@@ -22210,11 +22210,11 @@ var Bd = {
   prefix: "fas",
   iconName: "chalkboard",
   icon: [640, 512, [], "f51b", "M96 64h448v352h64V40c0-22.06-17.94-40-40-40H72C49.94 0 32 17.94 32 40v376h64V64zm528 384H480v-64H288v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h608c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"]
-}, Fv = {
+}, Iv = {
   prefix: "fas",
   iconName: "chalkboard-teacher",
   icon: [640, 512, [], "f51c", "M208 352c-2.39 0-4.78.35-7.06 1.09C187.98 357.3 174.35 360 160 360c-14.35 0-27.98-2.7-40.95-6.91-2.28-.74-4.66-1.09-7.05-1.09C49.94 352-.33 402.48 0 464.62.14 490.88 21.73 512 48 512h224c26.27 0 47.86-21.12 48-47.38.33-62.14-49.94-112.62-112-112.62zm-48-32c53.02 0 96-42.98 96-96s-42.98-96-96-96-96 42.98-96 96 42.98 96 96 96zM592 0H208c-26.47 0-48 22.25-48 49.59V96c23.42 0 45.1 6.78 64 17.8V64h352v288h-64v-64H384v64h-76.24c19.1 16.69 33.12 38.73 39.69 64H592c26.47 0 48-22.25 48-49.59V49.59C640 22.25 618.47 0 592 0z"]
-}, Iv = {
+}, Fv = {
   prefix: "fas",
   iconName: "charging-station",
   icon: [576, 512, [], "f5e7", "M336 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h320c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm208-320V80c0-8.84-7.16-16-16-16s-16 7.16-16 16v48h-32V80c0-8.84-7.16-16-16-16s-16 7.16-16 16v48h-16c-8.84 0-16 7.16-16 16v32c0 35.76 23.62 65.69 56 75.93v118.49c0 13.95-9.5 26.92-23.26 29.19C431.22 402.5 416 388.99 416 372v-28c0-48.6-39.4-88-88-88h-8V64c0-35.35-28.65-64-64-64H96C60.65 0 32 28.65 32 64v352h288V304h8c22.09 0 40 17.91 40 40v24.61c0 39.67 28.92 75.16 68.41 79.01C481.71 452.05 520 416.41 520 372V251.93c32.38-10.24 56-40.17 56-75.93v-32c0-8.84-7.16-16-16-16h-16zm-283.91 47.76l-93.7 139c-2.2 3.33-6.21 5.24-10.39 5.24-7.67 0-13.47-6.28-11.67-12.92L167.35 224H108c-7.25 0-12.85-5.59-11.89-11.89l16-107C112.9 99.9 117.98 96 124 96h68c7.88 0 13.62 6.54 11.6 13.21L192 160h57.7c9.24 0 15.01 8.78 10.39 15.76z"]
@@ -22426,11 +22426,11 @@ var Bd = {
   prefix: "fas",
   iconName: "cog",
   icon: [512, 512, [], "f013", "M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]
-}, Fp = {
+}, Ip = {
   prefix: "fas",
   iconName: "cogs",
   icon: [640, 512, [], "f085", "M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"]
-}, Ip = {
+}, Fp = {
   prefix: "fas",
   iconName: "coins",
   icon: [512, 512, [], "f51e", "M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"]
@@ -22642,11 +22642,11 @@ var Bd = {
   prefix: "fas",
   iconName: "dna",
   icon: [448, 512, [], "f471", "M.1 494.1c-1.1 9.5 6.3 17.8 15.9 17.8l32.3.1c8.1 0 14.9-5.9 16-13.9.7-4.9 1.8-11.1 3.4-18.1H380c1.6 6.9 2.9 13.2 3.5 18.1 1.1 8 7.9 14 16 13.9l32.3-.1c9.6 0 17.1-8.3 15.9-17.8-4.6-37.9-25.6-129-118.9-207.7-17.6 12.4-37.1 24.2-58.5 35.4 6.2 4.6 11.4 9.4 17 14.2H159.7c21.3-18.1 47-35.6 78.7-51.4C410.5 199.1 442.1 65.8 447.9 17.9 449 8.4 441.6.1 432 .1L399.6 0c-8.1 0-14.9 5.9-16 13.9-.7 4.9-1.8 11.1-3.4 18.1H67.8c-1.6-7-2.7-13.1-3.4-18.1-1.1-8-7.9-14-16-13.9L16.1.1C6.5.1-1 8.4.1 17.9 5.3 60.8 31.4 171.8 160 256 31.5 340.2 5.3 451.2.1 494.1zM224 219.6c-25.1-13.7-46.4-28.4-64.3-43.6h128.5c-17.8 15.2-39.1 30-64.2 43.6zM355.1 96c-5.8 10.4-12.8 21.1-21 32H114c-8.3-10.9-15.3-21.6-21-32h262.1zM92.9 416c5.8-10.4 12.8-21.1 21-32h219.4c8.3 10.9 15.4 21.6 21.2 32H92.9z"]
-}, Fg = {
+}, Ig = {
   prefix: "fas",
   iconName: "dog",
   icon: [576, 512, [], "f6d3", "M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z"]
-}, Ig = {
+}, Fg = {
   prefix: "fas",
   iconName: "dollar-sign",
   icon: [288, 512, [], "f155", "M209.2 233.4l-108-31.6C88.7 198.2 80 186.5 80 173.5c0-16.3 13.2-29.5 29.5-29.5h66.3c12.2 0 24.2 3.7 34.2 10.5 6.1 4.1 14.3 3.1 19.5-2l34.8-34c7.1-6.9 6.1-18.4-1.8-24.5C238 74.8 207.4 64.1 176 64V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48h-2.5C45.8 64-5.4 118.7.5 183.6c4.2 46.1 39.4 83.6 83.8 96.6l102.5 30c12.5 3.7 21.2 15.3 21.2 28.3 0 16.3-13.2 29.5-29.5 29.5h-66.3C100 368 88 364.3 78 357.5c-6.1-4.1-14.3-3.1-19.5 2l-34.8 34c-7.1 6.9-6.1 18.4 1.8 24.5 24.5 19.2 55.1 29.9 86.5 30v48c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16v-48.2c46.6-.9 90.3-28.6 105.7-72.7 21.5-61.6-14.6-124.8-72.5-141.7z"]
@@ -22858,11 +22858,11 @@ var Bd = {
   prefix: "fas",
   iconName: "fighter-jet",
   icon: [640, 512, [], "f0fb", "M544 224l-128-16-48-16h-24L227.158 44h39.509C278.333 44 288 41.375 288 38s-9.667-6-21.333-6H152v12h16v164h-48l-66.667-80H18.667L8 138.667V208h8v16h48v2.666l-64 8v42.667l64 8V288H16v16H8v69.333L18.667 384h34.667L120 304h48v164h-16v12h114.667c11.667 0 21.333-2.625 21.333-6s-9.667-6-21.333-6h-39.509L344 320h24l48-16 128-16c96-21.333 96-26.583 96-32 0-5.417 0-10.667-96-32z"]
-}, Fz = {
+}, Iz = {
   prefix: "fas",
   iconName: "file",
   icon: [384, 512, [], "f15b", "M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"]
-}, Iz = {
+}, Fz = {
   prefix: "fas",
   iconName: "file-alt",
   icon: [384, 512, [], "f15c", "M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"]
@@ -23074,11 +23074,11 @@ var Bd = {
   prefix: "fas",
   iconName: "gas-pump",
   icon: [512, 512, [], "f52f", "M336 448H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm157.2-340.7l-81-81c-6.2-6.2-16.4-6.2-22.6 0l-11.3 11.3c-6.2 6.2-6.2 16.4 0 22.6L416 97.9V160c0 28.1 20.9 51.3 48 55.2V376c0 13.2-10.8 24-24 24s-24-10.8-24-24v-32c0-48.6-39.4-88-88-88h-8V64c0-35.3-28.7-64-64-64H96C60.7 0 32 28.7 32 64v352h288V304h8c22.1 0 40 17.9 40 40v27.8c0 37.7 27 72 64.5 75.9 43 4.3 79.5-29.5 79.5-71.7V152.6c0-17-6.8-33.3-18.8-45.3zM256 192H96V64h160v128z"]
-}, Fy = {
+}, Iy = {
   prefix: "fas",
   iconName: "gavel",
   icon: [512, 512, [], "f0e3", "M504.971 199.362l-22.627-22.627c-9.373-9.373-24.569-9.373-33.941 0l-5.657 5.657L329.608 69.255l5.657-5.657c9.373-9.373 9.373-24.569 0-33.941L312.638 7.029c-9.373-9.373-24.569-9.373-33.941 0L154.246 131.48c-9.373 9.373-9.373 24.569 0 33.941l22.627 22.627c9.373 9.373 24.569 9.373 33.941 0l5.657-5.657 39.598 39.598-81.04 81.04-5.657-5.657c-12.497-12.497-32.758-12.497-45.255 0L9.373 412.118c-12.497 12.497-12.497 32.758 0 45.255l45.255 45.255c12.497 12.497 32.758 12.497 45.255 0l114.745-114.745c12.497-12.497 12.497-32.758 0-45.255l-5.657-5.657 81.04-81.04 39.598 39.598-5.657 5.657c-9.373 9.373-9.373 24.569 0 33.941l22.627 22.627c9.373 9.373 24.569 9.373 33.941 0l124.451-124.451c9.372-9.372 9.372-24.568 0-33.941z"]
-}, Iy = {
+}, Fy = {
   prefix: "fas",
   iconName: "gem",
   icon: [576, 512, [], "f3a5", "M485.5 0L576 160H474.9L405.7 0h79.8zm-128 0l69.2 160H149.3L218.5 0h139zm-267 0h79.8l-69.2 160H0L90.5 0zM0 192h100.7l123 251.7c1.5 3.1-2.7 5.9-5 3.3L0 192zm148.2 0h279.6l-137 318.2c-1 2.4-4.5 2.4-5.5 0L148.2 192zm204.1 251.7l123-251.7H576L357.3 446.9c-2.3 2.7-6.5-.1-5-3.2z"]
@@ -23290,11 +23290,11 @@ var Bd = {
   prefix: "fas",
   iconName: "hand-point-down",
   icon: [384, 512, [], "f0a7", "M91.826 467.2V317.966c-8.248 5.841-16.558 10.57-24.918 14.153C35.098 345.752-.014 322.222 0 288c.008-18.616 10.897-32.203 29.092-40 28.286-12.122 64.329-78.648 77.323-107.534 7.956-17.857 25.479-28.453 43.845-28.464l.001-.002h171.526c11.812 0 21.897 8.596 23.703 20.269 7.25 46.837 38.483 61.76 38.315 123.731-.007 2.724.195 13.254.195 16 0 50.654-22.122 81.574-71.263 72.6-9.297 18.597-39.486 30.738-62.315 16.45-21.177 24.645-53.896 22.639-70.944 6.299V467.2c0 24.15-20.201 44.8-43.826 44.8-23.283 0-43.826-21.35-43.826-44.8zM112 72V24c0-13.255 10.745-24 24-24h192c13.255 0 24 10.745 24 24v48c0 13.255-10.745 24-24 24H136c-13.255 0-24-10.745-24-24zm212-24c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"]
-}, Fb = {
+}, Ib = {
   prefix: "fas",
   iconName: "hand-point-left",
   icon: [512, 512, [], "f0a5", "M44.8 155.826h149.234c-5.841-8.248-10.57-16.558-14.153-24.918C166.248 99.098 189.778 63.986 224 64c18.616.008 32.203 10.897 40 29.092 12.122 28.286 78.648 64.329 107.534 77.323 17.857 7.956 28.453 25.479 28.464 43.845l.002.001v171.526c0 11.812-8.596 21.897-20.269 23.703-46.837 7.25-61.76 38.483-123.731 38.315-2.724-.007-13.254.195-16 .195-50.654 0-81.574-22.122-72.6-71.263-18.597-9.297-30.738-39.486-16.45-62.315-24.645-21.177-22.639-53.896-6.299-70.944H44.8c-24.15 0-44.8-20.201-44.8-43.826 0-23.283 21.35-43.826 44.8-43.826zM440 176h48c13.255 0 24 10.745 24 24v192c0 13.255-10.745 24-24 24h-48c-13.255 0-24-10.745-24-24V200c0-13.255 10.745-24 24-24zm24 212c11.046 0 20-8.954 20-20s-8.954-20-20-20-20 8.954-20 20 8.954 20 20 20z"]
-}, Ib = {
+}, Fb = {
   prefix: "fas",
   iconName: "hand-point-right",
   icon: [512, 512, [], "f0a4", "M512 199.652c0 23.625-20.65 43.826-44.8 43.826h-99.851c16.34 17.048 18.346 49.766-6.299 70.944 14.288 22.829 2.147 53.017-16.45 62.315C353.574 425.878 322.654 448 272 448c-2.746 0-13.276-.203-16-.195-61.971.168-76.894-31.065-123.731-38.315C120.596 407.683 112 397.599 112 385.786V214.261l.002-.001c.011-18.366 10.607-35.889 28.464-43.845 28.886-12.994 95.413-49.038 107.534-77.323 7.797-18.194 21.384-29.084 40-29.092 34.222-.014 57.752 35.098 44.119 66.908-3.583 8.359-8.312 16.67-14.153 24.918H467.2c23.45 0 44.8 20.543 44.8 43.826zM96 200v192c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V200c0-13.255 10.745-24 24-24h48c13.255 0 24 10.745 24 24zM68 368c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20z"]
@@ -23506,11 +23506,11 @@ var Bd = {
   prefix: "fas",
   iconName: "house-damage",
   icon: [576, 512, [], "f6f1", "M288 114.96L69.47 307.71c-1.62 1.46-3.69 2.14-5.47 3.35V496c0 8.84 7.16 16 16 16h149.23L192 439.19l104.11-64-60.16-119.22L384 392.75l-104.11 64L319.81 512H496c8.84 0 16-7.16 16-16V311.1c-1.7-1.16-3.72-1.82-5.26-3.2L288 114.96zm282.69 121.32L512 184.45V48c0-8.84-7.16-16-16-16h-64c-8.84 0-16 7.16-16 16v51.69L314.75 10.31C307.12 3.45 297.56.01 288 0s-19.1 3.41-26.7 10.27L5.31 236.28c-6.57 5.91-7.12 16.02-1.21 22.6l21.4 23.82c5.9 6.57 16.02 7.12 22.6 1.21L277.42 81.63c6.05-5.33 15.12-5.33 21.17 0L527.91 283.9c6.57 5.9 16.69 5.36 22.6-1.21l21.4-23.82c5.9-6.57 5.36-16.69-1.22-22.59z"]
-}, FM = {
+}, IM = {
   prefix: "fas",
   iconName: "house-user",
   icon: [576, 512, [], "e065", "M570.69,236.27,512,184.44V48a16,16,0,0,0-16-16H432a16,16,0,0,0-16,16V99.67L314.78,10.3C308.5,4.61,296.53,0,288,0s-20.46,4.61-26.74,10.3l-256,226A18.27,18.27,0,0,0,0,248.2a18.64,18.64,0,0,0,4.09,10.71L25.5,282.7a21.14,21.14,0,0,0,12,5.3,21.67,21.67,0,0,0,10.69-4.11l15.9-14V480a32,32,0,0,0,32,32H480a32,32,0,0,0,32-32V269.88l15.91,14A21.94,21.94,0,0,0,538.63,288a20.89,20.89,0,0,0,11.87-5.31l21.41-23.81A21.64,21.64,0,0,0,576,248.19,21,21,0,0,0,570.69,236.27ZM288,176a64,64,0,1,1-64,64A64,64,0,0,1,288,176ZM400,448H176a16,16,0,0,1-16-16,96,96,0,0,1,96-96h64a96,96,0,0,1,96,96A16,16,0,0,1,400,448Z"]
-}, IM = {
+}, FM = {
   prefix: "fas",
   iconName: "hryvnia",
   icon: [384, 512, [], "f6f2", "M368 240c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16h-41.86c13.41-28.63 13.74-63.33-4.13-94.05C303.34 49.84 267.1 32 229.96 32h-78.82c-24.32 0-47.86 8.53-66.54 24.09L72.83 65.9c-10.18 8.49-11.56 23.62-3.07 33.8l20.49 24.59c8.49 10.19 23.62 11.56 33.81 3.07l11.73-9.78c4.32-3.6 9.77-5.57 15.39-5.57h83.62c11.69 0 21.2 9.52 21.2 21.2 0 5.91-2.48 11.58-6.81 15.58L219.7 176H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h134.37l-34.67 32H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h41.86c-13.41 28.63-13.74 63.33 4.13 94.05C80.66 462.15 116.9 480 154.04 480h78.82c24.32 0 47.86-8.53 66.54-24.09l11.77-9.81c10.18-8.49 11.56-23.62 3.07-33.8l-20.49-24.59c-8.49-10.19-23.62-11.56-33.81-3.07l-11.75 9.8a23.992 23.992 0 0 1-15.36 5.56H149.2c-11.69 0-21.2-9.52-21.2-21.2 0-5.91 2.48-11.58 6.81-15.58L164.3 336H368c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16H233.63l34.67-32H368z"]
@@ -23722,11 +23722,11 @@ var Bd = {
   prefix: "fas",
   iconName: "list-ol",
   icon: [512, 512, [], "f0cb", "M61.77 401l17.5-20.15a19.92 19.92 0 0 0 5.07-14.19v-3.31C84.34 356 80.5 352 73 352H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h22.83a157.41 157.41 0 0 0-11 12.31l-5.61 7c-4 5.07-5.25 10.13-2.8 14.88l1.05 1.93c3 5.76 6.29 7.88 12.25 7.88h4.73c10.33 0 15.94 2.44 15.94 9.09 0 4.72-4.2 8.22-14.36 8.22a41.54 41.54 0 0 1-15.47-3.12c-6.49-3.88-11.74-3.5-15.6 3.12l-5.59 9.31c-3.72 6.13-3.19 11.72 2.63 15.94 7.71 4.69 20.38 9.44 37 9.44 34.16 0 48.5-22.75 48.5-44.12-.03-14.38-9.12-29.76-28.73-34.88zM496 224H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zM16 160h64a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H64V40a8 8 0 0 0-8-8H32a8 8 0 0 0-7.14 4.42l-8 16A8 8 0 0 0 24 64h8v64H16a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8zm-3.91 160H80a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8H41.32c3.29-10.29 48.34-18.68 48.34-56.44 0-29.06-25-39.56-44.47-39.56-21.36 0-33.8 10-40.46 18.75-4.37 5.59-3 10.84 2.8 15.37l8.58 6.88c5.61 4.56 11 2.47 16.12-2.44a13.44 13.44 0 0 1 9.46-3.84c3.33 0 9.28 1.56 9.28 8.75C51 248.19 0 257.31 0 304.59v4C0 316 5.08 320 12.09 320z"]
-}, FC = {
+}, IC = {
   prefix: "fas",
   iconName: "list-ul",
   icon: [512, 512, [], "f0ca", "M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"]
-}, IC = {
+}, FC = {
   prefix: "fas",
   iconName: "location-arrow",
   icon: [512, 512, [], "f124", "M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"]
@@ -23938,11 +23938,11 @@ var Bd = {
   prefix: "fas",
   iconName: "money-bill-wave",
   icon: [640, 512, [], "f53a", "M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM48 132.22c20.12 5.04 41.12 7.57 62.72 8.93C104.84 170.54 79 192.69 48 192.69v-60.47zm0 285v-47.78c34.37 0 62.18 27.27 63.71 61.4-22.53-1.81-43.59-6.31-63.71-13.62zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 27.78c-17.52-4.39-35.71-6.85-54.32-8.44 5.87-26.08 27.5-45.88 54.32-49.28v57.72zm0-236.11c-30.89-3.91-54.86-29.7-55.81-61.55 19.54 2.17 38.09 6.23 55.81 12.66v48.89z"]
-}, FV = {
+}, IV = {
   prefix: "fas",
   iconName: "money-bill-wave-alt",
   icon: [640, 512, [], "f53b", "M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96z"]
-}, IV = {
+}, FV = {
   prefix: "fas",
   iconName: "money-check",
   icon: [640, 512, [], "f53c", "M0 448c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V128H0v320zm448-208c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-32zm0 120c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H456c-4.42 0-8-3.58-8-8v-16zM64 264c0-4.42 3.58-8 8-8h304c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm0 96c0-4.42 3.58-8 8-8h176c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zM624 32H16C7.16 32 0 39.16 0 48v48h640V48c0-8.84-7.16-16-16-16z"]
@@ -24154,11 +24154,11 @@ var Bd = {
   prefix: "fas",
   iconName: "person-booth",
   icon: [576, 512, [], "f756", "M192 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320h-64v176zm32-272h-50.9l-45.2-45.3C115.8 166.6 99.7 160 82.7 160H64c-17.1 0-33.2 6.7-45.3 18.8C6.7 190.9 0 207 0 224.1L.2 320 0 480c0 17.7 14.3 32 31.9 32 17.6 0 32-14.3 32-32l.1-100.7c.9.5 1.6 1.3 2.5 1.7l29.1 43v56c0 17.7 14.3 32 32 32s32-14.3 32-32v-56.5c0-9.9-2.3-19.8-6.7-28.6l-41.2-61.3V253l20.9 20.9c9.1 9.1 21.1 14.1 33.9 14.1H224c17.7 0 32-14.3 32-32s-14.3-32-32-32zM64 128c26.5 0 48-21.5 48-48S90.5 32 64 32 16 53.5 16 80s21.5 48 48 48zm224-96l31.5 223.1-30.9 154.6c-4.3 21.6 13 38.3 31.4 38.3 15.2 0 28-9.1 32.3-30.4.9 16.9 14.6 30.4 31.7 30.4 17.7 0 32-14.3 32-32 0 17.7 14.3 32 32 32s32-14.3 32-32V0H288v32zm-96 0v160h64V0h-32c-17.7 0-32 14.3-32 32zM544 0h-32v496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V32c0-17.7-14.3-32-32-32z"]
-}, Fx = {
+}, Ix = {
   prefix: "fas",
   iconName: "phone",
   icon: [512, 512, [], "f095", "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"]
-}, Ix = {
+}, Fx = {
   prefix: "fas",
   iconName: "phone-alt",
   icon: [512, 512, [], "f879", "M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"]
@@ -24370,11 +24370,11 @@ var Bd = {
   prefix: "fas",
   iconName: "record-vinyl",
   icon: [512, 512, [], "f8d9", "M256 152a104 104 0 1 0 104 104 104 104 0 0 0-104-104zm0 128a24 24 0 1 1 24-24 24 24 0 0 1-24 24zm0-272C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 376a128 128 0 1 1 128-128 128 128 0 0 1-128 128z"]
-}, Fw = {
+}, Iw = {
   prefix: "fas",
   iconName: "recycle",
   icon: [512, 512, [], "f1b8", "M184.561 261.903c3.232 13.997-12.123 24.635-24.068 17.168l-40.736-25.455-50.867 81.402C55.606 356.273 70.96 384 96.012 384H148c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12H96.115c-75.334 0-121.302-83.048-81.408-146.88l50.822-81.388-40.725-25.448c-12.081-7.547-8.966-25.961 4.879-29.158l110.237-25.45c8.611-1.988 17.201 3.381 19.189 11.99l25.452 110.237zm98.561-182.915l41.289 66.076-40.74 25.457c-12.051 7.528-9 25.953 4.879 29.158l110.237 25.45c8.672 1.999 17.215-3.438 19.189-11.99l25.45-110.237c3.197-13.844-11.99-24.719-24.068-17.168l-40.687 25.424-41.263-66.082c-37.521-60.033-125.209-60.171-162.816 0l-17.963 28.766c-3.51 5.62-1.8 13.021 3.82 16.533l33.919 21.195c5.62 3.512 13.024 1.803 16.536-3.817l17.961-28.743c12.712-20.341 41.973-19.676 54.257-.022zM497.288 301.12l-27.515-44.065c-3.511-5.623-10.916-7.334-16.538-3.821l-33.861 21.159c-5.62 3.512-7.33 10.915-3.818 16.536l27.564 44.112c13.257 21.211-2.057 48.96-27.136 48.96H320V336.02c0-14.213-17.242-21.383-27.313-11.313l-80 79.981c-6.249 6.248-6.249 16.379 0 22.627l80 79.989C302.689 517.308 320 510.3 320 495.989V448h95.88c75.274 0 121.335-82.997 81.408-146.88z"]
-}, Iw = {
+}, Fw = {
   prefix: "fas",
   iconName: "redo",
   icon: [512, 512, [], "f01e", "M500.33 0h-47.41a12 12 0 0 0-12 12.57l4 82.76A247.42 247.42 0 0 0 256 8C119.34 8 7.9 119.53 8 256.19 8.1 393.07 119.1 504 256 504a247.1 247.1 0 0 0 166.18-63.91 12 12 0 0 0 .48-17.43l-34-34a12 12 0 0 0-16.38-.55A176 176 0 1 1 402.1 157.8l-101.53-4.87a12 12 0 0 0-12.57 12v47.41a12 12 0 0 0 12 12h200.33a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12z"]
@@ -24586,11 +24586,11 @@ var Bd = {
   prefix: "fas",
   iconName: "shopping-basket",
   icon: [576, 512, [], "f291", "M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"]
-}, FH = {
+}, IH = {
   prefix: "fas",
   iconName: "shopping-cart",
   icon: [576, 512, [], "f07a", "M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z"]
-}, IH = {
+}, FH = {
   prefix: "fas",
   iconName: "shower",
   icon: [512, 512, [], "f2cc", "M304,320a16,16,0,1,0,16,16A16,16,0,0,0,304,320Zm32-96a16,16,0,1,0,16,16A16,16,0,0,0,336,224Zm32,64a16,16,0,1,0-16-16A16,16,0,0,0,368,288Zm-32,32a16,16,0,1,0-16-16A16,16,0,0,0,336,320Zm-32-64a16,16,0,1,0,16,16A16,16,0,0,0,304,256Zm128-32a16,16,0,1,0-16-16A16,16,0,0,0,432,224Zm-48,16a16,16,0,1,0,16-16A16,16,0,0,0,384,240Zm-16-48a16,16,0,1,0,16,16A16,16,0,0,0,368,192Zm96,32a16,16,0,1,0,16,16A16,16,0,0,0,464,224Zm32-32a16,16,0,1,0,16,16A16,16,0,0,0,496,192Zm-64,64a16,16,0,1,0,16,16A16,16,0,0,0,432,256Zm-32,32a16,16,0,1,0,16,16A16,16,0,0,0,400,288Zm-64,64a16,16,0,1,0,16,16A16,16,0,0,0,336,352Zm-32,32a16,16,0,1,0,16,16A16,16,0,0,0,304,384Zm64-64a16,16,0,1,0,16,16A16,16,0,0,0,368,320Zm21.65-218.35-11.3-11.31a16,16,0,0,0-22.63,0L350.05,96A111.19,111.19,0,0,0,272,64c-19.24,0-37.08,5.3-52.9,13.85l-10-10A121.72,121.72,0,0,0,123.44,32C55.49,31.5,0,92.91,0,160.85V464a16,16,0,0,0,16,16H48a16,16,0,0,0,16-16V158.4c0-30.15,21-58.2,51-61.93a58.38,58.38,0,0,1,48.93,16.67l10,10C165.3,138.92,160,156.76,160,176a111.23,111.23,0,0,0,32,78.05l-5.66,5.67a16,16,0,0,0,0,22.62l11.3,11.31a16,16,0,0,0,22.63,0L389.65,124.28A16,16,0,0,0,389.65,101.65Z"]
@@ -24802,11 +24802,11 @@ var Bd = {
   prefix: "fas",
   iconName: "spinner",
   icon: [512, 512, [], "f110", "M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"]
-}, FL = {
+}, IL = {
   prefix: "fas",
   iconName: "splotch",
   icon: [512, 512, [], "f5bc", "M472.29 195.89l-67.06-22.95c-19.28-6.6-33.54-20.92-38.14-38.3L351.1 74.19c-11.58-43.77-76.57-57.13-109.98-22.62l-46.14 47.67c-13.26 13.71-33.54 20.93-54.2 19.31l-71.88-5.62c-52.05-4.07-86.93 44.88-59.03 82.83l38.54 52.42c11.08 15.07 12.82 33.86 4.64 50.24L24.62 355.4c-20.59 41.25 22.84 84.87 73.49 73.81l69.96-15.28c20.11-4.39 41.45 0 57.07 11.73l54.32 40.83c39.32 29.56 101.04 7.57 104.45-37.22l4.7-61.86c1.35-17.79 12.8-33.86 30.63-42.99l62-31.74c44.88-22.96 39.59-80.17-8.95-96.79z"]
-}, IL = {
+}, FL = {
   prefix: "fas",
   iconName: "spray-can",
   icon: [512, 512, [], "f5bd", "M224 32c0-17.67-14.33-32-32-32h-64c-17.67 0-32 14.33-32 32v96h128V32zm256 96c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm-256 32H96c-53.02 0-96 42.98-96 96v224c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V256c0-53.02-42.98-96-96-96zm-64 256c-44.18 0-80-35.82-80-80s35.82-80 80-80 80 35.82 80 80-35.82 80-80 80zM480 96c17.67 0 32-14.33 32-32s-14.33-32-32-32-32 14.33-32 32 14.33 32 32 32zm-96 32c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm-96-96c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm96 0c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm96 192c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32z"]
@@ -25018,11 +25018,11 @@ var Bd = {
   prefix: "fas",
   iconName: "teeth",
   icon: [640, 512, [], "f62e", "M544 0H96C42.98 0 0 42.98 0 96v320c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96zM160 368c0 26.51-21.49 48-48 48s-48-21.49-48-48v-64c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v64zm0-128c0 8.84-7.16 16-16 16H80c-8.84 0-16-7.16-16-16v-64c0-26.51 21.49-48 48-48s48 21.49 48 48v64zm144 120c0 30.93-25.07 56-56 56s-56-25.07-56-56v-56c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v56zm0-120c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-88c0-30.93 25.07-56 56-56s56 25.07 56 56v88zm144 120c0 30.93-25.07 56-56 56s-56-25.07-56-56v-56c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v56zm0-120c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-88c0-30.93 25.07-56 56-56s56 25.07 56 56v88zm128 128c0 26.51-21.49 48-48 48s-48-21.49-48-48v-64c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v64zm0-128c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-64c0-26.51 21.49-48 48-48s48 21.49 48 48v64z"]
-}, FN = {
+}, IN = {
   prefix: "fas",
   iconName: "teeth-open",
   icon: [640, 512, [], "f62f", "M544 0H96C42.98 0 0 42.98 0 96v64c0 35.35 28.66 64 64 64h512c35.34 0 64-28.65 64-64V96c0-53.02-42.98-96-96-96zM160 176c0 8.84-7.16 16-16 16H80c-8.84 0-16-7.16-16-16v-32c0-26.51 21.49-48 48-48s48 21.49 48 48v32zm144 0c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-56c0-30.93 25.07-56 56-56s56 25.07 56 56v56zm144 0c0 8.84-7.16 16-16 16h-80c-8.84 0-16-7.16-16-16v-56c0-30.93 25.07-56 56-56s56 25.07 56 56v56zm128 0c0 8.84-7.16 16-16 16h-64c-8.84 0-16-7.16-16-16v-32c0-26.51 21.49-48 48-48s48 21.49 48 48v32zm0 144H64c-35.34 0-64 28.65-64 64v32c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96v-32c0-35.35-28.66-64-64-64zm-416 80c0 26.51-21.49 48-48 48s-48-21.49-48-48v-32c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v32zm144-8c0 30.93-25.07 56-56 56s-56-25.07-56-56v-24c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v24zm144 0c0 30.93-25.07 56-56 56s-56-25.07-56-56v-24c0-8.84 7.16-16 16-16h80c8.84 0 16 7.16 16 16v24zm128 8c0 26.51-21.49 48-48 48s-48-21.49-48-48v-32c0-8.84 7.16-16 16-16h64c8.84 0 16 7.16 16 16v32z"]
-}, IN = {
+}, FN = {
   prefix: "fas",
   iconName: "temperature-high",
   icon: [512, 512, [], "f769", "M416 0c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm0 128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm-160-16C256 50.1 205.9 0 144 0S32 50.1 32 112v166.5C12.3 303.2 0 334 0 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-34-12.3-64.9-32-89.5V112zM144 448c-44.1 0-80-35.9-80-80 0-25.5 12.2-48.9 32-63.8V112c0-26.5 21.5-48 48-48s48 21.5 48 48v192.2c19.8 14.8 32 38.3 32 63.8 0 44.1-35.9 80-80 80zm16-125.1V112c0-8.8-7.2-16-16-16s-16 7.2-16 16v210.9c-18.6 6.6-32 24.2-32 45.1 0 26.5 21.5 48 48 48s48-21.5 48-48c0-20.9-13.4-38.5-32-45.1z"]
@@ -25234,11 +25234,11 @@ var Bd = {
   prefix: "fas",
   iconName: "truck-moving",
   icon: [640, 512, [], "f4df", "M621.3 237.3l-58.5-58.5c-12-12-28.3-18.7-45.3-18.7H480V64c0-17.7-14.3-32-32-32H32C14.3 32 0 46.3 0 64v336c0 44.2 35.8 80 80 80 26.3 0 49.4-12.9 64-32.4 14.6 19.6 37.7 32.4 64 32.4 44.2 0 80-35.8 80-80 0-5.5-.6-10.8-1.6-16h163.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H624c8.8 0 16-7.2 16-16v-85.5c0-17-6.7-33.2-18.7-45.2zM80 432c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm128 0c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm272-224h37.5c4.3 0 8.3 1.7 11.3 4.7l43.3 43.3H480v-48zm48 224c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32z"]
-}, FA = {
+}, IA = {
   prefix: "fas",
   iconName: "truck-pickup",
   icon: [640, 512, [], "f63c", "M624 288h-16v-64c0-17.67-14.33-32-32-32h-48L419.22 56.02A64.025 64.025 0 0 0 369.24 32H256c-17.67 0-32 14.33-32 32v128H64c-17.67 0-32 14.33-32 32v64H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h49.61c-.76 5.27-1.61 10.52-1.61 16 0 61.86 50.14 112 112 112s112-50.14 112-112c0-5.48-.85-10.73-1.61-16h67.23c-.76 5.27-1.61 10.52-1.61 16 0 61.86 50.14 112 112 112s112-50.14 112-112c0-5.48-.85-10.73-1.61-16H624c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM288 96h81.24l76.8 96H288V96zM176 416c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48zm288 0c-26.47 0-48-21.53-48-48s21.53-48 48-48 48 21.53 48 48-21.53 48-48 48z"]
-}, IA = {
+}, FA = {
   prefix: "fas",
   iconName: "tshirt",
   icon: [640, 512, [], "f553", "M631.2 96.5L436.5 0C416.4 27.8 371.9 47.2 320 47.2S223.6 27.8 203.5 0L8.8 96.5c-7.9 4-11.1 13.6-7.2 21.5l57.2 114.5c4 7.9 13.6 11.1 21.5 7.2l56.6-27.7c10.6-5.2 23 2.5 23 14.4V480c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V226.3c0-11.8 12.4-19.6 23-14.4l56.6 27.7c7.9 4 17.5.8 21.5-7.2L638.3 118c4-7.9.8-17.6-7.1-21.5z"]
@@ -25450,11 +25450,11 @@ var Bd = {
   prefix: "fas",
   iconName: "video-slash",
   icon: [640, 512, [], "f4e2", "M633.8 458.1l-55-42.5c15.4-1.4 29.2-13.7 29.2-31.1v-257c0-25.5-29.1-40.4-50.4-25.8L448 177.3v137.2l-32-24.7v-178c0-26.4-21.4-47.8-47.8-47.8H123.9L45.5 3.4C38.5-2 28.5-.8 23 6.2L3.4 31.4c-5.4 7-4.2 17 2.8 22.4L42.7 82 416 370.6l178.5 138c7 5.4 17 4.2 22.5-2.8l19.6-25.3c5.5-6.9 4.2-17-2.8-22.4zM32 400.2c0 26.4 21.4 47.8 47.8 47.8h288.4c11.2 0 21.4-4 29.6-10.5L32 154.7v245.5z"]
-}, F_ = {
+}, I_ = {
   prefix: "fas",
   iconName: "vihara",
   icon: [640, 512, [], "f6a7", "M632.88 400.71L544 352v-64l55.16-17.69c11.79-5.9 11.79-22.72 0-28.62L480 192v-64l27.31-16.3c7.72-7.72 5.61-20.74-4.16-25.62L320 0 136.85 86.07c-9.77 4.88-11.88 17.9-4.16 25.62L160 128v64L40.84 241.69c-11.79 5.9-11.79 22.72 0 28.62L96 288v64L7.12 400.71c-5.42 3.62-7.7 9.63-7 15.29.62 5.01 3.57 9.75 8.72 12.33L64 448v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h160v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48h160v48c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16v-48l55.15-19.67c5.16-2.58 8.1-7.32 8.72-12.33.71-5.67-1.57-11.68-6.99-15.29zM224 128h192v64H224v-64zm-64 224v-64h320v64H160z"]
-}, I_ = {
+}, F_ = {
   prefix: "fas",
   iconName: "virus",
   icon: [512, 512, [], "e074", "M483.55,227.55H462c-50.68,0-76.07-61.27-40.23-97.11L437,115.19A28.44,28.44,0,0,0,396.8,75L381.56,90.22c-35.84,35.83-97.11,10.45-97.11-40.23V28.44a28.45,28.45,0,0,0-56.9,0V50c0,50.68-61.27,76.06-97.11,40.23L115.2,75A28.44,28.44,0,0,0,75,115.19l15.25,15.25c35.84,35.84,10.45,97.11-40.23,97.11H28.45a28.45,28.45,0,1,0,0,56.89H50c50.68,0,76.07,61.28,40.23,97.12L75,396.8A28.45,28.45,0,0,0,115.2,437l15.24-15.25c35.84-35.84,97.11-10.45,97.11,40.23v21.54a28.45,28.45,0,0,0,56.9,0V462c0-50.68,61.27-76.07,97.11-40.23L396.8,437A28.45,28.45,0,0,0,437,396.8l-15.25-15.24c-35.84-35.84-10.45-97.12,40.23-97.12h21.54a28.45,28.45,0,1,0,0-56.89ZM224,272a48,48,0,1,1,48-48A48,48,0,0,1,224,272Zm80,56a24,24,0,1,1,24-24A24,24,0,0,1,304,328Z"]
@@ -25637,8 +25637,8 @@ var Bd = {
   faAward: Dh,
   faBaby: Oh,
   faBabyCarriage: Ph,
-  faBackspace: Fh,
-  faBackward: Ih,
+  faBackspace: Ih,
+  faBackward: Fh,
   faBacon: Eh,
   faBacteria: Rh,
   faBacterium: Bh,
@@ -25691,8 +25691,8 @@ var Bd = {
   faBox: Dm,
   faBoxOpen: Om,
   faBoxTissue: Pm,
-  faBoxes: Fm,
-  faBraille: Im,
+  faBoxes: Im,
+  faBraille: Fm,
   faBrain: Em,
   faBreadSlice: Rm,
   faBriefcase: Bm,
@@ -25745,8 +25745,8 @@ var Bd = {
   faCertificate: Dv,
   faChair: Ov,
   faChalkboard: Pv,
-  faChalkboardTeacher: Fv,
-  faChargingStation: Iv,
+  faChalkboardTeacher: Iv,
+  faChargingStation: Fv,
   faChartArea: Ev,
   faChartBar: Rv,
   faChartLine: Bv,
@@ -25799,8 +25799,8 @@ var Bd = {
   faCodeBranch: Dp,
   faCoffee: Op,
   faCog: Pp,
-  faCogs: Fp,
-  faCoins: Ip,
+  faCogs: Ip,
+  faCoins: Fp,
   faColumns: Ep,
   faComment: Rp,
   faCommentAlt: Bp,
@@ -25853,8 +25853,8 @@ var Bd = {
   faDivide: Dg,
   faDizzy: Og,
   faDna: Pg,
-  faDog: Fg,
-  faDollarSign: Ig,
+  faDog: Ig,
+  faDollarSign: Fg,
   faDolly: Eg,
   faDollyFlatbed: Rg,
   faDonate: Bg,
@@ -25907,8 +25907,8 @@ var Bd = {
   faFeatherAlt: Dz,
   faFemale: Oz,
   faFighterJet: Pz,
-  faFile: Fz,
-  faFileAlt: Iz,
+  faFile: Iz,
+  faFileAlt: Fz,
   faFileArchive: Ez,
   faFileAudio: Rz,
   faFileCode: Bz,
@@ -25961,8 +25961,8 @@ var Bd = {
   faFutbol: Dy,
   faGamepad: Oy,
   faGasPump: Py,
-  faGavel: Fy,
-  faGem: Iy,
+  faGavel: Iy,
+  faGem: Fy,
   faGenderless: Ey,
   faGhost: Ry,
   faGift: By,
@@ -26015,8 +26015,8 @@ var Bd = {
   faHandPaper: Db,
   faHandPeace: Ob,
   faHandPointDown: Pb,
-  faHandPointLeft: Fb,
-  faHandPointRight: Ib,
+  faHandPointLeft: Ib,
+  faHandPointRight: Fb,
   faHandPointUp: Eb,
   faHandPointer: Rb,
   faHandRock: Bb,
@@ -26069,8 +26069,8 @@ var Bd = {
   faHourglassHalf: DM,
   faHourglassStart: OM,
   faHouseDamage: PM,
-  faHouseUser: FM,
-  faHryvnia: IM,
+  faHouseUser: IM,
+  faHryvnia: FM,
   faICursor: EM,
   faIceCream: RM,
   faIcicles: BM,
@@ -26123,8 +26123,8 @@ var Bd = {
   faList: DC,
   faListAlt: OC,
   faListOl: PC,
-  faListUl: FC,
-  faLocationArrow: IC,
+  faListUl: IC,
+  faLocationArrow: FC,
   faLock: EC,
   faLockOpen: RC,
   faLongArrowAltDown: BC,
@@ -26177,8 +26177,8 @@ var Bd = {
   faMoneyBill: DV,
   faMoneyBillAlt: OV,
   faMoneyBillWave: PV,
-  faMoneyBillWaveAlt: FV,
-  faMoneyCheck: IV,
+  faMoneyBillWaveAlt: IV,
+  faMoneyCheck: FV,
   faMoneyCheckAlt: EV,
   faMonument: RV,
   faMoon: BV,
@@ -26231,8 +26231,8 @@ var Bd = {
   faPercent: Dx,
   faPercentage: Ox,
   faPersonBooth: Px,
-  faPhone: Fx,
-  faPhoneAlt: Ix,
+  faPhone: Ix,
+  faPhoneAlt: Fx,
   faPhoneSlash: Ex,
   faPhoneSquare: Rx,
   faPhoneSquareAlt: Bx,
@@ -26285,8 +26285,8 @@ var Bd = {
   faRandom: Dw,
   faReceipt: Ow,
   faRecordVinyl: Pw,
-  faRecycle: Fw,
-  faRedo: Iw,
+  faRecycle: Iw,
+  faRedo: Fw,
   faRedoAlt: Ew,
   faRegistered: Rw,
   faRemoveFormat: Bw,
@@ -26339,8 +26339,8 @@ var Bd = {
   faShoePrints: DH,
   faShoppingBag: OH,
   faShoppingBasket: PH,
-  faShoppingCart: FH,
-  faShower: IH,
+  faShoppingCart: IH,
+  faShower: FH,
   faShuttleVan: EH,
   faSign: RH,
   faSignInAlt: BH,
@@ -26393,8 +26393,8 @@ var Bd = {
   faSpellCheck: DL,
   faSpider: OL,
   faSpinner: PL,
-  faSplotch: FL,
-  faSprayCan: IL,
+  faSplotch: IL,
+  faSprayCan: FL,
   faSquare: EL,
   faSquareFull: RL,
   faSquareRootAlt: BL,
@@ -26447,8 +26447,8 @@ var Bd = {
   faTasks: DN,
   faTaxi: ON,
   faTeeth: PN,
-  faTeethOpen: FN,
-  faTemperatureHigh: IN,
+  faTeethOpen: IN,
+  faTemperatureHigh: FN,
   faTemperatureLow: EN,
   faTenge: RN,
   faTerminal: BN,
@@ -26501,8 +26501,8 @@ var Bd = {
   faTruckLoading: DA,
   faTruckMonster: OA,
   faTruckMoving: PA,
-  faTruckPickup: FA,
-  faTshirt: IA,
+  faTruckPickup: IA,
+  faTshirt: FA,
   faTty: EA,
   faTv: RA,
   faUmbrella: BA,
@@ -26555,8 +26555,8 @@ var Bd = {
   faVials: D_,
   faVideo: O_,
   faVideoSlash: P_,
-  faVihara: F_,
-  faVirus: I_,
+  faVihara: I_,
+  faVirus: F_,
   faVirusSlash: E_,
   faViruses: R_,
   faVoicemail: B_,
@@ -26670,11 +26670,11 @@ var gS = {
   prefix: "fab",
   iconName: "apper",
   icon: [640, 512, [], "f371", "M42.1 239.1c22.2 0 29 2.8 33.5 14.6h.8v-22.9c0-11.3-4.8-15.4-17.9-15.4-11.3 0-14.4 2.5-15.1 12.8H4.8c.3-13.9 1.5-19.1 5.8-24.4C17.9 195 29.5 192 56.7 192c33 0 47.1 5 53.9 18.9 2 4.3 4 15.6 4 23.7v76.3H76.3l1.3-19.1h-1c-5.3 15.6-13.6 20.4-35.5 20.4-30.3 0-41.1-10.1-41.1-37.3 0-25.2 12.3-35.8 42.1-35.8zm17.1 48.1c13.1 0 16.9-3 16.9-13.4 0-9.1-4.3-11.6-19.6-11.6-13.1 0-17.9 3-17.9 12.1-.1 10.4 3.7 12.9 20.6 12.9zm77.8-94.9h38.3l-1.5 20.6h.8c9.1-17.1 15.9-20.9 37.5-20.9 14.4 0 24.7 3 31.5 9.1 9.8 8.6 12.8 20.4 12.8 48.1 0 30-3 43.1-12.1 52.9-6.8 7.3-16.4 10.1-33.2 10.1-20.4 0-29.2-5.5-33.8-21.2h-.8v70.3H137v-169zm80.9 60.7c0-27.5-3.3-32.5-20.7-32.5-16.9 0-20.7 5-20.7 28.7 0 28 3.5 33.5 21.2 33.5 16.4 0 20.2-5.6 20.2-29.7zm57.9-60.7h38.3l-1.5 20.6h.8c9.1-17.1 15.9-20.9 37.5-20.9 14.4 0 24.7 3 31.5 9.1 9.8 8.6 12.8 20.4 12.8 48.1 0 30-3 43.1-12.1 52.9-6.8 7.3-16.4 10.1-33.3 10.1-20.4 0-29.2-5.5-33.8-21.2h-.8v70.3h-39.5v-169zm80.9 60.7c0-27.5-3.3-32.5-20.7-32.5-16.9 0-20.7 5-20.7 28.7 0 28 3.5 33.5 21.2 33.5 16.4 0 20.2-5.6 20.2-29.7zm53.8-3.8c0-25.4 3.3-37.8 12.3-45.8 8.8-8.1 22.2-11.3 45.1-11.3 42.8 0 55.7 12.8 55.7 55.7v11.1h-75.3c-.3 2-.3 4-.3 4.8 0 16.9 4.5 21.9 20.1 21.9 13.9 0 17.9-3 17.9-13.9h37.5v2.3c0 9.8-2.5 18.9-6.8 24.7-7.3 9.8-19.6 13.6-44.3 13.6-27.5 0-41.6-3.3-50.6-12.3-8.5-8.5-11.3-21.3-11.3-50.8zm76.4-11.6c-.3-1.8-.3-3.3-.3-3.8 0-12.3-3.3-14.6-19.6-14.6-14.4 0-17.1 3-18.1 15.1l-.3 3.3h38.3zm55.6-45.3h38.3l-1.8 19.9h.7c6.8-14.9 14.4-20.2 29.7-20.2 10.8 0 19.1 3.3 23.4 9.3 5.3 7.3 6.8 14.4 6.8 34 0 1.5 0 5 .2 9.3h-35c.3-1.8.3-3.3.3-4 0-15.4-2-19.4-10.3-19.4-6.3 0-10.8 3.3-13.1 9.3-1 3-1 4.3-1 12.3v68h-38.3V192.3z"]
-}, FS = {
+}, IS = {
   prefix: "fab",
   iconName: "apple",
   icon: [384, 512, [], "f179", "M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"]
-}, IS = {
+}, FS = {
   prefix: "fab",
   iconName: "apple-pay",
   icon: [640, 512, [], "f415", "M116.9 158.5c-7.5 8.9-19.5 15.9-31.5 14.9-1.5-12 4.4-24.8 11.3-32.6 7.5-9.1 20.6-15.6 31.3-16.1 1.2 12.4-3.7 24.7-11.1 33.8m10.9 17.2c-17.4-1-32.3 9.9-40.5 9.9-8.4 0-21-9.4-34.8-9.1-17.9.3-34.5 10.4-43.6 26.5-18.8 32.3-4.9 80 13.3 106.3 8.9 13 19.5 27.3 33.5 26.8 13.3-.5 18.5-8.6 34.5-8.6 16.1 0 20.8 8.6 34.8 8.4 14.5-.3 23.6-13 32.5-26 10.1-14.8 14.3-29.1 14.5-29.9-.3-.3-28-10.9-28.3-42.9-.3-26.8 21.9-39.5 22.9-40.3-12.5-18.6-32-20.6-38.8-21.1m100.4-36.2v194.9h30.3v-66.6h41.9c38.3 0 65.1-26.3 65.1-64.3s-26.4-64-64.1-64h-73.2zm30.3 25.5h34.9c26.3 0 41.3 14 41.3 38.6s-15 38.8-41.4 38.8h-34.8V165zm162.2 170.9c19 0 36.6-9.6 44.6-24.9h.6v23.4h28v-97c0-28.1-22.5-46.3-57.1-46.3-32.1 0-55.9 18.4-56.8 43.6h27.3c2.3-12 13.4-19.9 28.6-19.9 18.5 0 28.9 8.6 28.9 24.5v10.8l-37.8 2.3c-35.1 2.1-54.1 16.5-54.1 41.5.1 25.2 19.7 42 47.8 42zm8.2-23.1c-16.1 0-26.4-7.8-26.4-19.6 0-12.3 9.9-19.4 28.8-20.5l33.6-2.1v11c0 18.2-15.5 31.2-36 31.2zm102.5 74.6c29.5 0 43.4-11.3 55.5-45.4L640 193h-30.8l-35.6 115.1h-.6L537.4 193h-31.6L557 334.9l-2.8 8.6c-4.6 14.6-12.1 20.3-25.5 20.3-2.4 0-7-.3-8.9-.5v23.4c1.8.4 9.3.7 11.6.7z"]
@@ -26886,11 +26886,11 @@ var gS = {
   prefix: "fab",
   iconName: "contao",
   icon: [512, 512, [], "f26d", "M45.4 305c14.4 67.1 26.4 129 68.2 175H34c-18.7 0-34-15.2-34-34V66c0-18.7 15.2-34 34-34h57.7C77.9 44.6 65.6 59.2 54.8 75.6c-45.4 70-27 146.8-9.4 229.4zM478 32h-90.2c21.4 21.4 39.2 49.5 52.7 84.1l-137.1 29.3c-14.9-29-37.8-53.3-82.6-43.9-24.6 5.3-41 19.3-48.3 34.6-8.8 18.7-13.2 39.8 8.2 140.3 21.1 100.2 33.7 117.7 49.5 131.2 12.9 11.1 33.4 17 58.3 11.7 44.5-9.4 55.7-40.7 57.4-73.2l137.4-29.6c3.2 71.5-18.7 125.2-57.4 163.6H478c18.7 0 34-15.2 34-34V66c0-18.8-15.2-34-34-34z"]
-}, Fk = {
+}, Ik = {
   prefix: "fab",
   iconName: "cotton-bureau",
   icon: [512, 512, [], "f89e", "M474.31 330.41c-23.66 91.85-94.23 144.59-201.9 148.35V429.6c0-48 26.41-74.39 74.39-74.39 62 0 99.2-37.2 99.2-99.21 0-61.37-36.53-98.28-97.38-99.06-33-69.32-146.5-64.65-177.24 0C110.52 157.72 74 194.63 74 256c0 62.13 37.27 99.41 99.4 99.41 48 0 74.55 26.23 74.55 74.39V479c-134.43-5-211.1-85.07-211.1-223 0-141.82 81.35-223.2 223.2-223.2 114.77 0 189.84 53.2 214.69 148.81H500C473.88 71.51 388.22 8 259.82 8 105 8 12 101.19 12 255.82 12 411.14 105.19 504.34 259.82 504c128.27 0 213.87-63.81 239.67-173.59zM357 182.33c41.37 3.45 64.2 29 64.2 73.67 0 48-26.43 74.41-74.4 74.41-28.61 0-49.33-9.59-61.59-27.33 83.06-16.55 75.59-99.67 71.79-120.75zm-81.68 97.36c-2.46-10.34-16.33-87 56.23-97 2.27 10.09 16.52 87.11-56.26 97zM260 132c28.61 0 49 9.67 61.44 27.61-28.36 5.48-49.36 20.59-61.59 43.45-12.23-22.86-33.23-38-61.6-43.45 12.41-17.69 33.27-27.35 61.57-27.35zm-71.52 50.72c73.17 10.57 58.91 86.81 56.49 97-72.41-9.84-59-86.95-56.25-97zM173.2 330.41c-48 0-74.4-26.4-74.4-74.41 0-44.36 22.86-70 64.22-73.67-6.75 37.2-1.38 106.53 71.65 120.75-12.14 17.63-32.84 27.3-61.14 27.3zm53.21 12.39A80.8 80.8 0 0 0 260 309.25c7.77 14.49 19.33 25.54 33.82 33.55a80.28 80.28 0 0 0-33.58 33.83c-8-14.5-19.07-26.23-33.56-33.83z"]
-}, Ik = {
+}, Fk = {
   prefix: "fab",
   iconName: "cpanel",
   icon: [640, 512, [], "f388", "M210.3 220.2c-5.6-24.8-26.9-41.2-51-41.2h-37c-7.1 0-12.5 4.5-14.3 10.9L73.1 320l24.7-.1c6.8 0 12.3-4.5 14.2-10.7l25.8-95.7h19.8c8.4 0 16.2 5.6 18.3 14.8 2.5 10.9-5.9 22.6-18.3 22.6h-10.3c-7 0-12.5 4.6-14.3 10.8l-6.4 23.8h32c37.2 0 58.3-36.2 51.7-65.3zm-156.5 28h18.6c6.9 0 12.4-4.4 14.3-10.9l6.2-23.6h-40C30 213.7 9 227.8 1.7 254.8-7 288.6 18.5 320 52 320h12.4l7.1-26.1c1.2-4.4-2.2-8.3-6.4-8.3H53.8c-24.7 0-24.9-37.4 0-37.4zm247.5-34.8h-77.9l-3.5 13.4c-2.4 9.6 4.5 18.5 14.2 18.5h57.5c4 0 2.4 4.3 2.1 5.3l-8.6 31.8c-.4 1.4-.9 5.3-5.5 5.3h-34.9c-5.3 0-5.3-7.9 0-7.9h21.6c6.8 0 12.3-4.6 14.2-10.8l3.5-13.2h-48.4c-39.2 0-43.6 63.8-.7 63.8l57.5.2c11.2 0 20.6-7.2 23.4-17.8l14-51.8c4.8-19.2-9.7-36.8-28.5-36.8zM633.1 179h-18.9c-4.9 0-9.2 3.2-10.4 7.9L568.2 320c20.7 0 39.8-13.8 44.9-34.5l26.5-98.2c1.2-4.3-2-8.3-6.5-8.3zm-236.3 34.7v.1h-48.3l-26.2 98c-1.2 4.4 2.2 8.3 6.4 8.3h18.9c4.8 0 9.2-3 10.4-7.8l17.2-64H395c12.5 0 21.4 11.8 18.1 23.4l-10.6 40c-1.2 4.3 1.9 8.3 6.4 8.3H428c4.6 0 9.1-2.9 10.3-7.8l8.8-33.1c9-33.1-15.9-65.4-50.3-65.4zm98.3 74.6c-3.6 0-6-3.4-5.1-6.7l8-30c.9-3.9 3.7-6 7.8-6h32.9c2.6 0 4.6 2.4 3.9 5.1l-.7 2.6c-.6 2-1.9 3-3.9 3h-21.6c-7 0-12.6 4.6-14.2 10.8l-3.5 13h53.4c10.5 0 20.3-6.6 23.2-17.6l3.2-12c4.9-19.1-9.3-36.8-28.3-36.8h-47.3c-17.9 0-33.8 12-38.6 29.6l-10.8 40c-5 17.7 8.3 36.7 28.3 36.7h66.7c6.8 0 12.3-4.5 14.2-10.7l5.7-21z"]
@@ -27102,11 +27102,11 @@ var gS = {
   prefix: "fab",
   iconName: "erlang",
   icon: [640, 512, [], "f39d", "M87.2 53.5H0v405h100.4c-49.7-52.6-78.8-125.3-78.7-212.1-.1-76.7 24-142.7 65.5-192.9zm238.2 9.7c-45.9.1-85.1 33.5-89.2 83.2h169.9c-1.1-49.7-34.5-83.1-80.7-83.2zm230.7-9.6h.3l-.1-.1zm.3 0c31.4 42.7 48.7 97.5 46.2 162.7.5 6 .5 11.7 0 24.1H230.2c-.2 109.7 38.9 194.9 138.6 195.3 68.5-.3 118-51 151.9-106.1l96.4 48.2c-17.4 30.9-36.5 57.8-57.9 80.8H640v-405z"]
-}, FT = {
+}, IT = {
   prefix: "fab",
   iconName: "ethereum",
   icon: [320, 512, [], "f42e", "M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"]
-}, IT = {
+}, FT = {
   prefix: "fab",
   iconName: "etsy",
   icon: [384, 512, [], "f2d7", "M384 348c-1.75 10.75-13.75 110-15.5 132-117.879-4.299-219.895-4.743-368.5 0v-25.5c45.457-8.948 60.627-8.019 61-35.25 1.793-72.322 3.524-244.143 0-322-1.029-28.46-12.13-26.765-61-36v-25.5c73.886 2.358 255.933 8.551 362.999-3.75-3.5 38.25-7.75 126.5-7.75 126.5H332C320.947 115.665 313.241 68 277.25 68h-137c-10.25 0-10.75 3.5-10.75 9.75V241.5c58 .5 88.5-2.5 88.5-2.5 29.77-.951 27.56-8.502 40.75-65.251h25.75c-4.407 101.351-3.91 61.829-1.75 160.25H257c-9.155-40.086-9.065-61.045-39.501-61.5 0 0-21.5-2-88-2v139c0 26 14.25 38.25 44.25 38.25H263c63.636 0 66.564-24.996 98.751-99.75H384z"]
@@ -27318,11 +27318,11 @@ var gS = {
   prefix: "fab",
   iconName: "google-drive",
   icon: [512, 512, [], "f3aa", "M339 314.9L175.4 32h161.2l163.6 282.9H339zm-137.5 23.6L120.9 480h310.5L512 338.5H201.5zM154.1 67.4L0 338.5 80.6 480 237 208.8 154.1 67.4z"]
-}, FD = {
+}, ID = {
   prefix: "fab",
   iconName: "google-pay",
   icon: [640, 512, [], "e079", "M105.72,215v41.25h57.1a49.66,49.66,0,0,1-21.14,32.6c-9.54,6.55-21.72,10.28-36,10.28-27.6,0-50.93-18.91-59.3-44.22a65.61,65.61,0,0,1,0-41l0,0c8.37-25.46,31.7-44.37,59.3-44.37a56.43,56.43,0,0,1,40.51,16.08L176.47,155a101.24,101.24,0,0,0-70.75-27.84,105.55,105.55,0,0,0-94.38,59.11,107.64,107.64,0,0,0,0,96.18v.15a105.41,105.41,0,0,0,94.38,59c28.47,0,52.55-9.53,70-25.91,20-18.61,31.41-46.15,31.41-78.91A133.76,133.76,0,0,0,205.38,215Zm389.41-4c-10.13-9.38-23.93-14.14-41.39-14.14-22.46,0-39.34,8.34-50.5,24.86l20.85,13.26q11.45-17,31.26-17a34.05,34.05,0,0,1,22.75,8.79A28.14,28.14,0,0,1,487.79,248v5.51c-9.1-5.07-20.55-7.75-34.64-7.75-16.44,0-29.65,3.88-39.49,11.77s-14.82,18.31-14.82,31.56a39.74,39.74,0,0,0,13.94,31.27c9.25,8.34,21,12.51,34.79,12.51,16.29,0,29.21-7.3,39-21.89h1v17.72h22.61V250C510.25,233.45,505.26,220.34,495.13,211ZM475.9,300.3a37.32,37.32,0,0,1-26.57,11.16A28.61,28.61,0,0,1,431,305.21a19.41,19.41,0,0,1-7.77-15.63c0-7,3.22-12.81,9.54-17.42s14.53-7,24.07-7C470,265,480.3,268,487.64,273.94,487.64,284.07,483.68,292.85,475.9,300.3Zm-93.65-142A55.71,55.71,0,0,0,341.74,142H279.07V328.74H302.7V253.1h39c16,0,29.5-5.36,40.51-15.93.88-.89,1.76-1.79,2.65-2.68A54.45,54.45,0,0,0,382.25,158.26Zm-16.58,62.23a30.65,30.65,0,0,1-23.34,9.68H302.7V165h39.63a32,32,0,0,1,22.6,9.23A33.18,33.18,0,0,1,365.67,220.49ZM614.31,201,577.77,292.7h-.45L539.9,201H514.21L566,320.55l-29.35,64.32H561L640,201Z"]
-}, ID = {
+}, FD = {
   prefix: "fab",
   iconName: "google-play",
   icon: [512, 512, [], "f3ab", "M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"]
@@ -27534,11 +27534,11 @@ var gS = {
   prefix: "fab",
   iconName: "lastfm",
   icon: [512, 512, [], "f202", "M225.8 367.1l-18.8-51s-30.5 34-76.2 34c-40.5 0-69.2-35.2-69.2-91.5 0-72.1 36.4-97.9 72.1-97.9 66.5 0 74.8 53.3 100.9 134.9 18.8 56.9 54 102.6 155.4 102.6 72.7 0 122-22.3 122-80.9 0-72.9-62.7-80.6-115-92.1-25.8-5.9-33.4-16.4-33.4-34 0-19.9 15.8-31.7 41.6-31.7 28.2 0 43.4 10.6 45.7 35.8l58.6-7c-4.7-52.8-41.1-74.5-100.9-74.5-52.8 0-104.4 19.9-104.4 83.9 0 39.9 19.4 65.1 68 76.8 44.9 10.6 79.8 13.8 79.8 45.7 0 21.7-21.1 30.5-61 30.5-59.2 0-83.9-31.1-97.9-73.9-32-96.8-43.6-163-161.3-163C45.7 113.8 0 168.3 0 261c0 89.1 45.7 137.2 127.9 137.2 66.2 0 97.9-31.1 97.9-31.1z"]
-}, FO = {
+}, IO = {
   prefix: "fab",
   iconName: "lastfm-square",
   icon: [448, 512, [], "f203", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-92.2 312.9c-63.4 0-85.4-28.6-97.1-64.1-16.3-51-21.5-84.3-63-84.3-22.4 0-45.1 16.1-45.1 61.2 0 35.2 18 57.2 43.3 57.2 28.6 0 47.6-21.3 47.6-21.3l11.7 31.9s-19.8 19.4-61.2 19.4c-51.3 0-79.9-30.1-79.9-85.8 0-57.9 28.6-92 82.5-92 73.5 0 80.8 41.4 100.8 101.9 8.8 26.8 24.2 46.2 61.2 46.2 24.9 0 38.1-5.5 38.1-19.1 0-19.9-21.8-22-49.9-28.6-30.4-7.3-42.5-23.1-42.5-48 0-40 32.3-52.4 65.2-52.4 37.4 0 60.1 13.6 63 46.6l-36.7 4.4c-1.5-15.8-11-22.4-28.6-22.4-16.1 0-26 7.3-26 19.8 0 11 4.8 17.6 20.9 21.3 32.7 7.1 71.8 12 71.8 57.5.1 36.7-30.7 50.6-76.1 50.6z"]
-}, IO = {
+}, FO = {
   prefix: "fab",
   iconName: "leanpub",
   icon: [576, 512, [], "f212", "M386.539 111.485l15.096 248.955-10.979-.275c-36.232-.824-71.64 8.783-102.657 27.997-31.016-19.214-66.424-27.997-102.657-27.997-45.564 0-82.07 10.705-123.516 27.723L93.117 129.6c28.546-11.803 61.484-18.115 92.226-18.115 41.173 0 73.836 13.175 102.657 42.544 27.723-28.271 59.013-41.721 98.539-42.544zM569.07 448c-25.526 0-47.485-5.215-70.542-15.645-34.31-15.645-69.993-24.978-107.871-24.978-38.977 0-74.934 12.901-102.657 40.623-27.723-27.723-63.68-40.623-102.657-40.623-37.878 0-73.561 9.333-107.871 24.978C55.239 442.236 32.731 448 8.303 448H6.93L49.475 98.859C88.726 76.626 136.486 64 181.775 64 218.83 64 256.984 71.685 288 93.095 319.016 71.685 357.17 64 394.225 64c45.289 0 93.049 12.626 132.3 34.859L569.07 448zm-43.368-44.741l-34.036-280.246c-30.742-13.999-67.248-21.41-101.009-21.41-38.428 0-74.385 12.077-102.657 38.702-28.272-26.625-64.228-38.702-102.657-38.702-33.761 0-70.267 7.411-101.009 21.41L50.298 403.259c47.211-19.487 82.894-33.486 135.045-33.486 37.604 0 70.817 9.606 102.657 29.644 31.84-20.038 65.052-29.644 102.657-29.644 52.151 0 87.834 13.999 135.045 33.486z"]
@@ -27750,11 +27750,11 @@ var gS = {
   prefix: "fab",
   iconName: "paypal",
   icon: [384, 512, [], "f1ed", "M111.4 295.9c-3.5 19.2-17.4 108.7-21.5 134-.3 1.8-1 2.5-3 2.5H12.3c-7.6 0-13.1-6.6-12.1-13.9L58.8 46.6c1.5-9.6 10.1-16.9 20-16.9 152.3 0 165.1-3.7 204 11.4 60.1 23.3 65.6 79.5 44 140.3-21.5 62.6-72.5 89.5-140.1 90.3-43.4.7-69.5-7-75.3 24.2zM357.1 152c-1.8-1.3-2.5-1.8-3 1.3-2 11.4-5.1 22.5-8.8 33.6-39.9 113.8-150.5 103.9-204.5 103.9-6.1 0-10.1 3.3-10.9 9.4-22.6 140.4-27.1 169.7-27.1 169.7-1 7.1 3.5 12.9 10.6 12.9h63.5c8.6 0 15.7-6.3 17.4-14.9.7-5.4-1.1 6.1 14.4-91.3 4.6-22 14.3-19.7 29.3-19.7 71 0 126.4-28.8 142.9-112.3 6.5-34.8 4.6-71.4-23.8-92.6z"]
-}, FP = {
+}, IP = {
   prefix: "fab",
   iconName: "penny-arcade",
   icon: [640, 512, [], "f704", "M421.91 164.27c-4.49 19.45-1.4 6.06-15.1 65.29l39.73-10.61c-22.34-49.61-17.29-38.41-24.63-54.68zm-206.09 51.11c-20.19 5.4-11.31 3.03-39.63 10.58l4.46 46.19c28.17-7.59 20.62-5.57 34.82-9.34 42.3-9.79 32.85-56.42.35-47.43zm326.16-26.19l-45.47-99.2c-5.69-12.37-19.46-18.84-32.62-15.33-70.27 18.75-38.72 10.32-135.59 36.23a27.618 27.618 0 0 0-18.89 17.41C144.26 113.27 0 153.75 0 226.67c0 33.5 30.67 67.11 80.9 95.37l1.74 17.88a27.891 27.891 0 0 0-17.77 28.67l4.3 44.48c1.39 14.31 13.43 25.21 27.8 25.2 5.18-.01-3.01 1.78 122.53-31.76 12.57-3.37 21.12-15.02 20.58-28.02 216.59 45.5 401.99-5.98 399.89-84.83.01-28.15-22.19-66.56-97.99-104.47zM255.14 298.3l-21.91 5.88-48.44 12.91 2.46 23.55 20.53-5.51 4.51 44.51-115.31 30.78-4.3-44.52 20.02-5.35-11.11-114.64-20.12 5.39-4.35-44.5c178.15-47.54 170.18-46.42 186.22-46.65 56.66-1.13 64.15 71.84 42.55 104.43a86.7 86.7 0 0 1-50.75 33.72zm199.18 16.62l-3.89-39.49 14.9-3.98-6.61-14.68-57.76 15.42-4.1 17.54 19.2-5.12 4.05 39.54-112.85 30.07-4.46-44.43 20.99-5.59 33.08-126.47-17.15 4.56-4.2-44.48c93.36-24.99 65.01-17.41 135.59-36.24l66.67 145.47 20.79-5.56 4.3 44.48-108.55 28.96z"]
-}, IP = {
+}, FP = {
   prefix: "fab",
   iconName: "perbyte",
   icon: [448, 512, [], "e083", "M305.314,284.578H246.6V383.3h58.711q24.423,0,38.193-13.77t13.77-36.11q0-21.826-14.032-35.335T305.314,284.578ZM149.435,128.7H90.724v98.723h58.711q24.42,0,38.19-13.773t13.77-36.107q0-21.826-14.029-35.338T149.435,128.7ZM366.647,32H81.353A81.445,81.445,0,0,0,0,113.352V398.647A81.445,81.445,0,0,0,81.353,480H366.647A81.445,81.445,0,0,0,448,398.647V113.352A81.445,81.445,0,0,0,366.647,32Zm63.635,366.647a63.706,63.706,0,0,1-63.635,63.635H81.353a63.706,63.706,0,0,1-63.635-63.635V113.352A63.706,63.706,0,0,1,81.353,49.718H366.647a63.706,63.706,0,0,1,63.635,63.634ZM305.314,128.7H246.6v98.723h58.711q24.423,0,38.193-13.773t13.77-36.107q0-21.826-14.032-35.338T305.314,128.7Z"]
@@ -27818,435 +27818,435 @@ var gS = {
   prefix: "fab",
   iconName: "product-hunt",
   icon: [512, 512, [], "f288", "M326.3 218.8c0 20.5-16.7 37.2-37.2 37.2h-70.3v-74.4h70.3c20.5 0 37.2 16.7 37.2 37.2zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-128.1-37.2c0-47.9-38.9-86.8-86.8-86.8H169.2v248h49.6v-74.4h70.3c47.9 0 86.8-38.9 86.8-86.8z"]
-}, eF = {
+}, eI = {
   prefix: "fab",
   iconName: "pushed",
   icon: [432, 512, [], "f3e1", "M407 111.9l-98.5-9 14-33.4c10.4-23.5-10.8-40.4-28.7-37L22.5 76.9c-15.1 2.7-26 18.3-21.4 36.6l105.1 348.3c6.5 21.3 36.7 24.2 47.7 7l35.3-80.8 235.2-231.3c16.4-16.8 4.3-42.9-17.4-44.8zM297.6 53.6c5.1-.7 7.5 2.5 5.2 7.4L286 100.9 108.6 84.6l189-31zM22.7 107.9c-3.1-5.1 1-10 6.1-9.1l248.7 22.7-96.9 230.7L22.7 107.9zM136 456.4c-2.6 4-7.9 3.1-9.4-1.2L43.5 179.7l127.7 197.6c-7 15-35.2 79.1-35.2 79.1zm272.8-314.5L210.1 337.3l89.7-213.7 106.4 9.7c4 1.1 5.7 5.3 2.6 8.6z"]
-}, aF = {
+}, aI = {
   prefix: "fab",
   iconName: "python",
   icon: [448, 512, [], "f3e2", "M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"]
-}, tF = {
+}, tI = {
   prefix: "fab",
   iconName: "qq",
   icon: [448, 512, [], "f1d6", "M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"]
-}, cF = {
+}, cI = {
   prefix: "fab",
   iconName: "quinscape",
   icon: [512, 512, [], "f459", "M313.6 474.6h-1a158.1 158.1 0 0 1 0-316.2c94.9 0 168.2 83.1 157 176.6 4 5.1 8.2 9.6 11.2 15.3 13.4-30.3 20.3-62.4 20.3-97.7C501.1 117.5 391.6 8 256.5 8S12 117.5 12 252.6s109.5 244.6 244.5 244.6a237.36 237.36 0 0 0 70.4-10.1c-5.2-3.5-8.9-8.1-13.3-12.5zm-.1-.1l.4.1zm78.4-168.9a99.2 99.2 0 1 0 99.2 99.2 99.18 99.18 0 0 0-99.2-99.2z"]
-}, iF = {
+}, iI = {
   prefix: "fab",
   iconName: "quora",
   icon: [448, 512, [], "f2c4", "M440.5 386.7h-29.3c-1.5 13.5-10.5 30.8-33 30.8-20.5 0-35.3-14.2-49.5-35.8 44.2-34.2 74.7-87.5 74.7-153C403.5 111.2 306.8 32 205 32 105.3 32 7.3 111.7 7.3 228.7c0 134.1 131.3 221.6 249 189C276 451.3 302 480 351.5 480c81.8 0 90.8-75.3 89-93.3zM297 329.2C277.5 300 253.3 277 205.5 277c-30.5 0-54.3 10-69 22.8l12.2 24.3c6.2-3 13-4 19.8-4 35.5 0 53.7 30.8 69.2 61.3-10 3-20.7 4.2-32.7 4.2-75 0-107.5-53-107.5-156.7C97.5 124.5 130 71 205 71c76.2 0 108.7 53.5 108.7 157.7.1 41.8-5.4 75.6-16.7 100.5z"]
-}, rF = {
+}, rI = {
   prefix: "fab",
   iconName: "r-project",
   icon: [581, 512, [], "f4f7", "M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"]
-}, nF = {
+}, nI = {
   prefix: "fab",
   iconName: "raspberry-pi",
   icon: [407, 512, [], "f7bb", "M372 232.5l-3.7-6.5c.1-46.4-21.4-65.3-46.5-79.7 7.6-2 15.4-3.6 17.6-13.2 13.1-3.3 15.8-9.4 17.1-15.8 3.4-2.3 14.8-8.7 13.6-19.7 6.4-4.4 10-10.1 8.1-18.1 6.9-7.5 8.7-13.7 5.8-19.4 8.3-10.3 4.6-15.6 1.1-20.9 6.2-11.2.7-23.2-16.6-21.2-6.9-10.1-21.9-7.8-24.2-7.8-2.6-3.2-6-6-16.5-4.7-6.8-6.1-14.4-5-22.3-2.1-9.3-7.3-15.5-1.4-22.6.8C271.6.6 269 5.5 263.5 7.6c-12.3-2.6-16.1 3-22 8.9l-6.9-.1c-18.6 10.8-27.8 32.8-31.1 44.1-3.3-11.3-12.5-33.3-31.1-44.1l-6.9.1c-5.9-5.9-9.7-11.5-22-8.9-5.6-2-8.1-7-19.4-3.4-4.6-1.4-8.9-4.4-13.9-4.3-2.6.1-5.5 1-8.7 3.5-7.9-3-15.5-4-22.3 2.1-10.5-1.3-14 1.4-16.5 4.7-2.3 0-17.3-2.3-24.2 7.8C21.2 16 15.8 28 22 39.2c-3.5 5.4-7.2 10.7 1.1 20.9-2.9 5.7-1.1 11.9 5.8 19.4-1.8 8 1.8 13.7 8.1 18.1-1.2 11 10.2 17.4 13.6 19.7 1.3 6.4 4 12.4 17.1 15.8 2.2 9.5 10 11.2 17.6 13.2-25.1 14.4-46.6 33.3-46.5 79.7l-3.7 6.5c-28.8 17.2-54.7 72.7-14.2 117.7 2.6 14.1 7.1 24.2 11 35.4 5.9 45.2 44.5 66.3 54.6 68.8 14.9 11.2 30.8 21.8 52.2 29.2C159 504.2 181 512 203 512h1c22.1 0 44-7.8 64.2-28.4 21.5-7.4 37.3-18 52.2-29.2 10.2-2.5 48.7-23.6 54.6-68.8 3.9-11.2 8.4-21.3 11-35.4 40.6-45.1 14.7-100.5-14-117.7zm-22.2-8c-1.5 18.7-98.9-65.1-82.1-67.9 45.7-7.5 83.6 19.2 82.1 67.9zm-43 93.1c-24.5 15.8-59.8 5.6-78.8-22.8s-14.6-64.2 9.9-80c24.5-15.8 59.8-5.6 78.8 22.8s14.6 64.2-9.9 80zM238.9 29.3c.8 4.2 1.8 6.8 2.9 7.6 5.4-5.8 9.8-11.7 16.8-17.3 0 3.3-1.7 6.8 2.5 9.4 3.7-5 8.8-9.5 15.5-13.3-3.2 5.6-.6 7.3 1.2 9.6 5.1-4.4 10-8.8 19.4-12.3-2.6 3.1-6.2 6.2-2.4 9.8 5.3-3.3 10.6-6.6 23.1-8.9-2.8 3.1-8.7 6.3-5.1 9.4 6.6-2.5 14-4.4 22.1-5.4-3.9 3.2-7.1 6.3-3.9 8.8 7.1-2.2 16.9-5.1 26.4-2.6l-6 6.1c-.7.8 14.1.6 23.9.8-3.6 5-7.2 9.7-9.3 18.2 1 1 5.8.4 10.4 0-4.7 9.9-12.8 12.3-14.7 16.6 2.9 2.2 6.8 1.6 11.2.1-3.4 6.9-10.4 11.7-16 17.3 1.4 1 3.9 1.6 9.7.9-5.2 5.5-11.4 10.5-18.8 15 1.3 1.5 5.8 1.5 10 1.6-6.7 6.5-15.3 9.9-23.4 14.2 4 2.7 6.9 2.1 10 2.1-5.7 4.7-15.4 7.1-24.4 10 1.7 2.7 3.4 3.4 7.1 4.1-9.5 5.3-23.2 2.9-27 5.6.9 2.7 3.6 4.4 6.7 5.8-15.4.9-57.3-.6-65.4-32.3 15.7-17.3 44.4-37.5 93.7-62.6-38.4 12.8-73 30-102 53.5-34.3-15.9-10.8-55.9 5.8-71.8zm-34.4 114.6c24.2-.3 54.1 17.8 54 34.7-.1 15-21 27.1-53.8 26.9-32.1-.4-53.7-15.2-53.6-29.8 0-11.9 26.2-32.5 53.4-31.8zm-123-12.8c3.7-.7 5.4-1.5 7.1-4.1-9-2.8-18.7-5.3-24.4-10 3.1 0 6 .7 10-2.1-8.1-4.3-16.7-7.7-23.4-14.2 4.2-.1 8.7 0 10-1.6-7.4-4.5-13.6-9.5-18.8-15 5.8.7 8.3.1 9.7-.9-5.6-5.6-12.7-10.4-16-17.3 4.3 1.5 8.3 2 11.2-.1-1.9-4.2-10-6.7-14.7-16.6 4.6.4 9.4 1 10.4 0-2.1-8.5-5.8-13.3-9.3-18.2 9.8-.1 24.6 0 23.9-.8l-6-6.1c9.5-2.5 19.3.4 26.4 2.6 3.2-2.5-.1-5.6-3.9-8.8 8.1 1.1 15.4 2.9 22.1 5.4 3.5-3.1-2.3-6.3-5.1-9.4 12.5 2.3 17.8 5.6 23.1 8.9 3.8-3.6.2-6.7-2.4-9.8 9.4 3.4 14.3 7.9 19.4 12.3 1.7-2.3 4.4-4 1.2-9.6 6.7 3.8 11.8 8.3 15.5 13.3 4.1-2.6 2.5-6.2 2.5-9.4 7 5.6 11.4 11.5 16.8 17.3 1.1-.8 2-3.4 2.9-7.6 16.6 15.9 40.1 55.9 6 71.8-29-23.5-63.6-40.7-102-53.5 49.3 25 78 45.3 93.7 62.6-8 31.8-50 33.2-65.4 32.3 3.1-1.4 5.8-3.2 6.7-5.8-4-2.8-17.6-.4-27.2-5.6zm60.1 24.1c16.8 2.8-80.6 86.5-82.1 67.9-1.5-48.7 36.5-75.5 82.1-67.9zM38.2 342c-23.7-18.8-31.3-73.7 12.6-98.3 26.5-7 9 107.8-12.6 98.3zm91 98.2c-13.3 7.9-45.8 4.7-68.8-27.9-15.5-27.4-13.5-55.2-2.6-63.4 16.3-9.8 41.5 3.4 60.9 25.6 16.9 20 24.6 55.3 10.5 65.7zm-26.4-119.7c-24.5-15.8-28.9-51.6-9.9-80s54.3-38.6 78.8-22.8 28.9 51.6 9.9 80c-19.1 28.4-54.4 38.6-78.8 22.8zM205 496c-29.4 1.2-58.2-23.7-57.8-32.3-.4-12.7 35.8-22.6 59.3-22 23.7-1 55.6 7.5 55.7 18.9.5 11-28.8 35.9-57.2 35.4zm58.9-124.9c.2 29.7-26.2 53.8-58.8 54-32.6.2-59.2-23.8-59.4-53.4v-.6c-.2-29.7 26.2-53.8 58.8-54 32.6-.2 59.2 23.8 59.4 53.4v.6zm82.2 42.7c-25.3 34.6-59.6 35.9-72.3 26.3-13.3-12.4-3.2-50.9 15.1-72 20.9-23.3 43.3-38.5 58.9-26.6 10.5 10.3 16.7 49.1-1.7 72.3zm22.9-73.2c-21.5 9.4-39-105.3-12.6-98.3 43.9 24.7 36.3 79.6 12.6 98.3z"]
-}, oF = {
+}, oI = {
   prefix: "fab",
   iconName: "ravelry",
   icon: [512, 512, [], "f2d9", "M498.252,234.223c-1.208-10.34-1.7-20.826-3.746-31a310.306,310.306,0,0,0-9.622-36.6,184.068,184.068,0,0,0-30.874-57.5,251.154,251.154,0,0,0-18.818-21.689,237.362,237.362,0,0,0-47.113-36.116A240.8,240.8,0,0,0,331.356,26.65c-11.018-3.1-22.272-5.431-33.515-7.615-6.78-1.314-13.749-1.667-20.627-2.482-.316-.036-.6-.358-.9-.553q-16.143.009-32.288.006c-2.41.389-4.808.925-7.236,1.15a179.331,179.331,0,0,0-34.256,7.1,221.5,221.5,0,0,0-39.768,16.355,281.385,281.385,0,0,0-38.08,24.158c-6.167,4.61-12.268,9.36-17.974,14.518C96.539,88.494,86.34,97.72,76.785,107.555a243.878,243.878,0,0,0-33.648,43.95,206.488,206.488,0,0,0-20.494,44.6,198.2,198.2,0,0,0-7.691,34.759A201.13,201.13,0,0,0,13.4,266.385a299.716,299.716,0,0,0,4.425,40.24,226.865,226.865,0,0,0,16.73,53.3,210.543,210.543,0,0,0,24,39.528,213.589,213.589,0,0,0,26.358,28.416A251.313,251.313,0,0,0,126.7,458.455a287.831,287.831,0,0,0,55.9,25.277,269.5,269.5,0,0,0,40.641,9.835c6.071,1.01,12.275,1.253,18.412,1.873a4.149,4.149,0,0,1,1.19.56h32.289c2.507-.389,5-.937,7.527-1.143,16.336-1.332,32.107-5.335,47.489-10.717A219.992,219.992,0,0,0,379.1,460.322c9.749-6.447,19.395-13.077,28.737-20.1,5.785-4.348,10.988-9.5,16.3-14.457,3.964-3.7,7.764-7.578,11.51-11.5a232.162,232.162,0,0,0,31.427-41.639c9.542-16.045,17.355-32.905,22.3-50.926,2.859-10.413,4.947-21.045,7.017-31.652,1.032-5.279,1.251-10.723,1.87-16.087.036-.317.358-.6.552-.9V236.005A9.757,9.757,0,0,1,498.252,234.223Zm-161.117-1.15s-16.572-2.98-28.47-2.98c-27.2,0-33.57,14.9-33.57,37.04V360.8H201.582V170.062H275.1v31.931c8.924-26.822,26.771-36.189,62.04-36.189Z"]
-}, lF = {
+}, lI = {
   prefix: "fab",
   iconName: "react",
   icon: [512, 512, [], "f41b", "M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1.9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2.6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6.4 19.5.6 29.5.6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8.9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"]
-}, sF = {
+}, sI = {
   prefix: "fab",
   iconName: "reacteurope",
   icon: [576, 512, [], "f75d", "M250.6 211.74l5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.1-.1-2.3-6.8-2.3 6.8-7.2.1 5.7 4.3zm63.7 0l5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.2-.1-2.3-6.8-2.3 6.8-7.2.1 5.7 4.3zm-91.3 50.5h-3.4c-4.8 0-3.8 4-3.8 12.1 0 4.7-2.3 6.1-5.8 6.1s-5.8-1.4-5.8-6.1v-36.6c0-4.7 2.3-6.1 5.8-6.1s5.8 1.4 5.8 6.1c0 7.2-.7 10.5 3.8 10.5h3.4c4.7-.1 3.8-3.9 3.8-12.3 0-9.9-6.7-14.1-16.8-14.1h-.2c-10.1 0-16.8 4.2-16.8 14.1V276c0 10.4 6.7 14.1 16.8 14.1h.2c10.1 0 16.8-3.8 16.8-14.1 0-9.86 1.1-13.76-3.8-13.76zm-80.7 17.4h-14.7v-19.3H139c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-11.4v-18.3H142c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-21.7c-2.4-.1-3.7 1.3-3.7 3.8v59.1c0 2.5 1.3 3.8 3.8 3.8h21.9c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8zm-42-18.5c4.6-2 7.3-6 7.3-12.4v-11.9c0-10.1-6.7-14.1-16.8-14.1H77.4c-2.5 0-3.8 1.3-3.8 3.8v59.1c0 2.5 1.3 3.8 3.8 3.8h3.4c2.5 0 3.8-1.3 3.8-3.8v-22.9h5.6l7.4 23.5a4.1 4.1 0 0 0 4.3 3.2h3.3c2.8 0 4-1.8 3.2-4.4zm-3.8-14c0 4.8-2.5 6.1-6.1 6.1h-5.8v-20.9h5.8c3.6 0 6.1 1.3 6.1 6.1zM176 226a3.82 3.82 0 0 0-4.2-3.4h-6.9a3.68 3.68 0 0 0-4 3.4l-11 59.2c-.5 2.7.9 4.1 3.4 4.1h3a3.74 3.74 0 0 0 4.1-3.5l1.8-11.3h12.2l1.8 11.3a3.74 3.74 0 0 0 4.1 3.5h3.5c2.6 0 3.9-1.4 3.4-4.1zm-12.3 39.3l4.7-29.7 4.7 29.7zm89.3 20.2v-53.2h7.5c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-25.8c-2.5 0-3.8 1.3-3.8 3.8v2.1c0 2.5 1.3 3.8 3.8 3.8h7.3v53.2c0 2.5 1.3 3.8 3.8 3.8h3.4c2.5.04 3.8-1.3 3.8-3.76zm248-.8h-19.4V258h16.1a1.89 1.89 0 0 0 2-2v-.8a1.89 1.89 0 0 0-2-2h-16.1v-25.8h19.1a1.89 1.89 0 0 0 2-2v-.8a1.77 1.77 0 0 0-2-1.9h-22.2a1.62 1.62 0 0 0-2 1.8v63a1.81 1.81 0 0 0 2 1.9H501a1.81 1.81 0 0 0 2-1.9v-.8a1.84 1.84 0 0 0-2-1.96zm-93.1-62.9h-.8c-10.1 0-15.3 4.7-15.3 14.1V276c0 9.3 5.2 14.1 15.3 14.1h.8c10.1 0 15.3-4.8 15.3-14.1v-40.1c0-9.36-5.2-14.06-15.3-14.06zm10.2 52.4c-.1 8-3 11.1-10.5 11.1s-10.5-3.1-10.5-11.1v-36.6c0-7.9 3-11.1 10.5-11.1s10.5 3.2 10.5 11.1zm-46.5-14.5c6.1-1.6 9.2-6.1 9.2-13.3v-9.7c0-9.4-5.2-14.1-15.3-14.1h-13.7a1.81 1.81 0 0 0-2 1.9v63a1.81 1.81 0 0 0 2 1.9h1.2a1.74 1.74 0 0 0 1.9-1.9v-26.9h11.6l10.4 27.2a2.32 2.32 0 0 0 2.3 1.5h1.5c1.4 0 2-1 1.5-2.3zm-6.4-3.9H355v-28.5h10.2c7.5 0 10.5 3.1 10.5 11.1v6.4c0 7.84-3 11.04-10.5 11.04zm85.9-33.1h-13.7a1.62 1.62 0 0 0-2 1.8v63a1.81 1.81 0 0 0 2 1.9h1.2a1.74 1.74 0 0 0 1.9-1.9v-26.1h10.6c10.1 0 15.3-4.8 15.3-14.1v-10.5c0-9.4-5.2-14.1-15.3-14.1zm10.2 22.8c0 7.9-3 11.1-10.5 11.1h-10.2v-29.2h10.2c7.5-.1 10.5 3.1 10.5 11zM259.5 308l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm227.6-136.1a364.42 364.42 0 0 0-35.6-11.3c19.6-78 11.6-134.7-22.3-153.9C394.7-12.66 343.3 11 291 61.94q5.1 4.95 10.2 10.2c82.5-80 119.6-53.5 120.9-52.8 22.4 12.7 36 55.8 15.5 137.8a587.83 587.83 0 0 0-84.6-13C281.1 43.64 212.4 2 170.8 2 140 2 127 23 123.2 29.74c-18.1 32-13.3 84.2.1 133.8-70.5 20.3-120.7 54.1-120.3 95 .5 59.6 103.2 87.8 122.1 92.8-20.5 81.9-10.1 135.6 22.3 153.9 28 15.8 75.1 6 138.2-55.2q-5.1-4.95-10.2-10.2c-82.5 80-119.7 53.5-120.9 52.8-22.3-12.6-36-55.6-15.5-137.9 12.4 2.9 41.8 9.5 84.6 13 71.9 100.4 140.6 142 182.1 142 30.8 0 43.8-21 47.6-27.7 18-31.9 13.3-84.1-.1-133.8 152.3-43.8 156.2-130.2 33.9-176.3zM135.9 36.84c2.9-5.1 11.9-20.3 34.9-20.3 36.8 0 98.8 39.6 163.3 126.2a714 714 0 0 0-93.9.9 547.76 547.76 0 0 1 42.2-52.4Q277.3 86 272.2 81a598.25 598.25 0 0 0-50.7 64.2 569.69 569.69 0 0 0-84.4 14.6c-.2-1.4-24.3-82.2-1.2-123zm304.8 438.3c-2.9 5.1-11.8 20.3-34.9 20.3-36.7 0-98.7-39.4-163.3-126.2a695.38 695.38 0 0 0 93.9-.9 547.76 547.76 0 0 1-42.2 52.4q5.1 5.25 10.2 10.2a588.47 588.47 0 0 0 50.7-64.2c47.3-4.7 80.3-13.5 84.4-14.6 22.7 84.4 4.5 117 1.2 123zm9.1-138.6c-3.6-11.9-7.7-24.1-12.4-36.4a12.67 12.67 0 0 1-10.7-5.7l-.1.1a19.61 19.61 0 0 1-5.4 3.6c5.7 14.3 10.6 28.4 14.7 42.2a535.3 535.3 0 0 1-72 13c3.5-5.3 17.2-26.2 32.2-54.2a24.6 24.6 0 0 1-6-3.2c-1.1 1.2-3.6 4.2-10.9 4.2-6.2 11.2-17.4 30.9-33.9 55.2a711.91 711.91 0 0 1-112.4 1c-7.9-11.2-21.5-31.1-36.8-57.8a21 21 0 0 1-3-1.5c-1.9 1.6-3.9 3.2-12.6 3.2 6.3 11.2 17.5 30.7 33.8 54.6a548.81 548.81 0 0 1-72.2-11.7q5.85-21 14.1-42.9c-3.2 0-5.4.2-8.4-1a17.58 17.58 0 0 1-6.9 1c-4.9 13.4-9.1 26.5-12.7 39.4C-31.7 297-12.1 216 126.7 175.64c3.6 11.9 7.7 24.1 12.4 36.4 10.4 0 12.9 3.4 14.4 5.3a12 12 0 0 1 2.3-2.2c-5.8-14.7-10.9-29.2-15.2-43.3 7-1.8 32.4-8.4 72-13-15.9 24.3-26.7 43.9-32.8 55.3a14.22 14.22 0 0 1 6.4 8 23.42 23.42 0 0 1 10.2-8.4c6.5-11.7 17.9-31.9 34.8-56.9a711.72 711.72 0 0 1 112.4-1c31.5 44.6 28.9 48.1 42.5 64.5a21.42 21.42 0 0 1 10.4-7.4c-6.4-11.4-17.6-31-34.3-55.5 40.4 4.1 65 10 72.2 11.7-4 14.4-8.9 29.2-14.6 44.2a20.74 20.74 0 0 1 6.8 4.3l.1.1a12.72 12.72 0 0 1 8.9-5.6c4.9-13.4 9.2-26.6 12.8-39.5a359.71 359.71 0 0 1 34.5 11c106.1 39.9 74 87.9 72.6 90.4-19.8 35.1-80.1 55.2-105.7 62.5zm-114.4-114h-1.2a1.74 1.74 0 0 0-1.9 1.9v49.8c0 7.9-2.6 11.1-10.1 11.1s-10.1-3.1-10.1-11.1v-49.8a1.69 1.69 0 0 0-1.9-1.9H309a1.81 1.81 0 0 0-2 1.9v51.5c0 9.6 5 14.1 15.1 14.1h.4c10.1 0 15.1-4.6 15.1-14.1v-51.5a2 2 0 0 0-2.2-1.9zM321.7 308l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm-31.1 7.4l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm5.1-30.8h-19.4v-26.7h16.1a1.89 1.89 0 0 0 2-2v-.8a1.89 1.89 0 0 0-2-2h-16.1v-25.8h19.1a1.89 1.89 0 0 0 2-2v-.8a1.77 1.77 0 0 0-2-1.9h-22.2a1.81 1.81 0 0 0-2 1.9v63a1.81 1.81 0 0 0 2 1.9h22.5a1.77 1.77 0 0 0 2-1.9v-.8a1.83 1.83 0 0 0-2-2.06zm-7.4-99.4L286 192l-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.1-.1z"]
-}, fF = {
+}, fI = {
   prefix: "fab",
   iconName: "readme",
   icon: [576, 512, [], "f4d5", "M528.3 46.5H388.5c-48.1 0-89.9 33.3-100.4 80.3-10.6-47-52.3-80.3-100.4-80.3H48c-26.5 0-48 21.5-48 48v245.8c0 26.5 21.5 48 48 48h89.7c102.2 0 132.7 24.4 147.3 75 .7 2.8 5.2 2.8 6 0 14.7-50.6 45.2-75 147.3-75H528c26.5 0 48-21.5 48-48V94.6c0-26.4-21.3-47.9-47.7-48.1zM242 311.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5V289c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V251zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H78.2c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm259.3 121.7c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.9c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5V228c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5v22.9zm0-60.9c0 1.9-1.5 3.5-3.5 3.5H337.5c-1.9 0-3.5-1.5-3.5-3.5v-22.8c0-1.9 1.5-3.5 3.5-3.5h160.4c1.9 0 3.5 1.5 3.5 3.5V190z"]
-}, uF = {
+}, uI = {
   prefix: "fab",
   iconName: "rebel",
   icon: [512, 512, [], "f1d0", "M256.5 504C117.2 504 9 387.8 13.2 249.9 16 170.7 56.4 97.7 129.7 49.5c.3 0 1.9-.6 1.1.8-5.8 5.5-111.3 129.8-14.1 226.4 49.8 49.5 90 2.5 90 2.5 38.5-50.1-.6-125.9-.6-125.9-10-24.9-45.7-40.1-45.7-40.1l28.8-31.8c24.4 10.5 43.2 38.7 43.2 38.7.8-29.6-21.9-61.4-21.9-61.4L255.1 8l44.3 50.1c-20.5 28.8-21.9 62.6-21.9 62.6 13.8-23 43.5-39.3 43.5-39.3l28.5 31.8c-27.4 8.9-45.4 39.9-45.4 39.9-15.8 28.5-27.1 89.4.6 127.3 32.4 44.6 87.7-2.8 87.7-2.8 102.7-91.9-10.5-225-10.5-225-6.1-5.5.8-2.8.8-2.8 50.1 36.5 114.6 84.4 116.2 204.8C500.9 400.2 399 504 256.5 504z"]
-}, dF = {
+}, dI = {
   prefix: "fab",
   iconName: "red-river",
   icon: [448, 512, [], "f3e3", "M353.2 32H94.8C42.4 32 0 74.4 0 126.8v258.4C0 437.6 42.4 480 94.8 480h258.4c52.4 0 94.8-42.4 94.8-94.8V126.8c0-52.4-42.4-94.8-94.8-94.8zM144.9 200.9v56.3c0 27-21.9 48.9-48.9 48.9V151.9c0-13.2 10.7-23.9 23.9-23.9h154.2c0 27-21.9 48.9-48.9 48.9h-56.3c-12.3-.6-24.6 11.6-24 24zm176.3 72h-56.3c-12.3-.6-24.6 11.6-24 24v56.3c0 27-21.9 48.9-48.9 48.9V247.9c0-13.2 10.7-23.9 23.9-23.9h154.2c0 27-21.9 48.9-48.9 48.9z"]
-}, hF = {
+}, hI = {
   prefix: "fab",
   iconName: "reddit",
   icon: [512, 512, [], "f1a1", "M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"]
-}, mF = {
+}, mI = {
   prefix: "fab",
   iconName: "reddit-alien",
   icon: [512, 512, [], "f281", "M440.3 203.5c-15 0-28.2 6.2-37.9 15.9-35.7-24.7-83.8-40.6-137.1-42.3L293 52.3l88.2 19.8c0 21.6 17.6 39.2 39.2 39.2 22 0 39.7-18.1 39.7-39.7s-17.6-39.7-39.7-39.7c-15.4 0-28.7 9.3-35.3 22l-97.4-21.6c-4.9-1.3-9.7 2.2-11 7.1L246.3 177c-52.9 2.2-100.5 18.1-136.3 42.8-9.7-10.1-23.4-16.3-38.4-16.3-55.6 0-73.8 74.6-22.9 100.1-1.8 7.9-2.6 16.3-2.6 24.7 0 83.8 94.4 151.7 210.3 151.7 116.4 0 210.8-67.9 210.8-151.7 0-8.4-.9-17.2-3.1-25.1 49.9-25.6 31.5-99.7-23.8-99.7zM129.4 308.9c0-22 17.6-39.7 39.7-39.7 21.6 0 39.2 17.6 39.2 39.7 0 21.6-17.6 39.2-39.2 39.2-22 .1-39.7-17.6-39.7-39.2zm214.3 93.5c-36.4 36.4-139.1 36.4-175.5 0-4-3.5-4-9.7 0-13.7 3.5-3.5 9.7-3.5 13.2 0 27.8 28.5 120 29 149 0 3.5-3.5 9.7-3.5 13.2 0 4.1 4 4.1 10.2.1 13.7zm-.8-54.2c-21.6 0-39.2-17.6-39.2-39.2 0-22 17.6-39.7 39.2-39.7 22 0 39.7 17.6 39.7 39.7-.1 21.5-17.7 39.2-39.7 39.2z"]
-}, vF = {
+}, vI = {
   prefix: "fab",
   iconName: "reddit-square",
   icon: [448, 512, [], "f1a2", "M283.2 345.5c2.7 2.7 2.7 6.8 0 9.2-24.5 24.5-93.8 24.6-118.4 0-2.7-2.4-2.7-6.5 0-9.2 2.4-2.4 6.5-2.4 8.9 0 18.7 19.2 81 19.6 100.5 0 2.4-2.3 6.6-2.3 9 0zm-91.3-53.8c0-14.9-11.9-26.8-26.5-26.8-14.9 0-26.8 11.9-26.8 26.8 0 14.6 11.9 26.5 26.8 26.5 14.6 0 26.5-11.9 26.5-26.5zm90.7-26.8c-14.6 0-26.5 11.9-26.5 26.8 0 14.6 11.9 26.5 26.5 26.5 14.9 0 26.8-11.9 26.8-26.5 0-14.9-11.9-26.8-26.8-26.8zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-99.7 140.6c-10.1 0-19 4.2-25.6 10.7-24.1-16.7-56.5-27.4-92.5-28.6l18.7-84.2 59.5 13.4c0 14.6 11.9 26.5 26.5 26.5 14.9 0 26.8-12.2 26.8-26.8 0-14.6-11.9-26.8-26.8-26.8-10.4 0-19.3 6.2-23.8 14.9l-65.7-14.6c-3.3-.9-6.5 1.5-7.4 4.8l-20.5 92.8c-35.7 1.5-67.8 12.2-91.9 28.9-6.5-6.8-15.8-11-25.9-11-37.5 0-49.8 50.4-15.5 67.5-1.2 5.4-1.8 11-1.8 16.7 0 56.5 63.7 102.3 141.9 102.3 78.5 0 142.2-45.8 142.2-102.3 0-5.7-.6-11.6-2.1-17 33.6-17.2 21.2-67.2-16.1-67.2z"]
-}, pF = {
+}, pI = {
   prefix: "fab",
   iconName: "redhat",
   icon: [512, 512, [], "f7bc", "M341.52 285.56c33.65 0 82.34-6.94 82.34-47 .22-6.74.86-1.82-20.88-96.24-4.62-19.15-8.68-27.84-42.31-44.65-26.09-13.34-82.92-35.37-99.73-35.37-15.66 0-20.2 20.17-38.87 20.17-18 0-31.31-15.06-48.12-15.06-16.14 0-26.66 11-34.78 33.62-27.5 77.55-26.28 74.27-26.12 78.27 0 24.8 97.64 106.11 228.47 106.11M429 254.84c4.65 22 4.65 24.35 4.65 27.25 0 37.66-42.33 58.56-98 58.56-125.74.08-235.91-73.65-235.91-122.33a49.55 49.55 0 0 1 4.06-19.72C58.56 200.86 0 208.93 0 260.63c0 84.67 200.63 189 359.49 189 121.79 0 152.51-55.08 152.51-98.58 0-34.21-29.59-73.05-82.93-96.24"]
-}, gF = {
+}, gI = {
   prefix: "fab",
   iconName: "renren",
   icon: [512, 512, [], "f18b", "M214 169.1c0 110.4-61 205.4-147.6 247.4C30 373.2 8 317.7 8 256.6 8 133.9 97.1 32.2 214 12.5v156.6zM255 504c-42.9 0-83.3-11-118.5-30.4C193.7 437.5 239.9 382.9 255 319c15.5 63.9 61.7 118.5 118.8 154.7C338.7 493 298.3 504 255 504zm190.6-87.5C359 374.5 298 279.6 298 169.1V12.5c116.9 19.7 206 121.4 206 244.1 0 61.1-22 116.6-58.4 159.9z"]
-}, zF = {
+}, zI = {
   prefix: "fab",
   iconName: "replyd",
   icon: [448, 512, [], "f3e6", "M320 480H128C57.6 480 0 422.4 0 352V160C0 89.6 57.6 32 128 32h192c70.4 0 128 57.6 128 128v192c0 70.4-57.6 128-128 128zM193.4 273.2c-6.1-2-11.6-3.1-16.4-3.1-7.2 0-13.5 1.9-18.9 5.6-5.4 3.7-9.6 9-12.8 15.8h-1.1l-4.2-18.3h-28v138.9h36.1v-89.7c1.5-5.4 4.4-9.8 8.7-13.2 4.3-3.4 9.8-5.1 16.2-5.1 4.6 0 9.8 1 15.6 3.1l4.8-34zm115.2 103.4c-3.2 2.4-7.7 4.8-13.7 7.1-6 2.3-12.8 3.5-20.4 3.5-12.2 0-21.1-3-26.5-8.9-5.5-5.9-8.5-14.7-9-26.4h83.3c.9-4.8 1.6-9.4 2.1-13.9.5-4.4.7-8.6.7-12.5 0-10.7-1.6-19.7-4.7-26.9-3.2-7.2-7.3-13-12.5-17.2-5.2-4.3-11.1-7.3-17.8-9.2-6.7-1.8-13.5-2.8-20.6-2.8-21.1 0-37.5 6.1-49.2 18.3s-17.5 30.5-17.5 55c0 22.8 5.2 40.7 15.6 53.7 10.4 13.1 26.8 19.6 49.2 19.6 10.7 0 20.9-1.5 30.4-4.6 9.5-3.1 17.1-6.8 22.6-11.2l-12-23.6zm-21.8-70.3c3.8 5.4 5.3 13.1 4.6 23.1h-51.7c.9-9.4 3.7-17 8.2-22.6 4.5-5.6 11.5-8.5 21-8.5 8.2-.1 14.1 2.6 17.9 8zm79.9 2.5c4.1 3.9 9.4 5.8 16.1 5.8 7 0 12.6-1.9 16.7-5.8s6.1-9.1 6.1-15.6-2-11.6-6.1-15.4c-4.1-3.8-9.6-5.7-16.7-5.7-6.7 0-12 1.9-16.1 5.7-4.1 3.8-6.1 8.9-6.1 15.4s2 11.7 6.1 15.6zm0 100.5c4.1 3.9 9.4 5.8 16.1 5.8 7 0 12.6-1.9 16.7-5.8s6.1-9.1 6.1-15.6-2-11.6-6.1-15.4c-4.1-3.8-9.6-5.7-16.7-5.7-6.7 0-12 1.9-16.1 5.7-4.1 3.8-6.1 8.9-6.1 15.4 0 6.6 2 11.7 6.1 15.6z"]
-}, yF = {
+}, yI = {
   prefix: "fab",
   iconName: "researchgate",
   icon: [448, 512, [], "f4f8", "M0 32v448h448V32H0zm262.2 334.4c-6.6 3-33.2 6-50-14.2-9.2-10.6-25.3-33.3-42.2-63.6-8.9 0-14.7 0-21.4-.6v46.4c0 23.5 6 21.2 25.8 23.9v8.1c-6.9-.3-23.1-.8-35.6-.8-13.1 0-26.1.6-33.6.8v-8.1c15.5-2.9 22-1.3 22-23.9V225c0-22.6-6.4-21-22-23.9V193c25.8 1 53.1-.6 70.9-.6 31.7 0 55.9 14.4 55.9 45.6 0 21.1-16.7 42.2-39.2 47.5 13.6 24.2 30 45.6 42.2 58.9 7.2 7.8 17.2 14.7 27.2 14.7v7.3zm22.9-135c-23.3 0-32.2-15.7-32.2-32.2V167c0-12.2 8.8-30.4 34-30.4s30.4 17.9 30.4 17.9l-10.7 7.2s-5.5-12.5-19.7-12.5c-7.9 0-19.7 7.3-19.7 19.7v26.8c0 13.4 6.6 23.3 17.9 23.3 14.1 0 21.5-10.9 21.5-26.8h-17.9v-10.7h30.4c0 20.5 4.7 49.9-34 49.9zm-116.5 44.7c-9.4 0-13.6-.3-20-.8v-69.7c6.4-.6 15-.6 22.5-.6 23.3 0 37.2 12.2 37.2 34.5 0 21.9-15 36.6-39.7 36.6z"]
-}, bF = {
+}, bI = {
   prefix: "fab",
   iconName: "resolving",
   icon: [496, 512, [], "f3e7", "M281.2 278.2c46-13.3 49.6-23.5 44-43.4L314 195.5c-6.1-20.9-18.4-28.1-71.1-12.8L54.7 236.8l28.6 98.6 197.9-57.2zM248.5 8C131.4 8 33.2 88.7 7.2 197.5l221.9-63.9c34.8-10.2 54.2-11.7 79.3-8.2 36.3 6.1 52.7 25 61.4 55.2l10.7 37.8c8.2 28.1 1 50.6-23.5 73.6-19.4 17.4-31.2 24.5-61.4 33.2L203 351.8l220.4 27.1 9.7 34.2-48.1 13.3-286.8-37.3 23 80.2c36.8 22 80.3 34.7 126.3 34.7 137 0 248.5-111.4 248.5-248.3C497 119.4 385.5 8 248.5 8zM38.3 388.6L0 256.8c0 48.5 14.3 93.4 38.3 131.8z"]
-}, MF = {
+}, MI = {
   prefix: "fab",
   iconName: "rev",
   icon: [448, 512, [], "f5b2", "M289.67 274.89a65.57 65.57 0 1 1-65.56-65.56 65.64 65.64 0 0 1 65.56 65.56zm139.55-5.05h-.13a204.69 204.69 0 0 0-74.32-153l-45.38 26.2a157.07 157.07 0 0 1 71.81 131.84C381.2 361.5 310.73 432 224.11 432S67 361.5 67 274.88c0-81.88 63-149.27 143-156.43v39.12l108.77-62.79L210 32v38.32c-106.7 7.25-191 96-191 204.57 0 111.59 89.12 202.29 200.06 205v.11h210.16V269.84z"]
-}, CF = {
+}, CI = {
   prefix: "fab",
   iconName: "rocketchat",
   icon: [576, 512, [], "f3e8", "M284.046,224.8a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,284.046,224.8Zm-110.45,0a34.114,34.114,0,1,0,34.317,34.113A34.217,34.217,0,0,0,173.6,224.8Zm220.923,0a34.114,34.114,0,1,0,34.317,34.113A34.215,34.215,0,0,0,394.519,224.8Zm153.807-55.319c-15.535-24.172-37.31-45.57-64.681-63.618-52.886-34.817-122.374-54-195.666-54a405.975,405.975,0,0,0-72.032,6.357,238.524,238.524,0,0,0-49.51-36.588C99.684-11.7,40.859.711,11.135,11.421A14.291,14.291,0,0,0,5.58,34.782C26.542,56.458,61.222,99.3,52.7,138.252c-33.142,33.9-51.112,74.776-51.112,117.337,0,43.372,17.97,84.248,51.112,118.148,8.526,38.956-26.154,81.816-47.116,103.491a14.284,14.284,0,0,0,5.555,23.34c29.724,10.709,88.549,23.147,155.324-10.2a238.679,238.679,0,0,0,49.51-36.589A405.972,405.972,0,0,0,288,460.14c73.313,0,142.8-19.159,195.667-53.975,27.371-18.049,49.145-39.426,64.679-63.619,17.309-26.923,26.07-55.916,26.07-86.125C574.394,225.4,565.634,196.43,548.326,169.485ZM284.987,409.9a345.65,345.65,0,0,1-89.446-11.5l-20.129,19.393a184.366,184.366,0,0,1-37.138,27.585,145.767,145.767,0,0,1-52.522,14.87c.983-1.771,1.881-3.563,2.842-5.356q30.258-55.68,16.325-100.078c-32.992-25.962-52.778-59.2-52.778-95.4,0-83.1,104.254-150.469,232.846-150.469s232.867,67.373,232.867,150.469C517.854,342.525,413.6,409.9,284.987,409.9Z"]
-}, VF = {
+}, VI = {
   prefix: "fab",
   iconName: "rockrms",
   icon: [496, 512, [], "f3e9", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm157.4 419.5h-90l-112-131.3c-17.9-20.4-3.9-56.1 26.6-56.1h75.3l-84.6-99.3-84.3 98.9h-90L193.5 67.2c14.4-18.4 41.3-17.3 54.5 0l157.7 185.1c19 22.8 2 57.2-27.6 56.1-.6 0-74.2.2-74.2.2l101.5 118.9z"]
-}, xF = {
+}, xI = {
   prefix: "fab",
   iconName: "rust",
   icon: [512, 512, [], "e07a", "M508.52,249.75,486.7,236.24c-.17-2-.34-3.93-.55-5.88l18.72-17.5a7.35,7.35,0,0,0-2.44-12.25l-24-9c-.54-1.88-1.08-3.78-1.67-5.64l15-20.83a7.35,7.35,0,0,0-4.79-11.54l-25.42-4.15c-.9-1.73-1.79-3.45-2.73-5.15l10.68-23.42a7.35,7.35,0,0,0-6.95-10.39l-25.82.91q-1.79-2.22-3.61-4.4L439,81.84A7.36,7.36,0,0,0,430.16,73L405,78.93q-2.17-1.83-4.4-3.61l.91-25.82a7.35,7.35,0,0,0-10.39-7L367.7,53.23c-1.7-.94-3.43-1.84-5.15-2.73L358.4,25.08a7.35,7.35,0,0,0-11.54-4.79L326,35.26c-1.86-.59-3.75-1.13-5.64-1.67l-9-24a7.35,7.35,0,0,0-12.25-2.44l-17.5,18.72c-1.95-.21-3.91-.38-5.88-.55L262.25,3.48a7.35,7.35,0,0,0-12.5,0L236.24,25.3c-2,.17-3.93.34-5.88.55L212.86,7.13a7.35,7.35,0,0,0-12.25,2.44l-9,24c-1.89.55-3.79,1.08-5.66,1.68l-20.82-15a7.35,7.35,0,0,0-11.54,4.79l-4.15,25.41c-1.73.9-3.45,1.79-5.16,2.73L120.88,42.55a7.35,7.35,0,0,0-10.39,7l.92,25.81c-1.49,1.19-3,2.39-4.42,3.61L81.84,73A7.36,7.36,0,0,0,73,81.84L78.93,107c-1.23,1.45-2.43,2.93-3.62,4.41l-25.81-.91a7.42,7.42,0,0,0-6.37,3.26,7.35,7.35,0,0,0-.57,7.13l10.66,23.41c-.94,1.7-1.83,3.43-2.73,5.16L25.08,153.6a7.35,7.35,0,0,0-4.79,11.54l15,20.82c-.59,1.87-1.13,3.77-1.68,5.66l-24,9a7.35,7.35,0,0,0-2.44,12.25l18.72,17.5c-.21,1.95-.38,3.91-.55,5.88L3.48,249.75a7.35,7.35,0,0,0,0,12.5L25.3,275.76c.17,2,.34,3.92.55,5.87L7.13,299.13a7.35,7.35,0,0,0,2.44,12.25l24,9c.55,1.89,1.08,3.78,1.68,5.65l-15,20.83a7.35,7.35,0,0,0,4.79,11.54l25.42,4.15c.9,1.72,1.79,3.45,2.73,5.14L42.56,391.12a7.35,7.35,0,0,0,.57,7.13,7.13,7.13,0,0,0,6.37,3.26l25.83-.91q1.77,2.22,3.6,4.4L73,430.16A7.36,7.36,0,0,0,81.84,439L107,433.07q2.18,1.83,4.41,3.61l-.92,25.82a7.35,7.35,0,0,0,10.39,6.95l23.43-10.68c1.69.94,3.42,1.83,5.14,2.73l4.15,25.42a7.34,7.34,0,0,0,11.54,4.78l20.83-15c1.86.6,3.76,1.13,5.65,1.68l9,24a7.36,7.36,0,0,0,12.25,2.44l17.5-18.72c1.95.21,3.92.38,5.88.55l13.51,21.82a7.35,7.35,0,0,0,12.5,0l13.51-21.82c2-.17,3.93-.34,5.88-.56l17.5,18.73a7.36,7.36,0,0,0,12.25-2.44l9-24c1.89-.55,3.78-1.08,5.65-1.68l20.82,15a7.34,7.34,0,0,0,11.54-4.78l4.15-25.42c1.72-.9,3.45-1.79,5.15-2.73l23.42,10.68a7.35,7.35,0,0,0,10.39-6.95l-.91-25.82q2.22-1.79,4.4-3.61L430.16,439a7.36,7.36,0,0,0,8.84-8.84L433.07,405q1.83-2.17,3.61-4.4l25.82.91a7.23,7.23,0,0,0,6.37-3.26,7.35,7.35,0,0,0,.58-7.13L458.77,367.7c.94-1.7,1.83-3.43,2.73-5.15l25.42-4.15a7.35,7.35,0,0,0,4.79-11.54l-15-20.83c.59-1.87,1.13-3.76,1.67-5.65l24-9a7.35,7.35,0,0,0,2.44-12.25l-18.72-17.5c.21-1.95.38-3.91.55-5.87l21.82-13.51a7.35,7.35,0,0,0,0-12.5Zm-151,129.08A13.91,13.91,0,0,0,341,389.51l-7.64,35.67A187.51,187.51,0,0,1,177,424.44l-7.64-35.66a13.87,13.87,0,0,0-16.46-10.68l-31.51,6.76a187.38,187.38,0,0,1-16.26-19.21H258.3c1.72,0,2.89-.29,2.89-1.91V309.55c0-1.57-1.17-1.91-2.89-1.91H213.47l.05-34.35H262c4.41,0,23.66,1.28,29.79,25.87,1.91,7.55,6.17,32.14,9.06,40,2.89,8.82,14.6,26.46,27.1,26.46H407a187.3,187.3,0,0,1-17.34,20.09Zm25.77,34.49A15.24,15.24,0,1,1,368,398.08h.44A15.23,15.23,0,0,1,383.24,413.32Zm-225.62-.68a15.24,15.24,0,1,1-15.25-15.25h.45A15.25,15.25,0,0,1,157.62,412.64ZM69.57,234.15l32.83-14.6a13.88,13.88,0,0,0,7.06-18.33L102.69,186h26.56V305.73H75.65A187.65,187.65,0,0,1,69.57,234.15ZM58.31,198.09a15.24,15.24,0,0,1,15.23-15.25H74a15.24,15.24,0,1,1-15.67,15.24Zm155.16,24.49.05-35.32h63.26c3.28,0,23.07,3.77,23.07,18.62,0,12.29-15.19,16.7-27.68,16.7ZM399,306.71c-9.8,1.13-20.63-4.12-22-10.09-5.78-32.49-15.39-39.4-30.57-51.4,18.86-11.95,38.46-29.64,38.46-53.26,0-25.52-17.49-41.59-29.4-49.48-16.76-11-35.28-13.23-40.27-13.23H116.32A187.49,187.49,0,0,1,221.21,70.06l23.47,24.6a13.82,13.82,0,0,0,19.6.44l26.26-25a187.51,187.51,0,0,1,128.37,91.43l-18,40.57A14,14,0,0,0,408,220.43l34.59,15.33a187.12,187.12,0,0,1,.4,32.54H423.71c-1.91,0-2.69,1.27-2.69,3.13v8.82C421,301,409.31,305.58,399,306.71ZM240,60.21A15.24,15.24,0,0,1,255.21,45h.45A15.24,15.24,0,1,1,240,60.21ZM436.84,214a15.24,15.24,0,1,1,0-30.48h.44a15.24,15.24,0,0,1-.44,30.48Z"]
-}, wF = {
+}, wI = {
   prefix: "fab",
   iconName: "safari",
   icon: [512, 512, [], "f267", "M274.69,274.69l-37.38-37.38L166,346ZM256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8ZM411.85,182.79l14.78-6.13A8,8,0,0,1,437.08,181h0a8,8,0,0,1-4.33,10.46L418,197.57a8,8,0,0,1-10.45-4.33h0A8,8,0,0,1,411.85,182.79ZM314.43,94l6.12-14.78A8,8,0,0,1,331,74.92h0a8,8,0,0,1,4.33,10.45l-6.13,14.78a8,8,0,0,1-10.45,4.33h0A8,8,0,0,1,314.43,94ZM256,60h0a8,8,0,0,1,8,8V84a8,8,0,0,1-8,8h0a8,8,0,0,1-8-8V68A8,8,0,0,1,256,60ZM181,74.92a8,8,0,0,1,10.46,4.33L197.57,94a8,8,0,1,1-14.78,6.12l-6.13-14.78A8,8,0,0,1,181,74.92Zm-63.58,42.49h0a8,8,0,0,1,11.31,0L140,128.72A8,8,0,0,1,140,140h0a8,8,0,0,1-11.31,0l-11.31-11.31A8,8,0,0,1,117.41,117.41ZM60,256h0a8,8,0,0,1,8-8H84a8,8,0,0,1,8,8h0a8,8,0,0,1-8,8H68A8,8,0,0,1,60,256Zm40.15,73.21-14.78,6.13A8,8,0,0,1,74.92,331h0a8,8,0,0,1,4.33-10.46L94,314.43a8,8,0,0,1,10.45,4.33h0A8,8,0,0,1,100.15,329.21Zm4.33-136h0A8,8,0,0,1,94,197.57l-14.78-6.12A8,8,0,0,1,74.92,181h0a8,8,0,0,1,10.45-4.33l14.78,6.13A8,8,0,0,1,104.48,193.24ZM197.57,418l-6.12,14.78a8,8,0,0,1-14.79-6.12l6.13-14.78A8,8,0,1,1,197.57,418ZM264,444a8,8,0,0,1-8,8h0a8,8,0,0,1-8-8V428a8,8,0,0,1,8-8h0a8,8,0,0,1,8,8Zm67-6.92h0a8,8,0,0,1-10.46-4.33L314.43,418a8,8,0,0,1,4.33-10.45h0a8,8,0,0,1,10.45,4.33l6.13,14.78A8,8,0,0,1,331,437.08Zm63.58-42.49h0a8,8,0,0,1-11.31,0L372,383.28A8,8,0,0,1,372,372h0a8,8,0,0,1,11.31,0l11.31,11.31A8,8,0,0,1,394.59,394.59ZM286.25,286.25,110.34,401.66,225.75,225.75,401.66,110.34ZM437.08,331h0a8,8,0,0,1-10.45,4.33l-14.78-6.13a8,8,0,0,1-4.33-10.45h0A8,8,0,0,1,418,314.43l14.78,6.12A8,8,0,0,1,437.08,331ZM444,264H428a8,8,0,0,1-8-8h0a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8h0A8,8,0,0,1,444,264Z"]
-}, HF = {
+}, HI = {
   prefix: "fab",
   iconName: "salesforce",
   icon: [640, 512, [], "f83b", "M248.89 245.64h-26.35c.69-5.16 3.32-14.12 13.64-14.12 6.75 0 11.97 3.82 12.71 14.12zm136.66-13.88c-.47 0-14.11-1.77-14.11 20s13.63 20 14.11 20c13 0 14.11-13.54 14.11-20 0-21.76-13.66-20-14.11-20zm-243.22 23.76a8.63 8.63 0 0 0-3.29 7.29c0 4.78 2.08 6.05 3.29 7.05 4.7 3.7 15.07 2.12 20.93.95v-16.94c-5.32-1.07-16.73-1.96-20.93 1.65zM640 232c0 87.58-80 154.39-165.36 136.43-18.37 33-70.73 70.75-132.2 41.63-41.16 96.05-177.89 92.18-213.81-5.17C8.91 428.78-50.19 266.52 53.36 205.61 18.61 126.18 76 32 167.67 32a124.24 124.24 0 0 1 98.56 48.7c20.7-21.4 49.4-34.81 81.15-34.81 42.34 0 79 23.52 98.8 58.57C539 63.78 640 132.69 640 232zm-519.55 31.8c0-11.76-11.69-15.17-17.87-17.17-5.27-2.11-13.41-3.51-13.41-8.94 0-9.46 17-6.66 25.17-2.12 0 0 1.17.71 1.64-.47.24-.7 2.36-6.58 2.59-7.29a1.13 1.13 0 0 0-.7-1.41c-12.33-7.63-40.7-8.51-40.7 12.7 0 12.46 11.49 15.44 17.88 17.17 4.72 1.58 13.17 3 13.17 8.7 0 4-3.53 7.06-9.17 7.06a31.76 31.76 0 0 1-19-6.35c-.47-.23-1.42-.71-1.65.71l-2.4 7.47c-.47.94.23 1.18.23 1.41 1.75 1.4 10.3 6.59 22.82 6.59 13.17 0 21.4-7.06 21.4-18.11zm32-42.58c-10.13 0-18.66 3.17-21.4 5.18a1 1 0 0 0-.24 1.41l2.59 7.06a1 1 0 0 0 1.18.7c.65 0 6.8-4 16.93-4 4 0 7.06.71 9.18 2.36 3.6 2.8 3.06 8.29 3.06 10.58-4.79-.3-19.11-3.44-29.41 3.76a16.92 16.92 0 0 0-7.34 14.54c0 5.9 1.51 10.4 6.59 14.35 12.24 8.16 36.28 2 38.1 1.41 1.58-.32 3.53-.66 3.53-1.88v-33.88c.04-4.61.32-21.64-22.78-21.64zM199 200.24a1.11 1.11 0 0 0-1.18-1.18H188a1.11 1.11 0 0 0-1.17 1.18v79a1.11 1.11 0 0 0 1.17 1.18h9.88a1.11 1.11 0 0 0 1.18-1.18zm55.75 28.93c-2.1-2.31-6.79-7.53-17.65-7.53-3.51 0-14.16.23-20.7 8.94-6.35 7.63-6.58 18.11-6.58 21.41 0 3.12.15 14.26 7.06 21.17 2.64 2.91 9.06 8.23 22.81 8.23 10.82 0 16.47-2.35 18.58-3.76.47-.24.71-.71.24-1.88l-2.35-6.83a1.26 1.26 0 0 0-1.41-.7c-2.59.94-6.35 2.82-15.29 2.82-17.42 0-16.85-14.74-16.94-16.7h37.17a1.23 1.23 0 0 0 1.17-.94c-.29 0 2.07-14.7-6.09-24.23zm36.69 52.69c13.17 0 21.41-7.06 21.41-18.11 0-11.76-11.7-15.17-17.88-17.17-4.14-1.66-13.41-3.38-13.41-8.94 0-3.76 3.29-6.35 8.47-6.35a38.11 38.11 0 0 1 16.7 4.23s1.18.71 1.65-.47c.23-.7 2.35-6.58 2.58-7.29a1.13 1.13 0 0 0-.7-1.41c-7.91-4.9-16.74-4.94-20.23-4.94-12 0-20.46 7.29-20.46 17.64 0 12.46 11.48 15.44 17.87 17.17 6.11 2 13.17 3.26 13.17 8.7 0 4-3.52 7.06-9.17 7.06a31.8 31.8 0 0 1-19-6.35 1 1 0 0 0-1.65.71l-2.35 7.52c-.47.94.23 1.18.23 1.41 1.72 1.4 10.33 6.59 22.79 6.59zM357.09 224c0-.71-.24-1.18-1.18-1.18h-11.76c0-.14.94-8.94 4.47-12.47 4.16-4.15 11.76-1.64 12-1.64 1.17.47 1.41 0 1.64-.47l2.83-7.77c.7-.94 0-1.17-.24-1.41-5.09-2-17.35-2.87-24.46 4.24-5.48 5.48-7 13.92-8 19.52h-8.47a1.28 1.28 0 0 0-1.17 1.18l-1.42 7.76c0 .7.24 1.17 1.18 1.17h8.23c-8.51 47.9-8.75 50.21-10.35 55.52-1.08 3.62-3.29 6.9-5.88 7.76-.09 0-3.88 1.68-9.64-.24 0 0-.94-.47-1.41.71-.24.71-2.59 6.82-2.83 7.53s0 1.41.47 1.41c5.11 2 13 1.77 17.88 0 6.28-2.28 9.72-7.89 11.53-12.94 2.75-7.71 2.81-9.79 11.76-59.74h12.23a1.29 1.29 0 0 0 1.18-1.18zm53.39 16c-.56-1.68-5.1-18.11-25.17-18.11-15.25 0-23 10-25.16 18.11-1 3-3.18 14 0 23.52.09.3 4.41 18.12 25.16 18.12 14.95 0 22.9-9.61 25.17-18.12 3.21-9.61 1.01-20.52 0-23.52zm45.4-16.7c-5-1.65-16.62-1.9-22.11 5.41v-4.47a1.11 1.11 0 0 0-1.18-1.17h-9.4a1.11 1.11 0 0 0-1.18 1.17v55.28a1.12 1.12 0 0 0 1.18 1.18h9.64a1.12 1.12 0 0 0 1.18-1.18v-27.77c0-2.91.05-11.37 4.46-15.05 4.9-4.9 12-3.36 13.41-3.06a1.57 1.57 0 0 0 1.41-.94 74 74 0 0 0 3.06-8 1.16 1.16 0 0 0-.47-1.41zm46.81 54.1l-2.12-7.29c-.47-1.18-1.41-.71-1.41-.71-4.23 1.82-10.15 1.89-11.29 1.89-4.64 0-17.17-1.13-17.17-19.76 0-6.23 1.85-19.76 16.47-19.76a34.85 34.85 0 0 1 11.52 1.65s.94.47 1.18-.71c.94-2.59 1.64-4.47 2.59-7.53.23-.94-.47-1.17-.71-1.17-11.59-3.87-22.34-2.53-27.76 0-1.59.74-16.23 6.49-16.23 27.52 0 2.9-.58 30.11 28.94 30.11a44.45 44.45 0 0 0 15.52-2.83 1.3 1.3 0 0 0 .47-1.42zm53.87-39.52c-.8-3-5.37-16.23-22.35-16.23-16 0-23.52 10.11-25.64 18.59a38.58 38.58 0 0 0-1.65 11.76c0 25.87 18.84 29.4 29.88 29.4 10.82 0 16.46-2.35 18.58-3.76.47-.24.71-.71.24-1.88l-2.36-6.83a1.26 1.26 0 0 0-1.41-.7c-2.59.94-6.35 2.82-15.29 2.82-17.42 0-16.85-14.74-16.93-16.7h37.16a1.25 1.25 0 0 0 1.18-.94c-.24-.01.94-7.07-1.41-15.54zm-23.29-6.35c-10.33 0-13 9-13.64 14.12H546c-.88-11.92-7.62-14.13-12.73-14.13z"]
-}, LF = {
+}, LI = {
   prefix: "fab",
   iconName: "sass",
   icon: [640, 512, [], "f41e", "M301.84 378.92c-.3.6-.6 1.08 0 0zm249.13-87a131.16 131.16 0 0 0-58 13.5c-5.9-11.9-12-22.3-13-30.1-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.3-6.7-24 2.5-25.29 5.9a122.83 122.83 0 0 0-5.3 19.1c-2.3 11.7-25.79 53.5-39.09 75.3-4.4-8.5-8.1-16-8.9-22-1.2-9.1-2.5-14.5-1.1-25.3s7.7-26.1 7.6-27.2-1.4-6.6-14.29-6.7-24 2.5-25.3 5.9-2.7 11.4-5.3 19.1-33.89 77.3-42.08 95.4c-4.2 9.2-7.8 16.6-10.4 21.6-.4.8-.7 1.3-.9 1.7.3-.5.5-1 .5-.8-2.2 4.3-3.5 6.7-3.5 6.7v.1c-1.7 3.2-3.6 6.1-4.5 6.1-.6 0-1.9-8.4.3-19.9 4.7-24.2 15.8-61.8 15.7-63.1-.1-.7 2.1-7.2-7.3-10.7-9.1-3.3-12.4 2.2-13.2 2.2s-1.4 2-1.4 2 10.1-42.4-19.39-42.4c-18.4 0-44 20.2-56.58 38.5-7.9 4.3-25 13.6-43 23.5-6.9 3.8-14 7.7-20.7 11.4-.5-.5-.9-1-1.4-1.5-35.79-38.2-101.87-65.2-99.07-116.5 1-18.7 7.5-67.8 127.07-127.4 98-48.8 176.35-35.4 189.84-5.6 19.4 42.5-41.89 121.6-143.66 133-38.79 4.3-59.18-10.7-64.28-16.3-5.3-5.9-6.1-6.2-8.1-5.1-3.3 1.8-1.2 7 0 10.1 3 7.9 15.5 21.9 36.79 28.9 18.7 6.1 64.18 9.5 119.17-11.8 61.78-23.8 109.87-90.1 95.77-145.6C386.52 18.32 293-.18 204.57 31.22c-52.69 18.7-109.67 48.1-150.66 86.4-48.69 45.6-56.48 85.3-53.28 101.9 11.39 58.9 92.57 97.3 125.06 125.7-1.6.9-3.1 1.7-4.5 2.5-16.29 8.1-78.18 40.5-93.67 74.7-17.5 38.8 2.9 66.6 16.29 70.4 41.79 11.6 84.58-9.3 107.57-43.6s20.2-79.1 9.6-99.5c-.1-.3-.3-.5-.4-.8 4.2-2.5 8.5-5 12.8-7.5 8.29-4.9 16.39-9.4 23.49-13.3-4 10.8-6.9 23.8-8.4 42.6-1.8 22 7.3 50.5 19.1 61.7 5.2 4.9 11.49 5 15.39 5 13.8 0 20-11.4 26.89-25 8.5-16.6 16-35.9 16-35.9s-9.4 52.2 16.3 52.2c9.39 0 18.79-12.1 23-18.3v.1s.2-.4.7-1.2c1-1.5 1.5-2.4 1.5-2.4v-.3c3.8-6.5 12.1-21.4 24.59-46 16.2-31.8 31.69-71.5 31.69-71.5a201.24 201.24 0 0 0 6.2 25.8c2.8 9.5 8.7 19.9 13.4 30-3.8 5.2-6.1 8.2-6.1 8.2a.31.31 0 0 0 .1.2c-3 4-6.4 8.3-9.9 12.5-12.79 15.2-28 32.6-30 37.6-2.4 5.9-1.8 10.3 2.8 13.7 3.4 2.6 9.4 3 15.69 2.5 11.5-.8 19.6-3.6 23.5-5.4a82.2 82.2 0 0 0 20.19-10.6c12.5-9.2 20.1-22.4 19.4-39.8-.4-9.6-3.5-19.2-7.3-28.2 1.1-1.6 2.3-3.3 3.4-5C434.8 301.72 450.1 270 450.1 270a201.24 201.24 0 0 0 6.2 25.8c2.4 8.1 7.09 17 11.39 25.7-18.59 15.1-30.09 32.6-34.09 44.1-7.4 21.3-1.6 30.9 9.3 33.1 4.9 1 11.9-1.3 17.1-3.5a79.46 79.46 0 0 0 21.59-11.1c12.5-9.2 24.59-22.1 23.79-39.6-.3-7.9-2.5-15.8-5.4-23.4 15.7-6.6 36.09-10.2 62.09-7.2 55.68 6.5 66.58 41.3 64.48 55.8s-13.8 22.6-17.7 25-5.1 3.3-4.8 5.1c.5 2.6 2.3 2.5 5.6 1.9 4.6-.8 29.19-11.8 30.29-38.7 1.6-34-31.09-71.4-89-71.1zm-429.18 144.7c-18.39 20.1-44.19 27.7-55.28 21.3C54.61 451 59.31 421.42 82 400c13.8-13 31.59-25 43.39-32.4 2.7-1.6 6.6-4 11.4-6.9.8-.5 1.2-.7 1.2-.7.9-.6 1.9-1.1 2.9-1.7 8.29 30.4.3 57.2-19.1 78.3zm134.36-91.4c-6.4 15.7-19.89 55.7-28.09 53.6-7-1.8-11.3-32.3-1.4-62.3 5-15.1 15.6-33.1 21.9-40.1 10.09-11.3 21.19-14.9 23.79-10.4 3.5 5.9-12.2 49.4-16.2 59.2zm111 53c-2.7 1.4-5.2 2.3-6.4 1.6-.9-.5 1.1-2.4 1.1-2.4s13.9-14.9 19.4-21.7c3.2-4 6.9-8.7 10.89-13.9 0 .5.1 1 .1 1.6-.13 17.9-17.32 30-25.12 34.8zm85.58-19.5c-2-1.4-1.7-6.1 5-20.7 2.6-5.7 8.59-15.3 19-24.5a36.18 36.18 0 0 1 1.9 10.8c-.1 22.5-16.2 30.9-25.89 34.4z"]
-}, NF = {
+}, NI = {
   prefix: "fab",
   iconName: "schlix",
   icon: [448, 512, [], "f3ea", "M350.5 157.7l-54.2-46.1 73.4-39 78.3 44.2-97.5 40.9zM192 122.1l45.7-28.2 34.7 34.6-55.4 29-25-35.4zm-65.1 6.6l31.9-22.1L176 135l-36.7 22.5-12.4-28.8zm-23.3 88.2l-8.8-34.8 29.6-18.3 13.1 35.3-33.9 17.8zm-21.2-83.7l23.9-18.1 8.9 24-26.7 18.3-6.1-24.2zM59 206.5l-3.6-28.4 22.3-15.5 6.1 28.7L59 206.5zm-30.6 16.6l20.8-12.8 3.3 33.4-22.9 12-1.2-32.6zM1.4 268l19.2-10.2.4 38.2-21 8.8L1.4 268zm59.1 59.3l-28.3 8.3-1.6-46.8 25.1-10.7 4.8 49.2zM99 263.2l-31.1 13-5.2-40.8L90.1 221l8.9 42.2zM123.2 377l-41.6 5.9-8.1-63.5 35.2-10.8 14.5 68.4zm28.5-139.9l21.2 57.1-46.2 13.6-13.7-54.1 38.7-16.6zm85.7 230.5l-70.9-3.3-24.3-95.8 55.2-8.6 40 107.7zm-84.9-279.7l42.2-22.4 28 45.9-50.8 21.3-19.4-44.8zm41 94.9l61.3-18.7 52.8 86.6-79.8 11.3-34.3-79.2zm51.4-85.6l67.3-28.8 65.5 65.4-88.6 26.2-44.2-62.8z"]
-}, AF = {
+}, AI = {
   prefix: "fab",
   iconName: "scribd",
   icon: [384, 512, [], "f28a", "M42.3 252.7c-16.1-19-24.7-45.9-24.8-79.9 0-100.4 75.2-153.1 167.2-153.1 98.6-1.6 156.8 49 184.3 70.6l-50.5 72.1-37.3-24.6 26.9-38.6c-36.5-24-79.4-36.5-123-35.8-50.7-.8-111.7 27.2-111.7 76.2 0 18.7 11.2 20.7 28.6 15.6 23.3-5.3 41.9.6 55.8 14 26.4 24.3 23.2 67.6-.7 91.9-29.2 29.5-85.2 27.3-114.8-8.4zm317.7 5.9c-15.5-18.8-38.9-29.4-63.2-28.6-38.1-2-71.1 28-70.5 67.2-.7 16.8 6 33 18.4 44.3 14.1 13.9 33 19.7 56.3 14.4 17.4-5.1 28.6-3.1 28.6 15.6 0 4.3-.5 8.5-1.4 12.7-16.7 40.9-59.5 64.4-121.4 64.4-51.9.2-102.4-16.4-144.1-47.3l33.7-39.4-35.6-27.4L0 406.3l15.4 13.8c52.5 46.8 120.4 72.5 190.7 72.2 51.4 0 94.4-10.5 133.6-44.1 57.1-51.4 54.2-149.2 20.3-189.6z"]
-}, _F = {
+}, _I = {
   prefix: "fab",
   iconName: "searchengin",
   icon: [460, 512, [], "f3eb", "M220.6 130.3l-67.2 28.2V43.2L98.7 233.5l54.7-24.2v130.3l67.2-209.3zm-83.2-96.7l-1.3 4.7-15.2 52.9C80.6 106.7 52 145.8 52 191.5c0 52.3 34.3 95.9 83.4 105.5v53.6C57.5 340.1 0 272.4 0 191.6c0-80.5 59.8-147.2 137.4-158zm311.4 447.2c-11.2 11.2-23.1 12.3-28.6 10.5-5.4-1.8-27.1-19.9-60.4-44.4-33.3-24.6-33.6-35.7-43-56.7-9.4-20.9-30.4-42.6-57.5-52.4l-9.7-14.7c-24.7 16.9-53 26.9-81.3 28.7l2.1-6.6 15.9-49.5c46.5-11.9 80.9-54 80.9-104.2 0-54.5-38.4-102.1-96-107.1V32.3C254.4 37.4 320 106.8 320 191.6c0 33.6-11.2 64.7-29 90.4l14.6 9.6c9.8 27.1 31.5 48 52.4 57.4s32.2 9.7 56.8 43c24.6 33.2 42.7 54.9 44.5 60.3s.7 17.3-10.5 28.5zm-9.9-17.9c0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8 8-3.6 8-8z"]
-}, SF = {
+}, SI = {
   prefix: "fab",
   iconName: "sellcast",
   icon: [448, 512, [], "f2da", "M353.4 32H94.7C42.6 32 0 74.6 0 126.6v258.7C0 437.4 42.6 480 94.7 480h258.7c52.1 0 94.7-42.6 94.7-94.6V126.6c0-52-42.6-94.6-94.7-94.6zm-50 316.4c-27.9 48.2-89.9 64.9-138.2 37.2-22.9 39.8-54.9 8.6-42.3-13.2l15.7-27.2c5.9-10.3 19.2-13.9 29.5-7.9 18.6 10.8-.1-.1 18.5 10.7 27.6 15.9 63.4 6.3 79.4-21.3 15.9-27.6 6.3-63.4-21.3-79.4-17.8-10.2-.6-.4-18.6-10.6-24.6-14.2-3.4-51.9 21.6-37.5 18.6 10.8-.1-.1 18.5 10.7 48.4 28 65.1 90.3 37.2 138.5zm21.8-208.8c-17 29.5-16.3 28.8-19 31.5-6.5 6.5-16.3 8.7-26.5 3.6-18.6-10.8.1.1-18.5-10.7-27.6-15.9-63.4-6.3-79.4 21.3s-6.3 63.4 21.3 79.4c0 0 18.5 10.6 18.6 10.6 24.6 14.2 3.4 51.9-21.6 37.5-18.6-10.8.1.1-18.5-10.7-48.2-27.8-64.9-90.1-37.1-138.4 27.9-48.2 89.9-64.9 138.2-37.2l4.8-8.4c14.3-24.9 52-3.3 37.7 21.5z"]
-}, kF = {
+}, kI = {
   prefix: "fab",
   iconName: "sellsy",
   icon: [640, 512, [], "f213", "M539.71 237.308c3.064-12.257 4.29-24.821 4.29-37.384C544 107.382 468.618 32 376.076 32c-77.22 0-144.634 53.012-163.02 127.781-15.322-13.176-34.934-20.53-55.157-20.53-46.271 0-83.962 37.69-83.962 83.961 0 7.354.92 15.015 3.065 22.369-42.9 20.225-70.785 63.738-70.785 111.234C6.216 424.843 61.68 480 129.401 480h381.198c67.72 0 123.184-55.157 123.184-123.184.001-56.384-38.916-106.025-94.073-119.508zM199.88 401.554c0 8.274-7.048 15.321-15.321 15.321H153.61c-8.274 0-15.321-7.048-15.321-15.321V290.626c0-8.273 7.048-15.321 15.321-15.321h30.949c8.274 0 15.321 7.048 15.321 15.321v110.928zm89.477 0c0 8.274-7.048 15.321-15.322 15.321h-30.949c-8.274 0-15.321-7.048-15.321-15.321V270.096c0-8.274 7.048-15.321 15.321-15.321h30.949c8.274 0 15.322 7.048 15.322 15.321v131.458zm89.477 0c0 8.274-7.047 15.321-15.321 15.321h-30.949c-8.274 0-15.322-7.048-15.322-15.321V238.84c0-8.274 7.048-15.321 15.322-15.321h30.949c8.274 0 15.321 7.048 15.321 15.321v162.714zm87.027 0c0 8.274-7.048 15.321-15.322 15.321h-28.497c-8.274 0-15.321-7.048-15.321-15.321V176.941c0-8.579 7.047-15.628 15.321-15.628h28.497c8.274 0 15.322 7.048 15.322 15.628v224.613z"]
-}, TF = {
+}, TI = {
   prefix: "fab",
   iconName: "servicestack",
   icon: [496, 512, [], "f3ec", "M88 216c81.7 10.2 273.7 102.3 304 232H0c99.5-8.1 184.5-137 88-232zm32-152c32.3 35.6 47.7 83.9 46.4 133.6C249.3 231.3 373.7 321.3 400 448h96C455.3 231.9 222.8 79.5 120 64z"]
-}, DF = {
+}, DI = {
   prefix: "fab",
   iconName: "shirtsinbulk",
   icon: [448, 512, [], "f214", "M100 410.3l30.6 13.4 4.4-9.9-30.6-13.4zm39.4 17.5l30.6 13.4 4.4-9.9-30.6-13.4zm172.1-14l4.4 9.9 30.6-13.4-4.4-9.9zM179.1 445l30.3 13.7 4.4-9.9-30.3-13.4zM60.4 392.8L91 406.2l4.4-9.6-30.6-13.7zm211.4 38.5l4.4 9.9 30.6-13.4-4.4-9.9zm-39.3 17.5l4.4 9.9 30.6-13.7-4.4-9.6zm118.4-52.2l4.4 9.6 30.6-13.4-4.4-9.9zM170 46.6h-33.5v10.5H170zm-47.2 0H89.2v10.5h33.5zm-47.3 0H42.3v10.5h33.3zm141.5 0h-33.2v10.5H217zm94.5 0H278v10.5h33.5zm47.3 0h-33.5v10.5h33.5zm-94.6 0H231v10.5h33.2zm141.5 0h-33.3v10.5h33.3zM52.8 351.1H42v33.5h10.8zm70-215.9H89.2v10.5h33.5zm-70 10.6h22.8v-10.5H42v33.5h10.8zm168.9 228.6c50.5 0 91.3-40.8 91.3-91.3 0-50.2-40.8-91.3-91.3-91.3-50.2 0-91.3 41.1-91.3 91.3 0 50.5 41.1 91.3 91.3 91.3zm-48.2-111.1c0-25.4 29.5-31.8 49.6-31.8 16.9 0 29.2 5.8 44.3 12l-8.8 16.9h-.9c-6.4-9.9-24.8-13.1-35.6-13.1-9 0-29.8 1.8-29.8 14.9 0 21.6 78.5-10.2 78.5 37.9 0 25.4-31.5 31.2-51 31.2-18.1 0-32.4-2.9-47.2-12.2l9-18.4h.9c6.1 12.2 23.6 14.9 35.9 14.9 8.7 0 32.7-1.2 32.7-14.3 0-26.1-77.6 6.3-77.6-38zM52.8 178.4H42V212h10.8zm342.4 206.2H406v-33.5h-10.8zM52.8 307.9H42v33.5h10.8zM0 3.7v406l221.7 98.6L448 409.7V3.7zm418.8 387.1L222 476.5 29.2 390.8V120.7h389.7v270.1zm0-299.3H29.2V32.9h389.7v58.6zm-366 130.1H42v33.5h10.8zm0 43.2H42v33.5h10.8zM170 135.2h-33.5v10.5H170zm225.2 163.1H406v-33.5h-10.8zm0-43.2H406v-33.5h-10.8zM217 135.2h-33.2v10.5H217zM395.2 212H406v-33.5h-10.8zm0 129.5H406V308h-10.8zm-131-206.3H231v10.5h33.2zm47.3 0H278v10.5h33.5zm83.7 33.6H406v-33.5h-33.5v10.5h22.8zm-36.4-33.6h-33.5v10.5h33.5z"]
-}, OF = {
+}, OI = {
   prefix: "fab",
   iconName: "shopify",
   icon: [448, 512, [], "e057", "M388.32,104.1a4.66,4.66,0,0,0-4.4-4c-2,0-37.23-.8-37.23-.8s-21.61-20.82-29.62-28.83V503.2L442.76,472S388.72,106.5,388.32,104.1ZM288.65,70.47a116.67,116.67,0,0,0-7.21-17.61C271,32.85,255.42,22,237,22a15,15,0,0,0-4,.4c-.4-.8-1.2-1.2-1.6-2C223.4,11.63,213,7.63,200.58,8c-24,.8-48,18-67.25,48.83-13.61,21.62-24,48.84-26.82,70.06-27.62,8.4-46.83,14.41-47.23,14.81-14,4.4-14.41,4.8-16,18-1.2,10-38,291.82-38,291.82L307.86,504V65.67a41.66,41.66,0,0,0-4.4.4S297.86,67.67,288.65,70.47ZM233.41,87.69c-16,4.8-33.63,10.4-50.84,15.61,4.8-18.82,14.41-37.63,25.62-50,4.4-4.4,10.41-9.61,17.21-12.81C232.21,54.86,233.81,74.48,233.41,87.69ZM200.58,24.44A27.49,27.49,0,0,1,215,28c-6.4,3.2-12.81,8.41-18.81,14.41-15.21,16.42-26.82,42-31.62,66.45-14.42,4.41-28.83,8.81-42,12.81C131.33,83.28,163.75,25.24,200.58,24.44ZM154.15,244.61c1.6,25.61,69.25,31.22,73.25,91.66,2.8,47.64-25.22,80.06-65.65,82.47-48.83,3.2-75.65-25.62-75.65-25.62l10.4-44s26.82,20.42,48.44,18.82c14-.8,19.22-12.41,18.81-20.42-2-33.62-57.24-31.62-60.84-86.86-3.2-46.44,27.22-93.27,94.47-97.68,26-1.6,39.23,4.81,39.23,4.81L221.4,225.39s-17.21-8-37.63-6.4C154.15,221,153.75,239.8,154.15,244.61ZM249.42,82.88c0-12-1.6-29.22-7.21-43.63,18.42,3.6,27.22,24,31.23,36.43Q262.63,78.68,249.42,82.88Z"]
-}, PF = {
+}, PI = {
   prefix: "fab",
   iconName: "shopware",
   icon: [512, 512, [], "f5b5", "M403.5 455.41A246.17 246.17 0 0 1 256 504C118.81 504 8 393 8 256 8 118.81 119 8 256 8a247.39 247.39 0 0 1 165.7 63.5 3.57 3.57 0 0 1-2.86 6.18A418.62 418.62 0 0 0 362.13 74c-129.36 0-222.4 53.47-222.4 155.35 0 109 92.13 145.88 176.83 178.73 33.64 13 65.4 25.36 87 41.59a3.58 3.58 0 0 1 0 5.72zM503 233.09a3.64 3.64 0 0 0-1.27-2.44c-51.76-43-93.62-60.48-144.48-60.48-84.13 0-80.25 52.17-80.25 53.63 0 42.6 52.06 62 112.34 84.49 31.07 11.59 63.19 23.57 92.68 39.93a3.57 3.57 0 0 0 5-1.82A249 249 0 0 0 503 233.09z"]
-}, FF = {
+}, II = {
   prefix: "fab",
   iconName: "simplybuilt",
   icon: [512, 512, [], "f215", "M481.2 64h-106c-14.5 0-26.6 11.8-26.6 26.3v39.6H163.3V90.3c0-14.5-12-26.3-26.6-26.3h-106C16.1 64 4.3 75.8 4.3 90.3v331.4c0 14.5 11.8 26.3 26.6 26.3h450.4c14.8 0 26.6-11.8 26.6-26.3V90.3c-.2-14.5-12-26.3-26.7-26.3zM149.8 355.8c-36.6 0-66.4-29.7-66.4-66.4 0-36.9 29.7-66.6 66.4-66.6 36.9 0 66.6 29.7 66.6 66.6 0 36.7-29.7 66.4-66.6 66.4zm212.4 0c-36.9 0-66.6-29.7-66.6-66.6 0-36.6 29.7-66.4 66.6-66.4 36.6 0 66.4 29.7 66.4 66.4 0 36.9-29.8 66.6-66.4 66.6z"]
-}, IF = {
+}, FI = {
   prefix: "fab",
   iconName: "sistrix",
   icon: [448, 512, [], "f3ee", "M448 449L301.2 300.2c20-27.9 31.9-62.2 31.9-99.2 0-93.1-74.7-168.9-166.5-168.9C74.7 32 0 107.8 0 200.9s74.7 168.9 166.5 168.9c39.8 0 76.3-14.2 105-37.9l146 148.1 30.5-31zM166.5 330.8c-70.6 0-128.1-58.3-128.1-129.9S95.9 71 166.5 71s128.1 58.3 128.1 129.9-57.4 129.9-128.1 129.9z"]
-}, EF = {
+}, EI = {
   prefix: "fab",
   iconName: "sith",
   icon: [448, 512, [], "f512", "M0 32l69.71 118.75-58.86-11.52 69.84 91.03a146.741 146.741 0 0 0 0 51.45l-69.84 91.03 58.86-11.52L0 480l118.75-69.71-11.52 58.86 91.03-69.84c17.02 3.04 34.47 3.04 51.48 0l91.03 69.84-11.52-58.86L448 480l-69.71-118.78 58.86 11.52-69.84-91.03c3.03-17.01 3.04-34.44 0-51.45l69.84-91.03-58.86 11.52L448 32l-118.75 69.71 11.52-58.9-91.06 69.87c-8.5-1.52-17.1-2.29-25.71-2.29s-17.21.78-25.71 2.29l-91.06-69.87 11.52 58.9L0 32zm224 99.78c31.8 0 63.6 12.12 87.85 36.37 48.5 48.5 48.49 127.21 0 175.7s-127.2 48.46-175.7-.03c-48.5-48.5-48.49-127.21 0-175.7 24.24-24.25 56.05-36.34 87.85-36.34zm0 36.66c-22.42 0-44.83 8.52-61.92 25.61-34.18 34.18-34.19 89.68 0 123.87s89.65 34.18 123.84 0c34.18-34.18 34.19-89.68 0-123.87-17.09-17.09-39.5-25.61-61.92-25.61z"]
-}, RF = {
+}, RI = {
   prefix: "fab",
   iconName: "sketch",
   icon: [512, 512, [], "f7c6", "M27.5 162.2L9 187.1h90.5l6.9-130.7-78.9 105.8zM396.3 45.7L267.7 32l135.7 147.2-7.1-133.5zM112.2 218.3l-11.2-22H9.9L234.8 458zm2-31.2h284l-81.5-88.5L256.3 33zm297.3 9.1L277.6 458l224.8-261.7h-90.9zM415.4 69L406 56.4l.9 17.3 6.1 113.4h90.3zM113.5 93.5l-4.6 85.6L244.7 32 116.1 45.7zm287.7 102.7h-290l42.4 82.9L256.3 480l144.9-283.8z"]
-}, BF = {
+}, BI = {
   prefix: "fab",
   iconName: "skyatlas",
   icon: [640, 512, [], "f216", "M640 329.3c0 65.9-52.5 114.4-117.5 114.4-165.9 0-196.6-249.7-359.7-249.7-146.9 0-147.1 212.2 5.6 212.2 42.5 0 90.9-17.8 125.3-42.5 5.6-4.1 16.9-16.3 22.8-16.3s10.9 5 10.9 10.9c0 7.8-13.1 19.1-18.7 24.1-40.9 35.6-100.3 61.2-154.7 61.2-83.4.1-154-59-154-144.9s67.5-149.1 152.8-149.1c185.3 0 222.5 245.9 361.9 245.9 99.9 0 94.8-139.7 3.4-139.7-17.5 0-35 11.6-46.9 11.6-8.4 0-15.9-7.2-15.9-15.6 0-11.6 5.3-23.7 5.3-36.3 0-66.6-50.9-114.7-116.9-114.7-53.1 0-80 36.9-88.8 36.9-6.2 0-11.2-5-11.2-11.2 0-5.6 4.1-10.3 7.8-14.4 25.3-28.8 64.7-43.7 102.8-43.7 79.4 0 139.1 58.4 139.1 137.8 0 6.9-.3 13.7-1.2 20.6 11.9-3.1 24.1-4.7 35.9-4.7 60.7 0 111.9 45.3 111.9 107.2z"]
-}, $F = {
+}, $I = {
   prefix: "fab",
   iconName: "skype",
   icon: [448, 512, [], "f17e", "M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"]
-}, UF = {
+}, UI = {
   prefix: "fab",
   iconName: "slack",
   icon: [448, 512, [], "f198", "M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"]
-}, ZF = {
+}, ZI = {
   prefix: "fab",
   iconName: "slack-hash",
   icon: [448, 512, [], "f3ef", "M446.2 270.4c-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-30.3-90 45.4-15.1c19.1-6.2 29.1-26.8 23-45.9-6.2-19-26.9-29.1-46-22.9l-45.4 15.1-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-93.4 31.2-15.7-47c-6.2-19-26.9-29.1-46-22.9-19.1 6.2-29.1 26.8-23 45.9l15.7 47-45.3 15c-19.1 6.2-29.1 26.8-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l30.3 90L78 354.8c-19 6.2-29.1 26.9-23 45.9 5 14.5 19.1 24 33.6 24.6 6.8 1 12-1.6 57.7-16.8l15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 93.6-31.3 15.7 47c5.9 16.9 24.7 29 46 22.9 19.1-6.2 29.1-26.8 23-45.9l-15.7-47 45.4-15.1c19-6 29.1-26.7 22.9-45.7zm-254.1 47.2l-30.3-90.2 93.5-31.3 30.3 90.2-93.5 31.3z"]
-}, jF = {
+}, jI = {
   prefix: "fab",
   iconName: "slideshare",
   icon: [512, 512, [], "f1e7", "M187.7 153.7c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7s61.7-26 61.7-57.7c0-32-27.7-57.7-61.7-57.7zm143.4 0c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7 34.3 0 61.7-26 61.7-57.7.1-32-27.4-57.7-61.7-57.7zm156.6 90l-6 4.3V49.7c0-27.4-20.6-49.7-46-49.7H76.6c-25.4 0-46 22.3-46 49.7V248c-2-1.4-4.3-2.9-6.3-4.3-15.1-10.6-25.1 4-16 17.7 18.3 22.6 53.1 50.3 106.3 72C58.3 525.1 252 555.7 248.9 457.5c0-.7.3-56.6.3-96.6 5.1 1.1 9.4 2.3 13.7 3.1 0 39.7.3 92.8.3 93.5-3.1 98.3 190.6 67.7 134.3-124 53.1-21.7 88-49.4 106.3-72 9.1-13.8-.9-28.3-16.1-17.8zm-30.5 19.2c-68.9 37.4-128.3 31.1-160.6 29.7-23.7-.9-32.6 9.1-33.7 24.9-10.3-7.7-18.6-15.5-20.3-17.1-5.1-5.4-13.7-8-27.1-7.7-31.7 1.1-89.7 7.4-157.4-28V72.3c0-34.9 8.9-45.7 40.6-45.7h317.7c30.3 0 40.9 12.9 40.9 45.7v190.6z"]
-}, qF = {
+}, qI = {
   prefix: "fab",
   iconName: "snapchat",
   icon: [496, 512, [], "f2ab", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm169.5 338.9c-3.5 8.1-18.1 14-44.8 18.2-1.4 1.9-2.5 9.8-4.3 15.9-1.1 3.7-3.7 5.9-8.1 5.9h-.2c-6.2 0-12.8-2.9-25.8-2.9-17.6 0-23.7 4-37.4 13.7-14.5 10.3-28.4 19.1-49.2 18.2-21 1.6-38.6-11.2-48.5-18.2-13.8-9.7-19.8-13.7-37.4-13.7-12.5 0-20.4 3.1-25.8 3.1-5.4 0-7.5-3.3-8.3-6-1.8-6.1-2.9-14.1-4.3-16-13.8-2.1-44.8-7.5-45.5-21.4-.2-3.6 2.3-6.8 5.9-7.4 46.3-7.6 67.1-55.1 68-57.1 0-.1.1-.2.2-.3 2.5-5 3-9.2 1.6-12.5-3.4-7.9-17.9-10.7-24-13.2-15.8-6.2-18-13.4-17-18.3 1.6-8.5 14.4-13.8 21.9-10.3 5.9 2.8 11.2 4.2 15.7 4.2 3.3 0 5.5-.8 6.6-1.4-1.4-23.9-4.7-58 3.8-77.1C183.1 100 230.7 96 244.7 96c.6 0 6.1-.1 6.7-.1 34.7 0 68 17.8 84.3 54.3 8.5 19.1 5.2 53.1 3.8 77.1 1.1.6 2.9 1.3 5.7 1.4 4.3-.2 9.2-1.6 14.7-4.2 4-1.9 9.6-1.6 13.6 0 6.3 2.3 10.3 6.8 10.4 11.9.1 6.5-5.7 12.1-17.2 16.6-1.4.6-3.1 1.1-4.9 1.7-6.5 2.1-16.4 5.2-19 11.5-1.4 3.3-.8 7.5 1.6 12.5.1.1.1.2.2.3.9 2 21.7 49.5 68 57.1 4 1 7.1 5.5 4.9 10.8z"]
-}, YF = {
+}, YI = {
   prefix: "fab",
   iconName: "snapchat-ghost",
   icon: [512, 512, [], "f2ac", "M510.846 392.673c-5.211 12.157-27.239 21.089-67.36 27.318-2.064 2.786-3.775 14.686-6.507 23.956-1.625 5.566-5.623 8.869-12.128 8.869l-.297-.005c-9.395 0-19.203-4.323-38.852-4.323-26.521 0-35.662 6.043-56.254 20.588-21.832 15.438-42.771 28.764-74.027 27.399-31.646 2.334-58.025-16.908-72.871-27.404-20.714-14.643-29.828-20.582-56.241-20.582-18.864 0-30.736 4.72-38.852 4.72-8.073 0-11.213-4.922-12.422-9.04-2.703-9.189-4.404-21.263-6.523-24.13-20.679-3.209-67.31-11.344-68.498-32.15a10.627 10.627 0 0 1 8.877-11.069c69.583-11.455 100.924-82.901 102.227-85.934.074-.176.155-.344.237-.515 3.713-7.537 4.544-13.849 2.463-18.753-5.05-11.896-26.872-16.164-36.053-19.796-23.715-9.366-27.015-20.128-25.612-27.504 2.437-12.836 21.725-20.735 33.002-15.453 8.919 4.181 16.843 6.297 23.547 6.297 5.022 0 8.212-1.204 9.96-2.171-2.043-35.936-7.101-87.29 5.687-115.969C158.122 21.304 229.705 15.42 250.826 15.42c.944 0 9.141-.089 10.11-.089 52.148 0 102.254 26.78 126.723 81.643 12.777 28.65 7.749 79.792 5.695 116.009 1.582.872 4.357 1.942 8.599 2.139 6.397-.286 13.815-2.389 22.069-6.257 6.085-2.846 14.406-2.461 20.48.058l.029.01c9.476 3.385 15.439 10.215 15.589 17.87.184 9.747-8.522 18.165-25.878 25.018-2.118.835-4.694 1.655-7.434 2.525-9.797 3.106-24.6 7.805-28.616 17.271-2.079 4.904-1.256 11.211 2.46 18.748.087.168.166.342.239.515 1.301 3.03 32.615 74.46 102.23 85.934 6.427 1.058 11.163 7.877 7.725 15.859z"]
-}, WF = {
+}, WI = {
   prefix: "fab",
   iconName: "snapchat-square",
   icon: [448, 512, [], "f2ad", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-6.5 314.9c-3.5 8.1-18.1 14-44.8 18.2-1.4 1.9-2.5 9.8-4.3 15.9-1.1 3.7-3.7 5.9-8.1 5.9h-.2c-6.2 0-12.8-2.9-25.8-2.9-17.6 0-23.7 4-37.4 13.7-14.5 10.3-28.4 19.1-49.2 18.2-21 1.6-38.6-11.2-48.5-18.2-13.8-9.7-19.8-13.7-37.4-13.7-12.5 0-20.4 3.1-25.8 3.1-5.4 0-7.5-3.3-8.3-6-1.8-6.1-2.9-14.1-4.3-16-13.8-2.1-44.8-7.5-45.5-21.4-.2-3.6 2.3-6.8 5.9-7.4 46.3-7.6 67.1-55.1 68-57.1 0-.1.1-.2.2-.3 2.5-5 3-9.2 1.6-12.5-3.4-7.9-17.9-10.7-24-13.2-15.8-6.2-18-13.4-17-18.3 1.6-8.5 14.4-13.8 21.9-10.3 5.9 2.8 11.2 4.2 15.7 4.2 3.3 0 5.5-.8 6.6-1.4-1.4-23.9-4.7-58 3.8-77.1C159.1 100 206.7 96 220.7 96c.6 0 6.1-.1 6.7-.1 34.7 0 68 17.8 84.3 54.3 8.5 19.1 5.2 53.1 3.8 77.1 1.1.6 2.9 1.3 5.7 1.4 4.3-.2 9.2-1.6 14.7-4.2 4-1.9 9.6-1.6 13.6 0 6.3 2.3 10.3 6.8 10.4 11.9.1 6.5-5.7 12.1-17.2 16.6-1.4.6-3.1 1.1-4.9 1.7-6.5 2.1-16.4 5.2-19 11.5-1.4 3.3-.8 7.5 1.6 12.5.1.1.1.2.2.3.9 2 21.7 49.5 68 57.1 4 1 7.1 5.5 4.9 10.8z"]
-}, GF = {
+}, GI = {
   prefix: "fab",
   iconName: "soundcloud",
   icon: [640, 512, [], "f1be", "M111.4 256.3l5.8 65-5.8 68.3c-.3 2.5-2.2 4.4-4.4 4.4s-4.2-1.9-4.2-4.4l-5.6-68.3 5.6-65c0-2.2 1.9-4.2 4.2-4.2 2.2 0 4.1 2 4.4 4.2zm21.4-45.6c-2.8 0-4.7 2.2-5 5l-5 105.6 5 68.3c.3 2.8 2.2 5 5 5 2.5 0 4.7-2.2 4.7-5l5.8-68.3-5.8-105.6c0-2.8-2.2-5-4.7-5zm25.5-24.1c-3.1 0-5.3 2.2-5.6 5.3l-4.4 130 4.4 67.8c.3 3.1 2.5 5.3 5.6 5.3 2.8 0 5.3-2.2 5.3-5.3l5.3-67.8-5.3-130c0-3.1-2.5-5.3-5.3-5.3zM7.2 283.2c-1.4 0-2.2 1.1-2.5 2.5L0 321.3l4.7 35c.3 1.4 1.1 2.5 2.5 2.5s2.2-1.1 2.5-2.5l5.6-35-5.6-35.6c-.3-1.4-1.1-2.5-2.5-2.5zm23.6-21.9c-1.4 0-2.5 1.1-2.5 2.5l-6.4 57.5 6.4 56.1c0 1.7 1.1 2.8 2.5 2.8s2.5-1.1 2.8-2.5l7.2-56.4-7.2-57.5c-.3-1.4-1.4-2.5-2.8-2.5zm25.3-11.4c-1.7 0-3.1 1.4-3.3 3.3L47 321.3l5.8 65.8c.3 1.7 1.7 3.1 3.3 3.1 1.7 0 3.1-1.4 3.1-3.1l6.9-65.8-6.9-68.1c0-1.9-1.4-3.3-3.1-3.3zm25.3-2.2c-1.9 0-3.6 1.4-3.6 3.6l-5.8 70 5.8 67.8c0 2.2 1.7 3.6 3.6 3.6s3.6-1.4 3.9-3.6l6.4-67.8-6.4-70c-.3-2.2-2-3.6-3.9-3.6zm241.4-110.9c-1.1-.8-2.8-1.4-4.2-1.4-2.2 0-4.2.8-5.6 1.9-1.9 1.7-3.1 4.2-3.3 6.7v.8l-3.3 176.7 1.7 32.5 1.7 31.7c.3 4.7 4.2 8.6 8.9 8.6s8.6-3.9 8.6-8.6l3.9-64.2-3.9-177.5c-.4-3-2-5.8-4.5-7.2zm-26.7 15.3c-1.4-.8-2.8-1.4-4.4-1.4s-3.1.6-4.4 1.4c-2.2 1.4-3.6 3.9-3.6 6.7l-.3 1.7-2.8 160.8s0 .3 3.1 65.6v.3c0 1.7.6 3.3 1.7 4.7 1.7 1.9 3.9 3.1 6.4 3.1 2.2 0 4.2-1.1 5.6-2.5 1.7-1.4 2.5-3.3 2.5-5.6l.3-6.7 3.1-58.6-3.3-162.8c-.3-2.8-1.7-5.3-3.9-6.7zm-111.4 22.5c-3.1 0-5.8 2.8-5.8 6.1l-4.4 140.6 4.4 67.2c.3 3.3 2.8 5.8 5.8 5.8 3.3 0 5.8-2.5 6.1-5.8l5-67.2-5-140.6c-.2-3.3-2.7-6.1-6.1-6.1zm376.7 62.8c-10.8 0-21.1 2.2-30.6 6.1-6.4-70.8-65.8-126.4-138.3-126.4-17.8 0-35 3.3-50.3 9.4-6.1 2.2-7.8 4.4-7.8 9.2v249.7c0 5 3.9 8.6 8.6 9.2h218.3c43.3 0 78.6-35 78.6-78.3.1-43.6-35.2-78.9-78.5-78.9zm-296.7-60.3c-4.2 0-7.5 3.3-7.8 7.8l-3.3 136.7 3.3 65.6c.3 4.2 3.6 7.5 7.8 7.5 4.2 0 7.5-3.3 7.5-7.5l3.9-65.6-3.9-136.7c-.3-4.5-3.3-7.8-7.5-7.8zm-53.6-7.8c-3.3 0-6.4 3.1-6.4 6.7l-3.9 145.3 3.9 66.9c.3 3.6 3.1 6.4 6.4 6.4 3.6 0 6.4-2.8 6.7-6.4l4.4-66.9-4.4-145.3c-.3-3.6-3.1-6.7-6.7-6.7zm26.7 3.4c-3.9 0-6.9 3.1-6.9 6.9L227 321.3l3.9 66.4c.3 3.9 3.1 6.9 6.9 6.9s6.9-3.1 6.9-6.9l4.2-66.4-4.2-141.7c0-3.9-3-6.9-6.9-6.9z"]
-}, KF = {
+}, KI = {
   prefix: "fab",
   iconName: "sourcetree",
   icon: [448, 512, [], "f7d3", "M427.2 203c0-112.1-90.9-203-203-203C112.1-.2 21.2 90.6 21 202.6A202.86 202.86 0 0 0 161.5 396v101.7a14.3 14.3 0 0 0 14.3 14.3h96.4a14.3 14.3 0 0 0 14.3-14.3V396.1A203.18 203.18 0 0 0 427.2 203zm-271.6 0c0-90.8 137.3-90.8 137.3 0-.1 89.9-137.3 91-137.3 0z"]
-}, XF = {
+}, XI = {
   prefix: "fab",
   iconName: "speakap",
   icon: [448, 512, [], "f3f3", "M64 391.78C-15.41 303.59-8 167.42 80.64 87.64s224.8-73 304.21 15.24 72 224.36-16.64 304.14c-18.74 16.87 64 43.09 42 52.26-82.06 34.21-253.91 35-346.23-67.5zm213.31-211.6l38.5-40.86c-9.61-8.89-32-26.83-76.17-27.6-52.33-.91-95.86 28.3-96.77 80-.2 11.33.29 36.72 29.42 54.83 34.46 21.42 86.52 21.51 86 52.26-.37 21.28-26.42 25.81-38.59 25.6-3-.05-30.23-.46-47.61-24.62l-40 42.61c28.16 27 59 32.62 83.49 33.05 10.23.18 96.42.33 97.84-81 .28-15.81-2.07-39.72-28.86-56.59-34.36-21.64-85-19.45-84.43-49.75.41-23.25 31-25.37 37.53-25.26.43 0 26.62.26 39.62 17.37z"]
-}, JF = {
+}, JI = {
   prefix: "fab",
   iconName: "speaker-deck",
   icon: [512, 512, [], "f83c", "M213.86 296H100a100 100 0 0 1 0-200h132.84a40 40 0 0 1 0 80H98c-26.47 0-26.45 40 0 40h113.82a100 100 0 0 1 0 200H40a40 40 0 0 1 0-80h173.86c26.48 0 26.46-40 0-40zM298 416a120.21 120.21 0 0 0 51.11-80h64.55a19.83 19.83 0 0 0 19.66-20V196a19.83 19.83 0 0 0-19.66-20H296.42a60.77 60.77 0 0 0 0-80h136.93c43.44 0 78.65 35.82 78.65 80v160c0 44.18-35.21 80-78.65 80z"]
-}, QF = {
+}, QI = {
   prefix: "fab",
   iconName: "spotify",
   icon: [496, 512, [], "f1bc", "M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"]
-}, eI = {
+}, eF = {
   prefix: "fab",
   iconName: "squarespace",
   icon: [512, 512, [], "f5be", "M186.12 343.34c-9.65 9.65-9.65 25.29 0 34.94 9.65 9.65 25.29 9.65 34.94 0L378.24 221.1c19.29-19.29 50.57-19.29 69.86 0s19.29 50.57 0 69.86L293.95 445.1c19.27 19.29 50.53 19.31 69.82.04l.04-.04 119.25-119.24c38.59-38.59 38.59-101.14 0-139.72-38.59-38.59-101.15-38.59-139.72 0l-157.22 157.2zm244.53-104.8c-9.65-9.65-25.29-9.65-34.93 0l-157.2 157.18c-19.27 19.29-50.53 19.31-69.82.05l-.05-.05c-9.64-9.64-25.27-9.65-34.92-.01l-.01.01c-9.65 9.64-9.66 25.28-.02 34.93l.02.02c38.58 38.57 101.14 38.57 139.72 0l157.2-157.2c9.65-9.65 9.65-25.29.01-34.93zm-261.99 87.33l157.18-157.18c9.64-9.65 9.64-25.29 0-34.94-9.64-9.64-25.27-9.64-34.91 0L133.72 290.93c-19.28 19.29-50.56 19.3-69.85.01l-.01-.01c-19.29-19.28-19.31-50.54-.03-69.84l.03-.03L218.03 66.89c-19.28-19.29-50.55-19.3-69.85-.02l-.02.02L28.93 186.14c-38.58 38.59-38.58 101.14 0 139.72 38.6 38.59 101.13 38.59 139.73.01zm-87.33-52.4c9.64 9.64 25.27 9.64 34.91 0l157.21-157.19c19.28-19.29 50.55-19.3 69.84-.02l.02.02c9.65 9.65 25.29 9.65 34.93 0 9.65-9.65 9.65-25.29 0-34.93-38.59-38.59-101.13-38.59-139.72 0L81.33 238.54c-9.65 9.64-9.65 25.28-.01 34.93h.01z"]
-}, aI = {
+}, aF = {
   prefix: "fab",
   iconName: "stack-exchange",
   icon: [448, 512, [], "f18d", "M17.7 332.3h412.7v22c0 37.7-29.3 68-65.3 68h-19L259.3 512v-89.7H83c-36 0-65.3-30.3-65.3-68v-22zm0-23.6h412.7v-85H17.7v85zm0-109.4h412.7v-85H17.7v85zM365 0H83C47 0 17.7 30.3 17.7 67.7V90h412.7V67.7C430.3 30.3 401 0 365 0z"]
-}, tI = {
+}, tF = {
   prefix: "fab",
   iconName: "stack-overflow",
   icon: [384, 512, [], "f16c", "M290.7 311L95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"]
-}, cI = {
+}, cF = {
   prefix: "fab",
   iconName: "stackpath",
   icon: [448, 512, [], "f842", "M244.6 232.4c0 8.5-4.26 20.49-21.34 20.49h-19.61v-41.47h19.61c17.13 0 21.34 12.36 21.34 20.98zM448 32v448H0V32zM151.3 287.84c0-21.24-12.12-34.54-46.72-44.85-20.57-7.41-26-10.91-26-18.63s7-14.61 20.41-14.61c14.09 0 20.79 8.45 20.79 18.35h30.7l.19-.57c.5-19.57-15.06-41.65-51.12-41.65-23.37 0-52.55 10.75-52.55 38.29 0 19.4 9.25 31.29 50.74 44.37 17.26 6.15 21.91 10.4 21.91 19.48 0 15.2-19.13 14.23-19.47 14.23-20.4 0-25.65-9.1-25.65-21.9h-30.8l-.18.56c-.68 31.32 28.38 45.22 56.63 45.22 29.98 0 51.12-13.55 51.12-38.29zm125.38-55.63c0-25.3-18.43-45.46-53.42-45.46h-51.78v138.18h32.17v-47.36h19.61c30.25 0 53.42-15.95 53.42-45.36zM297.94 325L347 186.78h-31.09L268 325zm106.52-138.22h-31.09L325.46 325h29.94z"]
-}, iI = {
+}, iF = {
   prefix: "fab",
   iconName: "staylinked",
   icon: [440, 512, [], "f3f5", "M382.7 292.5l2.7 2.7-170-167.3c-3.5-3.5-9.7-3.7-13.8-.5L144.3 171c-4.2 3.2-4.6 8.7-1.1 12.2l68.1 64.3c3.6 3.5 9.9 3.7 14 .5l.1-.1c4.1-3.2 10.4-3 14 .5l84 81.3c3.6 3.5 3.2 9-.9 12.2l-93.2 74c-4.2 3.3-10.5 3.1-14.2-.4L63.2 268c-3.5-3.5-9.7-3.7-13.9-.5L3.5 302.4c-4.2 3.2-4.7 8.7-1.2 12.2L211 510.7s7.4 6.8 17.3-.8l198-163.9c4-3.2 4.4-8.7.7-12.2zm54.5-83.4L226.7 2.5c-1.5-1.2-8-5.5-16.3 1.1L3.6 165.7c-4.2 3.2-4.8 8.7-1.2 12.2l42.3 41.7 171.7 165.1c3.7 3.5 10.1 3.7 14.3.4l50.2-38.8-.3-.3 7.7-6c4.2-3.2 4.6-8.7.9-12.2l-57.1-54.4c-3.6-3.5-10-3.7-14.2-.5l-.1.1c-4.2 3.2-10.5 3.1-14.2-.4L109 180.8c-3.6-3.5-3.1-8.9 1.1-12.2l92.2-71.5c4.1-3.2 10.3-3 13.9.5l160.4 159c3.7 3.5 10 3.7 14.1.5l45.8-35.8c4.1-3.2 4.4-8.7.7-12.2z"]
-}, rI = {
+}, rF = {
   prefix: "fab",
   iconName: "steam",
   icon: [496, 512, [], "f1b6", "M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"]
-}, nI = {
+}, nF = {
   prefix: "fab",
   iconName: "steam-square",
   icon: [448, 512, [], "f1b7", "M185.2 356.5c7.7-18.5-1-39.7-19.6-47.4l-29.5-12.2c11.4-4.3 24.3-4.5 36.4.5 12.2 5.1 21.6 14.6 26.7 26.7 5 12.2 5 25.6-.1 37.7-10.5 25.1-39.4 37-64.6 26.5-11.6-4.8-20.4-13.6-25.4-24.2l28.5 11.8c18.6 7.8 39.9-.9 47.6-19.4zM400 32H48C21.5 32 0 53.5 0 80v160.7l116.6 48.1c12-8.2 26.2-12.1 40.7-11.3l55.4-80.2v-1.1c0-48.2 39.3-87.5 87.6-87.5s87.6 39.3 87.6 87.5c0 49.2-40.9 88.7-89.6 87.5l-79 56.3c1.6 38.5-29.1 68.8-65.7 68.8-31.8 0-58.5-22.7-64.5-52.7L0 319.2V432c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-99.7 222.5c-32.2 0-58.4-26.1-58.4-58.3s26.2-58.3 58.4-58.3 58.4 26.2 58.4 58.3-26.2 58.3-58.4 58.3zm.1-14.6c24.2 0 43.9-19.6 43.9-43.8 0-24.2-19.6-43.8-43.9-43.8-24.2 0-43.9 19.6-43.9 43.8 0 24.2 19.7 43.8 43.9 43.8z"]
-}, oI = {
+}, oF = {
   prefix: "fab",
   iconName: "steam-symbol",
   icon: [448, 512, [], "f3f6", "M395.5 177.5c0 33.8-27.5 61-61 61-33.8 0-61-27.3-61-61s27.3-61 61-61c33.5 0 61 27.2 61 61zm52.5.2c0 63-51 113.8-113.7 113.8L225 371.3c-4 43-40.5 76.8-84.5 76.8-40.5 0-74.7-28.8-83-67L0 358V250.7L97.2 290c15.1-9.2 32.2-13.3 52-11.5l71-101.7c.5-62.3 51.5-112.8 114-112.8C397 64 448 115 448 177.7zM203 363c0-34.7-27.8-62.5-62.5-62.5-4.5 0-9 .5-13.5 1.5l26 10.5c25.5 10.2 38 39 27.7 64.5-10.2 25.5-39.2 38-64.7 27.5-10.2-4-20.5-8.3-30.7-12.2 10.5 19.7 31.2 33.2 55.2 33.2 34.7 0 62.5-27.8 62.5-62.5zm207.5-185.3c0-42-34.3-76.2-76.2-76.2-42.3 0-76.5 34.2-76.5 76.2 0 42.2 34.3 76.2 76.5 76.2 41.9.1 76.2-33.9 76.2-76.2z"]
-}, lI = {
+}, lF = {
   prefix: "fab",
   iconName: "sticker-mule",
   icon: [576, 512, [], "f3f7", "M561.7 199.6c-1.3.3.3 0 0 0zm-6.2-77.4c-7.7-22.3-5.1-7.2-13.4-36.9-1.6-6.5-3.6-14.5-6.2-20-4.4-8.7-4.6-7.5-4.6-9.5 0-5.3 30.7-45.3 19-46.9-5.7-.6-12.2 11.6-20.6 17-8.6 4.2-8 5-10.3 5-2.6 0-5.7-3-6.2-5-2-5.7 1.9-25.9-3.6-25.9-3.6 0-12.3 24.8-17 25.8-5.2 1.3-27.9-11.4-75.1 18-25.3 13.2-86.9 65.2-87 65.3-6.7 4.7-20 4.7-35.5 16-44.4 30.1-109.6 9.4-110.7 9-110.6-26.8-128-15.2-159 11.5-20.8 17.9-23.7 36.5-24.2 38.9-4.2 20.4 5.2 48.3 6.7 64.3 1.8 19.3-2.7 17.7 7.7 98.3.5 1 4.1 0 5.1 1.5 0 8.4-3.8 12.1-4.1 13-1.5 4.5-1.5 10.5 0 16 2.3 8.2 8.2 37.2 8.2 46.9 0 41.8.4 44 2.6 49.4 3.9 10 12.5 9.1 17 12 3.1 3.5-.5 8.5 1 12.5.5 2 3.6 4 6.2 5 9.2 3.6 27 .3 29.9-2.5 1.6-1.5.5-4.5 3.1-5 5.1 0 10.8-.5 14.4-2.5 5.1-2.5 4.1-6 1.5-10.5-.4-.8-7-13.3-9.8-16-2.1-2-5.1-3-7.2-4.5-5.8-4.9-10.3-19.4-10.3-19.5-4.6-19.4-10.3-46.3-4.1-66.8 4.6-17.2 39.5-87.7 39.6-87.8 4.1-6.5 17-11.5 27.3-7 6 1.9 19.3 22 65.4 30.9 47.9 8.7 97.4-2 112.2-2 2.8 2-1.9 13-.5 38.9 0 26.4-.4 13.7-4.1 29.9-2.2 9.7 3.4 23.2-1.5 46.9-1.4 9.8-9.9 32.7-8.2 43.4.5 1 1 2 1.5 3.5.5 4.5 1.5 8.5 4.6 10 7.3 3.6 12-3.5 9.8 11.5-.7 3.1-2.6 12 1.5 15 4.4 3.7 30.6 3.4 36.5.5 2.6-1.5 1.6-4.5 6.4-7.4 1.9-.9 11.3-.4 11.3-6.5.3-1.8-9.2-19.9-9.3-20-2.6-3.5-9.2-4.5-11.3-8-6.9-10.1-1.7-52.6.5-59.4 3-11 5.6-22.4 8.7-32.4 11-42.5 10.3-50.6 16.5-68.3.8-1.8 6.4-23.1 10.3-29.9 9.3-17 21.7-32.4 33.5-47.4 18-22.9 34-46.9 52-69.8 6.1-7 8.2-13.7 18-8 10.8 5.7 21.6 7 31.9 17 14.6 12.8 10.2 18.2 11.8 22.9 1.5 5 7.7 10.5 14.9 9.5 10.4-2 13-2.5 13.4-2.5 2.6-.5 5.7-5 7.2-8 3.1-5.5 7.2-9 7.2-16.5 0-7.7-.4-2.8-20.6-52.9z"]
-}, sI = {
+}, sF = {
   prefix: "fab",
   iconName: "strava",
   icon: [384, 512, [], "f428", "M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"]
-}, fI = {
+}, fF = {
   prefix: "fab",
   iconName: "stripe",
   icon: [640, 512, [], "f429", "M165 144.7l-43.3 9.2-.2 142.4c0 26.3 19.8 43.3 46.1 43.3 14.6 0 25.3-2.7 31.2-5.9v-33.8c-5.7 2.3-33.7 10.5-33.7-15.7V221h33.7v-37.8h-33.7zm89.1 51.6l-2.7-13.1H213v153.2h44.3V233.3c10.5-13.8 28.2-11.1 33.9-9.3v-40.8c-6-2.1-26.7-6-37.1 13.1zm92.3-72.3l-44.6 9.5v36.2l44.6-9.5zM44.9 228.3c0-6.9 5.8-9.6 15.1-9.7 13.5 0 30.7 4.1 44.2 11.4v-41.8c-14.7-5.8-29.4-8.1-44.1-8.1-36 0-60 18.8-60 50.2 0 49.2 67.5 41.2 67.5 62.4 0 8.2-7.1 10.9-17 10.9-14.7 0-33.7-6.1-48.6-14.2v40c16.5 7.1 33.2 10.1 48.5 10.1 36.9 0 62.3-15.8 62.3-47.8 0-52.9-67.9-43.4-67.9-63.4zM640 261.6c0-45.5-22-81.4-64.2-81.4s-67.9 35.9-67.9 81.1c0 53.5 30.3 78.2 73.5 78.2 21.2 0 37.1-4.8 49.2-11.5v-33.4c-12.1 6.1-26 9.8-43.6 9.8-17.3 0-32.5-6.1-34.5-26.9h86.9c.2-2.3.6-11.6.6-15.9zm-87.9-16.8c0-20 12.3-28.4 23.4-28.4 10.9 0 22.5 8.4 22.5 28.4zm-112.9-64.6c-17.4 0-28.6 8.2-34.8 13.9l-2.3-11H363v204.8l44.4-9.4.1-50.2c6.4 4.7 15.9 11.2 31.4 11.2 31.8 0 60.8-23.2 60.8-79.6.1-51.6-29.3-79.7-60.5-79.7zm-10.6 122.5c-10.4 0-16.6-3.8-20.9-8.4l-.3-66c4.6-5.1 11-8.8 21.2-8.8 16.2 0 27.4 18.2 27.4 41.4.1 23.9-10.9 41.8-27.4 41.8zm-126.7 33.7h44.6V183.2h-44.6z"]
-}, uI = {
+}, uF = {
   prefix: "fab",
   iconName: "stripe-s",
   icon: [384, 512, [], "f42a", "M155.3 154.6c0-22.3 18.6-30.9 48.4-30.9 43.4 0 98.5 13.3 141.9 36.7V26.1C298.3 7.2 251.1 0 203.8 0 88.1 0 11 60.4 11 161.4c0 157.9 216.8 132.3 216.8 200.4 0 26.4-22.9 34.9-54.7 34.9-47.2 0-108.2-19.5-156.1-45.5v128.5a396.09 396.09 0 0 0 156 32.4c118.6 0 200.3-51 200.3-153.6 0-170.2-218-139.7-218-203.9z"]
-}, dI = {
+}, dF = {
   prefix: "fab",
   iconName: "studiovinari",
   icon: [512, 512, [], "f3f8", "M480.3 187.7l4.2 28v28l-25.1 44.1-39.8 78.4-56.1 67.5-79.1 37.8-17.7 24.5-7.7 12-9.6 4s17.3-63.6 19.4-63.6c2.1 0 20.3.7 20.3.7l66.7-38.6-92.5 26.1-55.9 36.8-22.8 28-6.6 1.4 20.8-73.6 6.9-5.5 20.7 12.9 88.3-45.2 56.8-51.5 14.8-68.4-125.4 23.3 15.2-18.2-173.4-53.3 81.9-10.5-166-122.9L133.5 108 32.2 0l252.9 126.6-31.5-38L378 163 234.7 64l18.7 38.4-49.6-18.1L158.3 0l194.6 122L310 66.2l108 96.4 12-8.9-21-16.4 4.2-37.8L451 89.1l29.2 24.7 11.5 4.2-7 6.2 8.5 12-13.1 7.4-10.3 20.2 10.5 23.9z"]
-}, hI = {
+}, hF = {
   prefix: "fab",
   iconName: "stumbleupon",
   icon: [512, 512, [], "f1a4", "M502.9 266v69.7c0 62.1-50.3 112.4-112.4 112.4-61.8 0-112.4-49.8-112.4-111.3v-70.2l34.3 16 51.1-15.2V338c0 14.7 12 26.5 26.7 26.5S417 352.7 417 338v-72h85.9zm-224.7-58.2l34.3 16 51.1-15.2V173c0-60.5-51.1-109-112.1-109-60.8 0-112.1 48.2-112.1 108.2v162.4c0 14.9-12 26.7-26.7 26.7S86 349.5 86 334.6V266H0v69.7C0 397.7 50.3 448 112.4 448c61.6 0 112.4-49.5 112.4-110.8V176.9c0-14.7 12-26.7 26.7-26.7s26.7 12 26.7 26.7v30.9z"]
-}, mI = {
+}, mF = {
   prefix: "fab",
   iconName: "stumbleupon-circle",
   icon: [496, 512, [], "f1a3", "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 177.5c-9.8 0-17.8 8-17.8 17.8v106.9c0 40.9-33.9 73.9-74.9 73.9-41.4 0-74.9-33.5-74.9-74.9v-46.5h57.3v45.8c0 10 8 17.8 17.8 17.8s17.8-7.9 17.8-17.8V200.1c0-40 34.2-72.1 74.7-72.1 40.7 0 74.7 32.3 74.7 72.6v23.7l-34.1 10.1-22.9-10.7v-20.6c.1-9.6-7.9-17.6-17.7-17.6zm167.6 123.6c0 41.4-33.5 74.9-74.9 74.9-41.2 0-74.9-33.2-74.9-74.2V263l22.9 10.7 34.1-10.1v47.1c0 9.8 8 17.6 17.8 17.6s17.8-7.9 17.8-17.6v-48h57.3c-.1 45.9-.1 46.4-.1 46.4z"]
-}, vI = {
+}, vF = {
   prefix: "fab",
   iconName: "superpowers",
   icon: [448, 512, [], "f2dd", "M448 32c-83.3 11-166.8 22-250 33-92 12.5-163.3 86.7-169 180-3.3 55.5 18 109.5 57.8 148.2L0 480c83.3-11 166.5-22 249.8-33 91.8-12.5 163.3-86.8 168.7-179.8 3.5-55.5-18-109.5-57.7-148.2L448 32zm-79.7 232.3c-4.2 79.5-74 139.2-152.8 134.5-79.5-4.7-140.7-71-136.3-151 4.5-79.2 74.3-139.3 153-134.5 79.3 4.7 140.5 71 136.1 151z"]
-}, pI = {
+}, pF = {
   prefix: "fab",
   iconName: "supple",
   icon: [640, 512, [], "f3f9", "M640 262.5c0 64.1-109 116.1-243.5 116.1-24.8 0-48.6-1.8-71.1-5 7.7.4 15.5.6 23.4.6 134.5 0 243.5-56.9 243.5-127.1 0-29.4-19.1-56.4-51.2-78 60 21.1 98.9 55.1 98.9 93.4zM47.7 227.9c-.1-70.2 108.8-127.3 243.3-127.6 7.9 0 15.6.2 23.3.5-22.5-3.2-46.3-4.9-71-4.9C108.8 96.3-.1 148.5 0 212.6c.1 38.3 39.1 72.3 99.3 93.3-32.3-21.5-51.5-48.6-51.6-78zm60.2 39.9s10.5 13.2 29.3 13.2c17.9 0 28.4-11.5 28.4-25.1 0-28-40.2-25.1-40.2-39.7 0-5.4 5.3-9.1 12.5-9.1 5.7 0 11.3 2.6 11.3 6.6v3.9h14.2v-7.9c0-12.1-15.4-16.8-25.4-16.8-16.5 0-28.5 10.2-28.5 24.1 0 26.6 40.2 25.4 40.2 39.9 0 6.6-5.8 10.1-12.3 10.1-11.9 0-20.7-10.1-20.7-10.1l-8.8 10.9zm120.8-73.6v54.4c0 11.3-7.1 17.8-17.8 17.8-10.7 0-17.8-6.5-17.8-17.7v-54.5h-15.8v55c0 18.9 13.4 31.9 33.7 31.9 20.1 0 33.4-13 33.4-31.9v-55h-15.7zm34.4 85.4h15.8v-29.5h15.5c16 0 27.2-11.5 27.2-28.1s-11.2-27.8-27.2-27.8h-39.1v13.4h7.8v72zm15.8-43v-29.1h12.9c8.7 0 13.7 5.7 13.7 14.4 0 8.9-5.1 14.7-14 14.7h-12.6zm57 43h15.8v-29.5h15.5c16 0 27.2-11.5 27.2-28.1s-11.2-27.8-27.2-27.8h-39.1v13.4h7.8v72zm15.7-43v-29.1h12.9c8.7 0 13.7 5.7 13.7 14.4 0 8.9-5 14.7-14 14.7h-12.6zm57.1 34.8c0 5.8 2.4 8.2 8.2 8.2h37.6c5.8 0 8.2-2.4 8.2-8.2v-13h-14.3v5.2c0 1.7-1 2.6-2.6 2.6h-18.6c-1.7 0-2.6-1-2.6-2.6v-61.2c0-5.7-2.4-8.2-8.2-8.2H401v13.4h5.2c1.7 0 2.6 1 2.6 2.6v61.2zm63.4 0c0 5.8 2.4 8.2 8.2 8.2H519c5.7 0 8.2-2.4 8.2-8.2v-13h-14.3v5.2c0 1.7-1 2.6-2.6 2.6h-19.7c-1.7 0-2.6-1-2.6-2.6v-20.3h27.7v-13.4H488v-22.4h19.2c1.7 0 2.6 1 2.6 2.6v5.2H524v-13c0-5.7-2.5-8.2-8.2-8.2h-51.6v13.4h7.8v63.9zm58.9-76v5.9h1.6v-5.9h2.7v-1.2h-7v1.2h2.7zm5.7-1.2v7.1h1.5v-5.7l2.3 5.7h1.3l2.3-5.7v5.7h1.5v-7.1h-2.3l-2.1 5.1-2.1-5.1h-2.4z"]
-}, gI = {
+}, gF = {
   prefix: "fab",
   iconName: "suse",
   icon: [640, 512, [], "f7d6", "M471.08 102.66s-.3 18.3-.3 20.3c-9.1-3-74.4-24.1-135.7-26.3-51.9-1.8-122.8-4.3-223 57.3-19.4 12.4-73.9 46.1-99.6 109.7C7 277-.12 307 7 335.06a111 111 0 0 0 16.5 35.7c17.4 25 46.6 41.6 78.1 44.4 44.4 3.9 78.1-16 90-53.3 8.2-25.8 0-63.6-31.5-82.9-25.6-15.7-53.3-12.1-69.2-1.6-13.9 9.2-21.8 23.5-21.6 39.2.3 27.8 24.3 42.6 41.5 42.6a49 49 0 0 0 15.8-2.7c6.5-1.8 13.3-6.5 13.3-14.9 0-12.1-11.6-14.8-16.8-13.9-2.9.5-4.5 2-11.8 2.4-2-.2-12-3.1-12-14V316c.2-12.3 13.2-18 25.5-16.9 32.3 2.8 47.7 40.7 28.5 65.7-18.3 23.7-76.6 23.2-99.7-20.4-26-49.2 12.7-111.2 87-98.4 33.2 5.7 83.6 35.5 102.4 104.3h45.9c-5.7-17.6-8.9-68.3 42.7-68.3 56.7 0 63.9 39.9 79.8 68.3H460c-12.8-18.3-21.7-38.7-18.9-55.8 5.6-33.8 39.7-18.4 82.4-17.4 66.5.4 102.1-27 103.1-28 3.7-3.1 6.5-15.8 7-17.7 1.3-5.1-3.2-2.4-3.2-2.4-8.7 5.2-30.5 15.2-50.9 15.6-25.3.5-76.2-25.4-81.6-28.2-.3-.4.1 1.2-11-25.5 88.4 58.3 118.3 40.5 145.2 21.7.8-.6 4.3-2.9 3.6-5.7-13.8-48.1-22.4-62.7-34.5-69.6-37-21.6-125-34.7-129.2-35.3.1-.1-.9-.3-.9.7zm60.4 72.8a37.54 37.54 0 0 1 38.9-36.3c33.4 1.2 48.8 42.3 24.4 65.2-24.2 22.7-64.4 4.6-63.3-28.9zm38.6-25.3a26.27 26.27 0 1 0 25.4 27.2 26.19 26.19 0 0 0-25.4-27.2zm4.3 28.8c-15.4 0-15.4-15.6 0-15.6s15.4 15.64 0 15.64z"]
-}, zI = {
+}, zF = {
   prefix: "fab",
   iconName: "swift",
   icon: [448, 512, [], "f8e1", "M448 156.09c0-4.51-.08-9-.2-13.52a196.31 196.31 0 0 0-2.58-29.42 99.62 99.62 0 0 0-9.22-28A94.08 94.08 0 0 0 394.84 44a99.17 99.17 0 0 0-28-9.22 195 195 0 0 0-29.43-2.59c-4.51-.12-9-.17-13.52-.2H124.14c-4.51 0-9 .08-13.52.2-2.45.07-4.91.15-7.37.27a171.68 171.68 0 0 0-22.06 2.32 103.06 103.06 0 0 0-21.21 6.1q-3.46 1.45-6.81 3.12a94.66 94.66 0 0 0-18.39 12.32c-1.88 1.61-3.69 3.28-5.43 5A93.86 93.86 0 0 0 12 85.17a99.45 99.45 0 0 0-9.22 28 196.31 196.31 0 0 0-2.54 29.4c-.13 4.51-.18 9-.21 13.52v199.83c0 4.51.08 9 .21 13.51a196.08 196.08 0 0 0 2.58 29.42 99.3 99.3 0 0 0 9.22 28A94.31 94.31 0 0 0 53.17 468a99.47 99.47 0 0 0 28 9.21 195 195 0 0 0 29.43 2.59c4.5.12 9 .17 13.52.2H323.91c4.51 0 9-.08 13.52-.2a196.59 196.59 0 0 0 29.44-2.59 99.57 99.57 0 0 0 28-9.21A94.22 94.22 0 0 0 436 426.84a99.3 99.3 0 0 0 9.22-28 194.79 194.79 0 0 0 2.59-29.42c.12-4.5.17-9 .2-13.51V172.14c-.01-5.35-.01-10.7-.01-16.05zm-69.88 241c-20-38.93-57.23-29.27-76.31-19.47-1.72 1-3.48 2-5.25 3l-.42.25c-39.5 21-92.53 22.54-145.85-.38A234.64 234.64 0 0 1 45 290.12a230.63 230.63 0 0 0 39.17 23.37c56.36 26.4 113 24.49 153 0-57-43.85-104.6-101-141.09-147.22a197.09 197.09 0 0 1-18.78-25.9c43.7 40 112.7 90.22 137.48 104.12-52.57-55.49-98.89-123.94-96.72-121.74 82.79 83.42 159.18 130.59 159.18 130.59 2.88 1.58 5 2.85 6.73 4a127.44 127.44 0 0 0 4.16-12.47c13.22-48.33-1.66-103.58-35.31-149.2C329.61 141.75 375 229.34 356.4 303.42c-.44 1.73-.95 3.4-1.44 5.09 38.52 47.4 28.04 98.17 23.13 88.59z"]
-}, yI = {
+}, yF = {
   prefix: "fab",
   iconName: "symfony",
   icon: [512, 512, [], "f83d", "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm133.74 143.54c-11.47.41-19.4-6.45-19.77-16.87-.27-9.18 6.68-13.44 6.53-18.85-.23-6.55-10.16-6.82-12.87-6.67-39.78 1.29-48.59 57-58.89 113.85 21.43 3.15 36.65-.72 45.14-6.22 12-7.75-3.34-15.72-1.42-24.56 4-18.16 32.55-19 32 5.3-.36 17.86-25.92 41.81-77.6 35.7-10.76 59.52-18.35 115-58.2 161.72-29 34.46-58.4 39.82-71.58 40.26-24.65.85-41-12.31-41.58-29.84-.56-17 14.45-26.26 24.31-26.59 21.89-.75 30.12 25.67 14.88 34-12.09 9.71.11 12.61 2.05 12.55 10.42-.36 17.34-5.51 22.18-9 24-20 33.24-54.86 45.35-118.35 8.19-49.66 17-78 18.23-82-16.93-12.75-27.08-28.55-49.85-34.72-15.61-4.23-25.12-.63-31.81 7.83-7.92 10-5.29 23 2.37 30.7l12.63 14c15.51 17.93 24 31.87 20.8 50.62-5.06 29.93-40.72 52.9-82.88 39.94-36-11.11-42.7-36.56-38.38-50.62 7.51-24.15 42.36-11.72 34.62 13.6-2.79 8.6-4.92 8.68-6.28 13.07-4.56 14.77 41.85 28.4 51-1.39 4.47-14.52-5.3-21.71-22.25-39.85-28.47-31.75-16-65.49 2.95-79.67C204.23 140.13 251.94 197 262 205.29c37.17-109 100.53-105.46 102.43-105.53 25.16-.81 44.19 10.59 44.83 28.65.25 7.69-4.17 22.59-19.52 23.13z"]
-}, bI = {
+}, bF = {
   prefix: "fab",
   iconName: "teamspeak",
   icon: [512, 512, [], "f4f9", "M244.2 346.79c2.4-12.3-12-30-32.4-48.7-20.9-19.2-48.2-39.1-63.4-46.6-21.7-12-41.7-1.8-46.3 22.7-5 26.2 0 51.4 14.5 73.9 10.2 15.5 25.4 22.7 43.4 24 11.6.6 52.5 2.2 61.7-1 11.9-4.3 20.1-11.8 22.5-24.3zm205 20.8a5.22 5.22 0 0 0-8.3 2.4c-8 25.4-44.7 112.5-172.1 121.5-149.7 10.5 80.3 43.6 145.4-6.4 22.7-17.4 47.6-35 46.6-85.4-.4-10.1-4.9-26.69-11.6-32.1zm62-122.4c-.3-18.9-8.6-33.4-26-42.2-2.9-1.3-5-2.7-5.9-6.4A222.64 222.64 0 0 0 438.9 103c-1.1-1.5-3.5-3.2-2.2-5 8.5-11.5-.3-18-7-24.4Q321.4-31.11 177.4 13.09c-40.1 12.3-73.9 35.6-102 67.4-4 4.3-6.7 9.1-3 14.5 3 4 1.3 6.2-1 9.3C51.6 132 38.2 162.59 32.1 196c-.7 4.3-2.9 6-6.4 7.8-14.2 7-22.5 18.5-24.9 34L0 264.29v20.9c0 30.8 21 50.4 51.8 49 7.7-.3 11.7-4.3 12-11.5 2-77.5-2.4-95.4 3.7-125.8C92.1 72.39 234.3 5 345.3 65.39 411.4 102 445.7 159 447.6 234.79c.8 28.2 0 56.5 0 84.6 0 7 2.2 12.5 9.4 14.2 24.1 5 49.2-12 53.2-36.7 2.9-17.1 1-34.5 1-51.7zm-159.6 131.5c36.5 2.8 59.3-28.5 58.4-60.5-2.1-45.2-66.2-16.5-87.8-8-73.2 28.1-45 54.9-22.2 60.8z"]
-}, MI = {
+}, MF = {
   prefix: "fab",
   iconName: "telegram",
   icon: [496, 512, [], "f2c6", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"]
-}, CI = {
+}, CF = {
   prefix: "fab",
   iconName: "telegram-plane",
   icon: [448, 512, [], "f3fe", "M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"]
-}, VI = {
+}, VF = {
   prefix: "fab",
   iconName: "tencent-weibo",
   icon: [384, 512, [], "f1d5", "M72.3 495.8c1.4 19.9-27.6 22.2-29.7 2.9C31 368.8 73.7 259.2 144 185.5c-15.6-34 9.2-77.1 50.6-77.1 30.3 0 55.1 24.6 55.1 55.1 0 44-49.5 70.8-86.9 45.1-65.7 71.3-101.4 169.8-90.5 287.2zM192 .1C66.1.1-12.3 134.3 43.7 242.4 52.4 259.8 79 246.9 70 229 23.7 136.4 91 29.8 192 29.8c75.4 0 136.9 61.4 136.9 136.9 0 90.8-86.9 153.9-167.7 133.1-19.1-4.1-25.6 24.4-6.6 29.1 110.7 23.2 204-60 204-162.3C358.6 74.7 284 .1 192 .1z"]
-}, xI = {
+}, xF = {
   prefix: "fab",
   iconName: "the-red-yeti",
   icon: [512, 512, [], "f69d", "M488.23 241.7l20.7 7.1c-9.6-23.9-23.9-37-31.7-44.8l7.1-18.2c.2 0 12.3-27.8-2.5-30.7-.6-11.3-6.6-27-18.4-27-7.6-10.6-17.7-12.3-30.7-5.9a122.2 122.2 0 0 0-25.3 16.5c-5.3-6.4-3 .4-3-29.8-37.1-24.3-45.4-11.7-74.8 3l.5.5a239.36 239.36 0 0 0-68.4-13.3c-5.5-8.7-18.6-19.1-25.1-25.1l24.8 7.1c-5.5-5.5-26.8-12.9-34.2-15.2 18.2-4.1 29.8-20.8 42.5-33-34.9-10.1-67.9-5.9-97.9 11.8l12-44.2L182 0c-31.6 24.2-33 41.9-33.7 45.5-.9-2.4-6.3-19.6-15.2-27a35.12 35.12 0 0 0-.5 25.3c3 8.4 5.9 14.8 8.4 18.9-16-3.3-28.3-4.9-49.2 0h-3.7l33 14.3a194.26 194.26 0 0 0-46.7 67.4l-1.7 8.4 1.7 1.7 7.6-4.7c-3.3 11.6-5.3 19.4-6.6 25.8a200.18 200.18 0 0 0-27.8 40.3c-15 1-31.8 10.8-40.3 14.3l3 3.4 28.8 1c-.5 1-.7 2.2-1.2 3.2-7.3 6.4-39.8 37.7-33 80.7l20.2-22.4c.5 1.7.7 3.4 1.2 5.2 0 25.5.4 89.6 64.9 150.5 43.6 40 96 60.2 157.5 60.2 121.7 0 223-87.3 223-211.5 6.8-9.7-1.2 3 16.7-25.1l13 14.3 2.5-.5A181.84 181.84 0 0 0 495 255a44.74 44.74 0 0 0-6.8-13.3zM398 111.2l-.5 21.9c5.5 18.1 16.9 17.2 22.4 17.2l-3.4-4.7 22.4-5.4a242.44 242.44 0 0 1-27 0c12.8-2.1 33.3-29 43-11.3 3.4 7.6 6.4 17.2 9.3 27.8l1.7-5.9a56.38 56.38 0 0 1-1.7-15.2c5.4.5 8.8 3.4 9.3 10.1.5 6.4 1.7 14.8 3.4 25.3l4.7-11.3c4.6 0 4.5-3.6-2.5 20.7-20.9-8.7-35.1-8.4-46.5-8.4l18.2-16c-25.3 8.2-33 10.8-54.8 20.9-1.1-5.4-5-13.5-16-19.9-3.2 3.8-2.8.9-.7 14.8h-2.5a62.32 62.32 0 0 0-8.4-23.1l4.2-3.4c8.4-7.1 11.8-14.3 10.6-21.9-.5-6.4-5.4-13.5-13.5-20.7 5.6-3.4 15.2-.4 28.3 8.5zm-39.6-10.1c2.7 1.9 11.4 5.4 18.9 17.2 4.2 8.4 4 9.8 3.4 11.1-.5 2.4-.5 4.3-3 7.1-1.7 2.5-5.4 4.7-11.8 7.6-7.6-13-16.5-23.6-27.8-31.2zM91 143.1l1.2-1.7c1.2-2.9 4.2-7.6 9.3-15.2l2.5-3.4-13 12.3 5.4-4.7-10.1 9.3-4.2 1.2c12.3-24.1 23.1-41.3 32.5-50.2 9.3-9.3 16-16 20.2-19.4l-6.4 1.2c-11.3-4.2-19.4-7.1-24.8-8.4 2.5-.5 3.7-.5 3.2-.5 10.3 0 17.5.5 20.9 1.2a52.35 52.35 0 0 0 16 2.5l.5-1.7-8.4-35.8 13.5 29a42.89 42.89 0 0 0 5.9-14.3c1.7-6.4 5.4-13 10.1-19.4s7.6-10.6 9.3-11.3a234.68 234.68 0 0 0-6.4 25.3l-1.7 7.1-.5 4.7 2.5 2.5C190.4 39.9 214 34 239.8 34.5l21.1.5c-11.8 13.5-27.8 21.9-48.5 24.8a201.26 201.26 0 0 1-23.4 2.9l-.2-.5-2.5-1.2a20.75 20.75 0 0 0-14 2c-2.5-.2-4.9-.5-7.1-.7l-2.5 1.7.5 1.2c2 .2 3.9.5 6.2.7l-2 3.4 3.4-.5-10.6 11.3c-4.2 3-5.4 6.4-4.2 9.3l5.4-3.4h1.2a39.4 39.4 0 0 1 25.3-15.2v-3c6.4.5 13 1 19.4 1.2 6.4 0 8.4.5 5.4 1.2a189.6 189.6 0 0 1 20.7 13.5c13.5 10.1 23.6 21.9 30 35.4 8.8 18.2 13.5 37.1 13.5 56.6a141.13 141.13 0 0 1-3 28.3 209.91 209.91 0 0 1-16 46l2.5.5c18.2-19.7 41.9-16 49.2-16l-6.4 5.9 22.4 17.7-1.7 30.7c-5.4-12.3-16.5-21.1-33-27.8 16.5 14.8 23.6 21.1 21.9 20.2-4.8-2.8-3.5-1.9-10.8-3.7 4.1 4.1 17.5 18.8 18.2 20.7l.2.2-.2.2c0 1.8 1.6-1.2-14 22.9-75.2-15.3-106.27-42.7-141.2-63.2l11.8 1.2c-11.8-18.5-15.6-17.7-38.4-26.1L149 225c-8.8-3-18.2-3-28.3.5l7.6-10.6-1.2-1.7c-14.9 4.3-19.8 9.2-22.6 11.3-1.1-5.5-2.8-12.4-12.3-28.8l-1.2 27-13.2-5c1.5-25.2 5.4-50.5 13.2-74.6zm276.5 330c-49.9 25-56.1 22.4-59 23.9-29.8-11.8-50.9-31.7-63.5-58.8l30 16.5c-9.8-9.3-18.3-16.5-38.4-44.3l11.8 23.1-17.7-7.6c14.2 21.1 23.5 51.7 66.6 73.5-120.8 24.2-199-72.1-200.9-74.3a262.57 262.57 0 0 0 35.4 24.8c3.4 1.7 7.1 2.5 10.1 1.2l-16-20.7c9.2 4.2 9.5 4.5 69.1 29-42.5-20.7-73.8-40.8-93.2-60.2-.5 6.4-1.2 10.1-1.2 10.1a80.25 80.25 0 0 1 20.7 26.6c-39-18.9-57.6-47.6-71.3-82.6 49.9 55.1 118.9 37.5 120.5 37.1 34.8 16.4 69.9 23.6 113.9 10.6 3.3 0 20.3 17 25.3 39.1l4.2-3-2.5-23.6c9 9 24.9 22.6 34.4 13-15.6-5.3-23.5-9.5-29.5-31.7 4.6 4.2 7.6 9 27.8 15l1.2-1.2-10.5-14.2c11.7-4.8-3.5 1 32-10.8 4.3 34.3 9 49.2.7 89.5zm115.3-214.4l-2.5.5 3 9.3c-3.5 5.9-23.7 44.3-71.6 79.7-39.5 29.8-76.6 39.1-80.9 40.3l-7.6-7.1-1.2 3 14.3 16-7.1-4.7 3.4 4.2h-1.2l-21.9-13.5 9.3 26.6-19-27.9-1.2 2.5 7.6 29c-6.1-8.2-21-32.6-56.8-39.6l32.5 21.2a214.82 214.82 0 0 1-93.2-6.4c-4.2-1.2-8.9-2.5-13.5-4.2l1.2-3-44.8-22.4 26.1 22.4c-57.7 9.1-113-25.4-126.4-83.4l-2.5-16.4-22.27 22.3c19.5-57.5 25.6-57.9 51.4-70.1-9.1-5.3-1.6-3.3-38.4-9.3 15.8-5.8 33-15.4 73 5.2a18.5 18.5 0 0 1 3.7-1.7c.6-3.2.4-.8 1-11.8 3.9 10 3.6 8.7 3 9.3l1.7.5c12.7-6.5 8.9-4.5 17-8.9l-5.4 13.5 22.3-5.8-8.4 8.4 2.5 2.5c4.5-1.8 30.3 3.4 40.8 16l-23.6-2.5c39.4 23 51.5 54 55.8 69.6l1.7-1.2c-2.8-22.3-12.4-33.9-16-40.1 4.2 5 39.2 34.6 110.4 46-11.3-.5-23.1 5.4-34.9 18.9l46.7-20.2-9.3 21.9c7.6-10.1 14.8-23.6 21.2-39.6v-.5l1.2-3-1.2 16c13.5-41.8 25.3-78.5 35.4-109.7l13.5-27.8v-2l-5.4-4.2h10.1l5.9 4.2 2.5-1.2-3.4-16 12.3 18.9 41.8-20.2-14.8 13 .5 2.9 17.7-.5a184 184 0 0 1 33 4.2l-23.6 2.5-1.2 3 26.6 23.1a254.21 254.21 0 0 1 27 32c-11.2-3.3-10.3-3.4-21.2-3.4l12.3 32.5zm-6.1-71.3l-3.9 13-14.3-11.8zm-254.8 7.1c1.7 10.6 4.7 17.7 8.8 21.9-9.3 6.6-27.5 13.9-46.5 16l.5 1.2a50.22 50.22 0 0 0 24.8-2.5l-7.1 13c4.2-1.7 10.1-7.1 17.7-14.8 11.9-5.5 12.7-5.1 20.2-16-12.7-6.4-15.7-13.7-18.4-18.8zm3.7-102.3c-6.4-3.4-10.6 3-12.3 18.9s2.5 29.5 11.8 39.6 18.2 10.6 26.1 3 3.4-23.6-11.3-47.7a39.57 39.57 0 0 0-14.27-13.8zm-4.7 46.3c5.4 2.2 10.5 1.9 12.3-10.6v-4.7l-1.2.5c-4.3-3.1-2.5-4.5-1.7-6.2l.5-.5c-.9-1.2-5-8.1-12.5 4.7-.5-13.5.5-21.9 3-24.8 1.2-2.5 4.7-1.2 11.3 4.2 6.4 5.4 11.3 16 15.2 32.5 6.5 28-19.8 26.2-26.9 4.9zm-45-5.5c1.6.3 9.3-1.1 9.3-14.8h-.5c-5.4-1.1-2.2-5.5-.7-5.9-1.7-3-3.4-4.2-5.4-4.7-8.1 0-11.6 12.7-8.1 21.2a7.51 7.51 0 0 0 5.43 4.2zM216 82.9l-2.5.5.5 3a48.94 48.94 0 0 1 26.1 5.9c-2.5-5.5-10-14.3-28.3-14.3l.5 2.5zm-71.8 49.4c21.7 16.8 16.5 21.4 46.5 23.6l-2.9-4.7a42.67 42.67 0 0 0 14.8-28.3c1.7-16-1.2-29.5-8.8-41.3l13-7.6a2.26 2.26 0 0 0-.5-1.7 14.21 14.21 0 0 0-13.5 1.7c-12.7 6.7-28 20.9-29 22.4-1.7 1.7-3.4 5.9-5.4 13.5a99.61 99.61 0 0 0-2.9 23.6c-4.7-8-10.5-6.4-19.9-5.9l7.1 7.6c-16.5 0-23.3 15.4-23.6 16 6.8 0 4.6-7.6 30-12.3-4.3-6.3-3.3-5-4.9-6.6zm18.7-18.7c1.2-7.6 3.4-13 6.4-17.2 5.4-6.4 10.6-10.1 16-11.8 4.2-1.7 7.1 1.2 10.1 9.3a72.14 72.14 0 0 1 3 25.3c-.5 9.3-3.4 17.2-8.4 23.1-2.9 3.4-5.4 5.9-6.4 7.6a39.21 39.21 0 0 1-11.3-.5l-7.1-3.4-5.4-6.4c.8-10 1.3-18.8 3.1-26zm42 56.1c-34.8 14.4-34.7 14-36.1 14.3-20.8 4.7-19-24.4-18.9-24.8l5.9-1.2-.5-2.5c-20.2-2.6-31 4.2-32.5 4.9.5.5 3 3.4 5.9 9.3 4.2-6.4 8.8-10.1 15.2-10.6a83.47 83.47 0 0 0 1.7 33.7c.1.5 2.6 17.4 27.5 24.1 11.3 3 27 1.2 48.9-5.4l-9.2.5c-4.2-14.8-6.4-24.8-5.9-29.5 11.3-8.8 21.9-11.3 30.7-7.6h2.5l-11.8-7.6-7.1.5c-5.9 1.2-12.3 4.2-19.4 8.4z"]
-}, wI = {
+}, wF = {
   prefix: "fab",
   iconName: "themeco",
   icon: [448, 512, [], "f5c6", "M202.9 8.43c9.9-5.73 26-5.82 35.95-.21L430 115.85c10 5.6 18 19.44 18 30.86V364c0 11.44-8.06 25.29-18 31L238.81 503.74c-9.93 5.66-26 5.57-35.85-.21L17.86 395.12C8 389.34 0 375.38 0 364V146.71c0-11.44 8-25.36 17.91-31.08zm-77.4 199.83c-15.94 0-31.89.14-47.83.14v101.45H96.8V280h28.7c49.71 0 49.56-71.74 0-71.74zm140.14 100.29l-30.73-34.64c37-7.51 34.8-65.23-10.87-65.51-16.09 0-32.17-.14-48.26-.14v101.59h19.13v-33.91h18.41l29.56 33.91h22.76zm-41.59-82.32c23.34 0 23.26 32.46 0 32.46h-29.13v-32.46zm-95.56-1.6c21.18 0 21.11 38.85 0 38.85H96.18v-38.84zm192.65-18.25c-68.46 0-71 105.8 0 105.8 69.48-.01 69.41-105.8 0-105.8zm0 17.39c44.12 0 44.8 70.86 0 70.86s-44.43-70.86 0-70.86z"]
-}, HI = {
+}, HF = {
   prefix: "fab",
   iconName: "themeisle",
   icon: [512, 512, [], "f2b2", "M208 88.286c0-10 6.286-21.714 17.715-21.714 11.142 0 17.714 11.714 17.714 21.714 0 10.285-6.572 21.714-17.714 21.714C214.286 110 208 98.571 208 88.286zm304 160c0 36.001-11.429 102.286-36.286 129.714-22.858 24.858-87.428 61.143-120.857 70.572l-1.143.286v32.571c0 16.286-12.572 30.571-29.143 30.571-10 0-19.429-5.714-24.572-14.286-5.427 8.572-14.856 14.286-24.856 14.286-10 0-19.429-5.714-24.858-14.286-5.142 8.572-14.571 14.286-24.57 14.286-10.286 0-19.429-5.714-24.858-14.286-5.143 8.572-14.571 14.286-24.571 14.286-18.857 0-29.429-15.714-29.429-32.857-16.286 12.285-35.715 19.428-56.571 19.428-22 0-43.429-8.285-60.286-22.857 10.285-.286 20.571-2.286 30.285-5.714-20.857-5.714-39.428-18.857-52-36.286 21.37 4.645 46.209 1.673 67.143-11.143-22-22-56.571-58.857-68.572-87.428C1.143 321.714 0 303.714 0 289.429c0-49.714 20.286-160 86.286-160 10.571 0 18.857 4.858 23.143 14.857a158.792 158.792 0 0 1 12-15.428c2-2.572 5.714-5.429 7.143-8.286 7.999-12.571 11.714-21.142 21.714-34C182.571 45.428 232 17.143 285.143 17.143c6 0 12 .285 17.714 1.143C313.714 6.571 328.857 0 344.572 0c14.571 0 29.714 6 40 16.286.857.858 1.428 2.286 1.428 3.428 0 3.714-10.285 13.429-12.857 16.286 4.286 1.429 15.714 6.858 15.714 12 0 2.857-2.857 5.143-4.571 7.143 31.429 27.714 49.429 67.143 56.286 108 4.286-5.143 10.285-8.572 17.143-8.572 10.571 0 20.857 7.144 28.571 14.001C507.143 187.143 512 221.714 512 248.286zM188 89.428c0 18.286 12.571 37.143 32.286 37.143 19.714 0 32.285-18.857 32.285-37.143 0-18-12.571-36.857-32.285-36.857-19.715 0-32.286 18.858-32.286 36.857zM237.714 194c0-19.714 3.714-39.143 8.571-58.286-52.039 79.534-13.531 184.571 68.858 184.571 21.428 0 42.571-7.714 60-20 2-7.429 3.714-14.857 3.714-22.572 0-14.286-6.286-21.428-20.572-21.428-4.571 0-9.143.857-13.429 1.714-63.343 12.668-107.142 3.669-107.142-63.999zm-41.142 254.858c0-11.143-8.858-20.857-20.286-20.857-11.429 0-20 9.715-20 20.857v32.571c0 11.143 8.571 21.142 20 21.142 11.428 0 20.286-9.715 20.286-21.142v-32.571zm49.143 0c0-11.143-8.572-20.857-20-20.857-11.429 0-20.286 9.715-20.286 20.857v32.571c0 11.143 8.857 21.142 20.286 21.142 11.428 0 20-10 20-21.142v-32.571zm49.713 0c0-11.143-8.857-20.857-20.285-20.857-11.429 0-20.286 9.715-20.286 20.857v32.571c0 11.143 8.857 21.142 20.286 21.142 11.428 0 20.285-9.715 20.285-21.142v-32.571zm49.715 0c0-11.143-8.857-20.857-20.286-20.857-11.428 0-20.286 9.715-20.286 20.857v32.571c0 11.143 8.858 21.142 20.286 21.142 11.429 0 20.286-10 20.286-21.142v-32.571zM421.714 286c-30.857 59.142-90.285 102.572-158.571 102.572-96.571 0-160.571-84.572-160.571-176.572 0-16.857 2-33.429 6-49.714-20 33.715-29.714 72.572-29.714 111.429 0 60.286 24.857 121.715 71.429 160.857 5.143-9.714 14.857-16.286 26-16.286 10 0 19.428 5.714 24.571 14.286 5.429-8.571 14.571-14.286 24.858-14.286 10 0 19.428 5.714 24.571 14.286 5.429-8.571 14.857-14.286 24.858-14.286 10 0 19.428 5.714 24.857 14.286 5.143-8.571 14.571-14.286 24.572-14.286 10.857 0 20.857 6.572 25.714 16 43.427-36.286 68.569-92 71.426-148.286zm10.572-99.714c0-53.714-34.571-105.714-92.572-105.714-30.285 0-58.571 15.143-78.857 36.857C240.862 183.812 233.41 254 302.286 254c28.805 0 97.357-28.538 84.286 36.857 28.857-26 45.714-65.714 45.714-104.571z"]
-}, LI = {
+}, LF = {
   prefix: "fab",
   iconName: "think-peaks",
   icon: [576, 512, [], "f731", "M465.4 409.4l87.1-150.2-32-.3-55.1 95L259.2 0 23 407.4l32 .3L259.2 55.6zm-355.3-44.1h32.1l117.4-202.5L463 511.9l32.5.1-235.8-404.6z"]
-}, NI = {
+}, NF = {
   prefix: "fab",
   iconName: "tiktok",
   icon: [448, 512, [], "e07b", "M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"]
-}, AI = {
+}, AF = {
   prefix: "fab",
   iconName: "trade-federation",
   icon: [496, 512, [], "f513", "M248 8.8c-137 0-248 111-248 248s111 248 248 248 248-111 248-248-111-248-248-248zm0 482.8c-129.7 0-234.8-105.1-234.8-234.8S118.3 22 248 22s234.8 105.1 234.8 234.8S377.7 491.6 248 491.6zm155.1-328.5v-46.8H209.3V198H54.2l36.7 46h117.7v196.8h48.8V245h83.3v-47h-83.3v-34.8h145.7zm-73.3 45.1v23.9h-82.9v197.4h-26.8V232.1H96.3l-20.1-23.9h143.9v-80.6h171.8V152h-145v56.2zm-161.3-69l-12.4-20.7 2.1 23.8-23.5 5.4 23.3 5.4-2.1 24 12.3-20.5 22.2 9.5-15.7-18.1 15.8-18.1zm-29.6-19.7l9.3-11.5-12.7 5.9-8-12.4 1.7 13.9-14.3 3.8 13.7 2.7-.8 14.7 6.8-12.2 13.8 5.3zm165.4 145.2l-13.1 5.6-7.3-12.2 1.3 14.2-13.9 3.2 13.9 3.2-1.2 14.2 7.3-12.2 13.1 5.5-9.4-10.7zm106.9-77.2l-20.9 9.1-12-19.6 2.2 22.7-22.3 5.4 22.2 4.9-1.8 22.9 11.5-19.6 21.2 8.8-15.1-17zM248 29.9c-125.3 0-226.9 101.6-226.9 226.9S122.7 483.7 248 483.7s226.9-101.6 226.9-226.9S373.3 29.9 248 29.9zM342.6 196v51h-83.3v195.7h-52.7V245.9H89.9l-40-49.9h157.4v-81.6h197.8v50.7H259.4V196zM248 43.2c60.3 0 114.8 25 153.6 65.2H202.5V190H45.1C73.1 104.8 153.4 43.2 248 43.2zm0 427.1c-117.9 0-213.6-95.6-213.6-213.5 0-21.2 3.1-41.8 8.9-61.1L87.1 252h114.7v196.8h64.6V253h83.3v-62.7h-83.2v-19.2h145.6v-50.8c30.8 37 49.3 84.6 49.3 136.5.1 117.9-95.5 213.5-213.4 213.5zM178.8 275l-11-21.4 1.7 24.5-23.7 3.9 23.8 5.9-3.7 23.8 13-20.9 21.5 10.8-15.8-18.8 16.9-17.1z"]
-}, _I = {
+}, _F = {
   prefix: "fab",
   iconName: "trello",
   icon: [448, 512, [], "f181", "M392.3 32H56.1C25.1 32 0 57.1 0 88c-.1 0 0-4 0 336 0 30.9 25.1 56 56 56h336.2c30.8-.2 55.7-25.2 55.7-56V88c.1-30.8-24.8-55.8-55.6-56zM197 371.3c-.2 14.7-12.1 26.6-26.9 26.6H87.4c-14.8.1-26.9-11.8-27-26.6V117.1c0-14.8 12-26.9 26.9-26.9h82.9c14.8 0 26.9 12 26.9 26.9v254.2zm193.1-112c0 14.8-12 26.9-26.9 26.9h-81c-14.8 0-26.9-12-26.9-26.9V117.2c0-14.8 12-26.9 26.8-26.9h81.1c14.8 0 26.9 12 26.9 26.9v142.1z"]
-}, SI = {
+}, SF = {
   prefix: "fab",
   iconName: "tumblr",
   icon: [320, 512, [], "f173", "M309.8 480.3c-13.6 14.5-50 31.7-97.4 31.7-120.8 0-147-88.8-147-140.6v-144H17.9c-5.5 0-10-4.5-10-10v-68c0-7.2 4.5-13.6 11.3-16 62-21.8 81.5-76 84.3-117.1.8-11 6.5-16.3 16.1-16.3h70.9c5.5 0 10 4.5 10 10v115.2h83c5.5 0 10 4.4 10 9.9v81.7c0 5.5-4.5 10-10 10h-83.4V360c0 34.2 23.7 53.6 68 35.8 4.8-1.9 9-3.2 12.7-2.2 3.5.9 5.8 3.4 7.4 7.9l22 64.3c1.8 5 3.3 10.6-.4 14.5z"]
-}, kI = {
+}, kF = {
   prefix: "fab",
   iconName: "tumblr-square",
   icon: [448, 512, [], "f174", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-82.3 364.2c-8.5 9.1-31.2 19.8-60.9 19.8-75.5 0-91.9-55.5-91.9-87.9v-90h-29.7c-3.4 0-6.2-2.8-6.2-6.2v-42.5c0-4.5 2.8-8.5 7.1-10 38.8-13.7 50.9-47.5 52.7-73.2.5-6.9 4.1-10.2 10-10.2h44.3c3.4 0 6.2 2.8 6.2 6.2v72h51.9c3.4 0 6.2 2.8 6.2 6.2v51.1c0 3.4-2.8 6.2-6.2 6.2h-52.1V321c0 21.4 14.8 33.5 42.5 22.4 3-1.2 5.6-2 8-1.4 2.2.5 3.6 2.1 4.6 4.9l13.8 40.2c1 3.2 2 6.7-.3 9.1z"]
-}, TI = {
+}, TF = {
   prefix: "fab",
   iconName: "twitch",
   icon: [512, 512, [], "f1e8", "M391.17,103.47H352.54v109.7h38.63ZM285,103H246.37V212.75H285ZM120.83,0,24.31,91.42V420.58H140.14V512l96.53-91.42h77.25L487.69,256V0ZM449.07,237.75l-77.22,73.12H294.61l-67.6,64v-64H140.14V36.58H449.07Z"]
-}, DI = {
+}, DF = {
   prefix: "fab",
   iconName: "twitter",
   icon: [512, 512, [], "f099", "M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"]
-}, OI = {
+}, OF = {
   prefix: "fab",
   iconName: "twitter-square",
   icon: [448, 512, [], "f081", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"]
-}, PI = {
+}, PF = {
   prefix: "fab",
   iconName: "typo3",
   icon: [448, 512, [], "f42b", "M178.7 78.4c0-24.7 5.4-32.4 13.9-39.4-69.5 8.5-149.3 34-176.3 66.4-5.4 7.7-9.3 20.8-9.3 37.1C7 246 113.8 480 191.1 480c36.3 0 97.3-59.5 146.7-139-7 2.3-11.6 2.3-18.5 2.3-57.2 0-140.6-198.5-140.6-264.9zM301.5 32c-30.1 0-41.7 5.4-41.7 36.3 0 66.4 53.8 198.5 101.7 198.5 26.3 0 78.8-99.7 78.8-182.3 0-40.9-67-52.5-138.8-52.5z"]
-}, FI = {
+}, IF = {
   prefix: "fab",
   iconName: "uber",
   icon: [448, 512, [], "f402", "M414.1 32H33.9C15.2 32 0 47.2 0 65.9V446c0 18.8 15.2 34 33.9 34H414c18.7 0 33.9-15.2 33.9-33.9V65.9C448 47.2 432.8 32 414.1 32zM237.6 391.1C163 398.6 96.4 344.2 88.9 269.6h94.4V290c0 3.7 3 6.8 6.8 6.8H258c3.7 0 6.8-3 6.8-6.8v-67.9c0-3.7-3-6.8-6.8-6.8h-67.9c-3.7 0-6.8 3-6.8 6.8v20.4H88.9c7-69.4 65.4-122.2 135.1-122.2 69.7 0 128.1 52.8 135.1 122.2 7.5 74.5-46.9 141.1-121.5 148.6z"]
-}, II = {
+}, FF = {
   prefix: "fab",
   iconName: "ubuntu",
   icon: [496, 512, [], "f7df", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm52.7 93c8.8-15.2 28.3-20.5 43.5-11.7 15.3 8.8 20.5 28.3 11.7 43.6-8.8 15.2-28.3 20.5-43.5 11.7-15.3-8.9-20.5-28.4-11.7-43.6zM87.4 287.9c-17.6 0-31.9-14.3-31.9-31.9 0-17.6 14.3-31.9 31.9-31.9 17.6 0 31.9 14.3 31.9 31.9 0 17.6-14.3 31.9-31.9 31.9zm28.1 3.1c22.3-17.9 22.4-51.9 0-69.9 8.6-32.8 29.1-60.7 56.5-79.1l23.7 39.6c-51.5 36.3-51.5 112.5 0 148.8L172 370c-27.4-18.3-47.8-46.3-56.5-79zm228.7 131.7c-15.3 8.8-34.7 3.6-43.5-11.7-8.8-15.3-3.6-34.8 11.7-43.6 15.2-8.8 34.7-3.6 43.5 11.7 8.8 15.3 3.6 34.8-11.7 43.6zm.3-69.5c-26.7-10.3-56.1 6.6-60.5 35-5.2 1.4-48.9 14.3-96.7-9.4l22.5-40.3c57 26.5 123.4-11.7 128.9-74.4l46.1.7c-2.3 34.5-17.3 65.5-40.3 88.4zm-5.9-105.3c-5.4-62-71.3-101.2-128.9-74.4l-22.5-40.3c47.9-23.7 91.5-10.8 96.7-9.4 4.4 28.3 33.8 45.3 60.5 35 23.1 22.9 38 53.9 40.2 88.5l-46 .6z"]
-}, EI = {
+}, EF = {
   prefix: "fab",
   iconName: "uikit",
   icon: [448, 512, [], "f403", "M443.9 128v256L218 512 0 384V169.7l87.6 45.1v117l133.5 75.5 135.8-75.5v-151l-101.1-57.6 87.6-53.1L443.9 128zM308.6 49.1L223.8 0l-88.6 54.8 86 47.3 87.4-53z"]
-}, RI = {
+}, RF = {
   prefix: "fab",
   iconName: "umbraco",
   icon: [510, 512, [], "f8e8", "M255.35 8C118.36 7.83 7.14 118.72 7 255.68c-.07 137 111 248.2 248 248.27 136.85 0 247.82-110.7 248-247.67S392.34 8.17 255.35 8zm145 266q-1.14 40.68-14 65t-43.51 35q-30.61 10.7-85.45 10.47h-4.6q-54.78.22-85.44-10.47t-43.52-35q-12.85-24.36-14-65a224.81 224.81 0 0 1 0-30.71 418.37 418.37 0 0 1 3.6-43.88c1.88-13.39 3.57-22.58 5.4-32 1-4.88 1.28-6.42 1.82-8.45a5.09 5.09 0 0 1 4.9-3.89h.69l32 5a5.07 5.07 0 0 1 4.16 5 5 5 0 0 1 0 .77l-1.7 8.78q-2.41 13.25-4.84 33.68a380.62 380.62 0 0 0-2.64 42.15q-.28 40.43 8.13 59.83a43.87 43.87 0 0 0 31.31 25.18A243 243 0 0 0 250 340.6h10.25a242.64 242.64 0 0 0 57.27-5.16 43.86 43.86 0 0 0 31.15-25.23q8.53-19.42 8.13-59.78a388 388 0 0 0-2.6-42.15q-2.48-20.38-4.89-33.68l-1.69-8.78a5 5 0 0 1 0-.77 5 5 0 0 1 4.2-5l32-5h.82a5 5 0 0 1 4.9 3.89c.55 2.05.81 3.57 1.83 8.45 1.82 9.62 3.52 18.78 5.39 32a415.71 415.71 0 0 1 3.61 43.88 228.06 228.06 0 0 1-.04 30.73z"]
-}, BI = {
+}, BF = {
   prefix: "fab",
   iconName: "uncharted",
   icon: [448, 512, [], "e084", "M171.73,232.813A5.381,5.381,0,0,0,176.7,229.5,48.081,48.081,0,0,1,191.6,204.244c1.243-.828,1.657-2.484,1.657-4.141a4.22,4.22,0,0,0-2.071-3.312L74.429,128.473,148.958,85a9.941,9.941,0,0,0,4.968-8.281,9.108,9.108,0,0,0-4.968-8.281L126.6,55.6a9.748,9.748,0,0,0-9.523,0l-100.2,57.966a9.943,9.943,0,0,0-4.969,8.281V236.954a9.109,9.109,0,0,0,4.969,8.281L39.235,258.07a8.829,8.829,0,0,0,4.968,1.242,9.4,9.4,0,0,0,6.625-2.484,10.8,10.8,0,0,0,2.9-7.039V164.5L169.66,232.4A4.5,4.5,0,0,0,171.73,232.813ZM323.272,377.73a12.478,12.478,0,0,0-4.969,1.242l-74.528,43.062V287.882c0-2.9-2.9-5.8-6.211-4.555a53.036,53.036,0,0,1-28.984.414,4.86,4.86,0,0,0-6.21,4.555V421.619l-74.529-43.061a8.83,8.83,0,0,0-4.969-1.242,9.631,9.631,0,0,0-9.523,9.523v26.085a9.107,9.107,0,0,0,4.969,8.281l100.2,57.553A8.829,8.829,0,0,0,223.486,480a11.027,11.027,0,0,0,4.969-1.242l100.2-57.553a9.941,9.941,0,0,0,4.968-8.281V386.839C332.8,382.285,328.24,377.73,323.272,377.73ZM286.007,78a23,23,0,1,0-23-23A23,23,0,0,0,286.007,78Zm63.627-10.086a23,23,0,1,0,23,23A23,23,0,0,0,349.634,67.914ZM412.816,151.6a23,23,0,1,0-23-23A23,23,0,0,0,412.816,151.6Zm-63.182-9.2a23,23,0,1,0,23,23A23,23,0,0,0,349.634,142.4Zm-63.627,83.244a23,23,0,1,0-23-23A23,23,0,0,0,286.007,225.648Zm-62.074,36.358a23,23,0,1,0-23-23A23,23,0,0,0,223.933,262.006Zm188.883-82.358a23,23,0,1,0,23,23A23,23,0,0,0,412.816,179.648Zm0,72.272a23,23,0,1,0,23,23A23,23,0,0,0,412.816,251.92Z"]
-}, $I = {
+}, $F = {
   prefix: "fab",
   iconName: "uniregistry",
   icon: [384, 512, [], "f404", "M192 480c39.5 0 76.2-11.8 106.8-32.2H85.3C115.8 468.2 152.5 480 192 480zm-89.1-193.1v-12.4H0v12.4c0 2.5 0 5 .1 7.4h103.1c-.2-2.4-.3-4.9-.3-7.4zm20.5 57H8.5c2.6 8.5 5.8 16.8 9.6 24.8h138.3c-12.9-5.7-24.1-14.2-33-24.8zm-17.7-34.7H1.3c.9 7.6 2.2 15 3.9 22.3h109.7c-4-6.9-7.2-14.4-9.2-22.3zm-2.8-69.3H0v17.3h102.9zm0-173.2H0v4.9h102.9zm0-34.7H0v2.5h102.9zm0 69.3H0v7.4h102.9zm0 104H0v14.8h102.9zm0-69.3H0v9.9h102.9zm0 34.6H0V183h102.9zm166.2 160.9h109.7c1.8-7.3 3.1-14.7 3.9-22.3H278.3c-2.1 7.9-5.2 15.4-9.2 22.3zm12-185.7H384V136H281.1zm0 37.2H384v-12.4H281.1zm0-74.3H384v-7.4H281.1zm0-76.7v2.5H384V32zm-203 410.9h227.7c11.8-8.7 22.7-18.6 32.2-29.7H44.9c9.6 11 21.4 21 33.2 29.7zm203-371.3H384v-4.9H281.1zm0 148.5H384v-14.8H281.1zM38.8 405.7h305.3c6.7-8.5 12.6-17.6 17.8-27.2H23c5.2 9.6 9.2 18.7 15.8 27.2zm188.8-37.1H367c3.7-8 5.8-16.2 8.5-24.8h-115c-8.8 10.7-20.1 19.2-32.9 24.8zm53.5-81.7c0 2.5-.1 5-.4 7.4h103.1c.1-2.5.2-4.9.2-7.4v-12.4H281.1zm0-29.7H384v-17.3H281.1z"]
-}, UI = {
+}, UF = {
   prefix: "fab",
   iconName: "unity",
   icon: [576, 512, [], "e049", "M498.11,206.4,445.31,14.72,248.2,66.08,219,116.14l-59.2-.43L15.54,256,159.82,396.32l59.17-.43,29.24,50,197.08,51.36,52.8-191.62-30-49.63ZM223.77,124.2,374.55,86.51,288,232.33H114.87Zm0,263.63L114.87,279.71H288l86.55,145.81Zm193,14L330.17,256l86.58-145.84L458.56,256Z"]
-}, ZI = {
+}, ZF = {
   prefix: "fab",
   iconName: "unsplash",
   icon: [448, 512, [], "e07c", "M448,230.17V480H0V230.17H141.13V355.09H306.87V230.17ZM306.87,32H141.13V156.91H306.87Z"]
-}, jI = {
+}, jF = {
   prefix: "fab",
   iconName: "untappd",
   icon: [640, 512, [], "f405", "M401.3 49.9c-79.8 160.1-84.6 152.5-87.9 173.2l-5.2 32.8c-1.9 12-6.6 23.5-13.7 33.4L145.6 497.1c-7.6 10.6-20.4 16.2-33.4 14.6-40.3-5-77.8-32.2-95.3-68.5-5.7-11.8-4.5-25.8 3.1-36.4l148.9-207.9c7.1-9.9 16.4-18 27.2-23.7l29.3-15.5c18.5-9.8 9.7-11.9 135.6-138.9 1-4.8 1-7.3 3.6-8 3-.7 6.6-1 6.3-4.6l-.4-4.6c-.2-1.9 1.3-3.6 3.2-3.6 4.5-.1 13.2 1.2 25.6 10 12.3 8.9 16.4 16.8 17.7 21.1.6 1.8-.6 3.7-2.4 4.2l-4.5 1.1c-3.4.9-2.5 4.4-2.3 7.4.1 2.8-2.3 3.6-6.5 6.1zM230.1 36.4c3.4.9 2.5 4.4 2.3 7.4-.2 2.7 2.1 3.5 6.4 6 7.9 15.9 15.3 30.5 22.2 44 .7 1.3 2.3 1.5 3.3.5 11.2-12 24.6-26.2 40.5-42.6 1.3-1.4 1.4-3.5.1-4.9-8-8.2-16.5-16.9-25.6-26.1-1-4.7-1-7.3-3.6-8-3-.8-6.6-1-6.3-4.6.3-3.3 1.4-8.1-2.8-8.2-4.5-.1-13.2 1.1-25.6 10-12.3 8.9-16.4 16.8-17.7 21.1-1.4 4.2 3.6 4.6 6.8 5.4zM620 406.7L471.2 198.8c-13.2-18.5-26.6-23.4-56.4-39.1-11.2-5.9-14.2-10.9-30.5-28.9-1-1.1-2.9-.9-3.6.5-46.3 88.8-47.1 82.8-49 94.8-1.7 10.7-1.3 20 .3 29.8 1.9 12 6.6 23.5 13.7 33.4l148.9 207.9c7.6 10.6 20.2 16.2 33.1 14.7 40.3-4.9 78-32 95.7-68.6 5.4-11.9 4.3-25.9-3.4-36.6z"]
-}, qI = {
+}, qF = {
   prefix: "fab",
   iconName: "ups",
   icon: [384, 512, [], "f7e0", "M103.2 303c-5.2 3.6-32.6 13.1-32.6-19V180H37.9v102.6c0 74.9 80.2 51.1 97.9 39V180h-32.6zM4 74.82v220.9c0 103.7 74.9 135.2 187.7 184.1 112.4-48.9 187.7-80.2 187.7-184.1V74.82c-116.3-61.6-281.8-49.6-375.4 0zm358.1 220.9c0 86.6-53.2 113.6-170.4 165.3-117.5-51.8-170.5-78.7-170.5-165.3v-126.4c102.3-93.8 231.6-100 340.9-89.8zm-209.6-107.4v212.8h32.7v-68.7c24.4 7.3 71.7-2.6 71.7-78.5 0-97.4-80.7-80.92-104.4-65.6zm32.7 117.3v-100.3c8.4-4.2 38.4-12.7 38.4 49.3 0 67.9-36.4 51.8-38.4 51zm79.1-86.4c.1 47.3 51.6 42.5 52.2 70.4.6 23.5-30.4 23-50.8 4.9v30.1c36.2 21.5 81.9 8.1 83.2-33.5 1.7-51.5-54.1-46.6-53.4-73.2.6-20.3 30.6-20.5 48.5-2.2v-28.4c-28.5-22-79.9-9.2-79.7 31.9z"]
-}, YI = {
+}, YF = {
   prefix: "fab",
   iconName: "usb",
   icon: [640, 512, [], "f287", "M641.5 256c0 3.1-1.7 6.1-4.5 7.5L547.9 317c-1.4.8-2.8 1.4-4.5 1.4-1.4 0-3.1-.3-4.5-1.1-2.8-1.7-4.5-4.5-4.5-7.8v-35.6H295.7c25.3 39.6 40.5 106.9 69.6 106.9H392V354c0-5 3.9-8.9 8.9-8.9H490c5 0 8.9 3.9 8.9 8.9v89.1c0 5-3.9 8.9-8.9 8.9h-89.1c-5 0-8.9-3.9-8.9-8.9v-26.7h-26.7c-75.4 0-81.1-142.5-124.7-142.5H140.3c-8.1 30.6-35.9 53.5-69 53.5C32 327.3 0 295.3 0 256s32-71.3 71.3-71.3c33.1 0 61 22.8 69 53.5 39.1 0 43.9 9.5 74.6-60.4C255 88.7 273 95.7 323.8 95.7c7.5-20.9 27-35.6 50.4-35.6 29.5 0 53.5 23.9 53.5 53.5s-23.9 53.5-53.5 53.5c-23.4 0-42.9-14.8-50.4-35.6H294c-29.1 0-44.3 67.4-69.6 106.9h310.1v-35.6c0-3.3 1.7-6.1 4.5-7.8 2.8-1.7 6.4-1.4 8.9.3l89.1 53.5c2.8 1.1 4.5 4.1 4.5 7.2z"]
-}, WI = {
+}, WF = {
   prefix: "fab",
   iconName: "usps",
   icon: [576, 512, [], "f7e1", "M460.3 241.7c25.8-41.3 15.2-48.8-11.7-48.8h-27c-.1 0-1.5-1.4-10.9 8-11.2 5.6-37.9 6.3-37.9 8.7 0 4.5 70.3-3.1 88.1 0 9.5 1.5-1.5 20.4-4.4 32-.5 4.5 2.4 2.3 3.8.1zm-112.1 22.6c64-21.3 97.3-23.9 102-26.2 4.4-2.9-4.4-6.6-26.2-5.8-51.7 2.2-137.6 37.1-172.6 53.9l-30.7-93.3h196.6c-2.7-28.2-152.9-22.6-337.9-22.6L27 415.8c196.4-97.3 258.9-130.3 321.2-151.5zM94.7 96c253.3 53.7 330 65.7 332.1 85.2 36.4 0 45.9 0 52.4 6.6 21.1 19.7-14.6 67.7-14.6 67.7-4.4 2.9-406.4 160.2-406.4 160.2h423.1L549 96z"]
-}, GI = {
+}, GF = {
   prefix: "fab",
   iconName: "ussunnah",
   icon: [512, 512, [], "f407", "M156.8 285.1l5.7 14.4h-8.2c-1.3-3.2-3.1-7.7-3.8-9.5-2.5-6.3-1.1-8.4 0-10 1.9-2.7 3.2-4.4 3.6-5.2 0 2.2.8 5.7 2.7 10.3zm297.3 18.8c-2.1 13.8-5.7 27.1-10.5 39.7l43 23.4-44.8-18.8c-5.3 13.2-12 25.6-19.9 37.2l34.2 30.2-36.8-26.4c-8.4 11.8-18 22.6-28.7 32.3l24.9 34.7-28.1-31.8c-11 9.6-23.1 18-36.1 25.1l15.7 37.2-19.3-35.3c-13.1 6.8-27 12.1-41.6 15.9l6.7 38.4-10.5-37.4c-14.3 3.4-29.2 5.3-44.5 5.4L256 512l-1.9-38.4c-15.3-.1-30.2-2-44.5-5.3L199 505.6l6.7-38.2c-14.6-3.7-28.6-9.1-41.7-15.8l-19.2 35.1 15.6-37c-13-7-25.2-15.4-36.2-25.1l-27.9 31.6 24.7-34.4c-10.7-9.7-20.4-20.5-28.8-32.3l-36.5 26.2 33.9-29.9c-7.9-11.6-14.6-24.1-20-37.3l-44.4 18.7L67.8 344c-4.8-12.7-8.4-26.1-10.5-39.9l-51 9 50.3-14.2c-1.1-8.5-1.7-17.1-1.7-25.9 0-4.7.2-9.4.5-14.1L0 256l56-2.8c1.3-13.1 3.8-25.8 7.5-38.1L6.4 199l58.9 10.4c4-12 9.1-23.5 15.2-34.4l-55.1-30 58.3 24.6C90 159 97.2 149.2 105.3 140L55.8 96.4l53.9 38.7c8.1-8.6 17-16.5 26.6-23.6l-40-55.6 45.6 51.6c9.5-6.6 19.7-12.3 30.3-17.2l-27.3-64.9 33.8 62.1c10.5-4.4 21.4-7.9 32.7-10.4L199 6.4l19.5 69.2c11-2.1 22.3-3.2 33.8-3.4L256 0l3.6 72.2c11.5.2 22.8 1.4 33.8 3.5L313 6.4l-12.4 70.7c11.3 2.6 22.2 6.1 32.6 10.5l33.9-62.2-27.4 65.1c10.6 4.9 20.7 10.7 30.2 17.2l45.8-51.8-40.1 55.9c9.5 7.1 18.4 15 26.5 23.6l54.2-38.9-49.7 43.9c8 9.1 15.2 18.9 21.5 29.4l58.7-24.7-55.5 30.2c6.1 10.9 11.1 22.3 15.1 34.3l59.3-10.4-57.5 16.2c3.7 12.2 6.2 24.9 7.5 37.9L512 256l-56 2.8c.3 4.6.5 9.3.5 14.1 0 8.7-.6 17.3-1.6 25.8l50.7 14.3-51.5-9.1zm-21.8-31c0-97.5-79-176.5-176.5-176.5s-176.5 79-176.5 176.5 79 176.5 176.5 176.5 176.5-79 176.5-176.5zm-24 0c0 84.3-68.3 152.6-152.6 152.6s-152.6-68.3-152.6-152.6 68.3-152.6 152.6-152.6 152.6 68.3 152.6 152.6zM195 241c0 2.1 1.3 3.8 3.6 5.1 3.3 1.9 6.2 4.6 8.2 8.2 2.8-5.7 4.3-9.5 4.3-11.2 0-2.2-1.1-4.4-3.2-7-2.1-2.5-3.2-5.2-3.3-7.7-6.5 6.8-9.6 10.9-9.6 12.6zm-40.7-19c0 2.1 1.3 3.8 3.6 5.1 3.5 1.9 6.2 4.6 8.2 8.2 2.8-5.7 4.3-9.5 4.3-11.2 0-2.2-1.1-4.4-3.2-7-2.1-2.5-3.2-5.2-3.3-7.7-6.5 6.8-9.6 10.9-9.6 12.6zm-19 0c0 2.1 1.3 3.8 3.6 5.1 3.3 1.9 6.2 4.6 8.2 8.2 2.8-5.7 4.3-9.5 4.3-11.2 0-2.2-1.1-4.4-3.2-7-2.1-2.5-3.2-5.2-3.3-7.7-6.4 6.8-9.6 10.9-9.6 12.6zm204.9 87.9c-8.4-3-8.7-6.8-8.7-15.6V182c-8.2 12.5-14.2 18.6-18 18.6 6.3 14.4 9.5 23.9 9.5 28.3v64.3c0 2.2-2.2 6.5-4.7 6.5h-18c-2.8-7.5-10.2-26.9-15.3-40.3-2 2.5-7.2 9.2-10.7 13.7 2.4 1.6 4.1 3.6 5.2 6.3 2.6 6.7 6.4 16.5 7.9 20.2h-9.2c-3.9-10.4-9.6-25.4-11.8-31.1-2 2.5-7.2 9.2-10.7 13.7 2.4 1.6 4.1 3.6 5.2 6.3.8 2 2.8 7.3 4.3 10.9H256c-1.5-4.1-5.6-14.6-8.4-22-2 2.5-7.2 9.2-10.7 13.7 2.5 1.6 4.3 3.6 5.2 6.3.2.6.5 1.4.6 1.7H225c-4.6-13.9-11.4-27.7-11.4-34.1 0-2.2.3-5.1 1.1-8.2-8.8 10.8-14 15.9-14 25 0 7.5 10.4 28.3 10.4 33.3 0 1.7-.5 3.3-1.4 4.9-9.6-12.7-15.5-20.7-18.8-20.7h-12l-11.2-28c-3.8-9.6-5.7-16-5.7-18.8 0-3.8.5-7.7 1.7-12.2-1 1.3-3.7 4.7-5.5 7.1-.8-2.1-3.1-7.7-4.6-11.5-2.1 2.5-7.5 9.1-11.2 13.6.9 2.3 3.3 8.1 4.9 12.2-2.5 3.3-9.1 11.8-13.6 17.7-4 5.3-5.8 13.3-2.7 21.8 2.5 6.7 2 7.9-1.7 14.1H191c5.5 0 14.3 14 15.5 22 13.2-16 15.4-19.6 16.8-21.6h107c3.9 0 7.2-1.9 9.9-5.8zm20.1-26.6V181.7c-9 12.5-15.9 18.6-20.7 18.6 7.1 14.4 10.7 23.9 10.7 28.3v66.3c0 17.5 8.6 20.4 24 20.4 8.1 0 12.5-.8 13.7-2.7-4.3-1.6-7.6-2.5-9.9-3.3-8.1-3.2-17.8-7.4-17.8-26z"]
-}, KI = {
+}, KF = {
   prefix: "fab",
   iconName: "vaadin",
   icon: [448, 512, [], "f408", "M224.5 140.7c1.5-17.6 4.9-52.7 49.8-52.7h98.6c20.7 0 32.1-7.8 32.1-21.6V54.1c0-12.2 9.3-22.1 21.5-22.1S448 41.9 448 54.1v36.5c0 42.9-21.5 62-66.8 62H280.7c-30.1 0-33 14.7-33 27.1 0 1.3-.1 2.5-.2 3.7-.7 12.3-10.9 22.2-23.4 22.2s-22.7-9.8-23.4-22.2c-.1-1.2-.2-2.4-.2-3.7 0-12.3-3-27.1-33-27.1H66.8c-45.3 0-66.8-19.1-66.8-62V54.1C0 41.9 9.4 32 21.6 32s21.5 9.9 21.5 22.1v12.3C43.1 80.2 54.5 88 75.2 88h98.6c44.8 0 48.3 35.1 49.8 52.7h.9zM224 456c11.5 0 21.4-7 25.7-16.3 1.1-1.8 97.1-169.6 98.2-171.4 11.9-19.6-3.2-44.3-27.2-44.3-13.9 0-23.3 6.4-29.8 20.3L224 362l-66.9-117.7c-6.4-13.9-15.9-20.3-29.8-20.3-24 0-39.1 24.6-27.2 44.3 1.1 1.9 97.1 169.6 98.2 171.4 4.3 9.3 14.2 16.3 25.7 16.3z"]
-}, XI = {
+}, XF = {
   prefix: "fab",
   iconName: "viacoin",
   icon: [384, 512, [], "f237", "M384 32h-64l-80.7 192h-94.5L64 32H0l48 112H0v48h68.5l13.8 32H0v48h102.8L192 480l89.2-208H384v-48h-82.3l13.8-32H384v-48h-48l48-112zM192 336l-27-64h54l-27 64z"]
-}, JI = {
+}, JF = {
   prefix: "fab",
   iconName: "viadeo",
   icon: [448, 512, [], "f2a9", "M276.2 150.5v.7C258.3 98.6 233.6 47.8 205.4 0c43.3 29.2 67 100 70.8 150.5zm32.7 121.7c7.6 18.2 11 37.5 11 57 0 77.7-57.8 141-137.8 139.4l3.8-.3c74.2-46.7 109.3-118.6 109.3-205.1 0-38.1-6.5-75.9-18.9-112 1 11.7 1 23.7 1 35.4 0 91.8-18.1 241.6-116.6 280C95 455.2 49.4 398 49.4 329.2c0-75.6 57.4-142.3 135.4-142.3 16.8 0 33.7 3.1 49.1 9.6 1.7-15.1 6.5-29.9 13.4-43.3-19.9-7.2-41.2-10.7-62.5-10.7-161.5 0-238.7 195.9-129.9 313.7 67.9 74.6 192 73.9 259.8 0 56.6-61.3 60.9-142.4 36.4-201-12.7 8-27.1 13.9-42.2 17zM418.1 11.7c-31 66.5-81.3 47.2-115.8 80.1-12.4 12-20.6 34-20.6 50.5 0 14.1 4.5 27.1 12 38.8 47.4-11 98.3-46 118.2-90.7-.7 5.5-4.8 14.4-7.2 19.2-20.3 35.7-64.6 65.6-99.7 84.9 14.8 14.4 33.7 25.8 55 25.8 79 0 110.1-134.6 58.1-208.6z"]
-}, QI = {
+}, QF = {
   prefix: "fab",
   iconName: "viadeo-square",
   icon: [448, 512, [], "f2aa", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM280.7 381.2c-42.4 46.2-120 46.6-162.4 0-68-73.6-19.8-196.1 81.2-196.1 13.3 0 26.6 2.1 39.1 6.7-4.3 8.4-7.3 17.6-8.4 27.1-9.7-4.1-20.2-6-30.7-6-48.8 0-84.6 41.7-84.6 88.9 0 43 28.5 78.7 69.5 85.9 61.5-24 72.9-117.6 72.9-175 0-7.3 0-14.8-.6-22.1-11.2-32.9-26.6-64.6-44.2-94.5 27.1 18.3 41.9 62.5 44.2 94.1v.4c7.7 22.5 11.8 46.2 11.8 70 0 54.1-21.9 99-68.3 128.2l-2.4.2c50 1 86.2-38.6 86.2-87.2 0-12.2-2.1-24.3-6.9-35.7 9.5-1.9 18.5-5.6 26.4-10.5 15.3 36.6 12.6 87.3-22.8 125.6zM309 233.7c-13.3 0-25.1-7.1-34.4-16.1 21.9-12 49.6-30.7 62.3-53 1.5-3 4.1-8.6 4.5-12-12.5 27.9-44.2 49.8-73.9 56.7-4.7-7.3-7.5-15.5-7.5-24.3 0-10.3 5.2-24.1 12.9-31.6 21.6-20.5 53-8.5 72.4-50 32.5 46.2 13.1 130.3-36.3 130.3z"]
@@ -28398,11 +28398,11 @@ var gS = {
   prefix: "fab",
   iconName: "yarn",
   icon: [496, 512, [], "f7e3", "M393.9 345.2c-39 9.3-48.4 32.1-104 47.4 0 0-2.7 4-10.4 5.8-13.4 3.3-63.9 6-68.5 6.1-12.4.1-19.9-3.2-22-8.2-6.4-15.3 9.2-22 9.2-22-8.1-5-9-9.9-9.8-8.1-2.4 5.8-3.6 20.1-10.1 26.5-8.8 8.9-25.5 5.9-35.3.8-10.8-5.7.8-19.2.8-19.2s-5.8 3.4-10.5-3.6c-6-9.3-17.1-37.3 11.5-62-1.3-10.1-4.6-53.7 40.6-85.6 0 0-20.6-22.8-12.9-43.3 5-13.4 7-13.3 8.6-13.9 5.7-2.2 11.3-4.6 15.4-9.1 20.6-22.2 46.8-18 46.8-18s12.4-37.8 23.9-30.4c3.5 2.3 16.3 30.6 16.3 30.6s13.6-7.9 15.1-5c8.2 16 9.2 46.5 5.6 65.1-6.1 30.6-21.4 47.1-27.6 57.5-1.4 2.4 16.5 10 27.8 41.3 10.4 28.6 1.1 52.7 2.8 55.3.8 1.4 13.7.8 36.4-13.2 12.8-7.9 28.1-16.9 45.4-17 16.7-.5 17.6 19.2 4.9 22.2zM496 256c0 136.9-111.1 248-248 248S0 392.9 0 256 111.1 8 248 8s248 111.1 248 248zm-79.3 75.2c-1.7-13.6-13.2-23-28-22.8-22 .3-40.5 11.7-52.8 19.2-4.8 3-8.9 5.2-12.4 6.8 3.1-44.5-22.5-73.1-28.7-79.4 7.8-11.3 18.4-27.8 23.4-53.2 4.3-21.7 3-55.5-6.9-74.5-1.6-3.1-7.4-11.2-21-7.4-9.7-20-13-22.1-15.6-23.8-1.1-.7-23.6-16.4-41.4 28-12.2.9-31.3 5.3-47.5 22.8-2 2.2-5.9 3.8-10.1 5.4h.1c-8.4 3-12.3 9.9-16.9 22.3-6.5 17.4.2 34.6 6.8 45.7-17.8 15.9-37 39.8-35.7 82.5-34 36-11.8 73-5.6 79.6-1.6 11.1 3.7 19.4 12 23.8 12.6 6.7 30.3 9.6 43.9 2.8 4.9 5.2 13.8 10.1 30 10.1 6.8 0 58-2.9 72.6-6.5 6.8-1.6 11.5-4.5 14.6-7.1 9.8-3.1 36.8-12.3 62.2-28.7 18-11.7 24.2-14.2 37.6-17.4 12.9-3.2 21-15.1 19.4-28.2z"]
-}, FE = {
+}, IE = {
   prefix: "fab",
   iconName: "yelp",
   icon: [384, 512, [], "f1e9", "M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A23 23 0 0 0 364.17 370l-105.42-34.26c-20.31-6.5-37.81 15.8-26.51 33.91zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.85 22.85 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a23 23 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z"]
-}, IE = {
+}, FE = {
   prefix: "fab",
   iconName: "yoast",
   icon: [448, 512, [], "f2b1", "M91.3 76h186l-7 18.9h-179c-39.7 0-71.9 31.6-71.9 70.3v205.4c0 35.4 24.9 70.3 84 70.3V460H91.3C41.2 460 0 419.8 0 370.5V165.2C0 115.9 40.7 76 91.3 76zm229.1-56h66.5C243.1 398.1 241.2 418.9 202.2 459.3c-20.8 21.6-49.3 31.7-78.3 32.7v-51.1c49.2-7.7 64.6-49.9 64.6-75.3 0-20.1.6-12.6-82.1-223.2h61.4L218.2 299 320.4 20zM448 161.5V460H234c6.6-9.6 10.7-16.3 12.1-19.4h182.5V161.5c0-32.5-17.1-51.9-48.2-62.9l6.7-17.6c41.7 13.6 60.9 43.1 60.9 80.5z"]
@@ -28439,8 +28439,8 @@ var gS = {
   faAppStore: DS,
   faAppStoreIos: OS,
   faApper: PS,
-  faApple: FS,
-  faApplePay: IS,
+  faApple: IS,
+  faApplePay: FS,
   faArtstation: ES,
   faAsymmetrik: RS,
   faAtlassian: BS,
@@ -28493,8 +28493,8 @@ var gS = {
   faConfluence: Dk,
   faConnectdevelop: Ok,
   faContao: Pk,
-  faCottonBureau: Fk,
-  faCpanel: Ik,
+  faCottonBureau: Ik,
+  faCpanel: Fk,
   faCreativeCommons: Ek,
   faCreativeCommonsBy: Rk,
   faCreativeCommonsNc: Bk,
@@ -28547,8 +28547,8 @@ var gS = {
   faEmpire: DT,
   faEnvira: OT,
   faErlang: PT,
-  faEthereum: FT,
-  faEtsy: IT,
+  faEthereum: IT,
+  faEtsy: FT,
   faEvernote: ET,
   faExpeditedssl: RT,
   faFacebook: BT,
@@ -28601,8 +28601,8 @@ var gS = {
   faGoodreadsG: DD,
   faGoogle: OD,
   faGoogleDrive: PD,
-  faGooglePay: FD,
-  faGooglePlay: ID,
+  faGooglePay: ID,
+  faGooglePlay: FD,
   faGooglePlus: ED,
   faGooglePlusG: RD,
   faGooglePlusSquare: BD,
@@ -28655,8 +28655,8 @@ var gS = {
   faKorvue: DO,
   faLaravel: OO,
   faLastfm: PO,
-  faLastfmSquare: FO,
-  faLeanpub: IO,
+  faLastfmSquare: IO,
+  faLeanpub: FO,
   faLess: EO,
   faLine: RO,
   faLinkedin: BO,
@@ -28709,8 +28709,8 @@ var gS = {
   faPalfed: DP,
   faPatreon: OP,
   faPaypal: PP,
-  faPennyArcade: FP,
-  faPerbyte: IP,
+  faPennyArcade: IP,
+  faPerbyte: FP,
   faPeriscope: EP,
   faPhabricator: RP,
   faPhoenixFramework: BP,
@@ -28726,114 +28726,114 @@ var gS = {
   faPinterestSquare: XP,
   faPlaystation: JP,
   faProductHunt: QP,
-  faPushed: eF,
-  faPython: aF,
-  faQq: tF,
-  faQuinscape: cF,
-  faQuora: iF,
-  faRProject: rF,
-  faRaspberryPi: nF,
-  faRavelry: oF,
-  faReact: lF,
-  faReacteurope: sF,
-  faReadme: fF,
-  faRebel: uF,
-  faRedRiver: dF,
-  faReddit: hF,
-  faRedditAlien: mF,
-  faRedditSquare: vF,
-  faRedhat: pF,
-  faRenren: gF,
-  faReplyd: zF,
-  faResearchgate: yF,
-  faResolving: bF,
-  faRev: MF,
-  faRocketchat: CF,
-  faRockrms: VF,
-  faRust: xF,
-  faSafari: wF,
-  faSalesforce: HF,
-  faSass: LF,
-  faSchlix: NF,
-  faScribd: AF,
-  faSearchengin: _F,
-  faSellcast: SF,
-  faSellsy: kF,
-  faServicestack: TF,
-  faShirtsinbulk: DF,
-  faShopify: OF,
-  faShopware: PF,
-  faSimplybuilt: FF,
-  faSistrix: IF,
-  faSith: EF,
-  faSketch: RF,
-  faSkyatlas: BF,
-  faSkype: $F,
-  faSlack: UF,
-  faSlackHash: ZF,
-  faSlideshare: jF,
-  faSnapchat: qF,
-  faSnapchatGhost: YF,
-  faSnapchatSquare: WF,
-  faSoundcloud: GF,
-  faSourcetree: KF,
-  faSpeakap: XF,
-  faSpeakerDeck: JF,
-  faSpotify: QF,
-  faSquarespace: eI,
-  faStackExchange: aI,
-  faStackOverflow: tI,
-  faStackpath: cI,
-  faStaylinked: iI,
-  faSteam: rI,
-  faSteamSquare: nI,
-  faSteamSymbol: oI,
-  faStickerMule: lI,
-  faStrava: sI,
-  faStripe: fI,
-  faStripeS: uI,
-  faStudiovinari: dI,
-  faStumbleupon: hI,
-  faStumbleuponCircle: mI,
-  faSuperpowers: vI,
-  faSupple: pI,
-  faSuse: gI,
-  faSwift: zI,
-  faSymfony: yI,
-  faTeamspeak: bI,
-  faTelegram: MI,
-  faTelegramPlane: CI,
-  faTencentWeibo: VI,
-  faTheRedYeti: xI,
-  faThemeco: wI,
-  faThemeisle: HI,
-  faThinkPeaks: LI,
-  faTiktok: NI,
-  faTradeFederation: AI,
-  faTrello: _I,
-  faTumblr: SI,
-  faTumblrSquare: kI,
-  faTwitch: TI,
-  faTwitter: DI,
-  faTwitterSquare: OI,
-  faTypo3: PI,
-  faUber: FI,
-  faUbuntu: II,
-  faUikit: EI,
-  faUmbraco: RI,
-  faUncharted: BI,
-  faUniregistry: $I,
-  faUnity: UI,
-  faUnsplash: ZI,
-  faUntappd: jI,
-  faUps: qI,
-  faUsb: YI,
-  faUsps: WI,
-  faUssunnah: GI,
-  faVaadin: KI,
-  faViacoin: XI,
-  faViadeo: JI,
-  faViadeoSquare: QI,
+  faPushed: eI,
+  faPython: aI,
+  faQq: tI,
+  faQuinscape: cI,
+  faQuora: iI,
+  faRProject: rI,
+  faRaspberryPi: nI,
+  faRavelry: oI,
+  faReact: lI,
+  faReacteurope: sI,
+  faReadme: fI,
+  faRebel: uI,
+  faRedRiver: dI,
+  faReddit: hI,
+  faRedditAlien: mI,
+  faRedditSquare: vI,
+  faRedhat: pI,
+  faRenren: gI,
+  faReplyd: zI,
+  faResearchgate: yI,
+  faResolving: bI,
+  faRev: MI,
+  faRocketchat: CI,
+  faRockrms: VI,
+  faRust: xI,
+  faSafari: wI,
+  faSalesforce: HI,
+  faSass: LI,
+  faSchlix: NI,
+  faScribd: AI,
+  faSearchengin: _I,
+  faSellcast: SI,
+  faSellsy: kI,
+  faServicestack: TI,
+  faShirtsinbulk: DI,
+  faShopify: OI,
+  faShopware: PI,
+  faSimplybuilt: II,
+  faSistrix: FI,
+  faSith: EI,
+  faSketch: RI,
+  faSkyatlas: BI,
+  faSkype: $I,
+  faSlack: UI,
+  faSlackHash: ZI,
+  faSlideshare: jI,
+  faSnapchat: qI,
+  faSnapchatGhost: YI,
+  faSnapchatSquare: WI,
+  faSoundcloud: GI,
+  faSourcetree: KI,
+  faSpeakap: XI,
+  faSpeakerDeck: JI,
+  faSpotify: QI,
+  faSquarespace: eF,
+  faStackExchange: aF,
+  faStackOverflow: tF,
+  faStackpath: cF,
+  faStaylinked: iF,
+  faSteam: rF,
+  faSteamSquare: nF,
+  faSteamSymbol: oF,
+  faStickerMule: lF,
+  faStrava: sF,
+  faStripe: fF,
+  faStripeS: uF,
+  faStudiovinari: dF,
+  faStumbleupon: hF,
+  faStumbleuponCircle: mF,
+  faSuperpowers: vF,
+  faSupple: pF,
+  faSuse: gF,
+  faSwift: zF,
+  faSymfony: yF,
+  faTeamspeak: bF,
+  faTelegram: MF,
+  faTelegramPlane: CF,
+  faTencentWeibo: VF,
+  faTheRedYeti: xF,
+  faThemeco: wF,
+  faThemeisle: HF,
+  faThinkPeaks: LF,
+  faTiktok: NF,
+  faTradeFederation: AF,
+  faTrello: _F,
+  faTumblr: SF,
+  faTumblrSquare: kF,
+  faTwitch: TF,
+  faTwitter: DF,
+  faTwitterSquare: OF,
+  faTypo3: PF,
+  faUber: IF,
+  faUbuntu: FF,
+  faUikit: EF,
+  faUmbraco: RF,
+  faUncharted: BF,
+  faUniregistry: $F,
+  faUnity: UF,
+  faUnsplash: ZF,
+  faUntappd: jF,
+  faUps: qF,
+  faUsb: YF,
+  faUsps: WF,
+  faUssunnah: GF,
+  faVaadin: KF,
+  faViacoin: XF,
+  faViadeo: JF,
+  faViadeoSquare: QF,
   faViber: eE,
   faVimeo: aE,
   faVimeoSquare: tE,
@@ -28871,19 +28871,19 @@ var gS = {
   faYandex: DE,
   faYandexInternational: OE,
   faYarn: PE,
-  faYelp: FE,
-  faYoast: IE,
+  faYelp: IE,
+  faYoast: FE,
   faYoutube: EE,
   faYoutubeSquare: RE,
   faZhihu: BE
 };
-function F5(e, a) {
+function I5(e, a) {
   (a == null || a > e.length) && (a = e.length);
   for (var t = 0, c = Array(a); t < a; t++) c[t] = e[t];
   return c;
 }
 function $E(e) {
-  if (Array.isArray(e)) return F5(e);
+  if (Array.isArray(e)) return I5(e);
 }
 function l4(e, a, t) {
   return (a = WE(a)) in e ? Object.defineProperty(e, a, {
@@ -28939,7 +28939,7 @@ function qE(e, a) {
   }
   return t;
 }
-function I5(e) {
+function F5(e) {
   return $E(e) || UE(e) || GE(e) || ZE();
 }
 function YE(e, a) {
@@ -28966,9 +28966,9 @@ function l8(e) {
 }
 function GE(e, a) {
   if (e) {
-    if (typeof e == "string") return F5(e, a);
+    if (typeof e == "string") return I5(e, a);
     var t = {}.toString.call(e).slice(8, -1);
-    return t === "Object" && e.constructor && (t = e.constructor.name), t === "Map" || t === "Set" ? Array.from(e) : t === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? F5(e, a) : void 0;
+    return t === "Object" && e.constructor && (t = e.constructor.name), t === "Map" || t === "Set" ? Array.from(e) : t === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? I5(e, a) : void 0;
   }
 }
 function u0(e, a) {
@@ -28999,22 +28999,22 @@ var XE = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
     var t = function(v, g, x) {
       if (!u(g) || m(g) || b(g) || w(g) || l(g))
         return g;
-      var I, P = 0, E = 0;
+      var F, P = 0, E = 0;
       if (s(g))
-        for (I = [], E = g.length; P < E; P++)
-          I.push(t(v, g[P], x));
+        for (F = [], E = g.length; P < E; P++)
+          F.push(t(v, g[P], x));
       else {
-        I = {};
+        F = {};
         for (var U in g)
-          Object.prototype.hasOwnProperty.call(g, U) && (I[v(U, x)] = t(v, g[U], x));
+          Object.prototype.hasOwnProperty.call(g, U) && (F[v(U, x)] = t(v, g[U], x));
       }
-      return I;
+      return F;
     }, c = function(v, g) {
       g = g || {};
-      var x = g.separator || "_", I = g.split || /(?=[A-Z])/;
-      return v.split(I).join(x);
+      var x = g.separator || "_", F = g.split || /(?=[A-Z])/;
+      return v.split(F).join(x);
     }, i = function(v) {
-      return F(v) ? v : (v = v.replace(/[\-_\s]+(.)?/g, function(g, x) {
+      return I(v) ? v : (v = v.replace(/[\-_\s]+(.)?/g, function(g, x) {
         return x ? x.toUpperCase() : "";
       }), v.substr(0, 1).toLowerCase() + v.substr(1));
     }, r = function(v) {
@@ -29034,12 +29034,12 @@ var XE = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       return o.call(v) == "[object RegExp]";
     }, w = function(v) {
       return o.call(v) == "[object Boolean]";
-    }, F = function(v) {
+    }, I = function(v) {
       return v = v - 0, v === v;
     }, _ = function(v, g) {
       var x = g && "process" in g ? g.process : g;
-      return typeof x != "function" ? v : function(I, P) {
-        return x(I, v, P);
+      return typeof x != "function" ? v : function(F, P) {
+        return x(F, v, P);
       };
     }, T = {
       camelize: i,
@@ -29311,7 +29311,7 @@ $2({
   },
   setup: function(a, t) {
     var c = t.slots, i = u4.familyPrefix, r = i1(function() {
-      return ["".concat(i, "-layers")].concat(I5(a.fixedWidth ? ["".concat(i, "-fw")] : []));
+      return ["".concat(i, "-layers")].concat(F5(a.fixedWidth ? ["".concat(i, "-fw")] : []));
     });
     return function() {
       return A6("div", {
@@ -29345,7 +29345,7 @@ $2({
   },
   setup: function(a, t) {
     var c = t.attrs, i = u4.familyPrefix, r = i1(function() {
-      return u0("classes", [].concat(I5(a.counter ? ["".concat(i, "-layers-counter")] : []), I5(a.position ? ["".concat(i, "-layers-").concat(a.position)] : [])));
+      return u0("classes", [].concat(F5(a.counter ? ["".concat(i, "-layers-counter")] : []), F5(a.position ? ["".concat(i, "-layers-").concat(a.position)] : [])));
     }), n = i1(function() {
       return u0("transform", typeof a.transform == "string" ? o8.transform(a.transform) : a.transform);
     }), o = i1(function() {
@@ -29363,7 +29363,7 @@ y8.add(xe);
 y8.add(Qa);
 let cR = {
   name: "IconField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -29462,7 +29462,7 @@ function nR(e, a, t, c, i, r) {
 const ct = /* @__PURE__ */ c2(iR, [["render", nR]]);
 let oR = {
   name: "GuidField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -29522,7 +29522,7 @@ function fR(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "text",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -29538,7 +29538,7 @@ function fR(e, a, t, c, i, r) {
 const it = /* @__PURE__ */ c2(lR, [["render", fR]]);
 let uR = {
   name: "VueSelectBaseField",
-  extends: F2,
+  extends: I2,
   props: {},
   data() {
     return {
@@ -29970,7 +29970,7 @@ let pR = {
 const ot = pR;
 let gR = {
   name: "UrlField",
-  extends: F2,
+  extends: I2,
   emits: ["update:modelValue"],
   props: {
     modelValue: {
@@ -30068,7 +30068,7 @@ function VR(e, a, t, c, i, r) {
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
       B("div", yR, [
-        r2(B("input", {
+        n2(B("input", {
           type: "text",
           class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
           "onUpdate:modelValue": a[0] || (a[0] = (l) => e.model = l),
@@ -30079,7 +30079,7 @@ function VR(e, a, t, c, i, r) {
           [z4, e.model]
         ]),
         B("datalist", MR, [
-          (p(!0), A(B1, null, n2(e.items, (l) => (p(), A("option", {
+          (p(!0), A(R1, null, r2(e.items, (l) => (p(), A("option", {
             key: l.url,
             value: l.url
           }, W1(l.text) + " (" + W1(l.url) + ") ", 9, CR))), 128))
@@ -30438,7 +30438,7 @@ function SR(e, a = 300) {
 }
 let kR = {
   name: "DynamicVueSelectBaseField",
-  extends: F2,
+  extends: I2,
   props: {},
   data() {
     return {
@@ -30661,7 +30661,7 @@ const OR = /* @__PURE__ */ c2(TR, [["render", DR]]), PR = {
   components: {
     VueSelect: U6
   }
-}, FR = { style: { height: "20px", width: "20px", "margin-right": "5px", display: "inline-block" } }, IR = ["src", "alt"], ER = ["accept"];
+}, IR = { style: { height: "20px", width: "20px", "margin-right": "5px", display: "inline-block" } }, FR = ["src", "alt"], ER = ["accept"];
 function RR(e, a, t, c, i, r) {
   const n = E1("vue-select");
   return p(), A("div", null, [
@@ -30689,12 +30689,12 @@ function RR(e, a, t, c, i, r) {
       filterable: !0
     }, {
       option: L1(({ filename: o, thumbUrl: l }) => [
-        B("div", FR, [
+        B("div", IR, [
           B("img", {
             src: l,
             alt: o,
             class: "img-fluid"
-          }, null, 8, IR)
+          }, null, 8, FR)
         ]),
         B("span", null, W1(o), 1)
       ]),
@@ -30715,7 +30715,7 @@ function RR(e, a, t, c, i, r) {
 const ut = /* @__PURE__ */ c2(PR, [["render", RR]]);
 let BR = {
   name: "ImageIdBrowserField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {}
   },
@@ -31412,8 +31412,8 @@ let t1 = {
     }
     var b = this.defaultView || null, w = null;
     if (b && (a ? w = "edit" : w = "create"), !i) {
-      var F = r.ui, _ = r.type;
-      F || (b || (b = this.defaultUI), b && (F = b)), F && (_ || (_ = w || "edit"), this.logDebug("No view provided but found request for UI: " + F + " and type: " + _), i = this.lookupView(F, _), i ? this.logDebug("Found view: " + i) : this.logDebug("No view found for UI: " + F + " and type: " + _));
+      var I = r.ui, _ = r.type;
+      I || (b || (b = this.defaultUI), b && (I = b)), I && (_ || (_ = w || "edit"), this.logDebug("No view provided but found request for UI: " + I + " and type: " + _), i = this.lookupView(I, _), i ? this.logDebug("Found view: " + i) : this.logDebug("No view found for UI: " + I + " and type: " + _));
     }
     if (i) {
       if (this.isString(i) && !this.views[i])
@@ -31575,7 +31575,7 @@ let t1 = {
     this.installed = !0, this.options = a || {}, this.registerView(Rc), _R.register(), NR.register(), a && a.view ? this.defaultView = a.view : this.defaultView = "bootstrap4-edit", this.registerConnectorClass("default", AR);
   },
   mount(e, a) {
-    var t = F3({ model: a.data }), c = null, i = Re({
+    var t = I3({ model: a.data }), c = null, i = Re({
       render() {
         return A6(Le, {
           ref: function(r) {
@@ -31608,7 +31608,7 @@ let t1 = {
     };
   },
   mountBuilder(e, a) {
-    var t = F3({ model: a.data }), c = null, i = Re({
+    var t = I3({ model: a.data }), c = null, i = Re({
       render() {
         return A6(mt, {
           ref: function(r) {
@@ -31640,7 +31640,7 @@ let t1 = {
     CKEditorField: v5,
     ColorField: _5,
     Control: c4,
-    ControlField: F2,
+    ControlField: I2,
     CountryField: p5,
     DateField: x5,
     DocumentsField: ft,
@@ -31822,7 +31822,7 @@ function QR(e, a, t, c, i, r) {
         "onUpdate:modelValue": a[0] || (a[0] = (o) => r.model = o)
       }, r.formProps), null, 16, ["modelValue"]),
       i.hasErrors ? (p(), A("div", XR, [
-        (p(!0), A(B1, null, n2(i.allErrors, (o, l) => (p(), A("div", { key: l }, W1(o), 1))), 128))
+        (p(!0), A(R1, null, r2(i.allErrors, (o, l) => (p(), A("div", { key: l }, W1(o), 1))), 128))
       ])) : j("", !0)
     ]),
     t.debug ? (p(), A("div", JR, W1(r.model), 1)) : j("", !0)
@@ -31951,7 +31951,7 @@ function tB(e, a, t, c, i, r) {
 const cB = /* @__PURE__ */ c2(eB, [["render", tB]]);
 let iB = {
   name: "LazyTextField",
-  extends: F2,
+  extends: I2,
   props: {
     modelValue: {
       type: String
@@ -32001,7 +32001,7 @@ function oB(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), H1(n, $1(j1(e.props)), {
     default: L1((o) => [
-      r2(B("input", {
+      n2(B("input", {
         type: "text",
         class: D1(["form-control", { "is-invalid": o.invalid && o.touched }]),
         "aria-describedby": e.options.label,
@@ -32135,6 +32135,14 @@ const sB = {
     }
   },
   methods: {
+    fieldDetails(e) {
+      let a = [];
+      if (["select", "radio", "checkboxlist"].includes(e.fieldType) && Array.isArray(e.options) && e.options.length && a.push({ icon: "list", text: e.options.map((t) => t.label || t.value || t).join(", ") }), e.fieldType === "array" && Array.isArray(e.fields) && e.fields.length && a.push({ icon: "th-list", text: e.fields.map((t) => t.label || t.fieldName || t.fieldType).join(", ") }), e.width && e.width !== "full" && a.push({ icon: "arrows-alt-h", text: "Width: " + e.width }), e.default !== void 0 && e.default !== null && e.default !== "" && a.push({ icon: "keyboard", text: "Default: " + e.default }), e.required && a.push({ icon: "asterisk", text: "Required" }), Array.isArray(e.dependencies) && e.dependencies.length) {
+        let t = e.dependencies.map((c) => c.fieldname + (c.values && c.values.length ? "=" + (Array.isArray(c.values) ? c.values.join(",") : c.values) : "")).join("; ");
+        a.push({ icon: "eye", text: "Show if: " + t });
+      }
+      return a;
+    },
     fieldIcon(e) {
       return {
         text: "font",
@@ -32186,16 +32194,20 @@ const sB = {
         select: "Inputs",
         color: "Inputs",
         date: "Inputs",
-        url: "Inputs",
-        file: "Files",
-        image: "Files",
-        imagebrowser: "Files",
-        filebrowser: "Files",
-        gallery: "Files",
-        documents: "Files",
+        ckeditor: "Inputs",
+        url: "Links",
+        link: "Links",
+        page: "Links",
+        file: "Images & Files",
+        image: "Images & Files",
+        imagebrowser: "Images & Files",
+        filebrowser: "Images & Files",
+        gallery: "Images & Files",
+        documents: "Images & Files",
+        icon: "Images & Files",
         object: "Panels",
         array: "Panels"
-      }, a = ["Inputs", "Files", "Panels", "Advanced"];
+      }, a = ["Inputs", "Links", "Images & Files", "Panels", "Advanced"];
       let t = t1.options && t1.options.fields || [], c = [], i = {};
       a.forEach((n) => {
         i[n] = [];
@@ -32207,7 +32219,11 @@ const sB = {
           let o = e[n] || "Advanced";
           i[o] || (i[o] = []), i[o].push({ type: n, label: n });
         }
-      this.availableTypes = c, this.toolboxCategories = a.filter((n) => i[n] && i[n].length > 0).map((n) => ({ name: n, items: i[n], open: !0 }));
+      this.availableTypes = c, this.toolboxCategories = a.filter((n) => i[n] && i[n].length > 0).map((n) => ({
+        name: n,
+        items: i[n].slice().sort((o, l) => (o.label || o.type).localeCompare(l.label || l.type)),
+        open: n === "Inputs"
+      }));
     },
     syncFromModel() {
       let e = [];
@@ -32333,7 +32349,7 @@ function PB(e, a, t, c, i, r) {
         }, "Preview", 2)
       ]),
       B("li", mB, [
-        r2(B("select", {
+        n2(B("select", {
           class: "form-control form-control-sm mt-1",
           "onUpdate:modelValue": a[2] || (a[2] = (s) => r.schemaType = s),
           style: { width: "120px" }
@@ -32345,11 +32361,11 @@ function PB(e, a, t, c, i, r) {
         ])
       ])
     ]),
-    r2(B("div", vB, [
+    n2(B("div", vB, [
       B("div", pB, [
         a[12] || (a[12] = B("div", { class: "builder-panel-header" }, "Toolbox", -1)),
         B("div", gB, [
-          (p(!0), A(B1, null, n2(i.toolboxCategories, (s) => (p(), A("div", {
+          (p(!0), A(R1, null, r2(i.toolboxCategories, (s) => (p(), A("div", {
             key: s.name,
             class: "builder-toolbox-category"
           }, [
@@ -32362,7 +32378,7 @@ function PB(e, a, t, c, i, r) {
               }, "▸", 2),
               a4(" " + W1(s.name), 1)
             ], 8, zB),
-            r2(e2(o, {
+            n2(e2(o, {
               modelValue: s.items,
               "onUpdate:modelValue": (m) => s.items = m,
               group: { name: "fields", pull: "clone", put: !1 },
@@ -32371,7 +32387,7 @@ function PB(e, a, t, c, i, r) {
               class: "builder-toolbox-category-items"
             }, {
               default: L1(() => [
-                (p(!0), A(B1, null, n2(s.items, (m) => (p(), A("div", {
+                (p(!0), A(R1, null, r2(s.items, (m) => (p(), A("div", {
                   key: m.type,
                   class: "builder-toolbox-item",
                   title: "Click or drag to add",
@@ -32402,7 +32418,7 @@ function PB(e, a, t, c, i, r) {
           onEnd: r.onDragEnd
         }, {
           default: L1(() => [
-            (p(!0), A(B1, null, n2(i.internalFields, (s, m) => (p(), A("div", {
+            (p(!0), A(R1, null, r2(i.internalFields, (s, m) => (p(), A("div", {
               key: s._uid,
               class: D1(["builder-canvas-card", { "builder-canvas-card--selected": i.selectedIndex === m }]),
               onClick: (b) => i.selectedIndex = m
@@ -32414,7 +32430,17 @@ function PB(e, a, t, c, i, r) {
                   "fixed-width": ""
                 }, null, 8, ["icon"]),
                 B("span", VB, W1(s.fieldType || "?"), 1),
-                B("span", xB, W1(s.label || s.fieldName || "Untitled"), 1)
+                B("span", xB, W1(s.label || s.fieldName || "Untitled"), 1),
+                (p(!0), A(R1, null, r2(r.fieldDetails(s), (b, w) => (p(), A("span", {
+                  key: w,
+                  class: "builder-canvas-card-detail"
+                }, [
+                  e2(n, {
+                    icon: b.icon,
+                    class: "builder-canvas-detail-icon"
+                  }, null, 8, ["icon"]),
+                  B("span", null, W1(b.text), 1)
+                ]))), 128))
               ]),
               B("button", {
                 class: "btn btn-sm btn-light builder-canvas-card-delete",
@@ -32437,7 +32463,7 @@ function PB(e, a, t, c, i, r) {
         r.selectedField ? (p(), A("div", NB, [
           B("div", AB, [
             a[14] || (a[14] = B("label", null, "Field Name", -1)),
-            r2(B("input", {
+            n2(B("input", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[4] || (a[4] = (s) => r.selectedField.fieldName = s),
               onChange: a[5] || (a[5] = (...s) => r.emitUpdate && r.emitUpdate(...s))
@@ -32447,7 +32473,7 @@ function PB(e, a, t, c, i, r) {
           ]),
           B("div", _B, [
             a[15] || (a[15] = B("label", null, "Label", -1)),
-            r2(B("input", {
+            n2(B("input", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[6] || (a[6] = (s) => r.selectedField.label = s),
               onChange: a[7] || (a[7] = (...s) => r.emitUpdate && r.emitUpdate(...s))
@@ -32457,12 +32483,12 @@ function PB(e, a, t, c, i, r) {
           ]),
           B("div", SB, [
             a[16] || (a[16] = B("label", null, "Field Type", -1)),
-            r2(B("select", {
+            n2(B("select", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[8] || (a[8] = (s) => r.selectedField.fieldType = s),
               onChange: a[9] || (a[9] = (...s) => r.onFieldTypeChange && r.onFieldTypeChange(...s))
             }, [
-              (p(!0), A(B1, null, n2(i.availableTypes, (s) => (p(), A("option", {
+              (p(!0), A(R1, null, r2(i.availableTypes, (s) => (p(), A("option", {
                 key: s,
                 value: s
               }, W1(s), 9, kB))), 128))
@@ -32498,9 +32524,9 @@ function PB(e, a, t, c, i, r) {
     ])) : j("", !0)
   ]);
 }
-const mt = /* @__PURE__ */ c2(sB, [["render", PB], ["__scopeId", "data-v-459c0902"]]);
+const mt = /* @__PURE__ */ c2(sB, [["render", PB], ["__scopeId", "data-v-18e62b84"]]);
 t1.registerFieldComponent("imageidbrowser", t1.components.ImageIdBrowserField);
-const FB = {
+const IB = {
   name: "App",
   data() {
     return {
@@ -32675,13 +32701,13 @@ const FB = {
     a && (this.model.options = JSON.parse(a));
   },
   components: { Builder: mt, LamaForm: Le }
-}, IB = { id: "app" }, EB = { class: "form-group" }, RB = { class: "nav nav-tabs" }, BB = ["onClick"], $B = { class: "pt-2" };
+}, FB = { id: "app" }, EB = { class: "form-group" }, RB = { class: "nav nav-tabs" }, BB = ["onClick"], $B = { class: "pt-2" };
 function UB(e, a, t, c, i, r) {
   const n = E1("builder"), o = E1("lama-form");
-  return p(), A("div", IB, [
+  return p(), A("div", FB, [
     B("div", EB, [
       a[6] || (a[6] = B("label", null, "Culture (Language)", -1)),
-      r2(B("select", {
+      n2(B("select", {
         class: "form-control",
         "onUpdate:modelValue": a[0] || (a[0] = (l) => i.connector.currentCulture = l)
       }, [...a[5] || (a[5] = [
@@ -32694,7 +32720,7 @@ function UB(e, a, t, c, i, r) {
       ])
     ]),
     B("ul", RB, [
-      (p(!0), A(B1, null, n2(i.tabs, (l, u) => (p(), A("li", {
+      (p(!0), A(R1, null, r2(i.tabs, (l, u) => (p(), A("li", {
         class: "nav-item",
         key: u
       }, [
@@ -32706,7 +32732,7 @@ function UB(e, a, t, c, i, r) {
       ]))), 128))
     ]),
     B("div", $B, [
-      r2(B("div", null, [
+      n2(B("div", null, [
         e2(n, {
           ref: "builder",
           modelValue: i.model,
@@ -32717,8 +32743,8 @@ function UB(e, a, t, c, i, r) {
       ], 512), [
         [m4, i.activeTab == 0]
       ]),
-      r2(B("div", null, [
-        r2(B("textarea", {
+      n2(B("div", null, [
+        n2(B("textarea", {
           "onUpdate:modelValue": a[2] || (a[2] = (l) => r.schemaText = l),
           style: { width: "100%", height: "300px" }
         }, null, 512), [
@@ -32727,8 +32753,8 @@ function UB(e, a, t, c, i, r) {
       ], 512), [
         [m4, i.activeTab == 1]
       ]),
-      r2(B("div", null, [
-        r2(B("textarea", {
+      n2(B("div", null, [
+        n2(B("textarea", {
           "onUpdate:modelValue": a[3] || (a[3] = (l) => r.optionsText = l),
           style: { width: "100%", height: "300px" }
         }, null, 512), [
@@ -32737,7 +32763,7 @@ function UB(e, a, t, c, i, r) {
       ], 512), [
         [m4, i.activeTab == 2]
       ]),
-      r2(B("div", null, [
+      n2(B("div", null, [
         a[7] || (a[7] = B("div", { id: "lama" }, null, -1)),
         e2(o, t2({
           modelValue: i.demoModel,
@@ -32749,12 +32775,12 @@ function UB(e, a, t, c, i, r) {
     ])
   ]);
 }
-const jB = /* @__PURE__ */ c2(FB, [["render", UB]]);
+const jB = /* @__PURE__ */ c2(IB, [["render", UB]]);
 export {
   jB as App,
   mt as Builder,
   c4 as Control,
-  F2 as ControlField,
+  I2 as ControlField,
   t1 as Lama,
   Le as LamaForm,
   He as VueSelectBaseField

@@ -70,6 +70,12 @@
               <font-awesome-icon :icon="fieldIcon(field.fieldType)" class="builder-canvas-card-icon" fixed-width />
               <span class="badge badge-secondary font-weight-light">{{ field.fieldType || '?' }}</span>
               <span class="builder-canvas-card-label ml-2">{{ field.label || field.fieldName || 'Untitled' }}</span>
+              <span v-if="fieldDetails(field).length" class="builder-canvas-card-details ml-4">
+                <span v-for="(detail, di) in fieldDetails(field)" :key="di" class="builder-canvas-card-detail">
+                  <font-awesome-icon :icon="detail.icon" class="builder-canvas-detail-icon" />
+                  <span>{{ detail.text }}</span>
+                </span>
+              </span>
             </div>
             <button class="btn btn-sm btn-light builder-canvas-card-delete" @click.stop="removeField(index)" title="Remove">
               <font-awesome-icon icon="trash" style="font-size: 13px; color: #dc3545;" />
@@ -230,7 +236,7 @@ export default {
           : [];
         let targetFields = referencedNames.length > 0
           ? referencedNames.map(n => siblings.find(f => f.fieldName === n)).filter(Boolean)
-          : siblings;
+          : [];
         for (let f of targetFields) {
           if (f.fieldType === 'checkbox') {
             if (allValues.indexOf('true') < 0) {
@@ -323,6 +329,29 @@ export default {
     },
   },
   methods: {
+    fieldDetails(field) {
+      let parts = [];
+      if (['select', 'radio', 'checkboxlist'].includes(field.fieldType) && Array.isArray(field.options) && field.options.length) {
+        parts.push({ icon: 'list', text: field.options.map(o => o.label || o.value || o).join(', ') });
+      }
+      if (field.fieldType === 'array' && Array.isArray(field.fields) && field.fields.length) {
+        parts.push({ icon: 'th-list', text: field.fields.map(f => (f.label || f.fieldName)+ ' ('+f.fieldType+')').join(', ') });
+      }
+      if (field.width && field.width !== 'full') {
+        parts.push({ icon: 'arrows-alt-h', text:  field.width });
+      }
+      if (field.default !== undefined && field.default !== null && field.default !== '') {
+        parts.push({ icon: 'keyboard', text: field.default });
+      }
+      if (field.required) {
+        parts.push({ icon: 'asterisk', text: '' });
+      }
+      if (Array.isArray(field.dependencies) && field.dependencies.length) {
+        let depStr = field.dependencies.map(d => d.fieldname + (d.values && d.values.length ? '=' + (Array.isArray(d.values) ? d.values.join(',') : d.values) : '')).join('; ');
+        parts.push({ icon: 'eye', text: depStr });
+      }
+      return parts;
+    },
     fieldIcon(type) {
       const icons = {
         text: 'font', email: 'envelope', password: 'lock', number: 'hashtag',
@@ -659,7 +688,9 @@ export default {
 .builder-canvas-card-body {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   min-width: 0;
+  flex: 1;
 }
 
 .builder-canvas-card-icon {
@@ -673,6 +704,39 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.builder-canvas-card-details {
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.builder-canvas-card-detail {
+  display: inline;
+  white-space: nowrap;
+}
+
+.builder-canvas-card-detail + .builder-canvas-card-detail {
+  margin-left: 8px;
+}
+
+.builder-canvas-card-detail + .builder-canvas-card-detail::before {
+  content: "• ";
+  margin-right: 4px;
+  opacity: 0.7;
+}
+
+.builder-canvas-detail-icon {
+  width: 10px;
+  margin-right: 3px;
+  font-size: 10px;
+  opacity: 0.8;
 }
 
 .builder-canvas-card-delete {
