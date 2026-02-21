@@ -13,6 +13,7 @@ let SelectField = {
     options: {},
     connector: {}
   },
+  emits: ['update:modelValue'],
   computed: {  
     items(){
       return this.schema.enum.map( (v, index) => {

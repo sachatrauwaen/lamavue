@@ -68,6 +68,13 @@
                             multilanguage: {
                                 type: "boolean",
                             },
+                            width: {
+                                title: "Width",
+                                type: "string",
+                                default: "full",
+                                required: true,
+                                enum: ["full", "1/2", "1/3"],
+                            },
                             dependencies: {
                                 type: "array",
                                 title: "Show if",
@@ -102,6 +109,10 @@
                                 rightLabel: "Multi language",
                                 hidden: Lama.options.multilanguage === false,
                             },
+                            width: {
+                                type: "select",
+                                optionLabels: ["Full width", "1/2 width", "1/3 width"],
+                            },
                         },
                     },
                 };
@@ -125,7 +136,8 @@
                         hidden: field.hidden,
                         multilanguage: field.multilanguage,
                         dependencies: optDeps,
-                        helper: field.helper
+                        helper: field.helper,
+                        width: field.width,
                     },
                 };
             },
@@ -156,6 +168,7 @@
                     hidden: def.options.hidden,
                     helper: def.options.helper,
                     multilanguage: def.options.multilanguage,
+                    width: def.options.width || 'full',
                     dependencies: deps,
                 };
             },

@@ -62,10 +62,10 @@
                 return (this.options.optionLabels && this.options.optionLabels[idx]) || value;
             },
             init() {
-            if (Lama.isValEmpty(this.model) && Lama.isString(this.schema.default)) {
-                this.model = this.schema.default.split(',');
+                if (Lama.isValEmpty(this.model) && this.schema.default) {
+                    this.model = this.schema.default;
+                }
             }
-        }
         },
         components: {},
         builder: {

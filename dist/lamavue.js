@@ -3156,6 +3156,10 @@ const U5 = /* @__PURE__ */ c2(Bc, [["render", jc]]), qc = {
     }
   },
   methods: {
+    colClass(e) {
+      let a = this.itemProps(e).options.width;
+      return a === "1/2" ? "col-12 col-md-6" : a === "1/3" ? "col-12 col-md-4" : "col-12";
+    },
     propChange(e, a) {
       let t = this.model;
       t[e] = a, this.$emit("update:modelValue", t);
@@ -3179,10 +3183,10 @@ const U5 = /* @__PURE__ */ c2(Bc, [["render", jc]]), qc = {
               let l = n.split(",");
               for (var c = 0; c < l.length; c++) {
                 let u = l[c].trim();
-                u === "__empty__" ? o = o || t1.isValEmpty(this.model[r]) : u === "__notempty__" ? o = o || !t1.isValEmpty(this.model[r]) : u === "true" ? o = o || this.model[r] === !0 : u === "false" ? o = o || this.model[r] === !1 : o = o || this.model[r] == u;
+                u === "__empty__" ? o = o || t1.isValEmpty(this.model[r]) : u === "__notempty__" ? o = o || !t1.isValEmpty(this.model[r]) : u === "true" ? o = o || this.model[r] === !0 : u === "false" ? o = o || this.model[r] === !1 : t1.isArray(this.model[r]) ? o = o || this.model[r].indexOf(u) >= 0 : o = o || this.model[r] == u;
               }
             } else
-              n === "__empty__" ? o = t1.isValEmpty(this.model[r]) : n === "__notempty__" ? o = !t1.isValEmpty(this.model[r]) : n === "true" ? o = this.model[r] === !0 : n === "false" ? o = this.model[r] === !1 : o = this.model[r] == n;
+              n === "__empty__" ? o = t1.isValEmpty(this.model[r]) : n === "__notempty__" ? o = !t1.isValEmpty(this.model[r]) : n === "true" ? o = this.model[r] === !0 : n === "false" ? o = this.model[r] === !1 : t1.isArray(this.model[r]) ? o = o || this.model[r].indexOf(n) >= 0 : o = this.model[r] == n;
           else
             o = o || this.model[r] == !0;
           i = i && o;
@@ -3214,7 +3218,7 @@ function Wc(e, a, t, c, i, r) {
   return p(), A("div", Yc, [
     (p(!0), A(B1, null, n2(r.fields, (o, l) => (p(), A("div", {
       key: l,
-      class: D1(["col-12", "col-md-12", "lama-type-" + r.itemProps(l).options.type, "lama-field-" + l])
+      class: D1([r.colClass(l), "lama-type-" + r.itemProps(l).options.type, "lama-field-" + l])
     }, [
       r2(e2(n, t2({
         ref_for: !0,
@@ -7180,9 +7184,16 @@ let lr = {
             multilanguage: {
               type: "boolean"
             },
+            width: {
+              title: "Width",
+              type: "string",
+              default: "full",
+              required: !0,
+              enum: ["full", "1/2", "1/3"]
+            },
             dependencies: {
               type: "array",
-              title: "Dependencies",
+              title: "Show if",
               items: {
                 type: "object",
                 properties: {
@@ -7191,7 +7202,7 @@ let lr = {
                     type: "string"
                   },
                   values: {
-                    title: "Values",
+                    title: "Values (or)",
                     type: "string"
                   }
                 }
@@ -7213,6 +7224,10 @@ let lr = {
             multilanguage: {
               rightLabel: "Multi language",
               hidden: t1.options.multilanguage === !1
+            },
+            width: {
+              type: "select",
+              optionLabels: ["Full width", "1/2 width", "1/3 width"]
             }
           }
         }
@@ -7236,7 +7251,8 @@ let lr = {
           hidden: e.hidden,
           multilanguage: e.multilanguage,
           dependencies: a,
-          helper: e.helper
+          helper: e.helper,
+          width: e.width
         }
       };
     },
@@ -7258,6 +7274,7 @@ let lr = {
         hidden: e.options.hidden,
         helper: e.options.helper,
         multilanguage: e.options.multilanguage,
+        width: e.options.width || "full",
         dependencies: a
       };
     }
@@ -7372,7 +7389,7 @@ let vr = {
       return this.options.optionLabels && this.options.optionLabels[a] || e;
     },
     init() {
-      Lama.isValEmpty(this.model) && Lama.isString(this.schema.default) && (this.model = this.schema.default.split(","));
+      Lama.isValEmpty(this.model) && this.schema.default && (this.model = this.schema.default);
     }
   },
   components: {},
@@ -19962,6 +19979,7 @@ let ku = {
     options: {},
     connector: {}
   },
+  emits: ["update:modelValue"],
   computed: {
     items() {
       return this.schema.enum.map((e, a) => ({
@@ -32023,7 +32041,7 @@ const sB = {
       selectedIndex: -1,
       demo: {},
       internalFields: [],
-      syncing: !1,
+      _lastEmitted: null,
       availableTypes: [],
       toolboxCategories: [],
       previewKey: 0
@@ -32110,7 +32128,7 @@ const sB = {
   watch: {
     modelValue: {
       handler() {
-        this.syncing || this.syncFromModel();
+        JSON.stringify(this.modelValue) !== this._lastEmitted && this.syncFromModel();
       },
       deep: !0,
       immediate: !0
@@ -32221,31 +32239,29 @@ const sB = {
       this.internalFields = e, this.selectedIndex >= this.internalFields.length && (this.selectedIndex = this.internalFields.length - 1);
     },
     emitUpdate() {
-      this.syncing = !0;
       let e = {}, a = {};
-      for (let t = 0; t < this.internalFields.length; t++) {
-        const c = this.internalFields[t];
-        if (t1.isEmpty(c.fieldName) && (c.fieldName = "field" + t), c.fieldType) {
-          let i = t1.getFieldComponent(c.fieldType);
-          if (i && i.builder && i.builder.fromBuilder) {
-            let r = i.builder.fromBuilder(c);
-            for (; i.extends; )
-              if (i = i.extends, i.builder && i.builder.fromBuilder) {
-                let n = i.builder.fromBuilder(c);
-                r.schema = Object.assign(n.schema, r.schema), r.options = Object.assign(n.options, r.options);
+      for (let c = 0; c < this.internalFields.length; c++) {
+        const i = this.internalFields[c];
+        if (t1.isEmpty(i.fieldName) && (i.fieldName = "field" + c), i.fieldType) {
+          let r = t1.getFieldComponent(i.fieldType);
+          if (r && r.builder && r.builder.fromBuilder) {
+            let n = r.builder.fromBuilder(i);
+            for (; r.extends; )
+              if (r = r.extends, r.builder && r.builder.fromBuilder) {
+                let o = r.builder.fromBuilder(i);
+                n.schema = Object.assign(o.schema, n.schema), n.options = Object.assign(o.options, n.options);
               }
-            e[c.fieldName] = r.schema, a[c.fieldName] = r.options;
+            e[i.fieldName] = n.schema, a[i.fieldName] = n.options;
           } else
-            e[c.fieldName] = { title: c.label, type: c.fieldType }, a[c.fieldName] = {};
+            e[i.fieldName] = { title: i.label, type: i.fieldType }, a[i.fieldName] = {};
         } else
-          e[c.fieldName] = { title: c.label }, a[c.fieldName] = {};
+          e[i.fieldName] = { title: i.label }, a[i.fieldName] = {};
       }
-      this.$emit("update:modelValue", {
+      let t = {
         schema: this.schemaType == "array" ? { type: "array", items: { type: "object", properties: e } } : { type: "object", properties: e },
         options: this.schemaType == "array" ? { items: { fields: a } } : { fields: a }
-      }), this.$nextTick(() => {
-        this.syncing = !1;
-      });
+      };
+      this._lastEmitted = JSON.stringify(t), this.$emit("update:modelValue", t);
     },
     cloneField(e) {
       let a = 1, t = e.type + a, c = this.internalFields.map((i) => i.fieldName);
@@ -32255,6 +32271,7 @@ const sB = {
         fieldType: e.type,
         fieldName: t,
         label: e.type.charAt(0).toUpperCase() + e.type.slice(1) + " " + a,
+        width: "full",
         _uid: ++n9
       };
     },
@@ -32270,6 +32287,10 @@ const sB = {
     },
     onFieldTypeChange() {
       this.emitUpdate();
+    },
+    onPropsChange(e) {
+      let a = this.internalFields[this.selectedIndex];
+      a && e && Object.assign(a, e), this.emitUpdate();
     },
     switchToPreview() {
       this.activeTab = "preview", this.previewKey++;
@@ -32316,7 +32337,7 @@ function PB(e, a, t, c, i, r) {
           class: "form-control form-control-sm mt-1",
           "onUpdate:modelValue": a[2] || (a[2] = (s) => r.schemaType = s),
           style: { width: "120px" }
-        }, [...a[12] || (a[12] = [
+        }, [...a[11] || (a[11] = [
           B("option", { value: "object" }, "Object", -1),
           B("option", { value: "array" }, "Array", -1)
         ])], 512), [
@@ -32326,7 +32347,7 @@ function PB(e, a, t, c, i, r) {
     ]),
     r2(B("div", vB, [
       B("div", pB, [
-        a[13] || (a[13] = B("div", { class: "builder-panel-header" }, "Toolbox", -1)),
+        a[12] || (a[12] = B("div", { class: "builder-panel-header" }, "Toolbox", -1)),
         B("div", gB, [
           (p(!0), A(B1, null, n2(i.toolboxCategories, (s) => (p(), A("div", {
             key: s.name,
@@ -32372,7 +32393,7 @@ function PB(e, a, t, c, i, r) {
         ])
       ]),
       B("div", bB, [
-        a[14] || (a[14] = B("div", { class: "builder-panel-header" }, "Form Fields", -1)),
+        a[13] || (a[13] = B("div", { class: "builder-panel-header" }, "Form Fields", -1)),
         e2(o, {
           modelValue: i.internalFields,
           "onUpdate:modelValue": a[3] || (a[3] = (s) => i.internalFields = s),
@@ -32412,30 +32433,30 @@ function PB(e, a, t, c, i, r) {
         i.internalFields.length ? j("", !0) : (p(), A("div", HB, " Drag fields from the toolbox to start building your form "))
       ]),
       B("div", LB, [
-        a[19] || (a[19] = B("div", { class: "builder-panel-header" }, "Properties", -1)),
+        a[18] || (a[18] = B("div", { class: "builder-panel-header" }, "Properties", -1)),
         r.selectedField ? (p(), A("div", NB, [
           B("div", AB, [
-            a[15] || (a[15] = B("label", null, "Field Name", -1)),
+            a[14] || (a[14] = B("label", null, "Field Name", -1)),
             r2(B("input", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[4] || (a[4] = (s) => r.selectedField.fieldName = s),
-              onInput: a[5] || (a[5] = (...s) => r.emitUpdate && r.emitUpdate(...s))
+              onChange: a[5] || (a[5] = (...s) => r.emitUpdate && r.emitUpdate(...s))
             }, null, 544), [
               [z4, r.selectedField.fieldName]
             ])
           ]),
           B("div", _B, [
-            a[16] || (a[16] = B("label", null, "Label", -1)),
+            a[15] || (a[15] = B("label", null, "Label", -1)),
             r2(B("input", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[6] || (a[6] = (s) => r.selectedField.label = s),
-              onInput: a[7] || (a[7] = (...s) => r.emitUpdate && r.emitUpdate(...s))
+              onChange: a[7] || (a[7] = (...s) => r.emitUpdate && r.emitUpdate(...s))
             }, null, 544), [
               [z4, r.selectedField.label]
             ])
           ]),
           B("div", SB, [
-            a[17] || (a[17] = B("label", null, "Field Type", -1)),
+            a[16] || (a[16] = B("label", null, "Field Type", -1)),
             r2(B("select", {
               class: "form-control form-control-sm",
               "onUpdate:modelValue": a[8] || (a[8] = (s) => r.selectedField.fieldType = s),
@@ -32449,12 +32470,11 @@ function PB(e, a, t, c, i, r) {
               [B0, r.selectedField.fieldType]
             ])
           ]),
-          a[18] || (a[18] = B("hr", null, null, -1)),
+          a[17] || (a[17] = B("hr", null, null, -1)),
           r.selectedField.fieldType && r.selectedBuilderProps ? (p(), H1(l, t2({
-            key: 0,
-            modelValue: i.internalFields[i.selectedIndex],
-            "onUpdate:modelValue": a[10] || (a[10] = (s) => i.internalFields[i.selectedIndex] = s)
-          }, r.selectedBuilderProps, { "onUpdate:modelValue": r.emitUpdate }), null, 16, ["modelValue", "onUpdate:modelValue"])) : j("", !0)
+            key: r.selectedField._uid,
+            modelValue: i.internalFields[i.selectedIndex]
+          }, r.selectedBuilderProps, { "onUpdate:modelValue": r.onPropsChange }), null, 16, ["modelValue", "onUpdate:modelValue"])) : j("", !0)
         ])) : (p(), A("div", TB, " Select a field to edit its properties "))
       ])
     ], 512), [
@@ -32466,19 +32486,19 @@ function PB(e, a, t, c, i, r) {
         key: i.previewKey
       }, r.demoProps, {
         modelValue: i.demo,
-        "onUpdate:modelValue": a[11] || (a[11] = (s) => i.demo = s),
+        "onUpdate:modelValue": a[10] || (a[10] = (s) => i.demo = s),
         debug: t.debug
       }), null, 16, ["modelValue", "debug"])),
       t.debug ? (p(), A("div", OB, [
-        a[20] || (a[20] = B("hr", null, null, -1)),
+        a[19] || (a[19] = B("hr", null, null, -1)),
         a4(" schema = " + W1(t.modelValue.schema) + " ", 1),
-        a[21] || (a[21] = B("hr", null, null, -1)),
+        a[20] || (a[20] = B("hr", null, null, -1)),
         a4(" options = " + W1(t.modelValue.options), 1)
       ])) : j("", !0)
     ])) : j("", !0)
   ]);
 }
-const mt = /* @__PURE__ */ c2(sB, [["render", PB], ["__scopeId", "data-v-393b9252"]]);
+const mt = /* @__PURE__ */ c2(sB, [["render", PB], ["__scopeId", "data-v-459c0902"]]);
 t1.registerFieldComponent("imageidbrowser", t1.components.ImageIdBrowserField);
 const FB = {
   name: "App",

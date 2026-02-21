@@ -1,6 +1,6 @@
 <template>
     <div class="form-row">
-        <div v-for="(value, key) in fields" :key="key" :class="['col-12', 'col-md-12', 'lama-type-'+itemProps(key).options.type, 'lama-field-'+key]">
+        <div v-for="(value, key) in fields" :key="key" :class="[colClass(key), 'lama-type-'+itemProps(key).options.type, 'lama-field-'+key]">
             <form-field v-show="visible(key)" ref="field" :modelValue="model[key]" v-bind="itemProps(key)" @update:modelValue="propChange(key, $event)"></form-field>
         </div>
     </div>
@@ -71,6 +71,12 @@
             }
         },
         methods: {
+            colClass(key) {
+                let w = this.itemProps(key).options.width;
+                if (w === '1/2') return 'col-12 col-md-6';
+                if (w === '1/3') return 'col-12 col-md-4';
+                return 'col-12';
+            },
             propChange(key, value) {
                 let obj = this.model;
                 obj[key] = value;

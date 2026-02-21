@@ -87,11 +87,11 @@
         <div v-if="selectedField" class="builder-properties-content">
           <div class="form-group">
             <label>Field Name</label>
-            <input class="form-control form-control-sm" v-model="selectedField.fieldName" @input="emitUpdate" />
+            <input class="form-control form-control-sm" v-model="selectedField.fieldName" @change="emitUpdate" />
           </div>
           <div class="form-group">
             <label>Label</label>
-            <input class="form-control form-control-sm" v-model="selectedField.label" @input="emitUpdate" />
+            <input class="form-control form-control-sm" v-model="selectedField.label" @change="emitUpdate" />
           </div>
           <div class="form-group">
             <label>Field Type</label>
@@ -102,9 +102,10 @@
           <hr />
           <fields
             v-if="selectedField.fieldType && selectedBuilderProps"
-            v-model="internalFields[selectedIndex]"
+            :key="selectedField._uid"
+            :modelValue="internalFields[selectedIndex]"
             v-bind="selectedBuilderProps"
-            @update:modelValue="emitUpdate"
+            @update:modelValue="onPropsChange"
           ></fields>
         </div>
         <div v-else class="builder-properties-empty">
@@ -162,7 +163,7 @@ export default {
       selectedIndex: -1,
       demo: {},
       internalFields: [],
-      syncing: false,
+      _lastEmitted: null,
       availableTypes: [],
       toolboxCategories: [],
       previewKey: 0,
@@ -312,8 +313,10 @@ export default {
   watch: {
     modelValue: {
       handler() {
-        if (this.syncing) return;
-        this.syncFromModel();
+        let current = JSON.stringify(this.modelValue);
+        if (current !== this._lastEmitted) {
+          this.syncFromModel();
+        }
       },
       deep: true,
       immediate: true,
@@ -344,12 +347,14 @@ export default {
         text: 'Inputs', email: 'Inputs', password: 'Inputs', number: 'Inputs',
         textarea: 'Inputs', checkbox: 'Inputs', radio: 'Inputs',
         checkboxlist: 'Inputs', select: 'Inputs', color: 'Inputs', date: 'Inputs',
-        url: 'Inputs',
-        file: 'Files', image: 'Files', imagebrowser: 'Files',
-        filebrowser: 'Files', gallery: 'Files', documents: 'Files',
+        ckeditor: 'Inputs',
+        url: 'Links', link: 'Links', page: 'Links',
+        file: 'Images & Files', image: 'Images & Files', imagebrowser: 'Images & Files',
+        filebrowser: 'Images & Files', gallery: 'Images & Files', documents: 'Images & Files',
+        icon: 'Images & Files',
         object: 'Panels', array: 'Panels',
       };
-      const categoryOrder = ['Inputs', 'Files', 'Panels', 'Advanced'];
+      const categoryOrder = ['Inputs', 'Links', 'Images & Files', 'Panels', 'Advanced'];
 
       let fieldsFilter = (Lama.options && Lama.options.fields) || [];
       let types = [];
@@ -368,7 +373,11 @@ export default {
       this.availableTypes = types;
       this.toolboxCategories = categoryOrder
         .filter(c => grouped[c] && grouped[c].length > 0)
-        .map(c => ({ name: c, items: grouped[c], open: true }));
+        .map(c => ({
+          name: c,
+          items: grouped[c].slice().sort((a, b) => (a.label || a.type).localeCompare(b.label || b.type)),
+          open: c === 'Inputs',
+        }));
     },
     syncFromModel() {
       let fields = [];
@@ -411,7 +420,6 @@ export default {
       }
     },
     emitUpdate() {
-      this.syncing = true;
       let props = {};
       let fields = {};
       for (let index = 0; index < this.internalFields.length; index++) {
@@ -440,7 +448,7 @@ export default {
           fields[field.fieldName] = {};
         }
       }
-      this.$emit("update:modelValue", {
+      let newVal = {
         schema:
           this.schemaType == "array"
             ? { type: "array", items: { type: "object", properties: props } }
@@ -449,8 +457,9 @@ export default {
           this.schemaType == "array"
             ? { items: { fields: fields } }
             : { fields: fields },
-      });
-      this.$nextTick(() => { this.syncing = false; });
+      };
+      this._lastEmitted = JSON.stringify(newVal);
+      this.$emit("update:modelValue", newVal);
     },
     cloneField(original) {
       let count = 1;
@@ -464,6 +473,7 @@ export default {
         fieldType: original.type,
         fieldName: name,
         label: original.type.charAt(0).toUpperCase() + original.type.slice(1) + ' ' + count,
+        width: 'full',
         _uid: ++uidCounter,
       };
     },
@@ -486,6 +496,13 @@ export default {
       this.emitUpdate();
     },
     onFieldTypeChange() {
+      this.emitUpdate();
+    },
+    onPropsChange(newVal) {
+      let current = this.internalFields[this.selectedIndex];
+      if (current && newVal) {
+        Object.assign(current, newVal);
+      }
       this.emitUpdate();
     },
     switchToPreview() {
