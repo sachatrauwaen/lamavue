@@ -1,28 +1,41 @@
 <template>
-  <div class="btn-group btn-group-sm" role="group" aria-label="Toolbar">
+  <div class="toolbar btn-group btn-group-sm" role="group" aria-label="Toolbar">
     <button
       type="button"
       v-if="index >=0"
       :disabled="index ==0"
       class="btn btn-secondary"
+      title="Up"
       @click="up"
-    >Up</button>
+    >
+      <font-awesome-icon icon="arrow-up" fixed-width />
+    </button>
     <button
       type="button"
       v-if="index >=0"
       :disabled="index+1 == model.length"
       class="btn btn-secondary"
+      title="Down"
       @click="down"
-    >Down</button>
-    <button type="button" class="btn btn-secondary" @click="add">+</button>
-    <button type="button" v-if="index >=0" class="btn btn-secondary" @click="remove">-</button>
+    >
+      <font-awesome-icon icon="arrow-down" fixed-width />
+    </button>
+    <button type="button" class="btn btn-secondary" title="Add" @click="add">
+      <font-awesome-icon icon="plus" fixed-width />
+    </button>
+    <button type="button" v-if="index >=0" class="btn btn-secondary" title="Remove" @click="remove">
+      <font-awesome-icon icon="minus" fixed-width />
+    </button>
   </div>
 </template>
 
 <script>
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 export default {
   name: "Toolbar",
   emits: ['update:modelValue', 'show-body', 'added'],
+  components: { FontAwesomeIcon },
   props: {
     schema: {},
     options: {},
@@ -80,10 +93,17 @@ export default {
       this.$emit("update:modelValue", this.model);
     }
   },
-  components: {}
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.toolbar.btn-group .btn {
+  padding: 0.15rem 0.35rem;
+  font-size: 0.7rem;
+}
+.toolbar .btn svg {
+  width: 0.7rem;
+  height: 0.7rem;
+}
 </style>

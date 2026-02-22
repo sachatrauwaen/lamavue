@@ -9,7 +9,7 @@
         <a class="nav-link" :class="{ active: activeTab === 'preview' }" href="#" @click.prevent="switchToPreview">Preview</a>
       </li>
       <li class="nav-item ml-auto">
-        <select class="form-control form-control-sm mt-1" v-model="schemaType" style="width:120px">
+        <select class="form-control form-control-sm mt-1 mr-1" v-model="schemaType" style="width:120px">
           <option value="object">Object</option>
           <option value="array">Array</option>
         </select>
@@ -69,9 +69,9 @@
             <div class="builder-canvas-card-header">
               <div class="builder-canvas-card-body">
                 <font-awesome-icon :icon="fieldIcon(field.fieldType)" class="builder-canvas-card-icon" fixed-width />
-                <span class="badge badge-secondary font-weight-light">{{ field.fieldType || '?' }}</span>
+                <span class="badge badge-light font-weight-light">{{ field.fieldType || '?' }}</span>
                 <span class="builder-canvas-card-label ml-2">{{ field.label || field.fieldName || 'Untitled' }}</span>
-                <span v-if="fieldDetails(field).length" class="builder-canvas-card-details">
+                <span v-if="fieldDetails(field).length" class="builder-canvas-card-details ml-1">
                   <span v-for="(detail, di) in fieldDetails(field)" :key="di" class="builder-canvas-card-detail">
                     <font-awesome-icon :icon="detail.icon" class="builder-canvas-detail-icon" />
                     <span>{{ detail.text }}</span>
@@ -331,12 +331,12 @@ export default {
       if (field.default !== undefined && field.default !== null && field.default !== '') {
         parts.push({ icon: 'keyboard', text: field.default });
       }
-      if (field.required) {
-        parts.push({ icon: 'asterisk', text: '' });
-      }
       if (Array.isArray(field.dependencies) && field.dependencies.length) {
         let depStr = field.dependencies.map(d => d.fieldname + (d.values && d.values.length ? '=' + (Array.isArray(d.values) ? d.values.join(',') : d.values) : '')).join('; ');
         parts.push({ icon: 'eye', text: depStr });
+      }
+      if (field.required) {
+        parts.push({ icon: 'asterisk', text: '' });
       }
       return parts;
     },
@@ -366,12 +366,11 @@ export default {
         checkboxlist: 'Inputs', select: 'Inputs', color: 'Inputs', date: 'Inputs',
         ckeditor: 'Inputs',
         url: 'Links', link: 'Links', page: 'Links',
-        file: 'Images & Files', image: 'Images & Files', imagebrowser: 'Images & Files',
-        filebrowser: 'Images & Files', gallery: 'Images & Files', documents: 'Images & Files',
-        icon: 'Images & Files',
+        image: 'Images', imagebrowser: 'Images', gallery: 'Images', icon: 'Images',
+        file: 'Files', filebrowser: 'Files', documents: 'Files',
         object: 'Panels', array: 'Panels',
       };
-      const categoryOrder = ['Inputs', 'Links', 'Images & Files', 'Panels', 'Advanced'];
+      const categoryOrder = ['Inputs', 'Links', 'Images', 'Files', 'Panels', 'Advanced'];
 
       let fieldsFilter = (Lama.options && Lama.options.fields) || [];
       let types = [];
@@ -664,6 +663,10 @@ export default {
           };
         }
       }
+      if (field.fieldType === 'array' || field.fieldType === 'object') {
+        delete props.schema.properties.fields;
+        delete props.options.fields.fields;
+      }
       return props;
     },
     switchToPreview() {
@@ -864,7 +867,7 @@ export default {
 }
 
 .builder-canvas-card-detail + .builder-canvas-card-detail::before {
-  content: "• ";
+  content: "| ";
   margin-right: 4px;
   opacity: 0.7;
 }

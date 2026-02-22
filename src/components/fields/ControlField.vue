@@ -77,7 +77,7 @@
                             },
                             dependencies: {
                                 type: "array",
-                                title: "Show if",
+                                title: "Show conditions",
                                 items: {
                                     type: "object",
                                     properties: {
