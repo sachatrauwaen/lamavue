@@ -1,6 +1,6 @@
 <template>
   <control v-bind="props">
-    <select class="form-control" v-model="model" :disabled="schema.readonly" >
+    <select :class="[styles.formControl]" v-model="model" :disabled="schema.readonly" >
       <option v-if="!schema.required" value="">{{options.noneLabel || "None"}}</option>
       <option v-for="option in items" :key="option.value" :value="option.value">{{option.label}}</option>
     </select>
@@ -30,6 +30,14 @@ let SelectField = {
           label: this.label(index)
         };
       })
+    },
+    styles() {
+      if (this.view && this.view.styles) {
+        return this.view.styles;
+      }
+      return {
+        formControl: 'form-control',
+      };
     }
   },
   methods: {

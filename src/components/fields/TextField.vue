@@ -2,11 +2,10 @@
   <control v-bind="props" v-slot="flags">
     <input
       type="text"
-      class="form-control"
+      :class="[styles.formControl, { 'is-invalid': flags.invalid && flags.touched }]"
       :pattern="pattern"
       :aria-describedby="options.label"
       v-model="model"
-      :class="{ 'is-invalid': flags.invalid && flags.touched }"
       :placeholder="options.placeholder"
       :readonly="schema.readonly"
     />
@@ -24,7 +23,8 @@ let TextField = {
     modelValue: {
       type: String,
       default: ''
-    }
+    },
+    view: {},
   },
   computed: {
       pattern() {
@@ -32,6 +32,16 @@ let TextField = {
       }
   },
   methods: {},
+  computed: {
+    styles() {
+      if (this.view && this.view.styles) {
+        return this.view.styles;
+      }
+      return {
+        formControl: 'form-control',
+      };
+    }
+  },
   components: { Control },
   builder: {
     props() {

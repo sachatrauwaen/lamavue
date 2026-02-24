@@ -88,6 +88,7 @@
                 :group="{ name: 'fields', pull: false, put: true }"
                 :clone="(orig) => cloneSubField(orig, field)"
                 class="builder-canvas-subfields-list"
+                @add="onSubAdd(index)"
                 @end="onSubDragEnd(index)"
               >
                 <div
@@ -526,6 +527,12 @@ export default {
     onDragEnd() {
       this.emitUpdate();
     },
+    onSubAdd(parentIndex) {
+      // Ensure parent array/object field has a fields array and then sync schema/options
+      const parent = this.internalFields[parentIndex];
+      if (!parent.fields) parent.fields = [];
+      this.emitUpdate();
+    },
     onSubDragEnd() {
       this.emitUpdate();
     },
@@ -584,9 +591,18 @@ export default {
     _buildPropsForField(field, siblings) {
       let builderComponent = Lama.getFieldComponent(field.fieldType);
       if (!builderComponent) return null;
+      let view = this.view || Lama.defaultView;
+      if (Lama.isString(view)) {
+          view = Lama.views[view];
+          view = JSON.parse(JSON.stringify(view));
+          view.styles = view.styles || {};
+          view.styles.formControl = view.styles.formControl || 'form-control';
+          view.styles.formControl = view.styles.formControl + ' form-control-sm';
+      }
       let props = {
         schema: { type: "object", properties: {} },
         options: { fields: {} },
+        view: view,
       };
       if (builderComponent.builder && builderComponent.builder.props) {
         let extendProps = builderComponent.builder.props();
@@ -724,7 +740,7 @@ export default {
 }
 
 .builder-toolbox-item {
-  padding: 8px 10px;
+  padding: 3px 6px;
   margin-bottom: 4px;
   background: #f8f9fa;
   border: 1px solid #e9ecef;

@@ -792,6 +792,9 @@ let Lama = {
             locale = this.defaultLocale;
         }
         var messageForLocale = null;
+        if (this.isObject(viewId)) {
+            viewId = viewId.id;
+        }
         while (viewId) {
             var view = this.views[viewId];
             if (view && view["messages"]) {

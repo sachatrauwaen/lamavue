@@ -59,6 +59,9 @@
             formProps() {
                 let connector = this.connector || Lama.getConnectorClass("default");
                 let view = this.view || Lama.defaultView;
+                if (Lama.isString(view)) {
+                    view = Lama.views[view];
+                }
                 return {
                     schema: this.schema,
                     options: this.options,

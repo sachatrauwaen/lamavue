@@ -83,8 +83,9 @@ export default {
             //"callbacks": callbacks,
             "styles": {
                 layoutRow: "form-row",
-                layoutColumn: ["col-1", "col-2", "col-3"]
-
+                layoutColumn: ["col-1", "col-2", "col-3"],
+                formItem: "form-group",
+                formControl: "form-control",
             },
             "horizontal": false
         });

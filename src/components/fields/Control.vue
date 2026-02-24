@@ -25,6 +25,7 @@ export default {
     options: {},
     messages: {},
     connector: {},
+    view: {},
     showLabel: { type: Boolean, default: true }
   },
   data() {
