@@ -1,4 +1,4 @@
-import l9, { defineComponent as $2, computed as i1, toRefs as Ft, unref as M, ref as m1, reactive as F3, h as S6, getCurrentInstance as f8, watch as V4, onMounted as t4, nextTick as z4, onUnmounted as i6, isRef as t0, openBlock as p, createElementBlock as L, createElementVNode as F, toDisplayString as Z1, renderSlot as b1, createCommentVNode as j, defineAsyncComponent as s9, resolveComponent as E1, Fragment as R1, renderList as t2, normalizeClass as T1, withDirectives as a2, createVNode as q1, mergeProps as c2, vShow as v4, createBlock as w1, withCtx as H1, withModifiers as L2, normalizeProps as $1, guardReactiveProps as Y1, vModelCheckbox as R5, vModelText as r4, vModelSelect as c0, useSlots as r6, toRef as h0, createSlots as d4, resolveDynamicComponent as T3, Teleport as It, Transition as n6, render as Be, normalizeStyle as I4, useAttrs as Et, createTextVNode as a4, toValue as Rt, getCurrentScope as Bt, onScopeDispose as $t, onBeforeUpdate as Ut, withKeys as Zt, resolveDirective as jt, toHandlers as qt, vModelRadio as Yt, createApp as $e } from "vue";
+import l9, { defineComponent as $2, computed as i1, toRefs as Ft, unref as M, ref as m1, reactive as F3, h as S6, getCurrentInstance as f8, watch as x4, onMounted as t4, nextTick as z4, onUnmounted as i6, isRef as t0, openBlock as p, createElementBlock as L, createElementVNode as F, toDisplayString as Z1, renderSlot as b1, createCommentVNode as j, defineAsyncComponent as s9, resolveComponent as E1, Fragment as R1, renderList as t2, normalizeClass as T1, withDirectives as a2, createVNode as q1, mergeProps as c2, vShow as v4, createBlock as w1, withCtx as H1, withModifiers as L2, normalizeProps as $1, guardReactiveProps as Y1, vModelCheckbox as R5, vModelText as r4, vModelSelect as c0, useSlots as r6, toRef as h0, createSlots as d4, resolveDynamicComponent as T3, Teleport as It, Transition as n6, render as Be, normalizeStyle as I4, useAttrs as Et, createTextVNode as a4, toValue as Rt, getCurrentScope as Bt, onScopeDispose as $t, onBeforeUpdate as Ut, withKeys as Zt, resolveDirective as jt, toHandlers as qt, vModelRadio as Yt, createApp as $e } from "vue";
 var Wt = Object.defineProperty, U0 = Object.getOwnPropertySymbols, f9 = Object.prototype.hasOwnProperty, d9 = Object.prototype.propertyIsEnumerable, Ue = (e, a, t) => a in e ? Wt(e, a, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[a] = t, C6 = (e, a) => {
   for (var t in a || (a = {}))
     f9.call(a, t) && Ue(e, t, a[t]);
@@ -516,7 +516,7 @@ var yc = ["evt"], C4 = function(e, a) {
     putSortable: i4,
     activeSortable: G1.active,
     originalEvent: c,
-    oldIndex: V6,
+    oldIndex: x6,
     oldDraggableIndex: n0,
     newIndex: N4,
     newDraggableIndex: H3,
@@ -543,20 +543,20 @@ function h4(e) {
     cloneEl: k2,
     targetEl: C1,
     rootEl: A2,
-    oldIndex: V6,
+    oldIndex: x6,
     oldDraggableIndex: n0,
     newIndex: N4,
     newDraggableIndex: H3
   }, e));
 }
-var C1, D2, X1, A2, K3, I0, k2, N3, V6, N4, n0, H3, N0, i4, y6 = !1, j0 = !1, q0 = [], W3, $4, A8, _8, e7, a7, X6, m6, o0, l0 = !1, S0 = !1, E0, o4, k8 = [], t5 = !1, Y0 = [], d8 = typeof document < "u", A0 = m9, t7 = b0 || b3 ? "cssFloat" : "float", bc = d8 && !v9 && !m9 && "draggable" in document.createElement("div"), C9 = (function() {
+var C1, D2, X1, A2, K3, I0, k2, N3, x6, N4, n0, H3, N0, i4, y6 = !1, j0 = !1, q0 = [], W3, $4, A8, _8, e7, a7, X6, m6, o0, l0 = !1, S0 = !1, E0, o4, k8 = [], t5 = !1, Y0 = [], d8 = typeof document < "u", A0 = m9, t7 = b0 || b3 ? "cssFloat" : "float", bc = d8 && !v9 && !m9 && "draggable" in document.createElement("div"), C9 = (function() {
   if (d8) {
     if (b3)
       return !1;
     var e = document.createElement("x");
     return e.style.cssText = "pointer-events:auto", e.style.pointerEvents === "auto";
   }
-})(), V9 = function(e, a) {
+})(), x9 = function(e, a) {
   var t = W1(e), c = parseInt(t.width) - parseInt(t.paddingLeft) - parseInt(t.paddingRight) - parseInt(t.borderLeftWidth) - parseInt(t.borderRightWidth), i = A6(e, 0, a), r = A6(e, 1, a), n = i && W1(i), o = r && W1(r), l = n && parseInt(n.marginLeft) + parseInt(n.marginRight) + j2(i).width, d = o && parseInt(o.marginLeft) + parseInt(o.marginRight) + j2(r).width;
   if (t.display === "flex")
     return t.flexDirection === "column" || t.flexDirection === "column-reverse" ? "vertical" : "horizontal";
@@ -580,7 +580,7 @@ var C1, D2, X1, A2, K3, I0, k2, N3, V6, N4, n0, H3, N0, i4, y6 = !1, j0 = !1, q0
         return t = c;
     }
   }), t;
-}, x9 = function(e) {
+}, V9 = function(e) {
   function a(i, r) {
     return function(n, o, l, d) {
       var s = n.options.group.name && o.options.group.name && n.options.group.name === o.options.group.name;
@@ -620,7 +620,7 @@ var G3 = function(e) {
       t.target = t.rootEl = a, t.preventDefault = void 0, t.stopPropagation = void 0, a[S4]._onDragOver(t);
     }
   }
-}, Vc = function(e) {
+}, xc = function(e) {
   C1 && C1.parentNode[S4]._isOutsideThisEl(e.target);
 };
 function G1(e, a) {
@@ -642,7 +642,7 @@ function G1(e, a) {
     // will be set to same as swapThreshold if default
     removeCloneOnHide: !0,
     direction: function() {
-      return V9(e, this.options);
+      return x9(e, this.options);
     },
     ghostClass: "sortable-ghost",
     chosenClass: "sortable-chosen",
@@ -675,7 +675,7 @@ function G1(e, a) {
   M0.initializePlugins(this, e, t);
   for (var c in t)
     !(c in a) && (a[c] = t[c]);
-  x9(a);
+  V9(a);
   for (var i in this)
     i.charAt(0) === "_" && typeof this[i] == "function" && (this[i] = this[i].bind(this));
   this.nativeDraggable = a.forceFallback ? !1 : bc, this.nativeDraggable && (this.options.touchStartThreshold = 1), a.supportPointer ? z2(e, "pointerdown", this._onTapStart) : (z2(e, "mousedown", this._onTapStart), z2(e, "touchstart", this._onTapStart)), this.nativeDraggable && (z2(e, "dragover", this), z2(e, "dragenter", this)), q0.push(this.el), a.store && a.store.get && this.sort(a.store.get(this) || []), v3(this, vc());
@@ -693,7 +693,7 @@ G1.prototype = /** @lends Sortable.prototype */
     if (e.cancelable) {
       var a = this, t = this.el, c = this.options, i = c.preventOnFilter, r = e.type, n = e.touches && e.touches[0] || e.pointerType && e.pointerType === "touch" && e, o = (n || e).target, l = e.target.shadowRoot && (e.path && e.path[0] || e.composedPath && e.composedPath()[0]) || o, d = c.filter;
       if (_c(t), !C1 && !(/mousedown|pointerdown/.test(r) && e.button !== 0 || c.disabled) && !l.isContentEditable && !(!this.nativeDraggable && i0 && o && o.tagName.toUpperCase() === "SELECT") && (o = j4(o, c.draggable, t, !1), !(o && o.animated) && I0 !== o)) {
-        if (V6 = P4(o), n0 = P4(o, c.draggable), typeof d == "function") {
+        if (x6 = P4(o), n0 = P4(o, c.draggable), typeof d == "function") {
           if (d.call(this, e, o, this)) {
             h4({
               sortable: a,
@@ -785,7 +785,7 @@ G1.prototype = /** @lends Sortable.prototype */
     if (y6 = !1, A2 && C1) {
       C4("dragStarted", this, {
         evt: a
-      }), this.nativeDraggable && z2(document, "dragover", Vc);
+      }), this.nativeDraggable && z2(document, "dragover", xc);
       var t = this.options;
       !e && L4(C1, t.dragClass, !1), L4(C1, t.ghostClass, !0), G1.active = this, e && this._appendGhost(), h4({
         sortable: this,
@@ -1000,7 +1000,7 @@ G1.prototype = /** @lends Sortable.prototype */
       name: "sort",
       toEl: D2,
       originalEvent: e
-    })), i4 && i4.save()) : N4 !== V6 && N4 >= 0 && (h4({
+    })), i4 && i4.save()) : N4 !== x6 && N4 >= 0 && (h4({
       sortable: this,
       name: "update",
       toEl: D2,
@@ -1010,7 +1010,7 @@ G1.prototype = /** @lends Sortable.prototype */
       name: "sort",
       toEl: D2,
       originalEvent: e
-    })), G1.active && ((N4 == null || N4 === -1) && (N4 = V6, H3 = n0), h4({
+    })), G1.active && ((N4 == null || N4 === -1) && (N4 = x6, H3 = n0), h4({
       sortable: this,
       name: "end",
       toEl: D2,
@@ -1018,7 +1018,7 @@ G1.prototype = /** @lends Sortable.prototype */
     }), this.save()))), this._nulling();
   },
   _nulling: function() {
-    C4("nulling", this), A2 = C1 = D2 = X1 = K3 = k2 = I0 = N3 = W3 = $4 = X6 = N4 = H3 = V6 = n0 = m6 = o0 = i4 = N0 = G1.dragged = G1.ghost = G1.clone = G1.active = null, Y0.forEach(function(e) {
+    C4("nulling", this), A2 = C1 = D2 = X1 = K3 = k2 = I0 = N3 = W3 = $4 = X6 = N4 = H3 = x6 = n0 = m6 = o0 = i4 = N0 = G1.dragged = G1.ghost = G1.clone = G1.active = null, Y0.forEach(function(e) {
       e.checked = !0;
     }), Y0.length = A8 = _8 = 0;
   },
@@ -1030,7 +1030,7 @@ G1.prototype = /** @lends Sortable.prototype */
         break;
       case "dragenter":
       case "dragover":
-        C1 && (this._onDragOver(e), xc(e));
+        C1 && (this._onDragOver(e), Vc(e));
         break;
       case "selectstart":
         e.preventDefault();
@@ -1086,7 +1086,7 @@ G1.prototype = /** @lends Sortable.prototype */
     if (a === void 0)
       return t[e];
     var c = M0.modifyOption(this, e, a);
-    typeof c < "u" ? t[e] = c : t[e] = a, e === "group" && x9(t);
+    typeof c < "u" ? t[e] = c : t[e] = a, e === "group" && V9(t);
   },
   /**
    * Destroy
@@ -1117,7 +1117,7 @@ G1.prototype = /** @lends Sortable.prototype */
     }
   }
 };
-function xc(e) {
+function Vc(e) {
   e.dataTransfer && (e.dataTransfer.dropEffect = "move"), e.cancelable && e.preventDefault();
 }
 function _0(e, a, t, c, i, r, n, o) {
@@ -1194,7 +1194,7 @@ G1.utils = {
   index: P4,
   nextTick: R0,
   cancelNextTick: c5,
-  detectDirection: V9,
+  detectDirection: x9,
   getChild: A6
 };
 G1.get = function(e) {
@@ -1475,7 +1475,7 @@ function Fc(...e) {
   const R = (O) => {
     O = E(O), l && U.destroy(), l = new G1(O, I());
   };
-  V4(
+  x4(
     () => o,
     () => {
       l && We(I(), (O, c1) => {
@@ -3496,10 +3496,10 @@ function ai() {
 }
 var ti = ai(), ci = /* @__PURE__ */ ei(ti);
 const o7 = "__googleMapsScriptId";
-var x6;
+var V6;
 (function(e) {
   e[e.INITIALIZED = 0] = "INITIALIZED", e[e.LOADING = 1] = "LOADING", e[e.SUCCESS = 2] = "SUCCESS", e[e.FAILURE = 3] = "FAILURE";
-})(x6 || (x6 = {}));
+})(V6 || (V6 = {}));
 class J3 {
   /**
    * Creates an instance of Loader using [[LoaderOptions]]. No defaults are set
@@ -3535,7 +3535,7 @@ class J3 {
     };
   }
   get status() {
-    return this.errors.length ? x6.FAILURE : this.done ? x6.SUCCESS : this.loading ? x6.LOADING : x6.INITIALIZED;
+    return this.errors.length ? V6.FAILURE : this.done ? V6.SUCCESS : this.loading ? V6.LOADING : V6.INITIALIZED;
   }
   get failed() {
     return this.done && !this.loading && this.errors.length >= this.retries + 1;
@@ -4118,12 +4118,12 @@ g3[p3] || (g3[p3] = {});
 g3[p3].styles || (g3[p3].styles = {});
 g3[p3].hooks || (g3[p3].hooks = {});
 g3[p3].shims || (g3[p3].shims = []);
-var i3 = g3[p3], Vi = [], xi = function e() {
-  p4.removeEventListener("DOMContentLoaded", e), s5 = 1, Vi.map(function(a) {
+var i3 = g3[p3], xi = [], Vi = function e() {
+  p4.removeEventListener("DOMContentLoaded", e), s5 = 1, xi.map(function(a) {
     return a();
   });
 }, s5 = !1;
-W5 && (s5 = (p4.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(p4.readyState), s5 || p4.addEventListener("DOMContentLoaded", xi));
+W5 && (s5 = (p4.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(p4.readyState), s5 || p4.addEventListener("DOMContentLoaded", Vi));
 var G5 = "pending", I9 = "settled", K0 = "fulfilled", X0 = "rejected", wi = function() {
 }, E9 = typeof global < "u" && typeof global.process < "u" && typeof global.process.emit == "function", Hi = typeof setImmediate > "u" ? setTimeout : setImmediate, e0 = [], f5;
 function Li() {
@@ -5670,7 +5670,7 @@ var ae = $2({
       });
       return s.title = a.title, s.titleId = a.titleId, Gi(i.value, s);
     });
-    V4(l, function(s) {
+    x4(l, function(s) {
       if (!s)
         return dr("Could not find one or more icon(s)", i.value, o.value);
     }, {
@@ -5879,11 +5879,11 @@ const gr = /* @__PURE__ */ r2(ur, [["render", pr], ["__scopeId", "data-v-3eb64a7
 }, yr = {
   class: "card",
   style: { "margin-bottom": "10px" }
-}, br = { class: "card-header" }, Mr = { style: { float: "left" } }, Cr = { style: { float: "right" } }, Vr = {
+}, br = { class: "card-header" }, Mr = { style: { float: "left" } }, Cr = { style: { float: "right" } }, xr = {
   key: 0,
   class: "card-body"
 };
-function xr(e, a, t, c, i, r) {
+function Vr(e, a, t, c, i, r) {
   return p(), L("div", yr, [
     F("div", br, [
       F("div", Mr, [
@@ -5898,12 +5898,12 @@ function xr(e, a, t, c, i, r) {
         b1(e.$slots, "toolbar")
       ])
     ]),
-    t.show ? (p(), L("div", Vr, [
+    t.show ? (p(), L("div", xr, [
       b1(e.$slots, "default")
     ])) : j("", !0)
   ]);
 }
-const wr = /* @__PURE__ */ r2(zr, [["render", xr]]), Hr = {
+const wr = /* @__PURE__ */ r2(zr, [["render", Vr]]), Hr = {
   name: "List",
   props: {
     modelValue: {},
@@ -7499,7 +7499,7 @@ v0.create = (e) => new v0({
   coerce: e?.coerce ?? !1,
   ...o2(e)
 });
-class V7 extends p2 {
+class x7 extends p2 {
   _parse(a) {
     if (this._def.coerce && (a.data = !!a.data), this._getType(a) !== D1.boolean) {
       const c = this._getOrReturnCtx(a);
@@ -7512,7 +7512,7 @@ class V7 extends p2 {
     return R4(a.data);
   }
 }
-V7.create = (e) => new V7({
+x7.create = (e) => new x7({
   typeName: Q1.ZodBoolean,
   coerce: e?.coerce || !1,
   ...o2(e)
@@ -7595,7 +7595,7 @@ c8.create = (e) => new c8({
   typeName: Q1.ZodDate,
   ...o2(e)
 });
-class x7 extends p2 {
+class V7 extends p2 {
   _parse(a) {
     if (this._getType(a) !== D1.symbol) {
       const c = this._getOrReturnCtx(a);
@@ -7608,7 +7608,7 @@ class x7 extends p2 {
     return R4(a.data);
   }
 }
-x7.create = (e) => new x7({
+V7.create = (e) => new V7({
   typeName: Q1.ZodSymbol,
   ...o2(e)
 });
@@ -9141,7 +9141,7 @@ function Cn(e, a, t, c, i, r) {
   }, 16);
 }
 const M5 = /* @__PURE__ */ r2(zn, [["render", Cn]]);
-let Vn = {
+let xn = {
   name: "CheckBoxListField",
   extends: F2,
   emits: ["update:modelValue"],
@@ -9235,7 +9235,7 @@ let Vn = {
     }
   }
 };
-const xn = Vn, wn = ["aria-describedby", "value", "checked", "onChange", "placeholder", "readonly"], Hn = { class: "form-check-label" };
+const Vn = xn, wn = ["aria-describedby", "value", "checked", "onChange", "placeholder", "readonly"], Hn = { class: "form-check-label" };
 function Ln(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), w1(n, $1(Y1(e.props)), {
@@ -9260,7 +9260,7 @@ function Ln(e, a, t, c, i, r) {
     _: 1
   }, 16);
 }
-const C5 = /* @__PURE__ */ r2(xn, [["render", Ln]]);
+const C5 = /* @__PURE__ */ r2(Vn, [["render", Ln]]);
 let Nn = {
   name: "TextField",
   extends: F2,
@@ -9844,7 +9844,7 @@ function Rn(e, a, t, c, i, r) {
     _: 1
   }, 16);
 }
-const V5 = /* @__PURE__ */ r2(En, [["render", Rn]]);
+const x5 = /* @__PURE__ */ r2(En, [["render", Rn]]);
 let Bn = {
   name: "SelectBaseField",
   extends: F2,
@@ -9949,23 +9949,23 @@ let Yn = {
     }
   }
 };
-const x5 = Yn, na = 6048e5, Wn = 864e5, Gn = 6e4, oa = 36e5, Kn = 1e3, P7 = /* @__PURE__ */ Symbol.for("constructDateFrom");
-function V2(e, a) {
+const V5 = Yn, na = 6048e5, Wn = 864e5, Gn = 6e4, oa = 36e5, Kn = 1e3, P7 = /* @__PURE__ */ Symbol.for("constructDateFrom");
+function x2(e, a) {
   return typeof e == "function" ? e(a) : e && typeof e == "object" && P7 in e ? e[P7](a) : e instanceof Date ? new e.constructor(a) : new Date(a);
 }
 function j1(e, a) {
-  return V2(a || e, e);
+  return x2(a || e, e);
 }
 function F4(e, a, t) {
   const c = j1(e, t?.in);
-  return isNaN(a) ? V2(t?.in || e, NaN) : (a && c.setDate(c.getDate() + a), c);
+  return isNaN(a) ? x2(t?.in || e, NaN) : (a && c.setDate(c.getDate() + a), c);
 }
 function G4(e, a, t) {
   const c = j1(e, t?.in);
-  if (isNaN(a)) return V2(e, NaN);
+  if (isNaN(a)) return x2(e, NaN);
   if (!a)
     return c;
-  const i = c.getDate(), r = V2(e, c.getTime());
+  const i = c.getDate(), r = x2(e, c.getTime());
   r.setMonth(c.getMonth() + a + 1, 0);
   const n = r.getDate();
   return i >= n ? r : (c.setFullYear(
@@ -9984,10 +9984,10 @@ function la(e, a, t) {
     minutes: l = 0,
     seconds: d = 0
   } = a, s = j1(e, t?.in), m = i || c ? G4(s, i + c * 12) : s, g = n || r ? F4(m, n + r * 7) : m, C = l + o * 60, A = (d + C * 60) * 1e3;
-  return V2(e, +g + A);
+  return x2(e, +g + A);
 }
 function Xn(e, a, t) {
-  return V2(e, +j1(e) + a);
+  return x2(e, +j1(e) + a);
 }
 function Jn(e, a, t) {
   return Xn(e, a * oa);
@@ -10004,9 +10004,9 @@ function P6(e, a) {
   return K4(e, { ...a, weekStartsOn: 1 });
 }
 function sa(e, a) {
-  const t = j1(e, a?.in), c = t.getFullYear(), i = V2(t, 0);
+  const t = j1(e, a?.in), c = t.getFullYear(), i = x2(t, 0);
   i.setFullYear(c + 1, 0, 4), i.setHours(0, 0, 0, 0);
-  const r = P6(i), n = V2(t, 0);
+  const r = P6(i), n = x2(t, 0);
   n.setFullYear(c, 0, 4), n.setHours(0, 0, 0, 0);
   const o = P6(n);
   return t.getTime() >= r.getTime() ? c + 1 : t.getTime() >= o.getTime() ? c : c - 1;
@@ -10026,7 +10026,7 @@ function o8(e) {
   return t.setUTCFullYear(a.getFullYear()), +e - +t;
 }
 function C0(e, ...a) {
-  const t = V2.bind(
+  const t = x2.bind(
     null,
     a.find((c) => typeof c == "object")
   );
@@ -10045,7 +10045,7 @@ function fa(e, a, t) {
   return Math.round((o - l) / Wn);
 }
 function eo(e, a) {
-  const t = sa(e, a), c = V2(e, 0);
+  const t = sa(e, a), c = x2(e, 0);
   return c.setFullYear(t, 0, 4), c.setHours(0, 0, 0, 0), P6(c);
 }
 function ao(e, a, t) {
@@ -10098,7 +10098,7 @@ function ha(e, a) {
   let o = 1;
   const l = [];
   for (; +n <= r; )
-    l.push(V2(t, n)), n.setDate(n.getDate() + o), n.setHours(0, 0, 0, 0);
+    l.push(x2(t, n)), n.setDate(n.getDate() + o), n.setHours(0, 0, 0, 0);
   return i ? l.reverse() : l;
 }
 function Q3(e, a) {
@@ -10112,7 +10112,7 @@ function io(e, a) {
   let n = Q3(i ? c : t), o = 1;
   const l = [];
   for (; +n <= r; )
-    l.push(V2(t, n)), n = ao(n, o);
+    l.push(x2(t, n)), n = ao(n, o);
   return i ? l.reverse() : l;
 }
 function ro(e, a) {
@@ -10415,9 +10415,9 @@ function G6(e) {
     const c = t.width, i = c && e.matchPatterns[c] || e.matchPatterns[e.defaultMatchWidth], r = a.match(i);
     if (!r)
       return null;
-    const n = r[0], o = c && e.parsePatterns[c] || e.parsePatterns[e.defaultParseWidth], l = Array.isArray(o) ? xo(o, (m) => m.test(n)) : (
+    const n = r[0], o = c && e.parsePatterns[c] || e.parsePatterns[e.defaultParseWidth], l = Array.isArray(o) ? Vo(o, (m) => m.test(n)) : (
       // [TODO] -- I challenge you to fix the type
-      Vo(o, (m) => m.test(n))
+      xo(o, (m) => m.test(n))
     );
     let d;
     d = e.valueCallback ? e.valueCallback(l) : l, d = t.valueCallback ? (
@@ -10428,12 +10428,12 @@ function G6(e) {
     return { value: d, rest: s };
   };
 }
-function Vo(e, a) {
+function xo(e, a) {
   for (const t in e)
     if (Object.prototype.hasOwnProperty.call(e, t) && a(e[t]))
       return t;
 }
-function xo(e, a) {
+function Vo(e, a) {
   for (let t = 0; t < e.length; t++)
     if (a(e[t]))
       return t;
@@ -10575,15 +10575,15 @@ function re(e, a) {
   return Math.round(c / na) + 1;
 }
 function ne(e, a) {
-  const t = j1(e, a?.in), c = t.getFullYear(), i = o6(), r = a?.firstWeekContainsDate ?? a?.locale?.options?.firstWeekContainsDate ?? i.firstWeekContainsDate ?? i.locale?.options?.firstWeekContainsDate ?? 1, n = V2(a?.in || e, 0);
+  const t = j1(e, a?.in), c = t.getFullYear(), i = o6(), r = a?.firstWeekContainsDate ?? a?.locale?.options?.firstWeekContainsDate ?? i.firstWeekContainsDate ?? i.locale?.options?.firstWeekContainsDate ?? 1, n = x2(a?.in || e, 0);
   n.setFullYear(c + 1, 0, r), n.setHours(0, 0, 0, 0);
-  const o = K4(n, a), l = V2(a?.in || e, 0);
+  const o = K4(n, a), l = x2(a?.in || e, 0);
   l.setFullYear(c, 0, r), l.setHours(0, 0, 0, 0);
   const d = K4(l, a);
   return +t >= +o ? c + 1 : +t >= +d ? c : c - 1;
 }
 function Ro(e, a) {
-  const t = o6(), c = a?.firstWeekContainsDate ?? a?.locale?.options?.firstWeekContainsDate ?? t.firstWeekContainsDate ?? t.locale?.options?.firstWeekContainsDate ?? 1, i = ne(e, a), r = V2(a?.in || e, 0);
+  const t = o6(), c = a?.firstWeekContainsDate ?? a?.locale?.options?.firstWeekContainsDate ?? t.firstWeekContainsDate ?? t.locale?.options?.firstWeekContainsDate ?? 1, i = ne(e, a), r = x2(a?.in || e, 0);
   return r.setFullYear(i, 0, c), r.setHours(0, 0, 0, 0), K4(r, a);
 }
 function oe(e, a) {
@@ -10594,7 +10594,7 @@ function C2(e, a) {
   const t = e < 0 ? "-" : "", c = Math.abs(e).toString().padStart(a, "0");
   return t + c;
 }
-const x3 = {
+const V3 = {
   // Year
   y(e, a) {
     const t = e.getFullYear(), c = t > 0 ? t : 1 - t;
@@ -10677,7 +10677,7 @@ const x3 = {
       const c = e.getFullYear(), i = c > 0 ? c : 1 - c;
       return t.ordinalNumber(i, { unit: "year" });
     }
-    return x3.y(e, a);
+    return V3.y(e, a);
   },
   // Local week-numbering year
   Y: function(e, a, t, c) {
@@ -10776,7 +10776,7 @@ const x3 = {
     switch (a) {
       case "M":
       case "MM":
-        return x3.M(e, a);
+        return V3.M(e, a);
       // 1st, 2nd, ..., 12th
       case "Mo":
         return t.ordinalNumber(c + 1, { unit: "month" });
@@ -10837,7 +10837,7 @@ const x3 = {
   },
   // Day of the month
   d: function(e, a, t) {
-    return a === "do" ? t.ordinalNumber(e.getDate(), { unit: "date" }) : x3.d(e, a);
+    return a === "do" ? t.ordinalNumber(e.getDate(), { unit: "date" }) : V3.d(e, a);
   },
   // Day of year
   D: function(e, a, t) {
@@ -11072,11 +11072,11 @@ const x3 = {
       let c = e.getHours() % 12;
       return c === 0 && (c = 12), t.ordinalNumber(c, { unit: "hour" });
     }
-    return x3.h(e, a);
+    return V3.h(e, a);
   },
   // Hour [0-23]
   H: function(e, a, t) {
-    return a === "Ho" ? t.ordinalNumber(e.getHours(), { unit: "hour" }) : x3.H(e, a);
+    return a === "Ho" ? t.ordinalNumber(e.getHours(), { unit: "hour" }) : V3.H(e, a);
   },
   // Hour [0-11]
   K: function(e, a, t) {
@@ -11090,15 +11090,15 @@ const x3 = {
   },
   // Minute
   m: function(e, a, t) {
-    return a === "mo" ? t.ordinalNumber(e.getMinutes(), { unit: "minute" }) : x3.m(e, a);
+    return a === "mo" ? t.ordinalNumber(e.getMinutes(), { unit: "minute" }) : V3.m(e, a);
   },
   // Second
   s: function(e, a, t) {
-    return a === "so" ? t.ordinalNumber(e.getSeconds(), { unit: "second" }) : x3.s(e, a);
+    return a === "so" ? t.ordinalNumber(e.getSeconds(), { unit: "second" }) : V3.s(e, a);
   },
   // Fraction of second
   S: function(e, a) {
-    return x3.S(e, a);
+    return V3.S(e, a);
   },
   // Timezone (ISO-8601. If offset is 0, output is always `'Z'`)
   X: function(e, a, t) {
@@ -11293,7 +11293,7 @@ function Jo(e, a) {
   return j1(e, a?.in).getDay();
 }
 function Qo(e, a) {
-  const t = j1(e, a?.in), c = t.getFullYear(), i = t.getMonth(), r = V2(t, 0);
+  const t = j1(e, a?.in), c = t.getFullYear(), i = t.getMonth(), r = x2(t, 0);
   return r.setFullYear(c, i + 1, 0), r.setHours(0, 0, 0, 0), r.getDate();
 }
 function el() {
@@ -11328,7 +11328,7 @@ function w6(e, a) {
   return +j1(e) == +j1(a);
 }
 function tl(e, a) {
-  const t = cl(a) ? new a(0) : V2(a, 0);
+  const t = cl(a) ? new a(0) : x2(a, 0);
   return t.setFullYear(e.getFullYear(), e.getMonth(), e.getDate()), t.setHours(
     e.getHours(),
     e.getMinutes(),
@@ -11361,10 +11361,10 @@ class nl extends ba {
   priority = il;
   subPriority = -1;
   constructor(a, t) {
-    super(), this.context = a || ((c) => V2(t, c));
+    super(), this.context = a || ((c) => x2(t, c));
   }
   set(a, t) {
-    return t.timestampIsSet ? a : V2(a, tl(a, this.context));
+    return t.timestampIsSet ? a : x2(a, tl(a, this.context));
   }
 }
 class y2 {
@@ -11535,7 +11535,7 @@ function Ca(e, a) {
   }
   return t ? i : 1 - i;
 }
-function Va(e) {
+function xa(e) {
   return e % 400 === 0 || e % 4 === 0 && e % 100 !== 0;
 }
 class ll extends y2 {
@@ -11638,7 +11638,7 @@ class fl extends y2 {
     return l8(t === "R" ? 4 : t.length, a);
   }
   set(a, t, c) {
-    const i = V2(a, 0);
+    const i = x2(a, 0);
     return i.setFullYear(c, 0, 4), i.setHours(0, 0, 0, 0), P6(i);
   }
   incompatibleTokens = [
@@ -12024,7 +12024,7 @@ class Cl extends y2 {
     }
   }
   validate(a, t) {
-    const c = a.getFullYear(), i = Va(c), r = a.getMonth();
+    const c = a.getFullYear(), i = xa(c), r = a.getMonth();
     return i ? t >= 1 && t <= Ml[r] : t >= 1 && t <= bl[r];
   }
   set(a, t, c) {
@@ -12045,7 +12045,7 @@ class Cl extends y2 {
     "T"
   ];
 }
-class Vl extends y2 {
+class xl extends y2 {
   priority = 90;
   subpriority = 1;
   parse(a, t, c) {
@@ -12061,7 +12061,7 @@ class Vl extends y2 {
   }
   validate(a, t) {
     const c = a.getFullYear();
-    return Va(c) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
+    return xa(c) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
   }
   set(a, t, c) {
     return a.setMonth(0, c), a.setHours(0, 0, 0, 0), a;
@@ -12088,7 +12088,7 @@ function se(e, a, t) {
   const c = o6(), i = t?.weekStartsOn ?? t?.locale?.options?.weekStartsOn ?? c.weekStartsOn ?? c.locale?.options?.weekStartsOn ?? 0, r = j1(e, t?.in), n = r.getDay(), l = (a % 7 + 7) % 7, d = 7 - i, s = a < 0 || a > 6 ? a - (n + d) % 7 : (l + d) % 7 - (n + d) % 7;
   return F4(r, s, t);
 }
-class xl extends y2 {
+class Vl extends y2 {
   priority = 90;
   parse(a, t, c) {
     switch (t) {
@@ -12621,7 +12621,7 @@ class El extends y2 {
     }
   }
   set(a, t, c) {
-    return t.timestampIsSet ? a : V2(
+    return t.timestampIsSet ? a : x2(
       a,
       a.getTime() - o8(a) - c
     );
@@ -12654,7 +12654,7 @@ class Rl extends y2 {
     }
   }
   set(a, t, c) {
-    return t.timestampIsSet ? a : V2(
+    return t.timestampIsSet ? a : x2(
       a,
       a.getTime() - o8(a) - c
     );
@@ -12667,7 +12667,7 @@ class Bl extends y2 {
     return Ma(a);
   }
   set(a, t, c) {
-    return [V2(a, c * 1e3), { timestampIsSet: !0 }];
+    return [x2(a, c * 1e3), { timestampIsSet: !0 }];
   }
   incompatibleTokens = "*";
 }
@@ -12677,7 +12677,7 @@ class $l extends y2 {
     return Ma(a);
   }
   set(a, t, c) {
-    return [V2(a, c), { timestampIsSet: !0 }];
+    return [x2(a, c), { timestampIsSet: !0 }];
   }
   incompatibleTokens = "*";
 }
@@ -12694,8 +12694,8 @@ const Ul = {
   w: new gl(),
   I: new yl(),
   d: new Cl(),
-  D: new Vl(),
-  E: new xl(),
+  D: new xl(),
+  E: new Vl(),
   e: new wl(),
   c: new Hl(),
   i: new Nl(),
@@ -12715,7 +12715,7 @@ const Ul = {
   T: new $l()
 }, Zl = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g, jl = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g, ql = /^'([^]*?)'?$/, Yl = /''/g, Wl = /\S/, Gl = /[a-zA-Z]/;
 function L5(e, a, t, c) {
-  const i = () => V2(c?.in || t, NaN), r = el(), n = c?.locale ?? r.locale ?? pa, o = c?.firstWeekContainsDate ?? c?.locale?.options?.firstWeekContainsDate ?? r.firstWeekContainsDate ?? r.locale?.options?.firstWeekContainsDate ?? 1, l = c?.weekStartsOn ?? c?.locale?.options?.weekStartsOn ?? r.weekStartsOn ?? r.locale?.options?.weekStartsOn ?? 0;
+  const i = () => x2(c?.in || t, NaN), r = el(), n = c?.locale ?? r.locale ?? pa, o = c?.firstWeekContainsDate ?? c?.locale?.options?.firstWeekContainsDate ?? r.firstWeekContainsDate ?? r.locale?.options?.firstWeekContainsDate ?? 1, l = c?.weekStartsOn ?? c?.locale?.options?.weekStartsOn ?? r.weekStartsOn ?? r.locale?.options?.weekStartsOn ?? 0;
   if (!a)
     return e ? i() : j1(t, c?.in);
   const d = {
@@ -12795,18 +12795,18 @@ function j7(e, a, t) {
   );
   return +Q3(c) == +Q3(i);
 }
-function xa(e, a, t) {
+function Va(e, a, t) {
   return F4(e, -a, t);
 }
 function wa(e, a, t) {
-  const c = j1(e, t?.in), i = c.getFullYear(), r = c.getDate(), n = V2(e, 0);
+  const c = j1(e, t?.in), i = c.getFullYear(), r = c.getDate(), n = x2(e, 0);
   n.setFullYear(i, a, 15), n.setHours(0, 0, 0, 0);
   const o = Qo(n);
   return c.setMonth(a, Math.min(r, o)), c;
 }
-function x2(e, a, t) {
+function V2(e, a, t) {
   let c = j1(e, t?.in);
-  return isNaN(+c) ? V2(e, NaN) : (a.year != null && c.setFullYear(a.year), a.month != null && (c = wa(c, a.month)), a.date != null && c.setDate(a.date), a.hours != null && c.setHours(a.hours), a.minutes != null && c.setMinutes(a.minutes), a.seconds != null && c.setSeconds(a.seconds), a.milliseconds != null && c.setMilliseconds(a.milliseconds), c);
+  return isNaN(+c) ? x2(e, NaN) : (a.year != null && c.setFullYear(a.year), a.month != null && (c = wa(c, a.month)), a.date != null && c.setDate(a.date), a.hours != null && c.setHours(a.hours), a.minutes != null && c.setMinutes(a.minutes), a.seconds != null && c.setSeconds(a.seconds), a.milliseconds != null && c.setMilliseconds(a.milliseconds), c);
 }
 function Xl(e, a, t) {
   const c = j1(e, t?.in);
@@ -12826,7 +12826,7 @@ function La(e, a, t) {
 }
 function Y4(e, a, t) {
   const c = j1(e, t?.in);
-  return isNaN(+c) ? V2(e, NaN) : (c.setFullYear(a), c);
+  return isNaN(+c) ? x2(e, NaN) : (c.setFullYear(a), c);
 }
 function E6(e, a, t) {
   return G4(e, -a, t);
@@ -12840,8 +12840,8 @@ function Ql(e, a, t) {
     hours: o = 0,
     minutes: l = 0,
     seconds: d = 0
-  } = a, s = E6(e, i + c * 12, t), m = xa(s, n + r * 7, t), g = l + o * 60, T = (d + g * 60) * 1e3;
-  return V2(e, +m - T);
+  } = a, s = E6(e, i + c * 12, t), m = Va(s, n + r * 7, t), g = l + o * 60, T = (d + g * 60) * 1e3;
+  return x2(e, +m - T);
 }
 function Na(e, a, t) {
   return ie(e, -a, t);
@@ -13010,13 +13010,13 @@ function me() {
 me.compatConfig = {
   MODE: 3
 };
-const x4 = (e, a) => a ? new Date(e.toLocaleString("en-US", { timeZone: a })) : new Date(e), ve = (e, a, t) => N5(e, a, t) || l1(), es = (e, a, t) => {
-  const c = a.dateInTz ? x4(new Date(e), a.dateInTz) : l1(e);
+const V4 = (e, a) => a ? new Date(e.toLocaleString("en-US", { timeZone: a })) : new Date(e), ve = (e, a, t) => N5(e, a, t) || l1(), es = (e, a, t) => {
+  const c = a.dateInTz ? V4(new Date(e), a.dateInTz) : l1(e);
   return t ? X2(c, !0) : c;
 }, N5 = (e, a, t) => {
   if (!e) return null;
   const c = t ? X2(l1(e), !0) : l1(e);
-  return a ? a.exactMatch ? es(e, a, t) : x4(c, a.timezone) : c;
+  return a ? a.exactMatch ? es(e, a, t) : V4(c, a.timezone) : c;
 }, as = (e) => {
   const a = new Date(e.getFullYear(), 0, 1).getTimezoneOffset();
   return e.getTimezoneOffset() < a;
@@ -13038,7 +13038,7 @@ function q7(e) {
   };
 }
 function is(e) {
-  return (a) => o3(x4(/* @__PURE__ */ new Date(`2017-01-0${a}T00:00:00+00:00`), "UTC"), "EEEEEE", { locale: e });
+  return (a) => o3(V4(/* @__PURE__ */ new Date(`2017-01-0${a}T00:00:00+00:00`), "UTC"), "EEEEEE", { locale: e });
 }
 const rs = (e, a, t) => {
   const c = [1, 2, 3, 4, 5, 6, 7];
@@ -13067,7 +13067,7 @@ const rs = (e, a, t) => {
     try {
       const r = t === "long" ? "LLLL" : "LLL";
       return c.map((n, o) => {
-        const l = o3(x4(n, "UTC"), r, { locale: e });
+        const l = o3(V4(n, "UTC"), r, { locale: e });
         return {
           text: l.charAt(0).toUpperCase() + l.substring(1),
           value: o
@@ -13145,7 +13145,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   if (c) return c(e);
 }, us = () => "ontouchstart" in window || navigator.maxTouchPoints > 0, Ta = (e, a) => e ? N6.MONTH_AND_YEAR : a ? N6.YEAR : N6.DATE, Da = (e) => e < 10 ? `0${e}` : e, G7 = (e, a, t, c, i, r) => {
   const n = L5(e, a.slice(0, e.length), /* @__PURE__ */ new Date(), { locale: r });
-  return d0(n) && da(n) ? c || i ? n : x2(n, {
+  return d0(n) && da(n) ? c || i ? n : V2(n, {
     hours: +t.hours,
     minutes: +t?.minutes,
     seconds: +t?.seconds,
@@ -13178,13 +13178,13 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   );
   return new Date(c).toISOString();
 }, X2 = (e, a) => {
-  const t = l1(JSON.parse(JSON.stringify(e))), c = x2(t, { hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
+  const t = l1(JSON.parse(JSON.stringify(e))), c = V2(t, { hours: 0, minutes: 0, seconds: 0, milliseconds: 0 });
   return a ? ro(c) : c;
 }, P3 = (e, a, t, c) => {
   let i = e ? l1(e) : l1();
   return (a || a === 0) && (i = Xl(i, +a)), (t || t === 0) && (i = Jl(i, +t)), (c || c === 0) && (i = La(i, +c)), Ha(i, 0);
 }, O2 = (e, a) => !e || !a ? !1 : I6(X2(e), X2(a)), f2 = (e, a) => !e || !a ? !1 : w6(X2(e), X2(a)), E2 = (e, a) => !e || !a ? !1 : c6(X2(e), X2(a)), y0 = (e, a, t) => e?.[0] && e?.[1] ? E2(t, e[0]) && O2(t, e[1]) : e?.[0] && a ? E2(t, e[0]) && O2(t, a) || O2(t, e[0]) && E2(t, a) : !1, W4 = (e) => {
-  const a = x2(new Date(e), { date: 1 });
+  const a = V2(new Date(e), { date: 1 });
   return X2(a);
 }, q8 = (e, a, t) => a && (t || t === 0) ? Object.fromEntries(
   ["hours", "minutes", "seconds"].map((c) => c === a ? [c, t] : [c, isNaN(+e[c]) ? void 0 : +e[c]])
@@ -13225,7 +13225,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     seconds: a ? F6(l1()) : 0
   };
   return Object.assign(t, e);
-}, k3 = (e, a, t) => [x2(l1(e), { date: 1 }), x2(l1(), { month: a, year: t, date: 1 })], h3 = (e, a, t) => {
+}, k3 = (e, a, t) => [V2(l1(e), { date: 1 }), V2(l1(), { month: a, year: t, date: 1 })], h3 = (e, a, t) => {
   let c = e ? l1(e) : l1();
   return (a || a === 0) && (c = wa(c, a)), t && (c = Y4(c, t)), c;
 }, Ea = (e, a, t, c, i) => {
@@ -13242,7 +13242,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
 }, T0 = (e, a) => {
   if (a) return e();
   throw new Error(ge.prop("range"));
-}, A5 = (e) => Array.isArray(e) ? d0(e[0]) && (e[1] ? d0(e[1]) : !0) : e ? d0(e) : !1, zs = (e, a) => x2(a ?? l1(), {
+}, A5 = (e) => Array.isArray(e) ? d0(e[0]) && (e[1] ? d0(e[1]) : !0) : e ? d0(e) : !1, zs = (e, a) => V2(a ?? l1(), {
   hours: +e.hours || 0,
   minutes: +e.minutes || 0,
   seconds: +e.seconds || 0
@@ -13250,7 +13250,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   if (!e) return !0;
   if (c) {
     const i = t === "max" ? I6(e, a) : c6(e, a), r = { seconds: 0, milliseconds: 0 };
-    return i || w6(x2(e, r), x2(a, r));
+    return i || w6(V2(e, r), V2(a, r));
   }
   return t === "max" ? e.getTime() <= a.getTime() : e.getTime() >= a.getTime();
 }, W8 = (e, a, t) => e ? zs(e, a) : l1(t ?? a), K7 = (e, a, t, c, i) => {
@@ -13260,12 +13260,12 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   }
   const r = W8(e, c, a);
   return Y8(c, r, t, !!a) && i;
-}, G8 = (e) => x2(l1(), a6(e)), ys = (e, a, t) => {
+}, G8 = (e) => V2(l1(), a6(e)), ys = (e, a, t) => {
   if (e instanceof Map) {
     const c = `${Da(t + 1)}-${a}`;
     return e.size ? e.has(c) : !1;
   }
-  return typeof e == "function" ? e(X2(x2(l1(), { month: t, year: a }), !0)) : !1;
+  return typeof e == "function" ? e(X2(V2(l1(), { month: t, year: a }), !0)) : !1;
 }, bs = (e, a, t) => {
   if (e instanceof Map) {
     const c = `${Da(t + 1)}-${a}`;
@@ -13273,7 +13273,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   }
   return !0;
 }, Ba = (e, a, t) => typeof e == "function" ? e({ month: a, year: t }) : !!e.months.find((c) => c.month === a && c.year === t), be = (e, a) => typeof e == "function" ? e(a) : e.years.includes(a), _5 = (e) => `dp-${o3(e, "yyyy-MM-dd")}`, X7 = (e, a) => {
-  const t = xa(X2(a), e), c = F4(X2(a), e);
+  const t = Va(X2(a), e), c = F4(X2(a), e);
   return { before: t, after: c };
 }, $a = (e, a) => a < +e[0] || a > +e[1], K6 = F3({
   menuFocused: !1,
@@ -13401,7 +13401,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   if (!e) return { ...t, count: Q7(!1) };
   const c = a ? e : {}, i = a ? c.count ?? !0 : e, r = Q7(i);
   return Object.assign(t, c, { count: r });
-}, Vs = (e, a, t) => e || (typeof t == "string" ? t : a), xs = (e) => typeof e == "boolean" ? e ? J7({}) : !1 : J7(e), ws = (e) => {
+}, xs = (e, a, t) => e || (typeof t == "string" ? t : a), Vs = (e) => typeof e == "boolean" ? e ? J7({}) : !1 : J7(e), ws = (e) => {
   const a = {
     enterSubmit: !0,
     tabSubmit: !0,
@@ -13509,8 +13509,8 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   const a = () => {
     const R = e.enableSeconds ? ":ss" : "", U = e.enableMinutes ? ":mm" : "";
     return e.is24 ? `HH${U}${R}` : `hh${U}${R} aa`;
-  }, t = () => e.format ? e.format : e.monthPicker ? "MM/yyyy" : e.timePicker ? a() : e.weekPicker ? `${D.value?.type === "iso" ? "II" : "ww"}-RR` : e.yearPicker ? "yyyy" : e.quarterPicker ? "QQQ/yyyy" : e.enableTimePicker ? `MM/dd/yyyy, ${a()}` : "MM/dd/yyyy", c = (R) => Ia(R, e.enableSeconds), i = () => E.value.enabled ? e.startTime && Array.isArray(e.startTime) ? [c(e.startTime[0]), c(e.startTime[1])] : null : e.startTime && !Array.isArray(e.startTime) ? c(e.startTime) : null, r = i1(() => Cs(e.multiCalendars)), n = i1(() => i()), o = i1(() => Ms(e.ariaLabels)), l = i1(() => Hs(e.filters)), d = i1(() => xs(e.transitions)), s = i1(() => Ls(e.actionRow)), m = i1(
-    () => Vs(e.previewFormat, e.format, t())
+  }, t = () => e.format ? e.format : e.monthPicker ? "MM/yyyy" : e.timePicker ? a() : e.weekPicker ? `${D.value?.type === "iso" ? "II" : "ww"}-RR` : e.yearPicker ? "yyyy" : e.quarterPicker ? "QQQ/yyyy" : e.enableTimePicker ? `MM/dd/yyyy, ${a()}` : "MM/dd/yyyy", c = (R) => Ia(R, e.enableSeconds), i = () => E.value.enabled ? e.startTime && Array.isArray(e.startTime) ? [c(e.startTime[0]), c(e.startTime[1])] : null : e.startTime && !Array.isArray(e.startTime) ? c(e.startTime) : null, r = i1(() => Cs(e.multiCalendars)), n = i1(() => i()), o = i1(() => Ms(e.ariaLabels)), l = i1(() => Hs(e.filters)), d = i1(() => Vs(e.transitions)), s = i1(() => Ls(e.actionRow)), m = i1(
+    () => xs(e.previewFormat, e.format, t())
   ), g = i1(() => ws(e.textInput)), C = i1(() => Ns(e.inline)), T = i1(() => Ss(e.config)), A = i1(() => As(e.highlight)), D = i1(() => _s(e.weekNumbers)), v = i1(() => Ts(e.timezone)), z = i1(() => Ps(e.multiDates)), w = i1(
     () => Os({
       minDate: e.minDate,
@@ -13551,127 +13551,127 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   };
 }, Is = (e, a, { isInputFocused: t, isTextInputDate: c }) => {
   const i = m1(), { defaultedTextInput: r, defaultedRange: n, defaultedTz: o, defaultedMultiDates: l, getDefaultPattern: d } = _2(a), s = m1(""), m = h0(a, "format"), g = h0(a, "formatLocale");
-  V4(
+  x4(
     i,
     () => {
       typeof a.onInternalModelChange == "function" && e("internal-model-change", i.value, H(!0));
     },
     { deep: !0 }
-  ), V4(n, (V, s1) => {
-    V.enabled !== s1.enabled && (i.value = null);
-  }), V4(m, () => {
+  ), x4(n, (x, s1) => {
+    x.enabled !== s1.enabled && (i.value = null);
+  }), x4(m, () => {
     J();
   });
-  const C = (V) => o.value.timezone && o.value.convertModel ? x4(V, o.value.timezone) : V, T = (V) => {
+  const C = (x) => o.value.timezone && o.value.convertModel ? V4(x, o.value.timezone) : x, T = (x) => {
     if (o.value.timezone && o.value.convertModel) {
-      const s1 = ts(o.value.timezone, V);
-      return Jn(V, s1);
+      const s1 = ts(o.value.timezone, x);
+      return Jn(x, s1);
     }
-    return V;
-  }, A = (V, s1, l2 = !1) => Ra(
-    V,
+    return x;
+  }, A = (x, s1, l2 = !1) => Ra(
+    x,
     a.format,
     a.formatLocale,
     r.value.rangeSeparator,
     a.modelAuto,
     s1 ?? d(),
     l2
-  ), D = (V) => V ? a.modelType ? q(V) : {
-    hours: y3(V),
-    minutes: R3(V),
-    seconds: a.enableSeconds ? F6(V) : 0
-  } : null, v = (V) => a.modelType ? q(V) : { month: s2(V), year: K1(V) }, z = (V) => Array.isArray(V) ? l.value.enabled ? V.map((s1) => w(s1, Y4(l1(), s1))) : T0(
+  ), D = (x) => x ? a.modelType ? q(x) : {
+    hours: y3(x),
+    minutes: R3(x),
+    seconds: a.enableSeconds ? F6(x) : 0
+  } : null, v = (x) => a.modelType ? q(x) : { month: s2(x), year: K1(x) }, z = (x) => Array.isArray(x) ? l.value.enabled ? x.map((s1) => w(s1, Y4(l1(), s1))) : T0(
     () => [
-      Y4(l1(), V[0]),
-      V[1] ? Y4(l1(), V[1]) : g6(n.value.partialRange)
+      Y4(l1(), x[0]),
+      x[1] ? Y4(l1(), x[1]) : g6(n.value.partialRange)
     ],
     n.value.enabled
-  ) : Y4(l1(), +V), w = (V, s1) => (typeof V == "string" || typeof V == "number") && a.modelType ? o1(V) : s1, E = (V) => Array.isArray(V) ? [
+  ) : Y4(l1(), +x), w = (x, s1) => (typeof x == "string" || typeof x == "number") && a.modelType ? o1(x) : s1, E = (x) => Array.isArray(x) ? [
     w(
-      V[0],
-      P3(null, +V[0].hours, +V[0].minutes, V[0].seconds)
+      x[0],
+      P3(null, +x[0].hours, +x[0].minutes, x[0].seconds)
     ),
     w(
-      V[1],
-      P3(null, +V[1].hours, +V[1].minutes, V[1].seconds)
+      x[1],
+      P3(null, +x[1].hours, +x[1].minutes, x[1].seconds)
     )
-  ] : w(V, P3(null, V.hours, V.minutes, V.seconds)), I = (V) => {
-    const s1 = x2(l1(), { date: 1 });
-    return Array.isArray(V) ? l.value.enabled ? V.map((l2) => w(l2, h3(s1, +l2.month, +l2.year))) : T0(
+  ] : w(x, P3(null, x.hours, x.minutes, x.seconds)), I = (x) => {
+    const s1 = V2(l1(), { date: 1 });
+    return Array.isArray(x) ? l.value.enabled ? x.map((l2) => w(l2, h3(s1, +l2.month, +l2.year))) : T0(
       () => [
-        w(V[0], h3(s1, +V[0].month, +V[0].year)),
+        w(x[0], h3(s1, +x[0].month, +x[0].year)),
         w(
-          V[1],
-          V[1] ? h3(s1, +V[1].month, +V[1].year) : g6(n.value.partialRange)
+          x[1],
+          x[1] ? h3(s1, +x[1].month, +x[1].year) : g6(n.value.partialRange)
         )
       ],
       n.value.enabled
-    ) : w(V, h3(s1, +V.month, +V.year));
-  }, R = (V) => {
-    if (Array.isArray(V))
-      return V.map((s1) => o1(s1));
+    ) : w(x, h3(s1, +x.month, +x.year));
+  }, R = (x) => {
+    if (Array.isArray(x))
+      return x.map((s1) => o1(s1));
     throw new Error(ge.dateArr("multi-dates"));
-  }, U = (V) => {
-    if (Array.isArray(V) && n.value.enabled) {
-      const s1 = V[0], l2 = V[1];
+  }, U = (x) => {
+    if (Array.isArray(x) && n.value.enabled) {
+      const s1 = x[0], l2 = x[1];
       return [
         l1(Array.isArray(s1) ? s1[0] : null),
         Array.isArray(l2) && l2.length ? l1(l2[0]) : null
       ];
     }
-    return l1(V[0]);
-  }, r1 = (V) => a.modelAuto ? Array.isArray(V) ? [o1(V[0]), o1(V[1])] : a.autoApply ? [o1(V)] : [o1(V), null] : Array.isArray(V) ? T0(
-    () => V[1] ? [
-      o1(V[0]),
-      V[1] ? o1(V[1]) : g6(n.value.partialRange)
-    ] : [o1(V[0])],
+    return l1(x[0]);
+  }, r1 = (x) => a.modelAuto ? Array.isArray(x) ? [o1(x[0]), o1(x[1])] : a.autoApply ? [o1(x)] : [o1(x), null] : Array.isArray(x) ? T0(
+    () => x[1] ? [
+      o1(x[0]),
+      x[1] ? o1(x[1]) : g6(n.value.partialRange)
+    ] : [o1(x[0])],
     n.value.enabled
-  ) : o1(V), X = () => {
+  ) : o1(x), X = () => {
     Array.isArray(i.value) && n.value.enabled && i.value.length === 1 && i.value.push(g6(n.value.partialRange));
   }, O = () => {
-    const V = i.value;
+    const x = i.value;
     return [
-      q(V[0]),
-      V[1] ? q(V[1]) : g6(n.value.partialRange)
+      q(x[0]),
+      x[1] ? q(x[1]) : g6(n.value.partialRange)
     ];
-  }, c1 = () => Array.isArray(i.value) ? i.value[1] ? O() : q(e4(i.value[0])) : [], g1 = () => (i.value || []).map((V) => q(V)), L1 = (V = !1) => (V || X(), a.modelAuto ? c1() : l.value.enabled ? g1() : Array.isArray(i.value) ? T0(() => O(), n.value.enabled) : q(e4(i.value))), N = (V) => !V || Array.isArray(V) && !V.length ? null : a.timePicker ? E(e4(V)) : a.monthPicker ? I(e4(V)) : a.yearPicker ? z(e4(V)) : l.value.enabled ? R(e4(V)) : a.weekPicker ? U(e4(V)) : r1(e4(V)), B = (V) => {
+  }, c1 = () => Array.isArray(i.value) ? i.value[1] ? O() : q(e4(i.value[0])) : [], g1 = () => (i.value || []).map((x) => q(x)), L1 = (x = !1) => (x || X(), a.modelAuto ? c1() : l.value.enabled ? g1() : Array.isArray(i.value) ? T0(() => O(), n.value.enabled) : q(e4(i.value))), N = (x) => !x || Array.isArray(x) && !x.length ? null : a.timePicker ? E(e4(x)) : a.monthPicker ? I(e4(x)) : a.yearPicker ? z(e4(x)) : l.value.enabled ? R(e4(x)) : a.weekPicker ? U(e4(x)) : r1(e4(x)), B = (x) => {
     if (c.value) return;
-    const s1 = N(V);
+    const s1 = N(x);
     A5(e4(s1)) ? (i.value = e4(s1), J()) : (i.value = null, s.value = "");
   }, P = () => {
-    const V = (s1) => o3(s1, r.value.format);
-    return `${V(i.value[0])} ${r.value.rangeSeparator} ${i.value[1] ? V(i.value[1]) : ""}`;
-  }, W = () => t.value && i.value ? Array.isArray(i.value) ? P() : o3(i.value, r.value.format) : A(i.value), z1 = () => i.value ? l.value.enabled ? i.value.map((V) => A(V)).join("; ") : r.value.enabled && typeof r.value.format == "string" ? W() : A(i.value) : "", J = () => {
+    const x = (s1) => o3(s1, r.value.format);
+    return `${x(i.value[0])} ${r.value.rangeSeparator} ${i.value[1] ? x(i.value[1]) : ""}`;
+  }, W = () => t.value && i.value ? Array.isArray(i.value) ? P() : o3(i.value, r.value.format) : A(i.value), z1 = () => i.value ? l.value.enabled ? i.value.map((x) => A(x)).join("; ") : r.value.enabled && typeof r.value.format == "string" ? W() : A(i.value) : "", J = () => {
     !a.format || typeof a.format == "string" || r.value.enabled && typeof r.value.format == "string" ? s.value = z1() : s.value = a.format(i.value);
-  }, o1 = (V) => {
+  }, o1 = (x) => {
     if (a.utc) {
-      const s1 = new Date(V);
+      const s1 = new Date(x);
       return a.utc === "preserve" ? new Date(s1.getTime() + s1.getTimezoneOffset() * 6e4) : s1;
     }
-    return a.modelType ? cs.includes(a.modelType) ? C(new Date(V)) : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? C(
-      L5(V, d(), /* @__PURE__ */ new Date(), { locale: g.value })
+    return a.modelType ? cs.includes(a.modelType) ? C(new Date(x)) : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? C(
+      L5(x, d(), /* @__PURE__ */ new Date(), { locale: g.value })
     ) : C(
-      L5(V, a.modelType, /* @__PURE__ */ new Date(), { locale: g.value })
-    ) : C(new Date(V));
-  }, q = (V) => V ? a.utc ? ms(V, a.utc === "preserve", a.enableSeconds) : a.modelType ? a.modelType === "timestamp" ? +T(V) : a.modelType === "iso" ? T(V).toISOString() : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? A(T(V)) : A(T(V), a.modelType, !0) : T(V) : "", k1 = (V, s1 = !1, l2 = !1) => {
-    if (l2) return V;
-    if (e("update:model-value", V), o.value.emitTimezone && s1) {
-      const f1 = Array.isArray(V) ? V.map((e2) => x4(e4(e2), o.value.emitTimezone)) : x4(e4(V), o.value.emitTimezone);
+      L5(x, a.modelType, /* @__PURE__ */ new Date(), { locale: g.value })
+    ) : C(new Date(x));
+  }, q = (x) => x ? a.utc ? ms(x, a.utc === "preserve", a.enableSeconds) : a.modelType ? a.modelType === "timestamp" ? +T(x) : a.modelType === "iso" ? T(x).toISOString() : a.modelType === "format" && (typeof a.format == "string" || !a.format) ? A(T(x)) : A(T(x), a.modelType, !0) : T(x) : "", k1 = (x, s1 = !1, l2 = !1) => {
+    if (l2) return x;
+    if (e("update:model-value", x), o.value.emitTimezone && s1) {
+      const f1 = Array.isArray(x) ? x.map((e2) => V4(e4(e2), o.value.emitTimezone)) : V4(e4(x), o.value.emitTimezone);
       e("update:model-timezone-value", f1);
     }
-  }, S = (V) => Array.isArray(i.value) ? l.value.enabled ? i.value.map((s1) => V(s1)) : [
-    V(i.value[0]),
-    i.value[1] ? V(i.value[1]) : g6(n.value.partialRange)
-  ] : V(e4(i.value)), Q = () => {
+  }, S = (x) => Array.isArray(i.value) ? l.value.enabled ? i.value.map((s1) => x(s1)) : [
+    x(i.value[0]),
+    i.value[1] ? x(i.value[1]) : g6(n.value.partialRange)
+  ] : x(e4(i.value)), Q = () => {
     if (Array.isArray(i.value)) {
-      const V = d3(i.value[0], a.weekStart), s1 = i.value[1] ? d3(i.value[1], a.weekStart) : [];
-      return [V.map((l2) => l1(l2)), s1.map((l2) => l1(l2))];
+      const x = d3(i.value[0], a.weekStart), s1 = i.value[1] ? d3(i.value[1], a.weekStart) : [];
+      return [x.map((l2) => l1(l2)), s1.map((l2) => l1(l2))];
     }
-    return d3(i.value, a.weekStart).map((V) => l1(V));
-  }, Z = (V, s1) => k1(e4(S(V)), !1, s1), x1 = (V) => {
+    return d3(i.value, a.weekStart).map((x) => l1(x));
+  }, Z = (x, s1) => k1(e4(S(x)), !1, s1), V1 = (x) => {
     const s1 = Q();
-    return V ? s1 : e("update:model-value", Q());
-  }, H = (V = !1) => (V || J(), a.monthPicker ? Z(v, V) : a.timePicker ? Z(D, V) : a.yearPicker ? Z(K1, V) : a.weekPicker ? x1(V) : k1(L1(V), !0, V));
+    return x ? s1 : e("update:model-value", Q());
+  }, H = (x = !1) => (x || J(), a.monthPicker ? Z(v, x) : a.timePicker ? Z(D, x) : a.yearPicker ? Z(K1, x) : a.weekPicker ? V1(x) : k1(L1(x), !0, x));
   return {
     inputValue: s,
     internalModelValue: i,
@@ -13688,7 +13688,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     let g = s;
     return t.value.years.includes(K1(g)) ? (g = m ? ie(s, 1) : Na(s, 1), n(g, m)) : g;
   }, o = (s, m = !1) => {
-    const g = x2(l1(), { month: e.month, year: e.year });
+    const g = V2(l1(), { month: e.month, year: e.year });
     let C = s ? G4(g, 1) : E6(g, 1);
     e.disableYearSelect && (C = Y4(C, e.year));
     let T = s2(C), A = K1(C);
@@ -13696,7 +13696,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   }, l = (s, m, g) => {
     a("update-month-year", { month: s, year: m, fromNav: g });
   }, d = i1(() => (s) => Ea(
-    x2(l1(), { month: e.month, year: e.year }),
+    V2(l1(), { month: e.month, year: e.year }),
     c.value.maxDate,
     c.value.minDate,
     e.preventMinMaxNavigation,
@@ -13956,7 +13956,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       ], 64))
     ], 512));
   }
-}), Us = ["role", "aria-label", "tabindex"], Zs = { class: "dp__selection_grid_header" }, js = ["aria-selected", "aria-disabled", "data-test-id", "onClick", "onKeydown", "onMouseover"], qs = ["aria-label"], V0 = /* @__PURE__ */ $2({
+}), Us = ["role", "aria-label", "tabindex"], Zs = { class: "dp__selection_grid_header" }, js = ["aria-selected", "aria-disabled", "data-test-id", "onClick", "onKeydown", "onMouseover"], qs = ["aria-label"], x0 = /* @__PURE__ */ $2({
   __name: "SelectionOverlay",
   props: {
     items: {},
@@ -14015,15 +14015,15 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       dp__container_flex: o.items?.length <= 6,
       dp__container_block: o.items?.length > 6
     }));
-    V4(
+    x4(
       () => o.items,
       () => g1(!1),
       { deep: !0 }
     );
     const g1 = (S = !0) => {
       z4().then(() => {
-        const Q = q2(T), Z = q2(A), x1 = q2(z), H = q2(E), V = x1 ? x1.getBoundingClientRect().height : 0;
-        Z && (Z.getBoundingClientRect().height ? w.value = Z.getBoundingClientRect().height - V : w.value = s.value.modeHeight - V), Q && H && S && (H.scrollTop = Q.offsetTop - H.offsetTop - (w.value / 2 - Q.getBoundingClientRect().height) - V);
+        const Q = q2(T), Z = q2(A), V1 = q2(z), H = q2(E), x = V1 ? V1.getBoundingClientRect().height : 0;
+        Z && (Z.getBoundingClientRect().height ? w.value = Z.getBoundingClientRect().height - x : w.value = s.value.modeHeight - x), Q && H && S && (H.scrollTop = Q.offsetTop - H.offsetTop - (w.value / 2 - Q.getBoundingClientRect().height) - x);
       });
     }, L1 = (S) => {
       S.disabled || n("selected", S.value);
@@ -14031,8 +14031,8 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       n("toggle"), n("reset-flow");
     }, B = (S) => {
       o.escClose && (N(), m(S));
-    }, P = (S, Q, Z, x1) => {
-      S && ((Q.active || Q.value === o.focusValue) && (T.value = S), o.arrowNavigation && (Array.isArray(D.value[Z]) ? D.value[Z][x1] = S : D.value[Z] = [S], W()));
+    }, P = (S, Q, Z, V1) => {
+      S && ((Q.active || Q.value === o.focusValue) && (T.value = S), o.arrowNavigation && (Array.isArray(D.value[Z]) ? D.value[Z][V1] = S : D.value[Z] = [S], W()));
     }, W = () => {
       const S = o.headerRefs?.length ? [o.headerRefs].concat(D.value) : D.value.concat([o.skipButtonRef ? [] : [z.value]]);
       i(e4(S), o.headerRefs?.length ? "monthPicker" : "selectionGrid");
@@ -14086,15 +14086,15 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         F("div", Zs, [
           b1(S.$slots, "header")
         ]),
-        S.$slots.overlay ? b1(S.$slots, "overlay", { key: 0 }) : (p(!0), L(R1, { key: 1 }, t2(e.items, (Z, x1) => (p(), L("div", {
-          key: x1,
+        S.$slots.overlay ? b1(S.$slots, "overlay", { key: 0 }) : (p(!0), L(R1, { key: 1 }, t2(e.items, (Z, V1) => (p(), L("div", {
+          key: V1,
           class: T1(["dp__overlay_row", { dp__flex_row: e.items.length >= 3 }]),
           role: "row"
         }, [
-          (p(!0), L(R1, null, t2(Z, (H, V) => (p(), L("div", {
+          (p(!0), L(R1, null, t2(Z, (H, x) => (p(), L("div", {
             key: H.value,
             ref_for: !0,
-            ref: (s1) => P(s1, H, x1, V),
+            ref: (s1) => P(s1, H, V1, x),
             role: "gridcell",
             class: T1(X.value),
             "aria-selected": H.active || void 0,
@@ -14214,7 +14214,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   },
   emits: ["toggle-year-picker", "year-select", "handle-year"],
   setup(e, { emit: a }) {
-    const t = a, c = e, { showRightIcon: i, showLeftIcon: r } = y8(), { defaultedConfig: n, defaultedMultiCalendars: o, defaultedAriaLabels: l, defaultedTransitions: d, defaultedUI: s } = _2(c), { showTransition: m, transitionName: g } = x0(d), C = m1(!1), T = i1(() => ze(c.year, c.locale)), A = (z = !1, w) => {
+    const t = a, c = e, { showRightIcon: i, showLeftIcon: r } = y8(), { defaultedConfig: n, defaultedMultiCalendars: o, defaultedAriaLabels: l, defaultedTransitions: d, defaultedUI: s } = _2(c), { showTransition: m, transitionName: g } = V0(d), C = m1(!1), T = i1(() => ze(c.year, c.locale)), A = (z = !1, w) => {
       C.value = !C.value, t("toggle-year-picker", { flow: z, show: w });
     }, D = (z) => {
       C.value = !1, t("year-select", z);
@@ -14278,7 +14278,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         css: M(m)
       }, {
         default: H1(() => [
-          e.showYearPicker ? (p(), w1(V0, {
+          e.showYearPicker ? (p(), w1(x0, {
             key: 0,
             items: e.items,
             "text-input": z.textInput,
@@ -14328,7 +14328,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
 }, z8 = (e, a, t, c) => {
   e && (e[0] && e[1] && t && a("auto-apply"), e[0] && !e[1] && c && t && a("auto-apply"));
 }, ja = (e) => {
-  Array.isArray(e.value) && e.value.length <= 2 && e.range ? e.modelValue.value = e.value.map((a) => x4(l1(a), e.timezone)) : Array.isArray(e.value) || (e.modelValue.value = x4(l1(e.value), e.timezone));
+  Array.isArray(e.value) && e.value.length <= 2 && e.range ? e.modelValue.value = e.value.map((a) => V4(l1(a), e.timezone)) : Array.isArray(e.value) || (e.modelValue.value = V4(l1(e.value), e.timezone));
 }, qa = (e, a, t, c) => Array.isArray(a.value) && (a.value.length === 2 || a.value.length === 1 && c.value.partialRange) ? c.value.fixedStart && (E2(e, a.value[0]) || f2(e, a.value[0])) ? [a.value[0], e] : c.value.fixedEnd && (O2(e, a.value[1]) || f2(e, a.value[1])) ? [e, a.value[1]] : (t("invalid-fixed-range", e), a.value) : [], Ya = ({
   multiCalendars: e,
   range: a,
@@ -14343,7 +14343,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   emit: s
 }) => {
   const m = i1(() => pe(n.yearRange, n.locale, n.reverseYears)), g = m1([!1]), C = i1(() => (O, c1) => {
-    const g1 = x2(W4(/* @__PURE__ */ new Date()), {
+    const g1 = V2(W4(/* @__PURE__ */ new Date()), {
       month: d.value(O),
       year: l.value(O)
     }), L1 = c1 ? ma(g1) : L6(g1);
@@ -14364,12 +14364,12 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
           year: K1(r.value[1])
         };
       else {
-        const c1 = x2(l1(), i.value[O - 1]);
+        const c1 = V2(l1(), i.value[O - 1]);
         i.value[O] = { month: s2(c1), year: K1(ie(c1, 1)) };
       }
   }, D = (O) => {
     if (!O) return A();
-    const c1 = x2(l1(), i.value[O]);
+    const c1 = V2(l1(), i.value[O]);
     return i.value[0].year = K1(Na(c1, e.value.count - 1)), A();
   }, v = (O, c1) => {
     const g1 = co(c1, O);
@@ -14382,7 +14382,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   }, E = () => {
     w(), e.value.count && A();
   };
-  V4(r, (O, c1) => {
+  x4(r, (O, c1) => {
     n.isTextInputDate && JSON.stringify(O ?? {}) !== JSON.stringify(c1 ?? {}) && E();
   }), t4(() => {
     E();
@@ -14454,45 +14454,45 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     e.startDate && (C.value && e.focusStartDate || !C.value) && E(K1(l1(e.startDate)), 0);
   });
   const c1 = (Q) => Q ? { month: s2(Q), year: K1(Q) } : { month: null, year: null }, g1 = () => C.value ? Array.isArray(C.value) ? C.value.map((Q) => c1(Q)) : c1(C.value) : c1(), L1 = (Q, Z) => {
-    const x1 = D.value[Q], H = g1();
-    return Array.isArray(H) ? H.some((V) => V.year === x1?.year && V.month === Z) : x1?.year === H.year && Z === H.month;
-  }, N = (Q, Z, x1) => {
+    const V1 = D.value[Q], H = g1();
+    return Array.isArray(H) ? H.some((x) => x.year === V1?.year && x.month === Z) : V1?.year === H.year && Z === H.month;
+  }, N = (Q, Z, V1) => {
     const H = g1();
-    return Array.isArray(H) ? T.value(Z) === H[x1]?.year && Q === H[x1]?.month : !1;
+    return Array.isArray(H) ? T.value(Z) === H[V1]?.year && Q === H[V1]?.month : !1;
   }, B = (Q, Z) => {
     if (n.value.enabled) {
-      const x1 = g1();
-      if (Array.isArray(C.value) && Array.isArray(x1)) {
-        const H = N(Q, Z, 0) || N(Q, Z, 1), V = h3(W4(l1()), Q, T.value(Z));
-        return y0(C.value, z.value, V) && !H;
+      const V1 = g1();
+      if (Array.isArray(C.value) && Array.isArray(V1)) {
+        const H = N(Q, Z, 0) || N(Q, Z, 1), x = h3(W4(l1()), Q, T.value(Z));
+        return y0(C.value, z.value, x) && !H;
       }
       return !1;
     }
     return !1;
   }, P = i1(() => (Q) => R6(v.value, (Z) => {
-    const x1 = L1(Q, Z.value), H = z0(
+    const V1 = L1(Q, Z.value), H = z0(
       Z.value,
       Oa(T.value(Q), l.value.minDate),
       Pa(T.value(Q), l.value.maxDate)
-    ) || ys(l.value.disabledDates, T.value(Q), Z.value) || s.value.months?.includes(Z.value) || !bs(l.value.allowedDates, T.value(Q), Z.value) || $a(e.yearRange, T.value(Q)), V = B(Z.value, Q), s1 = Ba(o.value, Z.value, T.value(Q));
-    return { active: x1, disabled: H, isBetween: V, highlighted: s1 };
+    ) || ys(l.value.disabledDates, T.value(Q), Z.value) || s.value.months?.includes(Z.value) || !bs(l.value.allowedDates, T.value(Q), Z.value) || $a(e.yearRange, T.value(Q)), x = B(Z.value, Q), s1 = Ba(o.value, Z.value, T.value(Q));
+    return { active: V1, disabled: H, isBetween: x, highlighted: s1 };
   })), W = (Q, Z) => h3(W4(l1()), Q, T.value(Z)), z1 = (Q, Z) => {
-    const x1 = C.value ? C.value : W4(/* @__PURE__ */ new Date());
-    C.value = h3(x1, Q, T.value(Z)), a("auto-apply"), a("update-flow-step");
+    const V1 = C.value ? C.value : W4(/* @__PURE__ */ new Date());
+    C.value = h3(V1, Q, T.value(Z)), a("auto-apply"), a("update-flow-step");
   }, J = (Q, Z) => {
-    const x1 = W(Q, Z);
-    n.value.fixedEnd || n.value.fixedStart ? C.value = qa(x1, C, a, n) : C.value ? w(x1, C.value) && (C.value = Ce(C, W(Q, Z), a)) : C.value = [W(Q, Z)], z4().then(() => {
+    const V1 = W(Q, Z);
+    n.value.fixedEnd || n.value.fixedStart ? C.value = qa(V1, C, a, n) : C.value ? w(V1, C.value) && (C.value = Ce(C, W(Q, Z), a)) : C.value = [W(Q, Z)], z4().then(() => {
       z8(C.value, a, e.autoApply, e.modelAuto);
     });
   }, o1 = (Q, Z) => {
     Me(W(Q, Z), C, m.value.limit), a("auto-apply", !0);
   }, q = (Q, Z) => (D.value[Z].month = Q, S(Z, D.value[Z].year, Q), m.value.enabled ? o1(Q, Z) : n.value.enabled ? J(Q, Z) : z1(Q, Z)), k1 = (Q, Z) => {
     E(Q, Z), S(Z, Q, null);
-  }, S = (Q, Z, x1) => {
-    let H = x1;
+  }, S = (Q, Z, V1) => {
+    let H = V1;
     if (!H && H !== 0) {
-      const V = g1();
-      H = Array.isArray(V) ? V[Q].month : V.month;
+      const x = g1();
+      H = Array.isArray(x) ? x[Q].month : x.month;
     }
     a("update-month-year", { instance: Q, year: Z, month: H });
   };
@@ -14594,7 +14594,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
           selectMonth: M(v),
           selectYear: M(z),
           instance: X
-        }))) : (p(), w1(V0, {
+        }))) : (p(), w1(x0, {
           key: 2,
           items: M(o)(X),
           "arrow-navigation": U.arrowNavigation,
@@ -14703,7 +14703,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       m.$slots["month-year"] ? b1(m.$slots, "month-year", $1(c2({ key: 1 }, {
         years: M(r),
         selectYear: M(l)
-      }))) : (p(), w1(V0, {
+      }))) : (p(), w1(x0, {
         key: 2,
         items: M(r),
         "is-last": m.autoApply && !M(s).keepActionRow,
@@ -14767,7 +14767,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       defaultedConfig: s,
       defaultedRange: m,
       defaultedMultiCalendars: g
-    } = _2(i), { transitionName: C, showTransition: T } = x0(l), A = F3({
+    } = _2(i), { transitionName: C, showTransition: T } = V0(l), A = F3({
       hours: !1,
       minutes: !1,
       seconds: !1
@@ -14775,7 +14775,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     t4(() => {
       c("mounted");
     });
-    const I = (b) => x2(/* @__PURE__ */ new Date(), {
+    const I = (b) => V2(/* @__PURE__ */ new Date(), {
       hours: b.hours,
       minutes: b.minutes,
       seconds: i.enableSeconds ? b.seconds : 0,
@@ -14788,7 +14788,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         return !i.validateTime(b, i2);
       }
       return !1;
-    }, O = i1(() => (b) => !Q(+i[b] + +i[`${b}Increment`], b) || X(b, !0)), c1 = i1(() => (b) => !Q(+i[b] - +i[`${b}Increment`], b) || X(b, !1)), g1 = (b, A1) => la(x2(l1(), b), A1), L1 = (b, A1) => Ql(x2(l1(), b), A1), N = i1(
+    }, O = i1(() => (b) => !Q(+i[b] + +i[`${b}Increment`], b) || X(b, !0)), c1 = i1(() => (b) => !Q(+i[b] - +i[`${b}Increment`], b) || X(b, !1)), g1 = (b, A1) => la(V2(l1(), b), A1), L1 = (b, A1) => Ql(V2(l1(), b), A1), N = i1(
       () => ({
         dp__time_col: !0,
         dp__time_col_block: !i.timePickerInline,
@@ -14831,9 +14831,9 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         )
       );
       return G && i2 ? (I6(B1, i2) || w6(B1, i2)) && (c6(B1, G) || w6(B1, G)) : G ? c6(B1, G) || w6(B1, G) : i2 ? I6(B1, i2) || w6(B1, i2) : !0;
-    }, Z = (b) => i[`no${b[0].toUpperCase() + b.slice(1)}Overlay`], x1 = (b) => {
+    }, Z = (b) => i[`no${b[0].toUpperCase() + b.slice(1)}Overlay`], V1 = (b) => {
       Z(b) || (A[b] = !A[b], A[b] ? (E.value = !0, c("overlay-opened", b)) : (E.value = !1, c("overlay-closed", b)));
-    }, H = (b) => b === "hours" ? y3 : b === "minutes" ? R3 : F6, V = () => {
+    }, H = (b) => b === "hours" ? y3 : b === "minutes" ? R3 : F6, x = () => {
       w.value && clearTimeout(w.value);
     }, s1 = (b, A1 = !0, G) => {
       const i2 = A1 ? g1 : L1, B1 = A1 ? +i[`${b}Increment`] : -+i[`${b}Increment`];
@@ -14856,7 +14856,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         );
         n(i.closeTimePickerBtn), v.value && (i2[1] = i2[1].concat(v.value)), r(i2, i.order);
       }
-    }, V1 = (b, A1) => (x1(b), c(`update:${b}`, A1));
+    }, x1 = (b, A1) => (V1(b), c(`update:${b}`, A1));
     return a({ openChildCmp: e2 }), (b, A1) => b.disabled ? j("", !0) : (p(), L("div", ef, [
       (p(!0), L(R1, null, t2(P.value, (G, i2) => (p(), L("div", {
         key: i2,
@@ -14887,7 +14887,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
             onKeydown: (B1) => M(g4)(B1, () => s1(G.type, !0, { keyboard: !0 }), !0),
             onClick: (B1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !0),
             onMousedown: (B1) => M(s).timeArrowHoldThreshold ? s1(G.type, !0) : void 0,
-            onMouseup: V
+            onMouseup: x
           }, [
             i.timePickerInline ? (p(), L(R1, { key: 1 }, [
               b.$slots["tp-inline-arrow-up"] ? b1(b.$slots, "tp-inline-arrow-up", { key: 0 }) : (p(), L(R1, { key: 1 }, [
@@ -14915,8 +14915,8 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
             disabled: Z(G.type),
             tabindex: "0",
             "data-test-id": `${G.type}-toggle-overlay-btn-${i.order}`,
-            onKeydown: (B1) => M(g4)(B1, () => x1(G.type), !0),
-            onClick: (B1) => x1(G.type)
+            onKeydown: (B1) => M(g4)(B1, () => V1(G.type), !0),
+            onClick: (B1) => V1(G.type)
           }, [
             b.$slots[G.type] ? b1(b.$slots, G.type, {
               key: 0,
@@ -14945,7 +14945,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
             onKeydown: (B1) => M(g4)(B1, () => s1(G.type, !1, { keyboard: !0 }), !0),
             onClick: (B1) => M(s).timeArrowHoldThreshold ? void 0 : s1(G.type, !1),
             onMousedown: (B1) => M(s).timeArrowHoldThreshold ? s1(G.type, !1) : void 0,
-            onMouseup: V
+            onMouseup: x
           }, [
             i.timePickerInline ? (p(), L(R1, { key: 1 }, [
               b.$slots["tp-inline-arrow-down"] ? b1(b.$slots, "tp-inline-arrow-down", { key: 0 }) : (p(), L(R1, { key: 1 }, [
@@ -14985,7 +14985,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         css: M(T)
       }, {
         default: H1(() => [
-          A[G.type] ? (p(), w1(V0, {
+          A[G.type] ? (p(), w1(x0, {
             key: 0,
             items: q(G.type),
             "is-last": b.autoApply && !M(s).keepActionRow,
@@ -14996,8 +14996,8 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
             "arrow-navigation": b.arrowNavigation,
             "aria-labels": b.ariaLabels,
             "overlay-label": M(o).timeOverlay?.(G.type),
-            onSelected: (B1) => V1(G.type, B1),
-            onToggle: (B1) => x1(G.type),
+            onSelected: (B1) => x1(G.type, B1),
+            onToggle: (B1) => V1(G.type),
             onResetFlow: A1[1] || (A1[1] = (B1) => b.$emit("reset-flow"))
           }, d4({
             "button-icon": H1(() => [
@@ -15020,7 +15020,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
               name: "header",
               fn: H1(() => [
                 b1(b.$slots, `${G.type}-overlay-header`, {
-                  toggle: () => x1(G.type)
+                  toggle: () => V1(G.type)
                 })
               ]),
               key: "1"
@@ -15058,7 +15058,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     "am-pm-change"
   ],
   setup(e, { expose: a, emit: t }) {
-    const c = t, i = e, { buildMatrix: r, setTimePicker: n } = B3(), o = r6(), { defaultedTransitions: l, defaultedAriaLabels: d, defaultedTextInput: s, defaultedConfig: m, defaultedRange: g } = _2(i), { transitionName: C, showTransition: T } = x0(l), { hideNavigationButtons: A } = y8(), D = m1(null), v = m1(null), z = m1([]), w = m1(null), E = m1(!1);
+    const c = t, i = e, { buildMatrix: r, setTimePicker: n } = B3(), o = r6(), { defaultedTransitions: l, defaultedAriaLabels: d, defaultedTextInput: s, defaultedConfig: m, defaultedRange: g } = _2(i), { transitionName: C, showTransition: T } = V0(l), { hideNavigationButtons: A } = y8(), D = m1(null), v = m1(null), z = m1([]), w = m1(null), E = m1(!1);
     t4(() => {
       c("mount"), !i.timePicker && i.arrowNavigation ? r([q2(D.value)], "time") : n(!0, i.timePicker);
     });
@@ -15287,21 +15287,21 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     if (e.startTime) {
       if (Array.isArray(e.startTime)) {
         const U = A(e.startTime[0]), r1 = A(e.startTime[1]);
-        return [x2(l1(), U), x2(l1(), r1)];
+        return [V2(l1(), U), V2(l1(), r1)];
       }
       const R = A(e.startTime);
-      return x2(l1(), R);
+      return V2(l1(), R);
     }
     return n.value.enabled ? [null, null] : null;
   }, v = () => {
     if (n.value.enabled) {
       const [R, U] = D();
       c.value = [
-        x4(d(R, 0), o.value.timezone),
-        x4(d(U, 1), o.value.timezone)
+        V4(d(R, 0), o.value.timezone),
+        V4(d(U, 1), o.value.timezone)
       ];
     } else
-      c.value = x4(d(D()), o.value.timezone);
+      c.value = V4(d(D()), o.value.timezone);
   }, z = (R) => Array.isArray(R) ? [a6(l1(R[0])), a6(l1(R[1]))] : [a6(R ?? l1())], w = (R, U, r1) => {
     s("hours", R), s("minutes", U), s("seconds", e.enableSeconds ? r1 : 0);
   }, E = () => {
@@ -15417,7 +15417,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       defaultedHighlight: s,
       propDates: m,
       defaultedUI: g
-    } = _2(i), { transitionName: C, showTransition: T } = x0(r), { buildMatrix: A } = B3(), { handleMonthYearChange: D, isDisabled: v, updateMonthYear: z } = Es(i, c), { showLeftIcon: w, showRightIcon: E } = y8(), I = m1(!1), R = m1(!1), U = m1(!1), r1 = m1([null, null, null, null]);
+    } = _2(i), { transitionName: C, showTransition: T } = V0(r), { buildMatrix: A } = B3(), { handleMonthYearChange: D, isDisabled: v, updateMonthYear: z } = Es(i, c), { showLeftIcon: w, showRightIcon: E } = y8(), I = m1(!1), R = m1(!1), U = m1(!1), r1 = m1([null, null, null, null]);
     t4(() => {
       c("mount");
     });
@@ -15439,15 +15439,15 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         S.value,
         Oa(i.year, m.value.minDate),
         Pa(i.year, m.value.maxDate)
-      ) || l.value.months.includes(S.value), x1 = Ba(s.value, S.value, i.year);
-      return { active: Q, disabled: Z, highlighted: x1 };
+      ) || l.value.months.includes(S.value), V1 = Ba(s.value, S.value, i.year);
+      return { active: Q, disabled: Z, highlighted: V1 };
     })), B = i1(() => R6(i.years, (S) => {
       const Q = i.year === S.value, Z = z0(
         S.value,
         B6(m.value.minDate),
         B6(m.value.maxDate)
-      ) || l.value.years.includes(S.value), x1 = be(s.value, S.value);
-      return { active: Q, disabled: Z, highlighted: x1 };
+      ) || l.value.years.includes(S.value), V1 = be(s.value, S.value);
+      return { active: Q, disabled: Z, highlighted: V1 };
     })), P = (S, Q, Z) => {
       Z !== void 0 ? S.value = Z : S.value = !S.value, S.value ? (U.value = !0, c("overlay-opened", Q)) : (U.value = !1, c("overlay-closed", Q));
     }, W = (S = !1, Q) => {
@@ -15525,12 +15525,12 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
               dp__year_disable_select: S.disableYearSelect
             }])
           }, [
-            (p(!0), L(R1, null, t2(k1.value, (Z, x1) => (p(), L(R1, {
+            (p(!0), L(R1, null, t2(k1.value, (Z, V1) => (p(), L(R1, {
               key: Z.type
             }, [
               F("button", {
                 ref_for: !0,
-                ref: (H) => o1(H, x1 + 1),
+                ref: (H) => o1(H, V1 + 1),
                 type: "button",
                 "data-dp-element": `overlay-${Z.type}`,
                 class: T1(["dp__btn dp__month_year_select", { "dp--hidden-el": U.value }]),
@@ -15553,7 +15553,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
                 css: M(T)
               }, {
                 default: H1(() => [
-                  Z.showSelectionGrid ? (p(), w1(V0, {
+                  Z.showSelectionGrid ? (p(), w1(x0, {
                     key: 0,
                     items: Z.items,
                     "arrow-navigation": S.arrowNavigation,
@@ -15650,7 +15650,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
   key: 0,
   class: "dp__calendar_header_item",
   role: "gridcell"
-}, Vf = ["aria-label"], xf = {
+}, xf = ["aria-label"], Vf = {
   key: 0,
   class: "dp__calendar_item dp__week_num",
   role: "gridcell"
@@ -15716,7 +15716,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       dp__calendar: !0,
       dp__calendar_next: d.value.count > 0 && i.instance !== 0
     })), B = i1(() => (f1) => i.hideOffsetDates ? f1.current : !0), P = async (f1, e2) => {
-      const { width: d1, height: V1 } = f1.getBoundingClientRect();
+      const { width: d1, height: x1 } = f1.getBoundingClientRect();
       C.value = e2.value;
       let b = { left: `${d1 / 2}px` }, A1 = -50;
       if (await z4(), E.value[0]) {
@@ -15724,13 +15724,13 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         G < 0 && (b = { left: "0" }, A1 = 0, I.value.left = `${d1 / 2}px`), window.innerWidth < G + i2 && (b = { right: "0" }, A1 = 0, I.value.left = `${i2 - d1 / 2}px`);
       }
       T.value = {
-        bottom: `${V1}px`,
+        bottom: `${x1}px`,
         ...b,
         transform: `translateX(${A1}%)`
       };
     }, W = async (f1, e2, d1) => {
-      const V1 = q2(A.value[e2][d1]);
-      V1 && (f1.marker?.customPosition && f1.marker?.tooltip?.length ? T.value = f1.marker.customPosition(V1) : await P(V1, f1), c("tooltip-open", f1.marker));
+      const x1 = q2(A.value[e2][d1]);
+      x1 && (f1.marker?.customPosition && f1.marker?.tooltip?.length ? T.value = f1.marker.customPosition(x1) : await P(x1, f1), c("tooltip-open", f1.marker));
     }, z1 = async (f1, e2, d1) => {
       if (R.value && m.value.enabled && m.value.dragSelect)
         return c("select-date", f1);
@@ -15753,10 +15753,10 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       f1 && (Array.isArray(A.value[e2]) ? A.value[e2][d1] = f1 : A.value[e2] = [f1]), i.arrowNavigation && r(A.value, "calendar");
     }, Z = (f1) => {
       i.monthChangeOnScroll && (f1.preventDefault(), c("handle-scroll", f1));
-    }, x1 = (f1) => s.value.type === "local" ? oe(f1.value, { weekStartsOn: +i.weekStart }) : s.value.type === "iso" ? re(f1.value) : typeof s.value.type == "function" ? s.value.type(f1.value) : "", H = (f1) => {
+    }, V1 = (f1) => s.value.type === "local" ? oe(f1.value, { weekStartsOn: +i.weekStart }) : s.value.type === "iso" ? re(f1.value) : typeof s.value.type == "function" ? s.value.type(f1.value) : "", H = (f1) => {
       const e2 = f1[0];
-      return s.value.hideOnOffsetDates ? f1.some((d1) => d1.current) ? x1(e2) : "" : x1(e2);
-    }, V = (f1, e2, d1 = !0) => {
+      return s.value.hideOnOffsetDates ? f1.some((d1) => d1.current) ? V1(e2) : "" : V1(e2);
+    }, x = (f1, e2, d1 = !0) => {
       !d1 && us() || (!m.value.enabled || o.value.allowPreventDefault) && (O3(f1, o.value), c("select-date", e2));
     }, s1 = (f1) => {
       O3(f1, o.value);
@@ -15774,22 +15774,22 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       }, [
         F("div", Mf, [
           f1.weekNumbers ? (p(), L("div", Cf, Z1(f1.weekNumName), 1)) : j("", !0),
-          (p(!0), L(R1, null, t2(r1.value, (d1, V1) => (p(), L("div", {
-            key: V1,
+          (p(!0), L(R1, null, t2(r1.value, (d1, x1) => (p(), L("div", {
+            key: x1,
             class: "dp__calendar_header_item",
             role: "gridcell",
             "data-test-id": "calendar-header",
-            "aria-label": M(l)?.weekDay?.(V1)
+            "aria-label": M(l)?.weekDay?.(x1)
           }, [
             f1.$slots["calendar-header"] ? b1(f1.$slots, "calendar-header", {
               key: 0,
               day: d1,
-              index: V1
+              index: x1
             }) : j("", !0),
             f1.$slots["calendar-header"] ? j("", !0) : (p(), L(R1, { key: 1 }, [
               a4(Z1(d1), 1)
             ], 64))
-          ], 8, Vf))), 128))
+          ], 8, xf))), 128))
         ]),
         e2[2] || (e2[2] = F("div", { class: "dp__calendar_header_separator" }, null, -1)),
         q1(n6, {
@@ -15803,19 +15803,19 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
               role: "rowgroup",
               onMouseleave: e2[1] || (e2[1] = (d1) => R.value = !1)
             }, [
-              (p(!0), L(R1, null, t2(U.value, (d1, V1) => (p(), L("div", {
-                key: V1,
+              (p(!0), L(R1, null, t2(U.value, (d1, x1) => (p(), L("div", {
+                key: x1,
                 class: "dp__calendar_row",
                 role: "row"
               }, [
-                f1.weekNumbers ? (p(), L("div", xf, [
+                f1.weekNumbers ? (p(), L("div", Vf, [
                   F("div", wf, Z1(H(d1.days)), 1)
                 ])) : j("", !0),
                 (p(!0), L(R1, null, t2(d1.days, (b, A1) => (p(), L("div", {
                   id: M(_5)(b.value),
                   ref_for: !0,
-                  ref: (G) => Q(G, V1, A1),
-                  key: A1 + V1,
+                  ref: (G) => Q(G, x1, A1),
+                  key: A1 + x1,
                   role: "gridcell",
                   class: "dp__calendar_item",
                   "aria-selected": (b.classData.dp__active_date || b.classData.dp__range_start || b.classData.dp__range_end) ?? void 0,
@@ -15823,10 +15823,10 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
                   "aria-label": M(l)?.day?.(b),
                   tabindex: !b.current && f1.hideOffsetDates ? void 0 : 0,
                   "data-test-id": M(_5)(b.value),
-                  onClick: L2((G) => V(G, b), ["prevent"]),
-                  onTouchend: (G) => V(G, b, !1),
+                  onClick: L2((G) => x(G, b), ["prevent"]),
+                  onTouchend: (G) => x(G, b, !1),
                   onKeydown: (G) => M(g4)(G, () => f1.$emit("select-date", b)),
-                  onMouseenter: (G) => z1(b, V1, A1),
+                  onMouseenter: (G) => z1(b, x1, A1),
                   onMouseleave: (G) => J(b),
                   onMousedown: (G) => l2(b),
                   onMouseup: e2[0] || (e2[0] = (G) => R.value = !1)
@@ -15927,13 +15927,13 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     e.autoApply && J.value && a("auto-apply", e.partialFlow ? e.flowStep !== e.flow.length : !1);
   }, q = ($ = !1) => {
     if (l.value)
-      return Array.isArray(l.value) ? (i.value = l.value, V($)) : Q(l.value, $);
+      return Array.isArray(l.value) ? (i.value = l.value, x($)) : Q(l.value, $);
     if (g.value.count && $ && !e.startDate)
       return S(l1(), $);
   }, k1 = () => Array.isArray(l.value) && T.value.enabled ? s2(l.value[0]) === s2(l.value[1] ?? l.value[0]) : !1, S = ($ = /* @__PURE__ */ new Date(), y1 = !1) => {
     if ((!g.value.count || !g.value.static || y1) && P(0, s2($), K1($)), g.value.count && (!l.value || k1() || !g.value.solo) && (!g.value.solo || y1))
       for (let P1 = 1; P1 < g.value.count; P1++) {
-        const U1 = x2(l1(), { month: L1.value(P1 - 1), year: N.value(P1 - 1) }), u1 = la(U1, { months: 1 });
+        const U1 = V2(l1(), { month: L1.value(P1 - 1), year: N.value(P1 - 1) }), u1 = la(U1, { months: 1 });
         d.value[P1] = { month: s2(u1), year: K1(u1) };
       }
   }, Q = ($, y1) => {
@@ -15945,7 +15945,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       return Math.abs(P1 - y1) < g.value.count ? 0 : 1;
     }
     return 1;
-  }, x1 = ($, y1) => {
+  }, V1 = ($, y1) => {
     $[1] && T.value.showLastInRange ? S($[Z($)], y1) : S($[0], y1);
     const P1 = (U1, u1) => [
       U1($[0]),
@@ -15954,24 +15954,24 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     X("hours", P1(y3, "hours")), X("minutes", P1(R3, "minutes")), X("seconds", P1(F6, "seconds"));
   }, H = ($, y1) => {
     if ((T.value.enabled || e.weekPicker) && !z.value.enabled)
-      return x1($, y1);
+      return V1($, y1);
     if (z.value.enabled && y1) {
       const P1 = $[$.length - 1];
       return Q(P1, y1);
     }
-  }, V = ($) => {
+  }, x = ($) => {
     const y1 = l.value;
     H(y1, $), g.value.count && g.value.solo && f1();
   }, s1 = ($, y1) => {
-    const P1 = x2(l1(), { month: L1.value(y1), year: N.value(y1) }), U1 = $ < 0 ? G4(P1, 1) : E6(P1, 1);
+    const P1 = V2(l1(), { month: L1.value(y1), year: N.value(y1) }), U1 = $ < 0 ? G4(P1, 1) : E6(P1, 1);
     w(s2(U1), K1(U1), $ < 0, e.preventMinMaxNavigation) && (P(y1, s2(U1), K1(U1)), a("update-month-year", { instance: y1, month: s2(U1), year: K1(U1) }), g.value.count && !g.value.solo && l2(y1), t());
   }, l2 = ($) => {
     for (let y1 = $ - 1; y1 >= 0; y1--) {
-      const P1 = E6(x2(l1(), { month: L1.value(y1 + 1), year: N.value(y1 + 1) }), 1);
+      const P1 = E6(V2(l1(), { month: L1.value(y1 + 1), year: N.value(y1 + 1) }), 1);
       P(y1, s2(P1), K1(P1));
     }
     for (let y1 = $ + 1; y1 <= g.value.count - 1; y1++) {
-      const P1 = G4(x2(l1(), { month: L1.value(y1 - 1), year: N.value(y1 - 1) }), 1);
+      const P1 = G4(V2(l1(), { month: L1.value(y1 - 1), year: N.value(y1 - 1) }), 1);
       P(y1, s2(P1), K1(P1));
     }
   }, f1 = () => {
@@ -15989,7 +15989,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       let u1 = 500;
       U1 > 1 && (u1 = 100), U1 > 100 && (u1 = 0), P1 > u1 && (r.value = /* @__PURE__ */ new Date(), s1(e.monthChangeOnScroll !== "inverse" ? -$.deltaY : $.deltaY, y1));
     }
-  }, V1 = ($, y1, P1 = !1) => {
+  }, x1 = ($, y1, P1 = !1) => {
     e.monthChangeOnArrows && e.vertical === P1 && b($, y1);
   }, b = ($, y1) => {
     s1($ === "right" ? -1 : 1, y1);
@@ -16063,7 +16063,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     if (P(0, y1, P1), g.value.count > 0)
       for (let U1 = 1; U1 < g.value.count; U1++) {
         const u1 = vs(
-          x2(l1($), { year: N.value(U1 - 1), month: L1.value(U1 - 1) })
+          V2(l1($), { year: N.value(U1 - 1), month: L1.value(U1 - 1) })
         );
         P(U1, u1.month, u1.year);
       }
@@ -16128,7 +16128,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     getMarker: A1,
     handleScroll: d1,
     handleSwipe: b,
-    handleArrow: V1,
+    handleArrow: x1,
     selectDate: U3,
     updateMonthYear: Z6,
     presetDate: j6,
@@ -16193,7 +16193,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     } = Nf(i, c, k1, S), X = r6(), { setHoverDate: O, getDayClassData: c1, clearHoverDate: g1 } = Yf(l, i), { defaultedMultiCalendars: L1 } = _2(i), N = m1([]), B = m1([]), P = m1(null), W = A4(X, "calendar"), z1 = A4(X, "monthYear"), J = A4(X, "timePicker"), o1 = (d1) => {
       i.shadow || c("mount", d1);
     };
-    V4(
+    x4(
       r,
       () => {
         i.shadow || setTimeout(() => {
@@ -16201,34 +16201,34 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         }, 0);
       },
       { deep: !0 }
-    ), V4(
+    ), x4(
       L1,
-      (d1, V1) => {
-        d1.count - V1.count > 0 && U();
+      (d1, x1) => {
+        d1.count - x1.count > 0 && U();
       },
       { deep: !0 }
     );
-    const q = i1(() => (d1) => C(n.value(d1), o.value(d1)).map((V1) => ({
-      ...V1,
-      days: V1.days.map((b) => (b.marker = T(b), b.classData = c1(b), b))
+    const q = i1(() => (d1) => C(n.value(d1), o.value(d1)).map((x1) => ({
+      ...x1,
+      days: x1.days.map((b) => (b.marker = T(b), b.classData = c1(b), b))
     })));
     function k1(d1) {
-      d1 || d1 === 0 ? B.value[d1]?.triggerTransition(n.value(d1), o.value(d1)) : B.value.forEach((V1, b) => V1.triggerTransition(n.value(b), o.value(b)));
+      d1 || d1 === 0 ? B.value[d1]?.triggerTransition(n.value(d1), o.value(d1)) : B.value.forEach((x1, b) => x1.triggerTransition(n.value(b), o.value(b)));
     }
     function S() {
       c("update-flow-step");
     }
-    const Q = (d1, V1 = !1) => {
-      z(d1, V1), i.spaceConfirm && c("select-date");
-    }, Z = (d1, V1, b = 0) => {
-      N.value[b]?.toggleMonthPicker(d1, V1);
-    }, x1 = (d1, V1, b = 0) => {
-      N.value[b]?.toggleYearPicker(d1, V1);
-    }, H = (d1, V1, b) => {
-      P.value?.toggleTimePicker(d1, V1, b);
-    }, V = (d1, V1) => {
+    const Q = (d1, x1 = !1) => {
+      z(d1, x1), i.spaceConfirm && c("select-date");
+    }, Z = (d1, x1, b = 0) => {
+      N.value[b]?.toggleMonthPicker(d1, x1);
+    }, V1 = (d1, x1, b = 0) => {
+      N.value[b]?.toggleYearPicker(d1, x1);
+    }, H = (d1, x1, b) => {
+      P.value?.toggleTimePicker(d1, x1, b);
+    }, x = (d1, x1) => {
       if (!i.range) {
-        const b = l.value ? l.value : m, A1 = V1 ? new Date(V1) : b, G = d1 ? K4(A1, { weekStartsOn: 1 }) : va(A1, { weekStartsOn: 1 });
+        const b = l.value ? l.value : m, A1 = x1 ? new Date(x1) : b, G = d1 ? K4(A1, { weekStartsOn: 1 }) : va(A1, { weekStartsOn: 1 });
         z({
           value: G,
           current: s2(A1) === n.value(0),
@@ -16240,8 +16240,8 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       N.value[0]?.handleMonthYearChange(d1, !0);
     }, l2 = (d1) => {
       w(0, { month: n.value(0), year: o.value(0) + (d1 ? 1 : -1), fromNav: !0 });
-    }, f1 = (d1, V1) => {
-      d1 === f4.time && c(`time-picker-${V1 ? "open" : "close"}`), c("overlay-toggle", { open: V1, overlay: d1 });
+    }, f1 = (d1, x1) => {
+      d1 === f4.time && c(`time-picker-${x1 ? "open" : "close"}`), c("overlay-toggle", { open: x1, overlay: d1 });
     }, e2 = (d1) => {
       c("overlay-toggle", { open: !1, overlay: d1 }), c("focus-menu");
     };
@@ -16250,7 +16250,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       presetDate: E,
       selectCurrentDate: I,
       toggleMonthPicker: Z,
-      toggleYearPicker: x1,
+      toggleYearPicker: V1,
       toggleTimePicker: H,
       handleArrow: A,
       updateMonthYear: w,
@@ -16266,9 +16266,9 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       }),
       changeMonth: s1,
       changeYear: l2,
-      selectWeekDate: V,
+      selectWeekDate: x,
       setStartTime: r1
-    }), (d1, V1) => (p(), L(R1, null, [
+    }), (d1, x1) => (p(), L(R1, null, [
       q1(g8, {
         "multi-calendars": M(L1).count,
         collapse: d1.collapse,
@@ -16286,11 +16286,11 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
             year: M(o)(b),
             instance: b
           }, d1.$props, {
-            onMount: V1[0] || (V1[0] = (G) => o1(M(e6).header)),
-            onResetFlow: V1[1] || (V1[1] = (G) => d1.$emit("reset-flow")),
+            onMount: x1[0] || (x1[0] = (G) => o1(M(e6).header)),
+            onResetFlow: x1[1] || (x1[1] = (G) => d1.$emit("reset-flow")),
             onUpdateMonthYear: (G) => M(w)(b, G),
             onOverlayClosed: e2,
-            onOverlayOpened: V1[2] || (V1[2] = (G) => d1.$emit("overlay-toggle", { open: !0, overlay: G }))
+            onOverlayOpened: x1[2] || (x1[2] = (G) => d1.$emit("overlay-toggle", { open: !0, overlay: G }))
           }), d4({ _: 2 }, [
             t2(M(z1), (G, i2) => ({
               name: G,
@@ -16310,13 +16310,13 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
           }, d1.$props, {
             onSelectDate: (G) => M(z)(G, b !== 1),
             onHandleSpace: (G) => Q(G, b !== 1),
-            onSetHoverDate: V1[3] || (V1[3] = (G) => M(O)(G)),
+            onSetHoverDate: x1[3] || (x1[3] = (G) => M(O)(G)),
             onHandleScroll: (G) => M(D)(G, b),
             onHandleSwipe: (G) => M(v)(G, b),
-            onMount: V1[4] || (V1[4] = (G) => o1(M(e6).calendar)),
-            onResetFlow: V1[5] || (V1[5] = (G) => d1.$emit("reset-flow")),
-            onTooltipOpen: V1[6] || (V1[6] = (G) => d1.$emit("tooltip-open", G)),
-            onTooltipClose: V1[7] || (V1[7] = (G) => d1.$emit("tooltip-close", G))
+            onMount: x1[4] || (x1[4] = (G) => o1(M(e6).calendar)),
+            onResetFlow: x1[5] || (x1[5] = (G) => d1.$emit("reset-flow")),
+            onTooltipOpen: x1[6] || (x1[6] = (G) => d1.$emit("tooltip-open", G)),
+            onTooltipClose: x1[7] || (x1[7] = (G) => d1.$emit("tooltip-close", G))
           }), d4({ _: 2 }, [
             t2(M(W), (G, i2) => ({
               name: G,
@@ -16340,14 +16340,14 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
           "internal-model-value": d1.internalModelValue,
           "disabled-times-config": M(s),
           "validate-time": M(g),
-          onMount: V1[8] || (V1[8] = (b) => o1(M(e6).timePicker)),
-          "onUpdate:hours": V1[9] || (V1[9] = (b) => M(R)(b)),
-          "onUpdate:minutes": V1[10] || (V1[10] = (b) => M(R)(b, !1)),
-          "onUpdate:seconds": V1[11] || (V1[11] = (b) => M(R)(b, !1, !0)),
-          onResetFlow: V1[12] || (V1[12] = (b) => d1.$emit("reset-flow")),
-          onOverlayClosed: V1[13] || (V1[13] = (b) => f1(b, !1)),
-          onOverlayOpened: V1[14] || (V1[14] = (b) => f1(b, !0)),
-          onAmPmChange: V1[15] || (V1[15] = (b) => d1.$emit("am-pm-change", b))
+          onMount: x1[8] || (x1[8] = (b) => o1(M(e6).timePicker)),
+          "onUpdate:hours": x1[9] || (x1[9] = (b) => M(R)(b)),
+          "onUpdate:minutes": x1[10] || (x1[10] = (b) => M(R)(b, !1)),
+          "onUpdate:seconds": x1[11] || (x1[11] = (b) => M(R)(b, !1, !0)),
+          onResetFlow: x1[12] || (x1[12] = (b) => d1.$emit("reset-flow")),
+          onOverlayClosed: x1[13] || (x1[13] = (b) => f1(b, !1)),
+          onOverlayOpened: x1[14] || (x1[14] = (b) => f1(b, !0)),
+          onAmPmChange: x1[15] || (x1[15] = (b) => d1.$emit("am-pm-change", b))
         }), d4({ _: 2 }, [
           t2(M(J), (b, A1) => ({
             name: b,
@@ -16390,7 +16390,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     }
     return !1;
   }, X = (B, P) => B.quarter === E7(P) && B.year === K1(P), O = (B) => typeof r.value == "function" ? r.value({ quarter: E7(B), year: K1(B) }) : !!r.value.quarters.find((P) => X(P, B)), c1 = i1(() => (B) => {
-    const P = x2(/* @__PURE__ */ new Date(), { year: m.value(B) });
+    const P = V2(/* @__PURE__ */ new Date(), { year: m.value(B) });
     return io({
       start: L6(P),
       end: ma(P)
@@ -16642,7 +16642,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       Y && Y.focus({ preventScroll: !0 });
     }, q = i1(() => I.value?.getSidebarProps() || {}), k1 = () => {
       i.openOnTop && c("recalculate-position");
-    }, S = A4(s, "action"), Q = i1(() => i.monthPicker || i.yearPicker ? A4(s, "monthYear") : i.timePicker ? A4(s, "timePicker") : A4(s, "shared")), Z = i1(() => i.openOnTop ? "dp__arrow_bottom" : "dp__arrow_top"), x1 = i1(() => ({
+    }, S = A4(s, "action"), Q = i1(() => i.monthPicker || i.yearPicker ? A4(s, "monthYear") : i.timePicker ? A4(s, "timePicker") : A4(s, "shared")), Z = i1(() => i.openOnTop ? "dp__arrow_bottom" : "dp__arrow_top"), V1 = i1(() => ({
       dp__menu_disabled: i.disabled,
       dp__menu_readonly: i.readonly,
       "dp-menu-loading": i.loading
@@ -16653,7 +16653,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
         dp__relative: g.value.enabled,
         ...T.value.menu ?? {}
       })
-    ), V = (Y) => {
+    ), x = (Y) => {
       O3(Y, C.value, !0);
     }, s1 = (Y) => {
       i.escClose && (c("close-picker"), A(Y));
@@ -16670,7 +16670,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       o1(), c("time-picker-close");
     }, d1 = (Y) => {
       I.value?.toggleTimePicker(!1, !1), I.value?.toggleMonthPicker(!1, !1, Y), I.value?.toggleYearPicker(!1, !1, Y);
-    }, V1 = (Y, N1 = 0) => Y === "month" ? I.value?.toggleMonthPicker(!1, !0, N1) : Y === "year" ? I.value?.toggleYearPicker(!1, !0, N1) : Y === "time" ? I.value?.toggleTimePicker(!0, !1) : d1(N1), b = (Y, ...N1) => {
+    }, x1 = (Y, N1 = 0) => Y === "month" ? I.value?.toggleMonthPicker(!1, !0, N1) : Y === "year" ? I.value?.toggleYearPicker(!1, !0, N1) : Y === "time" ? I.value?.toggleTimePicker(!0, !1) : d1(N1), b = (Y, ...N1) => {
       I.value?.[Y] && I.value?.[Y](...N1);
     }, A1 = () => {
       b("selectCurrentDate");
@@ -16708,7 +16708,7 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
     };
     return a({
       updateMonthYear: B1,
-      switchView: V1,
+      switchView: x1,
       handleFlow: W,
       onValueCleared: () => {
         I.value?.setStartTime?.();
@@ -16723,12 +16723,12 @@ const S5 = (e, a) => e?.querySelector(`[data-dp-element="${a}"]`), ze = (e, a) =
       class: T1(H.value),
       style: I4({ "--dp-arrow-left": J.value }),
       onMouseleave: i2,
-      onClick: V,
+      onClick: x,
       onKeydown: N2
     }, [
       (Y.disabled || Y.readonly) && M(g).enabled || Y.loading ? (p(), L("div", {
         key: 0,
-        class: T1(x1.value)
+        class: T1(V1.value)
       }, [
         Y.loading ? (p(), L("div", Pf, [...N1[19] || (N1[19] = [
           F("span", { class: "dp--menu-loader" }, null, -1)
@@ -16864,7 +16864,7 @@ const Zf = ({
     top: "0",
     left: "0"
   }), g = m1(!1), C = h0(n, "teleportCenter");
-  V4(C, () => {
+  x4(C, () => {
     m.value = JSON.parse(JSON.stringify({})), I();
   });
   const T = (P) => {
@@ -17040,11 +17040,11 @@ const Zf = ({
   }), t?.length && t.forEach((i) => {
     i.slot && c.push(i.slot);
   }), c;
-}, x0 = (e) => {
+}, V0 = (e) => {
   const a = i1(() => (c) => e.value ? c ? e.value.open : e.value.close : ""), t = i1(() => (c) => e.value ? c ? e.value.menuAppearTop : e.value.menuAppearBottom : "");
   return { transitionName: a, showTransition: !!e.value, menuTransition: t };
 }, w0 = (e, a, t) => {
-  const { defaultedRange: c, defaultedTz: i } = _2(e), r = l1(x4(l1(), i.value.timezone)), n = m1([{ month: s2(r), year: K1(r) }]), o = (g) => {
+  const { defaultedRange: c, defaultedTz: i } = _2(e), r = l1(V4(l1(), i.value.timezone)), n = m1([{ month: s2(r), year: K1(r) }]), o = (g) => {
     const C = {
       hours: y3(r),
       minutes: R3(r),
@@ -17056,7 +17056,7 @@ const Zf = ({
     minutes: o("minutes"),
     seconds: o("seconds")
   });
-  V4(
+  x4(
     c,
     (g, C) => {
       g.enabled !== C.enabled && (l.hours = o("hours"), l.minutes = o("minutes"), l.seconds = o("seconds"));
@@ -17073,7 +17073,7 @@ const Zf = ({
   ), m = i1(
     () => (g) => n.value[g] ? n.value[g].year : 0
   );
-  return V4(
+  return x4(
     d,
     (g, C) => {
       t && JSON.stringify(g ?? {}) !== JSON.stringify(C ?? {}) && t();
@@ -17096,28 +17096,28 @@ const Zf = ({
     defaultedTz: n,
     propDates: o,
     defaultedRange: l
-  } = _2(a), { isDisabled: d } = $3(a), s = m1(null), m = m1(x4(/* @__PURE__ */ new Date(), n.value.timezone)), g = (H) => {
+  } = _2(a), { isDisabled: d } = $3(a), s = m1(null), m = m1(V4(/* @__PURE__ */ new Date(), n.value.timezone)), g = (H) => {
     !H.current && a.hideOffsetDates || (s.value = H.value);
   }, C = () => {
     s.value = null;
-  }, T = (H) => Array.isArray(e.value) && l.value.enabled && e.value[0] && s.value ? H ? E2(s.value, e.value[0]) : O2(s.value, e.value[0]) : !0, A = (H, V) => {
-    const s1 = () => e.value ? V ? e.value[0] || null : e.value[1] : null, l2 = e.value && Array.isArray(e.value) ? s1() : null;
+  }, T = (H) => Array.isArray(e.value) && l.value.enabled && e.value[0] && s.value ? H ? E2(s.value, e.value[0]) : O2(s.value, e.value[0]) : !0, A = (H, x) => {
+    const s1 = () => e.value ? x ? e.value[0] || null : e.value[1] : null, l2 = e.value && Array.isArray(e.value) ? s1() : null;
     return f2(l1(H.value), l2);
   }, D = (H) => {
-    const V = Array.isArray(e.value) ? e.value[0] : null;
-    return H ? !O2(s.value ?? null, V) : !0;
-  }, v = (H, V = !0) => (l.value.enabled || a.weekPicker) && Array.isArray(e.value) && e.value.length === 2 ? a.hideOffsetDates && !H.current ? !1 : f2(l1(H.value), e.value[V ? 0 : 1]) : l.value.enabled ? A(H, V) && D(V) || f2(H.value, Array.isArray(e.value) ? e.value[0] : null) && T(V) : !1, z = (H, V) => {
+    const x = Array.isArray(e.value) ? e.value[0] : null;
+    return H ? !O2(s.value ?? null, x) : !0;
+  }, v = (H, x = !0) => (l.value.enabled || a.weekPicker) && Array.isArray(e.value) && e.value.length === 2 ? a.hideOffsetDates && !H.current ? !1 : f2(l1(H.value), e.value[x ? 0 : 1]) : l.value.enabled ? A(H, x) && D(x) || f2(H.value, Array.isArray(e.value) ? e.value[0] : null) && T(x) : !1, z = (H, x) => {
     if (Array.isArray(e.value) && e.value[0] && e.value.length === 1) {
       const s1 = f2(H.value, s.value);
-      return V ? E2(e.value[0], H.value) && s1 : O2(e.value[0], H.value) && s1;
+      return x ? E2(e.value[0], H.value) && s1 : O2(e.value[0], H.value) && s1;
     }
     return !1;
-  }, w = (H) => !e.value || a.hideOffsetDates && !H.current ? !1 : l.value.enabled ? a.modelAuto && Array.isArray(e.value) ? f2(H.value, e.value[0] ? e.value[0] : m.value) : !1 : c.value.enabled && Array.isArray(e.value) ? e.value.some((V) => f2(V, H.value)) : f2(H.value, e.value ? e.value : m.value), E = (H) => {
+  }, w = (H) => !e.value || a.hideOffsetDates && !H.current ? !1 : l.value.enabled ? a.modelAuto && Array.isArray(e.value) ? f2(H.value, e.value[0] ? e.value[0] : m.value) : !1 : c.value.enabled && Array.isArray(e.value) ? e.value.some((x) => f2(x, H.value)) : f2(H.value, e.value ? e.value : m.value), E = (H) => {
     if (l.value.autoRange || a.weekPicker) {
       if (s.value) {
         if (a.hideOffsetDates && !H.current) return !1;
-        const V = F4(s.value, +l.value.autoRange), s1 = d3(l1(s.value), a.weekStart);
-        return a.weekPicker ? f2(s1[1], l1(H.value)) : f2(V, l1(H.value));
+        const x = F4(s.value, +l.value.autoRange), s1 = d3(l1(s.value), a.weekStart);
+        return a.weekPicker ? f2(s1[1], l1(H.value)) : f2(x, l1(H.value));
       }
       return !1;
     }
@@ -17125,10 +17125,10 @@ const Zf = ({
   }, I = (H) => {
     if (l.value.autoRange || a.weekPicker) {
       if (s.value) {
-        const V = F4(s.value, +l.value.autoRange);
+        const x = F4(s.value, +l.value.autoRange);
         if (a.hideOffsetDates && !H.current) return !1;
         const s1 = d3(l1(s.value), a.weekStart);
-        return a.weekPicker ? E2(H.value, s1[0]) && O2(H.value, s1[1]) : E2(H.value, s.value) && O2(H.value, V);
+        return a.weekPicker ? E2(H.value, s1[0]) && O2(H.value, s1[1]) : E2(H.value, s.value) && O2(H.value, x);
       }
       return !1;
     }
@@ -17137,33 +17137,33 @@ const Zf = ({
     if (l.value.autoRange || a.weekPicker) {
       if (s.value) {
         if (a.hideOffsetDates && !H.current) return !1;
-        const V = d3(l1(s.value), a.weekStart);
-        return a.weekPicker ? f2(V[0], H.value) : f2(s.value, H.value);
+        const x = d3(l1(s.value), a.weekStart);
+        return a.weekPicker ? f2(x[0], H.value) : f2(s.value, H.value);
       }
       return !1;
     }
     return !1;
   }, U = (H) => y0(e.value, s.value, H.value), r1 = () => a.modelAuto && Array.isArray(a.internalModelValue) ? !!a.internalModelValue[0] : !1, X = () => a.modelAuto ? _a(a.internalModelValue) : !0, O = (H) => {
     if (a.weekPicker) return !1;
-    const V = l.value.enabled ? !v(H) && !v(H, !1) : !0;
-    return !d(H.value) && !w(H) && !(!H.current && a.hideOffsetDates) && V;
+    const x = l.value.enabled ? !v(H) && !v(H, !1) : !0;
+    return !d(H.value) && !w(H) && !(!H.current && a.hideOffsetDates) && x;
   }, c1 = (H) => l.value.enabled ? a.modelAuto ? r1() && w(H) : !1 : w(H), g1 = (H) => r.value ? ds(H.value, o.value.highlight) : !1, L1 = (H) => {
-    const V = d(H.value);
-    return V && (typeof r.value == "function" ? !r.value(H.value, V) : !r.value.options.highlightDisabled);
+    const x = d(H.value);
+    return x && (typeof r.value == "function" ? !r.value(H.value, x) : !r.value.options.highlightDisabled);
   }, N = (H) => typeof r.value == "function" ? r.value(H.value) : r.value.weekdays?.includes(H.value.getDay()), B = (H) => (l.value.enabled || a.weekPicker) && (!(t.value.count > 0) || H.current) && X() && !(!H.current && a.hideOffsetDates) && !w(H) ? U(H) : !1, P = (H) => {
     if (Array.isArray(e.value) && e.value.length === 1) {
-      const { before: V, after: s1 } = X7(+l.value.maxRange, e.value[0]);
-      return I6(H.value, V) || c6(H.value, s1);
+      const { before: x, after: s1 } = X7(+l.value.maxRange, e.value[0]);
+      return I6(H.value, x) || c6(H.value, s1);
     }
     return !1;
   }, W = (H) => {
     if (Array.isArray(e.value) && e.value.length === 1) {
-      const { before: V, after: s1 } = X7(+l.value.minRange, e.value[0]);
-      return y0([V, s1], e.value[0], H.value);
+      const { before: x, after: s1 } = X7(+l.value.minRange, e.value[0]);
+      return y0([x, s1], e.value[0], H.value);
     }
     return !1;
   }, z1 = (H) => l.value.enabled && (l.value.maxRange || l.value.minRange) ? l.value.maxRange && l.value.minRange ? P(H) || W(H) : l.value.maxRange ? P(H) : W(H) : !1, J = (H) => {
-    const { isRangeStart: V, isRangeEnd: s1 } = S(H), l2 = l.value.enabled ? V || s1 : !1;
+    const { isRangeStart: x, isRangeEnd: s1 } = S(H), l2 = l.value.enabled ? x || s1 : !1;
     return {
       dp__cell_offset: !H.current,
       dp__pointer: !a.disabled && !(!H.current && a.hideOffsetDates) && !d(H.value) && !z1(H),
@@ -17179,12 +17179,12 @@ const Zf = ({
     dp__date_hover: O(H)
   }), q = (H) => {
     if (e.value && !Array.isArray(e.value)) {
-      const V = d3(e.value, a.weekStart);
+      const x = d3(e.value, a.weekStart);
       return {
         ...Z(H),
-        dp__range_start: f2(V[0], H.value),
-        dp__range_end: f2(V[1], H.value),
-        dp__range_between_week: E2(H.value, V[0]) && O2(H.value, V[1])
+        dp__range_start: f2(x[0], H.value),
+        dp__range_end: f2(x[1], H.value),
+        dp__range_between_week: E2(H.value, x[0]) && O2(H.value, x[1])
       };
     }
     return {
@@ -17192,28 +17192,28 @@ const Zf = ({
     };
   }, k1 = (H) => {
     if (e.value && Array.isArray(e.value)) {
-      const V = d3(e.value[0], a.weekStart), s1 = e.value[1] ? d3(e.value[1], a.weekStart) : [];
+      const x = d3(e.value[0], a.weekStart), s1 = e.value[1] ? d3(e.value[1], a.weekStart) : [];
       return {
         ...Z(H),
-        dp__range_start: f2(V[0], H.value) || f2(s1[0], H.value),
-        dp__range_end: f2(V[1], H.value) || f2(s1[1], H.value),
-        dp__range_between_week: E2(H.value, V[0]) && O2(H.value, V[1]) || E2(H.value, s1[0]) && O2(H.value, s1[1]),
-        dp__range_between: E2(H.value, V[1]) && O2(H.value, s1[0])
+        dp__range_start: f2(x[0], H.value) || f2(s1[0], H.value),
+        dp__range_end: f2(x[1], H.value) || f2(s1[1], H.value),
+        dp__range_between_week: E2(H.value, x[0]) && O2(H.value, x[1]) || E2(H.value, s1[0]) && O2(H.value, s1[1]),
+        dp__range_between: E2(H.value, x[1]) && O2(H.value, s1[0])
       };
     }
     return {
       ...Z(H)
     };
   }, S = (H) => {
-    const V = t.value.count > 0 ? H.current && v(H) && X() : v(H) && X(), s1 = t.value.count > 0 ? H.current && v(H, !1) && X() : v(H, !1) && X();
-    return { isRangeStart: V, isRangeEnd: s1 };
+    const x = t.value.count > 0 ? H.current && v(H) && X() : v(H) && X(), s1 = t.value.count > 0 ? H.current && v(H, !1) && X() : v(H, !1) && X();
+    return { isRangeStart: x, isRangeEnd: s1 };
   }, Q = (H) => {
-    const { isRangeStart: V, isRangeEnd: s1 } = S(H);
+    const { isRangeStart: x, isRangeEnd: s1 } = S(H);
     return {
-      dp__range_start: V,
+      dp__range_start: x,
       dp__range_end: s1,
       dp__range_between: B(H),
-      dp__date_hover: f2(H.value, s.value) && !V && !s1 && !a.weekPicker,
+      dp__date_hover: f2(H.value, s.value) && !x && !s1 && !a.weekPicker,
       dp__date_hover_start: z(H, !0),
       dp__date_hover_end: z(H, !1)
     };
@@ -17222,13 +17222,13 @@ const Zf = ({
     dp__cell_auto_range: I(H),
     dp__cell_auto_range_start: R(H),
     dp__cell_auto_range_end: E(H)
-  }), x1 = (H) => l.value.enabled ? l.value.autoRange ? Z(H) : a.modelAuto ? { ...o1(H), ...Q(H) } : a.weekPicker ? k1(H) : Q(H) : a.weekPicker ? q(H) : o1(H);
+  }), V1 = (H) => l.value.enabled ? l.value.autoRange ? Z(H) : a.modelAuto ? { ...o1(H), ...Q(H) } : a.weekPicker ? k1(H) : Q(H) : a.weekPicker ? q(H) : o1(H);
   return {
     setHoverDate: g,
     clearHoverDate: C,
     getDayClassData: (H) => a.hideOffsetDates && !H.current ? {} : {
       ...J(H),
-      ...x1(H),
+      ...V1(H),
       [a.dayClass ? a.dayClass(H.value, a.internalModelValue) : ""]: !0,
       ...i.value.calendarCell ?? {}
     }
@@ -17410,10 +17410,10 @@ const Zf = ({
     }, R = (q) => {
       const { rangeSeparator: k1 } = r.value, [S, Q] = q.split(`${k1}`);
       if (S) {
-        const Z = I(S.trim()), x1 = Q ? I(Q.trim()) : void 0;
-        if (c6(Z, x1)) return;
-        const H = Z && x1 ? [Z, x1] : [Z];
-        T(x1, H, 0) && (A.value = Z ? H : null);
+        const Z = I(S.trim()), V1 = Q ? I(Q.trim()) : void 0;
+        if (c6(Z, V1)) return;
+        const H = Z && V1 ? [Z, V1] : [Z];
+        T(V1, H, 0) && (A.value = Z ? H : null);
       }
     }, U = () => {
       z.value = !0;
@@ -17546,7 +17546,7 @@ const Zf = ({
 }, ad = (e) => Bt() ? ($t(e), !0) : !1, td = (e, a, t, c) => {
   if (!e) return a5;
   let i = a5;
-  const r = V4(
+  const r = x4(
     () => M(e),
     (o) => {
       i(), o && (o.removeEventListener(a, t), o.addEventListener(a, t, c), i = () => {
@@ -17607,7 +17607,7 @@ const Zf = ({
       defaultedConfig: O,
       defaultedRange: c1,
       defaultedMultiDates: g1
-    } = _2(i), { menuTransition: L1, showTransition: N } = x0(U), { isMobile: B } = Ka(O), P = f8();
+    } = _2(i), { menuTransition: L1, showTransition: N } = V0(U), { isMobile: B } = Ka(O), P = f8();
     t4(() => {
       H(i.modelValue), z4().then(() => {
         X.value.enabled || (S(C.value)?.addEventListener("scroll", G), window?.addEventListener("resize", i2));
@@ -17616,7 +17616,7 @@ const Zf = ({
       X.value.enabled || (S(C.value)?.removeEventListener("scroll", G), window?.removeEventListener("resize", i2)), window?.removeEventListener("keyup", B1), window?.removeEventListener("keydown", Y2);
     });
     const W = A4(r, "all", i.presetDates), z1 = A4(r, "input");
-    V4(
+    x4(
       [o, l],
       () => {
         H(o.value);
@@ -17634,9 +17634,9 @@ const Zf = ({
       slots: r
     }), {
       inputValue: Z,
-      internalModelValue: x1,
+      internalModelValue: V1,
       parseExternalModelValue: H,
-      emitModelValue: V,
+      emitModelValue: x,
       formatInputValue: s1,
       checkBeforeEmit: l2
     } = Is(c, i, { isInputFocused: g, isTextInputDate: v }), f1 = i1(
@@ -17651,7 +17651,7 @@ const Zf = ({
     ), e2 = i1(() => i.dark ? "dp__theme_dark" : "dp__theme_light"), d1 = i1(() => i.teleport ? {
       to: typeof i.teleport == "boolean" ? "body" : i.teleport,
       disabled: !i.teleport || X.value.enabled
-    } : {}), V1 = i1(() => ({ class: "dp__outer_menu_wrap" })), b = i1(() => X.value.enabled && (i.timePicker || i.monthPicker || i.yearPicker || i.quarterPicker)), A1 = () => m.value?.$el?.getBoundingClientRect() ?? { width: 0, left: 0, right: 0 }, G = () => {
+    } : {}), x1 = i1(() => ({ class: "dp__outer_menu_wrap" })), b = i1(() => X.value.enabled && (i.timePicker || i.monthPicker || i.yearPicker || i.quarterPicker)), A1 = () => m.value?.$el?.getBoundingClientRect() ?? { width: 0, left: 0, right: 0 }, G = () => {
       n.value && (O.value.closeOnScroll ? n4() : k1());
     }, i2 = () => {
       n.value && k1();
@@ -17666,33 +17666,33 @@ const Zf = ({
     }, y4 = () => {
       Z.value = "", M3(), s.value?.onValueCleared(), m.value?.setParsedDate(null), c("update:model-value", null), c("update:model-timezone-value", null), c("cleared"), O.value.closeOnClearValue && n4();
     }, Y = () => {
-      const u1 = x1.value;
+      const u1 = V1.value;
       return !u1 || !Array.isArray(u1) && I(u1) ? !0 : Array.isArray(u1) ? g1.value.enabled || u1.length === 2 && I(u1[0]) && I(u1[1]) ? !0 : c1.value.partialRange && !i.timePicker ? I(u1[0]) : !1 : !1;
     }, N1 = () => {
-      l2() && Y() ? (V(), n4()) : c("invalid-select", x1.value);
+      l2() && Y() ? (x(), n4()) : c("invalid-select", V1.value);
     }, F1 = (u1) => {
-      J4(), V(), O.value.closeOnAutoApply && !u1 && n4();
+      J4(), x(), O.value.closeOnAutoApply && !u1 && n4();
     }, J4 = () => {
-      m.value && r1.value.enabled && m.value.setParsedDate(x1.value);
+      m.value && r1.value.enabled && m.value.setParsedDate(V1.value);
     }, w4 = (u1 = !1) => {
-      i.autoApply && R(x1.value) && Y() && (c1.value.enabled && Array.isArray(x1.value) ? (c1.value.partialRange || x1.value.length === 2) && F1(u1) : F1(u1));
+      i.autoApply && R(V1.value) && Y() && (c1.value.enabled && Array.isArray(V1.value) ? (c1.value.partialRange || V1.value.length === 2) && F1(u1) : F1(u1));
     }, M3 = () => {
-      r1.value.enabled || (x1.value = null);
+      r1.value.enabled || (V1.value = null);
     }, n4 = (u1 = !1) => {
-      u1 && x1.value && O.value.setDateOnMenuClose && N1(), X.value.enabled || (n.value && (n.value = !1, q.value = !1, z(!1), w(!1), E(), c("closed"), Z.value && H(o.value)), M3(), c("blur"), s.value?.$el?.remove());
+      u1 && V1.value && O.value.setDateOnMenuClose && N1(), X.value.enabled || (n.value && (n.value = !1, q.value = !1, z(!1), w(!1), E(), c("closed"), Z.value && H(o.value)), M3(), c("blur"), s.value?.$el?.remove());
     }, l6 = (u1, I1, S1 = !1) => {
       if (!u1) {
-        x1.value = null;
+        V1.value = null;
         return;
       }
       const u2 = Array.isArray(u1) ? !u1.some((b4) => !I(b4)) : I(u1), k4 = R(u1);
-      u2 && k4 ? (v.value = !0, x1.value = u1, I1 ? (T.value = S1, N1(), c("text-submit")) : i.autoApply && w4(!0), z4().then(() => {
+      u2 && k4 ? (v.value = !0, V1.value = u1, I1 ? (T.value = S1, N1(), c("text-submit")) : i.autoApply && w4(!0), z4().then(() => {
         v.value = !1;
       })) : c("invalid-date", u1);
     }, s6 = () => {
-      i.autoApply && R(x1.value) && V(), J4();
+      i.autoApply && R(V1.value) && x(), J4();
     }, U3 = () => n.value ? n4() : N2(), Z6 = (u1) => {
-      x1.value = u1;
+      V1.value = u1;
     }, j6 = () => {
       r1.value.enabled && (g.value = !0, s1()), c("focus");
     }, n2 = () => {
@@ -17746,7 +17746,7 @@ const Zf = ({
         onClear: y4,
         onOpen: N2,
         onSetInputDate: l6,
-        onSetEmptyDate: M(V),
+        onSetEmptyDate: M(x),
         onSelectDate: N1,
         onToggle: U3,
         onClose: n4,
@@ -17773,7 +17773,7 @@ const Zf = ({
                 key: 0,
                 ref_key: "dpWrapMenuRef",
                 ref: d
-              }, V1.value, {
+              }, x1.value, {
                 class: { "dp--menu-wrapper": !M(X).enabled },
                 style: M(X).enabled ? void 0 : M(o1)
               }), [
@@ -17781,8 +17781,8 @@ const Zf = ({
                   ref_key: "dpMenuRef",
                   ref: s
                 }, u1.$props, {
-                  "internal-model-value": M(x1),
-                  "onUpdate:internalModelValue": I1[3] || (I1[3] = (S1) => t0(x1) ? x1.value = S1 : null),
+                  "internal-model-value": M(V1),
+                  "onUpdate:internalModelValue": I1[3] || (I1[3] = (S1) => t0(V1) ? V1.value = S1 : null),
                   class: { [e2.value]: !0, "dp--menu-wrapper": u1.teleport },
                   "open-on-top": M(J),
                   "no-overlay-focus": b.value,
@@ -17795,7 +17795,7 @@ const Zf = ({
                   onTimeUpdate: s6,
                   onFlowStep: I1[4] || (I1[4] = (S1) => u1.$emit("flow-step", S1)),
                   onUpdateMonthYear: I1[5] || (I1[5] = (S1) => u1.$emit("update-month-year", S1)),
-                  onInvalidSelect: I1[6] || (I1[6] = (S1) => u1.$emit("invalid-select", M(x1))),
+                  onInvalidSelect: I1[6] || (I1[6] = (S1) => u1.$emit("invalid-select", M(V1))),
                   onAutoApplyInvalid: I1[7] || (I1[7] = (S1) => u1.$emit("invalid-select", S1)),
                   onInvalidFixedRange: I1[8] || (I1[8] = (S1) => u1.$emit("invalid-fixed-range", S1)),
                   onRecalculatePosition: M(k1),
@@ -17827,17 +17827,17 @@ const Zf = ({
       }, 16))
     ], 10, id));
   }
-}), Ve = /* @__PURE__ */ (() => {
+}), xe = /* @__PURE__ */ (() => {
   const e = rd;
   return e.install = (a) => {
     a.component("Vue3DatePicker", e);
   }, e;
 })(), nd = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  default: Ve
+  default: xe
 }, Symbol.toStringTag, { value: "Module" }));
 Object.entries(nd).forEach(([e, a]) => {
-  e !== "default" && (Ve[e] = a);
+  e !== "default" && (xe[e] = a);
 });
 let od = {
   name: "DateField",
@@ -17868,7 +17868,7 @@ let od = {
       } else e1.isEmpty(this.model) && this.schema.default && (this.model = this.schema.default);
     }
   },
-  components: { Control: c4, VueDatePicker: Ve },
+  components: { Control: c4, VueDatePicker: xe },
   builder: {
     props() {
       return {
@@ -17914,12 +17914,11 @@ function sd(e, a, t, c, i, r) {
         "enable-time-picker": !1,
         "auto-apply": !0,
         locale: e.locale,
-        format: e.formatDate,
         class: T1({ "is-invalid": l.invalid && l.touched }),
         placeholder: e.options.placeholder,
         disabled: e.schema.readonly,
         "text-input": ""
-      }, null, 8, ["modelValue", "locale", "format", "class", "placeholder", "disabled"])
+      }, null, 8, ["modelValue", "locale", "class", "placeholder", "disabled"])
     ]),
     _: 1
   }, 16);
@@ -18183,22 +18182,22 @@ const yd = {
       return e == null ? this.mutableLoading = !this.mutableLoading : this.mutableLoading = e;
     }
   }
-}, xe = (e, a) => {
+}, Ve = (e, a) => {
   const t = e.__vccOpts || e;
   for (const [c, i] of a)
     t[c] = i;
   return t;
-}, Cd = {}, Vd = {
+}, Cd = {}, xd = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "10",
   height: "10"
-}, xd = /* @__PURE__ */ F("path", { d: "M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z" }, null, -1), wd = [
-  xd
+}, Vd = /* @__PURE__ */ F("path", { d: "M6.895455 5l2.842897-2.842898c.348864-.348863.348864-.914488 0-1.263636L9.106534.261648c-.348864-.348864-.914489-.348864-1.263636 0L5 3.104545 2.157102.261648c-.348863-.348864-.914488-.348864-1.263636 0L.261648.893466c-.348864.348864-.348864.914489 0 1.263636L3.104545 5 .261648 7.842898c-.348864.348863-.348864.914488 0 1.263636l.631818.631818c.348864.348864.914773.348864 1.263636 0L5 6.895455l2.842898 2.842897c.348863.348864.914772.348864 1.263636 0l.631818-.631818c.348864-.348864.348864-.914489 0-1.263636L6.895455 5z" }, null, -1), wd = [
+  Vd
 ];
 function Hd(e, a) {
-  return p(), L("svg", Vd, wd);
+  return p(), L("svg", xd, wd);
 }
-const Ld = /* @__PURE__ */ xe(Cd, [["render", Hd]]), Nd = {}, Sd = {
+const Ld = /* @__PURE__ */ Ve(Cd, [["render", Hd]]), Nd = {}, Sd = {
   xmlns: "http://www.w3.org/2000/svg",
   width: "14",
   height: "10"
@@ -18208,7 +18207,7 @@ const Ld = /* @__PURE__ */ xe(Cd, [["render", Hd]]), Nd = {}, Sd = {
 function kd(e, a) {
   return p(), L("svg", Sd, _d);
 }
-const Td = /* @__PURE__ */ xe(Nd, [["render", kd]]), r9 = {
+const Td = /* @__PURE__ */ Ve(Nd, [["render", kd]]), r9 = {
   Deselect: Ld,
   OpenIndicator: Td
 }, Dd = {
@@ -18835,7 +18834,7 @@ function Xd(e, a, t, c, i, r) {
     b1(e.$slots, "footer", $1(Y1(r.scope.footer)))
   ], 10, Ed);
 }
-const U6 = /* @__PURE__ */ xe(Id, [["render", Xd]]), Jd = {
+const U6 = /* @__PURE__ */ Ve(Id, [["render", Xd]]), Jd = {
   name: "FileBrowser",
   props: {
     modelValue: {},
@@ -19312,7 +19311,7 @@ function nu() {
         throw new TypeError(`Invalid attempt to spread non-iterable instance.
 In order to be iterable, non-array objects must have a [Symbol.iterator]() method.`);
       }
-      var v = typeof window < "u" && typeof window.document < "u", z = v ? window : {}, w = v && z.document.documentElement ? "ontouchstart" in z.document.documentElement : !1, E = v ? "PointerEvent" in z : !1, I = "cropper", R = "all", U = "crop", r1 = "move", X = "zoom", O = "e", c1 = "w", g1 = "s", L1 = "n", N = "ne", B = "nw", P = "se", W = "sw", z1 = "".concat(I, "-crop"), J = "".concat(I, "-disabled"), o1 = "".concat(I, "-hidden"), q = "".concat(I, "-hide"), k1 = "".concat(I, "-invisible"), S = "".concat(I, "-modal"), Q = "".concat(I, "-move"), Z = "".concat(I, "Action"), x1 = "".concat(I, "Preview"), H = "crop", V = "move", s1 = "none", l2 = "crop", f1 = "cropend", e2 = "cropmove", d1 = "cropstart", V1 = "dblclick", b = w ? "touchstart" : "mousedown", A1 = w ? "touchmove" : "mousemove", G = w ? "touchend touchcancel" : "mouseup", i2 = E ? "pointerdown" : b, B1 = E ? "pointermove" : A1, Y2 = E ? "pointerup pointercancel" : G, N2 = "ready", y4 = "resize", Y = "wheel", N1 = "zoom", F1 = "image/jpeg", J4 = /^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/, w4 = /^data:/, M3 = /^data:image\/jpeg;base64,/, n4 = /^img|canvas$/i, l6 = 200, s6 = 100, U3 = {
+      var v = typeof window < "u" && typeof window.document < "u", z = v ? window : {}, w = v && z.document.documentElement ? "ontouchstart" in z.document.documentElement : !1, E = v ? "PointerEvent" in z : !1, I = "cropper", R = "all", U = "crop", r1 = "move", X = "zoom", O = "e", c1 = "w", g1 = "s", L1 = "n", N = "ne", B = "nw", P = "se", W = "sw", z1 = "".concat(I, "-crop"), J = "".concat(I, "-disabled"), o1 = "".concat(I, "-hidden"), q = "".concat(I, "-hide"), k1 = "".concat(I, "-invisible"), S = "".concat(I, "-modal"), Q = "".concat(I, "-move"), Z = "".concat(I, "Action"), V1 = "".concat(I, "Preview"), H = "crop", x = "move", s1 = "none", l2 = "crop", f1 = "cropend", e2 = "cropmove", d1 = "cropstart", x1 = "dblclick", b = w ? "touchstart" : "mousedown", A1 = w ? "touchmove" : "mousemove", G = w ? "touchend touchcancel" : "mouseup", i2 = E ? "pointerdown" : b, B1 = E ? "pointermove" : A1, Y2 = E ? "pointerup pointercancel" : G, N2 = "ready", y4 = "resize", Y = "wheel", N1 = "zoom", F1 = "image/jpeg", J4 = /^e|w|s|n|se|sw|ne|nw|all|crop|move|zoom$/, w4 = /^data:/, M3 = /^data:image\/jpeg;base64,/, n4 = /^img|canvas$/i, l6 = 200, s6 = 100, U3 = {
         // Define the view mode of the cropper
         viewMode: 0,
         // 0, 1, 2, 3
@@ -19424,9 +19423,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       var u2 = Object.assign || function(f) {
         for (var h = arguments.length, u = new Array(h > 1 ? h - 1 : 0), k = 1; k < h; k++)
           u[k - 1] = arguments[k];
-        return $(f) && u.length > 0 && u.forEach(function(x) {
-          $(x) && Object.keys(x).forEach(function(_) {
-            f[_] = x[_];
+        return $(f) && u.length > 0 && u.forEach(function(V) {
+          $(V) && Object.keys(V).forEach(function(_) {
+            f[_] = V[_];
           });
         }), f;
       }, k4 = /\.\d*(?:0|9){12}\d*$/;
@@ -19490,7 +19489,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function C8(y) {
         return y.replace(vt, "$1-$2").toLowerCase();
       }
-      function V8(y, f) {
+      function x8(y, f) {
         return $(y[f]) ? y[f] : y.dataset ? y.dataset[f] : y.getAttribute("data-".concat(C8(f)));
       }
       function q6(y, f, h) {
@@ -19525,8 +19524,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
              * {@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Getter_only}
              * @param {boolean} value - The value to set
              */
-            set: function(x) {
-              f = x;
+            set: function(V) {
+              f = V;
             }
           });
           z.addEventListener("test", h, u), z.removeEventListener("test", h, u);
@@ -19535,27 +19534,27 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       })();
       function B4(y, f, h) {
         var u = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {}, k = h;
-        f.trim().split(Ae).forEach(function(x) {
+        f.trim().split(Ae).forEach(function(V) {
           if (!_e) {
             var _ = y.listeners;
-            _ && _[x] && _[x][h] && (k = _[x][h], delete _[x][h], Object.keys(_[x]).length === 0 && delete _[x], Object.keys(_).length === 0 && delete y.listeners);
+            _ && _[V] && _[V][h] && (k = _[V][h], delete _[V][h], Object.keys(_[V]).length === 0 && delete _[V], Object.keys(_).length === 0 && delete y.listeners);
           }
-          y.removeEventListener(x, k, u);
+          y.removeEventListener(V, k, u);
         });
       }
       function D4(y, f, h) {
         var u = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : {}, k = h;
-        f.trim().split(Ae).forEach(function(x) {
+        f.trim().split(Ae).forEach(function(V) {
           if (u.once && !_e) {
             var _ = y.listeners, K = _ === void 0 ? {} : _;
             k = function() {
-              delete K[x][h], y.removeEventListener(x, k, u);
+              delete K[V][h], y.removeEventListener(V, k, u);
               for (var n1 = arguments.length, a1 = new Array(n1), t1 = 0; t1 < n1; t1++)
                 a1[t1] = arguments[t1];
               h.apply(y, a1);
-            }, K[x] || (K[x] = {}), K[x][h] && y.removeEventListener(x, K[x][h], u), K[x][h] = k, y.listeners = K;
+            }, K[V] || (K[V] = {}), K[V][h] && y.removeEventListener(V, K[V][h], u), K[V][h] = k, y.listeners = K;
           }
-          y.addEventListener(x, k, u);
+          y.addEventListener(V, k, u);
         });
       }
       function u6(y, f, h) {
@@ -19573,18 +19572,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           top: f.top + (window.pageYOffset - document.documentElement.clientTop)
         };
       }
-      var x8 = z.location, gt = /^(\w+:)\/\/([^:/?#]*):?(\d*)/i;
+      var V8 = z.location, gt = /^(\w+:)\/\/([^:/?#]*):?(\d*)/i;
       function Te(y) {
         var f = y.match(gt);
-        return f !== null && (f[1] !== x8.protocol || f[2] !== x8.hostname || f[3] !== x8.port);
+        return f !== null && (f[1] !== V8.protocol || f[2] !== V8.hostname || f[3] !== V8.port);
       }
       function De(y) {
         var f = "timestamp=".concat((/* @__PURE__ */ new Date()).getTime());
         return y + (y.indexOf("?") === -1 ? "?" : "&") + f;
       }
       function Y6(y) {
-        var f = y.rotate, h = y.scaleX, u = y.scaleY, k = y.translateX, x = y.translateY, _ = [];
-        n2(k) && k !== 0 && _.push("translateX(".concat(k, "px)")), n2(x) && x !== 0 && _.push("translateY(".concat(x, "px)")), n2(f) && f !== 0 && _.push("rotate(".concat(f, "deg)")), n2(h) && h !== 1 && _.push("scaleX(".concat(h, ")")), n2(u) && u !== 1 && _.push("scaleY(".concat(u, ")"));
+        var f = y.rotate, h = y.scaleX, u = y.scaleY, k = y.translateX, V = y.translateY, _ = [];
+        n2(k) && k !== 0 && _.push("translateX(".concat(k, "px)")), n2(V) && V !== 0 && _.push("translateY(".concat(V, "px)")), n2(f) && f !== 0 && _.push("rotate(".concat(f, "deg)")), n2(h) && h !== 1 && _.push("scaleX(".concat(h, ")")), n2(u) && u !== 1 && _.push("scaleY(".concat(u, ")"));
         var K = _.length ? _.join(" ") : "none";
         return {
           WebkitTransform: K,
@@ -19595,8 +19594,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function zt(y) {
         var f = c({}, y), h = 0;
         return S1(y, function(u, k) {
-          delete f[k], S1(f, function(x) {
-            var _ = Math.abs(u.startX - x.startX), K = Math.abs(u.startY - x.startY), v1 = Math.abs(u.endX - x.endX), n1 = Math.abs(u.endY - x.endY), a1 = Math.sqrt(_ * _ + K * K), t1 = Math.sqrt(v1 * v1 + n1 * n1), h1 = (t1 - a1) / a1;
+          delete f[k], S1(f, function(V) {
+            var _ = Math.abs(u.startX - V.startX), K = Math.abs(u.startY - V.startY), v1 = Math.abs(u.endX - V.endX), n1 = Math.abs(u.endY - V.endY), a1 = Math.sqrt(_ * _ + K * K), t1 = Math.sqrt(v1 * v1 + n1 * n1), h1 = (t1 - a1) / a1;
             Math.abs(h1) > Math.abs(h) && (h = h1);
           });
         }), h;
@@ -19614,19 +19613,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function yt(y) {
         var f = 0, h = 0, u = 0;
         return S1(y, function(k) {
-          var x = k.startX, _ = k.startY;
-          f += x, h += _, u += 1;
+          var V = k.startX, _ = k.startY;
+          f += V, h += _, u += 1;
         }), f /= u, h /= u, {
           pageX: f,
           pageY: h
         };
       }
       function C3(y) {
-        var f = y.aspectRatio, h = y.height, u = y.width, k = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "contain", x = f6(u), _ = f6(h);
-        if (x && _) {
+        var f = y.aspectRatio, h = y.height, u = y.width, k = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : "contain", V = f6(u), _ = f6(h);
+        if (V && _) {
           var K = h * f;
           k === "contain" && K > u || k === "cover" && K < u ? h = u / f : u = h * f;
-        } else x ? h = u / f : _ && (u = h * f);
+        } else V ? h = u / f : _ && (u = h * f);
         return {
           width: u,
           height: h
@@ -19639,7 +19638,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             width: h,
             height: f
           };
-        var k = u % 90 * Math.PI / 180, x = Math.sin(k), _ = Math.cos(k), K = f * _ + h * x, v1 = f * x + h * _;
+        var k = u % 90 * Math.PI / 180, V = Math.sin(k), _ = Math.cos(k), K = f * _ + h * V, v1 = f * V + h * _;
         return u > 90 ? {
           width: v1,
           height: K
@@ -19649,14 +19648,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         };
       }
       function Mt(y, f, h, u) {
-        var k = f.aspectRatio, x = f.naturalWidth, _ = f.naturalHeight, K = f.rotate, v1 = K === void 0 ? 0 : K, n1 = f.scaleX, a1 = n1 === void 0 ? 1 : n1, t1 = f.scaleY, h1 = t1 === void 0 ? 1 : t1, h2 = h.aspectRatio, d2 = h.naturalWidth, S2 = h.naturalHeight, b2 = u.fillColor, W2 = b2 === void 0 ? "transparent" : b2, Q2 = u.imageSmoothingEnabled, U2 = Q2 === void 0 ? !0 : Q2, s3 = u.imageSmoothingQuality, H4 = s3 === void 0 ? "low" : s3, M1 = u.maxWidth, M2 = M1 === void 0 ? 1 / 0 : M1, G2 = u.maxHeight, O4 = G2 === void 0 ? 1 / 0 : G2, f3 = u.minWidth, j3 = f3 === void 0 ? 0 : f3, q3 = u.minHeight, V3 = q3 === void 0 ? 0 : q3, a3 = document.createElement("canvas"), M4 = a3.getContext("2d"), Y3 = C3({
+        var k = f.aspectRatio, V = f.naturalWidth, _ = f.naturalHeight, K = f.rotate, v1 = K === void 0 ? 0 : K, n1 = f.scaleX, a1 = n1 === void 0 ? 1 : n1, t1 = f.scaleY, h1 = t1 === void 0 ? 1 : t1, h2 = h.aspectRatio, d2 = h.naturalWidth, S2 = h.naturalHeight, b2 = u.fillColor, W2 = b2 === void 0 ? "transparent" : b2, Q2 = u.imageSmoothingEnabled, U2 = Q2 === void 0 ? !0 : Q2, s3 = u.imageSmoothingQuality, H4 = s3 === void 0 ? "low" : s3, M1 = u.maxWidth, M2 = M1 === void 0 ? 1 / 0 : M1, G2 = u.maxHeight, O4 = G2 === void 0 ? 1 / 0 : G2, f3 = u.minWidth, j3 = f3 === void 0 ? 0 : f3, q3 = u.minHeight, x3 = q3 === void 0 ? 0 : q3, a3 = document.createElement("canvas"), M4 = a3.getContext("2d"), Y3 = C3({
           aspectRatio: h2,
           width: M2,
           height: O4
         }), L0 = C3({
           aspectRatio: h2,
           width: j3,
-          height: V3
+          height: x3
         }, "cover"), w8 = Math.min(Y3.width, Math.max(L0.width, d2)), H8 = Math.min(Y3.height, Math.max(L0.height, S2)), Fe = C3({
           aspectRatio: k,
           width: M2,
@@ -19664,8 +19663,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }), Ie = C3({
           aspectRatio: k,
           width: j3,
-          height: V3
-        }, "cover"), Ee = Math.min(Fe.width, Math.max(Ie.width, x)), Re = Math.min(Fe.height, Math.max(Ie.height, _)), Ot = [-Ee / 2, -Re / 2, Ee, Re];
+          height: x3
+        }, "cover"), Ee = Math.min(Fe.width, Math.max(Ie.width, V)), Re = Math.min(Fe.height, Math.max(Ie.height, _)), Ot = [-Ee / 2, -Re / 2, Ee, Re];
         return a3.width = b4(w8), a3.height = b4(H8), M4.fillStyle = W2, M4.fillRect(0, 0, w8, H8), M4.save(), M4.translate(w8 / 2, H8 / 2), M4.rotate(v1 * Math.PI / 180), M4.scale(a1, h1), M4.imageSmoothingEnabled = U2, M4.imageSmoothingQuality = H4, M4.drawImage.apply(M4, [y].concat(m(Ot.map(function(Pt) {
           return Math.floor(b4(Pt));
         })))), M4.restore(), a3;
@@ -19678,10 +19677,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           u += Oe(y.getUint8(k));
         return u;
       }
-      var Vt = /^data:.*,/;
-      function xt(y) {
-        var f = y.replace(Vt, ""), h = atob(f), u = new ArrayBuffer(h.length), k = new Uint8Array(u);
-        return S1(k, function(x, _) {
+      var xt = /^data:.*,/;
+      function Vt(y) {
+        var f = y.replace(xt, ""), h = atob(f), u = new ArrayBuffer(h.length), k = new Uint8Array(u);
+        return S1(k, function(V, _) {
           k[_] = h.charCodeAt(_);
         }), u;
       }
@@ -19693,7 +19692,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function Ht(y) {
         var f = new DataView(y), h;
         try {
-          var u, k, x;
+          var u, k, V;
           if (f.getUint8(0) === 255 && f.getUint8(1) === 216)
             for (var _ = f.byteLength, K = 2; K + 1 < _; ) {
               if (f.getUint8(K) === 255 && f.getUint8(K + 1) === 225) {
@@ -19708,14 +19707,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               var a1 = f.getUint16(n1);
               if (u = a1 === 18761, (u || a1 === 19789) && f.getUint16(n1 + 2, u) === 42) {
                 var t1 = f.getUint32(n1 + 4, u);
-                t1 >= 8 && (x = n1 + t1);
+                t1 >= 8 && (V = n1 + t1);
               }
             }
           }
-          if (x) {
-            var h1 = f.getUint16(x, u), h2, d2;
+          if (V) {
+            var h1 = f.getUint16(V, u), h2, d2;
             for (d2 = 0; d2 < h1; d2 += 1)
-              if (h2 = x + d2 * 12 + 2, f.getUint16(h2, u) === 274) {
+              if (h2 = V + d2 * 12 + 2, f.getUint16(h2, u) === 274) {
                 h2 += 8, h = f.getUint16(h2, u), f.setUint16(h2, 1, u);
                 break;
               }
@@ -19768,10 +19767,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.initContainer(), this.initCanvas(), this.initCropBox(), this.renderCanvas(), this.cropped && this.renderCropBox();
         },
         initContainer: function() {
-          var f = this.element, h = this.options, u = this.container, k = this.cropper, x = Number(h.minContainerWidth), _ = Number(h.minContainerHeight);
+          var f = this.element, h = this.options, u = this.container, k = this.cropper, V = Number(h.minContainerWidth), _ = Number(h.minContainerHeight);
           J2(k, o1), e3(f, o1);
           var K = {
-            width: Math.max(u.offsetWidth, x >= 0 ? x : l6),
+            width: Math.max(u.offsetWidth, V >= 0 ? V : l6),
             height: Math.max(u.offsetHeight, _ >= 0 ? _ : s6)
           };
           this.containerData = K, T4(k, {
@@ -19781,11 +19780,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         },
         // Canvas (image wrapper)
         initCanvas: function() {
-          var f = this.containerData, h = this.imageData, u = this.options.viewMode, k = Math.abs(h.rotate) % 180 === 90, x = k ? h.naturalHeight : h.naturalWidth, _ = k ? h.naturalWidth : h.naturalHeight, K = x / _, v1 = f.width, n1 = f.height;
+          var f = this.containerData, h = this.imageData, u = this.options.viewMode, k = Math.abs(h.rotate) % 180 === 90, V = k ? h.naturalHeight : h.naturalWidth, _ = k ? h.naturalWidth : h.naturalHeight, K = V / _, v1 = f.width, n1 = f.height;
           f.height * K > f.width ? u === 3 ? v1 = f.height * K : n1 = f.width / K : u === 3 ? n1 = f.width / K : v1 = f.height * K;
           var a1 = {
             aspectRatio: K,
-            naturalWidth: x,
+            naturalWidth: V,
             naturalHeight: _,
             width: v1,
             height: n1
@@ -19793,7 +19792,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.canvasData = a1, this.limited = u === 1 || u === 2, this.limitCanvas(!0, !0), a1.width = Math.min(Math.max(a1.width, a1.minWidth), a1.maxWidth), a1.height = Math.min(Math.max(a1.height, a1.minHeight), a1.maxHeight), a1.left = (f.width - a1.width) / 2, a1.top = (f.height - a1.height) / 2, a1.oldLeft = a1.left, a1.oldTop = a1.top, this.initialCanvasData = u2({}, a1);
         },
         limitCanvas: function(f, h) {
-          var u = this.options, k = this.containerData, x = this.canvasData, _ = this.cropBoxData, K = u.viewMode, v1 = x.aspectRatio, n1 = this.cropped && _;
+          var u = this.options, k = this.containerData, V = this.canvasData, _ = this.cropBoxData, K = u.viewMode, v1 = V.aspectRatio, n1 = this.cropped && _;
           if (f) {
             var a1 = Number(u.minCanvasWidth) || 0, t1 = Number(u.minCanvasHeight) || 0;
             K > 1 ? (a1 = Math.max(a1, k.width), t1 = Math.max(t1, k.height), K === 3 && (t1 * v1 > a1 ? a1 = t1 * v1 : t1 = a1 / v1)) : K > 0 && (a1 ? a1 = Math.max(a1, n1 ? _.width : 0) : t1 ? t1 = Math.max(t1, n1 ? _.height : 0) : n1 && (a1 = _.width, t1 = _.height, t1 * v1 > a1 ? a1 = t1 * v1 : t1 = a1 / v1));
@@ -19802,23 +19801,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               width: a1,
               height: t1
             });
-            a1 = h1.width, t1 = h1.height, x.minWidth = a1, x.minHeight = t1, x.maxWidth = 1 / 0, x.maxHeight = 1 / 0;
+            a1 = h1.width, t1 = h1.height, V.minWidth = a1, V.minHeight = t1, V.maxWidth = 1 / 0, V.maxHeight = 1 / 0;
           }
           if (h)
             if (K > (n1 ? 0 : 1)) {
-              var h2 = k.width - x.width, d2 = k.height - x.height;
-              x.minLeft = Math.min(0, h2), x.minTop = Math.min(0, d2), x.maxLeft = Math.max(0, h2), x.maxTop = Math.max(0, d2), n1 && this.limited && (x.minLeft = Math.min(_.left, _.left + (_.width - x.width)), x.minTop = Math.min(_.top, _.top + (_.height - x.height)), x.maxLeft = _.left, x.maxTop = _.top, K === 2 && (x.width >= k.width && (x.minLeft = Math.min(0, h2), x.maxLeft = Math.max(0, h2)), x.height >= k.height && (x.minTop = Math.min(0, d2), x.maxTop = Math.max(0, d2))));
+              var h2 = k.width - V.width, d2 = k.height - V.height;
+              V.minLeft = Math.min(0, h2), V.minTop = Math.min(0, d2), V.maxLeft = Math.max(0, h2), V.maxTop = Math.max(0, d2), n1 && this.limited && (V.minLeft = Math.min(_.left, _.left + (_.width - V.width)), V.minTop = Math.min(_.top, _.top + (_.height - V.height)), V.maxLeft = _.left, V.maxTop = _.top, K === 2 && (V.width >= k.width && (V.minLeft = Math.min(0, h2), V.maxLeft = Math.max(0, h2)), V.height >= k.height && (V.minTop = Math.min(0, d2), V.maxTop = Math.max(0, d2))));
             } else
-              x.minLeft = -x.width, x.minTop = -x.height, x.maxLeft = k.width, x.maxTop = k.height;
+              V.minLeft = -V.width, V.minTop = -V.height, V.maxLeft = k.width, V.maxTop = k.height;
         },
         renderCanvas: function(f, h) {
           var u = this.canvasData, k = this.imageData;
           if (h) {
-            var x = bt({
+            var V = bt({
               width: k.naturalWidth * Math.abs(k.scaleX || 1),
               height: k.naturalHeight * Math.abs(k.scaleY || 1),
               degree: k.rotate || 0
-            }), _ = x.width, K = x.height, v1 = u.width * (_ / u.naturalWidth), n1 = u.height * (K / u.naturalHeight);
+            }), _ = V.width, K = V.height, v1 = u.width * (_ / u.naturalWidth), n1 = u.height * (K / u.naturalHeight);
             u.left -= (v1 - u.width) / 2, u.top -= (n1 - u.height) / 2, u.width = v1, u.height = n1, u.aspectRatio = _ / K, u.naturalWidth = _, u.naturalHeight = K, this.limitCanvas(!0, !1);
           }
           (u.width > u.maxWidth || u.width < u.minWidth) && (u.left = u.oldLeft), (u.height > u.maxHeight || u.height < u.minHeight) && (u.top = u.oldTop), u.width = Math.min(Math.max(u.width, u.minWidth), u.maxWidth), u.height = Math.min(Math.max(u.height, u.minHeight), u.maxHeight), this.limitCanvas(!1, !0), u.left = Math.min(Math.max(u.left, u.minLeft), u.maxLeft), u.top = Math.min(Math.max(u.top, u.minTop), u.maxTop), u.oldLeft = u.left, u.oldTop = u.top, T4(this.canvas, u2({
@@ -19830,12 +19829,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }))), this.renderImage(f), this.cropped && this.limited && this.limitCropBox(!0, !0);
         },
         renderImage: function(f) {
-          var h = this.canvasData, u = this.imageData, k = u.naturalWidth * (h.width / h.naturalWidth), x = u.naturalHeight * (h.height / h.naturalHeight);
+          var h = this.canvasData, u = this.imageData, k = u.naturalWidth * (h.width / h.naturalWidth), V = u.naturalHeight * (h.height / h.naturalHeight);
           u2(u, {
             width: k,
-            height: x,
+            height: V,
             left: (h.width - k) / 2,
-            top: (h.height - x) / 2
+            top: (h.height - V) / 2
           }), T4(this.image, u2({
             width: u.width,
             height: u.height
@@ -19845,19 +19844,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }, u)))), f && this.output();
         },
         initCropBox: function() {
-          var f = this.options, h = this.canvasData, u = f.aspectRatio || f.initialAspectRatio, k = Number(f.autoCropArea) || 0.8, x = {
+          var f = this.options, h = this.canvasData, u = f.aspectRatio || f.initialAspectRatio, k = Number(f.autoCropArea) || 0.8, V = {
             width: h.width,
             height: h.height
           };
-          u && (h.height * u > h.width ? x.height = x.width / u : x.width = x.height * u), this.cropBoxData = x, this.limitCropBox(!0, !0), x.width = Math.min(Math.max(x.width, x.minWidth), x.maxWidth), x.height = Math.min(Math.max(x.height, x.minHeight), x.maxHeight), x.width = Math.max(x.minWidth, x.width * k), x.height = Math.max(x.minHeight, x.height * k), x.left = h.left + (h.width - x.width) / 2, x.top = h.top + (h.height - x.height) / 2, x.oldLeft = x.left, x.oldTop = x.top, this.initialCropBoxData = u2({}, x);
+          u && (h.height * u > h.width ? V.height = V.width / u : V.width = V.height * u), this.cropBoxData = V, this.limitCropBox(!0, !0), V.width = Math.min(Math.max(V.width, V.minWidth), V.maxWidth), V.height = Math.min(Math.max(V.height, V.minHeight), V.maxHeight), V.width = Math.max(V.minWidth, V.width * k), V.height = Math.max(V.minHeight, V.height * k), V.left = h.left + (h.width - V.width) / 2, V.top = h.top + (h.height - V.height) / 2, V.oldLeft = V.left, V.oldTop = V.top, this.initialCropBoxData = u2({}, V);
         },
         limitCropBox: function(f, h) {
-          var u = this.options, k = this.containerData, x = this.canvasData, _ = this.cropBoxData, K = this.limited, v1 = u.aspectRatio;
+          var u = this.options, k = this.containerData, V = this.canvasData, _ = this.cropBoxData, K = this.limited, v1 = u.aspectRatio;
           if (f) {
-            var n1 = Number(u.minCropBoxWidth) || 0, a1 = Number(u.minCropBoxHeight) || 0, t1 = K ? Math.min(k.width, x.width, x.width + x.left, k.width - x.left) : k.width, h1 = K ? Math.min(k.height, x.height, x.height + x.top, k.height - x.top) : k.height;
+            var n1 = Number(u.minCropBoxWidth) || 0, a1 = Number(u.minCropBoxHeight) || 0, t1 = K ? Math.min(k.width, V.width, V.width + V.left, k.width - V.left) : k.width, h1 = K ? Math.min(k.height, V.height, V.height + V.top, k.height - V.top) : k.height;
             n1 = Math.min(n1, k.width), a1 = Math.min(a1, k.height), v1 && (n1 && a1 ? a1 * v1 > n1 ? a1 = n1 / v1 : n1 = a1 * v1 : n1 ? a1 = n1 / v1 : a1 && (n1 = a1 * v1), h1 * v1 > t1 ? h1 = t1 / v1 : t1 = h1 * v1), _.minWidth = Math.min(n1, t1), _.minHeight = Math.min(a1, h1), _.maxWidth = t1, _.maxHeight = h1;
           }
-          h && (K ? (_.minLeft = Math.max(0, x.left), _.minTop = Math.max(0, x.top), _.maxLeft = Math.min(k.width, x.left + x.width) - _.width, _.maxTop = Math.min(k.height, x.top + x.height) - _.height) : (_.minLeft = 0, _.minTop = 0, _.maxLeft = k.width - _.width, _.maxTop = k.height - _.height));
+          h && (K ? (_.minLeft = Math.max(0, V.left), _.minTop = Math.max(0, V.top), _.maxLeft = Math.min(k.width, V.left + V.width) - _.width, _.maxTop = Math.min(k.height, V.top + V.height) - _.height) : (_.minLeft = 0, _.minTop = 0, _.maxLeft = k.width - _.width, _.maxTop = k.height - _.height));
         },
         renderCropBox: function() {
           var f = this.options, h = this.containerData, u = this.cropBoxData;
@@ -19874,30 +19873,30 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
       }, St = {
         initPreview: function() {
-          var f = this.element, h = this.crossOrigin, u = this.options.preview, k = h ? this.crossOriginUrl : this.url, x = f.alt || "The image to preview", _ = document.createElement("img");
-          if (h && (_.crossOrigin = h), _.src = k, _.alt = x, this.viewBox.appendChild(_), this.viewBoxImage = _, !!u) {
+          var f = this.element, h = this.crossOrigin, u = this.options.preview, k = h ? this.crossOriginUrl : this.url, V = f.alt || "The image to preview", _ = document.createElement("img");
+          if (h && (_.crossOrigin = h), _.src = k, _.alt = V, this.viewBox.appendChild(_), this.viewBoxImage = _, !!u) {
             var K = u;
             typeof u == "string" ? K = f.ownerDocument.querySelectorAll(u) : u.querySelector && (K = [u]), this.previews = K, S1(K, function(v1) {
               var n1 = document.createElement("img");
-              q6(v1, x1, {
+              q6(v1, V1, {
                 width: v1.offsetWidth,
                 height: v1.offsetHeight,
                 html: v1.innerHTML
-              }), h && (n1.crossOrigin = h), n1.src = k, n1.alt = x, n1.style.cssText = 'display:block;width:100%;height:auto;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;image-orientation:0deg!important;"', v1.innerHTML = "", v1.appendChild(n1);
+              }), h && (n1.crossOrigin = h), n1.src = k, n1.alt = V, n1.style.cssText = 'display:block;width:100%;height:auto;min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;image-orientation:0deg!important;"', v1.innerHTML = "", v1.appendChild(n1);
             });
           }
         },
         resetPreview: function() {
           S1(this.previews, function(f) {
-            var h = V8(f, x1);
+            var h = x8(f, V1);
             T4(f, {
               width: h.width,
               height: h.height
-            }), f.innerHTML = h.html, pt(f, x1);
+            }), f.innerHTML = h.html, pt(f, V1);
           });
         },
         preview: function() {
-          var f = this.imageData, h = this.canvasData, u = this.cropBoxData, k = u.width, x = u.height, _ = f.width, K = f.height, v1 = u.left - h.left - f.left, n1 = u.top - h.top - f.top;
+          var f = this.imageData, h = this.canvasData, u = this.cropBoxData, k = u.width, V = u.height, _ = f.width, K = f.height, v1 = u.left - h.left - f.left, n1 = u.top - h.top - f.top;
           !this.cropped || this.disabled || (T4(this.viewBoxImage, u2({
             width: _,
             height: K
@@ -19905,8 +19904,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             translateX: -v1,
             translateY: -n1
           }, f)))), S1(this.previews, function(a1) {
-            var t1 = V8(a1, x1), h1 = t1.width, h2 = t1.height, d2 = h1, S2 = h2, b2 = 1;
-            k && (b2 = h1 / k, S2 = x * b2), x && S2 > h2 && (b2 = h2 / x, d2 = k * b2, S2 = h2), T4(a1, {
+            var t1 = x8(a1, V1), h1 = t1.width, h2 = t1.height, d2 = h1, S2 = h2, b2 = 1;
+            k && (b2 = h1 / k, S2 = V * b2), V && S2 > h2 && (b2 = h2 / V, d2 = k * b2, S2 = h2), T4(a1, {
               width: d2,
               height: S2
             }), T4(a1.getElementsByTagName("img")[0], u2({
@@ -19924,19 +19923,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           U1(h.cropstart) && D4(f, d1, h.cropstart), U1(h.cropmove) && D4(f, e2, h.cropmove), U1(h.cropend) && D4(f, f1, h.cropend), U1(h.crop) && D4(f, l2, h.crop), U1(h.zoom) && D4(f, N1, h.zoom), D4(u, i2, this.onCropStart = this.cropStart.bind(this)), h.zoomable && h.zoomOnWheel && D4(u, Y, this.onWheel = this.wheel.bind(this), {
             passive: !1,
             capture: !0
-          }), h.toggleDragModeOnDblclick && D4(u, V1, this.onDblclick = this.dblclick.bind(this)), D4(f.ownerDocument, B1, this.onCropMove = this.cropMove.bind(this)), D4(f.ownerDocument, Y2, this.onCropEnd = this.cropEnd.bind(this)), h.responsive && D4(window, y4, this.onResize = this.resize.bind(this));
+          }), h.toggleDragModeOnDblclick && D4(u, x1, this.onDblclick = this.dblclick.bind(this)), D4(f.ownerDocument, B1, this.onCropMove = this.cropMove.bind(this)), D4(f.ownerDocument, Y2, this.onCropEnd = this.cropEnd.bind(this)), h.responsive && D4(window, y4, this.onResize = this.resize.bind(this));
         },
         unbind: function() {
           var f = this.element, h = this.options, u = this.cropper;
           U1(h.cropstart) && B4(f, d1, h.cropstart), U1(h.cropmove) && B4(f, e2, h.cropmove), U1(h.cropend) && B4(f, f1, h.cropend), U1(h.crop) && B4(f, l2, h.crop), U1(h.zoom) && B4(f, N1, h.zoom), B4(u, i2, this.onCropStart), h.zoomable && h.zoomOnWheel && B4(u, Y, this.onWheel, {
             passive: !1,
             capture: !0
-          }), h.toggleDragModeOnDblclick && B4(u, V1, this.onDblclick), B4(f.ownerDocument, B1, this.onCropMove), B4(f.ownerDocument, Y2, this.onCropEnd), h.responsive && B4(window, y4, this.onResize);
+          }), h.toggleDragModeOnDblclick && B4(u, x1, this.onDblclick), B4(f.ownerDocument, B1, this.onCropMove), B4(f.ownerDocument, Y2, this.onCropEnd), h.responsive && B4(window, y4, this.onResize);
         }
       }, _t = {
         resize: function() {
           if (!this.disabled) {
-            var f = this.options, h = this.container, u = this.containerData, k = h.offsetWidth / u.width, x = h.offsetHeight / u.height, _ = Math.abs(k - 1) > Math.abs(x - 1) ? k : x;
+            var f = this.options, h = this.container, u = this.containerData, k = h.offsetWidth / u.width, V = h.offsetHeight / u.height, _ = Math.abs(k - 1) > Math.abs(V - 1) ? k : V;
             if (_ !== 1) {
               var K, v1;
               f.restore && (K = this.getCanvasData(), v1 = this.getCropBoxData()), this.render(), f.restore && (this.setCanvasData(S1(K, function(n1, a1) {
@@ -19948,7 +19947,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }
         },
         dblclick: function() {
-          this.disabled || this.options.dragMode === s1 || this.setDragMode(M8(this.dragBox, z1) ? V : H);
+          this.disabled || this.options.dragMode === s1 || this.setDragMode(M8(this.dragBox, z1) ? x : H);
         },
         wheel: function(f) {
           var h = this, u = Number(this.options.wheelZoomRatio) || 0.1, k = 1;
@@ -19960,10 +19959,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           var h = f.buttons, u = f.button;
           if (!(this.disabled || (f.type === "mousedown" || f.type === "pointerdown" && f.pointerType === "mouse") && // No primary button (Usually the left button)
           (n2(h) && h !== 1 || n2(u) && u !== 0 || f.ctrlKey))) {
-            var k = this.options, x = this.pointers, _;
+            var k = this.options, V = this.pointers, _;
             f.changedTouches ? S1(f.changedTouches, function(K) {
-              x[K.identifier] = H0(K);
-            }) : x[f.pointerId || 0] = H0(f), Object.keys(x).length > 1 && k.zoomable && k.zoomOnTouch ? _ = X : _ = V8(f.target, Z), J4.test(_) && u6(this.element, d1, {
+              V[K.identifier] = H0(K);
+            }) : V[f.pointerId || 0] = H0(f), Object.keys(V).length > 1 && k.zoomable && k.zoomOnTouch ? _ = X : _ = x8(f.target, Z), J4.test(_) && u6(this.element, d1, {
               originalEvent: f,
               action: _
             }) !== !1 && (f.preventDefault(), this.action = _, this.cropping = !1, _ === U && (this.cropping = !0, J2(this.dragBox, S)));
@@ -19994,8 +19993,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
       }, kt = {
         change: function(f) {
-          var h = this.options, u = this.canvasData, k = this.containerData, x = this.cropBoxData, _ = this.pointers, K = this.action, v1 = h.aspectRatio, n1 = x.left, a1 = x.top, t1 = x.width, h1 = x.height, h2 = n1 + t1, d2 = a1 + h1, S2 = 0, b2 = 0, W2 = k.width, Q2 = k.height, U2 = !0, s3;
-          !v1 && f.shiftKey && (v1 = t1 && h1 ? t1 / h1 : 1), this.limited && (S2 = x.minLeft, b2 = x.minTop, W2 = S2 + Math.min(k.width, u.width, u.left + u.width), Q2 = b2 + Math.min(k.height, u.height, u.top + u.height));
+          var h = this.options, u = this.canvasData, k = this.containerData, V = this.cropBoxData, _ = this.pointers, K = this.action, v1 = h.aspectRatio, n1 = V.left, a1 = V.top, t1 = V.width, h1 = V.height, h2 = n1 + t1, d2 = a1 + h1, S2 = 0, b2 = 0, W2 = k.width, Q2 = k.height, U2 = !0, s3;
+          !v1 && f.shiftKey && (v1 = t1 && h1 ? t1 / h1 : 1), this.limited && (S2 = V.minLeft, b2 = V.minTop, W2 = S2 + Math.min(k.width, u.width, u.left + u.width), Q2 = b2 + Math.min(k.height, u.height, u.top + u.height));
           var H4 = _[Object.keys(_)[0]], M1 = {
             x: H4.endX - H4.startX,
             y: H4.endY - H4.startY
@@ -20026,28 +20025,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 U2 = !1;
                 break;
               }
-              M2(O), t1 += M1.x, t1 < 0 && (K = c1, t1 = -t1, n1 -= t1), v1 && (h1 = t1 / v1, a1 += (x.height - h1) / 2);
+              M2(O), t1 += M1.x, t1 < 0 && (K = c1, t1 = -t1, n1 -= t1), v1 && (h1 = t1 / v1, a1 += (V.height - h1) / 2);
               break;
             case L1:
               if (M1.y <= 0 && (a1 <= b2 || v1 && (n1 <= S2 || h2 >= W2))) {
                 U2 = !1;
                 break;
               }
-              M2(L1), h1 -= M1.y, a1 += M1.y, h1 < 0 && (K = g1, h1 = -h1, a1 -= h1), v1 && (t1 = h1 * v1, n1 += (x.width - t1) / 2);
+              M2(L1), h1 -= M1.y, a1 += M1.y, h1 < 0 && (K = g1, h1 = -h1, a1 -= h1), v1 && (t1 = h1 * v1, n1 += (V.width - t1) / 2);
               break;
             case c1:
               if (M1.x <= 0 && (n1 <= S2 || v1 && (a1 <= b2 || d2 >= Q2))) {
                 U2 = !1;
                 break;
               }
-              M2(c1), t1 -= M1.x, n1 += M1.x, t1 < 0 && (K = O, t1 = -t1, n1 -= t1), v1 && (h1 = t1 / v1, a1 += (x.height - h1) / 2);
+              M2(c1), t1 -= M1.x, n1 += M1.x, t1 < 0 && (K = O, t1 = -t1, n1 -= t1), v1 && (h1 = t1 / v1, a1 += (V.height - h1) / 2);
               break;
             case g1:
               if (M1.y >= 0 && (d2 >= Q2 || v1 && (n1 <= S2 || h2 >= W2))) {
                 U2 = !1;
                 break;
               }
-              M2(g1), h1 += M1.y, h1 < 0 && (K = L1, h1 = -h1, a1 -= h1), v1 && (t1 = h1 * v1, n1 += (x.width - t1) / 2);
+              M2(g1), h1 += M1.y, h1 < 0 && (K = L1, h1 = -h1, a1 -= h1), v1 && (t1 = h1 * v1, n1 += (V.width - t1) / 2);
               break;
             case N:
               if (v1) {
@@ -20066,7 +20065,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   U2 = !1;
                   break;
                 }
-                M2(L1), h1 -= M1.y, a1 += M1.y, t1 = h1 * v1, n1 += x.width - t1;
+                M2(L1), h1 -= M1.y, a1 += M1.y, t1 = h1 * v1, n1 += V.width - t1;
               } else
                 M2(L1), M2(c1), M1.x <= 0 ? n1 > S2 ? (t1 -= M1.x, n1 += M1.x) : M1.y <= 0 && a1 <= b2 && (U2 = !1) : (t1 -= M1.x, n1 += M1.x), M1.y <= 0 ? a1 > b2 && (h1 -= M1.y, a1 += M1.y) : (h1 -= M1.y, a1 += M1.y);
               t1 < 0 && h1 < 0 ? (K = P, h1 = -h1, t1 = -t1, a1 -= h1, n1 -= t1) : t1 < 0 ? (K = N, t1 = -t1, n1 -= t1) : h1 < 0 && (K = W, h1 = -h1, a1 -= h1);
@@ -20107,10 +20106,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 U2 = !1;
                 break;
               }
-              s3 = ke(this.cropper), n1 = H4.startX - s3.left, a1 = H4.startY - s3.top, t1 = x.minWidth, h1 = x.minHeight, M1.x > 0 ? K = M1.y > 0 ? P : N : M1.x < 0 && (n1 -= t1, K = M1.y > 0 ? W : B), M1.y < 0 && (a1 -= h1), this.cropped || (e3(this.cropBox, o1), this.cropped = !0, this.limited && this.limitCropBox(!0, !0));
+              s3 = ke(this.cropper), n1 = H4.startX - s3.left, a1 = H4.startY - s3.top, t1 = V.minWidth, h1 = V.minHeight, M1.x > 0 ? K = M1.y > 0 ? P : N : M1.x < 0 && (n1 -= t1, K = M1.y > 0 ? W : B), M1.y < 0 && (a1 -= h1), this.cropped || (e3(this.cropBox, o1), this.cropped = !0, this.limited && this.limitCropBox(!0, !0));
               break;
           }
-          U2 && (x.width = t1, x.height = h1, x.left = n1, x.top = a1, this.action = K, this.renderCropBox()), S1(_, function(G2) {
+          U2 && (V.width = t1, V.height = h1, V.left = n1, V.top = a1, this.action = K, this.renderCropBox()), S1(_, function(G2) {
             G2.startX = G2.endX, G2.startY = G2.endY;
           });
         }
@@ -20167,8 +20166,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
          * @returns {Cropper} this
          */
         move: function(f) {
-          var h = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : f, u = this.canvasData, k = u.left, x = u.top;
-          return this.moveTo(Z3(f) ? f : k + Number(f), Z3(h) ? h : x + Number(h));
+          var h = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : f, u = this.canvasData, k = u.left, V = u.top;
+          return this.moveTo(Z3(f) ? f : k + Number(f), Z3(h) ? h : V + Number(h));
         },
         /**
          * Move the canvas to an absolute point
@@ -20198,7 +20197,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
          * @returns {Cropper} this
          */
         zoomTo: function(f, h, u) {
-          var k = this.options, x = this.canvasData, _ = x.width, K = x.height, v1 = x.naturalWidth, n1 = x.naturalHeight;
+          var k = this.options, V = this.canvasData, _ = V.width, K = V.height, v1 = V.naturalWidth, n1 = V.naturalHeight;
           if (f = Number(f), f >= 0 && this.ready && !this.disabled && k.zoomable) {
             var a1 = v1 * f, t1 = n1 * f;
             if (u6(this.element, N1, {
@@ -20212,9 +20211,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 pageX: u.pageX,
                 pageY: u.pageY
               };
-              x.left -= (a1 - _) * ((d2.pageX - h2.left - x.left) / _), x.top -= (t1 - K) * ((d2.pageY - h2.top - x.top) / K);
-            } else P1(h) && n2(h.x) && n2(h.y) ? (x.left -= (a1 - _) * ((h.x - x.left) / _), x.top -= (t1 - K) * ((h.y - x.top) / K)) : (x.left -= (a1 - _) / 2, x.top -= (t1 - K) / 2);
-            x.width = a1, x.height = t1, this.renderCanvas(!0);
+              V.left -= (a1 - _) * ((d2.pageX - h2.left - V.left) / _), V.top -= (t1 - K) * ((d2.pageY - h2.top - V.top) / K);
+            } else P1(h) && n2(h.x) && n2(h.y) ? (V.left -= (a1 - _) * ((h.x - V.left) / _), V.top -= (t1 - K) * ((h.y - V.top) / K)) : (V.left -= (a1 - _) / 2, V.top -= (t1 - K) / 2);
+            V.width = a1, V.height = t1, this.renderCanvas(!0);
           }
           return this;
         },
@@ -20268,13 +20267,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
          * @returns {Object} The result cropped data.
          */
         getData: function() {
-          var f = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : !1, h = this.options, u = this.imageData, k = this.canvasData, x = this.cropBoxData, _;
+          var f = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : !1, h = this.options, u = this.imageData, k = this.canvasData, V = this.cropBoxData, _;
           if (this.ready && this.cropped) {
             _ = {
-              x: x.left - k.left,
-              y: x.top - k.top,
-              width: x.width,
-              height: x.height
+              x: V.left - k.left,
+              y: V.top - k.top,
+              width: V.width,
+              height: V.height
             };
             var K = u.width / u.naturalWidth;
             if (S1(_, function(a1, t1) {
@@ -20298,12 +20297,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
          * @returns {Cropper} this
          */
         setData: function(f) {
-          var h = this.options, u = this.imageData, k = this.canvasData, x = {};
+          var h = this.options, u = this.imageData, k = this.canvasData, V = {};
           if (this.ready && !this.disabled && P1(f)) {
             var _ = !1;
             h.rotatable && n2(f.rotate) && f.rotate !== u.rotate && (u.rotate = f.rotate, _ = !0), h.scalable && (n2(f.scaleX) && f.scaleX !== u.scaleX && (u.scaleX = f.scaleX, _ = !0), n2(f.scaleY) && f.scaleY !== u.scaleY && (u.scaleY = f.scaleY, _ = !0)), _ && this.renderCanvas(!0, !0);
             var K = u.width / u.naturalWidth;
-            n2(f.x) && (x.left = f.x * K + k.left), n2(f.y) && (x.top = f.y * K + k.top), n2(f.width) && (x.width = f.width * K), n2(f.height) && (x.height = f.height * K), this.setCropBoxData(x);
+            n2(f.x) && (V.left = f.x * K + k.left), n2(f.y) && (V.top = f.y * K + k.top), n2(f.width) && (V.width = f.width * K), n2(f.height) && (V.height = f.height * K), this.setCropBoxData(V);
           }
           return this;
         },
@@ -20359,8 +20358,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
          * @returns {Cropper} this
          */
         setCropBoxData: function(f) {
-          var h = this.cropBoxData, u = this.options.aspectRatio, k, x;
-          return this.ready && this.cropped && !this.disabled && P1(f) && (n2(f.left) && (h.left = f.left), n2(f.top) && (h.top = f.top), n2(f.width) && f.width !== h.width && (k = !0, h.width = f.width), n2(f.height) && f.height !== h.height && (x = !0, h.height = f.height), u && (k ? h.height = h.width / u : x && (h.width = h.height * u)), this.renderCropBox()), this;
+          var h = this.cropBoxData, u = this.options.aspectRatio, k, V;
+          return this.ready && this.cropped && !this.disabled && P1(f) && (n2(f.left) && (h.left = f.left), n2(f.top) && (h.top = f.top), n2(f.width) && f.width !== h.width && (k = !0, h.width = f.width), n2(f.height) && f.height !== h.height && (V = !0, h.height = f.height), u && (k ? h.height = h.width / u : V && (h.width = h.height * u)), this.renderCropBox()), this;
         },
         /**
          * Get a canvas drawn the cropped image.
@@ -20374,8 +20373,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           var h = this.canvasData, u = Mt(this.image, this.imageData, h, f);
           if (!this.cropped)
             return u;
-          var k = this.getData(f.rounded), x = k.x, _ = k.y, K = k.width, v1 = k.height, n1 = u.width / Math.floor(h.naturalWidth);
-          n1 !== 1 && (x *= n1, _ *= n1, K *= n1, v1 *= n1);
+          var k = this.getData(f.rounded), V = k.x, _ = k.y, K = k.width, v1 = k.height, n1 = u.width / Math.floor(h.naturalWidth);
+          n1 !== 1 && (V *= n1, _ *= n1, K *= n1, v1 *= n1);
           var a1 = K / v1, t1 = C3({
             aspectRatio: a1,
             width: f.maxWidth || 1 / 0,
@@ -20394,12 +20393,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           b2.width = b4(d2), b2.height = b4(S2), W2.fillStyle = f.fillColor || "transparent", W2.fillRect(0, 0, d2, S2);
           var Q2 = f.imageSmoothingEnabled, U2 = Q2 === void 0 ? !0 : Q2, s3 = f.imageSmoothingQuality;
           W2.imageSmoothingEnabled = U2, s3 && (W2.imageSmoothingQuality = s3);
-          var H4 = u.width, M1 = u.height, M2 = x, G2 = _, O4, f3, j3, q3, V3, a3;
-          M2 <= -K || M2 > H4 ? (M2 = 0, O4 = 0, j3 = 0, V3 = 0) : M2 <= 0 ? (j3 = -M2, M2 = 0, O4 = Math.min(H4, K + M2), V3 = O4) : M2 <= H4 && (j3 = 0, O4 = Math.min(K, H4 - M2), V3 = O4), O4 <= 0 || G2 <= -v1 || G2 > M1 ? (G2 = 0, f3 = 0, q3 = 0, a3 = 0) : G2 <= 0 ? (q3 = -G2, G2 = 0, f3 = Math.min(M1, v1 + G2), a3 = f3) : G2 <= M1 && (q3 = 0, f3 = Math.min(v1, M1 - G2), a3 = f3);
+          var H4 = u.width, M1 = u.height, M2 = V, G2 = _, O4, f3, j3, q3, x3, a3;
+          M2 <= -K || M2 > H4 ? (M2 = 0, O4 = 0, j3 = 0, x3 = 0) : M2 <= 0 ? (j3 = -M2, M2 = 0, O4 = Math.min(H4, K + M2), x3 = O4) : M2 <= H4 && (j3 = 0, O4 = Math.min(K, H4 - M2), x3 = O4), O4 <= 0 || G2 <= -v1 || G2 > M1 ? (G2 = 0, f3 = 0, q3 = 0, a3 = 0) : G2 <= 0 ? (q3 = -G2, G2 = 0, f3 = Math.min(M1, v1 + G2), a3 = f3) : G2 <= M1 && (q3 = 0, f3 = Math.min(v1, M1 - G2), a3 = f3);
           var M4 = [M2, G2, O4, f3];
-          if (V3 > 0 && a3 > 0) {
+          if (x3 > 0 && a3 > 0) {
             var Y3 = d2 / K;
-            M4.push(j3 * Y3, q3 * Y3, V3 * Y3, a3 * Y3);
+            M4.push(j3 * Y3, q3 * Y3, x3 * Y3, a3 * Y3);
           }
           return W2.drawImage.apply(W2, [u].concat(m(M4.map(function(L0) {
             return Math.floor(b4(L0));
@@ -20422,8 +20421,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         setDragMode: function(f) {
           var h = this.options, u = this.dragBox, k = this.face;
           if (this.ready && !this.disabled) {
-            var x = f === H, _ = h.movable && f === V;
-            f = x || _ ? f : s1, h.dragMode = f, q6(u, Z, f), d6(u, z1, x), d6(u, Q, _), h.cropBoxMovable || (q6(k, Z, f), d6(k, z1, x), d6(k, Q, _));
+            var V = f === H, _ = h.movable && f === x;
+            f = V || _ ? f : s1, h.dragMode = f, q6(u, Z, f), d6(u, z1, V), d6(u, Q, _), h.cropBoxMovable || (q6(k, Z, f), d6(k, z1, V), d6(k, Q, _));
           }
           return this;
         }
@@ -20453,13 +20452,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             var u = this;
             if (h) {
               this.url = h, this.imageData = {};
-              var k = this.element, x = this.options;
-              if (!x.rotatable && !x.scalable && (x.checkOrientation = !1), !x.checkOrientation || !window.ArrayBuffer) {
+              var k = this.element, V = this.options;
+              if (!V.rotatable && !V.scalable && (V.checkOrientation = !1), !V.checkOrientation || !window.ArrayBuffer) {
                 this.clone();
                 return;
               }
               if (w4.test(h)) {
-                M3.test(h) ? this.read(xt(h)) : this.clone();
+                M3.test(h) ? this.read(Vt(h)) : this.clone();
                 return;
               }
               var _ = new XMLHttpRequest(), K = this.clone.bind(this);
@@ -20469,16 +20468,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 u.read(_.response);
               }, _.onloadend = function() {
                 u.reloading = !1, u.xhr = null;
-              }, x.checkCrossOrigin && Te(h) && k.crossOrigin && (h = De(h)), _.open("GET", h, !0), _.responseType = "arraybuffer", _.withCredentials = k.crossOrigin === "use-credentials", _.send();
+              }, V.checkCrossOrigin && Te(h) && k.crossOrigin && (h = De(h)), _.open("GET", h, !0), _.responseType = "arraybuffer", _.withCredentials = k.crossOrigin === "use-credentials", _.send();
             }
           }
         }, {
           key: "read",
           value: function(h) {
-            var u = this.options, k = this.imageData, x = Ht(h), _ = 0, K = 1, v1 = 1;
-            if (x > 1) {
+            var u = this.options, k = this.imageData, V = Ht(h), _ = 0, K = 1, v1 = 1;
+            if (V > 1) {
               this.url = wt(h, F1);
-              var n1 = Lt(x);
+              var n1 = Lt(V);
               _ = n1.rotate, K = n1.scaleX, v1 = n1.scaleY;
             }
             u.rotatable && (k.rotate = _), u.scalable && (k.scaleX = K, k.scaleY = v1), this.clone();
@@ -20486,17 +20485,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }, {
           key: "clone",
           value: function() {
-            var h = this.element, u = this.url, k = h.crossOrigin, x = u;
-            this.options.checkCrossOrigin && Te(u) && (k || (k = "anonymous"), x = De(u)), this.crossOrigin = k, this.crossOriginUrl = x;
+            var h = this.element, u = this.url, k = h.crossOrigin, V = u;
+            this.options.checkCrossOrigin && Te(u) && (k || (k = "anonymous"), V = De(u)), this.crossOrigin = k, this.crossOriginUrl = V;
             var _ = document.createElement("img");
-            k && (_.crossOrigin = k), _.src = x || u, _.alt = h.alt || "The image to crop", this.image = _, _.onload = this.start.bind(this), _.onerror = this.stop.bind(this), J2(_, q), h.parentNode.insertBefore(_, h.nextSibling);
+            k && (_.crossOrigin = k), _.src = V || u, _.alt = h.alt || "The image to crop", this.image = _, _.onload = this.start.bind(this), _.onerror = this.stop.bind(this), J2(_, q), h.parentNode.insertBefore(_, h.nextSibling);
           }
         }, {
           key: "start",
           value: function() {
             var h = this, u = this.image;
             u.onload = null, u.onerror = null, this.sizing = !0;
-            var k = z.navigator && /(?:iPad|iPhone|iPod).*?AppleWebKit/i.test(z.navigator.userAgent), x = function(n1, a1) {
+            var k = z.navigator && /(?:iPad|iPhone|iPod).*?AppleWebKit/i.test(z.navigator.userAgent), V = function(n1, a1) {
               u2(h.imageData, {
                 naturalWidth: n1,
                 naturalHeight: a1,
@@ -20504,12 +20503,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               }), h.initialImageData = u2({}, h.imageData), h.sizing = !1, h.sized = !0, h.build();
             };
             if (u.naturalWidth && !k) {
-              x(u.naturalWidth, u.naturalHeight);
+              V(u.naturalWidth, u.naturalHeight);
               return;
             }
             var _ = document.createElement("img"), K = document.body || document.documentElement;
             this.sizingImage = _, _.onload = function() {
-              x(_.width, _.height), k || K.removeChild(_);
+              V(_.width, _.height), k || K.removeChild(_);
             }, _.src = u.src, k || (_.style.cssText = "left:0;max-height:none!important;max-width:none!important;min-height:0!important;min-width:0!important;opacity:0;position:absolute;top:0;z-index:-1;", K.appendChild(_));
           }
         }, {
@@ -20522,10 +20521,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           key: "build",
           value: function() {
             if (!(!this.sized || this.ready)) {
-              var h = this.element, u = this.options, k = this.image, x = h.parentNode, _ = document.createElement("div");
+              var h = this.element, u = this.options, k = this.image, V = h.parentNode, _ = document.createElement("div");
               _.innerHTML = Z6;
               var K = _.querySelector(".".concat(I, "-container")), v1 = K.querySelector(".".concat(I, "-canvas")), n1 = K.querySelector(".".concat(I, "-drag-box")), a1 = K.querySelector(".".concat(I, "-crop-box")), t1 = a1.querySelector(".".concat(I, "-face"));
-              this.container = x, this.cropper = K, this.canvas = v1, this.dragBox = n1, this.cropBox = a1, this.viewBox = K.querySelector(".".concat(I, "-view-box")), this.face = t1, v1.appendChild(k), J2(h, o1), x.insertBefore(K, h.nextSibling), e3(k, q), this.initPreview(), this.bind(), u.initialAspectRatio = Math.max(0, u.initialAspectRatio) || NaN, u.aspectRatio = Math.max(0, u.aspectRatio) || NaN, u.viewMode = Math.max(0, Math.min(3, Math.round(u.viewMode))) || 0, J2(a1, o1), u.guides || J2(a1.getElementsByClassName("".concat(I, "-dashed")), o1), u.center || J2(a1.getElementsByClassName("".concat(I, "-center")), o1), u.background && J2(K, "".concat(I, "-bg")), u.highlight || J2(t1, k1), u.cropBoxMovable && (J2(t1, Q), q6(t1, Z, R)), u.cropBoxResizable || (J2(a1.getElementsByClassName("".concat(I, "-line")), o1), J2(a1.getElementsByClassName("".concat(I, "-point")), o1)), this.render(), this.ready = !0, this.setDragMode(u.dragMode), u.autoCrop && this.crop(), this.setData(u.data), U1(u.ready) && D4(h, N2, u.ready, {
+              this.container = V, this.cropper = K, this.canvas = v1, this.dragBox = n1, this.cropBox = a1, this.viewBox = K.querySelector(".".concat(I, "-view-box")), this.face = t1, v1.appendChild(k), J2(h, o1), V.insertBefore(K, h.nextSibling), e3(k, q), this.initPreview(), this.bind(), u.initialAspectRatio = Math.max(0, u.initialAspectRatio) || NaN, u.aspectRatio = Math.max(0, u.aspectRatio) || NaN, u.viewMode = Math.max(0, Math.min(3, Math.round(u.viewMode))) || 0, J2(a1, o1), u.guides || J2(a1.getElementsByClassName("".concat(I, "-dashed")), o1), u.center || J2(a1.getElementsByClassName("".concat(I, "-center")), o1), u.background && J2(K, "".concat(I, "-bg")), u.highlight || J2(t1, k1), u.cropBoxMovable && (J2(t1, Q), q6(t1, Z, R)), u.cropBoxResizable || (J2(a1.getElementsByClassName("".concat(I, "-line")), o1), J2(a1.getElementsByClassName("".concat(I, "-point")), o1)), this.render(), this.ready = !0, this.setDragMode(u.dragMode), u.autoCrop && this.crop(), this.setData(u.data), U1(u.ready) && D4(h, N2, u.ready, {
                 once: !0
               }), u6(h, N2);
             }
@@ -21222,8 +21221,8 @@ const Ja = /* @__PURE__ */ r2(vu, [["render", zu]]), yu = {
   components: {
     VueSelect: U6
   }
-}, bu = { style: { height: "20px", width: "20px", "margin-right": "5px", display: "inline-block" } }, Mu = ["src", "alt"], Cu = ["accept"], Vu = { key: 3 };
-function xu(e, a, t, c, i, r) {
+}, bu = { style: { height: "20px", width: "20px", "margin-right": "5px", display: "inline-block" } }, Mu = ["src", "alt"], Cu = ["accept"], xu = { key: 3 };
+function Vu(e, a, t, c, i, r) {
   const n = E1("vue-select");
   return p(), L("div", null, [
     t.showFolderSelector ? (p(), w1(n, {
@@ -21271,7 +21270,7 @@ function xu(e, a, t, c, i, r) {
       class: "form-control-file normalFileUpload",
       style: { "margin-bottom": "10px" }
     }, null, 40, Cu)) : j("", !0),
-    t.showOverwrite ? (p(), L("div", Vu, [
+    t.showOverwrite ? (p(), L("div", xu, [
       a2(F("input", {
         type: "checkbox",
         "onUpdate:modelValue": a[3] || (a[3] = (o) => i.doOverwrite = o)
@@ -21282,7 +21281,7 @@ function xu(e, a, t, c, i, r) {
     ])) : j("", !0)
   ]);
 }
-const Qa = /* @__PURE__ */ r2(yu, [["render", xu]]);
+const Qa = /* @__PURE__ */ r2(yu, [["render", Vu]]);
 let wu = {
   name: "ImageBrowserField",
   extends: F2,
@@ -22184,11 +22183,11 @@ var th = {
   prefix: "fas",
   iconName: "angle-up",
   icon: [320, 512, [], "f106", "M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"]
-}, Vh = {
+}, xh = {
   prefix: "fas",
   iconName: "angry",
   icon: [496, 512, [], "f556", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM136 240c0-9.3 4.1-17.5 10.5-23.4l-31-9.3c-8.5-2.5-13.3-11.5-10.7-19.9 2.5-8.5 11.4-13.2 19.9-10.7l80 24c8.5 2.5 13.3 11.5 10.7 19.9-2.1 6.9-8.4 11.4-15.3 11.4-.5 0-1.1-.2-1.7-.2.7 2.7 1.7 5.3 1.7 8.2 0 17.7-14.3 32-32 32S136 257.7 136 240zm168 154.2c-27.8-33.4-84.2-33.4-112.1 0-13.5 16.3-38.2-4.2-24.6-20.5 20-24 49.4-37.8 80.6-37.8s60.6 13.8 80.6 37.8c13.8 16.5-11.1 36.6-24.5 20.5zm76.6-186.9l-31 9.3c6.3 5.8 10.5 14.1 10.5 23.4 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-2.9.9-5.6 1.7-8.2-.6.1-1.1.2-1.7.2-6.9 0-13.2-4.5-15.3-11.4-2.5-8.5 2.3-17.4 10.7-19.9l80-24c8.4-2.5 17.4 2.3 19.9 10.7 2.5 8.5-2.3 17.4-10.8 19.9z"]
-}, xh = {
+}, Vh = {
   prefix: "fas",
   iconName: "ankh",
   icon: [320, 512, [], "f644", "M296 256h-44.62C272.46 222.01 288 181.65 288 144 288 55.63 230.69 0 160 0S32 55.63 32 144c0 37.65 15.54 78.01 36.62 112H24c-13.25 0-24 10.74-24 24v32c0 13.25 10.75 24 24 24h96v152c0 13.25 10.75 24 24 24h32c13.25 0 24-10.75 24-24V336h96c13.25 0 24-10.75 24-24v-32c0-13.26-10.75-24-24-24zM160 80c29.61 0 48 24.52 48 64 0 34.66-27.14 78.14-48 100.87-20.86-22.72-48-66.21-48-100.87 0-39.48 18.39-64 48-64z"]
@@ -22400,11 +22399,11 @@ var th = {
   prefix: "fas",
   iconName: "bell-slash",
   icon: [640, 512, [], "f1f6", "M633.82 458.1l-90.62-70.05c.19-1.38.8-2.66.8-4.06.05-7.55-2.61-15.27-8.61-21.71-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84c-40.33 8.38-74.66 31.07-97.59 62.57L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.35 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.42-6.97 4.17-17.02-2.81-22.45zM157.23 251.54c-8.61 67.96-36.41 93.33-52.62 110.75-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h241.92L157.23 251.54zM320 512c35.32 0 63.97-28.65 63.97-64H256.03c0 35.35 28.65 64 63.97 64z"]
-}, Vm = {
+}, xm = {
   prefix: "fas",
   iconName: "bezier-curve",
   icon: [640, 512, [], "f55b", "M368 32h-96c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zM208 88h-84.75C113.75 64.56 90.84 48 64 48 28.66 48 0 76.65 0 112s28.66 64 64 64c26.84 0 49.75-16.56 59.25-40h79.73c-55.37 32.52-95.86 87.32-109.54 152h49.4c11.3-41.61 36.77-77.21 71.04-101.56-3.7-8.08-5.88-16.99-5.88-26.44V88zm-48 232H64c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32zM576 48c-26.84 0-49.75 16.56-59.25 40H432v72c0 9.45-2.19 18.36-5.88 26.44 34.27 24.35 59.74 59.95 71.04 101.56h49.4c-13.68-64.68-54.17-119.48-109.54-152h79.73c9.5 23.44 32.41 40 59.25 40 35.34 0 64-28.65 64-64s-28.66-64-64-64zm0 272h-96c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h96c17.67 0 32-14.33 32-32v-96c0-17.67-14.33-32-32-32z"]
-}, xm = {
+}, Vm = {
   prefix: "fas",
   iconName: "bible",
   icon: [448, 512, [], "f647", "M448 358.4V25.6c0-16-9.6-25.6-25.6-25.6H96C41.6 0 0 41.6 0 96v320c0 54.4 41.6 96 96 96h326.4c12.8 0 25.6-9.6 25.6-25.6v-16c0-6.4-3.2-12.8-9.6-19.2-3.2-16-3.2-60.8 0-73.6 6.4-3.2 9.6-9.6 9.6-19.2zM144 144c0-8.84 7.16-16 16-16h48V80c0-8.84 7.16-16 16-16h32c8.84 0 16 7.16 16 16v48h48c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-48v112c0 8.84-7.16 16-16 16h-32c-8.84 0-16-7.16-16-16V192h-48c-8.84 0-16-7.16-16-16v-32zm236.8 304H96c-19.2 0-32-12.8-32-32s16-32 32-32h284.8v64z"]
@@ -22616,11 +22615,11 @@ var th = {
   prefix: "fas",
   iconName: "calendar-times",
   icon: [448, 512, [], "f273", "M436 160H12c-6.6 0-12-5.4-12-12v-36c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48v36c0 6.6-5.4 12-12 12zM12 192h424c6.6 0 12 5.4 12 12v260c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V204c0-6.6 5.4-12 12-12zm257.3 160l48.1-48.1c4.7-4.7 4.7-12.3 0-17l-28.3-28.3c-4.7-4.7-12.3-4.7-17 0L224 306.7l-48.1-48.1c-4.7-4.7-12.3-4.7-17 0l-28.3 28.3c-4.7 4.7-4.7 12.3 0 17l48.1 48.1-48.1 48.1c-4.7 4.7-4.7 12.3 0 17l28.3 28.3c4.7 4.7 12.3 4.7 17 0l48.1-48.1 48.1 48.1c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L269.3 352z"]
-}, Vv = {
+}, xv = {
   prefix: "fas",
   iconName: "calendar-week",
   icon: [448, 512, [], "f784", "M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"]
-}, xv = {
+}, Vv = {
   prefix: "fas",
   iconName: "camera",
   icon: [512, 512, [], "f030", "M512 144v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V144c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1L376 96h88c26.5 0 48 21.5 48 48zM376 288c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"]
@@ -22832,11 +22831,11 @@ var th = {
   prefix: "fas",
   iconName: "chevron-left",
   icon: [320, 512, [], "f053", "M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"]
-}, Vp = {
+}, xp = {
   prefix: "fas",
   iconName: "chevron-right",
   icon: [320, 512, [], "f054", "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"]
-}, xp = {
+}, Vp = {
   prefix: "fas",
   iconName: "chevron-up",
   icon: [448, 512, [], "f077", "M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"]
@@ -23048,11 +23047,11 @@ var th = {
   prefix: "fas",
   iconName: "crop-alt",
   icon: [512, 512, [], "f565", "M488 352h-40V96c0-17.67-14.33-32-32-32H192v96h160v328c0 13.25 10.75 24 24 24h48c13.25 0 24-10.75 24-24v-40h40c13.25 0 24-10.75 24-24v-48c0-13.26-10.75-24-24-24zM160 24c0-13.26-10.75-24-24-24H88C74.75 0 64 10.74 64 24v40H24C10.75 64 0 74.74 0 88v48c0 13.25 10.75 24 24 24h40v256c0 17.67 14.33 32 32 32h224v-96H160V24z"]
-}, Vg = {
+}, xg = {
   prefix: "fas",
   iconName: "cross",
   icon: [384, 512, [], "f654", "M352 128h-96V32c0-17.67-14.33-32-32-32h-64c-17.67 0-32 14.33-32 32v96H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h96v224c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V256h96c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z"]
-}, xg = {
+}, Vg = {
   prefix: "fas",
   iconName: "crosshairs",
   icon: [512, 512, [], "f05b", "M500 224h-30.364C455.724 130.325 381.675 56.276 288 42.364V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v30.364C130.325 56.276 56.276 130.325 42.364 224H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h30.364C56.276 381.675 130.325 455.724 224 469.636V500c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-30.364C381.675 455.724 455.724 381.675 469.636 288H500c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12zM288 404.634V364c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40.634C165.826 392.232 119.783 346.243 107.366 288H148c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40.634C119.768 165.826 165.757 119.783 224 107.366V148c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-40.634C346.174 119.768 392.217 165.757 404.634 224H364c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40.634C392.232 346.174 346.243 392.217 288 404.634zM288 256c0 17.673-14.327 32-32 32s-32-14.327-32-32c0-17.673 14.327-32 32-32s32 14.327 32 32z"]
@@ -23264,11 +23263,11 @@ var th = {
   prefix: "fas",
   iconName: "ellipsis-v",
   icon: [192, 512, [], "f142", "M96 184c39.8 0 72 32.2 72 72s-32.2 72-72 72-72-32.2-72-72 32.2-72 72-72zM24 80c0 39.8 32.2 72 72 72s72-32.2 72-72S135.8 8 96 8 24 40.2 24 80zm0 352c0 39.8 32.2 72 72 72s72-32.2 72-72-32.2-72-72-72-72 32.2-72 72z"]
-}, Vz = {
+}, xz = {
   prefix: "fas",
   iconName: "envelope",
   icon: [512, 512, [], "f0e0", "M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"]
-}, xz = {
+}, Vz = {
   prefix: "fas",
   iconName: "envelope-open",
   icon: [512, 512, [], "f2b6", "M512 464c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V200.724a48 48 0 0 1 18.387-37.776c24.913-19.529 45.501-35.365 164.2-121.511C199.412 29.17 232.797-.347 256 .003c23.198-.354 56.596 29.172 73.413 41.433 118.687 86.137 139.303 101.995 164.2 121.512A48 48 0 0 1 512 200.724V464zm-65.666-196.605c-2.563-3.728-7.7-4.595-11.339-1.907-22.845 16.873-55.462 40.705-105.582 77.079-16.825 12.266-50.21 41.781-73.413 41.43-23.211.344-56.559-29.143-73.413-41.43-50.114-36.37-82.734-60.204-105.582-77.079-3.639-2.688-8.776-1.821-11.339 1.907l-9.072 13.196a7.998 7.998 0 0 0 1.839 10.967c22.887 16.899 55.454 40.69 105.303 76.868 20.274 14.781 56.524 47.813 92.264 47.573 35.724.242 71.961-32.771 92.263-47.573 49.85-36.179 82.418-59.97 105.303-76.868a7.998 7.998 0 0 0 1.839-10.967l-9.071-13.196z"]
@@ -23480,11 +23479,11 @@ var th = {
   prefix: "fas",
   iconName: "fill-drip",
   icon: [576, 512, [], "f576", "M512 320s-64 92.65-64 128c0 35.35 28.66 64 64 64s64-28.65 64-64-64-128-64-128zm-9.37-102.94L294.94 9.37C288.69 3.12 280.5 0 272.31 0s-16.38 3.12-22.62 9.37l-81.58 81.58L81.93 4.76c-6.25-6.25-16.38-6.25-22.62 0L36.69 27.38c-6.24 6.25-6.24 16.38 0 22.62l86.19 86.18-94.76 94.76c-37.49 37.48-37.49 98.26 0 135.75l117.19 117.19c18.74 18.74 43.31 28.12 67.87 28.12 24.57 0 49.13-9.37 67.87-28.12l221.57-221.57c12.5-12.5 12.5-32.75.01-45.25zm-116.22 70.97H65.93c1.36-3.84 3.57-7.98 7.43-11.83l13.15-13.15 81.61-81.61 58.6 58.6c12.49 12.49 32.75 12.49 45.24 0s12.49-32.75 0-45.24l-58.6-58.6 58.95-58.95 162.44 162.44-48.34 48.34z"]
-}, Vy = {
+}, xy = {
   prefix: "fas",
   iconName: "film",
   icon: [512, 512, [], "f008", "M488 64h-8v20c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12V64H96v20c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12V64h-8C10.7 64 0 74.7 0 88v336c0 13.3 10.7 24 24 24h8v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h320v-20c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v20h8c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24zM96 372c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12H44c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm272 208c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm0-168c0 6.6-5.4 12-12 12H156c-6.6 0-12-5.4-12-12v-96c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v96zm112 152c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40zm0-96c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40z"]
-}, xy = {
+}, Vy = {
   prefix: "fas",
   iconName: "filter",
   icon: [512, 512, [], "f0b0", "M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"]
@@ -23696,11 +23695,11 @@ var th = {
   prefix: "fas",
   iconName: "grin-beam",
   icon: [496, 512, [], "f582", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 144c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 11.9-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.3-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm-160 0c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 11.9-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.2 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm80 280c-60.6 0-134.5-38.3-143.8-93.3-2-11.9 9.4-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.4-3.7 22.6 6.1 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z"]
-}, Vb = {
+}, xb = {
   prefix: "fas",
   iconName: "grin-beam-sweat",
   icon: [504, 512, [], "f583", "M456 128c26.5 0 48-21 48-47 0-20-28.5-60.4-41.6-77.8-3.2-4.3-9.6-4.3-12.8 0C436.5 20.6 408 61 408 81c0 26 21.5 47 48 47zm0 32c-44.1 0-80-35.4-80-79 0-4.4.3-14.2 8.1-32.2C345 23.1 298.3 8 248 8 111 8 0 119 0 256s111 248 248 248 248-111 248-248c0-35.1-7.4-68.4-20.5-98.6-6.3 1.5-12.7 2.6-19.5 2.6zm-128-8c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.1 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm-160 0c23.8 0 52.7 29.3 56 71.4.7 8.6-10.8 12-14.9 4.5l-9.5-17c-7.7-13.7-19.2-21.6-31.5-21.6s-23.8 7.9-31.5 21.6l-9.5 17c-4.2 7.4-15.6 4-14.9-4.5 3.1-42.1 32-71.4 55.8-71.4zm80 280c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.3-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.5-3.7 22.6 6.2 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z"]
-}, xb = {
+}, Vb = {
   prefix: "fas",
   iconName: "grin-hearts",
   icon: [496, 512, [], "f584", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM90.4 183.6c6.7-17.6 26.7-26.7 44.9-21.9l7.1 1.9 2-7.1c5-18.1 22.8-30.9 41.5-27.9 21.4 3.4 34.4 24.2 28.8 44.5L195.3 243c-1.2 4.5-5.9 7.2-10.5 6l-70.2-18.2c-20.4-5.4-31.9-27-24.2-47.2zM248 432c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.2-21.5 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.4-3.6 22.6 6.1 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3zm133.4-201.3l-70.2 18.2c-4.5 1.2-9.2-1.5-10.5-6L281.3 173c-5.6-20.3 7.4-41.1 28.8-44.5 18.6-3 36.4 9.8 41.5 27.9l2 7.1 7.1-1.9c18.2-4.7 38.2 4.3 44.9 21.9 7.7 20.3-3.8 41.9-24.2 47.2z"]
@@ -23912,11 +23911,11 @@ var th = {
   prefix: "fas",
   iconName: "head-side-virus",
   icon: [512, 512, [], "e064", "M272,240a16,16,0,1,0,16,16A16,16,0,0,0,272,240Zm-64-64a16,16,0,1,0,16,16A16,16,0,0,0,208,176Zm301.2,99c-20.93-47.12-48.43-151.73-73.07-186.75A207.9,207.9,0,0,0,266.09,0H192C86,0,0,86,0,192A191.23,191.23,0,0,0,64,334.81V512H320V448h64a64,64,0,0,0,64-64V320H480A32,32,0,0,0,509.2,275ZM368,240H355.88c-28.51,0-42.79,34.47-22.63,54.63l8.58,8.57a16,16,0,1,1-22.63,22.63l-8.57-8.58C290.47,297.09,256,311.37,256,339.88V352a16,16,0,0,1-32,0V339.88c0-28.51-34.47-42.79-54.63-22.63l-8.57,8.58a16,16,0,0,1-22.63-22.63l8.58-8.57c20.16-20.16,5.88-54.63-22.63-54.63H112a16,16,0,0,1,0-32h12.12c28.51,0,42.79-34.47,22.63-54.63l-8.58-8.57a16,16,0,0,1,22.63-22.63l8.57,8.58c20.16,20.16,54.63,5.88,54.63-22.63V96a16,16,0,0,1,32,0v12.12c0,28.51,34.47,42.79,54.63,22.63l8.57-8.58a16,16,0,0,1,22.63,22.63l-8.58,8.57C313.09,173.53,327.37,208,355.88,208H368a16,16,0,0,1,0,32Z"]
-}, VM = {
+}, xM = {
   prefix: "fas",
   iconName: "heading",
   icon: [512, 512, [], "f1dc", "M448 96v320h32a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H320a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h32V288H160v128h32a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16H32a16 16 0 0 1-16-16v-32a16 16 0 0 1 16-16h32V96H32a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h160a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16h-32v128h192V96h-32a16 16 0 0 1-16-16V48a16 16 0 0 1 16-16h160a16 16 0 0 1 16 16v32a16 16 0 0 1-16 16z"]
-}, xM = {
+}, VM = {
   prefix: "fas",
   iconName: "headphones",
   icon: [512, 512, [], "f025", "M256 32C114.52 32 0 146.496 0 288v48a32 32 0 0 0 17.689 28.622l14.383 7.191C34.083 431.903 83.421 480 144 480h24c13.255 0 24-10.745 24-24V280c0-13.255-10.745-24-24-24h-24c-31.342 0-59.671 12.879-80 33.627V288c0-105.869 86.131-192 192-192s192 86.131 192 192v1.627C427.671 268.879 399.342 256 368 256h-24c-13.255 0-24 10.745-24 24v176c0 13.255 10.745 24 24 24h24c60.579 0 109.917-48.098 111.928-108.187l14.382-7.191A32 32 0 0 0 512 336v-48c0-141.479-114.496-256-256-256z"]
@@ -24128,11 +24127,11 @@ var th = {
   prefix: "fas",
   iconName: "keyboard",
   icon: [576, 512, [], "f11c", "M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128 180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm-336 96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12zm288 0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h232c6.627 0 12-5.373 12-12zm96 0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12z"]
-}, VC = {
+}, xC = {
   prefix: "fas",
   iconName: "khanda",
   icon: [512, 512, [], "f66d", "M415.81 66c-6.37-3.5-14.37-2.33-19.36 3.02a15.974 15.974 0 0 0-1.91 19.52c16.49 26.16 25.2 56.39 25.2 87.41-.19 53.25-26.77 102.69-71.27 132.41l-76.63 53.35v-20.1l44.05-36.09c3.92-4.2 5-10.09 2.81-15.28L310.85 273c33.84-19.26 56.94-55.25 56.94-96.99 0-40.79-22.02-76.13-54.59-95.71l5.22-11.44c2.34-5.53.93-11.83-3.57-16.04L255.86 0l-58.99 52.81c-4.5 4.21-5.9 10.51-3.57 16.04l5.22 11.44c-32.57 19.58-54.59 54.93-54.59 95.72 0 41.75 23.09 77.73 56.94 96.99l-7.85 17.24c-2.19 5.18-1.1 11.07 2.81 15.28l44.05 36.09v19.9l-76.59-53.33C119.02 278.62 92.44 229.19 92.26 176c0-31.08 8.71-61.31 25.2-87.47 3.87-6.16 2.4-13.77-2.59-19.08-5-5.34-13.68-6.2-20.02-2.7C16.32 109.6-22.3 205.3 13.36 295.99c7.07 17.99 17.89 34.38 30.46 49.06l55.97 65.36c4.87 5.69 13.04 7.24 19.65 3.72l79.35-42.23L228 392.23l-47.08 32.78c-1.67-.37-3.23-1.01-5.01-1.01-13.25 0-23.99 10.74-23.99 24 0 13.25 10.74 24 23.99 24 12.1 0 21.69-9.11 23.33-20.76l40.63-28.28v29.95c-9.39 5.57-15.99 15.38-15.99 27.1 0 17.67 14.32 32 31.98 32s31.98-14.33 31.98-32c0-11.71-6.61-21.52-15.99-27.1v-30.15l40.91 28.48C314.41 462.89 324 472 336.09 472c13.25 0 23.99-10.75 23.99-24 0-13.26-10.74-24-23.99-24-1.78 0-3.34.64-5.01 1.01L284 392.23l29.21-20.34 79.35 42.23c6.61 3.52 14.78 1.97 19.65-3.71l52.51-61.31c18.87-22.02 34-47.5 41.25-75.59 21.62-83.66-16.45-167.27-90.16-207.51zm-95.99 110c0 22.3-11.49 41.92-28.83 53.38l-5.65-12.41c-8.75-24.52-8.75-51.04 0-75.56l7.83-17.18c16.07 11.65 26.65 30.45 26.65 51.77zm-127.93 0c0-21.32 10.58-40.12 26.66-51.76l7.83 17.18c8.75 24.52 8.75 51.03 0 75.56l-5.65 12.41c-17.34-11.46-28.84-31.09-28.84-53.39z"]
-}, xC = {
+}, VC = {
   prefix: "fas",
   iconName: "kiss",
   icon: [496, 512, [], "f596", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm-80 232c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm136 156c0 19.2-28.7 41.5-71.5 44-8.5.8-12.1-11.8-3.6-15.4l17-7.2c13-5.5 20.8-13.5 20.8-21.5s-7.8-16-20.8-21.5l-17-7.2c-6-2.5-6.1-12.2 0-14.8l17-7.2c13-5.5 20.8-13.5 20.8-21.5s-7.8-16-20.8-21.5l-17-7.2c-8.6-3.6-4.8-16.5 3.6-15.4 42.8 2.5 71.5 24.8 71.5 44 0 13-13.4 27.3-35.2 36C290.6 368.7 304 383 304 396zm24-156c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
@@ -24252,435 +24251,435 @@ var th = {
   prefix: "fas",
   iconName: "location-arrow",
   icon: [512, 512, [], "f124", "M444.52 3.52L28.74 195.42c-47.97 22.39-31.98 92.75 19.19 92.75h175.91v175.91c0 51.17 70.36 67.17 92.75 19.19l191.9-415.78c15.99-38.39-25.59-79.97-63.97-63.97z"]
-}, eV = {
+}, ex = {
   prefix: "fas",
   iconName: "lock",
   icon: [448, 512, [], "f023", "M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"]
-}, aV = {
+}, ax = {
   prefix: "fas",
   iconName: "lock-open",
   icon: [576, 512, [], "f3c1", "M423.5 0C339.5.3 272 69.5 272 153.5V224H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48h-48v-71.1c0-39.6 31.7-72.5 71.3-72.9 40-.4 72.7 32.1 72.7 72v80c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24v-80C576 68 507.5-.3 423.5 0z"]
-}, tV = {
+}, tx = {
   prefix: "fas",
   iconName: "long-arrow-alt-down",
   icon: [256, 512, [], "f309", "M168 345.941V44c0-6.627-5.373-12-12-12h-56c-6.627 0-12 5.373-12 12v301.941H41.941c-21.382 0-32.09 25.851-16.971 40.971l86.059 86.059c9.373 9.373 24.569 9.373 33.941 0l86.059-86.059c15.119-15.119 4.411-40.971-16.971-40.971H168z"]
-}, cV = {
+}, cx = {
   prefix: "fas",
   iconName: "long-arrow-alt-left",
   icon: [448, 512, [], "f30a", "M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"]
-}, iV = {
+}, ix = {
   prefix: "fas",
   iconName: "long-arrow-alt-right",
   icon: [448, 512, [], "f30b", "M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"]
-}, rV = {
+}, rx = {
   prefix: "fas",
   iconName: "long-arrow-alt-up",
   icon: [256, 512, [], "f30c", "M88 166.059V468c0 6.627 5.373 12 12 12h56c6.627 0 12-5.373 12-12V166.059h46.059c21.382 0 32.09-25.851 16.971-40.971l-86.059-86.059c-9.373-9.373-24.569-9.373-33.941 0l-86.059 86.059c-15.119 15.119-4.411 40.971 16.971 40.971H88z"]
-}, nV = {
+}, nx = {
   prefix: "fas",
   iconName: "low-vision",
   icon: [576, 512, [], "f2a8", "M569.344 231.631C512.96 135.949 407.81 72 288 72c-28.468 0-56.102 3.619-82.451 10.409L152.778 10.24c-7.601-10.858-22.564-13.5-33.423-5.9l-13.114 9.178c-10.86 7.601-13.502 22.566-5.9 33.426l43.131 58.395C89.449 131.73 40.228 174.683 6.682 231.581c-.01.017-.023.033-.034.05-8.765 14.875-8.964 33.528 0 48.739 38.5 65.332 99.742 115.862 172.859 141.349L55.316 244.302A272.194 272.194 0 0 1 83.61 208.39l119.4 170.58h.01l40.63 58.04a330.055 330.055 0 0 0 78.94 1.17l-189.98-271.4a277.628 277.628 0 0 1 38.777-21.563l251.836 356.544c7.601 10.858 22.564 13.499 33.423 5.9l13.114-9.178c10.86-7.601 13.502-22.567 5.9-33.426l-43.12-58.377-.007-.009c57.161-27.978 104.835-72.04 136.81-126.301a47.938 47.938 0 0 0 .001-48.739zM390.026 345.94l-19.066-27.23c24.682-32.567 27.711-76.353 8.8-111.68v.03c0 23.65-19.17 42.82-42.82 42.82-23.828 0-42.82-19.349-42.82-42.82 0-23.65 19.17-42.82 42.82-42.82h.03c-24.75-13.249-53.522-15.643-79.51-7.68l-19.068-27.237C253.758 123.306 270.488 120 288 120c75.162 0 136 60.826 136 136 0 34.504-12.833 65.975-33.974 89.94z"]
-}, oV = {
+}, ox = {
   prefix: "fas",
   iconName: "luggage-cart",
   icon: [640, 512, [], "f59d", "M224 320h32V96h-32c-17.67 0-32 14.33-32 32v160c0 17.67 14.33 32 32 32zm352-32V128c0-17.67-14.33-32-32-32h-32v224h32c17.67 0 32-14.33 32-32zm48 96H128V16c0-8.84-7.16-16-16-16H16C7.16 0 0 7.16 0 16v32c0 8.84 7.16 16 16 16h48v368c0 8.84 7.16 16 16 16h82.94c-1.79 5.03-2.94 10.36-2.94 16 0 26.51 21.49 48 48 48s48-21.49 48-48c0-5.64-1.15-10.97-2.94-16h197.88c-1.79 5.03-2.94 10.36-2.94 16 0 26.51 21.49 48 48 48s48-21.49 48-48c0-5.64-1.15-10.97-2.94-16H624c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM480 96V48c0-26.51-21.49-48-48-48h-96c-26.51 0-48 21.49-48 48v272h192V96zm-48 0h-96V48h96v48z"]
-}, lV = {
+}, lx = {
   prefix: "fas",
   iconName: "lungs",
   icon: [640, 512, [], "f604", "M636.11 390.15C614.44 308.85 580.07 231 534.1 159.13 511.98 124.56 498.03 96 454.05 96 415.36 96 384 125.42 384 161.71v60.11l-32.88-21.92a15.996 15.996 0 0 1-7.12-13.31V16c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v170.59c0 5.35-2.67 10.34-7.12 13.31L256 221.82v-60.11C256 125.42 224.64 96 185.95 96c-43.98 0-57.93 28.56-80.05 63.13C59.93 231 25.56 308.85 3.89 390.15 1.3 399.84 0 409.79 0 419.78c0 61.23 62.48 105.44 125.24 88.62l59.5-15.95c42.18-11.3 71.26-47.47 71.26-88.62v-87.49l-85.84 57.23a7.992 7.992 0 0 1-11.09-2.22l-8.88-13.31a7.992 7.992 0 0 1 2.22-11.09L320 235.23l167.59 111.72a7.994 7.994 0 0 1 2.22 11.09l-8.88 13.31a7.994 7.994 0 0 1-11.09 2.22L384 316.34v87.49c0 41.15 29.08 77.31 71.26 88.62l59.5 15.95C577.52 525.22 640 481.01 640 419.78c0-9.99-1.3-19.94-3.89-29.63z"]
-}, sV = {
+}, sx = {
   prefix: "fas",
   iconName: "lungs-virus",
   icon: [640, 512, [], "e067", "M344,150.68V16A16,16,0,0,0,328,0H312a16,16,0,0,0-16,16V150.68a46.45,46.45,0,0,1,48,0ZM195.54,444.46a48.06,48.06,0,0,1,0-67.88l8.58-8.58H192a48,48,0,0,1,0-96h12.12l-8.58-8.57a48,48,0,0,1,60.46-74V161.75C256,125.38,224.62,96,186,96c-44,0-58,28.5-80.12,63.13a819.52,819.52,0,0,0-102,231A113.16,113.16,0,0,0,0,419.75C0,481,62.5,525.26,125.25,508.38l59.5-15.87a98.51,98.51,0,0,0,52.5-34.75,46.49,46.49,0,0,1-41.71-13.3Zm226.29-22.63a16,16,0,0,0,0-22.62l-8.58-8.58C393.09,370.47,407.37,336,435.88,336H448a16,16,0,0,0,0-32H435.88c-28.51,0-42.79-34.47-22.63-54.62l8.58-8.58a16,16,0,0,0-22.63-22.63l-8.57,8.58C370.47,246.91,336,232.63,336,204.12V192a16,16,0,0,0-32,0v12.12c0,28.51-34.47,42.79-54.63,22.63l-8.57-8.58a16,16,0,0,0-22.63,22.63l8.58,8.58c20.16,20.15,5.88,54.62-22.63,54.62H192a16,16,0,0,0,0,32h12.12c28.51,0,42.79,34.47,22.63,54.63l-8.58,8.58a16,16,0,1,0,22.63,22.62l8.57-8.57C269.53,393.1,304,407.38,304,435.88V448a16,16,0,0,0,32,0V435.88c0-28.5,34.47-42.78,54.63-22.62l8.57,8.57a16,16,0,0,0,22.63,0ZM288,304a16,16,0,1,1,16-16A16,16,0,0,1,288,304Zm64,64a16,16,0,1,1,16-16A16,16,0,0,1,352,368Zm284.12,22.13a819.52,819.52,0,0,0-102-231C512,124.5,498,96,454,96c-38.62,0-70,29.38-70,65.75v27.72a48,48,0,0,1,60.46,74L435.88,272H448a48,48,0,0,1,0,96H435.88l8.58,8.58a47.7,47.7,0,0,1-41.71,81.18,98.51,98.51,0,0,0,52.5,34.75l59.5,15.87C577.5,525.26,640,481,640,419.75A113.16,113.16,0,0,0,636.12,390.13Z"]
-}, fV = {
+}, fx = {
   prefix: "fas",
   iconName: "magic",
   icon: [512, 512, [], "f0d0", "M224 96l16-32 32-16-32-16-16-32-16 32-32 16 32 16 16 32zM80 160l26.66-53.33L160 80l-53.34-26.67L80 0 53.34 53.33 0 80l53.34 26.67L80 160zm352 128l-26.66 53.33L352 368l53.34 26.67L432 448l26.66-53.33L512 368l-53.34-26.67L432 288zm70.62-193.77L417.77 9.38C411.53 3.12 403.34 0 395.15 0c-8.19 0-16.38 3.12-22.63 9.38L9.38 372.52c-12.5 12.5-12.5 32.76 0 45.25l84.85 84.85c6.25 6.25 14.44 9.37 22.62 9.37 8.19 0 16.38-3.12 22.63-9.37l363.14-363.15c12.5-12.48 12.5-32.75 0-45.24zM359.45 203.46l-50.91-50.91 86.6-86.6 50.91 50.91-86.6 86.6z"]
-}, dV = {
+}, dx = {
   prefix: "fas",
   iconName: "magnet",
   icon: [512, 512, [], "f076", "M164.07 148.1H12a12 12 0 0 1-12-12v-80a36 36 0 0 1 36-36h104a36 36 0 0 1 36 36v80a11.89 11.89 0 0 1-11.93 12zm347.93-12V56a36 36 0 0 0-36-36H372a36 36 0 0 0-36 36v80a12 12 0 0 0 12 12h152a11.89 11.89 0 0 0 12-11.9zm-164 44a12 12 0 0 0-12 12v52c0 128.1-160 127.9-160 0v-52a12 12 0 0 0-12-12H12.1a12 12 0 0 0-12 12.1c.1 21.4.6 40.3 0 53.3 0 150.6 136.17 246.6 256.75 246.6s255-96 255-246.7c-.6-12.8-.2-33 0-53.2a12 12 0 0 0-12-12.1z"]
-}, uV = {
+}, ux = {
   prefix: "fas",
   iconName: "mail-bulk",
   icon: [576, 512, [], "f674", "M160 448c-25.6 0-51.2-22.4-64-32-64-44.8-83.2-60.8-96-70.4V480c0 17.67 14.33 32 32 32h256c17.67 0 32-14.33 32-32V345.6c-12.8 9.6-32 25.6-96 70.4-12.8 9.6-38.4 32-64 32zm128-192H32c-17.67 0-32 14.33-32 32v16c25.6 19.2 22.4 19.2 115.2 86.4 9.6 6.4 28.8 25.6 44.8 25.6s35.2-19.2 44.8-22.4c92.8-67.2 89.6-67.2 115.2-86.4V288c0-17.67-14.33-32-32-32zm256-96H224c-17.67 0-32 14.33-32 32v32h96c33.21 0 60.59 25.42 63.71 57.82l.29-.22V416h192c17.67 0 32-14.33 32-32V192c0-17.67-14.33-32-32-32zm-32 128h-64v-64h64v64zm-352-96c0-35.29 28.71-64 64-64h224V32c0-17.67-14.33-32-32-32H96C78.33 0 64 14.33 64 32v192h96v-32z"]
-}, hV = {
+}, hx = {
   prefix: "fas",
   iconName: "male",
   icon: [192, 512, [], "f183", "M96 0c35.346 0 64 28.654 64 64s-28.654 64-64 64-64-28.654-64-64S60.654 0 96 0m48 144h-11.36c-22.711 10.443-49.59 10.894-73.28 0H48c-26.51 0-48 21.49-48 48v136c0 13.255 10.745 24 24 24h16v136c0 13.255 10.745 24 24 24h64c13.255 0 24-10.745 24-24V352h16c13.255 0 24-10.745 24-24V192c0-26.51-21.49-48-48-48z"]
-}, mV = {
+}, mx = {
   prefix: "fas",
   iconName: "map",
   icon: [576, 512, [], "f279", "M0 117.66v346.32c0 11.32 11.43 19.06 21.94 14.86L160 416V32L20.12 87.95A32.006 32.006 0 0 0 0 117.66zM192 416l192 64V96L192 32v384zM554.06 33.16L416 96v384l139.88-55.95A31.996 31.996 0 0 0 576 394.34V48.02c0-11.32-11.43-19.06-21.94-14.86z"]
-}, vV = {
+}, vx = {
   prefix: "fas",
   iconName: "map-marked",
   icon: [576, 512, [], "f59f", "M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"]
-}, pV = {
+}, px = {
   prefix: "fas",
   iconName: "map-marked-alt",
   icon: [576, 512, [], "f5a0", "M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"]
-}, gV = {
+}, gx = {
   prefix: "fas",
   iconName: "map-marker",
   icon: [384, 512, [], "f041", "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0z"]
-}, zV = {
+}, zx = {
   prefix: "fas",
   iconName: "map-marker-alt",
   icon: [384, 512, [], "f3c5", "M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"]
-}, yV = {
+}, yx = {
   prefix: "fas",
   iconName: "map-pin",
   icon: [288, 512, [], "f276", "M112 316.94v156.69l22.02 33.02c4.75 7.12 15.22 7.12 19.97 0L176 473.63V316.94c-10.39 1.92-21.06 3.06-32 3.06s-21.61-1.14-32-3.06zM144 0C64.47 0 0 64.47 0 144s64.47 144 144 144 144-64.47 144-144S223.53 0 144 0zm0 76c-37.5 0-68 30.5-68 68 0 6.62-5.38 12-12 12s-12-5.38-12-12c0-50.73 41.28-92 92-92 6.62 0 12 5.38 12 12s-5.38 12-12 12z"]
-}, bV = {
+}, bx = {
   prefix: "fas",
   iconName: "map-signs",
   icon: [512, 512, [], "f277", "M507.31 84.69L464 41.37c-6-6-14.14-9.37-22.63-9.37H288V16c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v16H56c-13.25 0-24 10.75-24 24v80c0 13.25 10.75 24 24 24h385.37c8.49 0 16.62-3.37 22.63-9.37l43.31-43.31c6.25-6.26 6.25-16.38 0-22.63zM224 496c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V384h-64v112zm232-272H288v-32h-64v32H70.63c-8.49 0-16.62 3.37-22.63 9.37L4.69 276.69c-6.25 6.25-6.25 16.38 0 22.63L48 342.63c6 6 14.14 9.37 22.63 9.37H456c13.25 0 24-10.75 24-24v-80c0-13.25-10.75-24-24-24z"]
-}, MV = {
+}, Mx = {
   prefix: "fas",
   iconName: "marker",
   icon: [512, 512, [], "f5a1", "M93.95 290.03A327.038 327.038 0 0 0 .17 485.11l-.03.23c-1.7 15.28 11.21 28.2 26.49 26.51a327.02 327.02 0 0 0 195.34-93.8l75.4-75.4-128.02-128.02-75.4 75.4zM485.49 26.51c-35.35-35.35-92.67-35.35-128.02 0l-21.76 21.76-36.56-36.55c-15.62-15.62-40.95-15.62-56.56 0L138.47 115.84c-6.25 6.25-6.25 16.38 0 22.63l22.62 22.62c6.25 6.25 16.38 6.25 22.63 0l87.15-87.15 19.59 19.59L191.98 192 320 320.02l165.49-165.49c35.35-35.35 35.35-92.66 0-128.02z"]
-}, CV = {
+}, Cx = {
   prefix: "fas",
   iconName: "mars",
   icon: [384, 512, [], "f222", "M372 64h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-80.7 80.7c-22.2-14-48.5-22.1-76.7-22.1C64.5 160 0 224.5 0 304s64.5 144 144 144 144-64.5 144-144c0-28.2-8.1-54.5-22.1-76.7l80.7-80.7 16.9 16.9c7.6 7.6 20.5 2.2 20.5-8.5V76c0-6.6-5.4-12-12-12zM144 384c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]
-}, VV = {
+}, xx = {
   prefix: "fas",
   iconName: "mars-double",
   icon: [512, 512, [], "f227", "M340 0h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-48.7 48.7C198.5 72.1 172.2 64 144 64 64.5 64 0 128.5 0 208s64.5 144 144 144 144-64.5 144-144c0-28.2-8.1-54.5-22.1-76.7l48.7-48.7 16.9 16.9c2.4 2.4 5.5 3.5 8.4 3.5 6.2 0 12.1-4.8 12.1-12V12c0-6.6-5.4-12-12-12zM144 288c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80zm356-128.1h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-48.7 48.7c-18.2-11.4-39-18.9-61.5-21.3-2.1 21.8-8.2 43.3-18.4 63.3 1.1 0 2.2-.1 3.2-.1 44.1 0 80 35.9 80 80s-35.9 80-80 80-80-35.9-80-80c0-1.1 0-2.2.1-3.2-20 10.2-41.5 16.4-63.3 18.4C168.4 455.6 229.6 512 304 512c79.5 0 144-64.5 144-144 0-28.2-8.1-54.5-22.1-76.7l48.7-48.7 16.9 16.9c2.4 2.4 5.4 3.5 8.4 3.5 6.2 0 12.1-4.8 12.1-12v-79c0-6.7-5.4-12.1-12-12.1z"]
-}, xV = {
+}, Vx = {
   prefix: "fas",
   iconName: "mars-stroke",
   icon: [384, 512, [], "f229", "M372 64h-79c-10.7 0-16 12.9-8.5 20.5l16.9 16.9-17.5 17.5-14.1-14.1c-4.7-4.7-12.3-4.7-17 0L224.5 133c-4.7 4.7-4.7 12.3 0 17l14.1 14.1-18 18c-22.2-14-48.5-22.1-76.7-22.1C64.5 160 0 224.5 0 304s64.5 144 144 144 144-64.5 144-144c0-28.2-8.1-54.5-22.1-76.7l18-18 14.1 14.1c4.7 4.7 12.3 4.7 17 0l28.3-28.3c4.7-4.7 4.7-12.3 0-17L329.2 164l17.5-17.5 16.9 16.9c7.6 7.6 20.5 2.2 20.5-8.5V76c-.1-6.6-5.5-12-12.1-12zM144 384c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]
-}, wV = {
+}, wx = {
   prefix: "fas",
   iconName: "mars-stroke-h",
   icon: [480, 512, [], "f22b", "M476.2 247.5l-55.9-55.9c-7.6-7.6-20.5-2.2-20.5 8.5V224H376v-20c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v20h-27.6c-5.8-25.6-18.7-49.9-38.6-69.8C189.6 98 98.4 98 42.2 154.2c-56.2 56.2-56.2 147.4 0 203.6 56.2 56.2 147.4 56.2 203.6 0 19.9-19.9 32.8-44.2 38.6-69.8H312v20c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-20h23.9v23.9c0 10.7 12.9 16 20.5 8.5l55.9-55.9c4.6-4.7 4.6-12.3-.1-17zm-275.6 65.1c-31.2 31.2-81.9 31.2-113.1 0-31.2-31.2-31.2-81.9 0-113.1 31.2-31.2 81.9-31.2 113.1 0 31.2 31.1 31.2 81.9 0 113.1z"]
-}, HV = {
+}, Hx = {
   prefix: "fas",
   iconName: "mars-stroke-v",
   icon: [288, 512, [], "f22a", "M245.8 234.2c-19.9-19.9-44.2-32.8-69.8-38.6v-25.4h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V81.4h23.9c10.7 0 16-12.9 8.5-20.5L152.5 5.1c-4.7-4.7-12.3-4.7-17 0L79.6 61c-7.6 7.6-2.2 20.5 8.5 20.5H112v24.7H92c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h20v25.4c-25.6 5.8-49.9 18.7-69.8 38.6-56.2 56.2-56.2 147.4 0 203.6 56.2 56.2 147.4 56.2 203.6 0 56.3-56.2 56.3-147.4 0-203.6zm-45.2 158.4c-31.2 31.2-81.9 31.2-113.1 0-31.2-31.2-31.2-81.9 0-113.1 31.2-31.2 81.9-31.2 113.1 0 31.2 31.1 31.2 81.9 0 113.1z"]
-}, LV = {
+}, Lx = {
   prefix: "fas",
   iconName: "mask",
   icon: [640, 512, [], "f6fa", "M320.67 64c-442.6 0-357.57 384-158.46 384 39.9 0 77.47-20.69 101.42-55.86l25.73-37.79c15.66-22.99 46.97-22.99 62.63 0l25.73 37.79C401.66 427.31 439.23 448 479.13 448c189.86 0 290.63-384-158.46-384zM184 308.36c-41.06 0-67.76-25.66-80.08-41.05-5.23-6.53-5.23-16.09 0-22.63 12.32-15.4 39.01-41.05 80.08-41.05s67.76 25.66 80.08 41.05c5.23 6.53 5.23 16.09 0 22.63-12.32 15.4-39.02 41.05-80.08 41.05zm272 0c-41.06 0-67.76-25.66-80.08-41.05-5.23-6.53-5.23-16.09 0-22.63 12.32-15.4 39.01-41.05 80.08-41.05s67.76 25.66 80.08 41.05c5.23 6.53 5.23 16.09 0 22.63-12.32 15.4-39.02 41.05-80.08 41.05z"]
-}, NV = {
+}, Nx = {
   prefix: "fas",
   iconName: "medal",
   icon: [512, 512, [], "f5a2", "M223.75 130.75L154.62 15.54A31.997 31.997 0 0 0 127.18 0H16.03C3.08 0-4.5 14.57 2.92 25.18l111.27 158.96c29.72-27.77 67.52-46.83 109.56-53.39zM495.97 0H384.82c-11.24 0-21.66 5.9-27.44 15.54l-69.13 115.21c42.04 6.56 79.84 25.62 109.56 53.38L509.08 25.18C516.5 14.57 508.92 0 495.97 0zM256 160c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm92.52 157.26l-37.93 36.96 8.97 52.22c1.6 9.36-8.26 16.51-16.65 12.09L256 393.88l-46.9 24.65c-8.4 4.45-18.25-2.74-16.65-12.09l8.97-52.22-37.93-36.96c-6.82-6.64-3.05-18.23 6.35-19.59l52.43-7.64 23.43-47.52c2.11-4.28 6.19-6.39 10.28-6.39 4.11 0 8.22 2.14 10.33 6.39l23.43 47.52 52.43 7.64c9.4 1.36 13.17 12.95 6.35 19.59z"]
-}, SV = {
+}, Sx = {
   prefix: "fas",
   iconName: "medkit",
   icon: [512, 512, [], "f0fa", "M96 480h320V128h-32V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v48H96v352zm96-384h128v32H192V96zm320 80v256c0 26.51-21.49 48-48 48h-16V128h16c26.51 0 48 21.49 48 48zM64 480H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v352zm288-208v32c0 8.837-7.163 16-16 16h-48v48c0 8.837-7.163 16-16 16h-32c-8.837 0-16-7.163-16-16v-48h-48c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h48v-48c0-8.837 7.163-16 16-16h32c8.837 0 16 7.163 16 16v48h48c8.837 0 16 7.163 16 16z"]
-}, AV = {
+}, Ax = {
   prefix: "fas",
   iconName: "meh",
   icon: [496, 512, [], "f11a", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm-80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm176 192H152c-21.2 0-21.2-32 0-32h192c21.2 0 21.2 32 0 32zm-16-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
-}, _V = {
+}, _x = {
   prefix: "fas",
   iconName: "meh-blank",
   icon: [496, 512, [], "f5a4", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm-80 232c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm160 0c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
-}, kV = {
+}, kx = {
   prefix: "fas",
   iconName: "meh-rolling-eyes",
   icon: [496, 512, [], "f5a5", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zM88 224c0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64s-64-28.7-64-64zm224 176H184c-21.2 0-21.2-32 0-32h128c21.2 0 21.2 32 0 32zm32-112c-35.3 0-64-28.7-64-64 0-24.3 13.7-45.2 33.6-56-.7 2.6-1.6 5.2-1.6 8 0 17.7 14.3 32 32 32s32-14.3 32-32c0-2.8-.9-5.4-1.6-8 19.9 10.8 33.6 31.7 33.6 56 0 35.3-28.7 64-64 64z"]
-}, TV = {
+}, Tx = {
   prefix: "fas",
   iconName: "memory",
   icon: [640, 512, [], "f538", "M640 130.94V96c0-17.67-14.33-32-32-32H32C14.33 64 0 78.33 0 96v34.94c18.6 6.61 32 24.19 32 45.06s-13.4 38.45-32 45.06V320h640v-98.94c-18.6-6.61-32-24.19-32-45.06s13.4-38.45 32-45.06zM224 256h-64V128h64v128zm128 0h-64V128h64v128zm128 0h-64V128h64v128zM0 448h64v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h128v-26.67c0-8.84 7.16-16 16-16s16 7.16 16 16V448h64v-96H0v96z"]
-}, DV = {
+}, Dx = {
   prefix: "fas",
   iconName: "menorah",
   icon: [640, 512, [], "f676", "M144 128h-32c-8.84 0-16 7.16-16 16v144h64V144c0-8.84-7.16-16-16-16zm96 0h-32c-8.84 0-16 7.16-16 16v144h64V144c0-8.84-7.16-16-16-16zm192 0h-32c-8.84 0-16 7.16-16 16v144h64V144c0-8.84-7.16-16-16-16zm96 0h-32c-8.84 0-16 7.16-16 16v144h64V144c0-8.84-7.16-16-16-16zm80-32c17.67 0 32-14.33 32-32S608 0 608 0s-32 46.33-32 64 14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S512 0 512 0s-32 46.33-32 64 14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S416 0 416 0s-32 46.33-32 64 14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S320 0 320 0s-32 46.33-32 64 14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S224 0 224 0s-32 46.33-32 64 14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S128 0 128 0 96 46.33 96 64s14.33 32 32 32zm-96 0c17.67 0 32-14.33 32-32S32 0 32 0 0 46.33 0 64s14.33 32 32 32zm544 192c0 17.67-14.33 32-32 32H352V144c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v176H96c-17.67 0-32-14.33-32-32V144c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v144c0 53.02 42.98 96 96 96h192v64H112c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16H352v-64h192c53.02 0 96-42.98 96-96V144c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v144z"]
-}, OV = {
+}, Ox = {
   prefix: "fas",
   iconName: "mercury",
   icon: [288, 512, [], "f223", "M288 208c0-44.2-19.9-83.7-51.2-110.1 2.5-1.8 4.9-3.8 7.2-5.8 24.7-21.2 39.8-48.8 43.2-78.8.9-7.1-4.7-13.3-11.9-13.3h-40.5C229 0 224.1 4.1 223 9.8c-2.4 12.5-9.6 24.3-20.7 33.8C187 56.8 166.3 64 144 64s-43-7.2-58.4-20.4C74.5 34.1 67.4 22.3 64.9 9.8 63.8 4.1 58.9 0 53.2 0H12.7C5.5 0-.1 6.2.8 13.3 4.2 43.4 19.2 71 44 92.2c2.3 2 4.7 3.9 7.2 5.8C19.9 124.3 0 163.8 0 208c0 68.5 47.9 125.9 112 140.4V400H76c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h36v36c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12v-36h36c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-36v-51.6c64.1-14.5 112-71.9 112-140.4zm-224 0c0-44.1 35.9-80 80-80s80 35.9 80 80-35.9 80-80 80-80-35.9-80-80z"]
-}, PV = {
+}, Px = {
   prefix: "fas",
   iconName: "meteor",
   icon: [512, 512, [], "f753", "M511.328,20.8027c-11.60759,38.70264-34.30724,111.70173-61.30311,187.70077,6.99893,2.09372,13.4042,4,18.60653,5.59368a16.06158,16.06158,0,0,1,9.49854,22.906c-22.106,42.29635-82.69047,152.795-142.47819,214.40356-.99984,1.09373-1.99969,2.5-2.99954,3.49995A194.83046,194.83046,0,1,1,57.085,179.41009c.99985-1,2.40588-2,3.49947-3,61.59994-59.90549,171.97367-120.40473,214.37343-142.4982a16.058,16.058,0,0,1,22.90274,9.49988c1.59351,5.09368,3.49947,11.5936,5.5929,18.59351C379.34818,35.00565,452.43074,12.30281,491.12794.70921A16.18325,16.18325,0,0,1,511.328,20.8027ZM319.951,320.00207A127.98041,127.98041,0,1,0,191.97061,448.00046,127.97573,127.97573,0,0,0,319.951,320.00207Zm-127.98041-31.9996a31.9951,31.9951,0,1,1-31.9951-31.9996A31.959,31.959,0,0,1,191.97061,288.00247Zm31.9951,79.999a15.99755,15.99755,0,1,1-15.99755-15.9998A16.04975,16.04975,0,0,1,223.96571,368.00147Z"]
-}, FV = {
+}, Fx = {
   prefix: "fas",
   iconName: "microchip",
   icon: [512, 512, [], "f2db", "M416 48v416c0 26.51-21.49 48-48 48H144c-26.51 0-48-21.49-48-48V48c0-26.51 21.49-48 48-48h224c26.51 0 48 21.49 48 48zm96 58v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42V88h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zm0 96v12a6 6 0 0 1-6 6h-18v6a6 6 0 0 1-6 6h-42v-48h42a6 6 0 0 1 6 6v6h18a6 6 0 0 1 6 6zM30 376h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6zm0-96h42v48H30a6 6 0 0 1-6-6v-6H6a6 6 0 0 1-6-6v-12a6 6 0 0 1 6-6h18v-6a6 6 0 0 1 6-6z"]
-}, IV = {
+}, Ix = {
   prefix: "fas",
   iconName: "microphone",
   icon: [352, 512, [], "f130", "M176 352c53.02 0 96-42.98 96-96V96c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96zm160-160h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16z"]
-}, EV = {
+}, Ex = {
   prefix: "fas",
   iconName: "microphone-alt",
   icon: [352, 512, [], "f3c9", "M336 192h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16zM176 352c53.02 0 96-42.98 96-96h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96z"]
-}, RV = {
+}, Rx = {
   prefix: "fas",
   iconName: "microphone-alt-slash",
   icon: [640, 512, [], "f539", "M633.82 458.1L476.26 336.33C488.74 312.21 496 284.98 496 256v-48c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v48c0 17.92-3.96 34.8-10.72 50.2l-26.55-20.52c3.1-9.4 5.28-19.22 5.28-29.67h-43.67l-41.4-32H416v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H416v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H416c0-53.02-42.98-96-96-96s-96 42.98-96 96v45.36L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.36 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.41-6.97 4.16-17.02-2.82-22.45zM400 464h-56v-33.78c11.71-1.62 23.1-4.28 33.96-8.08l-50.4-38.96c-6.71.4-13.41.87-20.35.2-55.85-5.45-98.74-48.63-111.18-101.85L144 241.31v6.85c0 89.64 63.97 169.55 152 181.69V464h-56c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16z"]
-}, BV = {
+}, Bx = {
   prefix: "fas",
   iconName: "microphone-slash",
   icon: [640, 512, [], "f131", "M633.82 458.1l-157.8-121.96C488.61 312.13 496 285.01 496 256v-48c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v48c0 17.92-3.96 34.8-10.72 50.2l-26.55-20.52c3.1-9.4 5.28-19.22 5.28-29.67V96c0-53.02-42.98-96-96-96s-96 42.98-96 96v45.36L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.36 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.41-6.97 4.16-17.02-2.82-22.45zM400 464h-56v-33.77c11.66-1.6 22.85-4.54 33.67-8.31l-50.11-38.73c-6.71.4-13.41.87-20.35.2-55.85-5.45-98.74-48.63-111.18-101.85L144 241.31v6.85c0 89.64 63.97 169.55 152 181.69V464h-56c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16z"]
-}, $V = {
+}, $x = {
   prefix: "fas",
   iconName: "microscope",
   icon: [512, 512, [], "f610", "M160 320h12v16c0 8.84 7.16 16 16 16h40c8.84 0 16-7.16 16-16v-16h12c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32V16c0-8.84-7.16-16-16-16h-64c-8.84 0-16 7.16-16 16v16c-17.67 0-32 14.33-32 32v224c0 17.67 14.33 32 32 32zm304 128h-1.29C493.24 413.99 512 369.2 512 320c0-105.88-86.12-192-192-192v64c70.58 0 128 57.42 128 128s-57.42 128-128 128H48c-26.51 0-48 21.49-48 48 0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16 0-26.51-21.49-48-48-48zm-360-32h208c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8H104c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8z"]
-}, UV = {
+}, Ux = {
   prefix: "fas",
   iconName: "minus",
   icon: [448, 512, [], "f068", "M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"]
-}, ZV = {
+}, Zx = {
   prefix: "fas",
   iconName: "minus-circle",
   icon: [512, 512, [], "f056", "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zM124 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H124z"]
-}, jV = {
+}, jx = {
   prefix: "fas",
   iconName: "minus-square",
   icon: [448, 512, [], "f146", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM92 296c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h264c6.6 0 12 5.4 12 12v56c0 6.6-5.4 12-12 12H92z"]
-}, qV = {
+}, qx = {
   prefix: "fas",
   iconName: "mitten",
   icon: [448, 512, [], "f7b5", "M368 416H48c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16zm57-209.1c-27.2-22.6-67.5-19-90.1 8.2l-20.9 25-29.6-128.4c-18-77.5-95.4-125.9-172.8-108C34.2 21.6-14.2 98.9 3.7 176.4L51.6 384h309l72.5-87c22.7-27.2 19-67.5-8.1-90.1z"]
-}, YV = {
+}, Yx = {
   prefix: "fas",
   iconName: "mobile",
   icon: [320, 512, [], "f10b", "M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
-}, WV = {
+}, Wx = {
   prefix: "fas",
   iconName: "mobile-alt",
   icon: [320, 512, [], "f3cd", "M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"]
-}, GV = {
+}, Gx = {
   prefix: "fas",
   iconName: "money-bill",
   icon: [640, 512, [], "f0d6", "M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"]
-}, KV = {
+}, Kx = {
   prefix: "fas",
   iconName: "money-bill-alt",
   icon: [640, 512, [], "f3d1", "M352 288h-16v-88c0-4.42-3.58-8-8-8h-13.58c-4.74 0-9.37 1.4-13.31 4.03l-15.33 10.22a7.994 7.994 0 0 0-2.22 11.09l8.88 13.31a7.994 7.994 0 0 0 11.09 2.22l.47-.31V288h-16c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h64c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 192c-53.02 0-96-50.15-96-112 0-61.86 42.98-112 96-112s96 50.14 96 112c0 61.87-43 112-96 112zm272 32h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"]
-}, XV = {
+}, Xx = {
   prefix: "fas",
   iconName: "money-bill-wave",
   icon: [640, 512, [], "f53a", "M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM48 132.22c20.12 5.04 41.12 7.57 62.72 8.93C104.84 170.54 79 192.69 48 192.69v-60.47zm0 285v-47.78c34.37 0 62.18 27.27 63.71 61.4-22.53-1.81-43.59-6.31-63.71-13.62zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 27.78c-17.52-4.39-35.71-6.85-54.32-8.44 5.87-26.08 27.5-45.88 54.32-49.28v57.72zm0-236.11c-30.89-3.91-54.86-29.7-55.81-61.55 19.54 2.17 38.09 6.23 55.81 12.66v48.89z"]
-}, JV = {
+}, Jx = {
   prefix: "fas",
   iconName: "money-bill-wave-alt",
   icon: [640, 512, [], "f53b", "M621.16 54.46C582.37 38.19 543.55 32 504.75 32c-123.17-.01-246.33 62.34-369.5 62.34-30.89 0-61.76-3.92-92.65-13.72-3.47-1.1-6.95-1.62-10.35-1.62C15.04 79 0 92.32 0 110.81v317.26c0 12.63 7.23 24.6 18.84 29.46C57.63 473.81 96.45 480 135.25 480c123.17 0 246.34-62.35 369.51-62.35 30.89 0 61.76 3.92 92.65 13.72 3.47 1.1 6.95 1.62 10.35 1.62 17.21 0 32.25-13.32 32.25-31.81V83.93c-.01-12.64-7.24-24.6-18.85-29.47zM320 352c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96z"]
-}, QV = {
+}, Qx = {
   prefix: "fas",
   iconName: "money-check",
   icon: [640, 512, [], "f53c", "M0 448c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V128H0v320zm448-208c0-8.84 7.16-16 16-16h96c8.84 0 16 7.16 16 16v32c0 8.84-7.16 16-16 16h-96c-8.84 0-16-7.16-16-16v-32zm0 120c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H456c-4.42 0-8-3.58-8-8v-16zM64 264c0-4.42 3.58-8 8-8h304c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zm0 96c0-4.42 3.58-8 8-8h176c4.42 0 8 3.58 8 8v16c0 4.42-3.58 8-8 8H72c-4.42 0-8-3.58-8-8v-16zM624 32H16C7.16 32 0 39.16 0 48v48h640V48c0-8.84-7.16-16-16-16z"]
-}, ex = {
+}, eV = {
   prefix: "fas",
   iconName: "money-check-alt",
   icon: [640, 512, [], "f53d", "M608 32H32C14.33 32 0 46.33 0 64v384c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V64c0-17.67-14.33-32-32-32zM176 327.88V344c0 4.42-3.58 8-8 8h-16c-4.42 0-8-3.58-8-8v-16.29c-11.29-.58-22.27-4.52-31.37-11.35-3.9-2.93-4.1-8.77-.57-12.14l11.75-11.21c2.77-2.64 6.89-2.76 10.13-.73 3.87 2.42 8.26 3.72 12.82 3.72h28.11c6.5 0 11.8-5.92 11.8-13.19 0-5.95-3.61-11.19-8.77-12.73l-45-13.5c-18.59-5.58-31.58-23.42-31.58-43.39 0-24.52 19.05-44.44 42.67-45.07V152c0-4.42 3.58-8 8-8h16c4.42 0 8 3.58 8 8v16.29c11.29.58 22.27 4.51 31.37 11.35 3.9 2.93 4.1 8.77.57 12.14l-11.75 11.21c-2.77 2.64-6.89 2.76-10.13.73-3.87-2.43-8.26-3.72-12.82-3.72h-28.11c-6.5 0-11.8 5.92-11.8 13.19 0 5.95 3.61 11.19 8.77 12.73l45 13.5c18.59 5.58 31.58 23.42 31.58 43.39 0 24.53-19.05 44.44-42.67 45.07zM416 312c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h112c4.42 0 8 3.58 8 8v16zm160 0c0 4.42-3.58 8-8 8h-80c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h80c4.42 0 8 3.58 8 8v16zm0-96c0 4.42-3.58 8-8 8H296c-4.42 0-8-3.58-8-8v-16c0-4.42 3.58-8 8-8h272c4.42 0 8 3.58 8 8v16z"]
-}, ax = {
+}, aV = {
   prefix: "fas",
   iconName: "monument",
   icon: [384, 512, [], "f5a6", "M368 448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h352c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zm-78.86-347.26a31.97 31.97 0 0 0-9.21-19.44L203.31 4.69c-6.25-6.25-16.38-6.25-22.63 0l-76.6 76.61a31.97 31.97 0 0 0-9.21 19.44L64 416h256l-30.86-315.26zM240 307.2c0 6.4-6.4 12.8-12.8 12.8h-70.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h70.4c6.4 0 12.8 6.4 12.8 12.8v38.4z"]
-}, tx = {
+}, tV = {
   prefix: "fas",
   iconName: "moon",
   icon: [512, 512, [], "f186", "M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"]
-}, cx = {
+}, cV = {
   prefix: "fas",
   iconName: "mortar-pestle",
   icon: [512, 512, [], "f5a7", "M501.54 60.91c17.22-17.22 12.51-46.25-9.27-57.14a35.696 35.696 0 0 0-37.37 3.37L251.09 160h151.37l99.08-99.09zM496 192H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h16c0 80.98 50.2 150.11 121.13 178.32-12.76 16.87-21.72 36.8-24.95 58.69-1.46 9.92 6.04 18.98 16.07 18.98h223.5c10.03 0 17.53-9.06 16.07-18.98-3.22-21.89-12.18-41.82-24.95-58.69C429.8 406.11 480 336.98 480 256h16c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"]
-}, ix = {
+}, iV = {
   prefix: "fas",
   iconName: "mosque",
   icon: [640, 512, [], "f678", "M0 480c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V160H0v320zm579.16-192c17.86-17.39 28.84-37.34 28.84-58.91 0-52.86-41.79-93.79-87.92-122.9-41.94-26.47-80.63-57.77-111.96-96.22L400 0l-8.12 9.97c-31.33 38.45-70.01 69.76-111.96 96.22C233.79 135.3 192 176.23 192 229.09c0 21.57 10.98 41.52 28.84 58.91h358.32zM608 320H192c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h32v-64c0-17.67 14.33-32 32-32s32 14.33 32 32v64h64v-72c0-48 48-72 48-72s48 24 48 72v72h64v-64c0-17.67 14.33-32 32-32s32 14.33 32 32v64h32c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM64 0S0 32 0 96v32h128V96c0-64-64-96-64-96z"]
-}, rx = {
+}, rV = {
   prefix: "fas",
   iconName: "motorcycle",
   icon: [640, 512, [], "f21c", "M512.9 192c-14.9-.1-29.1 2.3-42.4 6.9L437.6 144H520c13.3 0 24-10.7 24-24V88c0-13.3-10.7-24-24-24h-45.3c-6.8 0-13.3 2.9-17.8 7.9l-37.5 41.7-22.8-38C392.2 68.4 384.4 64 376 64h-80c-8.8 0-16 7.2-16 16v16c0 8.8 7.2 16 16 16h66.4l19.2 32H227.9c-17.7-23.1-44.9-40-99.9-40H72.5C59 104 47.7 115 48 128.5c.2 13 10.9 23.5 24 23.5h56c24.5 0 38.7 10.9 47.8 24.8l-11.3 20.5c-13-3.9-26.9-5.7-41.3-5.2C55.9 194.5 1.6 249.6 0 317c-1.6 72.1 56.3 131 128 131 59.6 0 109.7-40.8 124-96h84.2c13.7 0 24.6-11.4 24-25.1-2.1-47.1 17.5-93.7 56.2-125l12.5 20.8c-27.6 23.7-45.1 58.9-44.8 98.2.5 69.6 57.2 126.5 126.8 127.1 71.6.7 129.8-57.5 129.2-129.1-.7-69.6-57.6-126.4-127.2-126.9zM128 400c-44.1 0-80-35.9-80-80s35.9-80 80-80c4.2 0 8.4.3 12.5 1L99 316.4c-8.8 16 2.8 35.6 21 35.6h81.3c-12.4 28.2-40.6 48-73.3 48zm463.9-75.6c-2.2 40.6-35 73.4-75.5 75.5-46.1 2.5-84.4-34.3-84.4-79.9 0-21.4 8.4-40.8 22.1-55.1l49.4 82.4c4.5 7.6 14.4 10 22 5.5l13.7-8.2c7.6-4.5 10-14.4 5.5-22l-48.6-80.9c5.2-1.1 10.5-1.6 15.9-1.6 45.6-.1 82.3 38.2 79.9 84.3z"]
-}, nx = {
+}, nV = {
   prefix: "fas",
   iconName: "mountain",
   icon: [640, 512, [], "f6fc", "M634.92 462.7l-288-448C341.03 5.54 330.89 0 320 0s-21.03 5.54-26.92 14.7l-288 448a32.001 32.001 0 0 0-1.17 32.64A32.004 32.004 0 0 0 32 512h576c11.71 0 22.48-6.39 28.09-16.67a31.983 31.983 0 0 0-1.17-32.63zM320 91.18L405.39 224H320l-64 64-38.06-38.06L320 91.18z"]
-}, ox = {
+}, oV = {
   prefix: "fas",
   iconName: "mouse",
   icon: [384, 512, [], "f8cc", "M0 352a160 160 0 0 0 160 160h64a160 160 0 0 0 160-160V224H0zM176 0h-16A160 160 0 0 0 0 160v32h176zm48 0h-16v192h176v-32A160 160 0 0 0 224 0z"]
-}, lx = {
+}, lV = {
   prefix: "fas",
   iconName: "mouse-pointer",
   icon: [320, 512, [], "f245", "M302.189 329.126H196.105l55.831 135.993c3.889 9.428-.555 19.999-9.444 23.999l-49.165 21.427c-9.165 4-19.443-.571-23.332-9.714l-53.053-129.136-86.664 89.138C18.729 472.71 0 463.554 0 447.977V18.299C0 1.899 19.921-6.096 30.277 5.443l284.412 292.542c11.472 11.179 3.007 31.141-12.5 31.141z"]
-}, sx = {
+}, sV = {
   prefix: "fas",
   iconName: "mug-hot",
   icon: [512, 512, [], "f7b6", "M127.1 146.5c1.3 7.7 8 13.5 16 13.5h16.5c9.8 0 17.6-8.5 16.3-18-3.8-28.2-16.4-54.2-36.6-74.7-14.4-14.7-23.6-33.3-26.4-53.5C111.8 5.9 105 0 96.8 0H80.4C70.6 0 63 8.5 64.1 18c3.9 31.9 18 61.3 40.6 84.4 12 12.2 19.7 27.5 22.4 44.1zm112 0c1.3 7.7 8 13.5 16 13.5h16.5c9.8 0 17.6-8.5 16.3-18-3.8-28.2-16.4-54.2-36.6-74.7-14.4-14.7-23.6-33.3-26.4-53.5C223.8 5.9 217 0 208.8 0h-16.4c-9.8 0-17.5 8.5-16.3 18 3.9 31.9 18 61.3 40.6 84.4 12 12.2 19.7 27.5 22.4 44.1zM400 192H32c-17.7 0-32 14.3-32 32v192c0 53 43 96 96 96h192c53 0 96-43 96-96h16c61.8 0 112-50.2 112-112s-50.2-112-112-112zm0 160h-16v-96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48z"]
-}, fx = {
+}, fV = {
   prefix: "fas",
   iconName: "music",
   icon: [512, 512, [], "f001", "M470.38 1.51L150.41 96A32 32 0 0 0 128 126.51v261.41A139 139 0 0 0 96 384c-53 0-96 28.66-96 64s43 64 96 64 96-28.66 96-64V214.32l256-75v184.61a138.4 138.4 0 0 0-32-3.93c-53 0-96 28.66-96 64s43 64 96 64 96-28.65 96-64V32a32 32 0 0 0-41.62-30.49z"]
-}, dx = {
+}, dV = {
   prefix: "fas",
   iconName: "network-wired",
   icon: [640, 512, [], "f6ff", "M640 264v-16c0-8.84-7.16-16-16-16H344v-40h72c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32H224c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h72v40H16c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h104v40H64c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h304v40h-56c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h160c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32h-56v-40h104c8.84 0 16-7.16 16-16zM256 128V64h128v64H256zm-64 320H96v-64h96v64zm352 0h-96v-64h96v64z"]
-}, ux = {
+}, uV = {
   prefix: "fas",
   iconName: "neuter",
   icon: [288, 512, [], "f22c", "M288 176c0-79.5-64.5-144-144-144S0 96.5 0 176c0 68.5 47.9 125.9 112 140.4V468c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12V316.4c64.1-14.5 112-71.9 112-140.4zm-144 80c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"]
-}, hx = {
+}, hV = {
   prefix: "fas",
   iconName: "newspaper",
   icon: [576, 512, [], "f1ea", "M552 64H88c-13.255 0-24 10.745-24 24v8H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h472c26.51 0 48-21.49 48-48V88c0-13.255-10.745-24-24-24zM56 400a8 8 0 0 1-8-8V144h16v248a8 8 0 0 1-8 8zm236-16H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm-208-96H140c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm208 0H348c-6.627 0-12-5.373-12-12v-8c0-6.627 5.373-12 12-12h152c6.627 0 12 5.373 12 12v8c0 6.627-5.373 12-12 12zm0-96H140c-6.627 0-12-5.373-12-12v-40c0-6.627 5.373-12 12-12h360c6.627 0 12 5.373 12 12v40c0 6.627-5.373 12-12 12z"]
-}, mx = {
+}, mV = {
   prefix: "fas",
   iconName: "not-equal",
   icon: [448, 512, [], "f53e", "M416 208c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32h-23.88l51.87-66.81c5.37-7.02 4.04-17.06-2.97-22.43L415.61 3.3c-7.02-5.38-17.06-4.04-22.44 2.97L311.09 112H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h204.56l-74.53 96H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h55.49l-51.87 66.81c-5.37 7.01-4.04 17.05 2.97 22.43L64 508.7c7.02 5.38 17.06 4.04 22.43-2.97L168.52 400H416c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32H243.05l74.53-96H416z"]
-}, vx = {
+}, vV = {
   prefix: "fas",
   iconName: "notes-medical",
   icon: [384, 512, [], "f481", "M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm96 304c0 4.4-3.6 8-8 8h-56v56c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8v-56h-56c-4.4 0-8-3.6-8-8v-48c0-4.4 3.6-8 8-8h56v-56c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v56h56c4.4 0 8 3.6 8 8v48zm0-192c0 4.4-3.6 8-8 8H104c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h176c4.4 0 8 3.6 8 8v16z"]
-}, px = {
+}, pV = {
   prefix: "fas",
   iconName: "object-group",
   icon: [512, 512, [], "f247", "M480 128V96h20c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v20H64V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v40c0 6.627 5.373 12 12 12h20v320H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-20h384v20c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-20V128zM96 276V140c0-6.627 5.373-12 12-12h168c6.627 0 12 5.373 12 12v136c0 6.627-5.373 12-12 12H108c-6.627 0-12-5.373-12-12zm320 96c0 6.627-5.373 12-12 12H236c-6.627 0-12-5.373-12-12v-52h72c13.255 0 24-10.745 24-24v-72h84c6.627 0 12 5.373 12 12v136z"]
-}, gx = {
+}, gV = {
   prefix: "fas",
   iconName: "object-ungroup",
   icon: [576, 512, [], "f248", "M64 320v26a6 6 0 0 1-6 6H6a6 6 0 0 1-6-6v-52a6 6 0 0 1 6-6h26V96H6a6 6 0 0 1-6-6V38a6 6 0 0 1 6-6h52a6 6 0 0 1 6 6v26h288V38a6 6 0 0 1 6-6h52a6 6 0 0 1 6 6v52a6 6 0 0 1-6 6h-26v192h26a6 6 0 0 1 6 6v52a6 6 0 0 1-6 6h-52a6 6 0 0 1-6-6v-26H64zm480-64v-32h26a6 6 0 0 0 6-6v-52a6 6 0 0 0-6-6h-52a6 6 0 0 0-6 6v26H408v72h8c13.255 0 24 10.745 24 24v64c0 13.255-10.745 24-24 24h-64c-13.255 0-24-10.745-24-24v-8H192v72h-26a6 6 0 0 0-6 6v52a6 6 0 0 0 6 6h52a6 6 0 0 0 6-6v-26h288v26a6 6 0 0 0 6 6h52a6 6 0 0 0 6-6v-52a6 6 0 0 0-6-6h-26V256z"]
-}, zx = {
+}, zV = {
   prefix: "fas",
   iconName: "oil-can",
   icon: [640, 512, [], "f613", "M629.8 160.31L416 224l-50.49-25.24a64.07 64.07 0 0 0-28.62-6.76H280v-48h56c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16H176c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h56v48h-56L37.72 166.86a31.9 31.9 0 0 0-5.79-.53C14.67 166.33 0 180.36 0 198.34v94.95c0 15.46 11.06 28.72 26.28 31.48L96 337.46V384c0 17.67 14.33 32 32 32h274.63c8.55 0 16.75-3.42 22.76-9.51l212.26-214.75c1.5-1.5 2.34-3.54 2.34-5.66V168c.01-5.31-5.08-9.15-10.19-7.69zM96 288.67l-48-8.73v-62.43l48 8.73v62.43zm453.33 84.66c0 23.56 19.1 42.67 42.67 42.67s42.67-19.1 42.67-42.67S592 288 592 288s-42.67 61.77-42.67 85.33z"]
-}, yx = {
+}, yV = {
   prefix: "fas",
   iconName: "om",
   icon: [512, 512, [], "f679", "M360.6 60.94a10.43 10.43 0 0 0 14.76 0l21.57-21.56a10.43 10.43 0 0 0 0-14.76L375.35 3.06c-4.08-4.07-10.68-4.07-14.76 0l-21.57 21.56a10.43 10.43 0 0 0 0 14.76l21.58 21.56zM412.11 192c-26.69 0-51.77 10.39-70.64 29.25l-24.25 24.25c-6.78 6.77-15.78 10.5-25.38 10.5H245c10.54-22.1 14.17-48.11 7.73-75.23-10.1-42.55-46.36-76.11-89.52-83.19-36.15-5.93-70.9 5.04-96.01 28.78-7.36 6.96-6.97 18.85 1.12 24.93l26.15 19.63c5.72 4.3 13.66 4.32 19.2-.21 8.45-6.9 19.02-10.71 30.27-10.71 26.47 0 48.01 21.53 48.01 48s-21.54 48-48.01 48h-31.9c-11.96 0-19.74 12.58-14.39 23.28l16.09 32.17c2.53 5.06 7.6 8.1 13.17 8.55h33.03c35.3 0 64.01 28.7 64.01 64s-28.71 64-64.01 64c-96.02 0-122.35-54.02-145.15-92.03-4.53-7.55-14.77-3.58-14.79 5.22C-.09 416 41.13 512 159.94 512c70.59 0 128.02-57.42 128.02-128 0-23.42-6.78-45.1-17.81-64h21.69c26.69 0 51.77-10.39 70.64-29.25l24.25-24.25c6.78-6.77 15.78-10.5 25.38-10.5 19.78 0 35.88 16.09 35.88 35.88V392c0 13.23-18.77 24-32.01 24-39.4 0-66.67-24.24-81.82-42.89-4.77-5.87-14.2-2.54-14.2 5.02V416s0 64 96.02 64c48.54 0 96.02-39.47 96.02-88V291.88c0-55.08-44.8-99.88-99.89-99.88zm42.18-124.73c-85.55 65.12-169.05 2.75-172.58.05-6.02-4.62-14.44-4.38-20.14.55-5.74 4.92-7.27 13.17-3.66 19.8 1.61 2.95 40.37 72.34 118.8 72.34 79.92 0 98.78-31.36 101.75-37.66 1.02-2.12 1.53-4.47 1.53-6.83V80c0-13.22-15.14-20.69-25.7-12.73z"]
-}, bx = {
+}, bV = {
   prefix: "fas",
   iconName: "otter",
   icon: [640, 512, [], "f700", "M608 32h-32l-13.25-13.25A63.97 63.97 0 0 0 517.49 0H497c-11.14 0-22.08 2.91-31.75 8.43L312 96h-56C149.96 96 64 181.96 64 288v1.61c0 32.75-16 62.14-39.56 84.89-18.19 17.58-28.1 43.68-23.19 71.8 6.76 38.8 42.9 65.7 82.28 65.7H192c17.67 0 32-14.33 32-32s-14.33-32-32-32H80c-8.83 0-16-7.17-16-16s7.17-16 16-16h224c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-64l149.49-80.5L448 416h80c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-28.22l-55.11-110.21L521.14 192H544c53.02 0 96-42.98 96-96V64c0-17.67-14.33-32-32-32zm-96 16c8.84 0 16 7.16 16 16s-7.16 16-16 16-16-7.16-16-16 7.16-16 16-16zm32 96h-34.96L407.2 198.84l-13.77-27.55L512 112h77.05c-6.62 18.58-24.22 32-45.05 32z"]
-}, Mx = {
+}, MV = {
   prefix: "fas",
   iconName: "outdent",
   icon: [448, 512, [], "f03b", "M100.69 363.29c10 10 27.31 2.93 27.31-11.31V160c0-14.32-17.33-21.31-27.31-11.31l-96 96a16 16 0 0 0 0 22.62zM432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-128H204.83A12.82 12.82 0 0 0 192 300.83v38.34A12.82 12.82 0 0 0 204.83 352h230.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288zm0-128H204.83A12.82 12.82 0 0 0 192 172.83v38.34A12.82 12.82 0 0 0 204.83 224h230.34A12.82 12.82 0 0 0 448 211.17v-38.34A12.82 12.82 0 0 0 435.17 160zM432 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"]
-}, Cx = {
+}, CV = {
   prefix: "fas",
   iconName: "pager",
   icon: [512, 512, [], "f815", "M448 64H64a64 64 0 0 0-64 64v256a64 64 0 0 0 64 64h384a64 64 0 0 0 64-64V128a64 64 0 0 0-64-64zM160 368H80a16 16 0 0 1-16-16v-16a16 16 0 0 1 16-16h80zm128-16a16 16 0 0 1-16 16h-80v-48h80a16 16 0 0 1 16 16zm160-128a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32v-64a32 32 0 0 1 32-32h320a32 32 0 0 1 32 32z"]
-}, Vx = {
+}, xV = {
   prefix: "fas",
   iconName: "paint-brush",
   icon: [512, 512, [], "f1fc", "M167.02 309.34c-40.12 2.58-76.53 17.86-97.19 72.3-2.35 6.21-8 9.98-14.59 9.98-11.11 0-45.46-27.67-55.25-34.35C0 439.62 37.93 512 128 512c75.86 0 128-43.77 128-120.19 0-3.11-.65-6.08-.97-9.13l-88.01-73.34zM457.89 0c-15.16 0-29.37 6.71-40.21 16.45C213.27 199.05 192 203.34 192 257.09c0 13.7 3.25 26.76 8.73 38.7l63.82 53.18c7.21 1.8 14.64 3.03 22.39 3.03 62.11 0 98.11-45.47 211.16-256.46 7.38-14.35 13.9-29.85 13.9-45.99C512 20.64 486 0 457.89 0z"]
-}, xx = {
+}, VV = {
   prefix: "fas",
   iconName: "paint-roller",
   icon: [512, 512, [], "f5aa", "M416 128V32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v96c0 17.67 14.33 32 32 32h352c17.67 0 32-14.33 32-32zm32-64v128c0 17.67-14.33 32-32 32H256c-35.35 0-64 28.65-64 64v32c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32v-32h160c53.02 0 96-42.98 96-96v-64c0-35.35-28.65-64-64-64z"]
-}, wx = {
+}, wV = {
   prefix: "fas",
   iconName: "palette",
   icon: [512, 512, [], "f53f", "M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
-}, Hx = {
+}, HV = {
   prefix: "fas",
   iconName: "pallet",
   icon: [640, 512, [], "f482", "M144 256h352c8.8 0 16-7.2 16-16V16c0-8.8-7.2-16-16-16H384v128l-64-32-64 32V0H144c-8.8 0-16 7.2-16 16v224c0 8.8 7.2 16 16 16zm480 128c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h48v64H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h608c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16h-48v-64h48zm-336 64H128v-64h160v64zm224 0H352v-64h160v64z"]
-}, Lx = {
+}, LV = {
   prefix: "fas",
   iconName: "paper-plane",
   icon: [512, 512, [], "f1d8", "M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"]
-}, Nx = {
+}, NV = {
   prefix: "fas",
   iconName: "paperclip",
   icon: [448, 512, [], "f0c6", "M43.246 466.142c-58.43-60.289-57.341-157.511 1.386-217.581L254.392 34c44.316-45.332 116.351-45.336 160.671 0 43.89 44.894 43.943 117.329 0 162.276L232.214 383.128c-29.855 30.537-78.633 30.111-107.982-.998-28.275-29.97-27.368-77.473 1.452-106.953l143.743-146.835c6.182-6.314 16.312-6.422 22.626-.241l22.861 22.379c6.315 6.182 6.422 16.312.241 22.626L171.427 319.927c-4.932 5.045-5.236 13.428-.648 18.292 4.372 4.634 11.245 4.711 15.688.165l182.849-186.851c19.613-20.062 19.613-52.725-.011-72.798-19.189-19.627-49.957-19.637-69.154 0L90.39 293.295c-34.763 35.56-35.299 93.12-1.191 128.313 34.01 35.093 88.985 35.137 123.058.286l172.06-175.999c6.177-6.319 16.307-6.433 22.626-.256l22.877 22.364c6.319 6.177 6.434 16.307.256 22.626l-172.06 175.998c-59.576 60.938-155.943 60.216-214.77-.485z"]
-}, Sx = {
+}, SV = {
   prefix: "fas",
   iconName: "parachute-box",
   icon: [512, 512, [], "f4cd", "M511.9 175c-9.1-75.6-78.4-132.4-158.3-158.7C390 55.7 416 116.9 416 192h28.1L327.5 321.5c-2.5-.6-4.8-1.5-7.5-1.5h-48V192h112C384 76.8 315.1 0 256 0S128 76.8 128 192h112v128h-48c-2.7 0-5 .9-7.5 1.5L67.9 192H96c0-75.1 26-136.3 62.4-175.7C78.5 42.7 9.2 99.5.1 175c-1.1 9.1 6.8 17 16 17h8.7l136.7 151.9c-.7 2.6-1.6 5.2-1.6 8.1v128c0 17.7 14.3 32 32 32h128c17.7 0 32-14.3 32-32V352c0-2.9-.9-5.4-1.6-8.1L487.1 192h8.7c9.3 0 17.2-7.8 16.1-17z"]
-}, Ax = {
+}, AV = {
   prefix: "fas",
   iconName: "paragraph",
   icon: [448, 512, [], "f1dd", "M448 48v32a16 16 0 0 1-16 16h-48v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V96h-32v368a16 16 0 0 1-16 16h-32a16 16 0 0 1-16-16V352h-32a160 160 0 0 1 0-320h240a16 16 0 0 1 16 16z"]
-}, _x = {
+}, _V = {
   prefix: "fas",
   iconName: "parking",
   icon: [448, 512, [], "f540", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM240 320h-48v48c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16V144c0-8.8 7.2-16 16-16h96c52.9 0 96 43.1 96 96s-43.1 96-96 96zm0-128h-48v64h48c17.6 0 32-14.4 32-32s-14.4-32-32-32z"]
-}, kx = {
+}, kV = {
   prefix: "fas",
   iconName: "passport",
   icon: [448, 512, [], "f5ab", "M129.62 176h39.09c1.49-27.03 6.54-51.35 14.21-70.41-27.71 13.24-48.02 39.19-53.3 70.41zm0 32c5.29 31.22 25.59 57.17 53.3 70.41-7.68-19.06-12.72-43.38-14.21-70.41h-39.09zM224 286.69c7.69-7.45 20.77-34.42 23.43-78.69h-46.87c2.67 44.26 15.75 71.24 23.44 78.69zM200.57 176h46.87c-2.66-44.26-15.74-71.24-23.43-78.69-7.7 7.45-20.78 34.43-23.44 78.69zm64.51 102.41c27.71-13.24 48.02-39.19 53.3-70.41h-39.09c-1.49 27.03-6.53 51.35-14.21 70.41zM416 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h352c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32zm-80 416H112c-8.8 0-16-7.2-16-16s7.2-16 16-16h224c8.8 0 16 7.2 16 16s-7.2 16-16 16zm-112-96c-70.69 0-128-57.31-128-128S153.31 64 224 64s128 57.31 128 128-57.31 128-128 128zm41.08-214.41c7.68 19.06 12.72 43.38 14.21 70.41h39.09c-5.28-31.22-25.59-57.17-53.3-70.41z"]
-}, Tx = {
+}, TV = {
   prefix: "fas",
   iconName: "pastafarianism",
   icon: [640, 512, [], "f67b", "M624.54 347.67c-32.7-12.52-57.36 4.25-75.37 16.45-17.06 11.53-23.25 14.42-31.41 11.36-8.12-3.09-10.83-9.38-15.89-29.38-3.33-13.15-7.44-29.32-17.95-42.65 2.24-2.91 4.43-5.79 6.38-8.57C500.47 304.45 513.71 312 532 312c33.95 0 50.87-25.78 62.06-42.83 10.59-16.14 15-21.17 21.94-21.17 13.25 0 24-10.75 24-24s-10.75-24-24-24c-33.95 0-50.87 25.78-62.06 42.83-10.6 16.14-15 21.17-21.94 21.17-17.31 0-37.48-61.43-97.26-101.91l17.25-34.5C485.43 125.5 512 97.98 512 64c0-35.35-28.65-64-64-64s-64 28.65-64 64c0 13.02 3.94 25.1 10.62 35.21l-18.15 36.3c-16.98-4.6-35.6-7.51-56.46-7.51s-39.49 2.91-56.46 7.51l-18.15-36.3C252.06 89.1 256 77.02 256 64c0-35.35-28.65-64-64-64s-64 28.65-64 64c0 33.98 26.56 61.5 60.02 63.6l17.25 34.5C145.68 202.44 125.15 264 108 264c-6.94 0-11.34-5.03-21.94-21.17C74.88 225.78 57.96 200 24 200c-13.25 0-24 10.75-24 24s10.75 24 24 24c6.94 0 11.34 5.03 21.94 21.17C57.13 286.22 74.05 312 108 312c18.29 0 31.53-7.55 41.7-17.11 1.95 2.79 4.14 5.66 6.38 8.57-10.51 13.33-14.62 29.5-17.95 42.65-5.06 20-7.77 26.28-15.89 29.38-8.11 3.06-14.33.17-31.41-11.36-18.03-12.2-42.72-28.92-75.37-16.45-12.39 4.72-18.59 18.58-13.87 30.97 4.72 12.41 18.61 18.61 30.97 13.88 8.16-3.09 14.34-.19 31.39 11.36 13.55 9.16 30.83 20.86 52.42 20.84 7.17 0 14.83-1.28 22.97-4.39 32.66-12.44 39.98-41.33 45.33-62.44 2.21-8.72 3.99-14.49 5.95-18.87 16.62 13.61 36.95 25.88 61.64 34.17-9.96 37-32.18 90.8-60.26 90.8-13.25 0-24 10.75-24 24s10.75 24 24 24c66.74 0 97.05-88.63 107.42-129.14 6.69.6 13.42 1.14 20.58 1.14s13.89-.54 20.58-1.14C350.95 423.37 381.26 512 448 512c13.25 0 24-10.75 24-24s-10.75-24-24-24c-27.94 0-50.21-53.81-60.22-90.81 24.69-8.29 45-20.56 61.62-34.16 1.96 4.38 3.74 10.15 5.95 18.87 5.34 21.11 12.67 50 45.33 62.44 8.14 3.11 15.8 4.39 22.97 4.39 21.59 0 38.87-11.69 52.42-20.84 17.05-11.55 23.28-14.45 31.39-11.36 12.39 4.75 26.27-1.47 30.97-13.88 4.71-12.4-1.49-26.26-13.89-30.98zM448 48c8.82 0 16 7.18 16 16s-7.18 16-16 16-16-7.18-16-16 7.18-16 16-16zm-256 0c8.82 0 16 7.18 16 16s-7.18 16-16 16-16-7.18-16-16 7.18-16 16-16z"]
-}, Dx = {
+}, DV = {
   prefix: "fas",
   iconName: "paste",
   icon: [448, 512, [], "f0ea", "M128 184c0-30.879 25.122-56 56-56h136V56c0-13.255-10.745-24-24-24h-80.61C204.306 12.89 183.637 0 160 0s-44.306 12.89-55.39 32H24C10.745 32 0 42.745 0 56v336c0 13.255 10.745 24 24 24h104V184zm32-144c13.255 0 24 10.745 24 24s-10.745 24-24 24-24-10.745-24-24 10.745-24 24-24zm184 248h104v200c0 13.255-10.745 24-24 24H184c-13.255 0-24-10.745-24-24V184c0-13.255 10.745-24 24-24h136v104c0 13.2 10.8 24 24 24zm104-38.059V256h-96v-96h6.059a24 24 0 0 1 16.97 7.029l65.941 65.941a24.002 24.002 0 0 1 7.03 16.971z"]
-}, Ox = {
+}, OV = {
   prefix: "fas",
   iconName: "pause",
   icon: [448, 512, [], "f04c", "M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"]
-}, Px = {
+}, PV = {
   prefix: "fas",
   iconName: "pause-circle",
   icon: [512, 512, [], "f28b", "M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm-16 328c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160zm112 0c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V176c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v160z"]
-}, Fx = {
+}, FV = {
   prefix: "fas",
   iconName: "paw",
   icon: [512, 512, [], "f1b0", "M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z"]
-}, Ix = {
+}, IV = {
   prefix: "fas",
   iconName: "peace",
   icon: [496, 512, [], "f67c", "M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm184 248c0 31.93-8.2 61.97-22.57 88.17L280 240.63V74.97c86.23 15.21 152 90.5 152 181.03zM216 437.03c-33.86-5.97-64.49-21.2-89.29-43.02L216 322.57v114.46zm64-114.46L369.29 394c-24.8 21.82-55.43 37.05-89.29 43.02V322.57zm-64-247.6v165.66L86.57 344.17C72.2 317.97 64 287.93 64 256c0-90.53 65.77-165.82 152-181.03z"]
-}, Ex = {
+}, EV = {
   prefix: "fas",
   iconName: "pen",
   icon: [512, 512, [], "f304", "M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"]
-}, Rx = {
+}, RV = {
   prefix: "fas",
   iconName: "pen-alt",
   icon: [512, 512, [], "f305", "M497.94 74.17l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.75 18.75-49.15 0-67.91zm-246.8-20.53c-15.62-15.62-40.94-15.62-56.56 0L75.8 172.43c-6.25 6.25-6.25 16.38 0 22.62l22.63 22.63c6.25 6.25 16.38 6.25 22.63 0l101.82-101.82 22.63 22.62L93.95 290.03A327.038 327.038 0 0 0 .17 485.11l-.03.23c-1.7 15.28 11.21 28.2 26.49 26.51a327.02 327.02 0 0 0 195.34-93.8l196.79-196.79-82.77-82.77-84.85-84.85z"]
-}, Bx = {
+}, BV = {
   prefix: "fas",
   iconName: "pen-fancy",
   icon: [512, 512, [], "f5ac", "M79.18 282.94a32.005 32.005 0 0 0-20.24 20.24L0 480l4.69 4.69 92.89-92.89c-.66-2.56-1.57-5.03-1.57-7.8 0-17.67 14.33-32 32-32s32 14.33 32 32-14.33 32-32 32c-2.77 0-5.24-.91-7.8-1.57l-92.89 92.89L32 512l176.82-58.94a31.983 31.983 0 0 0 20.24-20.24l33.07-84.07-98.88-98.88-84.07 33.07zM369.25 28.32L186.14 227.81l97.85 97.85 199.49-183.11C568.4 67.48 443.73-55.94 369.25 28.32z"]
-}, $x = {
+}, $V = {
   prefix: "fas",
   iconName: "pen-nib",
   icon: [512, 512, [], "f5ad", "M136.6 138.79a64.003 64.003 0 0 0-43.31 41.35L0 460l14.69 14.69L164.8 324.58c-2.99-6.26-4.8-13.18-4.8-20.58 0-26.51 21.49-48 48-48s48 21.49 48 48-21.49 48-48 48c-7.4 0-14.32-1.81-20.58-4.8L37.31 497.31 52 512l279.86-93.29a64.003 64.003 0 0 0 41.35-43.31L416 224 288 96l-151.4 42.79zm361.34-64.62l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.75 18.75-49.15 0-67.91z"]
-}, Ux = {
+}, UV = {
   prefix: "fas",
   iconName: "pen-square",
   icon: [448, 512, [], "f14b", "M400 480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zM238.1 177.9L102.4 313.6l-6.3 57.1c-.8 7.6 5.6 14.1 13.3 13.3l57.1-6.3L302.2 242c2.3-2.3 2.3-6.1 0-8.5L246.7 178c-2.5-2.4-6.3-2.4-8.6-.1zM345 165.1L314.9 135c-9.4-9.4-24.6-9.4-33.9 0l-23.1 23.1c-2.3 2.3-2.3 6.1 0 8.5l55.5 55.5c2.3 2.3 6.1 2.3 8.5 0L345 199c9.3-9.3 9.3-24.5 0-33.9z"]
-}, Zx = {
+}, ZV = {
   prefix: "fas",
   iconName: "pencil-alt",
   icon: [512, 512, [], "f303", "M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"]
-}, jx = {
+}, jV = {
   prefix: "fas",
   iconName: "pencil-ruler",
   icon: [512, 512, [], "f5ae", "M109.46 244.04l134.58-134.56-44.12-44.12-61.68 61.68a7.919 7.919 0 0 1-11.21 0l-11.21-11.21c-3.1-3.1-3.1-8.12 0-11.21l61.68-61.68-33.64-33.65C131.47-3.1 111.39-3.1 99 9.29L9.29 99c-12.38 12.39-12.39 32.47 0 44.86l100.17 100.18zm388.47-116.8c18.76-18.76 18.75-49.17 0-67.93l-45.25-45.25c-18.76-18.76-49.18-18.76-67.95 0l-46.02 46.01 113.2 113.2 46.02-46.03zM316.08 82.71l-297 296.96L.32 487.11c-2.53 14.49 10.09 27.11 24.59 24.56l107.45-18.84L429.28 195.9 316.08 82.71zm186.63 285.43l-33.64-33.64-61.68 61.68c-3.1 3.1-8.12 3.1-11.21 0l-11.21-11.21c-3.09-3.1-3.09-8.12 0-11.21l61.68-61.68-44.14-44.14L267.93 402.5l100.21 100.2c12.39 12.39 32.47 12.39 44.86 0l89.71-89.7c12.39-12.39 12.39-32.47 0-44.86z"]
-}, qx = {
+}, qV = {
   prefix: "fas",
   iconName: "people-arrows",
   icon: [576, 512, [], "e068", "M96,128A64,64,0,1,0,32,64,64,64,0,0,0,96,128Zm0,176.08a44.11,44.11,0,0,1,13.64-32L181.77,204c1.65-1.55,3.77-2.31,5.61-3.57A63.91,63.91,0,0,0,128,160H64A64,64,0,0,0,0,224v96a32,32,0,0,0,32,32V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V383.61l-50.36-47.53A44.08,44.08,0,0,1,96,304.08ZM480,128a64,64,0,1,0-64-64A64,64,0,0,0,480,128Zm32,32H448a63.91,63.91,0,0,0-59.38,40.42c1.84,1.27,4,2,5.62,3.59l72.12,68.06a44.37,44.37,0,0,1,0,64L416,383.62V480a32,32,0,0,0,32,32h64a32,32,0,0,0,32-32V352a32,32,0,0,0,32-32V224A64,64,0,0,0,512,160ZM444.4,295.34l-72.12-68.06A12,12,0,0,0,352,236v36H224V236a12,12,0,0,0-20.28-8.73L131.6,295.34a12.4,12.4,0,0,0,0,17.47l72.12,68.07A12,12,0,0,0,224,372.14V336H352v36.14a12,12,0,0,0,20.28,8.74l72.12-68.07A12.4,12.4,0,0,0,444.4,295.34Z"]
-}, Yx = {
+}, YV = {
   prefix: "fas",
   iconName: "people-carry",
   icon: [640, 512, [], "f4ce", "M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"]
-}, Wx = {
+}, WV = {
   prefix: "fas",
   iconName: "pepper-hot",
   icon: [512, 512, [], "f816", "M330.67 263.12V173.4l-52.75-24.22C219.44 218.76 197.58 400 56 400a56 56 0 0 0 0 112c212.64 0 370.65-122.87 419.18-210.34l-37.05-38.54zm131.09-128.37C493.92 74.91 477.18 26.48 458.62 3a8 8 0 0 0-11.93-.59l-22.9 23a8.06 8.06 0 0 0-.89 10.23c6.86 10.36 17.05 35.1-1.4 72.32A142.85 142.85 0 0 0 364.34 96c-28 0-54 8.54-76.34 22.59l74.67 34.29v78.24h89.09L506.44 288c3.26-12.62 5.56-25.63 5.56-39.31a154 154 0 0 0-50.24-113.94z"]
-}, Gx = {
+}, GV = {
   prefix: "fas",
   iconName: "percent",
   icon: [448, 512, [], "f295", "M112 224c61.9 0 112-50.1 112-112S173.9 0 112 0 0 50.1 0 112s50.1 112 112 112zm0-160c26.5 0 48 21.5 48 48s-21.5 48-48 48-48-21.5-48-48 21.5-48 48-48zm224 224c-61.9 0-112 50.1-112 112s50.1 112 112 112 112-50.1 112-112-50.1-112-112-112zm0 160c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zM392.3.2l31.6-.1c19.4-.1 30.9 21.8 19.7 37.8L77.4 501.6a23.95 23.95 0 0 1-19.6 10.2l-33.4.1c-19.5 0-30.9-21.9-19.7-37.8l368-463.7C377.2 4 384.5.2 392.3.2z"]
-}, Kx = {
+}, KV = {
   prefix: "fas",
   iconName: "percentage",
   icon: [384, 512, [], "f541", "M109.25 173.25c24.99-24.99 24.99-65.52 0-90.51-24.99-24.99-65.52-24.99-90.51 0-24.99 24.99-24.99 65.52 0 90.51 25 25 65.52 25 90.51 0zm256 165.49c-24.99-24.99-65.52-24.99-90.51 0-24.99 24.99-24.99 65.52 0 90.51 24.99 24.99 65.52 24.99 90.51 0 25-24.99 25-65.51 0-90.51zm-1.94-231.43l-22.62-22.62c-12.5-12.5-32.76-12.5-45.25 0L20.69 359.44c-12.5 12.5-12.5 32.76 0 45.25l22.62 22.62c12.5 12.5 32.76 12.5 45.25 0l274.75-274.75c12.5-12.49 12.5-32.75 0-45.25z"]
-}, Xx = {
+}, XV = {
   prefix: "fas",
   iconName: "person-booth",
   icon: [576, 512, [], "f756", "M192 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V320h-64v176zm32-272h-50.9l-45.2-45.3C115.8 166.6 99.7 160 82.7 160H64c-17.1 0-33.2 6.7-45.3 18.8C6.7 190.9 0 207 0 224.1L.2 320 0 480c0 17.7 14.3 32 31.9 32 17.6 0 32-14.3 32-32l.1-100.7c.9.5 1.6 1.3 2.5 1.7l29.1 43v56c0 17.7 14.3 32 32 32s32-14.3 32-32v-56.5c0-9.9-2.3-19.8-6.7-28.6l-41.2-61.3V253l20.9 20.9c9.1 9.1 21.1 14.1 33.9 14.1H224c17.7 0 32-14.3 32-32s-14.3-32-32-32zM64 128c26.5 0 48-21.5 48-48S90.5 32 64 32 16 53.5 16 80s21.5 48 48 48zm224-96l31.5 223.1-30.9 154.6c-4.3 21.6 13 38.3 31.4 38.3 15.2 0 28-9.1 32.3-30.4.9 16.9 14.6 30.4 31.7 30.4 17.7 0 32-14.3 32-32 0 17.7 14.3 32 32 32s32-14.3 32-32V0H288v32zm-96 0v160h64V0h-32c-17.7 0-32 14.3-32 32zM544 0h-32v496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V32c0-17.7-14.3-32-32-32z"]
-}, Jx = {
+}, JV = {
   prefix: "fas",
   iconName: "phone",
   icon: [512, 512, [], "f095", "M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"]
-}, Qx = {
+}, QV = {
   prefix: "fas",
   iconName: "phone-alt",
   icon: [512, 512, [], "f879", "M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"]
@@ -24776,11 +24775,11 @@ var th = {
   prefix: "fas",
   iconName: "poo",
   icon: [512, 512, [], "f2fe", "M451.4 369.1C468.7 356 480 335.4 480 312c0-39.8-32.2-72-72-72h-14.1c13.4-11.7 22.1-28.8 22.1-48 0-35.3-28.7-64-64-64h-5.9c3.6-10.1 5.9-20.7 5.9-32 0-53-43-96-96-96-5.2 0-10.2.7-15.1 1.5C250.3 14.6 256 30.6 256 48c0 44.2-35.8 80-80 80h-16c-35.3 0-64 28.7-64 64 0 19.2 8.7 36.3 22.1 48H104c-39.8 0-72 32.2-72 72 0 23.4 11.3 44 28.6 57.1C26.3 374.6 0 404.1 0 440c0 39.8 32.2 72 72 72h368c39.8 0 72-32.2 72-72 0-35.9-26.3-65.4-60.6-70.9zM192 256c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm159.5 139C341 422.9 293 448 256 448s-85-25.1-95.5-53c-2-5.3 2-11 7.8-11h175.4c5.8 0 9.8 5.7 7.8 11zM320 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"]
-}, Vw = {
+}, xw = {
   prefix: "fas",
   iconName: "poo-storm",
   icon: [448, 512, [], "f75a", "M308 336h-57.7l17.3-64.9c2-7.6-3.7-15.1-11.6-15.1h-68c-6 0-11.1 4.5-11.9 10.4l-16 120c-1 7.2 4.6 13.6 11.9 13.6h59.3l-23 97.2c-1.8 7.6 4 14.8 11.7 14.8 4.2 0 8.2-2.2 10.4-6l88-152c4.6-8-1.2-18-10.4-18zm66.4-111.3c5.9-9.6 9.6-20.6 9.6-32.7 0-35.3-28.7-64-64-64h-5.9c3.6-10.1 5.9-20.7 5.9-32 0-53-43-96-96-96-5.2 0-10.2.7-15.1 1.5C218.3 14.6 224 30.6 224 48c0 44.2-35.8 80-80 80h-16c-35.3 0-64 28.7-64 64 0 12.1 3.7 23.1 9.6 32.7C32.6 228 0 262.2 0 304c0 44 36 80 80 80h48.3c.1-.6 0-1.2 0-1.8l16-120c3-21.8 21.7-38.2 43.7-38.2h68c13.8 0 26.5 6.3 34.9 17.2s11.2 24.8 7.6 38.1l-6.6 24.7h16c15.7 0 30.3 8.4 38.1 22 7.8 13.6 7.8 30.5 0 44l-8.1 14h30c44 0 80-36 80-80 .1-41.8-32.5-76-73.5-79.3z"]
-}, xw = {
+}, Vw = {
   prefix: "fas",
   iconName: "poop",
   icon: [512, 512, [], "f619", "M451.36 369.14C468.66 355.99 480 335.41 480 312c0-39.77-32.24-72-72-72h-14.07c13.42-11.73 22.07-28.78 22.07-48 0-35.35-28.65-64-64-64h-5.88c3.57-10.05 5.88-20.72 5.88-32 0-53.02-42.98-96-96-96-5.17 0-10.15.74-15.11 1.52C250.31 14.64 256 30.62 256 48c0 44.18-35.82 80-80 80h-16c-35.35 0-64 28.65-64 64 0 19.22 8.65 36.27 22.07 48H104c-39.76 0-72 32.23-72 72 0 23.41 11.34 43.99 28.64 57.14C26.31 374.62 0 404.12 0 440c0 39.76 32.24 72 72 72h368c39.76 0 72-32.24 72-72 0-35.88-26.31-65.38-60.64-70.86z"]
@@ -24992,11 +24991,11 @@ var th = {
   prefix: "fas",
   iconName: "rupee-sign",
   icon: [320, 512, [], "f156", "M308 96c6.627 0 12-5.373 12-12V44c0-6.627-5.373-12-12-12H12C5.373 32 0 37.373 0 44v44.748c0 6.627 5.373 12 12 12h85.28c27.308 0 48.261 9.958 60.97 27.252H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h158.757c-6.217 36.086-32.961 58.632-74.757 58.632H12c-6.627 0-12 5.373-12 12v53.012c0 3.349 1.4 6.546 3.861 8.818l165.052 152.356a12.001 12.001 0 0 0 8.139 3.182h82.562c10.924 0 16.166-13.408 8.139-20.818L116.871 319.906c76.499-2.34 131.144-53.395 138.318-127.906H308c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-58.69c-3.486-11.541-8.28-22.246-14.252-32H308z"]
-}, VH = {
+}, xH = {
   prefix: "fas",
   iconName: "sad-cry",
   icon: [496, 512, [], "f5b3", "M248 8C111 8 0 119 0 256c0 90.1 48.2 168.7 120 212.1V288c0-8.8 7.2-16 16-16s16 7.2 16 16v196.7c29.5 12.4 62 19.3 96 19.3s66.5-6.9 96-19.3V288c0-8.8 7.2-16 16-16s16 7.2 16 16v180.1C447.8 424.7 496 346 496 256 496 119 385 8 248 8zm-65.5 216.5c-14.8-13.2-46.2-13.2-61 0L112 233c-3.8 3.3-9.3 4-13.7 1.6-4.4-2.4-6.9-7.4-6.1-12.4 4-25.2 34.2-42.1 59.9-42.1S208 197 212 222.2c.8 5-1.7 10-6.1 12.4-5.8 3.1-11.2.7-13.7-1.6l-9.7-8.5zM248 416c-26.5 0-48-28.7-48-64s21.5-64 48-64 48 28.7 48 64-21.5 64-48 64zm149.8-181.5c-5.8 3.1-11.2.7-13.7-1.6l-9.5-8.5c-14.8-13.2-46.2-13.2-61 0L304 233c-3.8 3.3-9.3 4-13.7 1.6-4.4-2.4-6.9-7.4-6.1-12.4 4-25.2 34.2-42.1 59.9-42.1S400 197 404 222.2c.6 4.9-1.8 9.9-6.2 12.3z"]
-}, xH = {
+}, VH = {
   prefix: "fas",
   iconName: "sad-tear",
   icon: [496, 512, [], "f5b4", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zM152 416c-26.5 0-48-21-48-47 0-20 28.5-60.4 41.6-77.8 3.2-4.3 9.6-4.3 12.8 0C171.5 308.6 200 349 200 369c0 26-21.5 47-48 47zm16-176c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm170.2 154.2C315.8 367.4 282.9 352 248 352c-21.2 0-21.2-32 0-32 44.4 0 86.3 19.6 114.7 53.8 13.8 16.4-11.2 36.5-24.5 20.4z"]
@@ -25208,11 +25207,11 @@ var th = {
   prefix: "fas",
   iconName: "smoking",
   icon: [640, 512, [], "f48d", "M632 352h-48c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V360c0-4.4-3.6-8-8-8zM553.3 87.1c-5.7-3.8-9.3-10-9.3-16.8V8c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v62.3c0 22 10.2 43.4 28.6 55.4 42.2 27.3 67.4 73.8 67.4 124V280c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-30.3c0-65.5-32.4-126.2-86.7-162.6zM432 352H48c-26.5 0-48 21.5-48 48v64c0 26.5 21.5 48 48 48h384c8.8 0 16-7.2 16-16V368c0-8.8-7.2-16-16-16zm-32 112H224v-64h176v64zm87.7-322.4C463.8 125 448 99.3 448 70.3V8c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v66.4c0 43.7 24.6 81.6 60.3 106.7 22.4 15.7 35.7 41.2 35.7 68.6V280c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8v-30.3c0-43.3-21-83.4-56.3-108.1zM536 352h-48c-4.4 0-8 3.6-8 8v144c0 4.4 3.6 8 8 8h48c4.4 0 8-3.6 8-8V360c0-4.4-3.6-8-8-8z"]
-}, VL = {
+}, xL = {
   prefix: "fas",
   iconName: "smoking-ban",
   icon: [512, 512, [], "f54d", "M96 304c0 8.8 7.2 16 16 16h117.5l-96-96H112c-8.8 0-16 7.2-16 16v64zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256 256-114.6 256-256S397.4 0 256 0zm0 448c-105.9 0-192-86.1-192-192 0-41.4 13.3-79.7 35.7-111.1l267.4 267.4C335.7 434.7 297.4 448 256 448zm45.2-192H384v32h-50.8l-32-32zm111.1 111.1L365.2 320H400c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16H269.2L144.9 99.7C176.3 77.3 214.6 64 256 64c105.9 0 192 86.1 192 192 0 41.4-13.3 79.7-35.7 111.1zM320.6 128c-15.6 0-28.6-11.2-31.4-25.9-.7-3.6-4-6.1-7.7-6.1h-16.2c-5 0-8.7 4.5-8 9.4 4.6 30.9 31.2 54.6 63.3 54.6 15.6 0 28.6 11.2 31.4 25.9.7 3.6 4 6.1 7.7 6.1h16.2c5 0 8.7-4.5 8-9.4-4.6-30.9-31.2-54.6-63.3-54.6z"]
-}, xL = {
+}, VL = {
   prefix: "fas",
   iconName: "sms",
   icon: [512, 512, [], "f7cd", "M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7 1.3 3 4.1 4.8 7.3 4.8 66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32zM128.2 304H116c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h12.3c6 0 10.4-3.5 10.4-6.6 0-1.3-.8-2.7-2.1-3.8l-21.9-18.8c-8.5-7.2-13.3-17.5-13.3-28.1 0-21.3 19-38.6 42.4-38.6H156c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8h-12.3c-6 0-10.4 3.5-10.4 6.6 0 1.3.8 2.7 2.1 3.8l21.9 18.8c8.5 7.2 13.3 17.5 13.3 28.1.1 21.3-19 38.6-42.4 38.6zm191.8-8c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8v-68.2l-24.8 55.8c-2.9 5.9-11.4 5.9-14.3 0L224 227.8V296c0 4.4-3.6 8-8 8h-16c-4.4 0-8-3.6-8-8V192c0-8.8 7.2-16 16-16h16c6.1 0 11.6 3.4 14.3 8.8l17.7 35.4 17.7-35.4c2.7-5.4 8.3-8.8 14.3-8.8h16c8.8 0 16 7.2 16 16v104zm48.3 8H356c-4.4 0-8-3.6-8-8v-16c0-4.4 3.6-8 8-8h12.3c6 0 10.4-3.5 10.4-6.6 0-1.3-.8-2.7-2.1-3.8l-21.9-18.8c-8.5-7.2-13.3-17.5-13.3-28.1 0-21.3 19-38.6 42.4-38.6H396c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8h-12.3c-6 0-10.4 3.5-10.4 6.6 0 1.3.8 2.7 2.1 3.8l21.9 18.8c8.5 7.2 13.3 17.5 13.3 28.1.1 21.3-18.9 38.6-42.3 38.6z"]
@@ -25424,11 +25423,11 @@ var th = {
   prefix: "fas",
   iconName: "stream",
   icon: [512, 512, [], "f550", "M16 128h416c8.84 0 16-7.16 16-16V48c0-8.84-7.16-16-16-16H16C7.16 32 0 39.16 0 48v64c0 8.84 7.16 16 16 16zm480 80H80c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16zm-64 176H16c-8.84 0-16 7.16-16 16v64c0 8.84 7.16 16 16 16h416c8.84 0 16-7.16 16-16v-64c0-8.84-7.16-16-16-16z"]
-}, VN = {
+}, xN = {
   prefix: "fas",
   iconName: "street-view",
   icon: [512, 512, [], "f21d", "M367.9 329.76c-4.62 5.3-9.78 10.1-15.9 13.65v22.94c66.52 9.34 112 28.05 112 49.65 0 30.93-93.12 56-208 56S48 446.93 48 416c0-21.6 45.48-40.3 112-49.65v-22.94c-6.12-3.55-11.28-8.35-15.9-13.65C58.87 345.34 0 378.05 0 416c0 53.02 114.62 96 256 96s256-42.98 256-96c0-37.95-58.87-70.66-144.1-86.24zM256 128c35.35 0 64-28.65 64-64S291.35 0 256 0s-64 28.65-64 64 28.65 64 64 64zm-64 192v96c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-96c17.67 0 32-14.33 32-32v-96c0-26.51-21.49-48-48-48h-11.8c-11.07 5.03-23.26 8-36.2 8s-25.13-2.97-36.2-8H208c-26.51 0-48 21.49-48 48v96c0 17.67 14.33 32 32 32z"]
-}, xN = {
+}, VN = {
   prefix: "fas",
   iconName: "strikethrough",
   icon: [512, 512, [], "f0cc", "M496 224H293.9l-87.17-26.83A43.55 43.55 0 0 1 219.55 112h66.79A49.89 49.89 0 0 1 331 139.58a16 16 0 0 0 21.46 7.15l42.94-21.47a16 16 0 0 0 7.16-21.46l-.53-1A128 128 0 0 0 287.51 32h-68a123.68 123.68 0 0 0-123 135.64c2 20.89 10.1 39.83 21.78 56.36H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h480a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm-180.24 96A43 43 0 0 1 336 356.45 43.59 43.59 0 0 1 292.45 400h-66.79A49.89 49.89 0 0 1 181 372.42a16 16 0 0 0-21.46-7.15l-42.94 21.47a16 16 0 0 0-7.16 21.46l.53 1A128 128 0 0 0 224.49 480h68a123.68 123.68 0 0 0 123-135.64 114.25 114.25 0 0 0-5.34-24.36z"]
@@ -25640,11 +25639,11 @@ var th = {
   prefix: "fas",
   iconName: "tint-slash",
   icon: [640, 512, [], "f5c7", "M633.82 458.1L494.97 350.78c.52-5.57 1.03-11.16 1.03-16.87 0-111.76-99.79-153.34-146.78-311.82-7.94-28.78-49.44-30.12-58.44 0-15.52 52.34-36.87 91.96-58.49 125.68L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.36 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.41-6.97 4.16-17.02-2.82-22.45zM144 333.91C144 432.35 222.72 512 320 512c44.71 0 85.37-16.96 116.4-44.7L162.72 255.78c-11.41 23.5-18.72 48.35-18.72 78.13z"]
-}, VS = {
+}, xS = {
   prefix: "fas",
   iconName: "tired",
   icon: [496, 512, [], "f5c8", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 189.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 208l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM248 288c51.9 0 115.3 43.8 123.2 106.7 1.7 13.6-8 24.6-17.7 20.4-25.9-11.1-64.4-17.4-105.5-17.4s-79.6 6.3-105.5 17.4c-9.8 4.2-19.4-7-17.7-20.4C132.7 331.8 196.1 288 248 288z"]
-}, xS = {
+}, VS = {
   prefix: "fas",
   iconName: "toggle-off",
   icon: [576, 512, [], "f204", "M384 64H192C85.961 64 0 149.961 0 256s85.961 192 192 192h192c106.039 0 192-85.961 192-192S490.039 64 384 64zM64 256c0-70.741 57.249-128 128-128 70.741 0 128 57.249 128 128 0 70.741-57.249 128-128 128-70.741 0-128-57.249-128-128zm320 128h-48.905c65.217-72.858 65.236-183.12 0-256H384c70.741 0 128 57.249 128 128 0 70.74-57.249 128-128 128z"]
@@ -25856,11 +25855,11 @@ var th = {
   prefix: "fas",
   iconName: "user-friends",
   icon: [640, 512, [], "f500", "M192 256c61.9 0 112-50.1 112-112S253.9 32 192 32 80 82.1 80 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C51.6 288 0 339.6 0 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zM480 256c53 0 96-43 96-96s-43-96-96-96-96 43-96 96 43 96 96 96zm48 32h-3.8c-13.9 4.8-28.6 8-44.2 8s-30.3-3.2-44.2-8H432c-20.4 0-39.2 5.9-55.7 15.4 24.4 26.3 39.7 61.2 39.7 99.8v38.4c0 2.2-.5 4.3-.6 6.4H592c26.5 0 48-21.5 48-48 0-61.9-50.1-112-112-112z"]
-}, VA = {
+}, xA = {
   prefix: "fas",
   iconName: "user-graduate",
   icon: [448, 512, [], "f501", "M319.4 320.6L224 416l-95.4-95.4C57.1 323.7 0 382.2 0 454.4v9.6c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-9.6c0-72.2-57.1-130.7-128.6-133.8zM13.6 79.8l6.4 1.5v58.4c-7 4.2-12 11.5-12 20.3 0 8.4 4.6 15.4 11.1 19.7L3.5 242c-1.7 6.9 2.1 14 7.6 14h41.8c5.5 0 9.3-7.1 7.6-14l-15.6-62.3C51.4 175.4 56 168.4 56 160c0-8.8-5-16.1-12-20.3V87.1l66 15.9c-8.6 17.2-14 36.4-14 57 0 70.7 57.3 128 128 128s128-57.3 128-128c0-20.6-5.3-39.8-14-57l96.3-23.2c18.2-4.4 18.2-27.1 0-31.5l-190.4-46c-13-3.1-26.7-3.1-39.7 0L13.6 48.2c-18.1 4.4-18.1 27.2 0 31.6z"]
-}, xA = {
+}, VA = {
   prefix: "fas",
   iconName: "user-injured",
   icon: [448, 512, [], "f728", "M277.37 11.98C261.08 4.47 243.11 0 224 0c-53.69 0-99.5 33.13-118.51 80h81.19l90.69-68.02zM342.51 80c-7.9-19.47-20.67-36.2-36.49-49.52L239.99 80h102.52zM224 256c70.69 0 128-57.31 128-128 0-5.48-.95-10.7-1.61-16H97.61c-.67 5.3-1.61 10.52-1.61 16 0 70.69 57.31 128 128 128zM80 299.7V512h128.26l-98.45-221.52A132.835 132.835 0 0 0 80 299.7zM0 464c0 26.51 21.49 48 48 48V320.24C18.88 344.89 0 381.26 0 422.4V464zm256-48h-55.38l42.67 96H256c26.47 0 48-21.53 48-48s-21.53-48-48-48zm57.6-128h-16.71c-22.24 10.18-46.88 16-72.89 16s-50.65-5.82-72.89-16h-7.37l42.67 96H256c44.11 0 80 35.89 80 80 0 18.08-6.26 34.59-16.41 48H400c26.51 0 48-21.49 48-48v-41.6c0-74.23-60.17-134.4-134.4-134.4z"]
@@ -26072,11 +26071,11 @@ var th = {
   prefix: "fas",
   iconName: "window-minimize",
   icon: [512, 512, [], "f2d1", "M464 352H48c-26.5 0-48 21.5-48 48v32c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-32c0-26.5-21.5-48-48-48z"]
-}, V_ = {
+}, x_ = {
   prefix: "fas",
   iconName: "window-restore",
   icon: [512, 512, [], "f2d2", "M512 48v288c0 26.5-21.5 48-48 48h-48V176c0-44.1-35.9-80-80-80H128V48c0-26.5 21.5-48 48-48h288c26.5 0 48 21.5 48 48zM384 176v288c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V176c0-26.5 21.5-48 48-48h288c26.5 0 48 21.5 48 48zm-68 28c0-6.6-5.4-12-12-12H76c-6.6 0-12 5.4-12 12v52h252v-52z"]
-}, x_ = {
+}, V_ = {
   prefix: "fas",
   iconName: "wine-bottle",
   icon: [512, 512, [], "f72f", "M507.31 72.57L439.43 4.69c-6.25-6.25-16.38-6.25-22.63 0l-22.63 22.63c-6.25 6.25-6.25 16.38 0 22.63l-76.67 76.67c-46.58-19.7-102.4-10.73-140.37 27.23L18.75 312.23c-24.99 24.99-24.99 65.52 0 90.51l90.51 90.51c24.99 24.99 65.52 24.99 90.51 0l158.39-158.39c37.96-37.96 46.93-93.79 27.23-140.37l76.67-76.67c6.25 6.25 16.38 6.25 22.63 0l22.63-22.63c6.24-6.24 6.24-16.37-.01-22.62zM179.22 423.29l-90.51-90.51 122.04-122.04 90.51 90.51-122.04 122.04z"]
@@ -26130,8 +26129,8 @@ var th = {
   faAngleLeft: bh,
   faAngleRight: Mh,
   faAngleUp: Ch,
-  faAngry: Vh,
-  faAnkh: xh,
+  faAngry: xh,
+  faAnkh: Vh,
   faAppleAlt: wh,
   faArchive: Hh,
   faArchway: Lh,
@@ -26184,8 +26183,8 @@ var th = {
   faBeer: bm,
   faBell: Mm,
   faBellSlash: Cm,
-  faBezierCurve: Vm,
-  faBible: xm,
+  faBezierCurve: xm,
+  faBible: Vm,
   faBicycle: wm,
   faBiking: Hm,
   faBinoculars: Lm,
@@ -26238,8 +26237,8 @@ var th = {
   faCalendarMinus: bv,
   faCalendarPlus: Mv,
   faCalendarTimes: Cv,
-  faCalendarWeek: Vv,
-  faCamera: xv,
+  faCalendarWeek: xv,
+  faCamera: Vv,
   faCameraRetro: wv,
   faCampground: Hv,
   faCandyCane: Lv,
@@ -26292,8 +26291,8 @@ var th = {
   faChevronCircleUp: bp,
   faChevronDown: Mp,
   faChevronLeft: Cp,
-  faChevronRight: Vp,
-  faChevronUp: xp,
+  faChevronRight: xp,
+  faChevronUp: Vp,
   faChild: wp,
   faChurch: Hp,
   faCircle: Lp,
@@ -26346,8 +26345,8 @@ var th = {
   faCreditCard: bg,
   faCrop: Mg,
   faCropAlt: Cg,
-  faCross: Vg,
-  faCrosshairs: xg,
+  faCross: xg,
+  faCrosshairs: Vg,
   faCrow: wg,
   faCrown: Hg,
   faCrutch: Lg,
@@ -26400,8 +26399,8 @@ var th = {
   faEject: bz,
   faEllipsisH: Mz,
   faEllipsisV: Cz,
-  faEnvelope: Vz,
-  faEnvelopeOpen: xz,
+  faEnvelope: xz,
+  faEnvelopeOpen: Vz,
   faEnvelopeOpenText: wz,
   faEnvelopeSquare: Hz,
   faEquals: Lz,
@@ -26454,8 +26453,8 @@ var th = {
   faFileWord: by,
   faFill: My,
   faFillDrip: Cy,
-  faFilm: Vy,
-  faFilter: xy,
+  faFilm: xy,
+  faFilter: Vy,
   faFingerprint: wy,
   faFire: Hy,
   faFireAlt: Ly,
@@ -26508,8 +26507,8 @@ var th = {
   faGrin: bb,
   faGrinAlt: Mb,
   faGrinBeam: Cb,
-  faGrinBeamSweat: Vb,
-  faGrinHearts: xb,
+  faGrinBeamSweat: xb,
+  faGrinHearts: Vb,
   faGrinSquint: wb,
   faGrinSquintTears: Hb,
   faGrinStars: Lb,
@@ -26562,8 +26561,8 @@ var th = {
   faHeadSideCoughSlash: bM,
   faHeadSideMask: MM,
   faHeadSideVirus: CM,
-  faHeading: VM,
-  faHeadphones: xM,
+  faHeading: xM,
+  faHeadphones: VM,
   faHeadphonesAlt: wM,
   faHeadset: HM,
   faHeart: LM,
@@ -26616,8 +26615,8 @@ var th = {
   faKaaba: bC,
   faKey: MC,
   faKeyboard: CC,
-  faKhanda: VC,
-  faKiss: xC,
+  faKhanda: xC,
+  faKiss: VC,
   faKissBeam: wC,
   faKissWinkHeart: HC,
   faKiwiBird: LC,
@@ -26647,114 +26646,114 @@ var th = {
   faListOl: XC,
   faListUl: JC,
   faLocationArrow: QC,
-  faLock: eV,
-  faLockOpen: aV,
-  faLongArrowAltDown: tV,
-  faLongArrowAltLeft: cV,
-  faLongArrowAltRight: iV,
-  faLongArrowAltUp: rV,
-  faLowVision: nV,
-  faLuggageCart: oV,
-  faLungs: lV,
-  faLungsVirus: sV,
-  faMagic: fV,
-  faMagnet: dV,
-  faMailBulk: uV,
-  faMale: hV,
-  faMap: mV,
-  faMapMarked: vV,
-  faMapMarkedAlt: pV,
-  faMapMarker: gV,
-  faMapMarkerAlt: zV,
-  faMapPin: yV,
-  faMapSigns: bV,
-  faMarker: MV,
-  faMars: CV,
-  faMarsDouble: VV,
-  faMarsStroke: xV,
-  faMarsStrokeH: wV,
-  faMarsStrokeV: HV,
-  faMask: LV,
-  faMedal: NV,
-  faMedkit: SV,
-  faMeh: AV,
-  faMehBlank: _V,
-  faMehRollingEyes: kV,
-  faMemory: TV,
-  faMenorah: DV,
-  faMercury: OV,
-  faMeteor: PV,
-  faMicrochip: FV,
-  faMicrophone: IV,
-  faMicrophoneAlt: EV,
-  faMicrophoneAltSlash: RV,
-  faMicrophoneSlash: BV,
-  faMicroscope: $V,
-  faMinus: UV,
-  faMinusCircle: ZV,
-  faMinusSquare: jV,
-  faMitten: qV,
-  faMobile: YV,
-  faMobileAlt: WV,
-  faMoneyBill: GV,
-  faMoneyBillAlt: KV,
-  faMoneyBillWave: XV,
-  faMoneyBillWaveAlt: JV,
-  faMoneyCheck: QV,
-  faMoneyCheckAlt: ex,
-  faMonument: ax,
-  faMoon: tx,
-  faMortarPestle: cx,
-  faMosque: ix,
-  faMotorcycle: rx,
-  faMountain: nx,
-  faMouse: ox,
-  faMousePointer: lx,
-  faMugHot: sx,
-  faMusic: fx,
-  faNetworkWired: dx,
-  faNeuter: ux,
-  faNewspaper: hx,
-  faNotEqual: mx,
-  faNotesMedical: vx,
-  faObjectGroup: px,
-  faObjectUngroup: gx,
-  faOilCan: zx,
-  faOm: yx,
-  faOtter: bx,
-  faOutdent: Mx,
-  faPager: Cx,
-  faPaintBrush: Vx,
-  faPaintRoller: xx,
-  faPalette: wx,
-  faPallet: Hx,
-  faPaperPlane: Lx,
-  faPaperclip: Nx,
-  faParachuteBox: Sx,
-  faParagraph: Ax,
-  faParking: _x,
-  faPassport: kx,
-  faPastafarianism: Tx,
-  faPaste: Dx,
-  faPause: Ox,
-  faPauseCircle: Px,
-  faPaw: Fx,
-  faPeace: Ix,
-  faPen: Ex,
-  faPenAlt: Rx,
-  faPenFancy: Bx,
-  faPenNib: $x,
-  faPenSquare: Ux,
-  faPencilAlt: Zx,
-  faPencilRuler: jx,
-  faPeopleArrows: qx,
-  faPeopleCarry: Yx,
-  faPepperHot: Wx,
-  faPercent: Gx,
-  faPercentage: Kx,
-  faPersonBooth: Xx,
-  faPhone: Jx,
-  faPhoneAlt: Qx,
+  faLock: ex,
+  faLockOpen: ax,
+  faLongArrowAltDown: tx,
+  faLongArrowAltLeft: cx,
+  faLongArrowAltRight: ix,
+  faLongArrowAltUp: rx,
+  faLowVision: nx,
+  faLuggageCart: ox,
+  faLungs: lx,
+  faLungsVirus: sx,
+  faMagic: fx,
+  faMagnet: dx,
+  faMailBulk: ux,
+  faMale: hx,
+  faMap: mx,
+  faMapMarked: vx,
+  faMapMarkedAlt: px,
+  faMapMarker: gx,
+  faMapMarkerAlt: zx,
+  faMapPin: yx,
+  faMapSigns: bx,
+  faMarker: Mx,
+  faMars: Cx,
+  faMarsDouble: xx,
+  faMarsStroke: Vx,
+  faMarsStrokeH: wx,
+  faMarsStrokeV: Hx,
+  faMask: Lx,
+  faMedal: Nx,
+  faMedkit: Sx,
+  faMeh: Ax,
+  faMehBlank: _x,
+  faMehRollingEyes: kx,
+  faMemory: Tx,
+  faMenorah: Dx,
+  faMercury: Ox,
+  faMeteor: Px,
+  faMicrochip: Fx,
+  faMicrophone: Ix,
+  faMicrophoneAlt: Ex,
+  faMicrophoneAltSlash: Rx,
+  faMicrophoneSlash: Bx,
+  faMicroscope: $x,
+  faMinus: Ux,
+  faMinusCircle: Zx,
+  faMinusSquare: jx,
+  faMitten: qx,
+  faMobile: Yx,
+  faMobileAlt: Wx,
+  faMoneyBill: Gx,
+  faMoneyBillAlt: Kx,
+  faMoneyBillWave: Xx,
+  faMoneyBillWaveAlt: Jx,
+  faMoneyCheck: Qx,
+  faMoneyCheckAlt: eV,
+  faMonument: aV,
+  faMoon: tV,
+  faMortarPestle: cV,
+  faMosque: iV,
+  faMotorcycle: rV,
+  faMountain: nV,
+  faMouse: oV,
+  faMousePointer: lV,
+  faMugHot: sV,
+  faMusic: fV,
+  faNetworkWired: dV,
+  faNeuter: uV,
+  faNewspaper: hV,
+  faNotEqual: mV,
+  faNotesMedical: vV,
+  faObjectGroup: pV,
+  faObjectUngroup: gV,
+  faOilCan: zV,
+  faOm: yV,
+  faOtter: bV,
+  faOutdent: MV,
+  faPager: CV,
+  faPaintBrush: xV,
+  faPaintRoller: VV,
+  faPalette: wV,
+  faPallet: HV,
+  faPaperPlane: LV,
+  faPaperclip: NV,
+  faParachuteBox: SV,
+  faParagraph: AV,
+  faParking: _V,
+  faPassport: kV,
+  faPastafarianism: TV,
+  faPaste: DV,
+  faPause: OV,
+  faPauseCircle: PV,
+  faPaw: FV,
+  faPeace: IV,
+  faPen: EV,
+  faPenAlt: RV,
+  faPenFancy: BV,
+  faPenNib: $V,
+  faPenSquare: UV,
+  faPencilAlt: ZV,
+  faPencilRuler: jV,
+  faPeopleArrows: qV,
+  faPeopleCarry: YV,
+  faPepperHot: WV,
+  faPercent: GV,
+  faPercentage: KV,
+  faPersonBooth: XV,
+  faPhone: JV,
+  faPhoneAlt: QV,
   faPhoneSlash: ew,
   faPhoneSquare: aw,
   faPhoneSquareAlt: tw,
@@ -26778,8 +26777,8 @@ var th = {
   faPoll: bw,
   faPollH: Mw,
   faPoo: Cw,
-  faPooStorm: Vw,
-  faPoop: xw,
+  faPooStorm: xw,
+  faPoop: Vw,
   faPortrait: ww,
   faPoundSign: Hw,
   faPowerOff: Lw,
@@ -26832,8 +26831,8 @@ var th = {
   faRulerVertical: bH,
   faRunning: MH,
   faRupeeSign: CH,
-  faSadCry: VH,
-  faSadTear: xH,
+  faSadCry: xH,
+  faSadTear: VH,
   faSatellite: wH,
   faSatelliteDish: HH,
   faSave: LH,
@@ -26886,8 +26885,8 @@ var th = {
   faSmileWink: bL,
   faSmog: ML,
   faSmoking: CL,
-  faSmokingBan: VL,
-  faSms: xL,
+  faSmokingBan: xL,
+  faSms: VL,
   faSnowboarding: wL,
   faSnowflake: HL,
   faSnowman: LL,
@@ -26940,8 +26939,8 @@ var th = {
   faStoreAltSlash: bN,
   faStoreSlash: MN,
   faStream: CN,
-  faStreetView: VN,
-  faStrikethrough: xN,
+  faStreetView: xN,
+  faStrikethrough: VN,
   faStroopwafel: wN,
   faSubscript: HN,
   faSubway: LN,
@@ -26994,8 +26993,8 @@ var th = {
   faTimesCircle: bS,
   faTint: MS,
   faTintSlash: CS,
-  faTired: VS,
-  faToggleOff: xS,
+  faTired: xS,
+  faToggleOff: VS,
   faToggleOn: wS,
   faToilet: HS,
   faToiletPaper: LS,
@@ -27048,8 +27047,8 @@ var th = {
   faUserCog: bA,
   faUserEdit: MA,
   faUserFriends: CA,
-  faUserGraduate: VA,
-  faUserInjured: xA,
+  faUserGraduate: xA,
+  faUserInjured: VA,
   faUserLock: wA,
   faUserMd: HA,
   faUserMinus: LA,
@@ -27102,8 +27101,8 @@ var th = {
   faWindowClose: b_,
   faWindowMaximize: M_,
   faWindowMinimize: C_,
-  faWindowRestore: V_,
-  faWineBottle: x_,
+  faWindowRestore: x_,
+  faWineBottle: V_,
   faWineGlass: w_,
   faWineGlassAlt: H_,
   faWonSign: L_,
@@ -27292,11 +27291,11 @@ var k_ = {
   prefix: "fab",
   iconName: "bootstrap",
   icon: [576, 512, [], "f836", "M333.5,201.4c0-22.1-15.6-34.3-43-34.3h-50.4v71.2h42.5C315.4,238.2,333.5,225,333.5,201.4z M517,188.6 c-9.5-30.9-10.9-68.8-9.8-98.1c1.1-30.5-22.7-58.5-54.7-58.5H123.7c-32.1,0-55.8,28.1-54.7,58.5c1,29.3-0.3,67.2-9.8,98.1 c-9.6,31-25.7,50.6-52.2,53.1v28.5c26.4,2.5,42.6,22.1,52.2,53.1c9.5,30.9,10.9,68.8,9.8,98.1c-1.1,30.5,22.7,58.5,54.7,58.5h328.7 c32.1,0,55.8-28.1,54.7-58.5c-1-29.3,0.3-67.2,9.8-98.1c9.6-31,25.7-50.6,52.1-53.1v-28.5C542.7,239.2,526.5,219.6,517,188.6z M300.2,375.1h-97.9V136.8h97.4c43.3,0,71.7,23.4,71.7,59.4c0,25.3-19.1,47.9-43.5,51.8v1.3c33.2,3.6,55.5,26.6,55.5,58.3 C383.4,349.7,352.1,375.1,300.2,375.1z M290.2,266.4h-50.1v78.4h52.3c34.2,0,52.3-13.7,52.3-39.5 C344.7,279.6,326.1,266.4,290.2,266.4z"]
-}, Vk = {
+}, xk = {
   prefix: "fab",
   iconName: "btc",
   icon: [384, 512, [], "f15a", "M310.204 242.638c27.73-14.18 45.377-39.39 41.28-81.3-5.358-57.351-52.458-76.573-114.85-81.929V0h-48.528v77.203c-12.605 0-25.525.315-38.444.63V0h-48.528v79.409c-17.842.539-38.622.276-97.37 0v51.678c38.314-.678 58.417-3.14 63.023 21.427v217.429c-2.925 19.492-18.524 16.685-53.255 16.071L3.765 443.68c88.481 0 97.37.315 97.37.315V512h48.528v-67.06c13.234.315 26.154.315 38.444.315V512h48.528v-68.005c81.299-4.412 135.647-24.894 142.895-101.467 5.671-61.446-23.32-88.862-69.326-99.89zM150.608 134.553c27.415 0 113.126-8.507 113.126 48.528 0 54.515-85.71 48.212-113.126 48.212v-96.74zm0 251.776V279.821c32.772 0 133.127-9.138 133.127 53.255-.001 60.186-100.355 53.253-133.127 53.253z"]
-}, xk = {
+}, Vk = {
   prefix: "fab",
   iconName: "buffer",
   icon: [448, 512, [], "f837", "M427.84 380.67l-196.5 97.82a18.6 18.6 0 0 1-14.67 0L20.16 380.67c-4-2-4-5.28 0-7.29L67.22 350a18.65 18.65 0 0 1 14.69 0l134.76 67a18.51 18.51 0 0 0 14.67 0l134.76-67a18.62 18.62 0 0 1 14.68 0l47.06 23.43c4.05 1.96 4.05 5.24 0 7.24zm0-136.53l-47.06-23.43a18.62 18.62 0 0 0-14.68 0l-134.76 67.08a18.68 18.68 0 0 1-14.67 0L81.91 220.71a18.65 18.65 0 0 0-14.69 0l-47.06 23.43c-4 2-4 5.29 0 7.31l196.51 97.8a18.6 18.6 0 0 0 14.67 0l196.5-97.8c4.05-2.02 4.05-5.3 0-7.31zM20.16 130.42l196.5 90.29a20.08 20.08 0 0 0 14.67 0l196.51-90.29c4-1.86 4-4.89 0-6.74L231.33 33.4a19.88 19.88 0 0 0-14.67 0l-196.5 90.28c-4.05 1.85-4.05 4.88 0 6.74z"]
@@ -27508,11 +27507,11 @@ var k_ = {
   prefix: "fab",
   iconName: "deezer",
   icon: [576, 512, [], "e077", "M451.46,244.71H576V172H451.46Zm0-173.89v72.67H576V70.82Zm0,275.06H576V273.2H451.46ZM0,447.09H124.54V374.42H0Zm150.47,0H275V374.42H150.47Zm150.52,0H425.53V374.42H301Zm150.47,0H576V374.42H451.46ZM301,345.88H425.53V273.2H301Zm-150.52,0H275V273.2H150.47Zm0-101.17H275V172H150.47Z"]
-}, VT = {
+}, xT = {
   prefix: "fab",
   iconName: "delicious",
   icon: [448, 512, [], "f1a5", "M446.5 68c-.4-1.5-.9-3-1.4-4.5-.9-2.5-2-4.8-3.3-7.1-1.4-2.4-3-4.8-4.7-6.9-2.1-2.5-4.4-4.8-6.9-6.8-1.1-.9-2.2-1.7-3.3-2.5-1.3-.9-2.6-1.7-4-2.4-1.8-1-3.6-1.8-5.5-2.5-1.7-.7-3.5-1.3-5.4-1.7-3.8-1-7.9-1.5-12-1.5H48C21.5 32 0 53.5 0 80v352c0 4.1.5 8.2 1.5 12 2 7.7 5.8 14.6 11 20.3 1 1.1 2.1 2.2 3.3 3.3 5.7 5.2 12.6 9 20.3 11 3.8 1 7.9 1.5 12 1.5h352c26.5 0 48-21.5 48-48V80c-.1-4.1-.6-8.2-1.6-12zM416 432c0 8.8-7.2 16-16 16H224V256H32V80c0-8.8 7.2-16 16-16h176v192h192z"]
-}, xT = {
+}, VT = {
   prefix: "fab",
   iconName: "deploydog",
   icon: [512, 512, [], "f38e", "M382.2 136h51.7v239.6h-51.7v-20.7c-19.8 24.8-52.8 24.1-73.8 14.7-26.2-11.7-44.3-38.1-44.3-71.8 0-29.8 14.8-57.9 43.3-70.8 20.2-9.1 52.7-10.6 74.8 12.9V136zm-64.7 161.8c0 18.2 13.6 33.5 33.2 33.5 19.8 0 33.2-16.4 33.2-32.9 0-17.1-13.7-33.2-33.2-33.2-19.6 0-33.2 16.4-33.2 32.6zM188.5 136h51.7v239.6h-51.7v-20.7c-19.8 24.8-52.8 24.1-73.8 14.7-26.2-11.7-44.3-38.1-44.3-71.8 0-29.8 14.8-57.9 43.3-70.8 20.2-9.1 52.7-10.6 74.8 12.9V136zm-64.7 161.8c0 18.2 13.6 33.5 33.2 33.5 19.8 0 33.2-16.4 33.2-32.9 0-17.1-13.7-33.2-33.2-33.2-19.7 0-33.2 16.4-33.2 32.6zM448 96c17.5 0 32 14.4 32 32v256c0 17.5-14.4 32-32 32H64c-17.5 0-32-14.4-32-32V128c0-17.5 14.4-32 32-32h384m0-32H64C28.8 64 0 92.8 0 128v256c0 35.2 28.8 64 64 64h384c35.2 0 64-28.8 64-64V128c0-35.2-28.8-64-64-64z"]
@@ -27724,11 +27723,11 @@ var k_ = {
   prefix: "fab",
   iconName: "fonticons",
   icon: [448, 512, [], "f280", "M0 32v448h448V32zm187 140.9c-18.4 0-19 9.9-19 27.4v23.3c0 2.4-3.5 4.4-.6 4.4h67.4l-11.1 37.3H168v112.9c0 5.8-2 6.7 3.2 7.3l43.5 4.1v25.1H84V389l21.3-2c5.2-.6 6.7-2.3 6.7-7.9V267.7c0-2.3-2.9-2.3-5.8-2.3H84V228h28v-21c0-49.6 26.5-70 77.3-70 34.1 0 64.7 8.2 64.7 52.8l-50.7 6.1c.3-18.7-4.4-23-16.3-23zm74.3 241.8v-25.1l20.4-2.6c5.2-.6 7.6-1.7 7.6-7.3V271.8c0-4.1-2.9-6.7-6.7-7.9l-24.2-6.4 6.7-29.5h80.2v151.7c0 5.8-2.6 6.4 2.9 7.3l15.7 2.6v25.1zm80.8-255.5l9 33.2-7.3 7.3-31.2-16.6-31.2 16.6-7.3-7.3 9-33.2-21.8-24.2 3.5-9.6h27.7l15.5-28h9.3l15.5 28h27.7l3.5 9.6z"]
-}, VD = {
+}, xD = {
   prefix: "fab",
   iconName: "fonticons-fi",
   icon: [384, 512, [], "f3a2", "M114.4 224h92.4l-15.2 51.2h-76.4V433c0 8-2.8 9.2 4.4 10l59.6 5.6V483H0v-35.2l29.2-2.8c7.2-.8 9.2-3.2 9.2-10.8V278.4c0-3.2-4-3.2-8-3.2H0V224h38.4v-28.8c0-68 36.4-96 106-96 46.8 0 88.8 11.2 88.8 72.4l-69.6 8.4c.4-25.6-6-31.6-22.4-31.6-25.2 0-26 13.6-26 37.6v32c0 3.2-4.8 6-.8 6zM384 483H243.2v-34.4l28-3.6c7.2-.8 10.4-2.4 10.4-10V287c0-5.6-4-9.2-9.2-10.8l-33.2-8.8 9.2-40.4h110v208c0 8-3.6 8.8 4 10l21.6 3.6V483zm-30-347.2l12.4 45.6-10 10-42.8-22.8-42.8 22.8-10-10 12.4-45.6-30-36.4 4.8-10h38L307.2 51H320l21.2 38.4h38l4.8 13.2-30 33.2z"]
-}, xD = {
+}, VD = {
   prefix: "fab",
   iconName: "fort-awesome",
   icon: [512, 512, [], "f286", "M489.2 287.9h-27.4c-2.6 0-4.6 2-4.6 4.6v32h-36.6V146.2c0-2.6-2-4.6-4.6-4.6h-27.4c-2.6 0-4.6 2-4.6 4.6v32h-36.6v-32c0-2.6-2-4.6-4.6-4.6h-27.4c-2.6 0-4.6 2-4.6 4.6v32h-36.6v-32c0-6-8-4.6-11.7-4.6v-38c8.3-2 17.1-3.4 25.7-3.4 10.9 0 20.9 4.3 31.4 4.3 4.6 0 27.7-1.1 27.7-8v-60c0-2.6-2-4.6-4.6-4.6-5.1 0-15.1 4.3-24 4.3-9.7 0-20.9-4.3-32.6-4.3-8 0-16 1.1-23.7 2.9v-4.9c5.4-2.6 9.1-8.3 9.1-14.3 0-20.7-31.4-20.8-31.4 0 0 6 3.7 11.7 9.1 14.3v111.7c-3.7 0-11.7-1.4-11.7 4.6v32h-36.6v-32c0-2.6-2-4.6-4.6-4.6h-27.4c-2.6 0-4.6 2-4.6 4.6v32H128v-32c0-2.6-2-4.6-4.6-4.6H96c-2.6 0-4.6 2-4.6 4.6v178.3H54.8v-32c0-2.6-2-4.6-4.6-4.6H22.8c-2.6 0-4.6 2-4.6 4.6V512h182.9v-96c0-72.6 109.7-72.6 109.7 0v96h182.9V292.5c.1-2.6-1.9-4.6-4.5-4.6zm-288.1-4.5c0 2.6-2 4.6-4.6 4.6h-27.4c-2.6 0-4.6-2-4.6-4.6v-64c0-2.6 2-4.6 4.6-4.6h27.4c2.6 0 4.6 2 4.6 4.6v64zm146.4 0c0 2.6-2 4.6-4.6 4.6h-27.4c-2.6 0-4.6-2-4.6-4.6v-64c0-2.6 2-4.6 4.6-4.6h27.4c2.6 0 4.6 2 4.6 4.6v64z"]
@@ -27940,11 +27939,11 @@ var k_ = {
   prefix: "fab",
   iconName: "ideal",
   icon: [576, 512, [], "e013", "M125.61,165.48a49.07,49.07,0,1,0,49.06,49.06A49.08,49.08,0,0,0,125.61,165.48ZM86.15,425.84h78.94V285.32H86.15Zm151.46-211.6c0-20-10-22.53-18.74-22.53H204.82V237.5h14.05C228.62,237.5,237.61,234.69,237.61,214.24Zm201.69,46V168.93h22.75V237.5h33.69C486.5,113.08,388.61,86.19,299.67,86.19H204.84V169h14c25.6,0,41.5,17.35,41.5,45.26,0,28.81-15.52,46-41.5,46h-14V425.88h94.83c144.61,0,194.94-67.16,196.72-165.64Zm-109.75,0H273.3V169h54.43v22.73H296v10.58h30V225H296V237.5h33.51Zm74.66,0-5.16-17.67H369.31l-5.18,17.67H340.47L368,168.92h32.35l27.53,91.34ZM299.65,32H32V480H299.65c161.85,0,251-79.73,251-224.52C550.62,172,518,32,299.65,32Zm0,426.92H53.07V53.07H299.65c142.1,0,229.9,64.61,229.9,202.41C529.55,389.57,448.55,458.92,299.65,458.92Zm83.86-264.85L376,219.88H392.4l-7.52-25.81Z"]
-}, VO = {
+}, xO = {
   prefix: "fab",
   iconName: "imdb",
   icon: [448, 512, [], "f2d8", "M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM21.3 229.2H21c.1-.1.2-.3.3-.4zM97 319.8H64V192h33zm113.2 0h-28.7v-86.4l-11.6 86.4h-20.6l-12.2-84.5v84.5h-29V192h42.8c3.3 19.8 6 39.9 8.7 59.9l7.6-59.9h43zm11.4 0V192h24.6c17.6 0 44.7-1.6 49 20.9 1.7 7.6 1.4 16.3 1.4 24.4 0 88.5 11.1 82.6-75 82.5zm160.9-29.2c0 15.7-2.4 30.9-22.2 30.9-9 0-15.2-3-20.9-9.8l-1.9 8.1h-29.8V192h31.7v41.7c6-6.5 12-9.2 20.9-9.2 21.4 0 22.2 12.8 22.2 30.1zM265 229.9c0-9.7 1.6-16-10.3-16v83.7c12.2.3 10.3-8.7 10.3-18.4zm85.5 26.1c0-5.4 1.1-12.7-6.2-12.7-6 0-4.9 8.9-4.9 12.7 0 .6-1.1 39.6 1.1 44.7.8 1.6 2.2 2.4 3.8 2.4 7.8 0 6.2-9 6.2-14.4z"]
-}, xO = {
+}, VO = {
   prefix: "fab",
   iconName: "innosoft",
   icon: [448, 512, [], "e080", "M422.559,159.71a27.379,27.379,0,0,0-13.866-23.337,26.42,26.42,0,0,0-26.211.133L73.943,314.647V176.261a11.955,11.955,0,0,1,6.047-10.34L218.066,86.208a12.153,12.153,0,0,1,11.922.025l32.656,18.853L112.581,191.723v56L359.642,105.086,241.129,36.679c-10.992-6.129-22.3-6.255-33.8-.27l-164.6,95.026c-10.634,6.12-16.771,16.39-17.29,29.124l0,191.5c.17,10.135,5.08,18.672,13.474,23.428a27.037,27.037,0,0,0,26.736-.045L374.057,197.376V335.657a11.976,11.976,0,0,1-5.92,10.368L230.025,425.77a12.175,12.175,0,0,1-11.937.062l-32.723-18.9,150.051-86.627v-56L88.367,406.932l118.794,68.583a33.88,33.88,0,0,0,34.25-.327l164.527-94.995c10.746-6.631,16.649-17.118,16.624-29.528Z"]
@@ -28156,11 +28155,11 @@ var k_ = {
   prefix: "fab",
   iconName: "microsoft",
   icon: [448, 512, [], "f3ca", "M0 32h214.6v214.6H0V32zm233.4 0H448v214.6H233.4V32zM0 265.4h214.6V480H0V265.4zm233.4 0H448V480H233.4V265.4z"]
-}, VP = {
+}, xP = {
   prefix: "fab",
   iconName: "mix",
   icon: [448, 512, [], "f3cb", "M0 64v348.9c0 56.2 88 58.1 88 0V174.3c7.9-52.9 88-50.4 88 6.5v175.3c0 57.9 96 58 96 0V240c5.3-54.7 88-52.5 88 4.3v23.8c0 59.9 88 56.6 88 0V64H0z"]
-}, xP = {
+}, VP = {
   prefix: "fab",
   iconName: "mixcloud",
   icon: [640, 512, [], "f289", "M424.43 219.729C416.124 134.727 344.135 68 256.919 68c-72.266 0-136.224 46.516-159.205 114.074-54.545 8.029-96.63 54.822-96.63 111.582 0 62.298 50.668 112.966 113.243 112.966h289.614c52.329 0 94.969-42.362 94.969-94.693 0-45.131-32.118-83.063-74.48-92.2zm-20.489 144.53H114.327c-39.04 0-70.881-31.564-70.881-70.604s31.841-70.604 70.881-70.604c18.827 0 36.548 7.475 49.838 20.766 19.963 19.963 50.133-10.227 30.18-30.18-14.675-14.398-32.672-24.365-52.053-29.349 19.935-44.3 64.79-73.926 114.628-73.926 69.496 0 125.979 56.483 125.979 125.702 0 13.568-2.215 26.857-6.369 39.594-8.943 27.517 32.133 38.939 40.147 13.29 2.769-8.306 4.984-16.889 6.369-25.472 19.381 7.476 33.502 26.303 33.502 48.453 0 28.795-23.535 52.33-52.607 52.33zm235.069-52.33c0 44.024-12.737 86.386-37.102 122.657-4.153 6.092-10.798 9.414-17.72 9.414-16.317 0-27.127-18.826-17.443-32.949 19.381-29.349 29.903-63.682 29.903-99.122s-10.521-69.773-29.903-98.845c-15.655-22.831 19.361-47.24 35.163-23.534 24.366 35.993 37.102 78.356 37.102 122.379zm-70.88 0c0 31.565-9.137 62.021-26.857 88.325-4.153 6.091-10.798 9.136-17.72 9.136-17.201 0-27.022-18.979-17.443-32.948 13.013-19.104 19.658-41.255 19.658-64.513 0-22.981-6.645-45.408-19.658-64.512-15.761-22.986 19.008-47.095 35.163-23.535 17.719 26.026 26.857 56.483 26.857 88.047z"]
@@ -28372,11 +28371,11 @@ var k_ = {
   prefix: "fab",
   iconName: "ravelry",
   icon: [512, 512, [], "f2d9", "M498.252,234.223c-1.208-10.34-1.7-20.826-3.746-31a310.306,310.306,0,0,0-9.622-36.6,184.068,184.068,0,0,0-30.874-57.5,251.154,251.154,0,0,0-18.818-21.689,237.362,237.362,0,0,0-47.113-36.116A240.8,240.8,0,0,0,331.356,26.65c-11.018-3.1-22.272-5.431-33.515-7.615-6.78-1.314-13.749-1.667-20.627-2.482-.316-.036-.6-.358-.9-.553q-16.143.009-32.288.006c-2.41.389-4.808.925-7.236,1.15a179.331,179.331,0,0,0-34.256,7.1,221.5,221.5,0,0,0-39.768,16.355,281.385,281.385,0,0,0-38.08,24.158c-6.167,4.61-12.268,9.36-17.974,14.518C96.539,88.494,86.34,97.72,76.785,107.555a243.878,243.878,0,0,0-33.648,43.95,206.488,206.488,0,0,0-20.494,44.6,198.2,198.2,0,0,0-7.691,34.759A201.13,201.13,0,0,0,13.4,266.385a299.716,299.716,0,0,0,4.425,40.24,226.865,226.865,0,0,0,16.73,53.3,210.543,210.543,0,0,0,24,39.528,213.589,213.589,0,0,0,26.358,28.416A251.313,251.313,0,0,0,126.7,458.455a287.831,287.831,0,0,0,55.9,25.277,269.5,269.5,0,0,0,40.641,9.835c6.071,1.01,12.275,1.253,18.412,1.873a4.149,4.149,0,0,1,1.19.56h32.289c2.507-.389,5-.937,7.527-1.143,16.336-1.332,32.107-5.335,47.489-10.717A219.992,219.992,0,0,0,379.1,460.322c9.749-6.447,19.395-13.077,28.737-20.1,5.785-4.348,10.988-9.5,16.3-14.457,3.964-3.7,7.764-7.578,11.51-11.5a232.162,232.162,0,0,0,31.427-41.639c9.542-16.045,17.355-32.905,22.3-50.926,2.859-10.413,4.947-21.045,7.017-31.652,1.032-5.279,1.251-10.723,1.87-16.087.036-.317.358-.6.552-.9V236.005A9.757,9.757,0,0,1,498.252,234.223Zm-161.117-1.15s-16.572-2.98-28.47-2.98c-27.2,0-33.57,14.9-33.57,37.04V360.8H201.582V170.062H275.1v31.931c8.924-26.822,26.771-36.189,62.04-36.189Z"]
-}, VF = {
+}, xF = {
   prefix: "fab",
   iconName: "react",
   icon: [512, 512, [], "f41b", "M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1.9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2.6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6.4 19.5.6 29.5.6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8.9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"]
-}, xF = {
+}, VF = {
   prefix: "fab",
   iconName: "reacteurope",
   icon: [576, 512, [], "f75d", "M250.6 211.74l5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.1-.1-2.3-6.8-2.3 6.8-7.2.1 5.7 4.3zm63.7 0l5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.2-.1-2.3-6.8-2.3 6.8-7.2.1 5.7 4.3zm-91.3 50.5h-3.4c-4.8 0-3.8 4-3.8 12.1 0 4.7-2.3 6.1-5.8 6.1s-5.8-1.4-5.8-6.1v-36.6c0-4.7 2.3-6.1 5.8-6.1s5.8 1.4 5.8 6.1c0 7.2-.7 10.5 3.8 10.5h3.4c4.7-.1 3.8-3.9 3.8-12.3 0-9.9-6.7-14.1-16.8-14.1h-.2c-10.1 0-16.8 4.2-16.8 14.1V276c0 10.4 6.7 14.1 16.8 14.1h.2c10.1 0 16.8-3.8 16.8-14.1 0-9.86 1.1-13.76-3.8-13.76zm-80.7 17.4h-14.7v-19.3H139c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-11.4v-18.3H142c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-21.7c-2.4-.1-3.7 1.3-3.7 3.8v59.1c0 2.5 1.3 3.8 3.8 3.8h21.9c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8zm-42-18.5c4.6-2 7.3-6 7.3-12.4v-11.9c0-10.1-6.7-14.1-16.8-14.1H77.4c-2.5 0-3.8 1.3-3.8 3.8v59.1c0 2.5 1.3 3.8 3.8 3.8h3.4c2.5 0 3.8-1.3 3.8-3.8v-22.9h5.6l7.4 23.5a4.1 4.1 0 0 0 4.3 3.2h3.3c2.8 0 4-1.8 3.2-4.4zm-3.8-14c0 4.8-2.5 6.1-6.1 6.1h-5.8v-20.9h5.8c3.6 0 6.1 1.3 6.1 6.1zM176 226a3.82 3.82 0 0 0-4.2-3.4h-6.9a3.68 3.68 0 0 0-4 3.4l-11 59.2c-.5 2.7.9 4.1 3.4 4.1h3a3.74 3.74 0 0 0 4.1-3.5l1.8-11.3h12.2l1.8 11.3a3.74 3.74 0 0 0 4.1 3.5h3.5c2.6 0 3.9-1.4 3.4-4.1zm-12.3 39.3l4.7-29.7 4.7 29.7zm89.3 20.2v-53.2h7.5c2.5 0 3.8-1.3 3.8-3.8v-2.1c0-2.5-1.3-3.8-3.8-3.8h-25.8c-2.5 0-3.8 1.3-3.8 3.8v2.1c0 2.5 1.3 3.8 3.8 3.8h7.3v53.2c0 2.5 1.3 3.8 3.8 3.8h3.4c2.5.04 3.8-1.3 3.8-3.76zm248-.8h-19.4V258h16.1a1.89 1.89 0 0 0 2-2v-.8a1.89 1.89 0 0 0-2-2h-16.1v-25.8h19.1a1.89 1.89 0 0 0 2-2v-.8a1.77 1.77 0 0 0-2-1.9h-22.2a1.62 1.62 0 0 0-2 1.8v63a1.81 1.81 0 0 0 2 1.9H501a1.81 1.81 0 0 0 2-1.9v-.8a1.84 1.84 0 0 0-2-1.96zm-93.1-62.9h-.8c-10.1 0-15.3 4.7-15.3 14.1V276c0 9.3 5.2 14.1 15.3 14.1h.8c10.1 0 15.3-4.8 15.3-14.1v-40.1c0-9.36-5.2-14.06-15.3-14.06zm10.2 52.4c-.1 8-3 11.1-10.5 11.1s-10.5-3.1-10.5-11.1v-36.6c0-7.9 3-11.1 10.5-11.1s10.5 3.2 10.5 11.1zm-46.5-14.5c6.1-1.6 9.2-6.1 9.2-13.3v-9.7c0-9.4-5.2-14.1-15.3-14.1h-13.7a1.81 1.81 0 0 0-2 1.9v63a1.81 1.81 0 0 0 2 1.9h1.2a1.74 1.74 0 0 0 1.9-1.9v-26.9h11.6l10.4 27.2a2.32 2.32 0 0 0 2.3 1.5h1.5c1.4 0 2-1 1.5-2.3zm-6.4-3.9H355v-28.5h10.2c7.5 0 10.5 3.1 10.5 11.1v6.4c0 7.84-3 11.04-10.5 11.04zm85.9-33.1h-13.7a1.62 1.62 0 0 0-2 1.8v63a1.81 1.81 0 0 0 2 1.9h1.2a1.74 1.74 0 0 0 1.9-1.9v-26.1h10.6c10.1 0 15.3-4.8 15.3-14.1v-10.5c0-9.4-5.2-14.1-15.3-14.1zm10.2 22.8c0 7.9-3 11.1-10.5 11.1h-10.2v-29.2h10.2c7.5-.1 10.5 3.1 10.5 11zM259.5 308l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm227.6-136.1a364.42 364.42 0 0 0-35.6-11.3c19.6-78 11.6-134.7-22.3-153.9C394.7-12.66 343.3 11 291 61.94q5.1 4.95 10.2 10.2c82.5-80 119.6-53.5 120.9-52.8 22.4 12.7 36 55.8 15.5 137.8a587.83 587.83 0 0 0-84.6-13C281.1 43.64 212.4 2 170.8 2 140 2 127 23 123.2 29.74c-18.1 32-13.3 84.2.1 133.8-70.5 20.3-120.7 54.1-120.3 95 .5 59.6 103.2 87.8 122.1 92.8-20.5 81.9-10.1 135.6 22.3 153.9 28 15.8 75.1 6 138.2-55.2q-5.1-4.95-10.2-10.2c-82.5 80-119.7 53.5-120.9 52.8-22.3-12.6-36-55.6-15.5-137.9 12.4 2.9 41.8 9.5 84.6 13 71.9 100.4 140.6 142 182.1 142 30.8 0 43.8-21 47.6-27.7 18-31.9 13.3-84.1-.1-133.8 152.3-43.8 156.2-130.2 33.9-176.3zM135.9 36.84c2.9-5.1 11.9-20.3 34.9-20.3 36.8 0 98.8 39.6 163.3 126.2a714 714 0 0 0-93.9.9 547.76 547.76 0 0 1 42.2-52.4Q277.3 86 272.2 81a598.25 598.25 0 0 0-50.7 64.2 569.69 569.69 0 0 0-84.4 14.6c-.2-1.4-24.3-82.2-1.2-123zm304.8 438.3c-2.9 5.1-11.8 20.3-34.9 20.3-36.7 0-98.7-39.4-163.3-126.2a695.38 695.38 0 0 0 93.9-.9 547.76 547.76 0 0 1-42.2 52.4q5.1 5.25 10.2 10.2a588.47 588.47 0 0 0 50.7-64.2c47.3-4.7 80.3-13.5 84.4-14.6 22.7 84.4 4.5 117 1.2 123zm9.1-138.6c-3.6-11.9-7.7-24.1-12.4-36.4a12.67 12.67 0 0 1-10.7-5.7l-.1.1a19.61 19.61 0 0 1-5.4 3.6c5.7 14.3 10.6 28.4 14.7 42.2a535.3 535.3 0 0 1-72 13c3.5-5.3 17.2-26.2 32.2-54.2a24.6 24.6 0 0 1-6-3.2c-1.1 1.2-3.6 4.2-10.9 4.2-6.2 11.2-17.4 30.9-33.9 55.2a711.91 711.91 0 0 1-112.4 1c-7.9-11.2-21.5-31.1-36.8-57.8a21 21 0 0 1-3-1.5c-1.9 1.6-3.9 3.2-12.6 3.2 6.3 11.2 17.5 30.7 33.8 54.6a548.81 548.81 0 0 1-72.2-11.7q5.85-21 14.1-42.9c-3.2 0-5.4.2-8.4-1a17.58 17.58 0 0 1-6.9 1c-4.9 13.4-9.1 26.5-12.7 39.4C-31.7 297-12.1 216 126.7 175.64c3.6 11.9 7.7 24.1 12.4 36.4 10.4 0 12.9 3.4 14.4 5.3a12 12 0 0 1 2.3-2.2c-5.8-14.7-10.9-29.2-15.2-43.3 7-1.8 32.4-8.4 72-13-15.9 24.3-26.7 43.9-32.8 55.3a14.22 14.22 0 0 1 6.4 8 23.42 23.42 0 0 1 10.2-8.4c6.5-11.7 17.9-31.9 34.8-56.9a711.72 711.72 0 0 1 112.4-1c31.5 44.6 28.9 48.1 42.5 64.5a21.42 21.42 0 0 1 10.4-7.4c-6.4-11.4-17.6-31-34.3-55.5 40.4 4.1 65 10 72.2 11.7-4 14.4-8.9 29.2-14.6 44.2a20.74 20.74 0 0 1 6.8 4.3l.1.1a12.72 12.72 0 0 1 8.9-5.6c4.9-13.4 9.2-26.6 12.8-39.5a359.71 359.71 0 0 1 34.5 11c106.1 39.9 74 87.9 72.6 90.4-19.8 35.1-80.1 55.2-105.7 62.5zm-114.4-114h-1.2a1.74 1.74 0 0 0-1.9 1.9v49.8c0 7.9-2.6 11.1-10.1 11.1s-10.1-3.1-10.1-11.1v-49.8a1.69 1.69 0 0 0-1.9-1.9H309a1.81 1.81 0 0 0-2 1.9v51.5c0 9.6 5 14.1 15.1 14.1h.4c10.1 0 15.1-4.6 15.1-14.1v-51.5a2 2 0 0 0-2.2-1.9zM321.7 308l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm-31.1 7.4l-2.3-6.8-2.3 6.8-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3zm5.1-30.8h-19.4v-26.7h16.1a1.89 1.89 0 0 0 2-2v-.8a1.89 1.89 0 0 0-2-2h-16.1v-25.8h19.1a1.89 1.89 0 0 0 2-2v-.8a1.77 1.77 0 0 0-2-1.9h-22.2a1.81 1.81 0 0 0-2 1.9v63a1.81 1.81 0 0 0 2 1.9h22.5a1.77 1.77 0 0 0 2-1.9v-.8a1.83 1.83 0 0 0-2-2.06zm-7.4-99.4L286 192l-7.1.1 5.7 4.3-2.1 6.8 5.8-4.1 5.8 4.1-2.1-6.8 5.7-4.3-7.1-.1z"]
@@ -28588,11 +28587,11 @@ var k_ = {
   prefix: "fab",
   iconName: "steam-symbol",
   icon: [448, 512, [], "f3f6", "M395.5 177.5c0 33.8-27.5 61-61 61-33.8 0-61-27.3-61-61s27.3-61 61-61c33.5 0 61 27.2 61 61zm52.5.2c0 63-51 113.8-113.7 113.8L225 371.3c-4 43-40.5 76.8-84.5 76.8-40.5 0-74.7-28.8-83-67L0 358V250.7L97.2 290c15.1-9.2 32.2-13.3 52-11.5l71-101.7c.5-62.3 51.5-112.8 114-112.8C397 64 448 115 448 177.7zM203 363c0-34.7-27.8-62.5-62.5-62.5-4.5 0-9 .5-13.5 1.5l26 10.5c25.5 10.2 38 39 27.7 64.5-10.2 25.5-39.2 38-64.7 27.5-10.2-4-20.5-8.3-30.7-12.2 10.5 19.7 31.2 33.2 55.2 33.2 34.7 0 62.5-27.8 62.5-62.5zm207.5-185.3c0-42-34.3-76.2-76.2-76.2-42.3 0-76.5 34.2-76.5 76.2 0 42.2 34.3 76.2 76.5 76.2 41.9.1 76.2-33.9 76.2-76.2z"]
-}, VI = {
+}, xI = {
   prefix: "fab",
   iconName: "sticker-mule",
   icon: [576, 512, [], "f3f7", "M561.7 199.6c-1.3.3.3 0 0 0zm-6.2-77.4c-7.7-22.3-5.1-7.2-13.4-36.9-1.6-6.5-3.6-14.5-6.2-20-4.4-8.7-4.6-7.5-4.6-9.5 0-5.3 30.7-45.3 19-46.9-5.7-.6-12.2 11.6-20.6 17-8.6 4.2-8 5-10.3 5-2.6 0-5.7-3-6.2-5-2-5.7 1.9-25.9-3.6-25.9-3.6 0-12.3 24.8-17 25.8-5.2 1.3-27.9-11.4-75.1 18-25.3 13.2-86.9 65.2-87 65.3-6.7 4.7-20 4.7-35.5 16-44.4 30.1-109.6 9.4-110.7 9-110.6-26.8-128-15.2-159 11.5-20.8 17.9-23.7 36.5-24.2 38.9-4.2 20.4 5.2 48.3 6.7 64.3 1.8 19.3-2.7 17.7 7.7 98.3.5 1 4.1 0 5.1 1.5 0 8.4-3.8 12.1-4.1 13-1.5 4.5-1.5 10.5 0 16 2.3 8.2 8.2 37.2 8.2 46.9 0 41.8.4 44 2.6 49.4 3.9 10 12.5 9.1 17 12 3.1 3.5-.5 8.5 1 12.5.5 2 3.6 4 6.2 5 9.2 3.6 27 .3 29.9-2.5 1.6-1.5.5-4.5 3.1-5 5.1 0 10.8-.5 14.4-2.5 5.1-2.5 4.1-6 1.5-10.5-.4-.8-7-13.3-9.8-16-2.1-2-5.1-3-7.2-4.5-5.8-4.9-10.3-19.4-10.3-19.5-4.6-19.4-10.3-46.3-4.1-66.8 4.6-17.2 39.5-87.7 39.6-87.8 4.1-6.5 17-11.5 27.3-7 6 1.9 19.3 22 65.4 30.9 47.9 8.7 97.4-2 112.2-2 2.8 2-1.9 13-.5 38.9 0 26.4-.4 13.7-4.1 29.9-2.2 9.7 3.4 23.2-1.5 46.9-1.4 9.8-9.9 32.7-8.2 43.4.5 1 1 2 1.5 3.5.5 4.5 1.5 8.5 4.6 10 7.3 3.6 12-3.5 9.8 11.5-.7 3.1-2.6 12 1.5 15 4.4 3.7 30.6 3.4 36.5.5 2.6-1.5 1.6-4.5 6.4-7.4 1.9-.9 11.3-.4 11.3-6.5.3-1.8-9.2-19.9-9.3-20-2.6-3.5-9.2-4.5-11.3-8-6.9-10.1-1.7-52.6.5-59.4 3-11 5.6-22.4 8.7-32.4 11-42.5 10.3-50.6 16.5-68.3.8-1.8 6.4-23.1 10.3-29.9 9.3-17 21.7-32.4 33.5-47.4 18-22.9 34-46.9 52-69.8 6.1-7 8.2-13.7 18-8 10.8 5.7 21.6 7 31.9 17 14.6 12.8 10.2 18.2 11.8 22.9 1.5 5 7.7 10.5 14.9 9.5 10.4-2 13-2.5 13.4-2.5 2.6-.5 5.7-5 7.2-8 3.1-5.5 7.2-9 7.2-16.5 0-7.7-.4-2.8-20.6-52.9z"]
-}, xI = {
+}, VI = {
   prefix: "fab",
   iconName: "strava",
   icon: [384, 512, [], "f428", "M158.4 0L7 292h89.2l62.2-116.1L220.1 292h88.5zm150.2 292l-43.9 88.2-44.6-88.2h-67.6l112.2 220 111.5-220z"]
@@ -28804,11 +28803,11 @@ var k_ = {
   prefix: "fab",
   iconName: "vuejs",
   icon: [448, 512, [], "f41f", "M356.9 64.3H280l-56 88.6-48-88.6H0L224 448 448 64.3h-91.1zm-301.2 32h53.8L224 294.5 338.4 96.3h53.8L224 384.5 55.7 96.3z"]
-}, VE = {
+}, xE = {
   prefix: "fab",
   iconName: "watchman-monitoring",
   icon: [512, 512, [], "e087", "M256,16C123.452,16,16,123.452,16,256S123.452,496,256,496,496,388.548,496,256,388.548,16,256,16ZM121.69,429.122C70.056,388.972,36.741,326.322,36.741,256a218.519,218.519,0,0,1,9.587-64.122l102.9-17.895-.121,10.967-13.943,2.013s-.144,12.5-.144,19.549a12.778,12.778,0,0,0,4.887,10.349l9.468,7.4Zm105.692-283.27,8.48-7.618s6.934-5.38-.143-9.344c-7.188-4.024-39.53-34.5-39.53-34.5-5.348-5.477-8.257-7.347-15.46,0,0,0-32.342,30.474-39.529,34.5-7.078,3.964-.144,9.344-.144,9.344l8.481,7.618-.048,4.369L75.982,131.045c39.644-56.938,105.532-94.3,180.018-94.3A218.754,218.754,0,0,1,420.934,111.77l-193.512,37.7Zm34.063,329.269-33.9-250.857,9.467-7.4a12.778,12.778,0,0,0,4.888-10.349c0-7.044-.144-19.549-.144-19.549l-13.943-2.013-.116-10.474,241.711,31.391A218.872,218.872,0,0,1,475.259,256C475.259,375.074,379.831,472.212,261.445,475.121Z"]
-}, xE = {
+}, VE = {
   prefix: "fab",
   iconName: "waze",
   icon: [512, 512, [], "f83f", "M502.17 201.67C516.69 287.53 471.23 369.59 389 409.8c13 34.1-12.4 70.2-48.32 70.2a51.68 51.68 0 0 1-51.57-49c-6.44.19-64.2 0-76.33-.64A51.69 51.69 0 0 1 159 479.92c-33.86-1.36-57.95-34.84-47-67.92-37.21-13.11-72.54-34.87-99.62-70.8-13-17.28-.48-41.8 20.84-41.8 46.31 0 32.22-54.17 43.15-110.26C94.8 95.2 193.12 32 288.09 32c102.48 0 197.15 70.67 214.08 169.67zM373.51 388.28c42-19.18 81.33-56.71 96.29-102.14 40.48-123.09-64.15-228-181.71-228-83.45 0-170.32 55.42-186.07 136-9.53 48.91 5 131.35-68.75 131.35C58.21 358.6 91.6 378.11 127 389.54c24.66-21.8 63.87-15.47 79.83 14.34 14.22 1 79.19 1.18 87.9.82a51.69 51.69 0 0 1 78.78-16.42zM205.12 187.13c0-34.74 50.84-34.75 50.84 0s-50.84 34.74-50.84 0zm116.57 0c0-34.74 50.86-34.75 50.86 0s-50.86 34.75-50.86 0zm-122.61 70.69c-3.44-16.94 22.18-22.18 25.62-5.21l.06.28c4.14 21.42 29.85 44 64.12 43.07 35.68-.94 59.25-22.21 64.11-42.77 4.46-16.05 28.6-10.36 25.47 6-5.23 22.18-31.21 62-91.46 62.9-42.55 0-80.88-27.84-87.9-64.25z"]
@@ -28986,8 +28985,8 @@ var k_ = {
   faBluetooth: bk,
   faBluetoothB: Mk,
   faBootstrap: Ck,
-  faBtc: Vk,
-  faBuffer: xk,
+  faBtc: xk,
+  faBuffer: Vk,
   faBuromobelexperte: wk,
   faBuyNLarge: Hk,
   faBuysellads: Lk,
@@ -29040,8 +29039,8 @@ var k_ = {
   faDailymotion: bT,
   faDashcube: MT,
   faDeezer: CT,
-  faDelicious: VT,
-  faDeploydog: xT,
+  faDelicious: xT,
+  faDeploydog: VT,
   faDeskpro: wT,
   faDev: HT,
   faDeviantart: LT,
@@ -29094,8 +29093,8 @@ var k_ = {
   faFontAwesomeFlag: bD,
   faFontAwesomeLogoFull: MD,
   faFonticons: CD,
-  faFonticonsFi: VD,
-  faFortAwesome: xD,
+  faFonticonsFi: xD,
+  faFortAwesome: VD,
   faFortAwesomeAlt: wD,
   faForumbee: HD,
   faFoursquare: LD,
@@ -29148,8 +29147,8 @@ var k_ = {
   faHtml5: bO,
   faHubspot: MO,
   faIdeal: CO,
-  faImdb: VO,
-  faInnosoft: xO,
+  faImdb: xO,
+  faInnosoft: VO,
   faInstagram: wO,
   faInstagramSquare: HO,
   faInstalod: LO,
@@ -29202,8 +29201,8 @@ var k_ = {
   faMendeley: bP,
   faMicroblog: MP,
   faMicrosoft: CP,
-  faMix: VP,
-  faMixcloud: xP,
+  faMix: xP,
+  faMixcloud: VP,
   faMixer: wP,
   faMizuni: HP,
   faModx: LP,
@@ -29256,8 +29255,8 @@ var k_ = {
   faRProject: bF,
   faRaspberryPi: MF,
   faRavelry: CF,
-  faReact: VF,
-  faReacteurope: xF,
+  faReact: xF,
+  faReacteurope: VF,
   faReadme: wF,
   faRebel: HF,
   faRedRiver: LF,
@@ -29310,8 +29309,8 @@ var k_ = {
   faSteam: bI,
   faSteamSquare: MI,
   faSteamSymbol: CI,
-  faStickerMule: VI,
-  faStrava: xI,
+  faStickerMule: xI,
+  faStrava: VI,
   faStripe: wI,
   faStripeS: HI,
   faStudiovinari: LI,
@@ -29364,8 +29363,8 @@ var k_ = {
   faVk: bE,
   faVnv: ME,
   faVuejs: CE,
-  faWatchmanMonitoring: VE,
-  faWaze: xE,
+  faWatchmanMonitoring: xE,
+  faWaze: VE,
   faWeebly: wE,
   faWeibo: HE,
   faWeixin: LE,
@@ -30103,7 +30102,7 @@ let gR = {
   }
 };
 const zR = gR, yR = { class: "position-relative" }, bR = ["placeholder"], MR = { id: "url-suggestions" }, CR = ["value"];
-function VR(e, a, t, c, i, r) {
+function xR(e, a, t, c, i, r) {
   const n = E1("control");
   return p(), w1(n, $1(Y1(e.props)), {
     default: H1((o) => [
@@ -30129,8 +30128,8 @@ function VR(e, a, t, c, i, r) {
     _: 1
   }, 16);
 }
-const lt = /* @__PURE__ */ r2(zR, [["render", VR]]);
-let xR = {
+const lt = /* @__PURE__ */ r2(zR, [["render", xR]]);
+let VR = {
   name: "GalleryField",
   extends: v8,
   computed: {
@@ -30216,7 +30215,7 @@ let xR = {
     }
   }
 };
-const wR = xR;
+const wR = VR;
 function HR(e, a, t, c, i, r) {
   const n = E1("list"), o = E1("container");
   return p(), w1(o, $1(Y1(e.props)), {
@@ -30312,7 +30311,7 @@ let LR = {
 };
 const ft = LR, NR = {
   register() {
-    e1.registerFieldComponent("address", A9), e1.registerFieldComponent("array", m5), e1.registerDefaultSchemaFieldMapping("array", "array"), e1.registerFieldComponent("checkbox", M5), e1.registerFieldComponent("checkboxlist", C5), e1.registerDefaultSchemaFieldMapping("boolean", "checkbox"), e1.registerFieldComponent("ckeditor", V5), e1.registerFieldComponent("color", I5), e1.registerFieldComponent("country", x5), e1.registerFieldComponent("date", k5), e1.registerFieldComponent("documents", ft), e1.registerFieldComponent("file", T5), e1.registerFieldComponent("filebrowser", Xa), e1.registerFieldComponent("gallery", st), e1.registerFieldComponent("guid", it), e1.registerFieldComponent("icon", ct), e1.registerFieldComponent("image", Ja), e1.registerFieldComponent("imagebrowser", et), e1.registerFieldComponent("link", ot), e1.registerFieldComponent("url", lt), e1.registerFieldComponent("number", D5), e1.registerDefaultSchemaFieldMapping("number", "number"), e1.registerFieldComponent("object", q5), e1.registerDefaultSchemaFieldMapping("object", "object"), e1.registerFieldComponent("page", nt), e1.registerFieldComponent("radio", O5), e1.registerFieldComponent("relation", rt), e1.registerFieldComponent("select", P5), e1.registerFieldComponent("textarea", E5), e1.registerFieldComponent("text", g0), e1.registerFieldComponent("email", F5), e1.registerFieldComponent("password", at), e1.registerDefaultSchemaFieldMapping("string", "text"), e1.registerView({
+    e1.registerFieldComponent("address", A9), e1.registerFieldComponent("array", m5), e1.registerDefaultSchemaFieldMapping("array", "array"), e1.registerFieldComponent("checkbox", M5), e1.registerFieldComponent("checkboxlist", C5), e1.registerDefaultSchemaFieldMapping("boolean", "checkbox"), e1.registerFieldComponent("ckeditor", x5), e1.registerFieldComponent("color", I5), e1.registerFieldComponent("country", V5), e1.registerFieldComponent("date", k5), e1.registerFieldComponent("documents", ft), e1.registerFieldComponent("file", T5), e1.registerFieldComponent("filebrowser", Xa), e1.registerFieldComponent("gallery", st), e1.registerFieldComponent("guid", it), e1.registerFieldComponent("icon", ct), e1.registerFieldComponent("image", Ja), e1.registerFieldComponent("imagebrowser", et), e1.registerFieldComponent("link", ot), e1.registerFieldComponent("url", lt), e1.registerFieldComponent("number", D5), e1.registerDefaultSchemaFieldMapping("number", "number"), e1.registerFieldComponent("object", q5), e1.registerDefaultSchemaFieldMapping("object", "object"), e1.registerFieldComponent("page", nt), e1.registerFieldComponent("radio", O5), e1.registerFieldComponent("relation", rt), e1.registerFieldComponent("select", P5), e1.registerFieldComponent("textarea", E5), e1.registerFieldComponent("text", g0), e1.registerFieldComponent("email", F5), e1.registerFieldComponent("password", at), e1.registerDefaultSchemaFieldMapping("string", "text"), e1.registerView({
       id: "bootstrap4-edit",
       parent: "base",
       type: "edit",
@@ -30338,7 +30337,7 @@ const ft = LR, NR = {
     });
   },
   registerSmall() {
-    e1.registerFieldComponent("array", m5), e1.registerDefaultSchemaFieldMapping("array", "array"), e1.registerFieldComponent("checkbox", M5), e1.registerFieldComponent("checkboxlist", C5), e1.registerDefaultSchemaFieldMapping("boolean", "checkbox"), e1.registerFieldComponent("ckeditor", V5), e1.registerFieldComponent("color", I5), e1.registerFieldComponent("country", x5), e1.registerFieldComponent("date", k5), e1.registerFieldComponent("file", T5), e1.registerFieldComponent("number", D5), e1.registerDefaultSchemaFieldMapping("number", "number"), e1.registerFieldComponent("radio", O5), e1.registerFieldComponent("select", P5), e1.registerFieldComponent("textarea", E5), e1.registerFieldComponent("text", g0), e1.registerFieldComponent("email", F5), e1.registerDefaultSchemaFieldMapping("string", "text"), e1.registerView({
+    e1.registerFieldComponent("array", m5), e1.registerDefaultSchemaFieldMapping("array", "array"), e1.registerFieldComponent("checkbox", M5), e1.registerFieldComponent("checkboxlist", C5), e1.registerDefaultSchemaFieldMapping("boolean", "checkbox"), e1.registerFieldComponent("ckeditor", x5), e1.registerFieldComponent("color", I5), e1.registerFieldComponent("country", V5), e1.registerFieldComponent("date", k5), e1.registerFieldComponent("file", T5), e1.registerFieldComponent("number", D5), e1.registerDefaultSchemaFieldMapping("number", "number"), e1.registerFieldComponent("radio", O5), e1.registerFieldComponent("select", P5), e1.registerFieldComponent("textarea", E5), e1.registerFieldComponent("text", g0), e1.registerFieldComponent("email", F5), e1.registerDefaultSchemaFieldMapping("string", "text"), e1.registerView({
       id: "bootstrap4-edit",
       parent: "base",
       type: "edit",
@@ -31680,11 +31679,11 @@ let e1 = {
     ArrayField: m5,
     CheckboxField: M5,
     CheckboxListField: C5,
-    CKEditorField: V5,
+    CKEditorField: x5,
     ColorField: I5,
     Control: c4,
     ControlField: F2,
-    CountryField: x5,
+    CountryField: V5,
     DateField: k5,
     DocumentsField: ft,
     DynamicVueSelectBaseField: OR,
@@ -32417,7 +32416,7 @@ const sB = {
     }
   },
   components: { VueDraggable: Ec, LamaForm: Se, Fields: G0, FontAwesomeIcon: ae }
-}, fB = { class: "builder-root" }, dB = { class: "nav nav-tabs mb-0" }, uB = { class: "nav-item" }, hB = { class: "nav-item" }, mB = { class: "nav-item ml-auto" }, vB = { class: "builder-design" }, pB = { class: "builder-toolbox" }, gB = { class: "builder-toolbox-list" }, zB = ["onClick"], yB = ["onClick"], bB = { class: "builder-canvas" }, MB = ["onClick"], CB = { class: "builder-canvas-card-header" }, VB = { class: "builder-canvas-card-body" }, xB = { class: "badge badge-light font-weight-light" }, wB = { class: "builder-canvas-card-label ml-2" }, HB = {
+}, fB = { class: "builder-root" }, dB = { class: "nav nav-tabs mb-0" }, uB = { class: "nav-item" }, hB = { class: "nav-item" }, mB = { class: "nav-item ml-auto" }, vB = { class: "builder-design" }, pB = { class: "builder-toolbox" }, gB = { class: "builder-toolbox-list" }, zB = ["onClick"], yB = ["onClick"], bB = { class: "builder-canvas" }, MB = ["onClick"], CB = { class: "builder-canvas-card-header" }, xB = { class: "builder-canvas-card-body" }, VB = { class: "badge badge-light font-weight-light" }, wB = { class: "builder-canvas-card-label ml-2" }, HB = {
   key: 0,
   class: "builder-canvas-card-details ml-1"
 }, LB = ["onClick"], NB = ["onClick"], SB = { class: "badge badge-light font-weight-light" }, AB = { class: "builder-canvas-subfield-label ml-1" }, _B = ["onClick"], kB = {
@@ -32533,13 +32532,13 @@ function WB(e, a, t, c, i, r) {
               onClick: (g) => r.selectField(m)
             }, [
               F("div", CB, [
-                F("div", VB, [
+                F("div", xB, [
                   q1(n, {
                     icon: r.fieldIcon(s.fieldType),
                     class: "builder-canvas-card-icon",
                     "fixed-width": ""
                   }, null, 8, ["icon"]),
-                  F("span", xB, Z1(s.fieldType || "?"), 1),
+                  F("span", VB, Z1(s.fieldType || "?"), 1),
                   F("span", wB, Z1(s.label || s.fieldName || "Untitled"), 1),
                   r.fieldDetails(s).length ? (p(), L("span", HB, [
                     (p(!0), L(R1, null, t2(r.fieldDetails(s), (g, C) => (p(), L("span", {

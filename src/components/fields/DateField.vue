@@ -5,7 +5,7 @@
             :enable-time-picker="false"
             :auto-apply="true"
             :locale="locale"
-            :format="formatDate"
+            
             :class="{'is-invalid':flags.invalid && flags.touched}"
             :placeholder="options.placeholder"
             :disabled="schema.readonly"
