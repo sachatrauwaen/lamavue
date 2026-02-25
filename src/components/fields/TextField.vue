@@ -26,13 +26,11 @@ let TextField = {
     },
     view: {},
   },
-  computed: {
-      pattern() {
-          return this.options.pattern;
-      }
-  },
   methods: {},
   computed: {
+    pattern() {
+          return this.options ? this.options.pattern : null;
+    },
     styles() {
       if (this.view && this.view.styles) {
         return this.view.styles;

@@ -57,6 +57,7 @@
           v-model="internalFields"
           group="fields"
           class="builder-canvas-list"
+          @add="onTopAdd"
           @end="onDragEnd"
         >
           <div
@@ -70,6 +71,9 @@
               <div class="builder-canvas-card-body">
                 <font-awesome-icon :icon="fieldIcon(field.fieldType)" class="builder-canvas-card-icon" fixed-width />
                 <span class="badge badge-light font-weight-light">{{ field.fieldType || '?' }}</span>
+                <span v-if="field.required" class="builder-canvas-required">
+                  <font-awesome-icon icon="asterisk" />
+                </span>
                 <span class="builder-canvas-card-label ml-2">{{ field.label || field.fieldName || 'Untitled' }}</span>
                 <span v-if="fieldDetails(field).length" class="builder-canvas-card-details ml-1">
                   <span v-for="(detail, di) in fieldDetails(field)" :key="di" class="builder-canvas-card-detail">
@@ -336,8 +340,17 @@ export default {
         let depStr = field.dependencies.map(d => d.fieldname + (d.values && d.values.length ? '=' + (Array.isArray(d.values) ? d.values.join(',') : d.values) : '')).join('; ');
         parts.push({ icon: 'eye', text: depStr });
       }
-      if (field.required) {
-        parts.push({ icon: 'asterisk', text: '' });
+      if (field.multilanguage) {
+        parts.push({ icon: 'globe', text: 'Multilanguage' });
+      }
+      if (field.readonly) {
+        parts.push({ icon: 'lock', text: 'Readonly' });
+      }
+      if (field.hidden) {
+        parts.push({ icon: 'eye-slash', text: 'Hidden' });
+      }
+      if (field.helper) {
+        parts.push({ icon: 'info-circle', text: field.helper });
       }
       return parts;
     },
@@ -350,7 +363,7 @@ export default {
         file: 'paperclip', image: 'image', imagebrowser: 'images',
         filebrowser: 'folder-open', gallery: 'th', documents: 'file-alt',
         object: 'cube', array: 'th-list',
-        ckeditor: 'pen-fancy', country: 'globe', guid: 'key', icon: 'star',
+        ckeditor: 'paragraph', country: 'globe', guid: 'key', icon: 'star',
         link: 'external-link-alt', relation: 'project-diagram', page: 'file', address: 'map-marker-alt',
       };
       return icons[type] || 'puzzle-piece';
@@ -525,6 +538,13 @@ export default {
       this.emitUpdate();
     },
     onDragEnd() {
+      this.emitUpdate();
+    },
+    onTopAdd(evt) {
+      if (evt && typeof evt.newIndex === 'number') {
+        this.selectedIndex = evt.newIndex;
+        this.selectedSubIndex = -1;
+      }
       this.emitUpdate();
     },
     onSubAdd(parentIndex) {
@@ -759,7 +779,7 @@ export default {
   width: 18px;
   margin-right: 8px;
   font-size: 13px;
-  color: #6c757d;
+  color: #0d6efd;
 }
 
 .builder-toolbox-category {
@@ -853,6 +873,12 @@ export default {
   color: #6c757d;
   margin-right: 8px;
   font-size: 14px;
+}
+
+.builder-canvas-required {
+  margin-left: 6px;
+  color: #dc3545;
+  font-size: 11px;
 }
 
 .builder-canvas-card-label {

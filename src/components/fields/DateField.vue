@@ -4,11 +4,13 @@
             v-model="model"
             :enable-time-picker="false"
             :auto-apply="true"
-            :locale="locale"
-            
+            :time-config="{ enableTimePicker: false, startTime: { hours: 0, minutes: 0 } }"
+            :formats="{ input: 'dd/MM/yyyy' }"
             :class="{'is-invalid':flags.invalid && flags.touched}"
-            :placeholder="options.placeholder"
+            :locale="dpLocale"
             :disabled="schema.readonly"
+            model-type="iso"
+            :teleport="true"
             text-input
         />
     </control>
@@ -18,8 +20,9 @@
     import Lama from "../../lama";
     import ControlField from "./ControlField.vue";
     import Control from "./Control.vue";
-    import VueDatePicker from "@vuepic/vue-datepicker";
-    import "@vuepic/vue-datepicker/dist/main.css";
+    import { VueDatePicker } from '@vuepic/vue-datepicker';
+    import '@vuepic/vue-datepicker/dist/main.css'
+    import { nl, enUS, de, fr } from "date-fns/locale"
 
     let DateField = {
         name: "DateField",
@@ -29,9 +32,26 @@
                 type: String
             }
         },
-        computed: {
-            locale() {
-                return this.connector.currentCulture.substring(0, 2);
+        data() {
+            return {
+                d:null
+            }
+        },
+        mounted() {
+            console.log(fr);
+        },
+        computed: {           
+            dpLocale() {
+                switch (this.connector.currentCulture.substring(0, 2)) {
+                    case 'nl':
+                        return nl;
+                    case 'en':
+                        return enUS;
+                    case 'de':
+                        return de;
+                    case 'fr':
+                        return fr;
+                }
             }
         },
         methods: {
