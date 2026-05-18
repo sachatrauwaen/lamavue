@@ -56671,12 +56671,12 @@ var ImageBrowserField_component = normalizeComponent(
 )
 
 /* harmony default export */ var ImageBrowserField = (ImageBrowserField_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/NumberField.vue?vue&type=template&id=2bf39716&scoped=true&
-var NumberFieldvue_type_template_id_2bf39716_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model.number",value:(_vm.model),expression:"model",modifiers:{"number":true}}],staticClass:"form-control",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"number","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder,"readonly":_vm.schema.readonly},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=_vm._n($event.target.value)},"blur":function($event){return _vm.$forceUpdate()}}})]}}])},'control',_vm.props,false))}
-var NumberFieldvue_type_template_id_2bf39716_scoped_true_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"b2432db0-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/NumberField.vue?vue&type=template&id=6d43a806&scoped=true&
+var NumberFieldvue_type_template_id_6d43a806_scoped_true_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('control',_vm._b({scopedSlots:_vm._u([{key:"default",fn:function(flags){return [_c('input',{directives:[{name:"model",rawName:"v-model.number",value:(_vm.model),expression:"model",modifiers:{"number":true}}],staticClass:"form-control",class:{'is-invalid':flags.invalid && flags.touched},attrs:{"type":"number","aria-describedby":_vm.options.label,"placeholder":_vm.options.placeholder,"readonly":_vm.schema.readonly},domProps:{"value":(_vm.model)},on:{"input":function($event){if($event.target.composing){ return; }_vm.model=_vm._n($event.target.value)},"blur":function($event){return _vm.$forceUpdate()}}})]}}])},'control',_vm.props,false))}
+var NumberFieldvue_type_template_id_6d43a806_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/fields/NumberField.vue?vue&type=template&id=2bf39716&scoped=true&
+// CONCATENATED MODULE: ./src/components/fields/NumberField.vue?vue&type=template&id=6d43a806&scoped=true&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/fields/NumberField.vue?vue&type=script&lang=js&
 
@@ -56695,6 +56695,7 @@ var NumberFieldvue_type_template_id_2bf39716_scoped_true_staticRenderFns = []
 //
 //
 
+
 var NumberField = {
   name: "NumberField",
   extends: fields_ControlField,
@@ -56704,7 +56705,13 @@ var NumberField = {
     }
   },
   computed: {},
-  methods: {},
+  methods: {
+    init: function init() {
+      if (lama.isValEmpty(this.model) && this.schema.default) {
+        this.model = parseInt(this.schema.default, 10) || 0;
+      }
+    }
+  },
   components: {},
   builder: {
     props: function props() {
@@ -56752,11 +56759,11 @@ var NumberField = {
 
 var NumberField_component = normalizeComponent(
   fields_NumberFieldvue_type_script_lang_js_,
-  NumberFieldvue_type_template_id_2bf39716_scoped_true_render,
-  NumberFieldvue_type_template_id_2bf39716_scoped_true_staticRenderFns,
+  NumberFieldvue_type_template_id_6d43a806_scoped_true_render,
+  NumberFieldvue_type_template_id_6d43a806_scoped_true_staticRenderFns,
   false,
   null,
-  "2bf39716",
+  "6d43a806",
   null
   
 )

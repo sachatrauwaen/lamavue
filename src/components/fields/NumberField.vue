@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import ControlField from "./ControlField.vue";
+    import ControlField from "./ControlField.vue";
+    import Lama from "../../lama";
 
 let NumberField = {
   name: "NumberField",
@@ -24,7 +25,13 @@ let NumberField = {
     }
   },
   computed: {},
-  methods: {},
+    methods: {
+        init() {
+            if (Lama.isValEmpty(this.model) && this.schema.default) {
+                this.model = parseInt(this.schema.default, 10) || 0;
+            }
+        }
+    },
   components: {},
   builder: {
     props() {
