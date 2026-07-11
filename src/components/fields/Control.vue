@@ -1,5 +1,5 @@
 <template>
-  <div class="form-group">
+  <div class="form-group mb-3">
     <label class="form-label" v-if="showLabel && label">{{label}}</label>
     <span v-if="badge" class="badge badge-dark" style="float:right">{{badge}}</span>
     <div ref="provider">
