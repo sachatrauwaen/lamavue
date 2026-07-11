@@ -8,7 +8,7 @@
       <li class="nav-item">
         <a class="nav-link" :class="{ active: activeTab === 'preview' }" href="#" @click.prevent="switchToPreview">Preview</a>
       </li>
-      <li class="nav-item ml-auto">
+      <li v-if="showSchemaType" class="nav-item ml-auto ms-auto">
         <select class="form-control form-control-sm mt-1 mr-1" v-model="schemaType" style="width:120px">
           <option value="object">Object</option>
           <option value="array">Array</option>
@@ -127,16 +127,16 @@
 
         <!-- Sub-field properties -->
         <div v-if="editingSubField" class="builder-properties-content">
-          <div class="form-group">
-            <label>Field Name</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Field Name</label>
             <input class="form-control form-control-sm" v-model="editingSubField.fieldName" @change="emitUpdate" />
           </div>
-          <div class="form-group">
-            <label>Label</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Label</label>
             <input class="form-control form-control-sm" v-model="editingSubField.label" @change="emitUpdate" />
           </div>
-          <div class="form-group">
-            <label>Field Type</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Field Type</label>
             <select class="form-control form-control-sm" v-model="editingSubField.fieldType" @change="onSubFieldTypeChange">
               <option v-for="t in availableTypes" :key="t" :value="t">{{ t }}</option>
             </select>
@@ -153,16 +153,16 @@
 
         <!-- Parent field properties -->
         <div v-else-if="selectedField" class="builder-properties-content">
-          <div class="form-group">
-            <label>Field Name</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Field Name</label>
             <input class="form-control form-control-sm" v-model="selectedField.fieldName" @change="emitUpdate" />
           </div>
-          <div class="form-group">
-            <label>Label</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Label</label>
             <input class="form-control form-control-sm" v-model="selectedField.label" @change="emitUpdate" />
           </div>
-          <div class="form-group">
-            <label>Field Type</label>
+          <div class="form-group mb-3">
+            <label class="form-label">Field Type</label>
             <select class="form-control form-control-sm" v-model="selectedField.fieldType" @change="onFieldTypeChange">
               <option v-for="t in availableTypes" :key="t" :value="t">{{ t }}</option>
             </select>
@@ -224,6 +224,10 @@ export default {
     debug: {
       type: Boolean,
       default: false,
+    },
+    showSchemaType: {
+      type: Boolean,
+      default: true,
     },
   },
   data() {
@@ -806,7 +810,7 @@ export default {
 .builder-toolbox-chevron {
   display: inline-block;
   margin-right: 4px;
-  font-size: 10px;
+  font-size: 14px;
   transition: transform 0.15s;
 }
 
