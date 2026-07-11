@@ -1,5 +1,5 @@
 <template>
-    <div class="form-row">
+    <div class="form-row row">
         <div v-for="(value, key) in fields" :key="key" :class="[colClass(key), 'lama-type-'+itemProps(key).options.type, 'lama-field-'+key]">
             <form-field v-show="visible(key)" ref="field" :modelValue="model[key]" v-bind="itemProps(key)" @update:modelValue="propChange(key, $event)"></form-field>
         </div>

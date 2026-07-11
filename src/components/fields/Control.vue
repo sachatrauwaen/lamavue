@@ -1,6 +1,6 @@
 <template>
   <div class="form-group">
-    <label v-if="showLabel && label">{{label}}</label>
+    <label class="form-label" v-if="showLabel && label">{{label}}</label>
     <span v-if="badge" class="badge badge-dark" style="float:right">{{badge}}</span>
     <div ref="provider">
         <slot v-bind="flags"></slot>

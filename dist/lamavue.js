@@ -3212,7 +3212,7 @@ const oe = /* @__PURE__ */ i2(Xc, [["render", ai]]), ti = {
   components: {
     FormField: C9(() => Promise.resolve().then(() => Vt))
   }
-}, ci = { class: "form-row" };
+}, ci = { class: "form-row row" };
 function ii(e, a, t, c, i, n) {
   const r = T1("form-field");
   return L(), I("div", ci, [
@@ -8884,7 +8884,10 @@ const zr = {
       return this.validated = !0, this.runValidation();
     }
   }
-}, yr = { class: "form-group" }, br = { key: 0 }, Mr = {
+}, yr = { class: "form-group" }, br = {
+  key: 0,
+  class: "form-label"
+}, Mr = {
   key: 1,
   class: "badge badge-dark",
   style: { float: "right" }
