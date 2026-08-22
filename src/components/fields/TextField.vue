@@ -5,7 +5,8 @@
       :class="[styles.formControl, { 'is-invalid': flags.invalid && flags.touched }]"
       :pattern="pattern"
       :aria-describedby="options.label"
-      v-model="model"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
       :placeholder="options.placeholder"
       :readonly="schema.readonly"
     />
@@ -26,6 +27,7 @@ let TextField = {
     },
     view: {},
   },
+  emits: ['update:modelValue'],
   methods: {},
   computed: {
     pattern() {

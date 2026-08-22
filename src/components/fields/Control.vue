@@ -78,8 +78,11 @@ export default {
     }
     if (this.$refs.provider) {
       this.$refs.provider.addEventListener('focusout', this._onFocusOut, true);
-      this.$refs.provider.addEventListener('input', this._onInput, true);
-      this.$refs.provider.addEventListener('change', this._onInput, true);
+      // Bubble phase only: a capture listener here would schedule validation before the
+      // field's own @input handler, and the resulting re-render would overwrite the
+      // character the user just typed before the handler could read it.
+      this.$refs.provider.addEventListener('input', this._onInput, false);
+      this.$refs.provider.addEventListener('change', this._onInput, false);
     }
     if (this.$parent && 'model' in this.$parent) {
       this._unwatchParent = this.$parent.$watch('model', this._onValueChange);
@@ -91,8 +94,8 @@ export default {
     }
     if (this.$refs.provider) {
       this.$refs.provider.removeEventListener('focusout', this._onFocusOut, true);
-      this.$refs.provider.removeEventListener('input', this._onInput, true);
-      this.$refs.provider.removeEventListener('change', this._onInput, true);
+      this.$refs.provider.removeEventListener('input', this._onInput, false);
+      this.$refs.provider.removeEventListener('change', this._onInput, false);
     }
     if (this._unwatchParent) {
       this._unwatchParent();
@@ -121,20 +124,29 @@ export default {
       }
       return undefined;
     },
+    _setErrors(errors) {
+      var changed = errors.length !== this.errors.length;
+      for (var i = 0; !changed && i < errors.length; i++) {
+        changed = errors[i] !== this.errors[i];
+      }
+      if (changed) {
+        this.errors = errors;
+      }
+    },
     runValidation() {
       if (!this.zodSchema) {
-        this.errors = [];
+        this._setErrors([]);
         return true;
       }
       var value = this._getFieldValue();
       var result = this.zodSchema.safeParse(value);
       if (result.success) {
-        this.errors = [];
+        this._setErrors([]);
         return true;
       }
-      this.errors = result.error.issues.map(function(issue) {
+      this._setErrors(result.error.issues.map(function(issue) {
         return issue.message;
-      });
+      }));
       return false;
     },
     validate() {

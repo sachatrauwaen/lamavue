@@ -9,7 +9,8 @@
         <input type="text"
                class="form-control normalFileUpload"
                :aria-describedby="options.label"
-               v-model="model"
+               :value="modelValue"
+               @input="$emit('update:modelValue', $event.target.value)"
                :class="{'is-invalid':flags.invalid && flags.touched}"
                style="margin-bottom:10px" />        
     </control>
@@ -27,6 +28,7 @@
                 type: String
             }
         },
+        emits: ['update:modelValue'],
         data() {
             return {
                 file: {}

@@ -61,7 +61,7 @@ export default {
                 Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.currentCulture) ||
                 Object.prototype.hasOwnProperty.call(this.modelValue, this.connector.defaultCulture)
             )) {
-            valueObject = this.modelValue;
+            valueObject = Object.assign({}, this.modelValue);
           } else if (!Lama.isEmpty(this.modelValue)
               && this.connector.defaultCulture
               && this.connector.defaultCulture != this.connector.currentCulture) {

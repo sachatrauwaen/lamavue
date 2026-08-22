@@ -78,7 +78,7 @@
                 return 'col-12';
             },
             propChange(key, value) {
-                let obj = this.model;
+                let obj = Object.assign({}, this.model);
                 obj[key] = value;
                 this.$emit("update:modelValue", obj);
             },

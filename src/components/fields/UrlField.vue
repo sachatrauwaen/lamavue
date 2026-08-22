@@ -4,7 +4,8 @@
             <input
                 type="text"
                 class="form-control"
-                v-model="model"
+                :value="modelValue"
+                @input="$emit('update:modelValue', $event.target.value)"
                 :class="{ 'is-invalid': flags.invalid && flags.touched }"
                 :placeholder="options.placeholder"
                 list="url-suggestions"

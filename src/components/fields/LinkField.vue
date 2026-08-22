@@ -15,27 +15,28 @@
                     return this.modelValue;
                 },
                 set(val) {
+                    let newVal = Object.assign({}, val);
                     if (this.options.multilanguageLink) {
-                        val.url = Lama.isObject(val.url) ? val.url : {};
-                        if (val.type == "page")
-                            val.url[this.connector.currentCulture] = val && val.page && val.page[this.connector.currentCulture] ? val.page[this.connector.currentCulture].url : "";
-                        else if (val.type == "file")
-                            val.url[this.connector.currentCulture] = val && val.file && val.file[this.connector.currentCulture] ? val.file[this.connector.currentCulture] : "";
-                        else if (val.type == "email")
-                            val.url[this.connector.currentCulture] = val && val.email && val.email[this.connector.currentCulture] ? 'mailto:' + val.email[this.connector.currentCulture] : "";
-                        else if (val.type == "phone")
-                            val.url[this.connector.currentCulture] = val && val.phone && val.phone[this.connector.currentCulture] ? 'tel:' + val.phone[this.connector.currentCulture] : "";
+                        newVal.url = Lama.isObject(newVal.url) ? Object.assign({}, newVal.url) : {};
+                        if (newVal.type == "page")
+                            newVal.url[this.connector.currentCulture] = newVal && newVal.page && newVal.page[this.connector.currentCulture] ? newVal.page[this.connector.currentCulture].url : "";
+                        else if (newVal.type == "file")
+                            newVal.url[this.connector.currentCulture] = newVal && newVal.file && newVal.file[this.connector.currentCulture] ? newVal.file[this.connector.currentCulture] : "";
+                        else if (newVal.type == "email")
+                            newVal.url[this.connector.currentCulture] = newVal && newVal.email && newVal.email[this.connector.currentCulture] ? 'mailto:' + newVal.email[this.connector.currentCulture] : "";
+                        else if (newVal.type == "phone")
+                            newVal.url[this.connector.currentCulture] = newVal && newVal.phone && newVal.phone[this.connector.currentCulture] ? 'tel:' + newVal.phone[this.connector.currentCulture] : "";
                     } else {
-                        if (val.type == "page")
-                            val.url = val && val.page ? val.page.url : "";
-                        else if (val.type == "file")
-                            val.url = val && val.file ? val.file : "";
-                        else if (val.type == "email")
-                            val.url = val && val.email ? 'mailto:' + val.email : "";
-                        else if (val.type == "phone")
-                            val.url = val && val.phone ? 'tel:' + val.phone : "";
+                        if (newVal.type == "page")
+                            newVal.url = newVal && newVal.page ? newVal.page.url : "";
+                        else if (newVal.type == "file")
+                            newVal.url = newVal && newVal.file ? newVal.file : "";
+                        else if (newVal.type == "email")
+                            newVal.url = newVal && newVal.email ? 'mailto:' + newVal.email : "";
+                        else if (newVal.type == "phone")
+                            newVal.url = newVal && newVal.phone ? 'tel:' + newVal.phone : "";
                     }
-                    this.$emit("update:modelValue", val);
+                    this.$emit("update:modelValue", newVal);
                 }
             },
             props() {

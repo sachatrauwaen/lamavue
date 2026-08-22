@@ -1,6 +1,9 @@
 <template>
   <control v-bind="props">
-    <select :class="[styles.formControl]" v-model="model" :disabled="schema.readonly" >
+    <select :class="[styles.formControl]" 
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)" 
+      :disabled="schema.readonly" >
       <option v-if="!schema.required" value="">{{options.noneLabel || "None"}}</option>
       <option v-for="option in items" :key="option.value" :value="option.value">{{option.label}}</option>
     </select>
@@ -22,6 +25,7 @@ let SelectField = {
     view: {},
     connector: {}
   },
+  emits: ['update:modelValue'],
   computed: {  
     items(){
       return this.schema.enum.map( (v, index) => {

@@ -221,6 +221,7 @@ export default {
   props: {
     modelValue: {},
     connector: {},
+    view: {},
     debug: {
       type: Boolean,
       default: false,
